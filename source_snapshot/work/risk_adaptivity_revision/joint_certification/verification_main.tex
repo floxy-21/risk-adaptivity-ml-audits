@@ -1,0 +1,22 @@
+\paragraph{Solver and information-flow checks.}
+All policies reuse the same two counter answers across the six contrasts.
+Plans are saved before recorded answers are loaded; this verifies the new
+run's dependency order, not prospective independence of the reused data.
+A separate implementation reconstructs every plan and summary on all 1,098
+blocks. On 18 fixed representative blocks it solves 19,440 direct endpoint
+LPs and 6,480 conditional LPs. Maximum discrepancies are
+$2.22\times10^{-16}$ and $1.11\times10^{-16}$; the numerical check tolerance
+is $10^{-8}$. The largest batch primal--dual gap is $2.03\times10^{-10}$.
+The numerical adaptive worst-width value is below the optimal randomized
+batch mean value on 462 original and 162 external blocks. This is a
+subset result, not uniform dominance; the full-panel mean differences are
+only 0.00177 and 0.00393 of initial width.
+
+An outcome-informed diagnostic optimizes recorded outcomes over the
+mean-optimal batch face, allowing $10^{-9}$ objective slack. Even its best
+precision success is 54.285512\% original and 69.898131\% external,
+essentially the declared mixtures' 54.285508\% and 69.898130\%.
+Thus arbitrary LP tie selection does not explain this comparison. These
+diagnostic oracle choices are not deployable acquisition policies, nor
+optimal batches for worst-case precision success. S8 supplies all ledgers,
+per-meter results, exact bounded-error certificates and reproduction commands.

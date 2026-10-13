@@ -1,0 +1,62 @@
+\section{Exact shared-query separations: policies, lower bounds, and verifiable certificates}
+\label{sec:joint-separations}
+\begin{theorem}[Feedback reduces mean joint width with two shared queries]
+\label{thm:shared-prefix-separation}
+Let $F=\{x\in\mathbb R_+^6:\sum_hx_h=1\}$, and allow at most two
+queries from $P_kx=\sum_{h\leq k}x_h$, $k=1,\ldots,5$.  For the two
+contrasts with coefficient vectors
+\[
+ c^{(1)}=(1/2,0,1,1/2,1/2,0),\qquad
+ c^{(2)}=(2/3,2/3,1,1/3,0,1),
+\]
+both initial widths are one.  Let $J_Q(x)$ be the larger terminal sharp
+width and let $R^J_{\mathcal C}=\inf_{P\in\mathcal C}\sup_{x\in F}
+\mathbb E J_{Q_P(x)}(x)$.  Then
+\[
+ R^J_{\mathrm{randomized\ adaptive}}=\tfrac12
+ <\tfrac23=R^J_{\mathrm{randomized\ batch}}.
+\]
+\end{theorem}
+\begin{proof}
+A batch partitions the six coordinates into segments.  Its scalar width
+is the sum, over segments, of segment mass times coefficient range.
+After querying boundary~3 with answer $t$, the worst remaining joint
+widths for second queries~5 and~2 are, respectively,
+\[
+ G_{35}(t)=\max(t,1/3),\qquad
+ G_{32}(t)=\max(1/2,1-t).
+\]
+Query~5 when $t\leq1/2$ and query~2 otherwise.  This guarantees $J\leq1/2$.
+At the single feasible record $x^*=(0,0,1/2,0,0,1/2)$, all ten final
+two-query sets have $J_Q(x^*)\geq1/2$; their values are the first row below.
+Here and below $ij$ means boundaries $\{i,j\}$.
+\[
+\begin{array}{c|cccccccccc}
+Q&12&13&14&15&23&24&25&34&35&45\\\hline
+J_Q(x^*)&1&3/4&5/6&1/2&1/2&5/6&1/2&3/4&1/2&1/2\\
+\mathbb E_\mu J_Q&2/3&2/3&2/3&2/3&2/3&13/18&5/6&5/6&2/3&2/3
+\end{array}
+\]
+For a fixed internal random seed, every completion agreeing with the
+queried answers follows the same adaptive transcript and stopping rule.
+Its terminal interval is therefore the final-set interval used above.
+Fewer queries cannot decrease width.  Thus every randomized adaptive
+policy has expected width at least $1/2$ at $x^*$.
+
+For the batch upper bound, mix $12,23,35$ with probabilities
+$1/6,1/3,1/2$.  Its expected joint widths at $e_1,\ldots,e_6$ are
+$(2/3,2/3,2/3,2/3,2/3,1/2)$.  Each $J_Q$ is a maximum of linear segment
+widths and hence convex; these vertex values bound the expectation
+throughout $F$ by $2/3$.  For the reverse bound, place adverse masses
+$\mu=(1/3,0,1/6,1/6,1/3,0)$ on those vertices.  The table's second row
+shows that every batch has expectation at least $2/3$, and therefore so
+does every batch mixture.  Its worst-record expectation is no smaller.
+\end{proof}
+This is a constructed separation for \emph{mean joint width}, not a
+precision-success probability.  It does not follow from the scalar
+classification: a maximum of concave local widths need not be concave.
+The argument uses established vector recovery and finite-game bounds
+\citep{krieg2025}; its claim is the explicit shared-prefix separation.
+The two contrasts can be realized with a common forecast baseline
+$a=0$ and $b^{(r)}=3c^{(r)}$ in a six-target paired MSE.  Adding other
+contrasts would define a different joint objective.

@@ -1934,6 +1934,551 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
 8 & 14 & $1/8$ & $1/8\; /\;1/64$ & 12.5\% & 100\%\\
 \bottomrule\end{tabular}\end{table}
 \FloatBarrier
+\section{S8. Shared-query certificates and protocol selection}
+\section{Shared observations and joint local width}
+\label{app:joint-width-boundary}
+Vector-valued recovery and the possible value of adaptive information are
+established subjects \citep{krieg2025}. The result here concerns a particular
+shared-query objective and interface; it is not a general novelty claim for
+vector recovery.
+
+Let $T_r(y)$, $r=1,\ldots,m$, be affine contrasts on the same feasible set,
+with positive initial widths $W_{r,0}$. After one shared transcript $Q$, define
+\[
+ J_Q(y)=\max_r\frac{W_{r,Q}(y)}{W_{r,0}},\qquad
+ R_{\mathcal C}^{J}=\inf_{P\in\mathcal C}\sup_y
+                  \mathbb E_\omega J_{Q_P(y,\omega)}(y).
+\]
+This is the weighted $\ell_\infty$ local diameter of the vector-valued
+information fiber. Its mean risk is distinct from the probability of
+attaining a precision threshold. Zero-width contrasts can be omitted;
+an audit with none remaining needs no query. The maximum of the individual
+concave widths need not be concave, so the scalar classification does not
+supply a no-adaptation result for $J$.
+
+\paragraph{An exact two-prefix separation.}
+Let $F=\{z\geq0:\sum_{h=1}^6z_h=1\}$, allow the five internal prefix
+queries, and impose two queries total. Use
+\[
+ c^{(1)}=(1/2,0,1,1/2,1/2,0),\qquad
+ c^{(2)}=(2/3,2/3,1,1/3,0,1).
+\]
+Both initial widths equal one. Segment masses times coefficient ranges give
+the sharp scalar widths. Query prefix~3 first, with answer $t$. The
+conditional worst joint widths for second queries~5 and~2 are
+\[
+ G_{35}(t)=\max(t,1/3),\qquad
+ G_{32}(t)=\max(1/2,1-t).
+\]
+Choose~5 for $t\leq1/2$ and~2 otherwise; the joint width is at most $1/2$
+for every record. At the single record $z^*=(0,0,1/2,0,0,1/2)$, the ten
+batch widths, in order $12,13,14,15,23,24,25,34,35,45$, are
+\[
+ (1,3/4,5/6,1/2,1/2,5/6,1/2,3/4,1/2,1/2).
+\]
+Here $ij$ denotes boundaries $\{i,j\}$. Fixing an adaptive seed, equal
+queried answers reproduce the complete query sequence and stopping decision.
+Its terminal fiber is therefore that of its final set. Every adaptive seed
+has width at least $1/2$ at this same record; fewer queries cannot reduce
+width. Hence $R_{\rm adaptive}^{J}=1/2$.
+
+The batch mixture with probabilities $1/6,1/3,1/2$ on $12,23,35$ has expected
+joint widths $(2/3,2/3,2/3,2/3,2/3,1/2)$ at $e_1,\ldots,e_6$.
+For each batch, scalar widths are linear in $z$, so $J_Q$ and its mixture
+expectation are convex. These vertex values bound the expectation throughout
+$F$ by $2/3$. Conversely, adverse masses $(1/3,0,1/6,1/6,1/3,0)$ at those
+vertices give the ten batches expected widths
+\[
+ (2/3,2/3,2/3,2/3,2/3,13/18,5/6,5/6,2/3,2/3).
+\]
+Every batch mixture therefore has worst expected width at least $2/3$:
+\[
+ \boxed{R_{\rm adaptive}^{J}=1/2<2/3=R_{\rm batch}^{J}.}
+\]
+These are constructed mean-risk values, not empirical performance or
+success probabilities. The contrasts can share a common forecast baseline:
+$a=0$ and $b^{(r)}=3c^{(r)}$ realize their coefficients in six-target paired
+MSE; constants do not affect widths. Adding other comparisons changes $J$.
+
+\paragraph{Specialized exact algorithms.}
+For any finite contrast family on this exact-total prefix simplex, form
+$V_{hQ}=J_Q(e_h)$. Convexity proves that the finite-game LP
+\[
+ \min_{\pi\geq0,\,\sum_Q\pi_Q=1,v}v
+ \quad\text{subject to}\quad\sum_Q\pi_QV_{hQ}\leq v\quad(h=1,\ldots,n)
+\]
+computes the exact randomized-batch mean value. This vertex argument does
+not apply to the indicator of precision failure.
+
+For deterministic adaptive two-query planning, each contrast's conditional
+worst normalized width $g_{kjr}(t)$ is affine in first-prefix mass $t$.
+Maximizing over records and the finite contrast family commutes, so
+$G_{kj}(t)=\max_r g_{kjr}(t)$ is the conditional worst joint width. The optimum is
+\[
+ A_{\rm det}=\min_k\max_{t\in[0,1]}\min_{j\ne k}G_{kj}(t).
+\]
+Enumerate $0,1$ and every in-range intersection of the underlying affine
+lines, including lines from different second-query choices. Between
+consecutive intersections their ordering is fixed; the resulting
+minimum of group maxima is affine there. Its maximum occurs at an endpoint.
+This gives an exact rational procedure with finite index tie-breaking.
+It computes deterministic adaptive worst width, not the general randomized
+adaptive optimum. Caps, noisy readings or another query dictionary require
+new conditional calculations. The accompanying checker reconstructs all
+example certificates with rational arithmetic; finite checks supplement
+the continuum arguments above.
+
+\subsection{Shared-budget audit: complete computational protocol}
+\label{sec:joint_shared_protocol}
+The post-analysis shared-query evaluation uses every block in the existing
+original (819 blocks) and external (279 blocks) panels. Each block retains the
+six comparisons induced by its four frozen forecast vectors. All six initial
+widths are positive; the implementation verifies this and the six-pair count
+rather than selecting contrasts or removing unfavorable blocks. The panel
+unit remains a meter series, not an independent model-pair observation. The
+three systems within each panel and their repeated days are dependent.
+
+For a nonnegative increment vector $y$ of total $E$, pair $r$ has affine
+contrast coefficients $c_r$. We normalize by the original width
+$W_{r,0}=E(\max_hc_{rh}-\min_hc_{rh})$. Subtracting the smallest coefficient
+and dividing by its range makes the normalized coefficient range one; this
+does not change a normalized width because the retained total is fixed.
+The common precision target is $\max_r W_r/W_{r,0}\leq1/2$. A query returns
+one internal cumulative register, and two distinct queried registers are
+shared by all six comparisons. The model charges two scalar readings;
+adaptive acquisition has two information rounds and a batch has one. This
+does not represent two whole-trace exports or measured acquisition latency.
+
+\paragraph{Exact-total planning.}
+For each of the ten two-register batches $Q$, the normalized pair widths
+are linear in $y/E$. Their maximum is convex. Thus the worst expected joint
+width of a fixed batch mixture is attained at one of the six concentration
+profiles, and the ten-action/six-profile game is an exact formulation.
+The dual profile distribution and the batch mixture are retained. For a
+first boundary $k$ and answer $t$, each possible second boundary $j$ has
+conditional worst pair widths $a_{kjr}t+b_{kjr}$.
+The conditional joint objective is $\max_r(a_{kjr}t+b_{kjr})$ and the
+adaptive continuation minimizes it over $j$. Every intersection of these
+lines, together with the feasible endpoints, is evaluated; the minimum over
+first boundaries is the deterministic adaptive optimum. This line arrangement
+does not assume that the maximum across pair widths is concave. No optimality
+among randomized adaptive policies is inferred from this computation.
+
+All policies are saved before the program opens the fine-resolution response
+CSV. The deterministic batch first minimizes its worst joint width and then
+its uniform concentration-profile mean. The greedy first boundary minimizes
+one-query worst joint width, with the best achievable two-query continuation
+as its tie-breaker; the second query is conditionally optimized. This gives
+the greedy comparator a strong continuation, rather than an arbitrary second
+reading. Both primary and secondary numerical ties use $10^{-12}$ and then
+the earliest index. The randomized batch uses the uniform profile mean as a
+secondary LP objective on a face allowing $10^{-10}$ above the primary
+optimum. An additional outcome-informed diagnostic minimizes and maximizes
+realized width and precision success over a $10^{-9}$ primary-optimum face.
+Those extrema are diagnostic oracles, not deployed policies. In the external
+panel their mean success range is below $3\times10^{-8}$, so the observed
+comparison is not materially explained by this LP tie choice. The numerical
+LP feasibility tolerance is $10^{-9}$ and comparison tolerance $10^{-8}$.
+
+\paragraph{Capacity sensitivity.}
+The illustrative constraints $0\leq y_h\leq uE$, with $u=1/2$ or $1/3$,
+are supplied to every policy. The threshold remains half the original
+uncapped width. For sorted coefficients $d_1\leq\cdots\leq d_m$ in one
+segment, its sharp width as a function of retained mass has consecutive
+marginal slopes $d_m-d_1,d_{m-1}-d_2,\ldots$, each lasting mass $uE$.
+For two segments whose combined mass is known, the worst sum of widths is
+their concave max-convolution: concatenate and sort these marginal slopes.
+Consequently each conditional pair-width function is piecewise affine with
+known capacity knots. The same line-arrangement method is applied separately
+between consecutive knots. Deterministic fixed-batch worst widths follow
+from the corresponding convolution over all segments. Direct endpoint LPs
+independently verify the formulas. The simplex-vertex randomized formulation
+is not reused as an exact capped randomized solver.
+
+Recorded cap compatibility is checked using exact decimal/integer source
+arithmetic. Incompatible records remain in the case ledger and have no
+claimed cap-based replay outcome. Counts of hypothetical capped geometries,
+compatible records, guarantees and recorded successes are reported separately.
+At a cap of $E/2$, for example, only 200 of 279 external records are compatible.
+This cap is not an inferred device limit or an outcome-selected cohort rule.
+
+\paragraph{Stored-readout sensitivity.}
+The separate noisy-policy certificates fix a coefficient-derived branching
+policy before evaluating any responses. The latent model allows each queried
+internal register an error in $[-0.01E,0.01E]$, while endpoints remain exact.
+For replay, the observed answer is the actual stored register: sharp intervals
+are recomputed over every compatible record, rather than adding a simulated
+noise draw. The noisy adaptive policy is not claimed globally optimal.
+The fixed-batch comparator is selected from all ten robust batch bounds before
+answers. A further control freezes the capacity-specific noiseless policy
+before applying the same error allowance. Exact rational dual-residual
+certificates check the guarantees separately from floating-point replay.
+In that capacity-aware variant, the original greedy policy remains a frozen
+uncapped control; the main combined-sensitivity comparison is therefore with
+the robust best fixed batch, not a claim of superiority over every cap-aware
+greedy rule.
+
+\paragraph{Executable materials.}
+The public default in \texttt{joint\_certification/empirical\_shared\_audit.py}
+recomputes the 279-block external panel from bundled frozen geometry and
+counter records. \texttt{empirical\_check.py} independently verifies the
+finite game and direct endpoint LPs. \texttt{empirical\_capacity.py} and
+\texttt{empirical\_capacity\_check.py} reconstruct the two capacity controls;
+\texttt{empirical\_noise\_replay.py} and
+\texttt{empirical\_noise\_check.py} check the recorded-answer sensitivity.
+The exact stored-error certificate checker uses only the standard library;
+re-solving those robust LPs is an explicitly separate command. The current
+results map gives every entry point and its output paths. The original
+819-block case metrics are supplied as derived results; reproducing their
+raw-dependent geometry and internal responses requires the separately
+documented original-source regeneration. The public default does not require
+or redistribute those original raw files. Neither route refits forecasts or
+provides external human validation of the universal theorem.
+
+\paragraph{Paired uncertainty.}
+Every block contributes one joint-precision outcome. The four paired cells
+are both succeed, adaptive only, comparator only, and neither; randomized
+comparators contribute their exact expected success probabilities, so their
+cells are expected counts. No model pair is treated as an independent data
+replicate. The primary descriptive interval is the percentile interval
+from 2,000 circular seven-day block resamples of the calendar, using common
+resampled days across all three systems and all intraday blocks. Concatenated
+blocks are truncated to the original horizon. The paired difference divides
+by the number of compatible records in each resample. A one-day synchronized
+cluster bootstrap is retained as a secondary sensitivity, not selected
+according to which interval is favorable. NumPy's PCG64 uses
+\texttt{SeedSequence([20261013, cohort, 7])} for seven-day draws and
+\texttt{SeedSequence([20261013, cohort])} for one-day draws, with cohort 0
+for original and 1 for external. Percentiles use linear interpolation.
+The exported draws and every paired cell and interval are independently
+recomputed. These are conditional panel summaries, not population confidence
+intervals or a correction for unrestricted long-range temporal dependence.
+\begin{table}[htbp]
+\centering\scriptsize
+\begin{tabular}{llrrrrl}
+\toprule
+Panel / regime & Comparator & Both & A only & B only & Neither & $\Delta$ pp [95\%]\\
+\midrule
+E, cap $1/2$ & fixed & 176 & 3 & 1 & 20 & 1.00 [0.00, 2.04]\\
+E, cap $1/2$ & greedy & 165 & 14 & 2 & 19 & 6.00 [4.15, 7.77]\\
+E, cap $1/3$ & fixed & 192 & 0 & 0 & 6 & 0.00 [0.00, 0.00]\\
+E, cap $1/3$ & greedy & 192 & 0 & 0 & 6 & 0.00 [0.00, 0.00]\\
+E, cap $1/2$ + error (U) & fixed & 164 & 5 & 2 & 29 & 1.50 [-0.98, 4.04]\\
+E, cap $1/2$ + error (U) & greedy & 165 & 4 & 0 & 31 & 2.00 [0.51, 3.47]\\
+E, cap $1/2$ + error (C) & fixed & 165 & 4 & 1 & 30 & 1.50 [-0.49, 3.16]\\
+E, cap $1/2$ + error (C) & greedy & 161 & 8 & 4 & 27 & 2.00 [-1.02, 4.85]\\
+E, $1\%$ error & fixed & 213 & 29 & 2 & 35 & 9.68 [6.81, 12.90]\\
+E, $1\%$ error & greedy & 235 & 7 & 0 & 37 & 2.51 [1.43, 3.23]\\
+E, exact & fixed & 219 & 33 & 2 & 25 & 11.11 [8.60, 13.62]\\
+E, exact & greedy & 245 & 7 & 1 & 26 & 2.15 [1.08, 3.23]\\
+O, cap $1/2$ & fixed & 610 & 45 & 17 & 108 & 3.59 [1.42, 5.59]\\
+O, cap $1/2$ & greedy & 582 & 73 & 19 & 106 & 6.92 [4.62, 9.23]\\
+O, cap $1/3$ & fixed & 613 & 0 & 0 & 0 & 0.00 [0.00, 0.00]\\
+O, cap $1/3$ & greedy & 611 & 2 & 0 & 0 & 0.33 [0.00, 0.82]\\
+O, exact & fixed & 546 & 95 & 31 & 147 & 7.81 [5.86, 9.65]\\
+O, exact & greedy & 617 & 24 & 6 & 172 & 2.20 [1.10, 3.30]\\
+\bottomrule
+\end{tabular}
+\caption{Paired joint-precision outcomes. A is adaptive and B is the named comparator. O/E denote original/external panels; U/C denote policies frozen from uncapped/capacity-aware planning. Counts sum to each compatible panel size. Combined-error greedy remains the frozen uncapped control. Intervals use 2,000 synchronized seven-day circular calendar-block draws; they are descriptive for these panels. Randomized-comparator expected cells, individual-system results, and one-day-cluster sensitivity are supplied in the CSV.}
+\label{tab:joint_paired_outcomes}
+\end{table}
+\paragraph{Dependence sensitivity and system-level audit.}
+The dependence sensitivity keeps the original precision threshold, policy
+choices and recorded outcomes. It adds fourteen-day circular calendar blocks
+to the primary seven-day bootstrap, using 2,000 draws and
+\texttt{PCG64 SeedSequence([20261013,cohort,14])}, where cohort is 0 for the
+original panel and 1 for the external panel. Each draw concatenates sampled
+blocks, wraps at the end of the observed calendar, and truncates to its
+original length. The same dates are sampled across all systems, intraday
+blocks, policies and information regimes. Compatible record counts supply
+the denominator within each resample. Percentile endpoints use linear
+interpolation at 2.5\% and 97.5\%. The fourteen-day block is long relative
+to the external 31-day horizon: it is a sensitivity check, not evidence that
+all temporal dependence is captured. Leave-one-system-out results retain all
+records from the remaining two systems. Neither omitting one system nor
+resampling days provides independent deployments or population inference.
+
+The paired ledgers retain all four success cells, actual capacity compatibility
+flags, and each system's effect. The archived fourteen-day draw indices and
+the separately written checker permit direct recounting without refitting or
+replanning. The checker recomputes cells with rational arithmetic and scalar
+day-multiplicity sums, checks percentile interpolation independently, confirms
+that the seven-day intervals are unchanged, and checks precision-gap counts
+against every archived case. The full coefficient-only plans were also matched
+against all 1,098 derived precision records; public replay needs only those
+derived ledgers, not the original raw-dependent plans.
+\begin{table}[htbp]
+\centering\scriptsize
+\begin{tabular}{lllrlr}
+\toprule
+Panel & Regime & Comparator & Effect & 7-day / 14-day 95\% & LOO range\\
+\midrule
+O & cap $E/2$ & fixed & 3.59 & [1.42, 5.59] / [1.30, 5.66] & [2.76, 5.13]\\
+O & cap $E/2$ & greedy & 6.92 & [4.62, 9.23] / [4.49, 9.64] & [5.31, 9.27]\\
+O & cap $E/3$ & fixed & 0.00 & [0.00, 0.00] / [0.00, 0.00] & [0.00, 0.00]\\
+O & cap $E/3$ & greedy & 0.33 & [0.00, 0.82] / [0.00, 0.67] & [0.27, 0.41]\\
+O & exact & fixed & 7.81 & [5.86, 9.65] / [5.62, 9.65] & [5.13, 10.07]\\
+O & exact & greedy & 2.20 & [1.10, 3.30] / [1.47, 2.93] & [1.65, 3.11]\\
+E & cap $E/2$ & fixed & 1.00 & [0.00, 2.04] / [0.00, 1.99] & [0.00, 2.63]\\
+E & cap $E/2$ & greedy & 6.00 & [4.15, 7.77] / [4.50, 7.37] & [5.52, 7.02]\\
+E & cap $E/3$ & fixed & 0.00 & [0.00, 0.00] / [0.00, 0.00] & [0.00, 0.00]\\
+E & cap $E/3$ & greedy & 0.00 & [0.00, 0.00] / [0.00, 0.00] & [0.00, 0.00]\\
+E & cap + error (U) & fixed & 1.50 & [-0.98, 4.04] / [-0.47, 3.52] & [0.00, 3.25]\\
+E & cap + error (U) & greedy & 2.00 & [0.51, 3.47] / [0.98, 3.09] & [0.81, 3.51]\\
+E & cap + error (C) & fixed & 1.50 & [-0.49, 3.16] / [0.48, 2.63] & [0.81, 2.63]\\
+E & cap + error (C) & greedy & 2.00 & [-1.02, 4.85] / [0.49, 3.83] & [-1.63, 4.39]\\
+E & $1\%$ error & fixed & 9.68 & [6.81, 12.90] / [6.45, 12.54] & [4.84, 13.44]\\
+E & $1\%$ error & greedy & 2.51 & [1.43, 3.23] / [1.43, 3.23] & [1.61, 3.76]\\
+E & exact & fixed & 11.11 & [8.60, 13.62] / [8.96, 13.26] & [3.23, 16.13]\\
+E & exact & greedy & 2.15 & [1.08, 3.23] / [1.42, 2.87] & [1.08, 3.76]\\
+\bottomrule
+\end{tabular}
+\caption{Temporal and leave-one-system-out sensitivity. Primary seven-day intervals are unchanged; fourteen-day intervals are a longer-block sensitivity. LOO gives the range of paired percentage-point effects after omitting each system in turn. All are descriptive for the same fixed panels. O/E denote original/external panels; U/C denote policies frozen from uncapped/capacity-aware planning. Combined-error greedy is the frozen uncapped control.}
+\label{tab:joint_long_dependence}
+\end{table}
+\subsection{Shared certificates with bounded stored-register errors}
+\label{sec:joint-stored-errors}
+This sensitivity calculation retains the same two shared prefix queries and
+the original precision target $J\leq 1/2$.  Let $x_h=y_h/E$, so that
+$x\geq0$ and $\sum_hx_h=1$, and let $P_kx=\sum_{h\leq k}x_h$.
+The six normalized contrasts are obtained by subtracting each contrast's
+minimum coefficient and dividing by its coefficient range.  Hence $J$ is
+the largest of the six sharp widths divided by its original, uncapped,
+zero-query width.  Optional capacity information imposes $x_h\leq\alpha$;
+it does not change this denominator.
+
+The stored answer at boundary $k$ is $z_k=P_kx+e_k$, where the five errors
+are fixed before the policy's random choices and $|e_k|\leq\delta$.
+Endpoints remain exact.  We use $\delta=0.01$, with $\alpha=1$ or $1/2$.
+These are declared uncertainty sets, not measured device specifications.
+The first query and piecewise second-query rule are frozen from the
+coefficient-only noiseless planner.  A first answer outside its noiseless
+range uses the nearest endpoint action.  At a shared boundary the first
+matching closed interval is used.  We separately evaluate the original
+planner and the already computed capacity-aware planner; neither is claimed
+optimal for the noisy problem.
+
+\paragraph{An all-record upper certificate.}
+For a branch that queries $k$ first and $j$ second when the first answer
+belongs to $[l,u]$, solve, for every normalized contrast $c_r$,
+\[
+ \max c_r^\top(v-w)\quad\text{subject to}\quad
+ \begin{cases}
+ v,w\geq0,\quad\boldsymbol1^\top v=\boldsymbol1^\top w=1,
+       \quad v_h,w_h\leq\alpha,\\
+ l\leq t\leq u,\quad |P_kv-t|\leq\delta,
+       \quad |P_kw-t|\leq\delta,\\
+ |P_jv-P_jw|\leq2\delta.
+ \end{cases}
+\]
+The last inequality is exactly the condition that the two possible second
+answers have overlapping error intervals.  Thus every terminal pair of
+compatible records is included.  Maximizing these bounds over branches and
+contrasts certifies the frozen policy for every allowed record and error
+vector.  Closed branch endpoints can overcover a tie but cannot invalidate
+the upper bound.  A fixed batch uses the analogous two-prefix constraints,
+without a branching variable; all ten batches are evaluated.
+
+\paragraph{A bound against every randomized batch.}
+A feasible endpoint pair $v,w$ for batch $Q$ with joint contrast difference
+strictly exceeding $1/2$ supplies one adverse record: choose actual profile
+$v$, set $e_q=(P_qw-P_qv)/2$ for $q\in Q$, and set the other errors to zero.
+This complete latent record is fixed independently of the batch selected
+later.  Compatible endpoint alternatives certify additional failures of
+other batches at the same record.  Unverified entries are conservatively
+counted as success.  For any rational distribution $\lambda$ on these
+records, the maximum, over the ten batches, of the resulting expected
+success upper bounds also bounds the worst-case success probability of
+every randomized batch.  This requires neither vertex sufficiency nor a
+claim of equality with the full-continuum optimum.
+
+\paragraph{Numerical certification.}
+The checked objectives use exact rational normalization of the original
+saved binary64 contrast coefficients.  Floating-point LP multipliers are
+converted to rationals, their signs are enforced, and any stationarity
+residual is bounded over the finite variable box.  This gives rigorous
+upper bounds without assuming exact floating-point dual feasibility.
+Specifically, for a minimization LP $\min f^\top z$ with $Az\leq b$,
+$Hz=h$ and $L\leq z\leq U$, any rational $\lambda\leq0$ and unrestricted
+$\nu$ give the lower bound
+\[
+ \lambda^\top b+\nu^\top h+
+ \sum_i\min\{r_iL_i,r_iU_i\},\qquad
+ r=f-A^\top\lambda-H^\top\nu.
+\]
+Indeed $\lambda^\top Az\geq\lambda^\top b$ and each residual term is
+bounded over its interval.  Negating this bound for
+$f^\top z=-c_r^\top(v-w)$ yields the exported width upper certificate.
+Rational feasible endpoints give lower bounds.  A separate solver-free
+checker verifies source hashes, coefficients, every reported precision
+status, all policy branches, and the fixed adverse mixtures.  These checks
+certify the declared mathematical instances; they do not establish physical
+sensor accuracy or field savings.
+\subsection{An objective-matched randomized batch challenger}
+\label{sec:joint-precision-challenger}
+The following calculation addresses precision success, not expected width.
+It uses the uncapped exact-total simplex and the original threshold $1/2$;
+the bounded-error calculations above define a different information model.
+Write
+\[
+ J_Q(x)=\max_{r=1,\ldots,6}v_{Qr}^{\top}x,
+ \qquad x\geq0,\quad\boldsymbol1^\top x=1,
+\]
+where $v_{Qr}$ contains the normalized coefficient range within each segment
+created by batch $Q$.  These ten batches use the same two prefix queries as
+the adaptive policy.  A deterministic batch guarantees precision exactly
+when every entry of every $v_{Qr}$ is at most $1/2$.
+
+\paragraph{Full-simplex pair-cover certificate.}
+For two batches $Q,R$, suppose that for every contrast pair $(r,s)$ a
+number $\lambda_{rs}\in[0,1]$ satisfies
+\[
+ \lambda_{rs}v_{Qr,i}+(1-\lambda_{rs})v_{Rs,i}
+ \leq\tfrac12\qquad(i=1,\ldots,6).
+\]
+Then $J_Q(x)$ and $J_R(x)$ cannot both exceed $1/2$.  Otherwise some $r,s$
+would have both linear values strictly above $1/2$, and their indicated
+convex combination would be above $1/2$.  Summing the displayed coordinate
+inequalities with weights $x_i$ gives the opposite conclusion.  Consequently,
+the equal mixture of $Q,R$ succeeds with probability at least $1/2$ on
+\emph{every} feasible record.  This includes threshold equality as success.
+Each multiplier is obtained exactly by intersecting six rational interval
+constraints on $\lambda$; no discretization of records is used.
+
+\paragraph{Full-domain upper bounds from finitely many records.}
+We use the six simplex vertices, their 15 pairwise midpoints, and the
+uniform record.  Define $A_{zQ}=\boldsymbol1\{J_Q(z)\leq1/2\}$.
+For any rational probability distribution $\mu$ on these 22 feasible
+records, let $U=\max_Q\sum_z\mu_z A_{zQ}$.  Every randomized batch policy
+has some feasible record with success probability at most $U$: its
+average success over $\mu$ is at most $U$, so its minimum cannot exceed
+that average.  This is the usual finite-game weak-duality argument, not
+a claim that these records exhaust the continuum.  The numerical game
+solver supplies candidate weights; rational normalization and direct
+evaluation of all ten expectations supply the actual checked upper bound.
+If the pair-cover guarantee and this upper bound both equal $1/2$, the
+full-continuum randomized-batch optimum is therefore exactly $1/2$.
+Elsewhere the interval between the lower and upper bound is retained.
+
+\paragraph{Frozen comparison policy.}
+Before replaying answers, we first choose a precision-guaranteeing
+deterministic batch if one exists.  Otherwise we choose a certified equal
+pair if one exists.  Ties minimize worst expected joint width over the six
+vertices, then its uniform vertex average, then the batch indices.  If no
+pair certificate exists, we retain the saved mean-width mixture and assign
+only the trivial precision lower bound zero.  These fallback policies are
+not described as precision-optimal.  Selection uses the frozen coefficients
+only, with unchanged normalization and budget.
+
+All 36 multipliers for every selected pair and the feasible adverse
+weights are exported.  A solver-free rational checker reconstructs the
+coefficients from the hashed source rows, verifies all coordinate
+inequalities, recomputes every finite-record success indicator, and checks
+the lower and upper bounds.  For the complete panels these bounds match
+on 468 of 819 original and 212 of 279 external blocks.  The matching value
+is $1/2$ on 165 and 57 blocks, respectively; the remaining matches have
+value zero or one.  No continuum optimality is inferred for the unmatched
+blocks, nor are these exact-total guarantees transferred to the
+bounded-error sensitivity models.
+\paragraph{Selecting the acquisition protocol.}
+The interface, budget unit and operational preference must be specified before
+an acquisition guarantee is used. A reference implementation selects among
+the supplied fixed, adaptive and full-range certificates for the 29 cases.
+It checks permitted
+queries, scalar-reading and information-round caps, transport grouping, and
+the requested preference; a missing guarantee triggers escalation rather than
+a relaxed target. This is an integration of the preceding results, not a new
+optimization theorem. A frozen offline evaluation retains all 29 external
+cases, the exact endpoint total, the $0.01E$ stored-readout allowance and the
+unchanged half-width target.
+
+\begin{table}[t]
+\centering\small
+\caption{Protocol selection under four explicitly declared interfaces. The
+restricted interfaces are benchmark assumptions; the public API permits bulk
+retrieval. All rows use the same 29 cases and uncertainty model.}
+\label{tab:protocol-selection}
+\begin{tabular}{p{0.40\linewidth}cp{0.36\linewidth}}
+\hline
+Interface and preference & Certified & Selected protocol \\
+\hline
+Range available; fewest requests & 29/29 & Bulk range in all 29 \\
+Three readings, two rounds; fewest readings & 29/29 & Adaptive two in 22; fixed three in seven \\
+Two readings, two rounds & 22/29 & Adaptive two in 22; escalate seven \\
+Three readings, one round & 29/29 & Fixed three in all 29 \\
+\hline
+\end{tabular}
+\end{table}
+
+Unrestricted range retrieval is preferred on the actual public interface.
+Its five internal values contain each case's certified three-query subset,
+so information monotonicity preserves the precision guarantee under bounded
+stored-readout errors; it does not imply zero uncertainty about true increments.
+The restricted three-reading rule reserves 65 scalar observations in 51
+information rounds, whereas the one-round-per-case rule reserves 87 in 29
+rounds. These are distinct resources. HTTP counts are left unspecified for
+the hypothetical restricted interfaces. In particular, an interface offering
+a single native multipoint request can favor fixed-three under request
+priority while favoring adaptive-two under reading priority.
+
+The preceding three-task API timings support bulk selection on that service;
+they are not measurements on this 29-case sensitivity subset. The supplement exports all
+116 case--interface decisions, exclusions and certificate hashes, with an
+offline callback dispatcher and separate verification. The implementation returns an auditable acquisition plan: a supported
+case, its measurement assumptions, selected query protocol, hard resource
+allowances and the certificate proving its precision. If no supplied plan
+meets the interface, it returns escalation. This catalogue decision alone
+does not prove that every possible policy fails; the seven deterministic
+two-query exclusions additionally have the exact lower witnesses described
+above.
+
+The operational wrapper binds each supplied certificate to its saved model
+pair, exact coefficients, meter, API-grid block, retained endpoints and source
+hashes; readout envelopes with a different task, timestamp, feed or unit are
+rejected. For example, the system~1 ridge--MLP comparison on 6 July 2025,
+12:00--18:00 UTC, uses boundary~2 followed by boundary~1 or~4 under the
+restricted two-reading rule, while its public-interface plan selects bulk
+retrieval. These are checks against accidental task mismatch and a worked
+planning example; measured API trials and constructed dispatch tests remain
+separate, and the wrapper does not authenticate a provider or calibrate a meter.
+\paragraph{A reading--feedback cost frontier.}
+A post-analysis calculation makes the protocol choice explicit without
+assigning an unmeasured monetary benefit. Let $c_{\rm read}>0$ charge for a
+reserved scalar reading and $c_{\rm round}\geq0$ for an information round;
+write $r=c_{\rm round}/c_{\rm read}$. Under the restricted interface, each of
+the 22 cases admitting the certified adaptive rule costs $2+2r$ in reading
+units, versus $3+r$ for its certified fixed batch. Thus feedback is preferable
+exactly when $r<1$. The seven remaining cases use fixed-three under both
+complete-coverage baselines. Over the same 29 cases, fixed-three costs
+$87+29r$, adaptive-where-certified with fixed fallback costs $65+51r$, and
+the catalogue selector attains their minimum. Ties favor fewer rounds.
+
+\begin{table}[htbp]\centering\small
+\caption{Declared-cost sensitivity on the unchanged 29-case subset at 1\%
+internal error and exact endpoints. Costs are reading-charge units, not
+measured prices or latency. All methods retain the same precision guarantee.}
+\label{tab:protocol-cost-frontier}
+\begin{tabular}{rrrr}\hline
+$r$ & Fixed-three & Adaptive with fixed fallback & Catalogue choice\\\hline
+0 & 87 & 65 & 65\\
+0.25 & 94.25 & 77.75 & 77.75\\
+0.5 & 101.5 & 90.5 & 90.5\\
+1 & 116 & 116 & 116\\
+2 & 145 & 167 & 145\\
+4 & 203 & 269 & 203\\\hline
+\end{tabular}\end{table}
+
+Neither baseline is uniformly inferior: fixed-three is already optimal
+within this catalogue when $r\geq1$, and adaptive with fallback is optimal
+when $r\leq1$. The benefit is preventing an acquisition choice that assigns
+priority to the wrong resource. The analysis uses exact rational arithmetic,
+exports all 174 case--ratio choices with their certificates, and independently
+checks all 306 candidate evaluations. It is separable across pairwise audits;
+shared readings, stopping costs and unlisted protocols are outside this
+calculation. The existing three-task public-API measurements remain separate:
+mean I/O was 0.331~s for bulk and 0.497~s for adaptive retrieval, supporting
+bulk on that admissible interface. Those observations do not calibrate $r$
+or turn the modeled frontier into measured savings.
 
 \begin{thebibliography}{99}
 \bibitem[Hebrail and Berard(2006)]{uci}
@@ -1957,6 +2502,12 @@ Kostmann, M., \& H\"ardle, W. K. (2019). Forecasting in blockchain-based
 local energy markets. \emph{Energies, 12}, 2718.
 \url{https://doi.org/10.3390/en12142718}
 Source data: \url{https://github.com/QuantLet/BLEM}.
+
+\bibitem[Krieg et~al.(2025)]{krieg2025}
+Krieg, D., Novak, E., \& Ullrich, M. (2025).
+On the power of adaption and randomization.
+\emph{Forum of Mathematics, Sigma, 13}, e152.
+\url{https://doi.org/10.1017/fms.2025.10101}
 
 \bibitem[Mastin et~al.(2015)]{mastin2015}
 Mastin, A., Jaillet, P., \& Chin, S. (2015).

@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "checks": {
+    "cases": 1098,
+    "pair_cover_multipliers": 7992,
+    "finite_profile_batch_evaluations": 241560,
+    "matching_continuum_bounds": 680
+  },
+  "summary": {
+    "external": {
+      "cases": 279,
+      "deterministic_guarantee": 128,
+      "certified_pair": 57,
+      "fallback": 94,
+      "matching_continuum_bounds": 212,
+      "matching_half": 57,
+      "mean_certified_gap": 0.09826762246117085
+    },
+    "original": {
+      "cases": 819,
+      "deterministic_guarantee": 162,
+      "certified_pair": 165,
+      "fallback": 492,
+      "matching_continuum_bounds": 468,
+      "matching_half": 165,
+      "mean_certified_gap": 0.1582824582824583
+    }
+  },
+  "scope": "Full-simplex deterministic and pair-cover lower guarantees; exact feasible finite-profile adversarial upper bounds. Equality is claimed only where these match. No statement of finite-profile sufficiency or precision optimality elsewhere. Same-study independent checker, not external verification.",
+  "plan_sha256": "3f52c14542a108aca1514ef0edc9a56e44cc7e8066420d0029d664c5de61e841",
+  "source_sha256": "091d3b92bb66f19402181d8d438348ff81322219478dc32cc36207609fb11ec0",
+  "elapsed_seconds": 112.01540030003525
+}

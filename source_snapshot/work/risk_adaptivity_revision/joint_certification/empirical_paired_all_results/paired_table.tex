@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\begin{tabular}{llrrrrl}
+\toprule
+Panel / regime & Comparator & Both & A only & B only & Neither & $\Delta$ pp [95\%]\\
+\midrule
+E, cap $1/2$ & fixed & 176 & 3 & 1 & 20 & 1.00 [0.00, 2.04]\\
+E, cap $1/2$ & greedy & 165 & 14 & 2 & 19 & 6.00 [4.15, 7.77]\\
+E, cap $1/3$ & fixed & 192 & 0 & 0 & 6 & 0.00 [0.00, 0.00]\\
+E, cap $1/3$ & greedy & 192 & 0 & 0 & 6 & 0.00 [0.00, 0.00]\\
+E, cap $1/2$ + error (U) & fixed & 164 & 5 & 2 & 29 & 1.50 [-0.98, 4.04]\\
+E, cap $1/2$ + error (U) & greedy & 165 & 4 & 0 & 31 & 2.00 [0.51, 3.47]\\
+E, cap $1/2$ + error (C) & fixed & 165 & 4 & 1 & 30 & 1.50 [-0.49, 3.16]\\
+E, cap $1/2$ + error (C) & greedy & 161 & 8 & 4 & 27 & 2.00 [-1.02, 4.85]\\
+E, $1\%$ error & fixed & 213 & 29 & 2 & 35 & 9.68 [6.81, 12.90]\\
+E, $1\%$ error & greedy & 235 & 7 & 0 & 37 & 2.51 [1.43, 3.23]\\
+E, exact & fixed & 219 & 33 & 2 & 25 & 11.11 [8.60, 13.62]\\
+E, exact & greedy & 245 & 7 & 1 & 26 & 2.15 [1.08, 3.23]\\
+O, cap $1/2$ & fixed & 610 & 45 & 17 & 108 & 3.59 [1.42, 5.59]\\
+O, cap $1/2$ & greedy & 582 & 73 & 19 & 106 & 6.92 [4.62, 9.23]\\
+O, cap $1/3$ & fixed & 613 & 0 & 0 & 0 & 0.00 [0.00, 0.00]\\
+O, cap $1/3$ & greedy & 611 & 2 & 0 & 0 & 0.33 [0.00, 0.82]\\
+O, exact & fixed & 546 & 95 & 31 & 147 & 7.81 [5.86, 9.65]\\
+O, exact & greedy & 617 & 24 & 6 & 172 & 2.20 [1.10, 3.30]\\
+\bottomrule
+\end{tabular}
+\caption{Paired joint-precision outcomes. A is adaptive and B is the named comparator. O/E denote original/external panels; U/C denote policies frozen from uncapped/capacity-aware planning. Counts sum to each compatible panel size. Combined-error greedy remains the frozen uncapped control. Intervals use 2,000 synchronized seven-day circular calendar-block draws; they are descriptive for these panels. Randomized-comparator expected cells, individual-system results, and one-day-cluster sensitivity are supplied in the CSV.}
+\label{tab:joint_paired_outcomes}
+\end{table}

@@ -1,0 +1,77 @@
+CURRENT INTERNAL REVIEW -- 13 October 2026
+Source SHA256: f9554269d768ee25de92e077b301e745a536805699ec9df8509483ad8980e6f2
+PDF SHA256: 62f50ab90d455dec539feb9257990da2cf32117defa3bc3f793de43e24361e2f
+PDF pages: 38
+
+LATEST USER REVIEW: FINDINGS AND CORRECTIONS
+
+1. Scope/significance. The general scalar theorem covers compact convex
+uncertainty sets, affine targets and a finite linear-query dictionary; it is
+not restricted to meters or disjoint totals. The central shared-query result
+has explicit policies and matching lower bounds. The exact scalable planner
+is more specialized: two cumulative queries on an exact-total simplex.
+The manuscript states these scopes separately and credits prior minimax,
+optimal-recovery and robust-optimization machinery. No unsupported first-in-
+history, general operational superiority or groundbreaking-impact claim added.
+
+2. Practical benefit. In 165 original and 57 external blocks, two shared
+adaptive readings guarantee the required precision whereas the optimal
+randomized fixed batch has worst-case success exactly one half. Recorded
+success on those subsets is 100% versus 65.45% and 64.91%. Full-panel fixed-
+batch gains are 7.81/11.11 percentage points; greedy gains are 2.20/2.15.
+These are assurance and precision benefits. Capacity information can remove
+the advantage; measured bulk retrieval is preferable on the unrestricted API.
+No financial benefit, deployed service saving or improved model choice is
+inferred. The adverse model-choice control remains.
+
+3. Complete provenance. This revision actually ran pinned original-source
+regeneration, restored the 89,496-row forecast archive to its historical
+hash, verified all 6,588 source/forecast/contrast joins and regenerated both
+panels' policies and exact certificates. All 1,098 outcome rows agree exactly.
+The original run checks 26,280 hourly endpoints; exact proof checks include
+7,992 covering multipliers and 463 branch intervals. Independent replay
+checks 10,980 batch widths and 65,880 pair decisions. Altered-input tests
+confirm rejection by the real raw-source and frozen-forecast entry points.
+The code and complete execution records are indexed in
+joint_certification/provenance_chain/README.txt. The final orchestrator
+explicitly reused the raw/plan/certificate directories freshly produced in
+this same revision; it does not claim a second regeneration or model refit.
+The default public run regenerates the external panel; the original raw
+route remains separately documented and its execution is separately recorded.
+
+4. Reconstructible planner. A main-text algorithm gives the segment ranges,
+conditional affine lines, all intersections and endpoints, tie rules and
+online second query. A short proof explains why those points suffice over
+the full answer interval. Floating tolerances are distinguished from the
+exact calculation and rational assurance certificates. Cap/error variants
+remain separate rather than silently applying the simplex formula to them.
+
+5. Absolute scale. The existing HPM1 example now reports all six original
+loss widths, targets and terminal widths in squared kWh of stored-grid
+increments. Initial widths range from 0.107125 to 0.303143; terminal widths
+range from 0.000673 to 0.005336. The largest normalized terminal width is
+0.0435244. Twenty-four independent endpoint LPs agree within 3.13e-17.
+The caption was corrected: these are interval widths, not bounds on the
+value or absolute magnitude of the signed loss contrast. No thresholds,
+models, forecasts, subset definition or outcome changed.
+
+6. Reporting and structure. The abstract and introduction use direct active
+prose. Repeated scope explanations were shortened. The discussion foregrounds
+the joint result and retains the smaller scalar effects as context. Research-
+article structure is explicit: Introduction, Methods, Results, Discussion,
+Conclusions, supplementary materials, declarations, acknowledgements,
+references. Essential proofs and the worked certificate remain in the main
+paper. Detail needed for verification is retained rather than replaced by
+promotional language. The final PDF is 38 pages including references.
+
+VERDICT
+No unresolved blocking scientific or presentation error was identified in
+this internal review. The contribution remains specialized, with demonstrated
+conditional assurance value rather than demonstrated financial impact.
+This is suitable for journal consideration after factual author declarations; the final package checks passed. It is not external specialist validation,
+a formal proof-assistant certificate, an acceptance decision or a calibrated
+acceptance probability. The current release verification records the final
+package run separately. No person was contacted and no paper was submitted.
+
+FINAL ARTIFACT VERIFICATION
+PASS: 69 steps in a fresh network-disabled stage from the two publisher ZIP files, 1014 manifested members, 1136.96 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 38.86 MB. Full historical archive integrity also passed.

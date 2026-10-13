@@ -1,0 +1,42 @@
+\paragraph{What the measurement model certifies.}
+Table~\ref{tab:measurement-assumptions} separates stored-record guarantees
+from claims about physical energy. In each mathematical model, the guarantee
+requires the unknown record to satisfy the declared constraints.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Targets and observation assumptions in the application. Error
+allowances and hourly caps are sensitivity inputs, not verified device limits.}
+\label{tab:measurement-assumptions}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.39\linewidth}>{\raggedright\arraybackslash}p{0.34\linewidth}}
+\toprule
+Model & Target and observations & Scope of the guarantee\\
+\midrule
+Exact stored samples
+& Targets are increments of stored cumulative samples. Retained endpoints
+and queried internal samples are exact in this record model.
+& Certificates concern loss contrasts on the stored grid. They do not
+establish exact physical energy or historical delivery times.\\
+Bounded internal errors
+& The latent record includes one fixed internal-error vector with
+$|e_k|\leq\delta E$, where $E$ is the retained block total. Endpoints, and hence the
+retained total, remain exact. Errors are fixed before policy randomization.
+& Certificates cover every record and error vector within these bounds.
+The $1\%$ allowance is illustrative; it is not sampled noise or device calibration.\\
+Physical energy
+& Actual energy and meter readings would require defensible bounds for
+internal measurements, endpoints and any physical capacity constraints.
+& We provide no verified physical calibration. Source meter-class metadata
+alone does not establish the pointwise error model or exact endpoints.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Unchanged precision under capacity controls.}
+For each shared contrast $r$, $W_{r,0}$ remains its initial width under the
+original uncapped exact-total model. The shared cap controls retain
+$W_r\leq W_{r,0}/2$: they test the same absolute uncertainty budget after
+adding hourly information. They do not test halving the new capped initial
+width. The scalar control in Table~\ref{tab:counter-caps} reports both
+questions separately. We use the half-width fraction as a declared audit
+requirement; it is not a calibrated threshold for a downstream decision.

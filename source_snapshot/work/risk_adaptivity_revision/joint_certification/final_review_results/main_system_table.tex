@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+System & $n$ & A / F / G & A-only/F-only & $\Delta_F$ (pp) & A-only/G-only & $\Delta_G$ (pp)\\
+\midrule
+O1 & 273 & 212/193/211 & 27/8 & 6.96 & 3/2 & 0.37\\
+O2 & 273 & 196/187/188 & 30/21 & 3.30 & 9/1 & 2.93\\
+O3 & 273 & 233/197/224 & 38/2 & 13.19 & 12/3 & 3.30\\
+HPM 1 & 93 & 76/75/73 & 3/2 & 1.08 & 3/0 & 3.23\\
+HPM 2 & 93 & 91/66/87 & 25/0 & 26.88 & 4/0 & 4.30\\
+HPM 7 & 93 & 85/80/86 & 5/0 & 5.38 & 0/1 & -1.08\\
+\bottomrule
+\end{tabular}
+\caption{Exact-reading paired joint-precision outcomes by system. A is the exact deterministic adaptive planner; F is the best deterministic batch for worst width; G is greedy adaptation. The two discordant counts identify blocks where only A or only its comparator succeeds. O1--O3 are BLEM consumers 1--3; HPM labels retain provider system identifiers. Blocks are repeated observations within systems.}
+\label{tab:joint_system_effects}
+\end{table}

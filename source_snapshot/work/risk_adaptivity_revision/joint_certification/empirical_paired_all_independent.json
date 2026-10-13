@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "paired_comparisons": 116,
+  "draws_per_cohort": 2000,
+  "max_discrepancy": 2.8421709430404007e-13,
+  "scope": "Independent scalar sums and sorted-order percentile reconstruction; verifies seeded draw arrays and all paired cells, not validity of unmodeled cross-day independence assumptions"
+}

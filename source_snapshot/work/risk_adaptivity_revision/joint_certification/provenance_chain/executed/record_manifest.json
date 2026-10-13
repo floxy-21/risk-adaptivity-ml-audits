@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "date": "2026-10-13",
+  "files": {
+    "chain_execution.json": "2331b12ea59c2b2c5490e225e35f522528ec7928585c299db1cfc19bae19620a",
+    "original_raw_execution.json": "b8dc92faf28bdc5c4c7b72cd6415970c2cfd59a230d977b2be6105a17e61c813",
+    "source_chain.json": "c5eab2cad1df1a289888033192f50d3610eb8590484e41b5a17f8ccd991391d1",
+    "source_guards.json": "c4282b698ede1f378f296e3312ec7dba2575cb77718844f9b373338ada7e6274",
+    "table_chain.json": "4919a0fce01d434943152d894912de1bb4937cd18e31d73085dea20949396244"
+  },
+  "preceding_fresh_generators": {
+    "shared": {
+      "report_sha256": "615f673f2c8ebd8c9dce28819ae43789104d7609fa856e9f384f6a6d613f8f51",
+      "source_report": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_shared_20261013\\empirical_report.json",
+      "elapsed_seconds": 20.543388399994,
+      "status": "PASS",
+      "reused_in_final_wrapper": "Freshly generated earlier in the same source-to-table execution; recorded explicitly."
+    },
+    "precision": {
+      "report_sha256": "6882077ce82a05cba596013ec90b24d3825655b03201f53100f47f65145c6f01",
+      "source_report": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_precision_20261013\\report.json",
+      "elapsed_seconds": 103.33707889996003,
+      "status": "PASS",
+      "reused_in_final_wrapper": "Freshly generated earlier in the same source-to-table execution; recorded explicitly."
+    }
+  },
+  "scope": "Derived counts, IDs, hashes and execution records only; no raw BLEM counters, original geometry, forecast coefficients or query answers are copied.",
+  "script_sha256": "0993f8feac37709c5893d955827f1b8f98f3d9454307c32d1df359abdc913bf3"
+}

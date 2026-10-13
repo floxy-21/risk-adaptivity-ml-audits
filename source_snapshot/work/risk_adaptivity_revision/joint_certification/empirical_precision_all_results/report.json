@@ -1,0 +1,229 @@
+{
+  "status": "PASS",
+  "scope": "Replay a frozen precision-matched batch challenger with identical resources.\n\nUses exact rational widths and known-loss constants at stored records. Policy\nmixtures and full-domain bounds are fixed in the separate precision manifest.\n",
+  "cohort": "all",
+  "cases": 1098,
+  "cohorts": {
+    "external": {
+      "blocks": 279,
+      "means": {
+        "adaptive_J": 0.282258880197484,
+        "precision_batch_expected_J": 0.35884244972841517,
+        "adaptive_success": 0.9032258064516129,
+        "precision_batch_success_probability": 0.7254691605989012,
+        "adaptive_winner": 0.7419354838709677,
+        "precision_batch_winner_probability": 0.7154980025771766,
+        "adaptive_ranking": 0.5878136200716846,
+        "precision_batch_ranking_probability": 0.5634126657611437
+      },
+      "totals": {
+        "adaptive_J": 78.75022757509804,
+        "precision_batch_expected_J": 100.11704347422783,
+        "adaptive_success": 252,
+        "precision_batch_success_probability": 202.40589580709343,
+        "adaptive_winner": 207,
+        "precision_batch_winner_probability": 199.62394271903227,
+        "adaptive_ranking": 164,
+        "precision_batch_ranking_probability": 157.1921337473591
+      },
+      "exact_vs_original_threshold_mismatches": 0
+    },
+    "original": {
+      "blocks": 819,
+      "means": {
+        "adaptive_J": 0.3896198245615258,
+        "precision_batch_expected_J": 0.46410201757915814,
+        "adaptive_success": 0.7826617826617827,
+        "precision_batch_success_probability": 0.5497887233752753,
+        "adaptive_winner": 0.15018315018315018,
+        "precision_batch_winner_probability": 0.12721919507584495,
+        "adaptive_ranking": 0.057387057387057384,
+        "precision_batch_ranking_probability": 0.05265266186569851
+      },
+      "totals": {
+        "adaptive_J": 319.0986363158896,
+        "precision_batch_expected_J": 380.0995523973305,
+        "adaptive_success": 641,
+        "precision_batch_success_probability": 450.2769644443504,
+        "adaptive_winner": 123,
+        "precision_batch_winner_probability": 104.192520767117,
+        "adaptive_ranking": 47,
+        "precision_batch_ranking_probability": 43.12253006800708
+      },
+      "exact_vs_original_threshold_mismatches": 0
+    }
+  },
+  "by_meter": {
+    "consumer_00000001": {
+      "blocks": 273,
+      "means": {
+        "adaptive_J": 0.38657171009124497,
+        "precision_batch_expected_J": 0.4504551918568005,
+        "adaptive_success": 0.7765567765567766,
+        "precision_batch_success_probability": 0.5589795519222128,
+        "adaptive_winner": 0.05860805860805861,
+        "precision_batch_winner_probability": 0.05114866340106751,
+        "adaptive_ranking": 0.014652014652014652,
+        "precision_batch_ranking_probability": 0.012473248051879078
+      },
+      "totals": {
+        "adaptive_J": 105.53407685490988,
+        "precision_batch_expected_J": 122.97426737690654,
+        "adaptive_success": 212,
+        "precision_batch_success_probability": 152.6014176747641,
+        "adaptive_winner": 16,
+        "precision_batch_winner_probability": 13.96358510849143,
+        "adaptive_ranking": 4,
+        "precision_batch_ranking_probability": 3.4051967181629883
+      },
+      "exact_vs_original_threshold_mismatches": 0
+    },
+    "consumer_00000002": {
+      "blocks": 273,
+      "means": {
+        "adaptive_J": 0.42790355228431354,
+        "precision_batch_expected_J": 0.4892023813728298,
+        "adaptive_success": 0.717948717948718,
+        "precision_batch_success_probability": 0.4997001995619581,
+        "adaptive_winner": 0.08791208791208792,
+        "precision_batch_winner_probability": 0.08057256283058342,
+        "adaptive_ranking": 0.014652014652014652,
+        "precision_batch_ranking_probability": 0.013513922555778636
+      },
+      "totals": {
+        "adaptive_J": 116.8176697736176,
+        "precision_batch_expected_J": 133.55225011478254,
+        "adaptive_success": 196,
+        "precision_batch_success_probability": 136.41815448041456,
+        "adaptive_winner": 24,
+        "precision_batch_winner_probability": 21.996309652749275,
+        "adaptive_ranking": 4,
+        "precision_batch_ranking_probability": 3.6893008577275674
+      },
+      "exact_vs_original_threshold_mismatches": 0
+    },
+    "consumer_00000003": {
+      "blocks": 273,
+      "means": {
+        "adaptive_J": 0.35438421130901876,
+        "precision_batch_expected_J": 0.45264847950784415,
+        "adaptive_success": 0.8534798534798534,
+        "precision_batch_success_probability": 0.5906864186416549,
+        "adaptive_winner": 0.304029304029304,
+        "precision_batch_winner_probability": 0.24993635899588387,
+        "adaptive_ranking": 0.14285714285714285,
+        "precision_batch_ranking_probability": 0.1319708149894378
+      },
+      "totals": {
+        "adaptive_J": 96.74688968736213,
+        "precision_batch_expected_J": 123.57303490564145,
+        "adaptive_success": 233,
+        "precision_batch_success_probability": 161.2573922891718,
+        "adaptive_winner": 83,
+        "precision_batch_winner_probability": 68.2326260058763,
+        "adaptive_ranking": 39,
+        "precision_batch_ranking_probability": 36.02803249211652
+      },
+      "exact_vs_original_threshold_mismatches": 0
+    },
+    "hpm_1": {
+      "blocks": 93,
+      "means": {
+        "adaptive_J": 0.31056692321968454,
+        "precision_batch_expected_J": 0.367193108711513,
+        "adaptive_success": 0.8172043010752689,
+        "precision_batch_success_probability": 0.711924650445178,
+        "adaptive_winner": 0.956989247311828,
+        "precision_batch_winner_probability": 0.9429676413612462,
+        "adaptive_ranking": 0.8817204301075269,
+        "precision_batch_ranking_probability": 0.8427533471449509
+      },
+      "totals": {
+        "adaptive_J": 28.882723859430662,
+        "precision_batch_expected_J": 34.14895911017071,
+        "adaptive_success": 76,
+        "precision_batch_success_probability": 66.20899249140156,
+        "adaptive_winner": 89,
+        "precision_batch_winner_probability": 87.6959906465959,
+        "adaptive_ranking": 82,
+        "precision_batch_ranking_probability": 78.37606128448043
+      },
+      "exact_vs_original_threshold_mismatches": 0
+    },
+    "hpm_2": {
+      "blocks": 93,
+      "means": {
+        "adaptive_J": 0.19664746269786154,
+        "precision_batch_expected_J": 0.3216482610773921,
+        "adaptive_success": 0.978494623655914,
+        "precision_batch_success_probability": 0.7115089671065253,
+        "adaptive_winner": 0.7634408602150538,
+        "precision_batch_winner_probability": 0.7156019595623206,
+        "adaptive_ranking": 0.6559139784946236,
+        "precision_batch_ranking_probability": 0.625053349301744
+      },
+      "totals": {
+        "adaptive_J": 18.288214030901123,
+        "precision_batch_expected_J": 29.913288280197463,
+        "adaptive_success": 91,
+        "precision_batch_success_probability": 66.17033394090686,
+        "adaptive_winner": 71,
+        "precision_batch_winner_probability": 66.55098223929582,
+        "adaptive_ranking": 61,
+        "precision_batch_ranking_probability": 58.129961485062196
+      },
+      "exact_vs_original_threshold_mismatches": 0
+    },
+    "hpm_7": {
+      "blocks": 93,
+      "means": {
+        "adaptive_J": 0.33956225467490586,
+        "precision_batch_expected_J": 0.3876859793963405,
+        "adaptive_success": 0.9139784946236559,
+        "precision_batch_success_probability": 0.7529738642450001,
+        "adaptive_winner": 0.5053763440860215,
+        "precision_batch_winner_probability": 0.48792440680796284,
+        "adaptive_ranking": 0.22580645161290322,
+        "precision_batch_ranking_probability": 0.2224313008367363
+      },
+      "totals": {
+        "adaptive_J": 31.579289684766245,
+        "precision_batch_expected_J": 36.054796083859664,
+        "adaptive_success": 85,
+        "precision_batch_success_probability": 70.02656937478501,
+        "adaptive_winner": 47,
+        "precision_batch_winner_probability": 45.37696983314054,
+        "adaptive_ranking": 21,
+        "precision_batch_ranking_probability": 20.686110977816476
+      },
+      "exact_vs_original_threshold_mismatches": 0
+    }
+  },
+  "strict_threshold": "Exact rational half-width and strict zero for winner decisions; no numerical tolerance in outcome indicators",
+  "inputs": {
+    "precision_plans": {
+      "path": "work\\risk_adaptivity_revision\\joint_review\\precision_results\\plans.json",
+      "sha256": "3f52c14542a108aca1514ef0edc9a56e44cc7e8066420d0029d664c5de61e841"
+    },
+    "shared_plans": {
+      "path": "work\\risk_adaptivity_revision\\joint_review\\empirical_results\\empirical_plans.json",
+      "sha256": "3b6c1dcaf309048cde9ec46691d88b883aa67453d2bf0d73ee98c70f9cdb0a15"
+    },
+    "ledger": {
+      "path": "work\\risk_adaptivity_revision\\joint_review\\empirical_results\\empirical_cases.csv",
+      "sha256": "b46ee0fbe202ad11a7e904279317f693ee77c56eff74084345f7897d9802d9c8"
+    }
+  },
+  "data_source_hashes": {
+    "work\\risk_adaptivity_revision\\counter_adaptive\\pilot\\geometry.json": "6c94583d757db31b33b6388cd29c2d1b6999385c76b049368e58ef97f75424cb",
+    "work\\risk_adaptivity_revision\\counter_adaptive\\continuation\\geometry.json": "cb176afdd9eaae140d1830b5deb408dd2de041898a8499b93edcf59813ffb12d",
+    "work\\risk_adaptivity_revision\\external_validation\\replay\\geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0",
+    "work\\risk_adaptivity_revision\\external_heatpump\\hourly\\train_test_hourly_counters.csv": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+    "work\\data_blem_hourly_endpoints.csv": "2d8a88d83123216d71329c1745a4dbf1d0c47b34ba1a22b6529f348f4e5987eb"
+  },
+  "frozen_challenger_sha256": "3f52c14542a108aca1514ef0edc9a56e44cc7e8066420d0029d664c5de61e841",
+  "source_sha256": "5b930c3b16b58f675cec47b1749ed0dd0a6d0a6f5a6f6a978a3d56d779c8f34a",
+  "new_network_calls": 0,
+  "new_fits": 0,
+  "elapsed_seconds": 24.080709400004707
+}

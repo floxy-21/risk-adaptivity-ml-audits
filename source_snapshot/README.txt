@@ -15,8 +15,37 @@ The main paper is shortened; full current methods and controls remain in
 editorial/online_extended_methods.tex (S1 scaling; S2 historical gates and
 controls; S3 data/forecast protocol; S4 historical grid; S5 full compact
 construction; S6 extended counter checks, measurement proofs and full
-counter replay; S7 detailed computational verification). Its own reference
+counter replay; S7 detailed computational verification; S8 shared-query
+proofs, paired outcomes and protocol selection). Its own reference
 list includes every work cited in those supporting sections.
+
+CURRENT SHARED-BUDGET RESULTS -- PUBLIC OFFLINE ROUTE
+All commands below are included in the default 69-step replay. It preserves
+the earlier checks and adds source-to-forecast linkage, input-mismatch guards
+and the absolute-width example. Read the final execution
+report for completion; a configured job count is not evidence that it ran.
+  python work/risk_adaptivity_revision/joint_certification/empirical_shared_audit.py
+  python work/risk_adaptivity_revision/joint_certification/empirical_check.py
+  python work/risk_adaptivity_revision/joint_certification/independent_shared_review.py
+  python work/risk_adaptivity_revision/joint_certification/precision_batch.py
+  python work/risk_adaptivity_revision/joint_certification/precision_batch_check.py
+  python work/risk_adaptivity_revision/joint_certification/precision_adaptive_link.py
+  python work/risk_adaptivity_revision/joint_certification/empirical_precision_replay.py
+  python work/risk_adaptivity_revision/joint_certification/independent_precision_replay_check.py
+Defaults use only the 279-block external panel and bundled public frozen
+geometry/counter inputs. All six model pairs share the same two readings.
+The original 819-block numerical summaries and paired ledgers are supplied as
+derived results; their original raw geometry and register responses are not
+redistributed. Full raw regeneration remains the separately documented route.
+
+Capacity, bounded-error and paired-outcome commands are indexed in
+CURRENT_RESULTS_MAP.txt and joint_certification/README.txt. Capped records
+that violate the declared capacity are retained and flagged, not presented
+as valid cap-based replay outcomes. The complete cap/error control remains
+in the paper. Saved exact noisy certificates are checked with the standard
+library; re-solving every robust LP is optional. Paired bootstrap intervals
+resample synchronized seven-day calendar blocks, with a one-day sensitivity,
+and describe only these fixed panels. They do not measure deployment savings.
 
 INTERFACE-AWARE ACQUISITION
   python work/risk_adaptivity_revision/protocol_selection/selector.py --output-dir protocol_selection_replay
@@ -34,7 +63,7 @@ software and provenance checks, not new empirical gains or device calibration.
 READING VERSUS FEEDBACK COST
   python work/risk_adaptivity_revision/protocol_selection/cost_frontier.py --output-dir outputs/cost_frontier_replay
   python work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_COST_CHECK.py --results-dir outputs/cost_frontier_replay --output outputs/cost_frontier_check.json
-These commands are included in the current 39-step full replay. The exact
+These commands are included in the current 69-step full replay. The exact
 declared-cost analysis exports 174 case/ratio choices and checks 306 candidates.
 It identifies when feedback is worth its extra information round while keeping
 the same assurance. It does not estimate monetary savings or new API timings.
@@ -42,17 +71,17 @@ the same assurance. It does not estimate monetary savings or new API timings.
 NEW COUNTER STUDY -- ONE RAW-SOURCE ENTRY COMMAND
   python work/risk_adaptivity_revision/counter_adaptive/reproduce_counter.py
 
-This rebuilds all4914 cumulative-counter tasks from the3 pinned original files,
+This rebuilds all 4,914 cumulative-counter tasks from the three pinned original files,
 using frozen forecasts, and checks the reported primary guarantees and replay.
 An existing cache may be supplied with --data-dir PATH. The code generates raw-
 dependent geometries and queried answers locally. Read counter_adaptive/README.txt
 for paths, exact commands, runtimes, information scope and numerical treatment.
-The original13-step full replay is retained in executed/full_clean_replay.json;
+The original 13-step full replay is retained in executed/full_clean_replay.json;
 its scope predates the counter addition. New fresh replay records are separate.
 
 Extract the ZIP first. Use Python 3.12 and install requirements.txt (identical
 scientific environment to outputs/requirements-study.txt). The tested host is
-Windows11; old optional workflows may rely on Windows conventions. The current
+Windows 11; old optional workflows may rely on Windows conventions. The current
 command verifies every distributed file against MANIFEST.sha256, copies the
 package into a new isolated directory, and executes the classification checks,
 general-polytope LPs, dual-completion checks, paired solver-table reconstruction,
@@ -90,10 +119,13 @@ general/README.txt and dual/README.txt below work/risk_adaptivity_revision.
 The classification check took about11seconds, the general-polytope suite under
 one second, and the80-case dual check about32seconds on the available shared
 host. The default also parses historical empirical traces and checks2,148
-secondary LPs, so allow several minutes plus package extraction/copying time.
+secondary LPs. The preceding 63-step replay took about 21 minutes on the study
+host; allow roughly 20--30 minutes plus extraction/copying time for this 69-step
+revision. Runtime varies with hardware and storage; consult the release log
+for the actual measured final duration.
 These are planning descriptions of observed runs, not universal runtime bounds.
 
-THE CENTRAL PRACTICAL RESULT
+PREVIOUS PAIRWISE COUNTER EVIDENCE
 Before retrieving optional registers, the complete decision rule identifies
 4371 tasks where a fixed batch suffices,290 where feedback is essential and
 253 without a deterministic two-query guarantee. All290 feedback-essential
@@ -154,3 +186,38 @@ independent replication. No manuscript has been submitted by this package.
 Frozen task-binding checks run before the external replay regenerates geometry.json.
 The driver rejects a frozen-input check scheduled after a mutating regeneration job.
 Regenerated scientific ledgers are still checked before frozen inputs are restored.
+
+
+FINAL-REVIEW SYSTEM EFFECTS AND DEPENDENCE CHECKS
+  python work/risk_adaptivity_revision/joint_certification/final_review_analysis.py
+  python work/risk_adaptivity_revision/joint_certification/final_review_check.py
+Default jobs: final_review_dependence and final_review_independent. These two
+checks use the bundled full-panel derived outcome ledgers, without original
+raw data, new forecasts, policy changes or retuning. Seven-day intervals remain
+primary. The additional fourteen-day synchronized circular-block sensitivity
+and leave-one-system-out comparisons retain the declared original precision
+threshold and actual capacity-compatibility flags.
+Outputs: joint_certification/final_review_results/{report.json,system_effects.csv,
+dependence_sensitivity.csv,draws.json,precision_catalog.json,main_system_table.tex,
+supporting_dependence_table.tex}; independent report final_review_independent.json.
+Fresh wrapper outputs: outputs/final_review_dependence/ and
+outputs/final_review_independent.json. The main system table is
+tab:joint_system_effects; S8 reports tab:joint_long_dependence.
+Full-panel precision counts classify closed-zero, closed-half, closed-one and
+open-gap bounds separately from the overlapping fallback-policy classification.
+The independent checker recounts all 1,098 derived precision records and checks
+116 temporal/system-omission comparisons. Archived full coefficient-only plans
+were matched before these derived summaries were frozen; public replay does
+not claim to reconstruct original raw-dependent plans.
+
+INSPECTABLE SHARED-QUERY RESULT
+The main theorem and worked real-data certificate are verified without an optimizer.
+See joint_certification/INSPECTABLE_CERTIFICATES.txt for the four-command chain.
+  python work/risk_adaptivity_revision/joint_certification/check_main_inspectable_certificate.py
+This default step checks the actual printed real-data coefficients, outward
+enclosures, branch coverage, 36 covering multipliers and matching adverse records.
+Output: joint_certification/main_inspectable_certificate_check.json.
+The existing proof_check_joint.py verifies the constructed mean-risk theorem;
+precision_batch_check.py and precision_adaptive_link.py check all 279 external
+inputs and recover the 57 exact-half guarantees. Original-panel certification
+requires the separately documented raw-source regeneration route.

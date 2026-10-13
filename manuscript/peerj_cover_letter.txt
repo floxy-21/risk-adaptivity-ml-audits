@@ -1,50 +1,18 @@
 Dear Academic Editor,
 
-Please consider "Risk and Adaptivity in Certifying Machine-Learning Model
-Comparisons" as a Research Article in PeerJ Computer Science.
+Please consider "Risk and Adaptivity in Certifying Machine-Learning Model Comparisons" as a Research Article in PeerJ Computer Science.
 
-The paper addresses an algorithmic question in machine-learning evaluation:
-when verification targets are incomplete, when does observing one measurement
-before choosing another improve the guarantee for a model-comparison interval?
-It treats the unknown record as fixed and evaluates acquisition randomness,
-making the information available to the evaluator explicit.
+The paper studies when feedback helps certify machine-learning comparisons under a fixed measurement budget. Its central section gives an exact shared-query separation: optimal adaptive mean joint width is 1/2, versus 2/3 for randomized batching. The main text supplies the coefficients, policies and matching lower bounds against all policies in each class. A worked real-data certificate then proves a distinct precision-success separation, using explicit rational inequalities and a standalone verifier rather than trusting a solver's reported optimum.
 
-The main result characterizes the nondecreasing penalties of terminal sharp
-interval width for which randomized batch and adaptive querying have equal
-minimax risk for every compact convex uncertainty set and finite linear-query
-dictionary. The proof includes the nonconcave-penalty converse using ordinary
-coordinate queries. Exact two-query algorithms and checkable adverse-completion
-certificates translate the distinction into a computable acquisition decision.
-The manuscript explicitly credits established minimax, optimal-recovery,
-robust-optimization and sparse-policy results and distinguishes their objectives.
+A scalar risk classification provides the foundation. It characterizes the width penalties for which feedback cannot improve minimax risk on compact convex uncertainty sets. We distinguish these contributions from established minimax, optimal-recovery and robust-optimization methods.
 
-Evaluation on two public sources identifies 290 of 4,914 and 29 of 1,674
-forecast-audit tasks where the adaptive precision guarantee is one and the
-optimal randomized-batch worst-case success is one half. The much smaller
-overall recorded improvements are reported alongside those guarantees. A
-declared measurement-error sensitivity requires two readings for 22 external
-cases and three for seven. A measured public API favors bulk retrieval, and
-the supplied selector consequently chooses bulk when that interface is
-admissible. The application claims concern assurance-compatible acquisition
-under explicit constraints; they do not assert general operational superiority
-of adaptive retrieval or a measured reduction in financial cost.
+The application compares four frozen forecasting models using two cumulative-meter readings shared across all six model pairs. On 165 original and 57 external blocks, adaptation guarantees the required precision while the best randomized batch has exactly 50% worst-case success. Recorded success on these mathematically identified subsets is 100% for adaptation, compared with batch expectations of 65.45% and 64.91%. The complete panels retain the fixed-batch and greedy controls: adaptive precision gains over them are 7.81/11.11 and 2.20/2.15 percentage points, respectively.
 
-The work fits algorithms and analysis of algorithms, artificial intelligence,
-and data mining and machine learning through the verification and acquisition
-problem, rather than a new predictive architecture. The self-contained editable
-source and research_supplement.zip provide the proof, code, frozen inputs,
-per-case certificates, source provenance and one entry point for offline
-reproduction. The acquisition wrapper binds a saved comparison to its meter,
-timestamps, coefficients, units and declared interface before dispatch; separate
-checks verify those bindings, reconstruct retained counter endpoints, and
-reject malformed requests and readouts.
-This software integration selects among supplied certificates. Separate
-regeneration and refitting routes are identified.
+A declared 1% reading-error sensitivity gives 45 external blocks with verified adaptive guarantees that no randomized batch can match. Capacity constraints reduce this advantage, and unrestricted bulk retrieval remains preferable on the measured API. We report these controls, paired block outcomes and dependence-aware descriptive intervals. The shared-budget analysis reuses existing sources and is labeled retrospective.
 
-The manuscript is unpublished in a peer-reviewed venue and is not under
-consideration elsewhere. This work received no external funding, and I declare
-no competing interests. Generative-AI assistance under my supervision is
-disclosed in the manuscript. I am the sole author and corresponding author.
+The contribution concerns algorithms for acquiring verification data and certifying ML comparisons, not a new predictor. Supplemental Data S1 and S2 supply proofs, executable checks, frozen inputs, per-case witnesses and a table-to-command map. Together they occupy 38.86 MB and use one documented reproduction command after extraction into the same directory. The package separates offline replay, source regeneration and model refitting. A completed source-to-table run also reproduced both panels and all 1,098 outcome rows. The main text gives the planner and absolute-width example. The editable manuscript and both supplemental files accompany the submission materials.
+
+This manuscript is unpublished and is not under consideration elsewhere. I received no external funding and declare no competing interests. The manuscript discloses generative-AI assistance under my supervision. I am the sole author and corresponding author.
 
 Sincerely,
 Jishan Kapoor

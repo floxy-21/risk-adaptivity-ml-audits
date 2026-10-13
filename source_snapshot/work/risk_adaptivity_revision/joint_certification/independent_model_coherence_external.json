@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "blocks": 279,
+  "six_pair_cases": 1674,
+  "external_forecast_pairs_checked": 1674,
+  "max_six_pair_affine_coherence_error": 1.1102230246251565e-16,
+  "external_saved_forecast_coefficient_error": 0.0,
+  "minimum_initial_width": 3.878275553385413e-05,
+  "maximum_initial_width": 1.1368361098735544,
+  "tolerance": 1e-12,
+  "scope": "Checks six-pair consistency; independently recomputes external c=(forecast_b-forecast_a)/3 from the already frozen geometry export. Does not refit or independently regenerate the original saved forecasts.",
+  "source_sha256": "ff68ba784bb7d928f7d40cfa22e950aa71fe36416c957ed484eda9c6ca6f96ba"
+}

@@ -1,0 +1,187 @@
+{
+  "status": "PASS",
+  "scope": "All-block outcome-informed extrema over primary minimax-mean-joint-width optimum face. These record-specific oracle choices use withheld answers and are not deployable policies or precision-optimal minimax solutions.",
+  "primary_face_allowance": 1e-09,
+  "numerical_check_tolerance": 1e-08,
+  "lp_options": {
+    "primal_feasibility_tolerance": 1e-09,
+    "dual_feasibility_tolerance": 1e-09
+  },
+  "lp_count": 4392,
+  "maximum_feasibility_violation": 9.898045988675505e-10,
+  "original": {
+    "blocks": 819,
+    "means": {
+      "adaptive_recorded_J": 0.3896198245615258,
+      "adaptive_recorded_success": 0.7826617826617827,
+      "declared_batch_recorded_J": 0.4717829169205189,
+      "declared_batch_recorded_success": 0.5428550803787547,
+      "oracle_min_width": 0.47178283464330534,
+      "oracle_max_width": 0.4717829278502596,
+      "oracle_min_success": 0.542855051260128,
+      "oracle_max_success": 0.5428551196106052,
+      "width_face_range": 9.320695417200508e-08,
+      "success_face_range": 6.835047718652552e-08
+    },
+    "nontrivial_width_face_range": 5,
+    "nontrivial_success_face_range": 6,
+    "adaptive_width_strictly_better_than_any_primary_face_batch_on_record": 723,
+    "adaptive_success_strictly_better_than_any_primary_face_batch_on_record": 540,
+    "max_width_face_range": 5.7961134679707094e-05,
+    "max_success_face_range": 1.0691602884471685e-05
+  },
+  "external": {
+    "blocks": 279,
+    "means": {
+      "adaptive_recorded_J": 0.28225888019748396,
+      "adaptive_recorded_success": 0.9032258064516129,
+      "declared_batch_recorded_J": 0.38287666239758994,
+      "declared_batch_recorded_success": 0.6989812969371698,
+      "oracle_min_width": 0.38287665693867984,
+      "oracle_max_width": 0.3828766675728057,
+      "oracle_min_success": 0.6989812805631601,
+      "oracle_max_success": 0.6989813091549006,
+      "width_face_range": 1.063412593713784e-08,
+      "success_face_range": 2.8591740521645636e-08
+    },
+    "nontrivial_width_face_range": 0,
+    "nontrivial_success_face_range": 1,
+    "adaptive_width_strictly_better_than_any_primary_face_batch_on_record": 232,
+    "adaptive_success_strictly_better_than_any_primary_face_batch_on_record": 193,
+    "max_width_face_range": 3.576870934718368e-07,
+    "max_success_face_range": 1.197520302032018e-06
+  },
+  "by_meter": {
+    "consumer_00000001": {
+      "blocks": 273,
+      "means": {
+        "adaptive_recorded_J": 0.38657171009124497,
+        "adaptive_recorded_success": 0.7765567765567766,
+        "declared_batch_recorded_J": 0.46285639694393116,
+        "declared_batch_recorded_success": 0.5427463097865646,
+        "oracle_min_width": 0.462856377833868,
+        "oracle_max_width": 0.4628564037239803,
+        "oracle_min_success": 0.5427462936740792,
+        "oracle_max_success": 0.5427463565697329,
+        "width_face_range": 2.5890112297012677e-08,
+        "success_face_range": 6.289565373289802e-08
+      },
+      "nontrivial_width_face_range": 2,
+      "nontrivial_success_face_range": 1,
+      "adaptive_width_strictly_better_than_any_primary_face_batch_on_record": 244,
+      "adaptive_success_strictly_better_than_any_primary_face_batch_on_record": 187,
+      "max_width_face_range": 3.6702394324295007e-06,
+      "max_success_face_range": 1.0691602884471685e-05
+    },
+    "consumer_00000002": {
+      "blocks": 273,
+      "means": {
+        "adaptive_recorded_J": 0.4279035522843136,
+        "adaptive_recorded_success": 0.717948717948718,
+        "declared_batch_recorded_J": 0.49387516719021984,
+        "declared_batch_recorded_success": 0.4996795704436258,
+        "oracle_min_width": 0.4938749441485995,
+        "oracle_max_width": 0.49387517742779896,
+        "oracle_min_success": 0.49967953072804977,
+        "oracle_max_success": 0.4996796312231412,
+        "width_face_range": 2.3327919945280445e-07,
+        "success_face_range": 1.004950914185858e-07
+      },
+      "nontrivial_width_face_range": 2,
+      "nontrivial_success_face_range": 4,
+      "adaptive_width_strictly_better_than_any_primary_face_batch_on_record": 238,
+      "adaptive_success_strictly_better_than_any_primary_face_batch_on_record": 165,
+      "max_width_face_range": 5.7961134679707094e-05,
+      "max_success_face_range": 9.71181954638467e-06
+    },
+    "consumer_00000003": {
+      "blocks": 273,
+      "means": {
+        "adaptive_recorded_J": 0.3543842113090188,
+        "adaptive_recorded_success": 0.8534798534798534,
+        "declared_batch_recorded_J": 0.45861718662740564,
+        "declared_batch_recorded_success": 0.5861393609060738,
+        "oracle_min_width": 0.4586171819474487,
+        "oracle_max_width": 0.45861720239899945,
+        "oracle_min_success": 0.586139329378255,
+        "oracle_max_success": 0.5861393710389414,
+        "width_face_range": 2.0451550766198097e-08,
+        "success_face_range": 4.1660686408092716e-08
+      },
+      "nontrivial_width_face_range": 1,
+      "nontrivial_success_face_range": 1,
+      "adaptive_width_strictly_better_than_any_primary_face_batch_on_record": 241,
+      "adaptive_success_strictly_better_than_any_primary_face_batch_on_record": 188,
+      "max_width_face_range": 2.1048249186361723e-06,
+      "max_success_face_range": 3.7105369881107464e-06
+    },
+    "hpm_1": {
+      "blocks": 93,
+      "means": {
+        "adaptive_recorded_J": 0.3105669232196846,
+        "adaptive_recorded_success": 0.8172043010752689,
+        "declared_batch_recorded_J": 0.38690953655141674,
+        "declared_batch_recorded_success": 0.6950360965441567,
+        "oracle_min_width": 0.38690953225117375,
+        "oracle_max_width": 0.3869095412192223,
+        "oracle_min_success": 0.6950360841780386,
+        "oracle_max_success": 0.6950361108612196,
+        "width_face_range": 8.968048513069487e-09,
+        "success_face_range": 2.6683180952825472e-08
+      },
+      "nontrivial_width_face_range": 0,
+      "nontrivial_success_face_range": 0,
+      "adaptive_width_strictly_better_than_any_primary_face_batch_on_record": 76,
+      "adaptive_success_strictly_better_than_any_primary_face_batch_on_record": 60,
+      "max_width_face_range": 1.2601900241382413e-07,
+      "max_success_face_range": 6.50517874900558e-07
+    },
+    "hpm_2": {
+      "blocks": 93,
+      "means": {
+        "adaptive_recorded_J": 0.19664746269786154,
+        "adaptive_recorded_success": 0.978494623655914,
+        "declared_batch_recorded_J": 0.3708434254170425,
+        "declared_batch_recorded_success": 0.657301467865501,
+        "oracle_min_width": 0.3708434167454363,
+        "oracle_max_width": 0.3708434284527992,
+        "oracle_min_success": 0.6573014618682681,
+        "oracle_max_success": 0.6573014824238368,
+        "width_face_range": 1.1707362929004266e-08,
+        "success_face_range": 2.0555568778332587e-08
+      },
+      "nontrivial_width_face_range": 0,
+      "nontrivial_success_face_range": 0,
+      "adaptive_width_strictly_better_than_any_primary_face_batch_on_record": 86,
+      "adaptive_success_strictly_better_than_any_primary_face_batch_on_record": 78,
+      "max_width_face_range": 3.576870934718368e-07,
+      "max_success_face_range": 4.014390084794428e-07
+    },
+    "hpm_7": {
+      "blocks": 93,
+      "means": {
+        "adaptive_recorded_J": 0.33956225467490586,
+        "adaptive_recorded_success": 0.9139784946236559,
+        "declared_batch_recorded_J": 0.39087702522431056,
+        "declared_batch_recorded_success": 0.7446063264018518,
+        "oracle_min_width": 0.3908770218194293,
+        "oracle_max_width": 0.39087703304639565,
+        "oracle_min_success": 0.744606295643174,
+        "oracle_max_success": 0.7446063341796455,
+        "width_face_range": 1.1226966369339769e-08,
+        "success_face_range": 3.8536471833778843e-08
+      },
+      "nontrivial_width_face_range": 0,
+      "nontrivial_success_face_range": 1,
+      "adaptive_width_strictly_better_than_any_primary_face_batch_on_record": 70,
+      "adaptive_success_strictly_better_than_any_primary_face_batch_on_record": 55,
+      "max_width_face_range": 2.519479714024886e-07,
+      "max_success_face_range": 1.197520302032018e-06
+    }
+  },
+  "elapsed_seconds": 26.211602099996526,
+  "checker_sha256": "d6685928b5f1905679917023c5a0402b343d1ac460ead036479d72654c86c5d6",
+  "plan_sha256": "3b6c1dcaf309048cde9ec46691d88b883aa67453d2bf0d73ee98c70f9cdb0a15",
+  "cases_sha256": "b46ee0fbe202ad11a7e904279317f693ee77c56eff74084345f7897d9802d9c8",
+  "diagnostic_rows_sha256": "7339c78ed2dcb660e1fc6cfe4cc8e1aa6a238a73fe2fbb78c323e42aa19e913f"
+}

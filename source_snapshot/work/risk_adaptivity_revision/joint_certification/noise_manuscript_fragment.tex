@@ -1,0 +1,33 @@
+\paragraph{Shared-query sensitivity to stored-reading errors.}
+Across all 279 external blocks, the frozen shared policy guarantees that
+all six normalized comparison widths are at most $1/2$ on 165 blocks under
+fixed internal-reading errors bounded by $1\%$ of block energy; the best
+deterministic batch does so on 120.  On the 45 additional blocks,
+feasible fixed-record certificates prove that every randomized batch has
+worst-case precision success below one.  The certified batch success
+upper bound has minimum and median $1/2$, interquartile range
+$[1/2,2/3]$, and maximum $4/5$; 26 bounds are at most $1/2$ and 37 are
+at most $0.7$.  These are upper bounds on the unrestricted batch optimum,
+not claims that each bound is attained.  The 45 blocks span all three
+external systems (11, 11, and 23 blocks).
+
+Capacity information reduces the benefit.  With a per-hour cap of half
+the block energy as well as the same $1\%$ error allowance, a policy
+frozen from the capacity-aware noiseless planner certifies 213 of the
+279 coefficient instances, versus 204 for the best deterministic batch;
+nine have a certified randomized-batch limitation, with upper bounds
+between $2/3$ and $7/8$.  Only 200 recorded profiles satisfy this illustrative
+cap.  Within that compatible subset the counts are 153 versus 147, with
+six separations.  The original uncapped policy certifies only 191 of the
+279 capped instances, which motivates using declared capacity information
+when planning.  Both policies are fixed before the fine readings are
+opened; neither is claimed optimal for bounded-error acquisition.
+
+The comparison uses two shared readings, unchanged original widths for
+normalization, exact block endpoints, and the same permitted queries for
+every method.  An independent rational checker verifies the original
+saved contrast coefficients, branch coverage, every reported precision
+status, and the complete fixed-error adverse records.  Supplementary
+methods (Online Resource~1, S8) give the certificate construction.
+The error allowances and cap are sensitivity assumptions, not device
+specifications or measured deployment savings.

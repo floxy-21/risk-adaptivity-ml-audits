@@ -1,13 +1,15 @@
 % Self-contained source composed from pinned proofs and measured outputs.
 \documentclass[12pt]{article}
-\usepackage[margin=0.75in]{geometry}
+\usepackage[letterpaper,margin=1in]{geometry}
 \usepackage[T1]{fontenc}
+\usepackage{newtxtext,ragged2e}
+\usepackage[justification=raggedright,singlelinecheck=false]{caption}
 \usepackage{amsmath,amssymb,amsthm,booktabs,array}
 \usepackage[authoryear,round]{natbib}
 \usepackage[hidelinks]{hyperref}
 \usepackage{xurl,microtype,placeins}
 \usepackage[mathlines]{lineno}
-\AtBeginDocument{\linenumbers}
+\AtBeginDocument{\raggedright\linenumbers}
 \setlength{\emergencystretch}{2em}
 \renewcommand{\topfraction}{0.95}
 \renewcommand{\bottomfraction}{0.9}
@@ -28,32 +30,34 @@ Corresponding author: \href{mailto:kapoorjishan19@gmail.com}{kapoorjishan19@gmai
 \begin{document}
 \maketitle
 \begin{abstract}
-\textbf{Background.} Auditing a machine-learning model can require retrieving
-missing verification targets. The auditor must choose between a full export,
-a fixed batch of measurements and queries that depend on earlier answers.
-These choices can have different guarantees even with the same reading budget.
+\textbf{Background.} When verification records are incomplete, an auditor
+needs to know whether further readings will make a model comparison precise
+enough. We ask when choosing the next reading after seeing an earlier answer
+improves that guarantee under a fixed budget.
 
-\textbf{Methods.} We study the sharp interval containing a model-loss contrast
-over all records consistent with the available information. The contrast is
-affine, the uncertainty set compact and convex, and the query dictionary finite
-and linear. We classify terminal-width penalties and give exact two-query
-algorithms with independently checkable certificates.
+\textbf{Methods.} We bound model-loss differences over all records compatible
+with the available measurements. We classify scalar width penalties and
+derive shared-query policies with matching lower bounds and executable
+certificates.
 
-\textbf{Results.} Randomized batch and adaptive minimax risks agree for every
-such problem if and only if the nondecreasing penalty is concave. Constructed
-families have identical optimal expected widths but sharply different precision
-guarantees. In 290 of 4,914 frozen forecast comparisons, two adaptive counter
-readings guarantee halving the initial width, whereas optimal randomized-batch
-worst-case success is 50\%. An external source reproduces this gap in 29 of
-1,674 comparisons. Overall recorded gains over the best deterministic
-worst-width batch are 0.407 and 0.119 percentage points. Under illustrative
-1\% internal-reading errors with exact endpoints, all 29 external cases remain
-certifiable using two readings in 22 cases and three in seven. Capacity bounds
-often remove feedback necessity, and measured public-API retrieval favors bulk.
+\textbf{Results.} A shared-query construction has optimal adaptive mean
+joint width $1/2$, versus $2/3$ for randomized batching, with matching
+lower bounds. For scalar width, the two minimax risks agree universally
+exactly for nondecreasing concave penalties. On 165 of 819 original blocks and 57 of 279 external
+blocks, two shared adaptive readings guarantee joint half-width precision,
+whereas optimal randomized-batch worst-case success is exactly 50\%.
+On these subsets, recorded success is 100\% versus 65.45\% and 64.91\%
+for certified optimal batch mixtures. Across the complete panels,
+adaptive gains over fixed worst-width batches are 7.81 and 11.11 percentage
+points; gains over greedy adaptation are 2.20 and 2.15 points. Under
+illustrative 1\% internal errors with exact endpoints, 45 external blocks
+retain an adaptive guarantee that every randomized batch fails to match.
+Capacity information reduces this advantage, and measured public-API retrieval
+favors bulk.
 
-\textbf{Conclusions.} The method identifies which acquisition protocol meets
-a declared assurance requirement. An executable selector chooses among supplied certified protocols using
-declared measurement assumptions and resource limits.
+\textbf{Conclusions.} These guarantees depend on the supplied bounds and
+access rules. The shared-budget evidence is retrospective; physical meter
+accuracy and improved downstream model choice are not established.
 \end{abstract}
 \noindent\textbf{Keywords:} artificial intelligence; machine learning;
 adaptive information; minimax risk; optimal recovery; robust optimization.
@@ -64,10 +68,12 @@ comparison. The auditor can retrieve the full record, choose a batch of
 readings in advance, or choose later readings after seeing earlier answers.
 We call the last option adaptive querying. A sharp interval is the smallest
 interval containing the loss difference for every record compatible with
-the available information. This paper asks when feedback improves the
-guarantee that this interval will be sufficiently narrow. A narrow interval
-can still contain zero, so precision and identifying the better model are
-separate goals.
+the available information. We ask when feedback improves the
+guarantee that this interval will be sufficiently narrow. Width limits how
+much the reported loss difference can vary across compatible records.
+The application requires retrieval to halve that range: a declared uncertainty
+budget for reporting a comparison, not a validated proxy for choosing a winner.
+A narrow interval can still contain zero.
 
 We study affine scalar contrasts on nonempty compact convex uncertainty
 sets, with queries selected from a fixed finite dictionary of linear
@@ -80,43 +86,47 @@ assumed for the missing truth. Fixed bounded measurement errors can be
 included by enlarging the hidden record when the resulting uncertainty set
 is compact and convex.
 
-The computer-science question is how an acquisition algorithm should use
-feedback when its output must be valid for every compatible record. We ask
-which risk objectives permit a feedback advantage, how to compute an
-instance-specific guarantee, and which permitted retrieval protocol should
-implement it. The fitted forecasting models supply fixed prediction vectors;
-the proposed algorithm governs their verification data, rather than learning
-a new predictor.
+The practical decision is which retrieval protocol can meet the auditor's
+required precision. We use fixed model predictions and choose which
+verification readings to retrieve. A certificate checks whether the resulting
+comparison meets the requirement for every compatible record. This differs
+from improving the predictor itself.
 
-The contribution is a classification of when feedback can change minimax
-certificate risk, sharp realizations using admissible information queries,
-and an exact two-query decision rule with checkable precision guarantees.
-Concavity exactly characterizes the nondecreasing width penalties for which
-adaptation never improves randomized minimax risk. A coordinate-query
-construction proves the converse, and a family separates equal mean-width
-optima from success probabilities $1/K$ and one. The classification uses
-established minimax reasoning and Jensen's inequality. A dimension-dependent
-precision consequence adapts established sparse-policy bounds
-\citep{kurtz2026}; we do not claim a new general sparsification theorem.
+The central result is a shared-query separation with explicit policies and
+matching lower bounds (Section~\ref{sec:joint-separations}). A six-interval
+construction has optimal mean joint width $1/2$ for adaptive policies and
+$2/3$ for randomized batches. A worked meter example then certifies a
+different objective: feedback guarantees precision that no randomized
+fixed batch can guarantee. Both arguments have executable proof certificates.
+These results build on the scalar classification: concavity exactly
+characterizes the nondecreasing width penalties for which adaptation never
+improves randomized minimax risk. A coordinate-query construction proves
+the converse. The classification credits established minimax reasoning and
+Jensen's inequality; a dimension-dependent precision consequence adapts
+established sparse-policy bounds \citep{kurtz2026}.
 
-Cumulative meter records test whether this distinction affects actual
-forecast comparisons. Before optional answers are revealed, the two-query
-rule identifies cases where a fixed batch suffices, feedback changes
-feasibility, or two queries do not provide a deterministic guarantee.
-The original and external studies contain 290 of 4,914 and 29 of 1,674 cases,
-respectively, with an exact adaptive-versus-batch precision-success gap of
-one versus one half. These cases span three meters and six model pairs in
-each source. The large worst-case assurance gap is distinct from the small
-overall recorded gains of 0.407 and 0.119 percentage points.
+Cumulative meter records let us ask a concrete question: can the same
+two readings make all six comparisons precise at once? On all 819 original
+and 279 external blocks, the shared adaptive policy improves recorded joint
+precision success by 7.81 and 11.11 percentage points over the best fixed
+worst-width batch. The gains over a strong greedy adaptive policy are 2.20
+and 2.15 points. This is a retrospective extension using the frozen data,
+not an additional independent sample. Bounded-error certificates and capacity
+controls test when the shared-query advantage persists.
+An objective-matched calculation identifies 165 original and 57 external
+blocks where adaptive success is guaranteed and the full-continuum
+randomized-batch precision optimum is exactly $1/2$. On those same blocks,
+the recorded batch success is 65.45\% and 64.91\%, versus 100\% for adaptive
+querying. The subset criterion uses the forecast geometry, not these recorded
+outcomes; the complete panels and their stronger empirical comparators remain
+in the evaluation.
 
-The acquisition interface determines which guarantee is useful. Under the
-declared 1\% internal-reading error allowance and exact endpoints, all 29
-selected external cases remain certifiable: 22 use two readings and seven
-use three. Added capacity information can remove the need for feedback.
-On the measured public API, bulk retrieval is preferable. Our implementation
-therefore chooses among supplied certificates using the permitted
-measurements, reading and round limits, and cost priority. It reports when
-those certificates cannot meet the declared requirements.
+The retrieval service determines which choices are useful. We test bounded
+reading errors and hourly capacity information, which can respectively
+increase the required budget or remove the need for feedback. Bulk retrieval
+is preferable on the measured public API. Our implementation therefore checks
+the permitted measurements and resource limits before choosing among supplied
+bulk, fixed and adaptive certificates.
 
 The paper develops the classification and sharp examples, then computable
 two-query guarantees and their cumulative-meter specialization. The
@@ -214,7 +224,11 @@ Our application uses constrained continuous targets, while the central
 classification concerns the penalty of terminal sharp width. These precise
 distinctions, rather than certification or shared comparisons generally,
 define the contribution relative to model-choice and information-discovery
-frameworks.
+frameworks. The shared-query objective is the established weighted
+$\ell_\infty$ local diameter of a vector target, not a new uncertainty measure.
+Our additional result is its exact two-prefix separation and computable
+guarantees for joint forecast comparisons. Neither shared observations nor
+adaptive vector recovery alone is claimed as new.
 
 \section{Methods}\label{sec:methods}
 \subsection{Model Comparisons and Sharp Information}
@@ -953,6 +967,334 @@ latency, financial cost or the frequency of adverse energy profiles.
 The finite-profile program is decisive for whether batch success equals
 one; it remains only an upper bound on intermediate success values unless
 a matching guarantee is supplied.
+\subsection{Exact shared-query separations: policies, lower bounds, and verifiable certificates}
+\label{sec:joint-separations}
+An auditor comparing several models can reuse each reading across their
+loss contrasts. Let $W_{r,Q}(y)$ be the sharp width for contrast $r$ after
+the common transcript $Q$, and let $W_{r,0}>0$ be its initial width. Define
+\[
+ J_Q(y)=\max_r W_{r,Q}(y)/W_{r,0}.
+\]
+Then $J_Q(y)\leq1/2$ means that every requested comparison has reached
+half its original width. Already determined contrasts can be omitted.
+This is the local diameter of the vector contrast map in a weighted
+$\ell_\infty$ norm, within the established vector-recovery framework
+\citep{krieg2025}; shared-label model certification also has close prior
+work \citep{kuboyama2026}. It is not a new definition of uncertainty.
+
+\begin{theorem}[Feedback reduces mean joint width with two shared queries]
+\label{thm:shared-prefix-separation}
+Let $F=\{x\in\mathbb R_+^6:\sum_hx_h=1\}$, and allow at most two
+queries from $P_kx=\sum_{h\leq k}x_h$, $k=1,\ldots,5$.  For the two
+contrasts with coefficient vectors
+\[
+ c^{(1)}=(1/2,0,1,1/2,1/2,0),\qquad
+ c^{(2)}=(2/3,2/3,1,1/3,0,1),
+\]
+both initial widths are one.  Let $J_Q(x)$ be the larger terminal sharp
+width and let $R^J_{\mathcal C}=\inf_{P\in\mathcal C}\sup_{x\in F}
+\mathbb E J_{Q_P(x)}(x)$.  Then
+\[
+ R^J_{\mathrm{randomized\ adaptive}}=\tfrac12
+ <\tfrac23=R^J_{\mathrm{randomized\ batch}}.
+\]
+\end{theorem}
+\begin{proof}
+A batch partitions the six coordinates into segments.  Its scalar width
+is the sum, over segments, of segment mass times coefficient range.
+After querying boundary~3 with answer $t$, the worst remaining joint
+widths for second queries~5 and~2 are, respectively,
+\[
+ G_{35}(t)=\max(t,1/3),\qquad
+ G_{32}(t)=\max(1/2,1-t).
+\]
+Query~5 when $t\leq1/2$ and query~2 otherwise.  This guarantees $J\leq1/2$.
+At the single feasible record $x^*=(0,0,1/2,0,0,1/2)$, all ten final
+two-query sets have $J_Q(x^*)\geq1/2$; their values are the first row below.
+Here and below $ij$ means boundaries $\{i,j\}$.
+\[
+\begin{array}{c|cccccccccc}
+Q&12&13&14&15&23&24&25&34&35&45\\\hline
+J_Q(x^*)&1&3/4&5/6&1/2&1/2&5/6&1/2&3/4&1/2&1/2\\
+\mathbb E_\mu J_Q&2/3&2/3&2/3&2/3&2/3&13/18&5/6&5/6&2/3&2/3
+\end{array}
+\]
+For a fixed internal random seed, every completion agreeing with the
+queried answers follows the same adaptive transcript and stopping rule.
+Its terminal interval is therefore the final-set interval used above.
+Fewer queries cannot decrease width.  Thus every randomized adaptive
+policy has expected width at least $1/2$ at $x^*$.
+
+For the batch upper bound, mix $12,23,35$ with probabilities
+$1/6,1/3,1/2$.  Its expected joint widths at $e_1,\ldots,e_6$ are
+$(2/3,2/3,2/3,2/3,2/3,1/2)$.  Each $J_Q$ is a maximum of linear segment
+widths and hence convex; these vertex values bound the expectation
+throughout $F$ by $2/3$.  For the reverse bound, place adverse masses
+$\mu=(1/3,0,1/6,1/6,1/3,0)$ on those vertices.  The table's second row
+shows that every batch has expectation at least $2/3$, and therefore so
+does every batch mixture.  Its worst-record expectation is no smaller.
+\end{proof}
+This is a constructed separation for \emph{mean joint width}, not a
+precision-success probability.  It does not follow from the scalar
+classification: a maximum of concave local widths need not be concave.
+The argument uses established vector recovery and finite-game bounds
+\citep{krieg2025}; its claim is the explicit shared-prefix separation.
+The two contrasts can be realized with a common forecast baseline
+$a=0$ and $b^{(r)}=3c^{(r)}$ in a six-target paired MSE.  Adding other
+contrasts would define a different joint objective.
+For the uncapped exact-total simplex, each batch's scalar widths are
+linear in the energy allocation. Thus $J_Q$ is convex. Its worst mixture
+expectation is attained at a concentration vertex, making the finite-game
+LP exact for randomized-batch mean risk. The deterministic two-query
+planner instead minimizes the worst joint width after feedback. Its
+conditional objective is the maximum of the contrast-specific affine
+widths; checking all line intersections gives the exact optimum.
+The two objectives remain distinct. A deterministic adaptive value below
+the randomized-batch lower bound establishes an adaptive advantage; the
+reverse inequality does not establish optimality among adaptive policies.
+The vertex argument does not transfer to precision indicators, caps or
+measurement error. S8 provides the formulations and verification details.
+\subsubsection{Planning two shared prefix queries}
+\label{sec:shared-planner-algorithm}
+We plan one pair of readings for all requested contrasts.  The inputs are
+$m$ normalized coefficient rows $c_r\in\mathbb R^n$, each with range one,
+an exact total $E>0$, and all internal prefix queries
+$P_kx=\sum_{h\leq k}x_h$, where $x=y/E\geq0$ and $\sum_hx_h=1$.
+We assume $n\geq3$ and a budget of two distinct queries.  Define the range
+over a consecutive segment by
+$\Delta_r(a{:}b)=\max_{a\leq h\leq b}c_{rh}-\min_{a\leq h\leq b}c_{rh}$.
+
+Suppose the first query is $k$ and its answer is $t$.  For a proposed
+second query $j\ne k$, the conditional worst width of contrast $r$ is
+$\alpha_{kjr}t+\beta_{kjr}(1-t)$, where
+\[
+ (\alpha_{kjr},\beta_{kjr})=
+ \begin{cases}
+ (\max\{\Delta_r(1{:}j),\Delta_r(j+1{:}k)\},
+             \Delta_r(k+1{:}n)),&j<k,\\
+ (\Delta_r(1{:}k),
+       \max\{\Delta_r(k+1{:}j),\Delta_r(j+1{:}n)\}),&j>k.
+ \end{cases}
+\]
+Within each side of the first boundary, a worst-case allocation places
+its mass in the segment with the larger coefficient range.  Maximizing
+over records and over the finite contrast family commutes, so
+\[
+ g_{kj}(t)=\max_r\{\alpha_{kjr}t+\beta_{kjr}(1-t)\},\qquad
+ A=\min_k\max_{t\in[0,1]}\min_{j\ne k}g_{kj}(t)
+\]
+is the optimal deterministic two-query worst-width guarantee.
+
+\begin{center}
+\fbox{\begin{minipage}{0.94\linewidth}
+\small
+\textbf{Algorithm: two shared queries, exact-total simplex}
+\begin{enumerate}
+\item For each first boundary $k$, form every affine line
+$\ell_{kjr}(t)=(\alpha_{kjr}-\beta_{kjr})t+\beta_{kjr}$.
+\item Form $B_k$ from $0$, $1$, and every intersection in $[0,1]$ of two
+nonparallel lines, including lines belonging to different second queries.
+\item Compute $A_k=\max_{t\in B_k}\min_{j\ne k}\max_r\ell_{kjr}(t)$.
+Choose the smallest boundary index attaining $\min_k A_k$.
+\item Retrieve that boundary's counter value and calculate its normalized
+prefix mass $t$ using the retained endpoint total.
+\item Choose the smallest $j\ne k$ attaining $\min_j g_{kj}(t)$,
+retrieve it, and calculate all terminal segment-width certificates using
+the two shared answers.
+\end{enumerate}
+\end{minipage}}
+\end{center}
+
+Between consecutive points of $B_k$, the ordering of all underlying lines
+is fixed.  The maximum within each group and then the minimum over groups
+therefore select one affine line on that interval.  Its maximum is at an
+endpoint.  This proves that the finite calculation covers every possible
+first answer; it is not a grid approximation.  Equal or coincident lines
+are handled by the stated index rule.
+
+The mathematical algorithm uses exact comparisons.  The reported
+six-interval implementation uses the same construction in floating-point
+arithmetic: it treats values within $10^{-12}$ of a minimum as tied and
+chooses the smallest index, both offline and online.  Its intersection
+routine skips slope differences of magnitude at most $10^{-14}$; a
+257-point grid is an additional numerical check.  Exact rational branch
+and adversarial certificates support the reported exact assurance claims.
+The algorithm above addresses deterministic worst width on the uncapped,
+exact-total simplex.  Bounded-error and capacity analyses use the separate
+conditional calculations described in their sensitivity protocols;
+randomized mean-width and precision-success comparisons retain their own
+optimization objectives.
+\subsubsection{An inspectable certificate from the external panel}
+\label{sec:worked-joint-certificate}
+Consider HPM~1 on 5 July 2025, 12:00--18:00: the first matched-half case
+in the frozen external ledger.  Normalize each of its six forecast
+contrasts to coefficient range one and write $x=y/E$ for the hourly
+allocation divided by its known block total. Thus $x\geq0$, $\sum_hx_h=1$,
+and joint precision means $J\leq1/2$. The contrast order is
+daily--boosting, daily--MLP, daily--ridge, boosting--MLP,
+ridge--boosting, and ridge--MLP.  The normalized coefficient rows have
+the following rational lower enclosures; every entry other than zero
+or one lies within $10^{-4}$ above its displayed value, and zero and one
+are exact:
+\[
+ C\in L+[0,10^{-4})\quad\text{entrywise},\qquad
+ L=\begin{pmatrix}
+ 1&.2928&.0571&.1475&0&.0026\\
+ 1&.3251&.6303&.4169&.1256&0\\
+ 1&.1466&.0899&.0242&0&0\\
+ 0&.3884&1&.6778&.6220&.5040\\
+ 1&.4847&.0140&.3095&0&.0061\\
+ .2093&.3546&1&.7180&.2280&0
+ \end{pmatrix}.
+\]
+With $Q=12$ and $R=24$, their normalized width-coefficient
+vectors have the form
+\[
+ v_{Qr}=(0,0,a_r,a_r,a_r,a_r),\qquad
+ v_{Rr}=(b_r,b_r,d_r,d_r,e_r,e_r).
+\]
+The following rational upper enclosures are obtained from the exact saved
+coefficients; each actual range lies between the displayed value minus
+$10^{-4}$ and that value, with zero and one exact.
+\begin{center}
+\begin{tabular}{rcccc}
+\toprule
+Contrast $r$&$a_r\leq$&$b_r\leq$&$d_r\leq$&$e_r\leq$\\
+\midrule
+1&0.1476&0.7072&0.0905&0.0027\\
+2&0.6304&0.6749&0.2134&0.1257\\
+3&0.0900&0.8534&0.0657&0\\
+4&0.4960&0.3885&0.3222&0.1180\\
+5&0.3096&0.5153&0.2955&0.0062\\
+6&1&0.1453&0.2820&0.2281\\
+\bottomrule
+\end{tabular}
+\end{center}
+\paragraph{Batch lower guarantee.}
+For each contrast pair $(r,s)$ choose
+\[
+ \lambda_{rs}=\begin{cases}
+ 1,&r\in\{1,3,4,5\},\\
+ 1/2,&r=2,\\
+ (1/3,1/3,3/7,0,1/4,0)_s,&r=6.
+ \end{cases}
+\]
+The table directly verifies all 36 conditions
+\[
+ \max\{(1-\lambda_{rs})b_s,
+ \lambda_{rs}a_r+(1-\lambda_{rs})d_s,
+ \lambda_{rs}a_r+(1-\lambda_{rs})e_s\}\leq1/2.
+\]
+Thus $Q$ and $R$ cannot both fail: a failing contrast from each would make
+the indicated convex combination exceed $1/2$.  Their equal mixture
+therefore succeeds with probability at least $1/2$ for every feasible record.
+
+\paragraph{Matching upper bound.}
+Place half the adverse mass at $e_2$ and half at $(e_4+e_5)/2$.
+Batch~12 has joint widths zero and one there.  Every other two-query
+batch leaves coordinate~2 in a segment containing coordinate~1 or~3.
+The saved coefficients satisfy
+$|c^{(3)}_1-c^{(3)}_2|\geq0.8533$ and
+$|c^{(6)}_2-c^{(6)}_3|\geq0.6453$, so all other batches fail at $e_2$.
+Every batch therefore succeeds on at most half of this adverse mass;
+every randomized batch has worst-case success at most $1/2$.
+The full-continuum batch optimum is exactly $1/2$.
+
+\paragraph{Adaptive certificate and verification.}
+The checked adaptive policy queries boundary~2, then~4 below its switch
+$\theta\in[0.5226,0.5227]$ and~1 above it.  The table bounds the two
+enlarged branch domains by $0.47743079$ and $0.4774$, respectively.
+Hence its success is guaranteed, even allowing either action inside the
+displayed switch enclosure.  These bounds refer to the existing exact
+policy certificate; they do not replace the evaluated policy or its ledger.
+From the extracted package root, run the following commands; they require
+no optimization solver:
+\begin{verbatim}
+cd work/risk_adaptivity_revision
+python joint_certification/proof_check_joint.py
+python joint_certification/precision_batch_check.py
+python joint_certification/precision_adaptive_link.py
+python joint_certification/check_main_inspectable_certificate.py
+\end{verbatim}
+The first three verify the constructed theorem and all 57 matching
+half-success certificates within the complete 279-block external panel.
+The last verifies this example's source hashes, 36 coefficient enclosures,
+24 range enclosures, 36 multipliers, 20 adverse widths, and both branch
+domains.  Full coefficients and the rational switch remain in its output.
+The original panel's 165 certificates require the documented raw-data
+regeneration route; these default commands do not reconstruct absent
+original inputs.
+\paragraph{Precision on the original loss scale.}
+The relative target can be translated into the units of the audit.
+Table~\ref{tab:absolute_joint_widths} does so for the existing worked example,
+using the frozen forecasts and the same two queried registers. Here the
+six-target loss uses $c_h=2(b_h-a_h)/6$, so the interval widths are in
+$\mathrm{kWh}^2$; a 24-target normalization is not used. The units describe
+differences of stored cumulative API-grid samples, with the timestamp and
+physical-measurement qualifications in Table~\ref{tab:measurement-assumptions}.
+The half-width requirement is a declared audit-precision target. It has not
+been calibrated to financial loss or operational decision materiality, and a
+narrower interval need not exclude zero. Exact segment ranges and independent
+endpoint LPs reproduce these absolute widths without changing any threshold.
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Model contrast & Initial $W_{r,0}$ & Target $W_{r,0}/2$ & Terminal $W_r$ & $W_r/W_{r,0}$\\
+\midrule
+Daily--Boosting & 0.303143 & 0.151571 & 0.001947 & 0.0064\\
+Daily--MLP & 0.194503 & 0.097252 & 0.005336 & 0.0274\\
+Daily--Ridge & 0.172075 & 0.086037 & 0.000673 & 0.0039\\
+Boosting--MLP & 0.213920 & 0.106960 & 0.004617 & 0.0216\\
+Ridge--Boosting & 0.131068 & 0.065534 & 0.001766 & 0.0135\\
+Ridge--MLP & 0.107125 & 0.053563 & 0.004663 & 0.0435\\
+\bottomrule
+\end{tabular}
+\caption{Original loss scale for the existing HPM~1 worked example on 5 July 2025, 12:00--18:00 UTC. The first three numeric columns have units $\mathrm{kWh}^2$: they are widths and width targets for identification intervals of six-target MSE differences on stored API-grid increments. The retained endpoint difference is $E=1.83984375$ kWh. The unchanged adaptive policy retrieves the 14:00 register and then the 13:00 register. Normalization uses the initial width of each contrast, not a common numerical loss scale.}
+\label{tab:absolute_joint_widths}
+\end{table}
+\paragraph{What the measurement model certifies.}
+Table~\ref{tab:measurement-assumptions} separates stored-record guarantees
+from claims about physical energy. In each mathematical model, the guarantee
+requires the unknown record to satisfy the declared constraints.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Targets and observation assumptions in the application. Error
+allowances and hourly caps are sensitivity inputs, not verified device limits.}
+\label{tab:measurement-assumptions}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.39\linewidth}>{\raggedright\arraybackslash}p{0.34\linewidth}}
+\toprule
+Model & Target and observations & Scope of the guarantee\\
+\midrule
+Exact stored samples
+& Targets are increments of stored cumulative samples. Retained endpoints
+and queried internal samples are exact in this record model.
+& Certificates concern loss contrasts on the stored grid. They do not
+establish exact physical energy or historical delivery times.\\
+Bounded internal errors
+& The latent record includes one fixed internal-error vector with
+$|e_k|\leq\delta E$, where $E$ is the retained block total. Endpoints, and hence the
+retained total, remain exact. Errors are fixed before policy randomization.
+& Certificates cover every record and error vector within these bounds.
+The $1\%$ allowance is illustrative; it is not sampled noise or device calibration.\\
+Physical energy
+& Actual energy and meter readings would require defensible bounds for
+internal measurements, endpoints and any physical capacity constraints.
+& We provide no verified physical calibration. Source meter-class metadata
+alone does not establish the pointwise error model or exact endpoints.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Unchanged precision under capacity controls.}
+For each shared contrast $r$, $W_{r,0}$ remains its initial width under the
+original uncapped exact-total model. The shared cap controls retain
+$W_r\leq W_{r,0}/2$: they test the same absolute uncertainty budget after
+adding hourly information. They do not test halving the new capped initial
+width. The scalar control in Table~\ref{tab:counter-caps} reports both
+questions separately. We use the half-width fraction as a declared audit
+requirement; it is not a calibrated threshold for a downstream decision.
 \section{Results}\label{sec:evaluation}
 The application asks which admissible retrieval method meets a required
 precision. It separates information available before a query, guarantees
@@ -961,6 +1303,252 @@ measurements. All policies in each comparison share the same initial
 information and measurement model. Scalar readings, network requests and
 feedback rounds are different resources. The protocol must identify which
 resource is limited before comparing methods.
+
+\subsection{Joint precision with two shared readings}\label{sec:joint-results}
+Table~\ref{tab:joint_objectives} separates the planning objectives from
+recorded precision success. Table~\ref{tab:joint_precision_status}
+identifies where the precision challenger has matching bounds.
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{.19\linewidth}>{\raggedright\arraybackslash}p{.25\linewidth}>{\raggedright\arraybackslash}p{.45\linewidth}}
+\toprule
+Policy & Planning objective & Guarantee and recorded comparison\\
+\midrule
+Exact adaptive & Minimize worst joint width & Optimal among deterministic two-query policies in the declared exact model; replay reports joint precision success.\\
+Fixed batch & Minimize worst joint width & Best deterministic two-query batch for that width objective; not optimized for recorded success.\\
+Greedy adaptive & Sequential width refinement & Heuristic adaptive comparator; no global optimality claim.\\
+Randomized mean batch & Minimize worst expected joint width & Batch-optimal for the uncapped exact simplex; replay reports expected width and precision success separately.\\
+Precision challenger & Maximize worst-case precision success & Globally optimal only where its lower and upper certificates match; elsewhere a certified policy with an explicit gap, including the mean-width fallback.\\
+\bottomrule
+\end{tabular}
+\caption{Objectives are distinct even when all policies share the same two-reading budget, information and query dictionary. Recorded precision success always means $J\leq1/2$; it is neither a minimax success value nor proof that a model winner is identified. The noisy adaptive control freezes an exact-model policy and certifies its guarantees anew, without asserting noisy-policy optimality.}
+\label{tab:joint_objectives}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+Panel & Cases & Closed at 0 & Closed at $1/2$ & Closed at 1 & Open gap & Fallback\\
+\midrule
+Original & 819 & 141 & 165 & 162 & 351 & 492\\
+External & 279 & 27 & 57 & 128 & 67 & 94\\
+\bottomrule
+\end{tabular}
+\caption{Full-panel status of the precision challenger. ``Closed'' means equal certified lower and upper bounds on the continuum batch precision optimum. The three closed columns and open-gap column partition each panel. Fallback is a separate, overlapping policy classification: it includes closed-zero and open-gap instances. Thus 468/819 and 212/279 gaps close, but only the 165 and 57 half-success cases provide the nontrivial $1$-versus-$1/2$ assurance separation.}
+\label{tab:joint_precision_status}
+\end{table}
+\paragraph{Shared-budget evaluation.}
+We retrospectively reuse all 819 original and 279 external six-hour blocks,
+retaining all six positive-width model contrasts in every block. A single pair
+of cumulative-register queries serves all contrasts. For contrast $r$, let
+$W_{r,0}$ denote its original uncapped width and define
+$J=\max_r W_r/W_{r,0}$. Success means $J\leq1/2$; it is a joint precision
+requirement, not a guarantee that every model ordering is resolved. Every
+method receives the same totals, forecasts and two-query allowance. The
+randomized batch minimizes worst expected $J$, whereas the deterministic
+adaptive planner minimizes worst $J$; it does not optimize over randomized
+adaptive policies. We compute the threshold and policies without consulting
+the withheld register responses.
+The greedy control first minimizes the worst one-query joint width, breaks
+ties using the best two-query continuation, and then minimizes conditional
+worst width after the first answer. This one-step refinement baseline uses
+the same query interface.
+The original panel contains three BLEM meters over 91 days; the external
+HeatpumpMonitor panel contains three systems over 31 days. Both use three
+completed six-hour blocks per day and the same four frozen model types:
+daily persistence, ridge regression, gradient-boosted trees and a multilayer
+perceptron. The declared intraday audit supplies block endpoints and day-start
+forecasts before optional retrieval; source and timing details appear in
+Sections~\ref{sec:external-hpm} and~\ref{sec:counter-precision-results}.
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Panel / observation model & Blocks & Adaptive & Fixed batch & Greedy\\
+\midrule
+Original, exact &819&641 (78.27\%)&577 (70.45\%)&623 (76.07\%)\\
+External, exact &279&252 (90.32\%)&221 (79.21\%)&246 (88.17\%)\\
+External, $1\%$ allowance &279&242 (86.74\%)&215 (77.06\%)&235 (84.23\%)\\
+\bottomrule
+\end{tabular}
+\caption{Recorded-answer joint precision success with two shared readings.
+We select the fixed batch by its worst-width objective before answers;
+the last row reoptimizes this comparator for the error model while retaining
+the coefficient-derived adaptive and greedy policies. The $1\%$ allowance
+enlarges compatible records around the stored answers; it is not sampled
+device noise. Endpoints remain exact.}
+\label{tab:joint_shared_replay}
+\end{table}
+
+The adaptive success gains over the best fixed batch for the worst-width objective are
+7.81, 11.11 and 9.68 percentage points, respectively. Its gains over greedy
+are smaller: 2.20, 2.15 and 2.51 points. For the exact external panel, the
+mean realized $J$ is 0.2823 for adaptive, 0.3381 for the fixed batch and
+0.2893 for greedy. At the $1\%$ allowance these are 0.3028, 0.3481 and
+0.3099. The randomized mean-width batch has a different objective; its
+recorded precision probability is not an optimal-batch precision baseline.
+We retain all block-level outcomes, including unfavorable comparisons.
+
+A precision-matched batch challenger uses a guaranteeing fixed batch when
+available, then a certified equal mixture of two batches, and otherwise a
+declared fallback.
+Its recorded success is 54.98\% over the original panel and 72.55\% over the
+external panel; these full-panel rates are not those of a universally optimal
+precision policy. Matching certificates prove a batch precision optimum of
+$1/2$ on 165 original and 57 external instances. On these instances, adaptive
+succeeds on every stored record, while the optimal batch mixtures succeed
+with expected frequencies 108/165 (65.45\%) and 37/57 (64.91\%). Coefficient
+certificates define these subsets before record replay. The complete fixed-batch and greedy
+comparisons in Table~\ref{tab:joint_shared_replay} remain the broader controls.
+
+\paragraph{Capacity control.}
+For an illustrative cap $y_h\leq E/2$, we reoptimize the noiseless planner
+using concave piecewise-linear segment widths. We solve each conditional
+problem by checking all line intersections within each capacity interval.
+We do not infer a capped randomized-batch optimum from simplex vertices.
+Of the 819 original and 279 external records, respectively 780 and 200 satisfy
+this cap. Among those compatible records, adaptive-only half-width guarantees
+remain in 56 and 4 blocks; recorded adaptive versus fixed-batch successes
+are 655 versus 627 and 179 versus 177. Under the stronger cap $E/3$, only
+613 original and 198 external records are compatible. No adaptive-only
+half-width guarantee remains, and the two planners have equal success counts
+of 613 and 192. We flag incompatible records and make no cap-based guarantee
+for them. Thus supplied capacity information can remove the need for feedback.
+Combining the $E/2$ cap with the $1\%$ stored-reading allowance, the
+capacity-aware frozen adaptive policy succeeds on 169/200 compatible records,
+versus 166/200 for the best fixed batch under that model. Mean joint widths
+are 0.3479 and 0.3535. This is a small observed gain, not evidence of uniform
+operational superiority; the frozen uncapped greedy control succeeds on
+165/200 and is not presented as an optimized cap-aware comparator.
+
+\paragraph{Paired uncertainty and source variation.}
+The external exact-panel advantage over the worst-width fixed batch is
+11.11 percentage points (descriptive 95\% interval 8.60--13.62), compared
+with 2.15 points over greedy (1.08--3.23). These percentile intervals use
+2,000 seven-day circular calendar-block resamples, synchronized across the
+three systems and intraday blocks, with seed 20261013. The combined cap/error
+gain over the fixed batch is 1.50 points ($-0.49$--3.16). Paired $2\times2$
+counts, individual-system effects and one-day-cluster sensitivity appear in
+Online Resource~1, S8. The intervals describe these panels; three systems
+cannot establish population-level generalization, and dependence beyond
+the resampled blocks remains unmodeled.
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+System & $n$ & A / F / G & A-only/F-only & $\Delta_F$ (pp) & A-only/G-only & $\Delta_G$ (pp)\\
+\midrule
+O1 & 273 & 212/193/211 & 27/8 & 6.96 & 3/2 & 0.37\\
+O2 & 273 & 196/187/188 & 30/21 & 3.30 & 9/1 & 2.93\\
+O3 & 273 & 233/197/224 & 38/2 & 13.19 & 12/3 & 3.30\\
+HPM 1 & 93 & 76/75/73 & 3/2 & 1.08 & 3/0 & 3.23\\
+HPM 2 & 93 & 91/66/87 & 25/0 & 26.88 & 4/0 & 4.30\\
+HPM 7 & 93 & 85/80/86 & 5/0 & 5.38 & 0/1 & -1.08\\
+\bottomrule
+\end{tabular}
+\caption{Exact-reading paired joint-precision outcomes by system. A is the exact deterministic adaptive planner; F is the best deterministic batch for worst width; G is greedy adaptation. The two discordant counts identify blocks where only A or only its comparator succeeds. O1--O3 are BLEM consumers 1--3; HPM labels retain provider system identifiers. Blocks are repeated observations within systems.}
+\label{tab:joint_system_effects}
+\end{table}
+Table~\ref{tab:joint_system_effects} shows the system-level paired counts.
+The external gain over fixed batching is heterogeneous: system~2 supplies
+25 of the 31 net additional successes, while system~7 has one fewer success
+than greedy adaptation. Omitting each system in turn leaves positive exact-model
+panel effects: 5.13--10.07 and 3.23--16.13 percentage points over fixed batching
+for the original and external panels, respectively; the corresponding ranges
+over greedy are 1.65--3.11 and 1.08--3.76 points. A fourteen-day
+synchronized circular-block sensitivity also retains positive exact-model
+intervals (Online Resource~1, S8). These checks reuse the same observations;
+they are not additional independent replications. The primary seven-day
+cap-plus-error interval remains $[-0.49,3.16]$ points. Its fourteen-day
+sensitivity is $[0.48,2.63]$, and its leave-one-system-out point effects range
+from 0.81 to 2.63 points. This small three-success gain remains sensitive to
+the temporal specification; the favorable secondary interval does not replace
+the primary assessment.
+\paragraph{Checking batch-precision guarantees.}
+For each selected batch pair, 36 rational multiplier checks prove that the
+two batches cannot both fail on any feasible record. Feasible adverse
+records give matching upper bounds, establishing the full-continuum $1/2$
+optima. Rational checks also verify the adaptive half-width guarantees.
+Elsewhere, we report the gap between the challenger's lower and upper bounds;
+the mean-width fallback has only the trivial precision lower bound zero.
+Online Resource~1, S8 gives all multipliers, adverse completions and
+coefficient-based tie rules. These certificates assume exact readings;
+the next calculation treats errors separately.
+\paragraph{Shared-query sensitivity to stored-reading errors.}
+Across all 279 external blocks, the frozen shared policy guarantees that
+all six normalized comparison widths are at most $1/2$ on 165 blocks under
+fixed internal-reading errors bounded by $1\%$ of block energy; the best
+deterministic batch does so on 120.  On the 45 additional blocks,
+feasible fixed-record certificates prove that every randomized batch has
+worst-case precision success below one.  The certified batch success
+upper bound has minimum and median $1/2$, interquartile range
+$[1/2,2/3]$, and maximum $4/5$; 26 bounds are at most $1/2$ and 37 are
+at most $0.7$.  These are upper bounds on the unrestricted batch optimum,
+not claims that each bound is attained.  The 45 blocks span all three
+external systems (11, 11, and 23 blocks).
+
+Capacity information reduces the benefit.  With a per-hour cap of half
+the block energy as well as the same $1\%$ error allowance, a policy
+frozen from the capacity-aware noiseless planner certifies 213 of the
+279 coefficient instances, versus 204 for the best deterministic batch;
+nine have a certified randomized-batch limitation, with upper bounds
+between $2/3$ and $7/8$.  Only 200 recorded profiles satisfy this illustrative
+cap.  Within that compatible subset the counts are 153 versus 147, with
+six separations.  The original uncapped policy certifies only 191 of the
+279 capped instances, which motivates using declared capacity information
+when planning.  Both policies are fixed before the fine readings are
+opened; neither is claimed optimal for bounded-error acquisition.
+
+The comparison uses two shared readings, unchanged original widths for
+normalization, exact block endpoints, and the same permitted queries for
+every method.  An independent rational checker verifies the original
+saved contrast coefficients, branch coverage, every reported precision
+status, and the complete fixed-error adverse records.  Supplementary
+methods (Online Resource~1, S8) give the certificate construction.
+The error allowances and cap are sensitivity assumptions, not device
+specifications or measured deployment savings.
+\paragraph{Solver and information-flow checks.}
+All policies reuse the same two counter answers across the six contrasts.
+Plans are saved before recorded answers are loaded; this verifies the new
+run's dependency order, not prospective independence of the reused data.
+A separate implementation reconstructs every plan and summary on all 1,098
+blocks. On 18 fixed representative blocks it solves 19,440 direct endpoint
+LPs and 6,480 conditional LPs. Maximum discrepancies are
+$2.22\times10^{-16}$ and $1.11\times10^{-16}$; the numerical check tolerance
+is $10^{-8}$. The largest batch primal--dual gap is $2.03\times10^{-10}$.
+The numerical adaptive worst-width value is below the optimal randomized
+batch mean value on 462 original and 162 external blocks. This is a
+subset result, not uniform dominance; the full-panel mean differences are
+only 0.00177 and 0.00393 of initial width.
+
+An outcome-informed diagnostic optimizes recorded outcomes over the
+mean-optimal batch face, allowing $10^{-9}$ objective slack. Even its best
+precision success is 54.285512\% original and 69.898131\% external,
+essentially the declared mixtures' 54.285508\% and 69.898130\%.
+Thus arbitrary LP tie selection does not explain this comparison. These
+diagnostic oracle choices are not deployable acquisition policies, nor
+optimal batches for worst-case precision success. S8 supplies all ledgers,
+per-meter results, exact bounded-error certificates and reproduction commands.
+\paragraph{Source-to-table verification.}
+A separate execution regenerated the original counter inputs from three
+version-pinned source files. Restoring the 6,552 omitted target and persistence
+rows recovered the exact byte hash of the 89,496-row frozen forecast archive.
+The external check verified all cached provider decimals against the hourly
+export. Source-to-forecast joins checked all 6,588 contrasts across the
+819 original and 279 external blocks; maximum coefficient discrepancy was below
+$1.12\times10^{-16}$, and retained totals agreed exactly.
+Fresh policy and certificate generation reproduced the 165 and 57 matched
+half-optimal cases. Exact checks covered 7,992 covering multipliers and
+463 adaptive branch intervals. An independent replay recomputed all 10,980
+recorded batch widths and 65,880 paired model-ordering checks. All 1,098
+complete-panel outcome rows agreed with the reported tables, with zero
+numerical difference. Supplemental files retain commands, hashes and
+execution reports; raw-dependent original records are regenerated locally.
+This verifies the frozen-predictor computations, without refitting models
+or claiming external human replication.
 \subsection{When two counter readings need feedback}
 \label{sec:counter-precision-results}
 The first replay uses three actual cumulative consumption counters \citep{blem}, 91
@@ -1014,55 +1602,8 @@ upper bound: $S_B^\star\geq1/2$ and $S_B^\star\leq1/2$.
 Consequently, the minimum, quartiles, median and maximum of the 290 exact
 bounds all equal $1/2$; none is below 40\% or 30\%.
 Corollary~\ref{prop:counter-half-floor} explains this structural floor.
-The worked example below supplies the complete argument for one recorded
-comparison. S6 retains the earliest qualifying witness from each meter,
+S6 supplies a worked recorded comparison and the earliest qualifying witness from each meter,
 including exact coefficients, covers and adverse weights.
-
-\paragraph{One fully inspectable recorded comparison.}\label{sec:worked-counter-example}
-Take meter~1, persistence versus boosting, 1 October 2017, 06:00--12:00
-UTC, the earliest qualifying case for that meter. Its retained total is
-$E=4.6129961798$~kWh. With $z=y/E$ and
-$q=(c-\min c)/(\max c-\min c)$, we have $z\geq0$, $\sum_hz_h=1$ and
-$W/W_0$ equal to the width of $q^\top z$. Exact conversion of the saved
-coefficients gives the following outward enclosures; every displayed
-endpoint is an exact decimal rational:
-\[
-q\in\{1\}\times[.9061,.9062]\times\{0\}
-\times[.5717,.5718]\times[.8607,.8608]\times[.2988,.2989].
-\]
-The initial squared-loss width satisfies
-$1.31295<W_0=E(\max c-\min c)<1.31296$; the required width is
-$\tau=W_0/2$ (approximately $0.656478$).
-
-Query boundary~3 first and observe $t=z_1+z_2+z_3$.
-Query boundary~5 if $t\leq1/4$, and boundary~2 otherwise.
-The coefficient enclosures alone give the conditional bounds
-\[
-\begin{array}{ll}
-t+.2891(1-t)\leq .466825,&0\leq t\leq1/4,\\
-.0939t+.5620(1-t)\leq .444975,&1/4\leq t\leq1.
-\end{array}
-\]
-Both are strictly below $1/2$, proving success for every feasible record.
-
-For the matching batch limitation, place adverse probability $1/2$ each on
-$z=e_2$ and $z=e_5$. The table lists success at the same half-width threshold
-for all ten batches ($ij=\{i,j\}$); the enclosures certify every entry.
-\begin{center}\small
-\begin{tabular}{lrrrrrrrrrr}\toprule
-Batch &12&13&14&15&23&24&25&34&35&45\\\midrule
-$e_2$ &1&0&0&0&1&1&1&0&0&0\\
-$e_5$ &0&0&0&0&0&0&0&0&1&1\\\bottomrule
-\end{tabular}
-\end{center}
-Every column averages at most $1/2$, limiting every randomized batch.
-Conversely, an equal mixture of $\{3,5\}$ and $\{2,3\}$ succeeds on
-at least one branch for every $t$, giving the continuum lower bound $1/2$.
-Thus $S_A=1$ and $S_B^\star=1/2$. Smaller batches cannot improve precision.
-Online Resource~1 retains the exact coefficients and an independent
-rational checker for this printed witness. This is the existing exact-total
-case; it is not a new sample or a measurement-error guarantee.
-
 
 The replay compares exact adaptive worst-width planning, the best fixed
 worst-width batch, a mean-width-optimal randomized batch, uniform batching
@@ -1406,105 +1947,34 @@ is bulk retrieval when its unrestricted response is admissible. The
 two-query separation instead answers the distinct question posed by a
 fixed sample budget; it does not override an available cheaper interface.
 \FloatBarrier
-\paragraph{Selecting the acquisition protocol.}
-The interface, budget unit and operational preference must be specified before
-an acquisition guarantee is used. A reference implementation selects among
-the supplied fixed, adaptive and full-range certificates for the 29 cases.
-It checks permitted
-queries, scalar-reading and information-round caps, transport grouping, and
-the requested preference; a missing guarantee triggers escalation rather than
-a relaxed target. This is an integration of the preceding results, not a new
-optimization theorem. A frozen offline evaluation retains all 29 external
-cases, the exact endpoint total, the $0.01E$ stored-readout allowance and the
-unchanged half-width target.
+\paragraph{Selecting a feasible acquisition protocol.}
+The reference implementation chooses among supplied certified protocols
+using the query interface, scalar-reading and information-round limits, and
+the requested priority. On the same 29 external pairwise cases at 1\%
+internal error, it selects bulk in all 29 when range retrieval is admissible;
+under a three-reading restricted interface it uses two adaptive readings in
+22 cases and fixed-three in seven. A one-round restriction instead selects
+fixed-three in all 29. Restricting both interfaces to two readings leaves
+seven cases requiring escalation. The selector does not relax precision or
+treat a missing catalogue certificate as a general impossibility result.
 
-\begin{table}[t]
-\centering\small
-\caption{Protocol selection under four explicitly declared interfaces. The
-restricted interfaces are benchmark assumptions; the public API permits bulk
-retrieval. All rows use the same 29 cases and uncertainty model.}
-\label{tab:protocol-selection}
-\begin{tabular}{p{0.40\linewidth}cp{0.36\linewidth}}
-\hline
-Interface and preference & Certified & Selected protocol \\
-\hline
-Range available; fewest requests & 29/29 & Bulk range in all 29 \\
-Three readings, two rounds; fewest readings & 29/29 & Adaptive two in 22; fixed three in seven \\
-Two readings, two rounds & 22/29 & Adaptive two in 22; escalate seven \\
-Three readings, one round & 29/29 & Fixed three in all 29 \\
-\hline
-\end{tabular}
-\end{table}
+The operational wrapper binds each certificate to its model pair,
+coefficients, meter, block, retained endpoints and source hashes. It rejects
+readout envelopes for a different task, timestamp, feed or unit. Online
+Resource~1, S8 retains all 116 protocol-selection decisions, callback tests,
+exclusions and separate task-binding checks. These protect against accidental
+mismatch; they do not authenticate a provider or calibrate a meter.
 
-Unrestricted range retrieval is preferred on the actual public interface.
-Its five internal values contain each case's certified three-query subset,
-so information monotonicity preserves the precision guarantee under bounded
-stored-readout errors; it does not imply zero uncertainty about true increments.
-The restricted three-reading rule reserves 65 scalar observations in 51
-information rounds, whereas the one-round-per-case rule reserves 87 in 29
-rounds. These are distinct resources. HTTP counts are left unspecified for
-the hypothetical restricted interfaces. In particular, an interface offering
-a single native multipoint request can favor fixed-three under request
-priority while favoring adaptive-two under reading priority.
-
-The preceding three-task API timings support bulk selection on that service;
-they are not measurements on this 29-case sensitivity subset. The supplement exports all
-116 case--interface decisions, exclusions and certificate hashes, with an
-offline callback dispatcher and separate verification. The implementation returns an auditable acquisition plan: a supported
-case, its measurement assumptions, selected query protocol, hard resource
-allowances and the certificate proving its precision. If no supplied plan
-meets the interface, it returns escalation. This catalogue decision alone
-does not prove that every possible policy fails; the seven deterministic
-two-query exclusions additionally have the exact lower witnesses described
-above.
-
-The operational wrapper binds each supplied certificate to its saved model
-pair, exact coefficients, meter, API-grid block, retained endpoints and source
-hashes; readout envelopes with a different task, timestamp, feed or unit are
-rejected. For example, the system~1 ridge--MLP comparison on 6 July 2025,
-12:00--18:00 UTC, uses boundary~2 followed by boundary~1 or~4 under the
-restricted two-reading rule, while its public-interface plan selects bulk
-retrieval. These are checks against accidental task mismatch and a worked
-planning example; measured API trials and constructed dispatch tests remain
-separate, and the wrapper does not authenticate a provider or calibrate a meter.
-\paragraph{A reading--feedback cost frontier.}
-A post-analysis calculation makes the protocol choice explicit without
-assigning an unmeasured monetary benefit. Let $c_{\rm read}>0$ charge for a
-reserved scalar reading and $c_{\rm round}\geq0$ for an information round;
-write $r=c_{\rm round}/c_{\rm read}$. Under the restricted interface, each of
-the 22 cases admitting the certified adaptive rule costs $2+2r$ in reading
-units, versus $3+r$ for its certified fixed batch. Thus feedback is preferable
-exactly when $r<1$. The seven remaining cases use fixed-three under both
-complete-coverage baselines. Over the same 29 cases, fixed-three costs
-$87+29r$, adaptive-where-certified with fixed fallback costs $65+51r$, and
-the catalogue selector attains their minimum. Ties favor fewer rounds.
-
-\begin{table}[htbp]\centering\small
-\caption{Declared-cost sensitivity on the unchanged 29-case subset at 1\%
-internal error and exact endpoints. Costs are reading-charge units, not
-measured prices or latency. All methods retain the same precision guarantee.}
-\label{tab:protocol-cost-frontier}
-\begin{tabular}{rrrr}\hline
-$r$ & Fixed-three & Adaptive with fixed fallback & Catalogue choice\\\hline
-0 & 87 & 65 & 65\\
-0.25 & 94.25 & 77.75 & 77.75\\
-0.5 & 101.5 & 90.5 & 90.5\\
-1 & 116 & 116 & 116\\
-2 & 145 & 167 & 145\\
-4 & 203 & 269 & 203\\\hline
-\end{tabular}\end{table}
-
-Neither baseline is uniformly inferior: fixed-three is already optimal
-within this catalogue when $r\geq1$, and adaptive with fallback is optimal
-when $r\leq1$. The benefit is preventing an acquisition choice that assigns
-priority to the wrong resource. The analysis uses exact rational arithmetic,
-exports all 174 case--ratio choices with their certificates, and independently
-checks all 306 candidate evaluations. It is separable across pairwise audits;
-shared readings, stopping costs and unlisted protocols are outside this
-calculation. The existing three-task public-API measurements remain separate:
-mean I/O was 0.331~s for bulk and 0.497~s for adaptive retrieval, supporting
-bulk on that admissible interface. Those observations do not calibrate $r$
-or turn the modeled frontier into measured savings.
+Reading charges and feedback delays favor different protocols. If a reserved
+reading costs one unit and an information round costs $r\geq0$, the 29-case
+fixed-three plan costs $87+29r$, while adaptive-where-certified with fixed
+fallback costs $65+51r$. The latter is preferable for $r<1$ and fixed-three
+for $r>1$. This exact catalogue frontier is a declared-cost sensitivity,
+not a measured saving. S8 retains the full grid and all 306 independently
+checked candidate evaluations. Actual public-API retrieval favors bulk:
+the measured three-task mean I/O times are 0.331~s for bulk and 0.497~s for
+adaptive retrieval. A shared-query objective does not change that interface
+advantage.
 \subsection{Computability and proof checks}
 The proofs establish the universal classification. Numerical checks address
 the implementation separately: 3,202 endpoint LPs and 28 finite games agree
@@ -1551,15 +2021,13 @@ all 324 grid cells, four-model gates, bootstrap details and full protocols.
 They explain why the present paper evaluates the assurance requirement and
 retrieval interface explicitly rather than claiming general acquisition savings.
 \section{Discussion}\subsection{What the method changes in an audit}
-The practical output is a justified acquisition choice. The auditor first
-states the contrast to compare, the precision required, the information
-already available, and the retrieval options. A sufficient initial interval
+The auditor first states the contrast, required precision, available
+information and retrieval options. A sufficient initial interval
 needs no query. Otherwise, a bulk response or fixed batch can avoid feedback;
 adaptive retrieval is useful when it meets the required guarantee with fewer
-permitted readings. This ordering prevents a sophisticated selective policy
-from being used where a simpler service already supplies adequate information.
+permitted readings.
 
-The public API is a concrete example. Its full-range response is admissible,
+The public API's full-range response is admissible,
 uses one request, and is faster on the measured three-task workload. The
 selector therefore recommends bulk. Under the separate restricted-reading
 contract, the same assurance analysis instead justifies 22 two-reading and
@@ -1583,40 +2051,58 @@ Computational guarantees have narrower scopes. The general polyhedral
 formulations handle a declared batch family and exact deterministic
 two-query planning. The counter rule exploits cumulative sums and a known
 nonnegative total. The compact coordinate solver uses disjoint exact totals
-and unit costs. These efficient specializations do not supply an efficient
+and unit costs. These specializations do not supply an efficient
 arbitrary-budget precision optimizer for every convex set.
 
 \paragraph{What the application establishes.}
-Two public sources exhibit the same exact feedback-dependent assurance gap.
-Its prevalence is 5.90\% and 1.73\%, and overall recorded gains over the best
-fixed deterministic worst-width batch are only 0.407 and 0.119 percentage
-points. Greedy adaptation succeeds on all 29 external separation cases.
-Thus the main benefit is identifying when a guarantee needs feedback, not
-a large observed improvement over every adaptive heuristic. Three systems
-per source, repeated model pairs and six-hour blocks do not establish
-population prevalence.
+With two readings shared across six comparisons, feedback guarantees the
+required precision on 165 original and 57 external blocks where every
+randomized fixed batch has worst-case success at most one half. Matching
+batch constructions attain that bound. This is a change in the assurance
+available at the same budget. The worked example also reports the six
+interval widths in original loss units (Table~\ref{tab:absolute_joint_widths}).
+Across the complete panels, recorded gains over the best fixed worst-width
+batch are 7.81 and 11.11 percentage points, with smaller gains of 2.20 and
+2.15 points over greedy adaptation. We do not infer improved forecasting
+accuracy or operating savings from these precision results.
 
-Illustrative capacity constraints often make feedback unnecessary, while
-measurement errors can increase the sufficient reading budget. The
-sensitivity uses exact endpoints and declared internal errors; deployment
-requires defensible error and physical bounds. The half-initial-width target
-is a declared precision requirement, not a calibrated financial threshold.
-A narrow interval can still contain zero. Model ordering, shared retrievals
-across comparisons, and requests until a decision are separate objectives.
+The earlier, separate-pair analysis has smaller effects: the exact
+feedback-dependent gap occurs in 5.90\% and 1.73\% of cases, while overall
+recorded gains are 0.407 and 0.119 percentage points. Greedy succeeds on all
+29 external separation cases. Both analyses use three systems per source;
+the shared analysis reuses these data. Repeated days and model pairs do not
+establish population prevalence.
+
+The capacity controls show that feedback's larger gains need not survive
+additional hourly information, while internal-reading errors can increase
+the sufficient budget. These are alternative information models, not
+deployment-calibrated bounds (Table~\ref{tab:measurement-assumptions}).
+The half-width target limits the remaining range of each loss contrast;
+we have not validated it as a threshold for financial action or model selection.
+A secondary shared-query check
+certifies a best model on 123 original and 207 external blocks, versus
+122 and 201 for fixed batches and 118 and 208 for greedy adaptation.
+On the external panel, greedy certifies one more best model despite its
+lower joint-precision success. The width objective therefore does not
+uniformly improve model choice.
+Requests until a decision are another objective; neither theorem optimizes it.
 
 \section{Conclusions}
 The risk objective determines whether feedback can improve the worst-case
 guarantee for a model-comparison interval. Concavity gives a complete
 no-improvement classification; nonconcave penalties admit sharp query-based
-separations. An exact two-query rule and checkable certificates turn that
+separations. Simultaneous comparisons have a different boundary: the largest
+normalized width can benefit from feedback even under a mean-risk objective.
+An exact two-query rule and checkable certificates turn that
 distinction into an acquisition decision. The reference implementation chooses among supplied bulk, fixed and adaptive
 certificates using declared access and resource limits. New comparisons require
 new certificates; a catalogue exclusion alone is not an impossibility proof.
 The public-data results show both when feedback changes assurance and when
-bulk or fixed retrieval is preferable. The practical contribution is this
-auditable choice, supported by explicit assumptions and executable evidence.
+bulk or fixed retrieval is preferable. These choices remain conditional on
+the declared uncertainty set and access rules.
 \section*{Supplementary Materials}
-Online Resource 1, \texttt{research\_supplement.zip}, contains the editable
+Online Resource 1 is supplied as Supplemental Data S1 and S2. Extract both
+ZIP files into the same directory. Together they contain the editable
 manuscript, executable methods, frozen forecasts, source identifiers, case
 ledgers, exact witnesses and numerical checks. Start with \texttt{README.txt};
 \texttt{CURRENT\_RESULTS\_MAP.txt} maps each current table and verification
@@ -1629,7 +2115,8 @@ protocols and uncertainty checks. Protocol-selection files include all 116
 interface decisions and task-bound readout checks. The separate checker
 compares saved contrasts with frozen geometry, verifies forecast hashes,
 and reconstructs retained endpoints from cached API records. Historical
-reports remain available as clearly distinguished development records.
+reports relevant to this revision are retained; the larger development
+archive is preserved separately.
 
 \section*{Additional Information and Declarations}
 \subsection*{Data and Code Availability}
@@ -1642,8 +2129,12 @@ Dual outputs retain raw multipliers, any numerical mass correction, the
 completed record, and pricing and enumerated lower bounds. LP and endpoint
 cross-checks use floating-point arithmetic with explicit tolerances; the
 counter covering and adverse-profile certificates are additionally checked
-with exact rational arithmetic on their serialized inputs. No public
-repository or persistent archived release is claimed.
+with exact rational arithmetic on their serialized inputs. Shared-query
+checks include all joint outcomes, optimal-batch tie diagnostics, bounded-error
+dual certificates and adverse completions. A versioned private GitHub release
+also preserves the full development archive. Reviewers receive the current
+executable materials as Supplemental Data S1 and S2 without requiring
+repository access.
 
 \subsection*{Funding}
 This research received no external funding.
@@ -1665,11 +2156,13 @@ archive-access assumptions are identified explicitly. Comparisons use
 the same information and the same stated hard budgets. The new proofs
 and numerical checks do not change the historical forecast results.
 
-\subsection*{Generative-AI Assistance}
+\section*{Acknowledgements}
+\paragraph{Generative-AI assistance.}
 Jishan Kapoor provided the topic, set the research objectives and evaluation
 requirements, directed the analyses and tests, and closely supervised all
-use of OpenAI Codex (OpenAI; accessed October 2026; model versions were not
-consistently recorded). The tool assisted with literature searches,
+use of OpenAI Codex (OpenAI; GPT-6-family assistant for the final revision;
+accessed October 2026; exact model identifiers for earlier sessions were
+not consistently retained). The tool assisted with literature searches,
 development and checking of research content and code, computational
 execution, and manuscript drafting and editing. It supported iterative
 verification and clearer presentation. The author reviewed and revised

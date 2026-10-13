@@ -3,7 +3,7 @@ Risk and Adaptivity in Certifying Machine-Learning Model Comparisons
 Source: outputs/revised_manuscript.tex
 Use semantic LaTeX labels below; table numbers change when new evidence is inserted.
 Moved supporting material is current, not discarded: see
-editorial/online_extended_methods.tex sections S1--S7. Its uncompiled LaTeX
+editorial/online_extended_methods.tex sections S1--S8. Its uncompiled LaTeX
 content fragment preserves methods and tables; numerical CSV/JSON outputs and
 entry commands below are usable without compiling another document.
 The current main text keeps the complete universal proof and the cumulative
@@ -31,7 +31,7 @@ listed below. Read its actual status and steps, not merely the existence of a
 frozen report. --small runs mathematical checks only, not the empirical checks.
 The historical 13-step full-run record is archived separately at
 work/risk_adaptivity_revision/executed/full_clean_replay.json; it predates the
-current extensions and does not establish completion of the current 39-step
+current extensions and does not establish completion of the current 69-step
 replay. Read outputs/risk_clean_replay.json for the current run's status and
 steps. The new counter study is documented separately below and in
 counter_adaptive/executed/raw_reproduction_report.json; it extends the paper
@@ -45,6 +45,94 @@ few frozen composition inputs needed for byte-identical manuscript generation.
 Timing and alternative optimal LP witnesses can differ on a new execution.
 MANIFEST.sha256 records frozen file hashes; checking tolerances, not the fresh
 report's entire byte hash, determine numerical reproduction.
+
+CURRENT SHARED-BUDGET STUDY -- Online Resource S8
+All paths in this section start with
+  work/risk_adaptivity_revision/joint_certification/
+The public default is the external279-block panel with all6pairs/block.
+The original819-block raw-dependent inputs are regenerated only by the
+separate original-source route; no default check claims otherwise.
+
+tab:joint_shared_replay -- Complete shared-budget recorded precision table
+Commands: empirical_shared_audit.py; empirical_check.py;
+  independent_shared_review.py; independent_model_coherence.py.
+Frozen outputs: empirical_external_results/empirical_cases.csv and
+  empirical_report.json; empirical_all_panel_cases.csv and
+  empirical_all_panel_report.json contain complete derived all-panel results.
+Fresh default outputs: outputs/joint_external_replay/ plus
+  outputs/joint_endpoint_check.json, joint_full_independent.json,
+  joint_model_coherence.json.
+Selection: every819original/279external block; no pair-level independence.
+Original/external adaptive recorded success641/819 and252/279; fixed batch
+for the worst-width objective577/819 and221/279; greedy623/819 and246/279.
+Methods: empirical_methods_supplement.tex. Zero-valued game and secondary-tie
+regressions: empirical_regression.py, outputs/joint_regressions.json.
+
+Precision-matched batch challenger and exact matching subsets
+Commands: precision_batch.py; precision_batch_check.py;
+  precision_adaptive_link.py; empirical_precision_replay.py;
+  independent_precision_replay_check.py.
+Frozen outputs: precision_external_results/ and empirical_precision_results/;
+  full derived outcomes: empirical_precision_all_results/.
+Fresh outputs: outputs/joint_precision_catalog/,
+  outputs/joint_precision_replay/, outputs/joint_precision_replay_check.json.
+All57external and165original certified uniform pairs have matching
+full-simplex batch precision optimum1/2; the adaptive guarantee is checked
+separately. Recorded adaptive success57/57 and165/165; batch expected
+success37/57 and108/165. Full-panel challenger expected success72.55% and
+54.98%, respectively, is not claimed globally precision-optimal everywhere.
+Source proof: precision_proof_fragment.tex; exact constructed example:
+proof_check_joint.py -> outputs/joint_proof.json.
+
+Capacity and bounded-error controls
+Commands: empirical_capacity.py; empirical_capacity_check.py.
+Frozen outputs: empirical_external_capacity_results/; full derived reports
+empirical_all_capacity_{report.json,cases.csv}. Fresh outputs:
+outputs/joint_capacity_replay/, outputs/joint_capacity_independent.json.
+The cap E/2 has200compatible external records, cap E/3 has198; invalid
+records are explicitly retained/flagged and not assigned valid guarantees.
+The threshold always uses the original uncapped pair widths.
+
+Commands: noise_independent_check.py --directory <noise_external_results>
+and the same command with <noise_external_capacity_results>. These stdlib
+checks verify saved exact rational certificates, not new robust LP solving.
+Manual full regeneration and its additional certificate exporters are listed
+in joint_certification/README.txt. The default nominal-answer replay uses
+empirical_noise_replay.py and empirical_noise_check.py with each certificate
+directory. Fresh outputs: outputs/joint_noise_replay/,
+outputs/joint_capacity_noise_replay/, and their independent check JSONs.
+At1%allowance, adaptive/fixed/greedy successes242/215/235 over279records.
+With cap E/2 plus1%allowance and the capacity-aware frozen policy, adaptive
+and robust fixed batch succeed169/166 over200compatible records. The greedy
+165/200 is a frozen uncapped control, not cap-aware greedy optimization.
+
+tab:joint_paired_outcomes -- Paired2x2cells, system effects, uncertainty
+Commands: empirical_pair_summary.py; empirical_pair_check.py.
+Frozen outputs: empirical_paired_external_results/ and
+empirical_paired_all_results/ contain case_outcomes.json, paired_statistics.csv,
+bootstrap_draws.json, paired_statistics.json, paired_table.tex and report.json.
+Fresh outputs: outputs/joint_paired_replay/ and outputs/joint_paired_independent.json.
+Primary intervals:2000circular7-day calendar-block draws, synchronized across
+systems/intraday blocks; secondary1-day clusters. Base seed20261013; exact
+SeedSequence and percentile interpolation are in the report. Denominators
+are compatible block counts in each resample, not independent model pairs.
+Randomized cells are expected counts. Intervals describe these fixed panels;
+three systems per source do not justify population-level generalization.
+
+Secondary model-winner/ranking outcomes
+Commands: decision_replay.py; independent_decision_check.py.
+Fresh outputs: outputs/joint_decision_replay/ and outputs/joint_decision_check.json.
+Strict signs are checked directly against frozen forecast MSEs in rational
+arithmetic. Joint precision and a certified winner remain distinct outcomes.
+
+Case-by-case fresh/frozen correspondence
+empirical_release_check.py checks the fresh exact, precision, cap and noisy
+case ledgers, including invalid-cap flags. Default report:
+outputs/joint_scientific_match.json. These24newjobs precede external cached
+geometry regeneration; requires_frozen_inputs in replay_jobs.json and the
+driver's dependency check enforce this ordering. The previous39driversteps
+are retained, with two final-review dependence checks and one printed-certificate check giving 66 steps. Completion requires the actual final
+outputs/risk_clean_replay.json, not these archived PASS records alone.
 
 tab:risk_three_coordinate -- Exact three-coordinate example
 LaTeX label: tab:risk_three_coordinate
@@ -914,3 +1002,66 @@ tab:counter-witnesses with all three meter examples remains in S6.
 Optional --geometry PATH checks coefficients, total and saved width against
 locally regenerated counter geometry. It is not required by the default run.
 No raw-source replay or new sample is claimed by this printed-witness check.
+
+
+FINAL-REVIEW SYSTEM EFFECTS AND DEPENDENCE CHECKS
+  python work/risk_adaptivity_revision/joint_certification/final_review_analysis.py
+  python work/risk_adaptivity_revision/joint_certification/final_review_check.py
+Default jobs: final_review_dependence and final_review_independent. These two
+checks use the bundled full-panel derived outcome ledgers, without original
+raw data, new forecasts, policy changes or retuning. Seven-day intervals remain
+primary. The additional fourteen-day synchronized circular-block sensitivity
+and leave-one-system-out comparisons retain the declared original precision
+threshold and actual capacity-compatibility flags.
+Outputs: joint_certification/final_review_results/{report.json,system_effects.csv,
+dependence_sensitivity.csv,draws.json,precision_catalog.json,main_system_table.tex,
+supporting_dependence_table.tex}; independent report final_review_independent.json.
+Fresh wrapper outputs: outputs/final_review_dependence/ and
+outputs/final_review_independent.json. The main system table is
+tab:joint_system_effects; S8 reports tab:joint_long_dependence.
+Full-panel precision counts classify closed-zero, closed-half, closed-one and
+open-gap bounds separately from the overlapping fallback-policy classification.
+The independent checker recounts all 1,098 derived precision records and checks
+116 temporal/system-omission comparisons. Archived full coefficient-only plans
+were matched before these derived summaries were frozen; public replay does
+not claim to reconstruct original raw-dependent plans.
+
+INSPECTABLE SHARED-QUERY RESULT
+The main theorem and worked real-data certificate are verified without an optimizer.
+See joint_certification/INSPECTABLE_CERTIFICATES.txt for the four-command chain.
+  python work/risk_adaptivity_revision/joint_certification/check_main_inspectable_certificate.py
+This default step checks the actual printed real-data coefficients, outward
+enclosures, branch coverage, 36 covering multipliers and matching adverse records.
+Output: joint_certification/main_inspectable_certificate_check.json.
+The existing proof_check_joint.py verifies the constructed mean-risk theorem;
+precision_batch_check.py and precision_adaptive_link.py check all 279 external
+inputs and recover the 57 exact-half guarantees. Original-panel certification
+requires the separately documented raw-source regeneration route.
+
+EXPLICIT SHARED PLANNER AND ABSOLUTE LOSS SCALE
+Section sec:shared-planner-algorithm gives the exact segment-range construction,
+all affine intersections/endpoints, tie rule and online second-query rule.
+The production code is joint_certification/empirical_shared_audit.py;
+the boxed exact-simplex procedure is distinct from capacity/error LPs.
+
+Table tab:absolute_joint_widths retains the existing worked HPM1 block and
+the same frozen predictions, two readings and half-width thresholds.
+  python work/risk_adaptivity_revision/joint_certification/absolute_widths.py --output-dir outputs/joint_absolute_widths
+Default job: joint_absolute_widths. Output: report.json, absolute_widths.csv,
+main_table.tex. It checks source-counter decimals and forecast coefficients,
+then solves 24 endpoint LPs independently of the segment-width calculation.
+The units are squared kWh of stored API-grid increments, using a six-target
+MSE denominator. Widths are not bounds on the magnitude of the loss difference.
+
+COMPLETE SOURCE-TO-TABLE CHAIN
+See joint_certification/provenance_chain/README.txt for the full six-stage map.
+The public executed/ reports record this revision's completed both-panel run.
+Default jobs source_identity_guards and external_source_forecast_chain verify
+fail-closed source gates and the bundled external source-to-coefficient joins.
+The remaining default shared jobs generate and check that panel's certificates.
+To reproduce the entire original and external chain, from the extracted root:
+  python work/risk_adaptivity_revision/joint_certification/provenance_chain/run_chain.py --cohort all --raw-dir PATH_TO_PINNED_BLEM_CACHE --output-dir all_chain_new
+Omit --raw-dir to obtain the three mandatory version-pinned public sources.
+This route reconstructs original raw-dependent outputs locally. It does not
+refit models. It reproduced 819/279 complete blocks and 165/57 matched-half
+certificates. Default offline external execution does not claim this raw route.

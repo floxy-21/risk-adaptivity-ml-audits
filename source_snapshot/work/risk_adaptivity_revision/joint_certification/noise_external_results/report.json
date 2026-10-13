@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "cohort": "external",
+  "cases": 279,
+  "scenarios": [
+    "error_1pct",
+    "cap_half_error_1pct"
+  ],
+  "summary": {
+    "error_1pct": {
+      "cases": 279,
+      "adaptive_half_guarantees": 165,
+      "det_batch_half_guarantees": 120,
+      "adaptive_vs_all_randomized_precision_separations": 45,
+      "mean_frozen_adaptive_upper": 0.45878770636584304,
+      "mean_best_det_batch_upper": 0.5795589327728428,
+      "max_exact_upper_correction": 1.4988010832439613e-15,
+      "lp_solves": 20178
+    },
+    "cap_half_error_1pct": {
+      "cases": 279,
+      "adaptive_half_guarantees": 191,
+      "det_batch_half_guarantees": 204,
+      "adaptive_vs_all_randomized_precision_separations": 3,
+      "mean_frozen_adaptive_upper": 0.41632191335796276,
+      "mean_best_det_batch_upper": 0.3893656720661227,
+      "max_exact_upper_correction": 1.4155343563970746e-15,
+      "lp_solves": 20178
+    }
+  },
+  "by_meter": {
+    "hpm_1": {
+      "error_1pct": {
+        "cases": 93,
+        "adaptive_half_guarantees": 55,
+        "det_batch_half_guarantees": 44,
+        "adaptive_vs_all_randomized_precision_separations": 11,
+        "mean_frozen_adaptive_upper": 0.49266802319558506,
+        "mean_best_det_batch_upper": 0.5758403819497856,
+        "max_exact_upper_correction": 2.220446049250313e-16,
+        "lp_solves": 6660
+      },
+      "cap_half_error_1pct": {
+        "cases": 93,
+        "adaptive_half_guarantees": 65,
+        "det_batch_half_guarantees": 68,
+        "adaptive_vs_all_randomized_precision_separations": 1,
+        "mean_frozen_adaptive_upper": 0.4500249003877303,
+        "mean_best_det_batch_upper": 0.4174642254151834,
+        "max_exact_upper_correction": 2.220446049250313e-16,
+        "lp_solves": 6660
+      }
+    },
+    "hpm_2": {
+      "error_1pct": {
+        "cases": 93,
+        "adaptive_half_guarantees": 53,
+        "det_batch_half_guarantees": 42,
+        "adaptive_vs_all_randomized_precision_separations": 11,
+        "mean_frozen_adaptive_upper": 0.41309778429236077,
+        "mean_best_det_batch_upper": 0.5838362353354497,
+        "max_exact_upper_correction": 1.4988010832439613e-15,
+        "lp_solves": 6738
+      },
+      "cap_half_error_1pct": {
+        "cases": 93,
+        "adaptive_half_guarantees": 57,
+        "det_batch_half_guarantees": 64,
+        "adaptive_vs_all_randomized_precision_separations": 1,
+        "mean_frozen_adaptive_upper": 0.37803698830181454,
+        "mean_best_det_batch_upper": 0.3518981188122622,
+        "max_exact_upper_correction": 1.4155343563970746e-15,
+        "lp_solves": 6738
+      }
+    },
+    "hpm_7": {
+      "error_1pct": {
+        "cases": 93,
+        "adaptive_half_guarantees": 57,
+        "det_batch_half_guarantees": 34,
+        "adaptive_vs_all_randomized_precision_separations": 23,
+        "mean_frozen_adaptive_upper": 0.4705973116095833,
+        "mean_best_det_batch_upper": 0.5790001810332928,
+        "max_exact_upper_correction": 1.3322676295501878e-15,
+        "lp_solves": 6780
+      },
+      "cap_half_error_1pct": {
+        "cases": 93,
+        "adaptive_half_guarantees": 69,
+        "det_batch_half_guarantees": 72,
+        "adaptive_vs_all_randomized_precision_separations": 1,
+        "mean_frozen_adaptive_upper": 0.4209038513843434,
+        "mean_best_det_batch_upper": 0.3987346719709226,
+        "max_exact_upper_correction": 3.3306690738754696e-16,
+        "lp_solves": 6780
+      }
+    }
+  },
+  "scope": "All selected frozen blocks, six shared contrasts, two total prefix queries. Original half-width threshold and exact endpoints. Fixed coefficient-derived policy; no global noisy/capped adaptive optimality. Exact rational LP-dual residual corrections and feasible batch endpoints. Exact rational normalization of original source binary64 contrast coefficients defines every checked instance.",
+  "policy": "Use saved noiseless first query; compute all-line intervals from exact source-normalized coefficients, extend endpoint branches, dispatch first matching closed interval. Export all frozen policies before sensitivity calculations and without loading fine answers.",
+  "profile_lower_bound": "All-randomized precision upper9/10 only when ten feasible endpoint witnesses prove every deterministic batch fails; no vertex-exactness assumption.",
+  "input_sha256": "3b6c1dcaf309048cde9ec46691d88b883aa67453d2bf0d73ee98c70f9cdb0a15",
+  "coefficient_source_hashes": {
+    "external_validation\\replay\\geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0"
+  },
+  "frozen_policies_sha256": "ea02645df33566f2c77df317b15b77dc5c64735f9b7c2766f42c4706597bc0d2",
+  "checker_source_sha256": "6e1940ddf088e711f7d5e89fe27dda406df7aacb4ee4600b53a971795fa637d9",
+  "new_network_calls": 0,
+  "new_fits": 0,
+  "fine_answers_loaded": false,
+  "elapsed_seconds": 375.17254780000076
+}

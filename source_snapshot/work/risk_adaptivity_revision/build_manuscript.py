@@ -52,14 +52,16 @@ def main():
 
     preamble = r'''% Self-contained source composed from pinned proofs and measured outputs.
 \documentclass[12pt]{article}
-\usepackage[margin=0.75in]{geometry}
+\usepackage[letterpaper,margin=1in]{geometry}
 \usepackage[T1]{fontenc}
+\usepackage{newtxtext,ragged2e}
+\usepackage[justification=raggedright,singlelinecheck=false]{caption}
 \usepackage{amsmath,amssymb,amsthm,booktabs,array}
 \usepackage[authoryear,round]{natbib}
 \usepackage[hidelinks]{hyperref}
 \usepackage{xurl,microtype,placeins}
 \usepackage[mathlines]{lineno}
-\AtBeginDocument{\linenumbers}
+\AtBeginDocument{\raggedright\linenumbers}
 \setlength{\emergencystretch}{2em}
 \renewcommand{\topfraction}{0.95}
 \renewcommand{\bottomfraction}{0.9}
@@ -89,6 +91,20 @@ def main():
     text += local('counter_adaptive/literature/counter_methods.tex')
     text += local('editorial/counter_half_corollary.tex')
     text += local('counter_adaptive/feedback_triage/math_review.tex')
+    joint_methods = local('joint_certification/manuscript_methods.tex')
+    joint_definition = between(joint_methods,
+                               'An auditor comparing several models',
+                               'The scalar assumption')
+    joint_algorithms = joint_methods[joint_methods.index('For the uncapped exact-total simplex'):]
+    inspectable = local('joint_certification/main_inspectable_proof.tex')
+    inspectable = inspectable.replace(r'\begin{theorem}',
+                                     joint_definition + r'\begin{theorem}', 1)
+    text += inspectable + joint_algorithms
+    text += local('joint_certification/main_planner_algorithm.tex')
+    text += local('joint_certification/main_worked_precision_certificate.tex')
+    text += local('joint_certification/absolute_width_fragment.tex')
+    text += local('joint_certification/absolute_width_results/main_table.tex')
+    text += local('editorial/measurement_assumptions.tex')
     structured = local('editorial/structured_start.tex')
     compact = between(old, r'\section{Randomized Recovery under a Hard Budget}', r'\subsection{Interpreting the robust objective}')
     compact = compact.replace(r'\section{Randomized Recovery under a Hard Budget}', r'\subsection{Randomized recovery under a hard budget}')
@@ -190,6 +206,34 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
 \FloatBarrier
 '''
     text += local('editorial/results_start.tex')
+    joint = json_source('work/risk_adaptivity_revision/joint_certification/empirical_all_panel_report.json')
+    assert joint['status'] == 'PASS'
+    assert [(joint[c]['blocks'], round(joint[c]['blocks'] * joint[c]['means']['adaptive_recorded_success'])) for c in ('original','external')] == [(819,641),(279,252)]
+    precision = json_source('work/risk_adaptivity_revision/joint_certification/precision_all_panel_report.json')
+    assert precision['status'] == 'PASS'
+    assert [precision['summary'][c]['matching_half'] for c in ('original','external')] == [165,57]
+    noise = json_source('work/risk_adaptivity_revision/joint_certification/noise_external_results/report.json')
+    assert noise['status'] == 'PASS' and noise['summary']['error_1pct']['adaptive_vs_all_randomized_precision_separations'] == 45
+    adverse = json_source('work/risk_adaptivity_revision/joint_certification/noise_external_results/strengthened_batch_bounds.json')
+    assert adverse['summary']['error_1pct']['at_most_half'] == 26
+    paired = json_source('work/risk_adaptivity_revision/joint_certification/empirical_paired_all_results/report.json')
+    assert paired['status'] == 'PASS' and paired['draws'] == 2000 and paired['base_seed'] == 20261013
+    text += '\n\\subsection{Joint precision with two shared readings}\\label{sec:joint-results}\n'
+    text += ('Table~\\ref{tab:joint_objectives} separates the planning objectives from\n'
+             'recorded precision success. Table~\\ref{tab:joint_precision_status}\n'
+             'identifies where the precision challenger has matching bounds.\n')
+    text += local('joint_certification/final_review_comparators.tex')
+    text += local('joint_certification/empirical_manuscript_fragment.tex')
+    text += local('joint_certification/final_review_results/main_system_table.tex')
+    text += local('joint_certification/final_review_dependence_paragraph.tex')
+    text += local('joint_certification/precision_manuscript_fragment.tex')
+    text += local('joint_certification/noise_manuscript_fragment.tex')
+    text += local('joint_certification/verification_main.tex')
+    lineage = json_source('work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/table_chain.json')
+    assert lineage['status'] == 'PASS' and lineage['all_case_ledger_rows_compared'] == 1098
+    assert lineage['maximum_ledger_numeric_difference'] == 0
+    assert [lineage['tables'][c]['matched_half_blocks'] for c in ('original','external')] == [165,57]
+    text += local('joint_certification/provenance_chain/manuscript_fragment.tex')
     counter = json_source('work/risk_adaptivity_revision/counter_adaptive/summary/report.json')
     assert counter['tasks']==4914 and counter['groups']['overall'][0]['strong_separations']==290
     half = json_source('work/risk_adaptivity_revision/counter_adaptive/math_review/half_cover_verification.json')
@@ -230,7 +274,7 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
         sensitivity = between(sensitivity, begin_sensitivity, end_sensitivity).replace(begin_sensitivity, '', 1)
     text += sensitivity
     text += local('editorial/operational_api_results.tex')
-    text += local('protocol_selection/manuscript_fragment.tex')
+    text += local('editorial/protocol_selection_short.tex')
     selector_report = json_source('work/risk_adaptivity_revision/protocol_selection/results/report.json')
     selector_check = json_source('work/risk_adaptivity_revision/protocol_selection/independent_results/report.json')
     assert selector_report['status'] == selector_check['status'] == 'PASS'
@@ -246,7 +290,6 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
     assert cost['case_ratio_rows'] == cost_check['case_ratio_rows'] == 174
     assert cost_check['exhaustive_per_case_candidate_evaluations'] == 306
     assert [s['cost_aware_cost_exact'] for s in cost['summaries']] == ['65', '311/4', '181/2', '116', '145', '203']
-    text += local('protocol_selection/manuscript_fragment_cost.tex')
     historical = local('editorial/evaluation_historical.tex')
     division = historical.index(r'\subsection{The retained adverse recovery result}')
     text += local('editorial/computation_short.tex')
@@ -288,7 +331,17 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
                 + local('counter_adaptive/reviewer_diagnostics/complete_witness.tex')
                 + local('external_validation/math/manuscript_uncertainty_appendix.tex')
                 + local('editorial/stored_error_full.tex')
-                + '\\section{S7. Detailed computational verification}\n' + computation)
+                + '\\section{S7. Detailed computational verification}\n' + computation
+                + '\\section{S8. Shared-query certificates and protocol selection}\n'
+                + local('joint_certification/proof_supplement.tex')
+                + local('joint_certification/empirical_methods_supplement.tex')
+                + local('joint_certification/empirical_paired_all_results/paired_table.tex')
+                + local('joint_certification/final_review_methods.tex')
+                + local('joint_certification/final_review_results/supporting_dependence_table.tex')
+                + local('joint_certification/noise_proof_fragment.tex')
+                + local('joint_certification/precision_proof_fragment.tex')
+                + local('protocol_selection/manuscript_fragment.tex')
+                + local('protocol_selection/manuscript_fragment_cost.tex'))
     # References to relocated appendices now identify the indexed resource.
     for label, section in [('app:stored-error', 'S6'),
                            ('app:complete-counter-witness', 'S6'),

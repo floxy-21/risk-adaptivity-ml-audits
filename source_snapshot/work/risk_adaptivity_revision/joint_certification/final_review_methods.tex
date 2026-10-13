@@ -1,0 +1,25 @@
+\paragraph{Dependence sensitivity and system-level audit.}
+The dependence sensitivity keeps the original precision threshold, policy
+choices and recorded outcomes. It adds fourteen-day circular calendar blocks
+to the primary seven-day bootstrap, using 2,000 draws and
+\texttt{PCG64 SeedSequence([20261013,cohort,14])}, where cohort is 0 for the
+original panel and 1 for the external panel. Each draw concatenates sampled
+blocks, wraps at the end of the observed calendar, and truncates to its
+original length. The same dates are sampled across all systems, intraday
+blocks, policies and information regimes. Compatible record counts supply
+the denominator within each resample. Percentile endpoints use linear
+interpolation at 2.5\% and 97.5\%. The fourteen-day block is long relative
+to the external 31-day horizon: it is a sensitivity check, not evidence that
+all temporal dependence is captured. Leave-one-system-out results retain all
+records from the remaining two systems. Neither omitting one system nor
+resampling days provides independent deployments or population inference.
+
+The paired ledgers retain all four success cells, actual capacity compatibility
+flags, and each system's effect. The archived fourteen-day draw indices and
+the separately written checker permit direct recounting without refitting or
+replanning. The checker recomputes cells with rational arithmetic and scalar
+day-multiplicity sums, checks percentile interpolation independently, confirms
+that the seven-day intervals are unchanged, and checks precision-gap counts
+against every archived case. The full coefficient-only plans were also matched
+against all 1,098 derived precision records; public replay needs only those
+derived ledgers, not the original raw-dependent plans.

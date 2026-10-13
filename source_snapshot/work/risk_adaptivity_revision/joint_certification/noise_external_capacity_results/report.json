@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "cohort": "external",
+  "cases": 279,
+  "scenarios": [
+    "cap_half_error_1pct"
+  ],
+  "summary": {
+    "cap_half_error_1pct": {
+      "cases": 279,
+      "adaptive_half_guarantees": 213,
+      "det_batch_half_guarantees": 204,
+      "adaptive_vs_all_randomized_precision_separations": 9,
+      "mean_frozen_adaptive_upper": 0.3745321622824459,
+      "mean_best_det_batch_upper": 0.3893656720661227,
+      "max_exact_upper_correction": 7.771561172376096e-16,
+      "lp_solves": 19758
+    }
+  },
+  "by_meter": {
+    "hpm_1": {
+      "cap_half_error_1pct": {
+        "cases": 93,
+        "adaptive_half_guarantees": 72,
+        "det_batch_half_guarantees": 68,
+        "adaptive_vs_all_randomized_precision_separations": 4,
+        "mean_frozen_adaptive_upper": 0.39472930071843926,
+        "mean_best_det_batch_upper": 0.4174642254151834,
+        "max_exact_upper_correction": 2.220446049250313e-16,
+        "lp_solves": 6552
+      }
+    },
+    "hpm_2": {
+      "cap_half_error_1pct": {
+        "cases": 93,
+        "adaptive_half_guarantees": 68,
+        "det_batch_half_guarantees": 64,
+        "adaptive_vs_all_randomized_precision_separations": 4,
+        "mean_frozen_adaptive_upper": 0.3430512143575745,
+        "mean_best_det_batch_upper": 0.3518981188122622,
+        "max_exact_upper_correction": 7.771561172376096e-16,
+        "lp_solves": 6618
+      }
+    },
+    "hpm_7": {
+      "cap_half_error_1pct": {
+        "cases": 93,
+        "adaptive_half_guarantees": 73,
+        "det_batch_half_guarantees": 72,
+        "adaptive_vs_all_randomized_precision_separations": 1,
+        "mean_frozen_adaptive_upper": 0.38581597177132393,
+        "mean_best_det_batch_upper": 0.3987346719709226,
+        "max_exact_upper_correction": 3.3306690738754696e-16,
+        "lp_solves": 6588
+      }
+    }
+  },
+  "scope": "All selected frozen blocks, six shared contrasts, two total prefix queries. Original half-width threshold and exact endpoints. Fixed coefficient-derived policy; no global noisy/capped adaptive optimality. Exact rational LP-dual residual corrections and feasible batch endpoints. Exact rational normalization of original source binary64 contrast coefficients defines every checked instance.",
+  "policy": "Use saved noiseless first query; compute all-line intervals from exact source-normalized coefficients, extend endpoint branches, dispatch first matching closed interval. Export all frozen policies before sensitivity calculations and without loading fine answers.",
+  "profile_lower_bound": "All-randomized precision upper9/10 only when ten feasible endpoint witnesses prove every deterministic batch fails; no vertex-exactness assumption.",
+  "input_sha256": "3b6c1dcaf309048cde9ec46691d88b883aa67453d2bf0d73ee98c70f9cdb0a15",
+  "coefficient_source_hashes": {
+    "external_validation\\replay\\geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0"
+  },
+  "frozen_policies_sha256": "84927398d41a426b01aa92463effbc18562365179700738bcc67be1b6b24afd6",
+  "checker_source_sha256": "07dd6e3c0705c6911c97d8ad7d407c2c30a3713a945b3376fe00af6019777b61",
+  "capacity_plan_sha256": "adbc3891cd3670f036aa8c9431b83c816de9db471de70fc83b1dc08db24e8f6f",
+  "policy_origin": "Previously computed coefficient-only capped noiseless planner",
+  "new_network_calls": 0,
+  "new_fits": 0,
+  "fine_answers_loaded": false,
+  "elapsed_seconds": 353.3822367999819
+}

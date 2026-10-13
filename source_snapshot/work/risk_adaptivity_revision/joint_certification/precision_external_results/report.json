@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "summary": {
+    "external": {
+      "cases": 279,
+      "deterministic_guarantee": 128,
+      "certified_pair": 57,
+      "fallback": 94,
+      "matching_continuum_bounds": 212,
+      "matching_half": 57,
+      "mean_certified_gap": 0.09826762246117085
+    }
+  },
+  "plan_sha256": "26b1f10f11680883ea51bafba00e3907c7240a48227190c9da119abf56397d04",
+  "elapsed_seconds": 48.534211900027,
+  "new_fits": 0,
+  "new_network_calls": 0,
+  "fine_answers_loaded": false
+}

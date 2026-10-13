@@ -1,0 +1,78 @@
+\subsection{Shared certificates with bounded stored-register errors}
+\label{sec:joint-stored-errors}
+This sensitivity calculation retains the same two shared prefix queries and
+the original precision target $J\leq 1/2$.  Let $x_h=y_h/E$, so that
+$x\geq0$ and $\sum_hx_h=1$, and let $P_kx=\sum_{h\leq k}x_h$.
+The six normalized contrasts are obtained by subtracting each contrast's
+minimum coefficient and dividing by its coefficient range.  Hence $J$ is
+the largest of the six sharp widths divided by its original, uncapped,
+zero-query width.  Optional capacity information imposes $x_h\leq\alpha$;
+it does not change this denominator.
+
+The stored answer at boundary $k$ is $z_k=P_kx+e_k$, where the five errors
+are fixed before the policy's random choices and $|e_k|\leq\delta$.
+Endpoints remain exact.  We use $\delta=0.01$, with $\alpha=1$ or $1/2$.
+These are declared uncertainty sets, not measured device specifications.
+The first query and piecewise second-query rule are frozen from the
+coefficient-only noiseless planner.  A first answer outside its noiseless
+range uses the nearest endpoint action.  At a shared boundary the first
+matching closed interval is used.  We separately evaluate the original
+planner and the already computed capacity-aware planner; neither is claimed
+optimal for the noisy problem.
+
+\paragraph{An all-record upper certificate.}
+For a branch that queries $k$ first and $j$ second when the first answer
+belongs to $[l,u]$, solve, for every normalized contrast $c_r$,
+\[
+ \max c_r^\top(v-w)\quad\text{subject to}\quad
+ \begin{cases}
+ v,w\geq0,\quad\boldsymbol1^\top v=\boldsymbol1^\top w=1,
+       \quad v_h,w_h\leq\alpha,\\
+ l\leq t\leq u,\quad |P_kv-t|\leq\delta,
+       \quad |P_kw-t|\leq\delta,\\
+ |P_jv-P_jw|\leq2\delta.
+ \end{cases}
+\]
+The last inequality is exactly the condition that the two possible second
+answers have overlapping error intervals.  Thus every terminal pair of
+compatible records is included.  Maximizing these bounds over branches and
+contrasts certifies the frozen policy for every allowed record and error
+vector.  Closed branch endpoints can overcover a tie but cannot invalidate
+the upper bound.  A fixed batch uses the analogous two-prefix constraints,
+without a branching variable; all ten batches are evaluated.
+
+\paragraph{A bound against every randomized batch.}
+A feasible endpoint pair $v,w$ for batch $Q$ with joint contrast difference
+strictly exceeding $1/2$ supplies one adverse record: choose actual profile
+$v$, set $e_q=(P_qw-P_qv)/2$ for $q\in Q$, and set the other errors to zero.
+This complete latent record is fixed independently of the batch selected
+later.  Compatible endpoint alternatives certify additional failures of
+other batches at the same record.  Unverified entries are conservatively
+counted as success.  For any rational distribution $\lambda$ on these
+records, the maximum, over the ten batches, of the resulting expected
+success upper bounds also bounds the worst-case success probability of
+every randomized batch.  This requires neither vertex sufficiency nor a
+claim of equality with the full-continuum optimum.
+
+\paragraph{Numerical certification.}
+The checked objectives use exact rational normalization of the original
+saved binary64 contrast coefficients.  Floating-point LP multipliers are
+converted to rationals, their signs are enforced, and any stationarity
+residual is bounded over the finite variable box.  This gives rigorous
+upper bounds without assuming exact floating-point dual feasibility.
+Specifically, for a minimization LP $\min f^\top z$ with $Az\leq b$,
+$Hz=h$ and $L\leq z\leq U$, any rational $\lambda\leq0$ and unrestricted
+$\nu$ give the lower bound
+\[
+ \lambda^\top b+\nu^\top h+
+ \sum_i\min\{r_iL_i,r_iU_i\},\qquad
+ r=f-A^\top\lambda-H^\top\nu.
+\]
+Indeed $\lambda^\top Az\geq\lambda^\top b$ and each residual term is
+bounded over its interval.  Negating this bound for
+$f^\top z=-c_r^\top(v-w)$ yields the exported width upper certificate.
+Rational feasible endpoints give lower bounds.  A separate solver-free
+checker verifies source hashes, coefficients, every reported precision
+status, all policy branches, and the fixed adverse mixtures.  These checks
+certify the declared mathematical instances; they do not establish physical
+sensor accuracy or field savings.

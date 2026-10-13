@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "scope": "Nominal recorded-answer replay under bounded stored-readout uncertainty.\n\nUses the separately exported, verified branch policies and LP bounds. Stored\nanswers are the recorded values; +/-1% is a compatible-record allowance, not\na sampled noise process or device specification. Exact endpoints, two shared\nprefix queries, six pairs, original half-width threshold. No rows are dropped.\n",
+  "cohort": "external",
+  "cases": 279,
+  "rows": 279,
+  "scenarios": [
+    "cap_half_error_1pct"
+  ],
+  "plan_before_replay": true,
+  "threshold": 0.5,
+  "normalization": "Original uncapped width; exact normalization of source binary64 coefficients",
+  "baseline": "Original mean-optimal randomized batch is frozen, not asserted optimal under caps/errors. Robust deterministic batch chosen from certified all-ten-batch bounds before answers. Greedy is the original uncapped policy with exact branch dispatch; in the capacity-aware adaptive variant it remains an explicitly frozen uncapped control, not an optimized capacity-aware greedy comparator.",
+  "summaries": {
+    "cap_half_error_1pct": {
+      "all_blocks": 279,
+      "compatible_records": 200,
+      "incompatible_records": 79,
+      "success_counts_among_compatible": {
+        "adaptive_success": 169.0,
+        "greedy_success": 165.0,
+        "robust_det_batch_success": 166.0,
+        "original_det_batch_success": 163.0,
+        "randomized_batch_success_probability": 139.6381221173692
+      },
+      "mean_width_among_compatible": {
+        "adaptive_J": 0.34786177224864145,
+        "greedy_J": 0.36293442478711424,
+        "robust_det_batch_J": 0.35346153173360917,
+        "original_det_batch_J": 0.35812797780072275,
+        "randomized_batch_expected_J": 0.39433593019647956
+      },
+      "compatible_adaptive_guarantees": 153,
+      "compatible_robust_batch_guarantees": 147
+    }
+  },
+  "by_meter": {
+    "hpm_1/cap_half_error_1pct": {
+      "all_blocks": 93,
+      "compatible_records": 77,
+      "incompatible_records": 16,
+      "success_counts_among_compatible": {
+        "adaptive_success": 63.0,
+        "greedy_success": 57.0,
+        "robust_det_batch_success": 61.0,
+        "original_det_batch_success": 61.0,
+        "randomized_batch_success_probability": 52.496110332046634
+      },
+      "mean_width_among_compatible": {
+        "adaptive_J": 0.3572859642656691,
+        "greedy_J": 0.3859072948674966,
+        "robust_det_batch_J": 0.36311148291622836,
+        "original_det_batch_J": 0.36379302220210735,
+        "randomized_batch_expected_J": 0.4033833784556975
+      },
+      "compatible_adaptive_guarantees": 57,
+      "compatible_robust_batch_guarantees": 54
+    },
+    "hpm_2/cap_half_error_1pct": {
+      "all_blocks": 93,
+      "compatible_records": 37,
+      "incompatible_records": 56,
+      "success_counts_among_compatible": {
+        "adaptive_success": 31.0,
+        "greedy_success": 32.0,
+        "robust_det_batch_success": 30.0,
+        "original_det_batch_success": 29.0,
+        "randomized_batch_success_probability": 24.102527570856005
+      },
+      "mean_width_among_compatible": {
+        "adaptive_J": 0.3362103255103894,
+        "greedy_J": 0.34216097082828867,
+        "robust_det_batch_J": 0.3417064068568701,
+        "original_det_batch_J": 0.33893695085522896,
+        "randomized_batch_expected_J": 0.3885031005832201
+      },
+      "compatible_adaptive_guarantees": 29,
+      "compatible_robust_batch_guarantees": 26
+    },
+    "hpm_7/cap_half_error_1pct": {
+      "all_blocks": 93,
+      "compatible_records": 86,
+      "incompatible_records": 7,
+      "success_counts_among_compatible": {
+        "adaptive_success": 75.0,
+        "greedy_success": 76.0,
+        "robust_det_batch_success": 75.0,
+        "original_det_batch_success": 73.0,
+        "randomized_batch_success_probability": 63.039484214466555
+      },
+      "mean_width_among_compatible": {
+        "adaptive_J": 0.3444366646207833,
+        "greedy_J": 0.351303108511383,
+        "robust_det_batch_J": 0.34987889661009364,
+        "original_det_batch_J": 0.3613123914992885,
+        "randomized_batch_expected_J": 0.3887447811235823
+      },
+      "compatible_adaptive_guarantees": 67,
+      "compatible_robust_batch_guarantees": 67
+    }
+  },
+  "lp_endpoint_solves": 7728,
+  "max_primal_violation": 1.1102230246251565e-16,
+  "max_noisy_width_decrease": 0.0,
+  "inputs": {
+    "uncapped_plans": {
+      "path": "work\\risk_adaptivity_revision\\joint_certification\\empirical_external_results\\empirical_plans.json",
+      "sha256": "9258e3d7508d333c9aaaaf243495d0a459adba8bf075bab1d244ace7f2ae9387"
+    },
+    "frozen_policy": {
+      "path": "work\\risk_adaptivity_revision\\joint_certification\\noise_external_capacity_results\\frozen_policies.json",
+      "sha256": "84927398d41a426b01aa92463effbc18562365179700738bcc67be1b6b24afd6"
+    },
+    "certificates": {
+      "path": "work\\risk_adaptivity_revision\\joint_certification\\noise_external_capacity_results\\certificates.json",
+      "sha256": "477153cdd2768d5044773a44a2db5a2312a6f3eb66336f90ab660f90978ca951"
+    },
+    "external_counters": {
+      "path": "work\\risk_adaptivity_revision\\external_heatpump\\hourly\\train_test_hourly_counters.csv",
+      "sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da"
+    }
+  },
+  "replay_plan_sha256": "39aec0ef4360b2d48a5d340563bf582f490c151a62898da8fc6a0ee82b5092a8",
+  "source_sha256": "d77f9cc98048813da7f41471e9dd0c2a32eb4d3b494c0677c439c03eee53ca5f",
+  "tolerance": 1e-08,
+  "elapsed_seconds": 47.126612000050955
+}

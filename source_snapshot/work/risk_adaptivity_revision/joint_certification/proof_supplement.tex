@@ -1,0 +1,93 @@
+\section{Shared observations and joint local width}
+\label{app:joint-width-boundary}
+Vector-valued recovery and the possible value of adaptive information are
+established subjects \citep{krieg2025}. The result here concerns a particular
+shared-query objective and interface; it is not a general novelty claim for
+vector recovery.
+
+Let $T_r(y)$, $r=1,\ldots,m$, be affine contrasts on the same feasible set,
+with positive initial widths $W_{r,0}$. After one shared transcript $Q$, define
+\[
+ J_Q(y)=\max_r\frac{W_{r,Q}(y)}{W_{r,0}},\qquad
+ R_{\mathcal C}^{J}=\inf_{P\in\mathcal C}\sup_y
+                  \mathbb E_\omega J_{Q_P(y,\omega)}(y).
+\]
+This is the weighted $\ell_\infty$ local diameter of the vector-valued
+information fiber. Its mean risk is distinct from the probability of
+attaining a precision threshold. Zero-width contrasts can be omitted;
+an audit with none remaining needs no query. The maximum of the individual
+concave widths need not be concave, so the scalar classification does not
+supply a no-adaptation result for $J$.
+
+\paragraph{An exact two-prefix separation.}
+Let $F=\{z\geq0:\sum_{h=1}^6z_h=1\}$, allow the five internal prefix
+queries, and impose two queries total. Use
+\[
+ c^{(1)}=(1/2,0,1,1/2,1/2,0),\qquad
+ c^{(2)}=(2/3,2/3,1,1/3,0,1).
+\]
+Both initial widths equal one. Segment masses times coefficient ranges give
+the sharp scalar widths. Query prefix~3 first, with answer $t$. The
+conditional worst joint widths for second queries~5 and~2 are
+\[
+ G_{35}(t)=\max(t,1/3),\qquad
+ G_{32}(t)=\max(1/2,1-t).
+\]
+Choose~5 for $t\leq1/2$ and~2 otherwise; the joint width is at most $1/2$
+for every record. At the single record $z^*=(0,0,1/2,0,0,1/2)$, the ten
+batch widths, in order $12,13,14,15,23,24,25,34,35,45$, are
+\[
+ (1,3/4,5/6,1/2,1/2,5/6,1/2,3/4,1/2,1/2).
+\]
+Here $ij$ denotes boundaries $\{i,j\}$. Fixing an adaptive seed, equal
+queried answers reproduce the complete query sequence and stopping decision.
+Its terminal fiber is therefore that of its final set. Every adaptive seed
+has width at least $1/2$ at this same record; fewer queries cannot reduce
+width. Hence $R_{\rm adaptive}^{J}=1/2$.
+
+The batch mixture with probabilities $1/6,1/3,1/2$ on $12,23,35$ has expected
+joint widths $(2/3,2/3,2/3,2/3,2/3,1/2)$ at $e_1,\ldots,e_6$.
+For each batch, scalar widths are linear in $z$, so $J_Q$ and its mixture
+expectation are convex. These vertex values bound the expectation throughout
+$F$ by $2/3$. Conversely, adverse masses $(1/3,0,1/6,1/6,1/3,0)$ at those
+vertices give the ten batches expected widths
+\[
+ (2/3,2/3,2/3,2/3,2/3,13/18,5/6,5/6,2/3,2/3).
+\]
+Every batch mixture therefore has worst expected width at least $2/3$:
+\[
+ \boxed{R_{\rm adaptive}^{J}=1/2<2/3=R_{\rm batch}^{J}.}
+\]
+These are constructed mean-risk values, not empirical performance or
+success probabilities. The contrasts can share a common forecast baseline:
+$a=0$ and $b^{(r)}=3c^{(r)}$ realize their coefficients in six-target paired
+MSE; constants do not affect widths. Adding other comparisons changes $J$.
+
+\paragraph{Specialized exact algorithms.}
+For any finite contrast family on this exact-total prefix simplex, form
+$V_{hQ}=J_Q(e_h)$. Convexity proves that the finite-game LP
+\[
+ \min_{\pi\geq0,\,\sum_Q\pi_Q=1,v}v
+ \quad\text{subject to}\quad\sum_Q\pi_QV_{hQ}\leq v\quad(h=1,\ldots,n)
+\]
+computes the exact randomized-batch mean value. This vertex argument does
+not apply to the indicator of precision failure.
+
+For deterministic adaptive two-query planning, each contrast's conditional
+worst normalized width $g_{kjr}(t)$ is affine in first-prefix mass $t$.
+Maximizing over records and the finite contrast family commutes, so
+$G_{kj}(t)=\max_r g_{kjr}(t)$ is the conditional worst joint width. The optimum is
+\[
+ A_{\rm det}=\min_k\max_{t\in[0,1]}\min_{j\ne k}G_{kj}(t).
+\]
+Enumerate $0,1$ and every in-range intersection of the underlying affine
+lines, including lines from different second-query choices. Between
+consecutive intersections their ordering is fixed; the resulting
+minimum of group maxima is affine there. Its maximum occurs at an endpoint.
+This gives an exact rational procedure with finite index tie-breaking.
+It computes deterministic adaptive worst width, not the general randomized
+adaptive optimum. Caps, noisy readings or another query dictionary require
+new conditional calculations. The accompanying checker reconstructs all
+example certificates with rational arithmetic; finite checks supplement
+the continuum arguments above.
+

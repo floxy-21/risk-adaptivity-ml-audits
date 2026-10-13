@@ -1,0 +1,125 @@
+\subsection{Shared-budget audit: complete computational protocol}
+\label{sec:joint_shared_protocol}
+The post-analysis shared-query evaluation uses every block in the existing
+original (819 blocks) and external (279 blocks) panels. Each block retains the
+six comparisons induced by its four frozen forecast vectors. All six initial
+widths are positive; the implementation verifies this and the six-pair count
+rather than selecting contrasts or removing unfavorable blocks. The panel
+unit remains a meter series, not an independent model-pair observation. The
+three systems within each panel and their repeated days are dependent.
+
+For a nonnegative increment vector $y$ of total $E$, pair $r$ has affine
+contrast coefficients $c_r$. We normalize by the original width
+$W_{r,0}=E(\max_hc_{rh}-\min_hc_{rh})$. Subtracting the smallest coefficient
+and dividing by its range makes the normalized coefficient range one; this
+does not change a normalized width because the retained total is fixed.
+The common precision target is $\max_r W_r/W_{r,0}\leq1/2$. A query returns
+one internal cumulative register, and two distinct queried registers are
+shared by all six comparisons. The model charges two scalar readings;
+adaptive acquisition has two information rounds and a batch has one. This
+does not represent two whole-trace exports or measured acquisition latency.
+
+\paragraph{Exact-total planning.}
+For each of the ten two-register batches $Q$, the normalized pair widths
+are linear in $y/E$. Their maximum is convex. Thus the worst expected joint
+width of a fixed batch mixture is attained at one of the six concentration
+profiles, and the ten-action/six-profile game is an exact formulation.
+The dual profile distribution and the batch mixture are retained. For a
+first boundary $k$ and answer $t$, each possible second boundary $j$ has
+conditional worst pair widths $a_{kjr}t+b_{kjr}$.
+The conditional joint objective is $\max_r(a_{kjr}t+b_{kjr})$ and the
+adaptive continuation minimizes it over $j$. Every intersection of these
+lines, together with the feasible endpoints, is evaluated; the minimum over
+first boundaries is the deterministic adaptive optimum. This line arrangement
+does not assume that the maximum across pair widths is concave. No optimality
+among randomized adaptive policies is inferred from this computation.
+
+All policies are saved before the program opens the fine-resolution response
+CSV. The deterministic batch first minimizes its worst joint width and then
+its uniform concentration-profile mean. The greedy first boundary minimizes
+one-query worst joint width, with the best achievable two-query continuation
+as its tie-breaker; the second query is conditionally optimized. This gives
+the greedy comparator a strong continuation, rather than an arbitrary second
+reading. Both primary and secondary numerical ties use $10^{-12}$ and then
+the earliest index. The randomized batch uses the uniform profile mean as a
+secondary LP objective on a face allowing $10^{-10}$ above the primary
+optimum. An additional outcome-informed diagnostic minimizes and maximizes
+realized width and precision success over a $10^{-9}$ primary-optimum face.
+Those extrema are diagnostic oracles, not deployed policies. In the external
+panel their mean success range is below $3\times10^{-8}$, so the observed
+comparison is not materially explained by this LP tie choice. The numerical
+LP feasibility tolerance is $10^{-9}$ and comparison tolerance $10^{-8}$.
+
+\paragraph{Capacity sensitivity.}
+The illustrative constraints $0\leq y_h\leq uE$, with $u=1/2$ or $1/3$,
+are supplied to every policy. The threshold remains half the original
+uncapped width. For sorted coefficients $d_1\leq\cdots\leq d_m$ in one
+segment, its sharp width as a function of retained mass has consecutive
+marginal slopes $d_m-d_1,d_{m-1}-d_2,\ldots$, each lasting mass $uE$.
+For two segments whose combined mass is known, the worst sum of widths is
+their concave max-convolution: concatenate and sort these marginal slopes.
+Consequently each conditional pair-width function is piecewise affine with
+known capacity knots. The same line-arrangement method is applied separately
+between consecutive knots. Deterministic fixed-batch worst widths follow
+from the corresponding convolution over all segments. Direct endpoint LPs
+independently verify the formulas. The simplex-vertex randomized formulation
+is not reused as an exact capped randomized solver.
+
+Recorded cap compatibility is checked using exact decimal/integer source
+arithmetic. Incompatible records remain in the case ledger and have no
+claimed cap-based replay outcome. Counts of hypothetical capped geometries,
+compatible records, guarantees and recorded successes are reported separately.
+At a cap of $E/2$, for example, only 200 of 279 external records are compatible.
+This cap is not an inferred device limit or an outcome-selected cohort rule.
+
+\paragraph{Stored-readout sensitivity.}
+The separate noisy-policy certificates fix a coefficient-derived branching
+policy before evaluating any responses. The latent model allows each queried
+internal register an error in $[-0.01E,0.01E]$, while endpoints remain exact.
+For replay, the observed answer is the actual stored register: sharp intervals
+are recomputed over every compatible record, rather than adding a simulated
+noise draw. The noisy adaptive policy is not claimed globally optimal.
+The fixed-batch comparator is selected from all ten robust batch bounds before
+answers. A further control freezes the capacity-specific noiseless policy
+before applying the same error allowance. Exact rational dual-residual
+certificates check the guarantees separately from floating-point replay.
+In that capacity-aware variant, the original greedy policy remains a frozen
+uncapped control; the main combined-sensitivity comparison is therefore with
+the robust best fixed batch, not a claim of superiority over every cap-aware
+greedy rule.
+
+\paragraph{Executable materials.}
+The public default in \texttt{joint\_certification/empirical\_shared\_audit.py}
+recomputes the 279-block external panel from bundled frozen geometry and
+counter records. \texttt{empirical\_check.py} independently verifies the
+finite game and direct endpoint LPs. \texttt{empirical\_capacity.py} and
+\texttt{empirical\_capacity\_check.py} reconstruct the two capacity controls;
+\texttt{empirical\_noise\_replay.py} and
+\texttt{empirical\_noise\_check.py} check the recorded-answer sensitivity.
+The exact stored-error certificate checker uses only the standard library;
+re-solving those robust LPs is an explicitly separate command. The current
+results map gives every entry point and its output paths. The original
+819-block case metrics are supplied as derived results; reproducing their
+raw-dependent geometry and internal responses requires the separately
+documented original-source regeneration. The public default does not require
+or redistribute those original raw files. Neither route refits forecasts or
+provides external human validation of the universal theorem.
+
+\paragraph{Paired uncertainty.}
+Every block contributes one joint-precision outcome. The four paired cells
+are both succeed, adaptive only, comparator only, and neither; randomized
+comparators contribute their exact expected success probabilities, so their
+cells are expected counts. No model pair is treated as an independent data
+replicate. The primary descriptive interval is the percentile interval
+from 2,000 circular seven-day block resamples of the calendar, using common
+resampled days across all three systems and all intraday blocks. Concatenated
+blocks are truncated to the original horizon. The paired difference divides
+by the number of compatible records in each resample. A one-day synchronized
+cluster bootstrap is retained as a secondary sensitivity, not selected
+according to which interval is favorable. NumPy's PCG64 uses
+\texttt{SeedSequence([20261013, cohort, 7])} for seven-day draws and
+\texttt{SeedSequence([20261013, cohort])} for one-day draws, with cohort 0
+for original and 1 for external. Percentiles use linear interpolation.
+The exported draws and every paired cell and interval are independently
+recomputed. These are conditional panel summaries, not population confidence
+intervals or a correction for unrestricted long-range temporal dependence.

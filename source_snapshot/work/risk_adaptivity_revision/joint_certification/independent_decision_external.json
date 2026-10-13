@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "cohort": "external",
+  "blocks": 279,
+  "exact_pair_sign_checks": 20088,
+  "scope": "Each of ten batches plus zero-query and bulk rechecked using exact rational squared-loss contrasts reconstructed from frozen forecasts; original-source omitted persistence predictions use the documented prior-day raw increment. Every sign and decision in the saved ledger agrees; source-affine rounding does not change any reported certificate. This verifies these finite records, not the universal adaptivity theorem.",
+  "maximum_source_coefficient_discrepancy": 7.401486830834377e-17,
+  "maximum_source_constant_discrepancy": 1.3284726634865635e-16,
+  "minimum_strict_certificate_margin": 4.80697939781412e-09,
+  "maximum_recorded_mixture_difference": 0.0,
+  "source_sha256": "00c9fa7b59fa8a6e6a35767c74ae83a7b99c1c1758b2cec24a92c6669505978b",
+  "decision_cases_sha256": "a73e8b142e65d63ec106ea02d692fa0bd68f6d87f5e03896b009b28480beed2e",
+  "plans_sha256": "9258e3d7508d333c9aaaaf243495d0a459adba8bf075bab1d244ace7f2ae9387"
+}

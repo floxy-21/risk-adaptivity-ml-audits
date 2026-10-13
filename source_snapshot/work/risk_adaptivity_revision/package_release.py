@@ -20,6 +20,7 @@ def include_current_path(p):
     if not p.is_file() or '__pycache__' in p.parts: return False
     rel=p.relative_to(BASE).as_posix()
     if rel.startswith('peerj_revision/'): return False  # private editorial/reviewer working notes
+    if rel.startswith('joint_review/'): return False  # reviewed production copies are in joint_certification
     if rel.startswith(('counter_adaptive/pilot/','counter_adaptive/continuation/')): return False
     if rel.startswith('prior_release/') and p.name not in {'revised_manuscript.tex','README_prior.txt','MANIFEST_prior.sha256'}: return False
     if p.name.endswith('_review.txt') or p.name.startswith('final_pdf_visual_review') or p.name in {'final_review.txt','math_review_notes.txt'}: return False

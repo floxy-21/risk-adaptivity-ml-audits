@@ -1,0 +1,28 @@
+\paragraph{Selecting a feasible acquisition protocol.}
+The reference implementation chooses among supplied certified protocols
+using the query interface, scalar-reading and information-round limits, and
+the requested priority. On the same 29 external pairwise cases at 1\%
+internal error, it selects bulk in all 29 when range retrieval is admissible;
+under a three-reading restricted interface it uses two adaptive readings in
+22 cases and fixed-three in seven. A one-round restriction instead selects
+fixed-three in all 29. Restricting both interfaces to two readings leaves
+seven cases requiring escalation. The selector does not relax precision or
+treat a missing catalogue certificate as a general impossibility result.
+
+The operational wrapper binds each certificate to its model pair,
+coefficients, meter, block, retained endpoints and source hashes. It rejects
+readout envelopes for a different task, timestamp, feed or unit. Online
+Resource~1, S8 retains all 116 protocol-selection decisions, callback tests,
+exclusions and separate task-binding checks. These protect against accidental
+mismatch; they do not authenticate a provider or calibrate a meter.
+
+Reading charges and feedback delays favor different protocols. If a reserved
+reading costs one unit and an information round costs $r\geq0$, the 29-case
+fixed-three plan costs $87+29r$, while adaptive-where-certified with fixed
+fallback costs $65+51r$. The latter is preferable for $r<1$ and fixed-three
+for $r>1$. This exact catalogue frontier is a declared-cost sensitivity,
+not a measured saving. S8 retains the full grid and all 306 independently
+checked candidate evaluations. Actual public-API retrieval favors bulk:
+the measured three-task mean I/O times are 0.331~s for bulk and 0.497~s for
+adaptive retrieval. A shared-query objective does not change that interface
+advantage.

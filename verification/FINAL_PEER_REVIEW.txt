@@ -1,0 +1,27 @@
+FINAL INTERNAL REVIEW AND RESPONSE -- JOINT-QUERY REVISION
+Target: PeerJ Computer Science. 13 October 2026.
+Manuscript source SHA256:
+f9554269d768ee25de92e077b301e745a536805699ec9df8509483ad8980e6f2
+38-page PDF SHA256:
+62f50ab90d455dec539feb9257990da2cf32117defa3bc3f793de43e24361e2f
+Review: separate AI-assisted analytic, software and practical reviews, followed by integration and visual checks. No external human validation or journal submission.
+
+The scalar classification and its limitations remain. The shared-query extension proves an exact constructed mean-risk separation of 1/2 versus 2/3, with full proof and rational checker.
+The complete frozen panels contain 819 original and 279 external blocks, all six model pairs per block, and two total readings. Recorded precision gains over fixed worst-width batches are 7.81 and 11.11 percentage points; greedy gains 2.20 and 2.15 points.
+On 165 original and 57 external blocks, adaptation guarantees precision and the best randomized batch has exactly 50% worst-case success. Recorded success is 100% versus batch expectations of 65.45% and 64.91%. These subsets are selected by the mathematical guarantees, not recorded outcomes.
+At declared 1% stored errors and exact endpoints, 45 external blocks have verified adaptive precision guarantees that every randomized batch fails to match; 26 batch success upper bounds are at most one half. These are upper bounds, not unproved continuum equalities.
+Capacity, bulk retrieval and model-ordering controls are retained. Cap-invalid records are flagged. The shared study is retrospective, not a locked untouched confirmation.
+The latest follow-up review, objective-matched challenger and paired-outcome uncertainty details are recorded in peerj_final_followup_review_20261013.txt and the indexed joint supplement.
+The paper now leads with the joint study and includes the full central proof and one worked real-data certificate in the main text. Further witnesses and cost tables remain in Online Resource 1.
+The latest review also added a reconstructible shared-query algorithm box and absolute interval widths for the existing worked example. Direct endpoint LPs verify that table. A separately completed pinned source-to-table run regenerated both panels, all 165/57 matching certificates and all 1,098 table rows with zero numeric discrepancy. Default offline replay remains distinct from the original raw-source route. See LATEST_REVIEW_FIXES_20261013.txt.
+Live PeerJ policies and author instructions were checked. Supplemental Data S1/S2 meet the 30 MB individual and 50 MB combined limits. The complete historical archive remains separately preserved.
+The three-criterion audit is in PEERJ_CRITERIA_AUDIT.txt. Remaining factual author confirmations are listed in PEERJ_AUTHOR_DECLARATIONS.txt; unknown historical AI model identifiers are disclosed, not invented.
+Author-supervised AI disclosure accurately credits author topic/direction and substantive content/code/drafting assistance.
+No calibrated individual acceptance probability or greater-than-80% threshold is established by these checks.
+
+FINAL EXECUTABLE VERIFICATION
+PASS: all 69 steps from a fresh isolated copy of the 1014-member publisher supplement, with network disabled.
+Elapsed 1136.96 seconds. Main source reconstructed byte-for-byte.
+ZIP SHA256: 4820cfb3963d09dcf899afeff6002d5470610f10d48022b2864342a785e14150
+Both new task-binding checks and all malformed-input regressions passed.
+The initial wrong-runtime import failure and its correction are recorded in risk_delivery_verification.json.

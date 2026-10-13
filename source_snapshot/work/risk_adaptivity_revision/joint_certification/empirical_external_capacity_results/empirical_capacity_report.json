@@ -1,0 +1,336 @@
+{
+  "status": "PASS",
+  "scope": "Post-hoc equal-cap, noiseless sensitivity for the shared two-query audit.\n\nThe threshold stays half of EACH ORIGINAL uncapped initial width. All six\npositive-width pairs and every input block are retained. A declared cap is\nnot a device specification; truth-incompatible recorded blocks are flagged.\nNo capped randomized-batch optimality claim is made.\n",
+  "cohort": "external",
+  "all_plans_before_replay": true,
+  "threshold": 0.5,
+  "normalization": "Original uncapped initial width for every pair; no capacity renormalization",
+  "caps": [
+    "1/2",
+    "1/3"
+  ],
+  "comparison_tolerance": 1e-08,
+  "floating_point_not_exact_rational": true,
+  "tie_rule": "Smallest index within 1e-12 primary and secondary tolerance",
+  "summaries": {
+    "external/cap=1/2": {
+      "all_blocks": 279,
+      "record_compatible_blocks": 200,
+      "record_incompatible_blocks": 79,
+      "all_block_guarantees": {
+        "adaptive_guarantees_half": 230,
+        "det_batch_guarantees_half": 220,
+        "greedy_guarantees_half": 205
+      },
+      "compatible_record_guarantees": {
+        "adaptive_guarantees_half": 162,
+        "det_batch_guarantees_half": 158,
+        "greedy_guarantees_half": 149
+      },
+      "adaptive_but_no_deterministic_batch_guarantee": 10,
+      "compatible_adaptive_but_no_deterministic_batch_guarantee": 4,
+      "compatible_record_success_counts": {
+        "adaptive_recorded_J": 179,
+        "det_batch_recorded_J": 177,
+        "greedy_recorded_J": 167,
+        "original_adaptive_recorded_J": 177,
+        "original_greedy_recorded_J": 177,
+        "original_det_batch_recorded_J": 170
+      },
+      "compatible_record_mean_widths": {
+        "adaptive_recorded_J": 0.32848075131984855,
+        "det_batch_recorded_J": 0.334622575563276,
+        "greedy_recorded_J": 0.35108830166061006,
+        "original_adaptive_recorded_J": 0.33951127886333976,
+        "original_greedy_recorded_J": 0.3436605422752566,
+        "original_det_batch_recorded_J": 0.33841884249217996
+      },
+      "all_block_mean_guarantees": {
+        "adaptive_guarantee": 0.35516717769480255,
+        "det_batch_guarantee": 0.3735746757240593,
+        "greedy_guarantee": 0.3826602781219313
+      }
+    },
+    "external/cap=1/3": {
+      "all_blocks": 279,
+      "record_compatible_blocks": 198,
+      "record_incompatible_blocks": 81,
+      "all_block_guarantees": {
+        "adaptive_guarantees_half": 273,
+        "det_batch_guarantees_half": 273,
+        "greedy_guarantees_half": 273
+      },
+      "compatible_record_guarantees": {
+        "adaptive_guarantees_half": 192,
+        "det_batch_guarantees_half": 192,
+        "greedy_guarantees_half": 192
+      },
+      "adaptive_but_no_deterministic_batch_guarantee": 0,
+      "compatible_adaptive_but_no_deterministic_batch_guarantee": 0,
+      "compatible_record_success_counts": {
+        "adaptive_recorded_J": 192,
+        "det_batch_recorded_J": 192,
+        "greedy_recorded_J": 192,
+        "original_adaptive_recorded_J": 191,
+        "original_greedy_recorded_J": 191,
+        "original_det_batch_recorded_J": 190
+      },
+      "compatible_record_mean_widths": {
+        "adaptive_recorded_J": 0.2564515850246232,
+        "det_batch_recorded_J": 0.2566916454849609,
+        "greedy_recorded_J": 0.2758915919445642,
+        "original_adaptive_recorded_J": 0.27390683084463596,
+        "original_greedy_recorded_J": 0.277084660251946,
+        "original_det_batch_recorded_J": 0.2667967645006612
+      },
+      "all_block_mean_guarantees": {
+        "adaptive_guarantee": 0.2503808813494555,
+        "det_batch_guarantee": 0.2503808813494563,
+        "greedy_guarantee": 0.27099597557221283
+      }
+    }
+  },
+  "by_meter": {
+    "hpm_1/cap=1/2": {
+      "all_blocks": 93,
+      "record_compatible_blocks": 77,
+      "record_incompatible_blocks": 16,
+      "all_block_guarantees": {
+        "adaptive_guarantees_half": 76,
+        "det_batch_guarantees_half": 73,
+        "greedy_guarantees_half": 70
+      },
+      "compatible_record_guarantees": {
+        "adaptive_guarantees_half": 61,
+        "det_batch_guarantees_half": 59,
+        "greedy_guarantees_half": 57
+      },
+      "adaptive_but_no_deterministic_batch_guarantee": 3,
+      "compatible_adaptive_but_no_deterministic_batch_guarantee": 2,
+      "compatible_record_success_counts": {
+        "adaptive_recorded_J": 67,
+        "det_batch_recorded_J": 65,
+        "greedy_recorded_J": 62,
+        "original_adaptive_recorded_J": 63,
+        "original_greedy_recorded_J": 62,
+        "original_det_batch_recorded_J": 64
+      },
+      "compatible_record_mean_widths": {
+        "adaptive_recorded_J": 0.336563950742945,
+        "det_batch_recorded_J": 0.34278598401927085,
+        "greedy_recorded_J": 0.3539224718270389,
+        "original_adaptive_recorded_J": 0.35006618345340856,
+        "original_greedy_recorded_J": 0.3660502789287697,
+        "original_det_batch_recorded_J": 0.34276950435946746
+      },
+      "all_block_mean_guarantees": {
+        "adaptive_guarantee": 0.37508678197305745,
+        "det_batch_guarantee": 0.40221883756407195,
+        "greedy_guarantee": 0.395902624030898
+      }
+    },
+    "hpm_1/cap=1/3": {
+      "all_blocks": 93,
+      "record_compatible_blocks": 77,
+      "record_incompatible_blocks": 16,
+      "all_block_guarantees": {
+        "adaptive_guarantees_half": 87,
+        "det_batch_guarantees_half": 87,
+        "greedy_guarantees_half": 87
+      },
+      "compatible_record_guarantees": {
+        "adaptive_guarantees_half": 71,
+        "det_batch_guarantees_half": 71,
+        "greedy_guarantees_half": 71
+      },
+      "adaptive_but_no_deterministic_batch_guarantee": 0,
+      "compatible_adaptive_but_no_deterministic_batch_guarantee": 0,
+      "compatible_record_success_counts": {
+        "adaptive_recorded_J": 71,
+        "det_batch_recorded_J": 71,
+        "greedy_recorded_J": 71,
+        "original_adaptive_recorded_J": 70,
+        "original_greedy_recorded_J": 70,
+        "original_det_batch_recorded_J": 70
+      },
+      "compatible_record_mean_widths": {
+        "adaptive_recorded_J": 0.2711444771846874,
+        "det_batch_recorded_J": 0.2711444771846874,
+        "greedy_recorded_J": 0.28560380053004125,
+        "original_adaptive_recorded_J": 0.29290551241091356,
+        "original_greedy_recorded_J": 0.30684023073081107,
+        "original_det_batch_recorded_J": 0.28501626099416777
+      },
+      "all_block_mean_guarantees": {
+        "adaptive_guarantee": 0.2683830605318506,
+        "det_batch_guarantee": 0.26838306053185107,
+        "greedy_guarantee": 0.28251819478107915
+      }
+    },
+    "hpm_2/cap=1/2": {
+      "all_blocks": 93,
+      "record_compatible_blocks": 37,
+      "record_incompatible_blocks": 56,
+      "all_block_guarantees": {
+        "adaptive_guarantees_half": 77,
+        "det_batch_guarantees_half": 70,
+        "greedy_guarantees_half": 62
+      },
+      "compatible_record_guarantees": {
+        "adaptive_guarantees_half": 31,
+        "det_batch_guarantees_half": 29,
+        "greedy_guarantees_half": 26
+      },
+      "adaptive_but_no_deterministic_batch_guarantee": 7,
+      "compatible_adaptive_but_no_deterministic_batch_guarantee": 2,
+      "compatible_record_success_counts": {
+        "adaptive_recorded_J": 34,
+        "det_batch_recorded_J": 33,
+        "greedy_recorded_J": 31,
+        "original_adaptive_recorded_J": 35,
+        "original_greedy_recorded_J": 35,
+        "original_det_batch_recorded_J": 31
+      },
+      "compatible_record_mean_widths": {
+        "adaptive_recorded_J": 0.31803479873968665,
+        "det_batch_recorded_J": 0.32324958118214014,
+        "greedy_recorded_J": 0.34247002990079717,
+        "original_adaptive_recorded_J": 0.32318107055450046,
+        "original_greedy_recorded_J": 0.3231085895102025,
+        "original_det_batch_recorded_J": 0.31990416991987475
+      },
+      "all_block_mean_guarantees": {
+        "adaptive_guarantee": 0.3220504192118168,
+        "det_batch_guarantee": 0.3344652728883475,
+        "greedy_guarantee": 0.3499513269260754
+      }
+    },
+    "hpm_2/cap=1/3": {
+      "all_blocks": 93,
+      "record_compatible_blocks": 35,
+      "record_incompatible_blocks": 58,
+      "all_block_guarantees": {
+        "adaptive_guarantees_half": 93,
+        "det_batch_guarantees_half": 93,
+        "greedy_guarantees_half": 93
+      },
+      "compatible_record_guarantees": {
+        "adaptive_guarantees_half": 35,
+        "det_batch_guarantees_half": 35,
+        "greedy_guarantees_half": 35
+      },
+      "adaptive_but_no_deterministic_batch_guarantee": 0,
+      "compatible_adaptive_but_no_deterministic_batch_guarantee": 0,
+      "compatible_record_success_counts": {
+        "adaptive_recorded_J": 35,
+        "det_batch_recorded_J": 35,
+        "greedy_recorded_J": 35,
+        "original_adaptive_recorded_J": 35,
+        "original_greedy_recorded_J": 35,
+        "original_det_batch_recorded_J": 35
+      },
+      "compatible_record_mean_widths": {
+        "adaptive_recorded_J": 0.24702265336427573,
+        "det_batch_recorded_J": 0.24702265336427573,
+        "greedy_recorded_J": 0.2672146528689192,
+        "original_adaptive_recorded_J": 0.268541550874732,
+        "original_greedy_recorded_J": 0.2651701430525121,
+        "original_det_batch_recorded_J": 0.26041865698801697
+      },
+      "all_block_mean_guarantees": {
+        "adaptive_guarantee": 0.22339914203565991,
+        "det_batch_guarantee": 0.22339914203566058,
+        "greedy_guarantee": 0.24553547087741773
+      }
+    },
+    "hpm_7/cap=1/2": {
+      "all_blocks": 93,
+      "record_compatible_blocks": 86,
+      "record_incompatible_blocks": 7,
+      "all_block_guarantees": {
+        "adaptive_guarantees_half": 77,
+        "det_batch_guarantees_half": 77,
+        "greedy_guarantees_half": 73
+      },
+      "compatible_record_guarantees": {
+        "adaptive_guarantees_half": 70,
+        "det_batch_guarantees_half": 70,
+        "greedy_guarantees_half": 66
+      },
+      "adaptive_but_no_deterministic_batch_guarantee": 0,
+      "compatible_adaptive_but_no_deterministic_batch_guarantee": 0,
+      "compatible_record_success_counts": {
+        "adaptive_recorded_J": 78,
+        "det_batch_recorded_J": 79,
+        "greedy_recorded_J": 74,
+        "original_adaptive_recorded_J": 79,
+        "original_greedy_recorded_J": 80,
+        "original_det_batch_recorded_J": 75
+      },
+      "compatible_record_mean_widths": {
+        "adaptive_recorded_J": 0.3257376570162156,
+        "det_batch_recorded_J": 0.3322065097608391,
+        "greedy_recorded_J": 0.35225859180361074,
+        "original_adaptive_recorded_J": 0.33708674460743016,
+        "original_greedy_recorded_J": 0.3324560368099833,
+        "original_det_batch_recorded_J": 0.3424890973921119
+      },
+      "all_block_mean_guarantees": {
+        "adaptive_guarantee": 0.3683643318995333,
+        "det_batch_guarantee": 0.3840399167197585,
+        "greedy_guarantee": 0.4021268834088206
+      }
+    },
+    "hpm_7/cap=1/3": {
+      "all_blocks": 93,
+      "record_compatible_blocks": 86,
+      "record_incompatible_blocks": 7,
+      "all_block_guarantees": {
+        "adaptive_guarantees_half": 93,
+        "det_batch_guarantees_half": 93,
+        "greedy_guarantees_half": 93
+      },
+      "compatible_record_guarantees": {
+        "adaptive_guarantees_half": 86,
+        "det_batch_guarantees_half": 86,
+        "greedy_guarantees_half": 86
+      },
+      "adaptive_but_no_deterministic_batch_guarantee": 0,
+      "compatible_adaptive_but_no_deterministic_batch_guarantee": 0,
+      "compatible_record_success_counts": {
+        "adaptive_recorded_J": 86,
+        "det_batch_recorded_J": 86,
+        "greedy_recorded_J": 86,
+        "original_adaptive_recorded_J": 86,
+        "original_greedy_recorded_J": 86,
+        "original_det_batch_recorded_J": 85
+      },
+      "compatible_record_mean_widths": {
+        "adaptive_recorded_J": 0.247133677022149,
+        "det_batch_recorded_J": 0.24768637436106608,
+        "greedy_recorded_J": 0.2707270896953297,
+        "original_adaptive_recorded_J": 0.2590799275695575,
+        "original_greedy_recorded_J": 0.25529197624156885,
+        "original_det_batch_recorded_J": 0.2530797009302257
+      },
+      "all_block_mean_guarantees": {
+        "adaptive_guarantee": 0.25936044148085613,
+        "det_batch_guarantee": 0.2593604414808573,
+        "greedy_guarantee": 0.2849342610581415
+      }
+    }
+  },
+  "inputs": {
+    "uncapped_plans": {
+      "path": "work\\risk_adaptivity_revision\\joint_certification\\empirical_external_results\\empirical_plans.json",
+      "sha256": "9258e3d7508d333c9aaaaf243495d0a459adba8bf075bab1d244ace7f2ae9387"
+    },
+    "external_counters": {
+      "path": "work\\risk_adaptivity_revision\\external_heatpump\\hourly\\train_test_hourly_counters.csv",
+      "sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da"
+    }
+  },
+  "source_sha256": "e791a75754791781baf37a9282dedce33d4ffaab9234da6f6214a024c1221d72",
+  "capped_plan_sha256": "de721cbb25be6b7af4e13991da3d0b2a1b046aced73f88de520f88ed5b95babb",
+  "elapsed_seconds": 32.63745900004869
+}

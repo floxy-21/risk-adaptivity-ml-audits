@@ -1,0 +1,76 @@
+FINAL PEERJ COMPUTER SCIENCE REVIEW -- 13 October 2026
+Source SHA256: f9554269d768ee25de92e077b301e745a536805699ec9df8509483ad8980e6f2
+PDF SHA256: 62f50ab90d455dec539feb9257990da2cf32117defa3bc3f793de43e24361e2f
+Pages: 38
+
+Policy sources checked live on 13 October 2026:
+https://peerj.com/journals/computer-science/editorial-criteria
+https://peerj.com/journals/computer-science/policies/
+https://peerj.com/journals/computer-science/author-instructions
+Target article type: Research Article. PeerJ's research criteria assess
+reporting, design and validity rather than promised importance or impact.
+
+1. BASIC REPORTING -- addressed in the reviewed files.
+The structured abstract, introduction, methods, results, discussion and
+conclusions identify the computer-science acquisition/certification problem.
+The main text gives the central theorem with both optimality bounds, a worked
+real certificate, and the complete two-query planner with its tie convention.
+The absolute-width example distinguishes original loss units from normalized
+precision. Prior work is credited by objective and precise statement.
+Active prose replaces repeated framing; mathematical notation remains where
+needed for reproducibility. Tables and references are readable in the rendered
+38-page PDF. Letter paper, one-inch margins, 12-point Times-family text,
+left alignment and line numbers follow the instructions. The 232-word
+abstract is below the journal limit. Editable LaTeX and PDF are supplied.
+
+2. EXPERIMENTAL DESIGN -- addressed within the stated research scope.
+Models, chronological splits, information cutoffs, source versions, query
+dictionaries, costs, budgets, thresholds and tie rules are documented.
+Comparators receive identical information and two shared readings. The
+precision-matched batch challenger is distinguished from mean-width and
+deterministic worst-width baselines; unresolved optimization gaps are retained.
+Retrospective extensions are not called untouched confirmation. Six pairwise
+comparisons within one block are not treated as six independent observations.
+Paired outcomes, per-system effects, synchronized calendar-block resampling
+and sensitivity intervals are reported. There are only three systems per
+source. Unit costs, caps and error allowances are declared models, not
+validated tariffs or device specifications. Bulk retrieval remains a control.
+
+3. VALIDITY OF FINDINGS -- addressed by separate proof and execution evidence.
+Analytic proofs establish the general and constructed guarantees. Numerical
+checks do not purport to prove a universal theorem. Exact rational branch,
+covering and adverse-record witnesses support the central assurance claims.
+The latest source-to-table run actually regenerates both panels from pinned
+original inputs and frozen forecasts, then reconciles policies, certificates
+and all 1,098 outcome rows. Source mismatch tests fail as intended. Default
+offline reproduction is explicitly distinct from original raw regeneration
+and fresh fitting. Practical conclusions concern certificate precision under
+the declared interface. Monetary savings, deployed superiority and improved
+downstream model choice are not established or claimed. Negative controls
+and combined-capacity/error limitations remain visible.
+
+DATA, CODE AND PUBLICATION PREPARATION
+Reviewers receive complete current code, proofs, case ledgers, attributed
+bundled data and regeneration instructions in Supplemental Data S1 and S2.
+Original BLEM raw data are regenerated locally under pinned source hashes;
+no unsupported redistribution license is asserted. The two files comply
+with the 30 MB individual and 50 MB combined upload limits. The larger
+private development archive preserves history separately.
+
+The manuscript acknowledges supervised generative-AI assistance and identifies
+unknown historical model-version details as unknown. Existing funding,
+conflict and exclusivity facts come from the author. Factual final author
+accountability, relevant tool terms/record retention, portal declarations and
+fees remain author matters; see PEERJ_AUTHOR_DECLARATIONS.txt. This review does
+not invent those attestations or declare all submission terms satisfied.
+
+VERDICT
+No unresolved blocking scientific or presentation flaw was identified by
+this internal review. The paper is suitable for PeerJ CS consideration;
+acceptance remains an editorial decision. This is not external human peer
+review, a formal proof certificate for the universal theorem, or a calibrated
+greater-than-80% probability. No external person was contacted. Nothing was
+submitted to a journal.
+
+FINAL ARTIFACT VERIFICATION
+PASS: 69 steps in a fresh network-disabled stage from the two publisher ZIP files, 1014 manifested members, 1136.96 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 38.86 MB. Full historical archive integrity also passed.

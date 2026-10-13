@@ -1,0 +1,34 @@
+\subsection{One query budget for several comparisons}
+An auditor comparing several models can reuse each reading across their
+loss contrasts. Let $W_{r,Q}(y)$ be the sharp width for contrast $r$ after
+the common transcript $Q$, and let $W_{r,0}>0$ be its initial width. Define
+\[
+ J_Q(y)=\max_r W_{r,Q}(y)/W_{r,0}.
+\]
+Then $J_Q(y)\leq1/2$ means that every requested comparison has reached
+half its original width. Already determined contrasts can be omitted.
+This is the local diameter of the vector contrast map in a weighted
+$\ell_\infty$ norm, within the established vector-recovery framework
+\citep{krieg2025}; shared-label model certification also has close prior
+work \citep{kuboyama2026}. It is not a new definition of uncertainty.
+
+The scalar assumption in Theorem~\ref{prop:risk_classification} matters:
+the maximum of concave scalar widths need not be concave. In the same
+six-interval prefix interface, two constructed contrasts have optimal
+randomized-adaptive mean joint width $1/2$, versus $2/3$ for the optimal
+randomized batch with two queries. Online Resource~1, S8 gives the
+coefficients, policies, matching adverse witnesses and complete proof.
+These are mean-width values, not precision probabilities or measured savings.
+
+For the uncapped exact-total simplex, each batch's scalar widths are
+linear in the energy allocation. Thus $J_Q$ is convex. Its worst mixture
+expectation is attained at a concentration vertex, making the finite-game
+LP exact for randomized-batch mean risk. The deterministic two-query
+planner instead minimizes the worst joint width after feedback. Its
+conditional objective is the maximum of the contrast-specific affine
+widths; checking all line intersections gives the exact optimum.
+The two objectives remain distinct. A deterministic adaptive value below
+the randomized-batch lower bound establishes an adaptive advantage; the
+reverse inequality does not establish optimality among adaptive policies.
+The vertex argument does not transfer to precision indicators, caps or
+measurement error. S8 provides the formulations and verification details.

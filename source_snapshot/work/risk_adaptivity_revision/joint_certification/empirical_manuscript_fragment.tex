@@ -1,0 +1,96 @@
+\paragraph{Shared-budget evaluation.}
+We retrospectively reuse all 819 original and 279 external six-hour blocks,
+retaining all six positive-width model contrasts in every block. A single pair
+of cumulative-register queries serves all contrasts. For contrast $r$, let
+$W_{r,0}$ denote its original uncapped width and define
+$J=\max_r W_r/W_{r,0}$. Success means $J\leq1/2$; it is a joint precision
+requirement, not a guarantee that every model ordering is resolved. Every
+method receives the same totals, forecasts and two-query allowance. The
+randomized batch minimizes worst expected $J$, whereas the deterministic
+adaptive planner minimizes worst $J$; it does not optimize over randomized
+adaptive policies. We compute the threshold and policies without consulting
+the withheld register responses.
+The greedy control first minimizes the worst one-query joint width, breaks
+ties using the best two-query continuation, and then minimizes conditional
+worst width after the first answer. This one-step refinement baseline uses
+the same query interface.
+The original panel contains three BLEM meters over 91 days; the external
+HeatpumpMonitor panel contains three systems over 31 days. Both use three
+completed six-hour blocks per day and the same four frozen model types:
+daily persistence, ridge regression, gradient-boosted trees and a multilayer
+perceptron. The declared intraday audit supplies block endpoints and day-start
+forecasts before optional retrieval; source and timing details appear in
+Sections~\ref{sec:external-hpm} and~\ref{sec:counter-precision-results}.
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Panel / observation model & Blocks & Adaptive & Fixed batch & Greedy\\
+\midrule
+Original, exact &819&641 (78.27\%)&577 (70.45\%)&623 (76.07\%)\\
+External, exact &279&252 (90.32\%)&221 (79.21\%)&246 (88.17\%)\\
+External, $1\%$ allowance &279&242 (86.74\%)&215 (77.06\%)&235 (84.23\%)\\
+\bottomrule
+\end{tabular}
+\caption{Recorded-answer joint precision success with two shared readings.
+We select the fixed batch by its worst-width objective before answers;
+the last row reoptimizes this comparator for the error model while retaining
+the coefficient-derived adaptive and greedy policies. The $1\%$ allowance
+enlarges compatible records around the stored answers; it is not sampled
+device noise. Endpoints remain exact.}
+\label{tab:joint_shared_replay}
+\end{table}
+
+The adaptive success gains over the best fixed batch for the worst-width objective are
+7.81, 11.11 and 9.68 percentage points, respectively. Its gains over greedy
+are smaller: 2.20, 2.15 and 2.51 points. For the exact external panel, the
+mean realized $J$ is 0.2823 for adaptive, 0.3381 for the fixed batch and
+0.2893 for greedy. At the $1\%$ allowance these are 0.3028, 0.3481 and
+0.3099. The randomized mean-width batch has a different objective; its
+recorded precision probability is not an optimal-batch precision baseline.
+We retain all block-level outcomes, including unfavorable comparisons.
+
+A precision-matched batch challenger uses a guaranteeing fixed batch when
+available, then a certified equal mixture of two batches, and otherwise a
+declared fallback.
+Its recorded success is 54.98\% over the original panel and 72.55\% over the
+external panel; these full-panel rates are not those of a universally optimal
+precision policy. Matching certificates prove a batch precision optimum of
+$1/2$ on 165 original and 57 external instances. On these instances, adaptive
+succeeds on every stored record, while the optimal batch mixtures succeed
+with expected frequencies 108/165 (65.45\%) and 37/57 (64.91\%). Coefficient
+certificates define these subsets before record replay. The complete fixed-batch and greedy
+comparisons in Table~\ref{tab:joint_shared_replay} remain the broader controls.
+
+\paragraph{Capacity control.}
+For an illustrative cap $y_h\leq E/2$, we reoptimize the noiseless planner
+using concave piecewise-linear segment widths. We solve each conditional
+problem by checking all line intersections within each capacity interval.
+We do not infer a capped randomized-batch optimum from simplex vertices.
+Of the 819 original and 279 external records, respectively 780 and 200 satisfy
+this cap. Among those compatible records, adaptive-only half-width guarantees
+remain in 56 and 4 blocks; recorded adaptive versus fixed-batch successes
+are 655 versus 627 and 179 versus 177. Under the stronger cap $E/3$, only
+613 original and 198 external records are compatible. No adaptive-only
+half-width guarantee remains, and the two planners have equal success counts
+of 613 and 192. We flag incompatible records and make no cap-based guarantee
+for them. Thus supplied capacity information can remove the need for feedback.
+Combining the $E/2$ cap with the $1\%$ stored-reading allowance, the
+capacity-aware frozen adaptive policy succeeds on 169/200 compatible records,
+versus 166/200 for the best fixed batch under that model. Mean joint widths
+are 0.3479 and 0.3535. This is a small observed gain, not evidence of uniform
+operational superiority; the frozen uncapped greedy control succeeds on
+165/200 and is not presented as an optimized cap-aware comparator.
+
+\paragraph{Paired uncertainty and source variation.}
+The external exact-panel advantage over the worst-width fixed batch is
+11.11 percentage points (descriptive 95\% interval 8.60--13.62), compared
+with 2.15 points over greedy (1.08--3.23). These percentile intervals use
+2,000 seven-day circular calendar-block resamples, synchronized across the
+three systems and intraday blocks, with seed 20261013. The combined cap/error
+gain over the fixed batch is 1.50 points ($-0.49$--3.16). Paired $2\times2$
+counts, individual-system effects and one-day-cluster sensitivity appear in
+Online Resource~1, S8. The intervals describe these panels; three systems
+cannot establish population-level generalization, and dependence beyond
+the resampled blocks remains unmodeled.

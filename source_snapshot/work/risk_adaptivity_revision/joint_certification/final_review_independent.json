@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "paired_comparisons": 116,
+  "system_rows": 54,
+  "draws_structurally_checked": 8000,
+  "precision_catalog_rows": 1098,
+  "seven_day_unchanged": true,
+  "maximum_discrepancy": 5.684341886080802e-14,
+  "source_sha256": "fdd3b5ddeff12667aae00923def7978c879ababb2bb3934a9611fa4af71a094c"
+}

@@ -1,5 +1,400 @@
 [
   {
+    "name": "source_identity_guards",
+    "script": "work/risk_adaptivity_revision/joint_certification/provenance_chain/check_source_guards.py",
+    "args": ["--output", "outputs/source_identity_guards.json"],
+    "report": "outputs/source_identity_guards.json"
+  },
+  {
+    "name": "external_source_forecast_chain",
+    "script": "work/risk_adaptivity_revision/joint_certification/provenance_chain/check_source_chain.py",
+    "args": ["--cohort", "external", "--output", "outputs/source_chain_external.json"],
+    "report": "outputs/source_chain_external.json",
+    "requires_frozen_inputs": ["work/risk_adaptivity_revision/external_validation/replay/geometry.json"]
+  },
+  {
+    "name": "joint_absolute_widths",
+    "script": "work/risk_adaptivity_revision/joint_certification/absolute_widths.py",
+    "args": ["--output-dir", "outputs/joint_absolute_widths"],
+    "report": "outputs/joint_absolute_widths/report.json",
+    "requires_frozen_inputs": ["work/risk_adaptivity_revision/external_validation/replay/geometry.json"]
+  },
+  {
+    "name": "joint_constructed",
+    "script": "work/risk_adaptivity_revision/joint_certification/proof_check_joint.py",
+    "args": [
+      "--output",
+      "outputs/joint_proof.json"
+    ],
+    "report": "outputs/joint_proof.json"
+  },
+  {
+    "name": "joint_regressions",
+    "script": "work/risk_adaptivity_revision/joint_certification/empirical_regression.py",
+    "args": [
+      "--output",
+      "outputs/joint_regressions.json"
+    ],
+    "report": "outputs/joint_regressions.json"
+  },
+  {
+    "name": "joint_external_replay",
+    "script": "work/risk_adaptivity_revision/joint_certification/empirical_shared_audit.py",
+    "args": [
+      "--output-dir",
+      "outputs/joint_external_replay"
+    ],
+    "report": "outputs/joint_external_replay/empirical_report.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_endpoint_check",
+    "script": "work/risk_adaptivity_revision/joint_certification/empirical_check.py",
+    "args": [
+      "--results-dir",
+      "outputs/joint_external_replay",
+      "--output",
+      "outputs/joint_endpoint_check.json"
+    ],
+    "report": "outputs/joint_endpoint_check.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_full_independent",
+    "script": "work/risk_adaptivity_revision/joint_certification/independent_shared_review.py",
+    "args": [
+      "--results-dir",
+      "outputs/joint_external_replay",
+      "--output",
+      "outputs/joint_full_independent.json"
+    ],
+    "report": "outputs/joint_full_independent.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_model_coherence",
+    "script": "work/risk_adaptivity_revision/joint_certification/independent_model_coherence.py",
+    "args": [
+      "--results-dir",
+      "outputs/joint_external_replay",
+      "--output",
+      "outputs/joint_model_coherence.json"
+    ],
+    "report": "outputs/joint_model_coherence.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_decision_replay",
+    "script": "work/risk_adaptivity_revision/joint_certification/decision_replay.py",
+    "args": [
+      "--plans",
+      "outputs/joint_external_replay/empirical_plans.json",
+      "--ledger",
+      "outputs/joint_external_replay/empirical_cases.csv",
+      "--output-dir",
+      "outputs/joint_decision_replay"
+    ],
+    "report": "outputs/joint_decision_replay/report.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_decision_independent",
+    "script": "work/risk_adaptivity_revision/joint_certification/independent_decision_check.py",
+    "args": [
+      "--results-dir",
+      "outputs/joint_external_replay",
+      "--decision-dir",
+      "outputs/joint_decision_replay",
+      "--output",
+      "outputs/joint_decision_check.json"
+    ],
+    "report": "outputs/joint_decision_check.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_precision_catalog",
+    "script": "work/risk_adaptivity_revision/joint_certification/precision_batch.py",
+    "args": [
+      "--plans",
+      "outputs/joint_external_replay/empirical_plans.json",
+      "--output-dir",
+      "outputs/joint_precision_catalog"
+    ],
+    "report": "outputs/joint_precision_catalog/report.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_precision_exact",
+    "script": "work/risk_adaptivity_revision/joint_certification/precision_batch_check.py",
+    "args": [
+      "--directory",
+      "outputs/joint_precision_catalog"
+    ],
+    "report": "outputs/joint_precision_catalog/independent_check.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_precision_adaptive_link",
+    "script": "work/risk_adaptivity_revision/joint_certification/precision_adaptive_link.py",
+    "args": [
+      "--directory",
+      "outputs/joint_precision_catalog",
+      "--base-plans",
+      "outputs/joint_external_replay/empirical_plans.json"
+    ],
+    "report": "outputs/joint_precision_catalog/adaptive_half_check.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_main_certificate",
+    "script": "work/risk_adaptivity_revision/joint_certification/check_main_inspectable_certificate.py",
+    "args": [],
+    "report": "work/risk_adaptivity_revision/joint_certification/main_inspectable_certificate_check.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_precision_replay",
+    "script": "work/risk_adaptivity_revision/joint_certification/empirical_precision_replay.py",
+    "args": [
+      "--precision-plans",
+      "outputs/joint_precision_catalog/plans.json",
+      "--plans",
+      "outputs/joint_external_replay/empirical_plans.json",
+      "--ledger",
+      "outputs/joint_external_replay/empirical_cases.csv",
+      "--output-dir",
+      "outputs/joint_precision_replay"
+    ],
+    "report": "outputs/joint_precision_replay/report.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_precision_replay_check",
+    "script": "work/risk_adaptivity_revision/joint_certification/independent_precision_replay_check.py",
+    "args": [
+      "--replay-dir",
+      "outputs/joint_precision_replay",
+      "--output",
+      "outputs/joint_precision_replay_check.json"
+    ],
+    "report": "outputs/joint_precision_replay_check.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_capacity_replay",
+    "script": "work/risk_adaptivity_revision/joint_certification/empirical_capacity.py",
+    "args": [
+      "--plans",
+      "outputs/joint_external_replay/empirical_plans.json",
+      "--output-dir",
+      "outputs/joint_capacity_replay"
+    ],
+    "report": "outputs/joint_capacity_replay/empirical_capacity_report.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_capacity_independent",
+    "script": "work/risk_adaptivity_revision/joint_certification/empirical_capacity_check.py",
+    "args": [
+      "--results-dir",
+      "outputs/joint_capacity_replay",
+      "--output",
+      "outputs/joint_capacity_independent.json"
+    ],
+    "report": "outputs/joint_capacity_independent.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_noisy_exact",
+    "script": "work/risk_adaptivity_revision/joint_certification/noise_independent_check.py",
+    "args": [
+      "--directory",
+      "work/risk_adaptivity_revision/joint_certification/noise_external_results"
+    ],
+    "report": "work/risk_adaptivity_revision/joint_certification/noise_external_results/independent_check.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ],
+    "mutable_reports": [
+      "work/risk_adaptivity_revision/joint_certification/noise_external_results/independent_check.json"
+    ]
+  },
+  {
+    "name": "joint_capacity_noisy_exact",
+    "script": "work/risk_adaptivity_revision/joint_certification/noise_independent_check.py",
+    "args": [
+      "--directory",
+      "work/risk_adaptivity_revision/joint_certification/noise_external_capacity_results"
+    ],
+    "report": "work/risk_adaptivity_revision/joint_certification/noise_external_capacity_results/independent_check.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ],
+    "mutable_reports": [
+      "work/risk_adaptivity_revision/joint_certification/noise_external_capacity_results/independent_check.json"
+    ]
+  },
+  {
+    "name": "joint_noisy_recorded",
+    "script": "work/risk_adaptivity_revision/joint_certification/empirical_noise_replay.py",
+    "args": [
+      "--plans",
+      "outputs/joint_external_replay/empirical_plans.json",
+      "--certification-dir",
+      "work/risk_adaptivity_revision/joint_certification/noise_external_results",
+      "--output-dir",
+      "outputs/joint_noise_replay"
+    ],
+    "report": "outputs/joint_noise_replay/empirical_noise_report.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_noisy_independent",
+    "script": "work/risk_adaptivity_revision/joint_certification/empirical_noise_check.py",
+    "args": [
+      "--results-dir",
+      "outputs/joint_noise_replay",
+      "--output",
+      "outputs/joint_noisy_independent.json"
+    ],
+    "report": "outputs/joint_noisy_independent.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_capacity_noisy_recorded",
+    "script": "work/risk_adaptivity_revision/joint_certification/empirical_noise_replay.py",
+    "args": [
+      "--plans",
+      "outputs/joint_external_replay/empirical_plans.json",
+      "--certification-dir",
+      "work/risk_adaptivity_revision/joint_certification/noise_external_capacity_results",
+      "--output-dir",
+      "outputs/joint_capacity_noise_replay"
+    ],
+    "report": "outputs/joint_capacity_noise_replay/empirical_noise_report.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_capacity_noisy_independent",
+    "script": "work/risk_adaptivity_revision/joint_certification/empirical_noise_check.py",
+    "args": [
+      "--results-dir",
+      "outputs/joint_capacity_noise_replay",
+      "--output",
+      "outputs/joint_capacity_noisy_independent.json"
+    ],
+    "report": "outputs/joint_capacity_noisy_independent.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_paired_outcomes",
+    "script": "work/risk_adaptivity_revision/joint_certification/empirical_pair_summary.py",
+    "args": [
+      "--exact-cases",
+      "outputs/joint_external_replay/empirical_cases.csv",
+      "--capacity-cases",
+      "outputs/joint_capacity_replay/empirical_capacity_cases.csv",
+      "--precision-replay-dir",
+      "outputs/joint_precision_replay",
+      "--noise-dir",
+      "outputs/joint_noise_replay",
+      "--capacity-noise-dir",
+      "outputs/joint_capacity_noise_replay",
+      "--output-dir",
+      "outputs/joint_paired_replay"
+    ],
+    "report": "outputs/joint_paired_replay/report.json"
+  },
+  {
+    "name": "joint_paired_independent",
+    "script": "work/risk_adaptivity_revision/joint_certification/empirical_pair_check.py",
+    "args": [
+      "--results-dir",
+      "outputs/joint_paired_replay",
+      "--output",
+      "outputs/joint_paired_independent.json"
+    ],
+    "report": "outputs/joint_paired_independent.json"
+  },
+  {
+    "name": "joint_scientific_match",
+    "script": "work/risk_adaptivity_revision/joint_certification/empirical_release_check.py",
+    "args": [
+      "--exact-dir",
+      "outputs/joint_external_replay",
+      "--capacity-dir",
+      "outputs/joint_capacity_replay",
+      "--noise-dir",
+      "outputs/joint_noise_replay",
+      "--capacity-noise-dir",
+      "outputs/joint_capacity_noise_replay",
+      "--precision-dir",
+      "outputs/joint_precision_replay",
+      "--output",
+      "outputs/joint_scientific_match.json"
+    ],
+    "report": "outputs/joint_scientific_match.json"
+  },
+  {
+    "name": "final_review_dependence",
+    "script": "work/risk_adaptivity_revision/joint_certification/final_review_analysis.py",
+    "args": [
+      "--output-dir",
+      "outputs/final_review_dependence"
+    ],
+    "report": "outputs/final_review_dependence/report.json"
+  },
+  {
+    "name": "final_review_independent",
+    "script": "work/risk_adaptivity_revision/joint_certification/final_review_check.py",
+    "args": [
+      "--results-dir",
+      "outputs/final_review_dependence",
+      "--output",
+      "outputs/final_review_independent.json"
+    ],
+    "report": "outputs/final_review_independent.json",
+    "maximum_report_values": {
+      "maximum_discrepancy": 1e-09
+    }
+  },
+  {
     "name": "bound_acquisition_workflow",
     "script": "work/risk_adaptivity_revision/protocol_selection/check_bound_workflow.py",
     "args": [
@@ -338,19 +733,30 @@
   {
     "name": "protocol_cost_frontier",
     "script": "work/risk_adaptivity_revision/protocol_selection/cost_frontier.py",
-    "args": ["--output-dir", "outputs/cost_frontier_replay"],
+    "args": [
+      "--output-dir",
+      "outputs/cost_frontier_replay"
+    ],
     "report": "outputs/cost_frontier_replay/report.json"
   },
   {
     "name": "protocol_cost_frontier_independent",
     "script": "work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_COST_CHECK.py",
-    "args": ["--results-dir", "outputs/cost_frontier_replay", "--output", "outputs/cost_frontier_check.json"],
+    "args": [
+      "--results-dir",
+      "outputs/cost_frontier_replay",
+      "--output",
+      "outputs/cost_frontier_check.json"
+    ],
     "report": "outputs/cost_frontier_check.json"
   },
   {
     "name": "printed_worked_example",
     "script": "work/risk_adaptivity_revision/counter_adaptive/reviewer_diagnostics/check_worked_example.py",
-    "args": ["--output", "outputs/printed_worked_example_check.json"],
+    "args": [
+      "--output",
+      "outputs/printed_worked_example_check.json"
+    ],
     "report": "outputs/printed_worked_example_check.json"
   }
 ]

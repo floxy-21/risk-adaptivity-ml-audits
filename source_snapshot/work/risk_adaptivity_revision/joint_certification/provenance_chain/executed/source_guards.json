@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "guard": "Pinned original raw-source bytes",
+      "script_sha256": "75383782c6565f328a9e6d0fa48eaa90bcdbb6c0106fe3bdee484326bd9115b7",
+      "exit_code": 1,
+      "expected_message": "Checksum mismatch",
+      "passed": true
+    },
+    {
+      "guard": "Pinned original frozen-forecast bytes",
+      "script_sha256": "722f6262660c1ca559c006d6a3a19316d589a3a2049fd0d6fa631a789dd3591b",
+      "exit_code": 1,
+      "expected_message": "Frozen forecast export changed",
+      "passed": true
+    },
+    {
+      "guard": "External frozen-forecast gate in source-chain checker",
+      "script_sha256": "190330812eded546b3cc84313045dd1343bd7d425ce285730d6348160d378a7a",
+      "passed": true,
+      "expected_message": "Pinned source mismatch"
+    }
+  ],
+  "mutations": "Temporary sentinel files only; no archived source or scientific artifact changed.",
+  "source_sha256": "9388e7c4aedee49c828c5291f6f68e331a22d2aa01d74499b334f0a016817e43",
+  "scope": "Fail-closed checksum regression, not a new scientific experiment."
+}

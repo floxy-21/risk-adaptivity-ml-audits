@@ -1,0 +1,149 @@
+{
+  "status": "PASS",
+  "cohort": "all",
+  "steps": [
+    {
+      "command": [
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\review-env\\Scripts\\python.exe",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_certification\\provenance_chain\\check_source_guards.py",
+        "--output",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_complete_20261013\\source_guards.json"
+      ],
+      "script_sha256": "9388e7c4aedee49c828c5291f6f68e331a22d2aa01d74499b334f0a016817e43",
+      "returncode": 0,
+      "log": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_complete_20261013\\01_check_source_guards.log",
+      "log_sha256": "c4282b698ede1f378f296e3312ec7dba2575cb77718844f9b373338ada7e6274",
+      "elapsed_seconds": 2.6734240000369027
+    },
+    {
+      "command": [
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\review-env\\Scripts\\python.exe",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_certification\\provenance_chain\\check_source_chain.py",
+        "--cohort",
+        "all",
+        "--output",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_complete_20261013\\source_chain.json",
+        "--raw-dir",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work",
+        "--original-geometry",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_raw_20261013\\results\\geometry.json",
+        "--original-endpoints",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_raw_20261013\\prepared\\data_blem_hourly_endpoints.csv"
+      ],
+      "script_sha256": "190330812eded546b3cc84313045dd1343bd7d425ce285730d6348160d378a7a",
+      "returncode": 0,
+      "log": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_complete_20261013\\02_check_source_chain.log",
+      "log_sha256": "3b55543c3c5591bbedbc16633629b2a4d6d580746943611d5e616f62641f43aa",
+      "elapsed_seconds": 13.435411899990868
+    },
+    {
+      "command": [
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\review-env\\Scripts\\python.exe",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_certification\\precision_batch_check.py",
+        "--directory",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_precision_20261013"
+      ],
+      "script_sha256": "49c01543b55ef85a2f21189dfb342d1a39df16cb20c44498bdf7f00185604c2c",
+      "returncode": 0,
+      "log": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_complete_20261013\\03_precision_batch_check.log",
+      "log_sha256": "b576fede13894ff7f15f1be216ef44ee5a5b565fb77c9b9641f402706019a60f",
+      "elapsed_seconds": 39.16241519997129
+    },
+    {
+      "command": [
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\review-env\\Scripts\\python.exe",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_certification\\precision_adaptive_link.py",
+        "--directory",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_precision_20261013",
+        "--base-plans",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_shared_20261013\\empirical_plans.json"
+      ],
+      "script_sha256": "ab91ff8b13bb9bc2bfec1228a538d035299098f7be77e7cc11d7cb150a8a0c89",
+      "returncode": 0,
+      "log": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_complete_20261013\\04_precision_adaptive_link.log",
+      "log_sha256": "b027946eb75e1edcd131aaa27b00e9412f8807d1ed94d5ecec47226c2d1864f5",
+      "elapsed_seconds": 12.00025399995502
+    },
+    {
+      "command": [
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\review-env\\Scripts\\python.exe",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_certification\\empirical_precision_replay.py",
+        "--cohort",
+        "all",
+        "--precision-plans",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_precision_20261013\\plans.json",
+        "--plans",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_shared_20261013\\empirical_plans.json",
+        "--ledger",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_shared_20261013\\empirical_cases.csv",
+        "--original-geometry",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_raw_20261013\\results\\geometry.json",
+        "--original-answers",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_raw_20261013\\prepared\\data_blem_hourly_endpoints.csv",
+        "--output-dir",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_complete_20261013\\recorded_replay"
+      ],
+      "script_sha256": "5b930c3b16b58f675cec47b1749ed0dd0a6d0a6f5a6f6a978a3d56d779c8f34a",
+      "returncode": 0,
+      "log": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_complete_20261013\\05_empirical_precision_replay.log",
+      "log_sha256": "56c9030405b376c5bf499534e712925f47721caf5b60f57a883c0822ca7d9f9c",
+      "elapsed_seconds": 16.828667800000403
+    },
+    {
+      "command": [
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\review-env\\Scripts\\python.exe",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_certification\\independent_precision_replay_check.py",
+        "--cohort",
+        "all",
+        "--replay-dir",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_complete_20261013\\recorded_replay",
+        "--output",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_complete_20261013\\recorded_replay\\independent_replay_check.json"
+      ],
+      "script_sha256": "8286a0a920ea914f0751301d62bae310a80eb1d316074057c61aee697fe28c1c",
+      "returncode": 0,
+      "log": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_complete_20261013\\06_independent_precision_replay_check.log",
+      "log_sha256": "c3a50005c4b5d2c285338752ee47bab444d8002c12cde109791fae4a4aaad71a",
+      "elapsed_seconds": 35.76809140003752
+    },
+    {
+      "command": [
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\review-env\\Scripts\\python.exe",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_certification\\provenance_chain\\check_table_chain.py",
+        "--cohort",
+        "all",
+        "--shared-dir",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_shared_20261013",
+        "--precision-dir",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_precision_20261013",
+        "--replay-dir",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_complete_20261013\\recorded_replay",
+        "--output",
+        "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_complete_20261013\\table_chain.json"
+      ],
+      "script_sha256": "20dc48e338239efe40e61056b59e1eadde813ea9165bca536b213bf318de56b5",
+      "returncode": 0,
+      "log": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_complete_20261013\\07_check_table_chain.log",
+      "log_sha256": "c6329ed2af3e487cd3436a212c7654b8162c5ef937b22586dd307c72ebcdba19",
+      "elapsed_seconds": 0.9048036999884062
+    }
+  ],
+  "new_forecast_fits": 0,
+  "same_study_execution": true,
+  "original_raw_report": {
+    "path": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_raw_20261013\\reproduction_report.json",
+    "sha256": "7910d49577d32cd4c629cfe19409c3e997f553fc5eb60b294cf75736ea4e3c19",
+    "reused_completed_run": true,
+    "recorded_elapsed_seconds": 431.15049109997926
+  },
+  "source_chain_sha256": "c5eab2cad1df1a289888033192f50d3610eb8590484e41b5a17f8ccd991391d1",
+  "table_chain_sha256": "4919a0fce01d434943152d894912de1bb4937cd18e31d73085dea20949396244",
+  "complete_scope": "Source identities and readings -> frozen forecast restoration/linkage -> all coefficients -> shared policies -> exact continuum certificates -> direct recorded outcomes -> complete-panel and matched-subset tables.",
+  "limitation": "Frozen-predictor verification, not independent refitting, external human replication, native device calibration or proof of the universal theorem.",
+  "reused_generated_paths": {
+    "shared": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_shared_20261013",
+    "precision": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_review\\provenance_chain_precision_20261013"
+  },
+  "elapsed_seconds": 121.68645000003744,
+  "runner_sha256": "783bfe34198c9e8d425a7423452135e7c74f3790ec158e60bfe7371ce943a210"
+}

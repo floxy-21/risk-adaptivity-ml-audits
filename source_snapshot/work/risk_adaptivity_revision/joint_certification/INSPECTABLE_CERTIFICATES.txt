@@ -1,0 +1,40 @@
+Exact shared-query certificates: no optimization solver is needed
+
+Run from the supplement root, using Python 3. These commands use the saved
+external coefficient geometry and exported exact certificate ledgers:
+
+python joint_certification/proof_check_joint.py
+python joint_certification/precision_batch_check.py
+python joint_certification/precision_adaptive_link.py
+python joint_certification/check_main_inspectable_certificate.py
+
+The first command checks the constructed mean-joint-width separation,
+including the batch mixture, its adversarial lower bound and the single
+record lower bound for every randomized adaptive policy.
+
+The next two commands check the complete 279-block external panel:
+2,052 rational pair-cover multipliers and 61,380 finite-profile/batch
+evaluations establish 57 exact batch half-success optima; 122 rational
+adaptive branches establish success for every feasible record on those
+same 57 instances. There are 212 matching continuum bounds in total;
+unmatched cases retain their lower and upper bounds.
+
+The final command reproduces the compact empirical example in the main
+article: source-coefficient hashes, 24 range enclosures, 36 multiplier
+conditions, 20 adverse-record widths and both complete adaptive branches.
+Its output is main_inspectable_certificate_check.json.
+
+The original panel's 165 matched-half certificates were checked in the
+full-source run; precision_all_panel_check.json and
+precision_all_panel_adaptive_check.json record that run. These four
+default commands do not recreate the original panel from absent raw
+files. Use the documented raw-data regeneration route, then supply the
+regenerated geometry with precision_batch.py --original-geometry and its
+regenerated shared plans with --plans. Run precision_batch_check.py on
+the resulting directory, followed by precision_adaptive_link.py using
+that directory and the same regenerated base plans.
+
+The scalar, shared mean-width, exact shared precision and bounded-error
+precision results are different objectives/information models. In
+particular, the exact-half certificate cannot be transferred to the
+stored-error model without the separate noisy certificates.

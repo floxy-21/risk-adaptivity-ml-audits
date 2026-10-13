@@ -1,0 +1,394 @@
+{
+  "status": "PASS",
+  "artifact_provenance": "Exact checker for the explicitly specified mathematical construction",
+  "coefficients": [
+    [
+      "1/2",
+      "0",
+      "1",
+      "1/2",
+      "1/2",
+      "0"
+    ],
+    [
+      "2/3",
+      "2/3",
+      "1",
+      "1/3",
+      "0",
+      "1"
+    ]
+  ],
+  "initial_widths": [
+    "1",
+    "1"
+  ],
+  "budget": 2,
+  "query_dictionary": "Internal prefixes 1,...,5",
+  "optimal_randomized_batch_mean_joint_width": "2/3",
+  "optimal_randomized_adaptive_mean_joint_width": "1/2",
+  "primal_mixture": [
+    {
+      "Q": [
+        1,
+        2
+      ],
+      "mass": "1/6"
+    },
+    {
+      "Q": [
+        2,
+        3
+      ],
+      "mass": "1/3"
+    },
+    {
+      "Q": [
+        3,
+        5
+      ],
+      "mass": "1/2"
+    }
+  ],
+  "primal_vertex_expected_widths": [
+    "2/3",
+    "2/3",
+    "2/3",
+    "2/3",
+    "2/3",
+    "1/2"
+  ],
+  "dual_vertex_masses": [
+    "1/3",
+    "0",
+    "1/6",
+    "1/6",
+    "1/3",
+    "0"
+  ],
+  "all_batches": [
+    {
+      "Q": [
+        1,
+        2
+      ],
+      "vertex_joint_widths": [
+        "0",
+        "0",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "adverse_expectation": "2/3",
+      "hard_record_width": "1"
+    },
+    {
+      "Q": [
+        1,
+        3
+      ],
+      "vertex_joint_widths": [
+        "0",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "adverse_expectation": "2/3",
+      "hard_record_width": "3/4"
+    },
+    {
+      "Q": [
+        1,
+        4
+      ],
+      "vertex_joint_widths": [
+        "0",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "adverse_expectation": "2/3",
+      "hard_record_width": "5/6"
+    },
+    {
+      "Q": [
+        1,
+        5
+      ],
+      "vertex_joint_widths": [
+        "0",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "adverse_expectation": "2/3",
+      "hard_record_width": "1/2"
+    },
+    {
+      "Q": [
+        2,
+        3
+      ],
+      "vertex_joint_widths": [
+        "1/2",
+        "1/2",
+        "0",
+        "1",
+        "1",
+        "1"
+      ],
+      "adverse_expectation": "2/3",
+      "hard_record_width": "1/2"
+    },
+    {
+      "Q": [
+        2,
+        4
+      ],
+      "vertex_joint_widths": [
+        "1/2",
+        "1/2",
+        "2/3",
+        "2/3",
+        "1",
+        "1"
+      ],
+      "adverse_expectation": "13/18",
+      "hard_record_width": "5/6"
+    },
+    {
+      "Q": [
+        2,
+        5
+      ],
+      "vertex_joint_widths": [
+        "1/2",
+        "1/2",
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      "adverse_expectation": "5/6",
+      "hard_record_width": "1/2"
+    },
+    {
+      "Q": [
+        3,
+        4
+      ],
+      "vertex_joint_widths": [
+        "1",
+        "1",
+        "1",
+        "0",
+        "1",
+        "1"
+      ],
+      "adverse_expectation": "5/6",
+      "hard_record_width": "3/4"
+    },
+    {
+      "Q": [
+        3,
+        5
+      ],
+      "vertex_joint_widths": [
+        "1",
+        "1",
+        "1",
+        "1/3",
+        "1/3",
+        "0"
+      ],
+      "adverse_expectation": "2/3",
+      "hard_record_width": "1/2"
+    },
+    {
+      "Q": [
+        4,
+        5
+      ],
+      "vertex_joint_widths": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      "adverse_expectation": "2/3",
+      "hard_record_width": "1/2"
+    }
+  ],
+  "hard_record": [
+    "0",
+    "0",
+    "1/2",
+    "0",
+    "0",
+    "1/2"
+  ],
+  "adaptive_branch_maxima": [
+    "1/2",
+    "1/2"
+  ],
+  "exact_deterministic_first_query_results": [
+    {
+      "first": 1,
+      "worst_joint_width": "1",
+      "candidate_values": [
+        {
+          "t": "0",
+          "best_second": 2,
+          "conditional_value": "1"
+        },
+        {
+          "t": "1",
+          "best_second": 2,
+          "conditional_value": "0"
+        }
+      ]
+    },
+    {
+      "first": 2,
+      "worst_joint_width": "1",
+      "candidate_values": [
+        {
+          "t": "0",
+          "best_second": 1,
+          "conditional_value": "1"
+        },
+        {
+          "t": "1/2",
+          "best_second": 1,
+          "conditional_value": "1/2"
+        },
+        {
+          "t": "1",
+          "best_second": 1,
+          "conditional_value": "0"
+        }
+      ]
+    },
+    {
+      "first": 3,
+      "worst_joint_width": "1/2",
+      "candidate_values": [
+        {
+          "t": "0",
+          "best_second": 5,
+          "conditional_value": "1/3"
+        },
+        {
+          "t": "1/3",
+          "best_second": 5,
+          "conditional_value": "1/3"
+        },
+        {
+          "t": "3/7",
+          "best_second": 5,
+          "conditional_value": "3/7"
+        },
+        {
+          "t": "1/2",
+          "best_second": 2,
+          "conditional_value": "1/2"
+        },
+        {
+          "t": "3/5",
+          "best_second": 2,
+          "conditional_value": "1/2"
+        },
+        {
+          "t": "2/3",
+          "best_second": 2,
+          "conditional_value": "1/2"
+        },
+        {
+          "t": "3/4",
+          "best_second": 2,
+          "conditional_value": "1/2"
+        },
+        {
+          "t": "1",
+          "best_second": 2,
+          "conditional_value": "1/2"
+        }
+      ]
+    },
+    {
+      "first": 4,
+      "worst_joint_width": "3/4",
+      "candidate_values": [
+        {
+          "t": "0",
+          "best_second": 5,
+          "conditional_value": "0"
+        },
+        {
+          "t": "3/7",
+          "best_second": 5,
+          "conditional_value": "3/7"
+        },
+        {
+          "t": "1/2",
+          "best_second": 5,
+          "conditional_value": "1/2"
+        },
+        {
+          "t": "3/5",
+          "best_second": 5,
+          "conditional_value": "3/5"
+        },
+        {
+          "t": "3/4",
+          "best_second": 2,
+          "conditional_value": "3/4"
+        },
+        {
+          "t": "1",
+          "best_second": 2,
+          "conditional_value": "2/3"
+        }
+      ]
+    },
+    {
+      "first": 5,
+      "worst_joint_width": "1",
+      "candidate_values": [
+        {
+          "t": "0",
+          "best_second": 1,
+          "conditional_value": "0"
+        },
+        {
+          "t": "1",
+          "best_second": 1,
+          "conditional_value": "1"
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "rational_grid_records": 126,
+    "scalar_fiber_endpoint_checks": 4032,
+    "conditional_joint_extremum_checks": 160
+  },
+  "continuum_arguments": [
+    "For each batch J is a maximum of linear functions on the simplex and is convex; the six vertex mixture bounds imply the upper bound everywhere.",
+    "The adverse vertex distribution lower-bounds every randomized batch.",
+    "The two conditional maxima bound both adaptive branches for every first answer.",
+    "The single hard record bounds every final set and therefore every adaptive seed by transcript consistency.",
+    "All affine line intersections partition the first-answer interval into fixed-order cells; each min-of-max envelope is affine inside each cell."
+  ],
+  "scope": "Constructed exact-total uncapped example and specialized deterministic two-query algorithm; no empirical forecast improvement, operational benefit or historical priority verified",
+  "checker_sha256": "d8424bc5f5e406a23ae25cd5710b0dae6cfe26dc13bbfc8228817fe232d6a4a1"
+}

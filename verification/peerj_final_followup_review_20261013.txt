@@ -1,77 +1,85 @@
+FINAL PEERJ COMPUTER SCIENCE REVIEW -- 13 October 2026
+Source SHA256: f9554269d768ee25de92e077b301e745a536805699ec9df8509483ad8980e6f2
+PDF SHA256: 62f50ab90d455dec539feb9257990da2cf32117defa3bc3f793de43e24361e2f
+Pages: 38
 
-FOLLOW-UP ANALYTIC REVIEW: READING--FEEDBACK COST FRONTIER
-Date: 13 October 2026 (America/New_York)
-Reviewed source SHA-256, verified from disk: 3ef03b55c18ec7efc1f83c0699c779fa5f35bb6523dd46611808772af41c1666
-Reviewed files: protocol_selection/manuscript_fragment_cost.tex, cost_frontier.py, INDEPENDENT_COST_CHECK.py, cost_frontier_results/report.json, cost_frontier_independent.json, and corresponding final manuscript paragraphs.
+Current comprehensive response: LATEST_REVIEW_FIXES_20261013.txt
+PeerJ-specific criteria: PEERJ_CRITERIA_AUDIT.txt
 
-VERDICT: No material blocker or mathematical correction found in the new cost analysis. The costs, comparator scope, threshold, provenance and reported counts agree. This is a read-only analytic/code/results review; no new experiment or execution is claimed.
+CURRENT INTERNAL REVIEW -- 13 October 2026
+Source SHA256: f9554269d768ee25de92e077b301e745a536805699ec9df8509483ad8980e6f2
+PDF SHA256: 62f50ab90d455dec539feb9257990da2cf32117defa3bc3f793de43e24361e2f
+PDF pages: 38
 
-1. The model is explicitly a post-analysis additive charge for reserved scalar readings plus information rounds, with a strictly positive reading charge and nonnegative round charge. Normalization gives cost n+r*q. It concerns declared resource preferences, not measured latency, provider prices or monetary savings.
-2. For each of 22 cases with both certificates, adaptive costs 2+2r and fixed-three costs 3+r. Their difference is r-1, so adaptive is strictly preferable for r<1, equal at r=1 and more expensive for r>1. Choosing fewer rounds at equality is coherent with the stated tie rule. The seven remaining supplied cases use the same certified fixed-three option in both complete-coverage baselines.
-3. Summing gives fixed=87+29r and adaptive-with-fallback=65+51r. Since the same r applies to every case and all 22 comparisons have the same switch, summing individual catalogue minima equals the smaller of these two panel totals. This identity holds for all r>=0, not only the six reported points. A case-dependent ratio would require summing casewise minima instead; the manuscript does not claim that alternative formula.
-4. Every displayed table entry matches those formulas: r=0 gives 87/65; r=1/4 gives 94.25/77.75; r=1/2 gives 101.5/90.5; r=1 gives 116/116; r=2 gives 145/167; r=4 gives 203/269. Catalogue values are their minima.
-5. Both baselines have the identical existing half-width guarantee under exact endpoints and illustrative 1% internal errors. The new accounting neither changes the guarantee nor treats failed two-reading cases as solved with two readings. It does not compare to a selectively weakened baseline: fixed-three is optimal within the supplied catalogue for r>=1, while the adaptive-with-fixed-fallback baseline is optimal for r<=1. The text explicitly preserves this fact.
-6. The producer draws admissible candidates from the restricted-three-reading interface, excludes bulk, and evaluates the weighted cost with Fraction arithmetic. Its tie order prioritizes fewer rounds, then readings, then protocol name. The separate checker imports neither the producer nor selector, rebuilds candidate resource counts from the certificate files, checks certificate paths/hashes, checks saved query metadata and normalized upper bounds, and verifies the row/summary arithmetic.
-7. Counts reconcile: 29 cases times 6 ratios=174 choices; 29 fixed candidates plus 22 adaptive candidates, times 6 ratios=306 candidate evaluations. The reported values agree with the saved output and independent report.
-8. The reported 0.331s bulk and 0.497s adaptive times are consistent with the saved exact means 0.3312435333 and 0.4965091333 and remain descriptive measurements from a separate three-task API study. The text does not infer the cost ratio from those times or call the modeled benefit measured operational savings.
-9. The phrase 'catalogue selector' and the final paragraph adequately restrict optimality to supplied certified protocols. The two baseline definitions, same case subset, same target, same illustrative error bound and absence of shared-reading/stopping optimization are explicit. This remains an interpretable decision-support extension, not a new general cost-optimal acquisition theorem.
-10. The shorter presentation retains the general-theory versus structured-computation distinction and preserves the central proof claims. No new proof obligation is introduced by this elementary cost frontier.
+LATEST USER REVIEW: FINDINGS AND CORRECTIONS
 
-Optional polish only: 'Thus feedback is preferable exactly when r<1' could be 'Between these certified protocols, feedback has lower declared cost exactly when r<1.' The existing surrounding catalogue limitation already supplies that scope, so this is not a submission blocker or required extra edit.
+1. Scope/significance. The general scalar theorem covers compact convex
+uncertainty sets, affine targets and a finite linear-query dictionary; it is
+not restricted to meters or disjoint totals. The central shared-query result
+has explicit policies and matching lower bounds. The exact scalable planner
+is more specialized: two cumulative queries on an exact-total simplex.
+The manuscript states these scopes separately and credits prior minimax,
+optimal-recovery and robust-optimization machinery. No unsupported first-in-
+history, general operational superiority or groundbreaking-impact claim added.
 
-This follow-up supports the correctness of the added finite-catalogue analysis. It does not establish a new field benefit, exhaustive prior-art novelty or a calibrated acceptance probability.
-Final read-only PeerJ readability and application review
-Date: 13 October 2026 (America/New_York)
-Source SHA-256: 90d01a9893458291d2d22a3bed8cf39938b07497a90680038533dbb0228575ff
-PDF SHA-256: 465cca6212e67f5539b4b4ce96112dce97451c85fa2ae601e868ffe8d499fb63
-Both hashes independently read from current files. PDF has28 current pages.
+2. Practical benefit. In 165 original and 57 external blocks, two shared
+adaptive readings guarantee the required precision whereas the optimal
+randomized fixed batch has worst-case success exactly one half. Recorded
+success on those subsets is 100% versus 65.45% and 64.91%. Full-panel fixed-
+batch gains are 7.81/11.11 percentage points; greedy gains are 2.20/2.15.
+These are assurance and precision benefits. Capacity information can remove
+the advantage; measured bulk retrieval is preferable on the unrestricted API.
+No financial benefit, deployed service saving or improved model choice is
+inferred. The adverse model-choice control remains.
 
-Verdict: PASS for the requested bounded final review. No newly identified
-scientific or visual blocker requires further manuscript changes.
+3. Complete provenance. This revision actually ran pinned original-source
+regeneration, restored the 89,496-row forecast archive to its historical
+hash, verified all 6,588 source/forecast/contrast joins and regenerated both
+panels' policies and exact certificates. All 1,098 outcome rows agree exactly.
+The original run checks 26,280 hourly endpoints; exact proof checks include
+7,992 covering multipliers and 463 branch intervals. Independent replay
+checks 10,980 batch widths and 65,880 pair decisions. Altered-input tests
+confirm rejection by the real raw-source and frozen-forecast entry points.
+The code and complete execution records are indexed in
+joint_certification/provenance_chain/README.txt. The final orchestrator
+explicitly reused the raw/plan/certificate directories freshly produced in
+this same revision; it does not claim a second regeneration or model refit.
+The default public run regenerates the external panel; the original raw
+route remains separately documented and its execution is separately recorded.
 
-Readability: The introduction now explains batch/adaptive choices and sharp
-intervals before the formal setting. Removing the redundant prior-art table
-preserves precise prose citations while improving the route to Methods. The
-supplement section is an entry guide rather than a historical inventory.
-The mathematical sections remain technical because the universal theorem
-needs explicit assumptions and proofs; this is appropriate for an algorithms
-and machine-learning-verification article, not an empirical predictor paper.
+4. Reconstructible planner. A main-text algorithm gives the segment ranges,
+conditional affine lines, all intersections and endpoints, tie rules and
+online second query. A short proof explains why those points suffice over
+the full answer interval. Floating tolerances are distinguished from the
+exact calculation and rational assurance certificates. Cap/error variants
+remain separate rather than silently applying the simplex formula to them.
 
-Worked example (PDF15--16): The displayed coefficient enclosures support all
-printed branch and adverse-profile claims. For t<=1/4 the upper bound is
-t+.2891(1-t)<=.466825; for t>=1/4 it is .0939t+.5620(1-t)<=.444975.
-Both are below1/2. The e2/e5 table limits each batch's adverse average to1/2.
-The equal mixture of {3,5} and {2,3} supplies the matching all-record lower
-guarantee. This cleanly distinguishes a continuum result from finite-profile
-checking alone. The text labels it as an existing exact-total recorded case,
-not a new sample or a bounded-error claim.
+5. Absolute scale. The existing HPM1 example now reports all six original
+loss widths, targets and terminal widths in squared kWh of stored-grid
+increments. Initial widths range from 0.107125 to 0.303143; terminal widths
+range from 0.000673 to 0.005336. The largest normalized terminal width is
+0.0435244. Twenty-four independent endpoint LPs agree within 3.13e-17.
+The caption was corrected: these are interval widths, not bounds on the
+value or absolute magnitude of the signed loss contrast. No thresholds,
+models, forecasts, subset definition or outcome changed.
 
-Practical cost frontier (PDF21--22): The resource tradeoff is correct and useful.
-The hybrid uses65 readings and51 rounds across29 cases; fixed-three uses87 and29.
-At normalized round cost r, their costs are65+51r and87+29r, meeting at r=1.
-The selector chooses the smaller within its supplied catalogue. The arithmetic
-and all six displayed rows reconcile. Catalogued scope, pairwise separability,
-unmeasured tariffs and separate actual API timings are plainly stated.
+6. Reporting and structure. The abstract and introduction use direct active
+prose. Repeated scope explanations were shortened. The discussion foregrounds
+the joint result and retains the smaller scalar effects as context. Research-
+article structure is explicit: Introduction, Methods, Results, Discussion,
+Conclusions, supplementary materials, declarations, acknowledgements,
+references. Essential proofs and the worked certificate remain in the main
+paper. Detail needed for verification is retained rather than replaced by
+promotional language. The final PDF is 38 pages including references.
 
-Visual review: Inspected contact-01,contact-13,contact-25 and full pages15,16,
-22,25,26. No clipping, collisions, missing glyphs or unreadable table columns
-were observed. The worked-example table is on the following page but clearly
-continues its immediately preceding text. The AI declaration spans25--26
-without missing or crowded content. Older render images beyond28 are not part
-of this final PDF and were excluded.
+VERDICT
+No unresolved blocking scientific or presentation error was identified in
+this internal review. The contribution remains specialized, with demonstrated
+conditional assurance value rather than demonstrated financial impact.
+This is suitable for journal consideration after factual author declarations; the final package checks passed. It is not external specialist validation,
+a formal proof-assistant certificate, an acceptance decision or a calibrated
+acceptance probability. The current release verification records the final
+package run separately. No person was contacted and no paper was submitted.
 
-Disclosure: The revised statement accurately retains substantive AI assistance,
-author-provided topic/objectives/supervision and author responsibility. The
-absence of consistently recorded model versions is acknowledged. Do not call
-that full compliance with a publisher's request for version numbers; it is an
-honest residual metadata limitation. No external research review is claimed.
-
-Fit: A defensible PeerJ Computer Science submission as original algorithms and
-ML-verification research, supported by proofs, source data, executable methods
-and explicit limitations. The application supplies an acquisition decision
-under declared constraints. It does not establish universal deployment savings
-or a new state-of-the-art forecasting model. Nothing in this review creates a
-statistical basis for an acceptance estimate above80%.
-
-No manuscript/code/PDF/ZIP changes, new experiments or external contacts were
-performed. Review notes only were written. This is internal AI-assisted review.
+FINAL ARTIFACT VERIFICATION
+PASS: 69 steps in a fresh network-disabled stage from the two publisher ZIP files, 1014 manifested members, 1136.96 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 38.86 MB. Full historical archive integrity also passed.

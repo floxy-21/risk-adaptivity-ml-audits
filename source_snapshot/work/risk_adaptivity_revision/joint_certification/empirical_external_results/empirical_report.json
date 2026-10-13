@@ -1,0 +1,172 @@
+{
+  "status": "PASS",
+  "scope": "Post-hoc reused-data numerical feasibility study; 279 blocks / 1674 pairs in declared external cohort; shared2queries, uncapped exact-total/noiseless prefix model. Not rational-certified empirical gaps or independent untouched replication.",
+  "cohort": "external",
+  "numerical_gap_tolerance": 1e-08,
+  "half_precision_fraction": 0.5,
+  "lp_tolerance": {
+    "primal_feasibility_tolerance": 1e-09,
+    "dual_feasibility_tolerance": 1e-09
+  },
+  "plan_before_replay": true,
+  "plan_sha256": "9258e3d7508d333c9aaaaf243495d0a459adba8bf075bab1d244ace7f2ae9387",
+  "secondary_batch_rule": "Uniform mean over six concentration vertices on the primary optimum face +1e-10; independent of withheld replay answers",
+  "deterministic_tie_rule": "Earliest optimal first query; deterministic batch ties use lower uniform vertex mean; greedy first minimizes one-query worst joint width then best two-query continuation",
+  "baseline_scope": "Batch mean LP exact as formulation by convexity on simplex; A_det exact deterministic planning as formulation by all-line intersections. Floating solutions checked numerically. No randomized adaptive optimum is claimed.",
+  "external": {
+    "blocks": 279,
+    "positive_width_pair_comparisons": 1674,
+    "numerical_mean_risk_separations": 162,
+    "numerical_mean_risk_separation_fraction": 0.5806451612903226,
+    "adaptive_half_guarantees": 185,
+    "det_batch_half_guarantees": 128,
+    "greedy_half_guarantees": 169,
+    "adaptive_half_but_det_batch_not": 57,
+    "means": {
+      "A_det": 0.4405897125150658,
+      "R_batch_mean": 0.4445150444508797,
+      "D_batch": 0.5691761213748096,
+      "adaptive_recorded_J": 0.28225888019748396,
+      "det_batch_recorded_J": 0.338093888754647,
+      "randomized_batch_recorded_expected_J": 0.38287666239758994,
+      "greedy_recorded_J": 0.2893446897640536,
+      "uniform_batch_recorded_expected_J": 0.5818080177073561,
+      "adaptive_recorded_success": 0.9032258064516129,
+      "det_batch_recorded_success": 0.7921146953405018,
+      "randomized_batch_recorded_success_probability": 0.6989812969371698,
+      "greedy_recorded_success": 0.8817204301075269,
+      "uniform_batch_recorded_success_probability": 0.3480286738351254
+    },
+    "gap_quantiles": {
+      "min": -0.30589044189324643,
+      "q25": -7.0231406481130465e-06,
+      "median": 0.002984883800580318,
+      "q75": 0.03031191943492731,
+      "max": 0.12067308885786121
+    },
+    "positive_gap_median": 0.02582719871880146,
+    "positive_gap_max": 0.12067308885786121,
+    "max_primal_dual_gap": 1.0000450467728683e-10
+  },
+  "by_meter": {
+    "hpm_1": {
+      "blocks": 93,
+      "positive_width_pair_comparisons": 558,
+      "numerical_mean_risk_separations": 55,
+      "numerical_mean_risk_separation_fraction": 0.5913978494623656,
+      "adaptive_half_guarantees": 60,
+      "det_batch_half_guarantees": 47,
+      "greedy_half_guarantees": 52,
+      "adaptive_half_but_det_batch_not": 13,
+      "means": {
+        "A_det": 0.4759997917641059,
+        "R_batch_mean": 0.46352632977305475,
+        "D_batch": 0.5649749126023058,
+        "adaptive_recorded_J": 0.3105669232196846,
+        "det_batch_recorded_J": 0.32841785117820993,
+        "randomized_batch_recorded_expected_J": 0.38690953655141674,
+        "greedy_recorded_J": 0.32344482650985845,
+        "uniform_batch_recorded_expected_J": 0.5649090060573418,
+        "adaptive_recorded_success": 0.8172043010752689,
+        "det_batch_recorded_success": 0.8064516129032258,
+        "randomized_batch_recorded_success_probability": 0.6950360965441567,
+        "greedy_recorded_success": 0.7849462365591398,
+        "uniform_batch_recorded_success_probability": 0.3451612903225806
+      },
+      "gap_quantiles": {
+        "min": -0.30589044189324643,
+        "q25": -1.6653345369377348e-16,
+        "median": 0.0017788809214723256,
+        "q75": 0.023023033237344004,
+        "max": 0.105101839891313
+      },
+      "positive_gap_median": 0.018374338848194283,
+      "positive_gap_max": 0.105101839891313,
+      "max_primal_dual_gap": 1.0000342220983782e-10
+    },
+    "hpm_2": {
+      "blocks": 93,
+      "positive_width_pair_comparisons": 558,
+      "numerical_mean_risk_separations": 54,
+      "numerical_mean_risk_separation_fraction": 0.5806451612903226,
+      "adaptive_half_guarantees": 62,
+      "det_batch_half_guarantees": 44,
+      "greedy_half_guarantees": 58,
+      "adaptive_half_but_det_batch_not": 18,
+      "means": {
+        "A_det": 0.3914349944288097,
+        "R_batch_mean": 0.4008528260414207,
+        "D_batch": 0.573100753849306,
+        "adaptive_recorded_J": 0.19664746269786154,
+        "det_batch_recorded_J": 0.33292388858628036,
+        "randomized_batch_recorded_expected_J": 0.3708434254170425,
+        "greedy_recorded_J": 0.2084082021696701,
+        "uniform_batch_recorded_expected_J": 0.6442176568336269,
+        "adaptive_recorded_success": 0.978494623655914,
+        "det_batch_recorded_success": 0.7096774193548387,
+        "randomized_batch_recorded_success_probability": 0.657301467865501,
+        "greedy_recorded_success": 0.9354838709677419,
+        "uniform_batch_recorded_success_probability": 0.2924731182795699
+      },
+      "gap_quantiles": {
+        "min": -0.11342300341489142,
+        "q25": -7.216449660063518e-16,
+        "median": 0.002556705039200524,
+        "q75": 0.026663884756757072,
+        "max": 0.09462705409972982
+      },
+      "positive_gap_median": 0.024338673645141806,
+      "positive_gap_max": 0.09462705409972982,
+      "max_primal_dual_gap": 1.0000193728654239e-10
+    },
+    "hpm_7": {
+      "blocks": 93,
+      "positive_width_pair_comparisons": 558,
+      "numerical_mean_risk_separations": 53,
+      "numerical_mean_risk_separation_fraction": 0.5698924731182796,
+      "adaptive_half_guarantees": 63,
+      "det_batch_half_guarantees": 37,
+      "greedy_half_guarantees": 59,
+      "adaptive_half_but_det_batch_not": 26,
+      "means": {
+        "A_det": 0.45433435135228173,
+        "R_batch_mean": 0.4691659775381638,
+        "D_batch": 0.5694526976728171,
+        "adaptive_recorded_J": 0.33956225467490586,
+        "det_batch_recorded_J": 0.35293992649945083,
+        "randomized_batch_recorded_expected_J": 0.39087702522431056,
+        "greedy_recorded_J": 0.33618104061263243,
+        "uniform_batch_recorded_expected_J": 0.5362973902310998,
+        "adaptive_recorded_success": 0.9139784946236559,
+        "det_batch_recorded_success": 0.8602150537634409,
+        "randomized_batch_recorded_success_probability": 0.7446063264018518,
+        "greedy_recorded_success": 0.9247311827956989,
+        "uniform_batch_recorded_success_probability": 0.4064516129032258
+      },
+      "gap_quantiles": {
+        "min": -0.16171609795370268,
+        "q25": -0.00025617466057509253,
+        "median": 0.0066543719393776235,
+        "q75": 0.035588536296284,
+        "max": 0.12067308885786121
+      },
+      "positive_gap_median": 0.03416463494255201,
+      "positive_gap_max": 0.12067308885786121,
+      "max_primal_dual_gap": 1.0000450467728683e-10
+    }
+  },
+  "inputs": {
+    "external": {
+      "path": "work\\risk_adaptivity_revision\\external_validation\\replay\\geometry.json",
+      "sha256": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0"
+    },
+    "external_counters": {
+      "path": "work\\risk_adaptivity_revision\\external_heatpump\\hourly\\train_test_hourly_counters.csv",
+      "sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da"
+    }
+  },
+  "source_sha256": "a5cc463e6cd282d0aeacbbf1b2a7befa417023b123336fbb21ee20f5b00a837f",
+  "new_network_calls": 0,
+  "new_forecast_fits": 0,
+  "elapsed_seconds": 24.424783299968112
+}

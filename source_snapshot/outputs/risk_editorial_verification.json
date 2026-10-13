@@ -1,12 +1,12 @@
 {
   "status": "passed",
   "review_date": "2026-10-13",
-  "completed_utc": "2026-10-13T07:16:08.932730+00:00",
+  "completed_utc": "2026-10-13T10:17:36.492905+00:00",
   "scope": "PeerJ structure and source/PDF correspondence; analytic and software reviews are separate. Full clean ZIP replay reported separately.",
-  "manuscript_sha256": "90d01a9893458291d2d22a3bed8cf39938b07497a90680038533dbb0228575ff",
-  "pdf_sha256": "465cca6212e67f5539b4b4ce96112dce97451c85fa2ae601e868ffe8d499fb63",
-  "pdf_pages": 28,
-  "abstract_words": 236,
+  "manuscript_sha256": "f9554269d768ee25de92e077b301e745a536805699ec9df8509483ad8980e6f2",
+  "pdf_sha256": "62f50ab90d455dec539feb9257990da2cf32117defa3bc3f793de43e24361e2f",
+  "pdf_pages": 38,
+  "abstract_words": 232,
   "builtin_main_compile": "success",
   "manuscript_overfull_or_undefined_warnings": 0,
   "visual_review": "outputs/peerj_final_visual_review.txt",
@@ -22,15 +22,22 @@
   "valid_scientific_ledger_unchanged": true,
   "input_verification_reports": {
     "selector": "b3dbb9518b636b8db4db9551cb674b1d9df4f34a35d06c4613250f0ca5b1d2d0",
-    "task_binding": "46fe87595f77f50fad7a8fe364dbf51c6570a46694acf4861a6860bc258b92b1"
+    "task_binding": "46fe87595f77f50fad7a8fe364dbf51c6570a46694acf4861a6860bc258b92b1",
+    "joint_full_independent": "6a2b687a2dbad44d6a56e9eb8c71f4a61a50f336ce40ee081a511468f6d2ffce",
+    "joint_noise_exact": "2450180499b0f4f1c06df97e2af84bbe14ce22dc276c127114d50c68ce206468",
+    "joint_cap_noise_exact": "3e431702d4fc5b52d62ebe432e33854b8d60e7add2f70c54007c26dce87793a7",
+    "joint_precision_exact": "2d1710bffba6af54f14490a994b2be012885f688473fbbcf9ee0ba026a8ec67f",
+    "joint_precision_adaptive_link": "9249755e0da126326cfcb70ce12ba479c1c9509b59c93d1873fc655b7b728bee",
+    "joint_paired_outcomes": "d8d06bb00bd79ccfac83bf26a1afaf6fb67094c6fce109af5215895618347338"
   },
   "historical_empirical_result_changes": false,
   "target": "PeerJ Computer Science",
   "policy_evidence": [
-    "Official PeerJ/Overleaf submission template",
-    "Publisher Computer Science journal factsheet"
+    "User-supplied current Research Article editorial criteria",
+    "Live browser: https://peerj.com/journals/computer-science/policies/",
+    "Live browser: https://peerj.com/journals/computer-science/author-instructions"
   ],
-  "policy_verification_limit": "Direct current policy pages returned HTTP 403; portal-specific requirements and fees not represented as verified.",
+  "policy_verification_limit": "Live preparation, code/data, authorship, AI and copyright policies inspected on 2026-10-13. Author-specific factual attestations and precise historical AI-version identifiers remain unverified; final portal declarations and fees have not been accepted. Supplement upload limits require the separately checked S1/S2 package, not the larger private development archive.",
   "acceptance_probability": "No calibrated individual acceptance probability; internal corrections do not establish an 80% threshold.",
   "submission_status": "not submitted",
   "external_contact": false

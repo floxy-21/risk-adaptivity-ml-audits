@@ -1,0 +1,551 @@
+{
+  "status": "PASS",
+  "scope": "Additional descriptive checks requested in final review; no policy refitting.\n\nSeven days remains the primary temporal block. Fourteen days and deleting one\nsystem are sensitivity analyses of the same fixed panels, not new replications.\n",
+  "inputs": {
+    "outcomes_sha256": "4ea45582fda85a6d0f0affa58533a486d6bcc4bcdf62b4141e4c009231518621",
+    "precision_cases_sha256": "d6dcb674b89bea4ce2539b8e25c7845f2f0e251ecd4fa4e8b1131ff8d78cfee7"
+  },
+  "precision_plan_validation": {
+    "sha256": "3f52c14542a108aca1514ef0edc9a56e44cc7e8066420d0029d664c5de61e841",
+    "matched_rows": 1098
+  },
+  "draws": 2000,
+  "base_seed": 20261013,
+  "primary_days": 7,
+  "sensitivity_days": 14,
+  "interval": "percentile 2.5/97.5%, linear interpolation",
+  "paired_unit": "same calendar days across systems and all three intraday blocks; compatible denominator in each resample",
+  "precision_summary": {
+    "original": {
+      "cases": 819,
+      "policy_counts": {
+        "certified_uniform_pair": 165,
+        "mean_width_fallback_no_positive_precision_guarantee": 492,
+        "deterministic_precision_guarantee": 162
+      },
+      "closed_gap": 468,
+      "open_gap": 351,
+      "closed_half": 165
+    },
+    "external": {
+      "cases": 279,
+      "policy_counts": {
+        "deterministic_precision_guarantee": 128,
+        "mean_width_fallback_no_positive_precision_guarantee": 94,
+        "certified_uniform_pair": 57
+      },
+      "closed_gap": 212,
+      "open_gap": 67,
+      "closed_half": 57
+    }
+  },
+  "full_panel_fixed_greedy": [
+    {
+      "cohort": "original",
+      "regime": "cap_1/2",
+      "omitted_system": null,
+      "baseline": "fixed",
+      "all_rows": 819,
+      "compatible_rows": 780,
+      "incompatible_rows": 39,
+      "both": 610.0,
+      "adaptive_only": 45.0,
+      "baseline_only": 17.0,
+      "neither": 108.0,
+      "adaptive_success": 655.0,
+      "baseline_success": 627.0,
+      "difference_pp": 3.5897435897435894,
+      "primary_7day": [
+        1.4175257731958764,
+        5.591207439360952
+      ],
+      "sensitivity_14day": [
+        1.2984918307498952,
+        5.663821072566313
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        2.7559055118110236,
+        5.128205128205128
+      ]
+    },
+    {
+      "cohort": "original",
+      "regime": "cap_1/2",
+      "omitted_system": null,
+      "baseline": "greedy",
+      "all_rows": 819,
+      "compatible_rows": 780,
+      "incompatible_rows": 39,
+      "both": 582.0,
+      "adaptive_only": 73.0,
+      "baseline_only": 19.0,
+      "neither": 106.0,
+      "adaptive_success": 655.0,
+      "baseline_success": 601.0,
+      "difference_pp": 6.923076923076923,
+      "primary_7day": [
+        4.615384615384615,
+        9.229116324473106
+      ],
+      "sensitivity_14day": [
+        4.492795661762286,
+        9.64497642528654
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        5.31496062992126,
+        9.270216962524655
+      ]
+    },
+    {
+      "cohort": "original",
+      "regime": "cap_1/3",
+      "omitted_system": null,
+      "baseline": "fixed",
+      "all_rows": 819,
+      "compatible_rows": 613,
+      "incompatible_rows": 206,
+      "both": 613.0,
+      "adaptive_only": 0.0,
+      "baseline_only": 0.0,
+      "neither": 0.0,
+      "adaptive_success": 613.0,
+      "baseline_success": 613.0,
+      "difference_pp": 0.0,
+      "primary_7day": [
+        0.0,
+        0.0
+      ],
+      "sensitivity_14day": [
+        0.0,
+        0.0
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "cohort": "original",
+      "regime": "cap_1/3",
+      "omitted_system": null,
+      "baseline": "greedy",
+      "all_rows": 819,
+      "compatible_rows": 613,
+      "incompatible_rows": 206,
+      "both": 611.0,
+      "adaptive_only": 2.0,
+      "baseline_only": 0.0,
+      "neither": 0.0,
+      "adaptive_success": 613.0,
+      "baseline_success": 611.0,
+      "difference_pp": 0.3262642740619902,
+      "primary_7day": [
+        0.0,
+        0.8223684210526315
+      ],
+      "sensitivity_14day": [
+        0.0,
+        0.6745362563237775
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        0.2652519893899204,
+        0.41067761806981523
+      ]
+    },
+    {
+      "cohort": "original",
+      "regime": "exact",
+      "omitted_system": null,
+      "baseline": "fixed",
+      "all_rows": 819,
+      "compatible_rows": 819,
+      "incompatible_rows": 0,
+      "both": 546.0,
+      "adaptive_only": 95.0,
+      "baseline_only": 31.0,
+      "neither": 147.0,
+      "adaptive_success": 641.0,
+      "baseline_success": 577.0,
+      "difference_pp": 7.814407814407814,
+      "primary_7day": [
+        5.86080586080586,
+        9.648962148962132
+      ],
+      "sensitivity_14day": [
+        5.616605616605616,
+        9.645909645909645
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        5.128205128205128,
+        10.073260073260073
+      ]
+    },
+    {
+      "cohort": "original",
+      "regime": "exact",
+      "omitted_system": null,
+      "baseline": "greedy",
+      "all_rows": 819,
+      "compatible_rows": 819,
+      "incompatible_rows": 0,
+      "both": 617.0,
+      "adaptive_only": 24.0,
+      "baseline_only": 6.0,
+      "neither": 172.0,
+      "adaptive_success": 641.0,
+      "baseline_success": 623.0,
+      "difference_pp": 2.197802197802198,
+      "primary_7day": [
+        1.098901098901099,
+        3.2967032967032965
+      ],
+      "sensitivity_14day": [
+        1.465201465201465,
+        2.93040293040293
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        1.6483516483516485,
+        3.1135531135531136
+      ]
+    },
+    {
+      "cohort": "external",
+      "regime": "cap_1/2",
+      "omitted_system": null,
+      "baseline": "fixed",
+      "all_rows": 279,
+      "compatible_rows": 200,
+      "incompatible_rows": 79,
+      "both": 176.0,
+      "adaptive_only": 3.0,
+      "baseline_only": 1.0,
+      "neither": 20.0,
+      "adaptive_success": 179.0,
+      "baseline_success": 177.0,
+      "difference_pp": 1.0,
+      "primary_7day": [
+        0.0,
+        2.0408163265306123
+      ],
+      "sensitivity_14day": [
+        0.0,
+        1.9902985074626853
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        0.0,
+        2.631578947368421
+      ]
+    },
+    {
+      "cohort": "external",
+      "regime": "cap_1/2",
+      "omitted_system": null,
+      "baseline": "greedy",
+      "all_rows": 279,
+      "compatible_rows": 200,
+      "incompatible_rows": 79,
+      "both": 165.0,
+      "adaptive_only": 14.0,
+      "baseline_only": 2.0,
+      "neither": 19.0,
+      "adaptive_success": 179.0,
+      "baseline_success": 167.0,
+      "difference_pp": 6.0,
+      "primary_7day": [
+        4.1450777202072535,
+        7.766990291262136
+      ],
+      "sensitivity_14day": [
+        4.5,
+        7.368939590355195
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        5.521472392638037,
+        7.017543859649122
+      ]
+    },
+    {
+      "cohort": "external",
+      "regime": "cap_1/3",
+      "omitted_system": null,
+      "baseline": "fixed",
+      "all_rows": 279,
+      "compatible_rows": 198,
+      "incompatible_rows": 81,
+      "both": 192.0,
+      "adaptive_only": 0.0,
+      "baseline_only": 0.0,
+      "neither": 6.0,
+      "adaptive_success": 192.0,
+      "baseline_success": 192.0,
+      "difference_pp": 0.0,
+      "primary_7day": [
+        0.0,
+        0.0
+      ],
+      "sensitivity_14day": [
+        0.0,
+        0.0
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "cohort": "external",
+      "regime": "cap_1/3",
+      "omitted_system": null,
+      "baseline": "greedy",
+      "all_rows": 279,
+      "compatible_rows": 198,
+      "incompatible_rows": 81,
+      "both": 192.0,
+      "adaptive_only": 0.0,
+      "baseline_only": 0.0,
+      "neither": 6.0,
+      "adaptive_success": 192.0,
+      "baseline_success": 192.0,
+      "difference_pp": 0.0,
+      "primary_7day": [
+        0.0,
+        0.0
+      ],
+      "sensitivity_14day": [
+        0.0,
+        0.0
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "cohort": "external",
+      "regime": "cap_half_error_1pct",
+      "omitted_system": null,
+      "baseline": "fixed",
+      "all_rows": 279,
+      "compatible_rows": 200,
+      "incompatible_rows": 79,
+      "both": 164.0,
+      "adaptive_only": 5.0,
+      "baseline_only": 2.0,
+      "neither": 29.0,
+      "adaptive_success": 169.0,
+      "baseline_success": 166.0,
+      "difference_pp": 1.5,
+      "primary_7day": [
+        -0.975609756097561,
+        4.0409167820335306
+      ],
+      "sensitivity_14day": [
+        -0.4716981132075472,
+        3.5175879396984926
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        0.0,
+        3.2520325203252036
+      ]
+    },
+    {
+      "cohort": "external",
+      "regime": "cap_half_error_1pct",
+      "omitted_system": null,
+      "baseline": "greedy",
+      "all_rows": 279,
+      "compatible_rows": 200,
+      "incompatible_rows": 79,
+      "both": 165.0,
+      "adaptive_only": 4.0,
+      "baseline_only": 0.0,
+      "neither": 31.0,
+      "adaptive_success": 169.0,
+      "baseline_success": 165.0,
+      "difference_pp": 2.0,
+      "primary_7day": [
+        0.5128205128205128,
+        3.4653465346534653
+      ],
+      "sensitivity_14day": [
+        0.9803921568627451,
+        3.0927835051546393
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        0.8130081300813009,
+        3.508771929824561
+      ]
+    },
+    {
+      "cohort": "external",
+      "regime": "cap_half_error_1pct_capacity_aware",
+      "omitted_system": null,
+      "baseline": "fixed",
+      "all_rows": 279,
+      "compatible_rows": 200,
+      "incompatible_rows": 79,
+      "both": 165.0,
+      "adaptive_only": 4.0,
+      "baseline_only": 1.0,
+      "neither": 30.0,
+      "adaptive_success": 169.0,
+      "baseline_success": 166.0,
+      "difference_pp": 1.5,
+      "primary_7day": [
+        -0.4902564474065488,
+        3.15831244778613
+      ],
+      "sensitivity_14day": [
+        0.4784688995215311,
+        2.6315789473684212
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        0.8130081300813009,
+        2.631578947368421
+      ]
+    },
+    {
+      "cohort": "external",
+      "regime": "cap_half_error_1pct_capacity_aware",
+      "omitted_system": null,
+      "baseline": "greedy",
+      "all_rows": 279,
+      "compatible_rows": 200,
+      "incompatible_rows": 79,
+      "both": 161.0,
+      "adaptive_only": 8.0,
+      "baseline_only": 4.0,
+      "neither": 27.0,
+      "adaptive_success": 169.0,
+      "baseline_success": 165.0,
+      "difference_pp": 2.0,
+      "primary_7day": [
+        -1.0204081632653061,
+        4.854368932038835
+      ],
+      "sensitivity_14day": [
+        0.4878048780487805,
+        3.827751196172249
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        -1.6260162601626018,
+        4.385964912280701
+      ]
+    },
+    {
+      "cohort": "external",
+      "regime": "error_1pct",
+      "omitted_system": null,
+      "baseline": "fixed",
+      "all_rows": 279,
+      "compatible_rows": 279,
+      "incompatible_rows": 0,
+      "both": 213.0,
+      "adaptive_only": 29.0,
+      "baseline_only": 2.0,
+      "neither": 35.0,
+      "adaptive_success": 242.0,
+      "baseline_success": 215.0,
+      "difference_pp": 9.67741935483871,
+      "primary_7day": [
+        6.810035842293907,
+        12.903225806451612
+      ],
+      "sensitivity_14day": [
+        6.451612903225806,
+        12.544802867383513
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        4.838709677419355,
+        13.440860215053762
+      ]
+    },
+    {
+      "cohort": "external",
+      "regime": "error_1pct",
+      "omitted_system": null,
+      "baseline": "greedy",
+      "all_rows": 279,
+      "compatible_rows": 279,
+      "incompatible_rows": 0,
+      "both": 235.0,
+      "adaptive_only": 7.0,
+      "baseline_only": 0.0,
+      "neither": 37.0,
+      "adaptive_success": 242.0,
+      "baseline_success": 235.0,
+      "difference_pp": 2.5089605734767026,
+      "primary_7day": [
+        1.4336917562724014,
+        3.225806451612903
+      ],
+      "sensitivity_14day": [
+        1.4336917562724014,
+        3.225806451612903
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        1.6129032258064515,
+        3.763440860215054
+      ]
+    },
+    {
+      "cohort": "external",
+      "regime": "exact",
+      "omitted_system": null,
+      "baseline": "fixed",
+      "all_rows": 279,
+      "compatible_rows": 279,
+      "incompatible_rows": 0,
+      "both": 219.0,
+      "adaptive_only": 33.0,
+      "baseline_only": 2.0,
+      "neither": 25.0,
+      "adaptive_success": 252.0,
+      "baseline_success": 221.0,
+      "difference_pp": 11.11111111111111,
+      "primary_7day": [
+        8.602150537634408,
+        13.620071684587813
+      ],
+      "sensitivity_14day": [
+        8.960573476702509,
+        13.261648745519713
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        3.225806451612903,
+        16.129032258064516
+      ]
+    },
+    {
+      "cohort": "external",
+      "regime": "exact",
+      "omitted_system": null,
+      "baseline": "greedy",
+      "all_rows": 279,
+      "compatible_rows": 279,
+      "incompatible_rows": 0,
+      "both": 245.0,
+      "adaptive_only": 7.0,
+      "baseline_only": 1.0,
+      "neither": 26.0,
+      "adaptive_success": 252.0,
+      "baseline_success": 246.0,
+      "difference_pp": 2.1505376344086025,
+      "primary_7day": [
+        1.075268817204301,
+        3.225806451612903
+      ],
+      "sensitivity_14day": [
+        1.4247311827956994,
+        2.867383512544803
+      ],
+      "leave_one_system_out_effect_range_pp": [
+        1.0752688172043012,
+        3.763440860215054
+      ]
+    }
+  ],
+  "system_rows": 54,
+  "comparison_rows": 116,
+  "source_sha256": "d75ca99c8d40bfa64dd58ceb84b1eabb87ed886f57578fc4e7b404b5b4633285"
+}

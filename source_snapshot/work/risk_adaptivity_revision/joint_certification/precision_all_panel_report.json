@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "summary": {
+    "external": {
+      "cases": 279,
+      "deterministic_guarantee": 128,
+      "certified_pair": 57,
+      "fallback": 94,
+      "matching_continuum_bounds": 212,
+      "matching_half": 57,
+      "mean_certified_gap": 0.09826762246117085
+    },
+    "original": {
+      "cases": 819,
+      "deterministic_guarantee": 162,
+      "certified_pair": 165,
+      "fallback": 492,
+      "matching_continuum_bounds": 468,
+      "matching_half": 165,
+      "mean_certified_gap": 0.15828245828245827
+    }
+  },
+  "plan_sha256": "3f52c14542a108aca1514ef0edc9a56e44cc7e8066420d0029d664c5de61e841",
+  "elapsed_seconds": 70.17496309999842,
+  "new_fits": 0,
+  "new_network_calls": 0,
+  "fine_answers_loaded": false
+}

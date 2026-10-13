@@ -1,0 +1,201 @@
+{
+  "status": "PASS",
+  "scope": "Expose the original MSE scale of the existing worked shared-query example.\n\nNo policy, precision threshold, forecasts or observations are changed. Values\nrefer to stored API-grid cumulative-kWh differences, not independently verified\nphysical clock-hour energy. Independent endpoint LPs check the six exact ranges.\n",
+  "case": "external/hpm_1/2025-07-05/12",
+  "selection": "Same pre-existing worked exact-half certificate, not a new representative-outcome sample",
+  "loss_denominator": 6,
+  "counter_units": "kWh",
+  "loss_units": "kWh^2",
+  "E_exact": "471/256",
+  "E_kwh": 1.83984375,
+  "initial_counter_kwh_exact": "2900729/256",
+  "final_counter_kwh_exact": "181325/16",
+  "query_boundaries": [
+    2,
+    1
+  ],
+  "query_grid_times_utc": [
+    "2025-07-05T14:00:00Z",
+    "2025-07-05T13:00:00Z"
+  ],
+  "observed_prefix_energy_exact": [
+    "901/512",
+    "11/512"
+  ],
+  "original_forecast_coefficients": "c_h = 2(b_h-a_h)/6; stored binary64 coefficient convention retained",
+  "independent_endpoint_LPs": 24,
+  "maximum_endpoint_LP_discrepancy_kwh2": 3.122502256758253e-17,
+  "maximum_coefficient_binary64_roundoff": 2.7755575615628914e-17,
+  "maximum_direct_MSE_vs_stored_affine_gap_kwh2": 3.574139653184466e-17,
+  "recorded_J": 0.0435244161358811,
+  "all_six_half_success": true,
+  "pairs": [
+    {
+      "model_a": "daily",
+      "model_b": "hist_gradient_boosting",
+      "initial_width_kwh2": 0.30314295471362296,
+      "half_threshold_kwh2": 0.15157147735681148,
+      "terminal_width_kwh2": 0.0019471482316530042,
+      "normalized_terminal_width": 0.006423201335793739,
+      "initial_width_exact": "11184001006700655471/36893488147419103232",
+      "half_threshold_exact": "11184001006700655471/73786976294838206464",
+      "terminal_width_exact": "143674180411516351/73786976294838206464",
+      "initial_interval_exact": [
+        "-926635856547162571/36893488147419103232",
+        "2564341287538373225/9223372036854775808"
+      ],
+      "terminal_interval_exact": [
+        "4597343011369889999/73786976294838206464",
+        "2370508595890703175/36893488147419103232"
+      ],
+      "actual_mse_a_kwh2": 0.4917917251586914,
+      "actual_mse_b_kwh2": 0.42879461379448724,
+      "actual_mse_difference_kwh2": 0.06299711136420413,
+      "recorded_half_success": true
+    },
+    {
+      "model_a": "daily",
+      "model_b": "mlp",
+      "initial_width_kwh2": 0.1945030451963,
+      "half_threshold_kwh2": 0.09725152259815,
+      "terminal_width_kwh2": 0.005335982598103611,
+      "normalized_terminal_width": 0.02743392831057391,
+      "initial_width_exact": "3587947896293307741/18446744073709551616",
+      "half_threshold_exact": "3587947896293307741/36893488147419103232",
+      "terminal_width_exact": "196863010737970165/36893488147419103232",
+      "initial_interval_exact": [
+        "-651745055282813253/18446744073709551616",
+        "367025355126311811/2305843009213693952"
+      ],
+      "terminal_interval_exact": [
+        "984411524602735145/36893488147419103232",
+        "590637267670352655/18446744073709551616"
+      ],
+      "actual_mse_a_kwh2": 0.4917917251586914,
+      "actual_mse_b_kwh2": 0.462644454872322,
+      "actual_mse_difference_kwh2": 0.02914727028636945,
+      "recorded_half_success": true
+    },
+    {
+      "model_a": "daily",
+      "model_b": "ridge",
+      "initial_width_kwh2": 0.17207463597456105,
+      "half_threshold_kwh2": 0.08603731798728052,
+      "terminal_width_kwh2": 0.0006734210848141717,
+      "normalized_terminal_width": 0.0039135406621678285,
+      "initial_width_exact": "50787468342391398429/295147905179352825856",
+      "half_threshold_exact": "50787468342391398429/590295810358705651712",
+      "terminal_width_exact": "1590070579892080623/2361183241434822606848",
+      "initial_interval_exact": [
+        "-7513428500601354397/295147905179352825856",
+        "338078436263984719/2305843009213693952"
+      ],
+      "terminal_interval_exact": [
+        "236829675849478175/590295810358705651712",
+        "2537389283289993323/2361183241434822606848"
+      ],
+      "actual_mse_a_kwh2": 0.4917917251586914,
+      "actual_mse_b_kwh2": 0.49117980011672485,
+      "actual_mse_difference_kwh2": 0.0006119250419665612,
+      "recorded_half_success": true
+    },
+    {
+      "model_a": "hist_gradient_boosting",
+      "model_b": "mlp",
+      "initial_width_kwh2": 0.21391958856515633,
+      "half_threshold_kwh2": 0.10695979428257817,
+      "terminal_width_kwh2": 0.004617359688461266,
+      "normalized_terminal_width": 0.021584557634163996,
+      "initial_width_exact": "4040826780277435349859/18889465931478580854784",
+      "half_threshold_exact": "4040826780277435349859/37778931862957161709568",
+      "terminal_width_exact": "340701009877232959/73786976294838206464",
+      "initial_interval_exact": [
+        "-2245099247683842473827/18889465931478580854784",
+        "1753640168548430543/18446744073709551616"
+      ],
+      "terminal_interval_exact": [
+        "-1347129134847338940583/37778931862957161709568",
+        "-1172690217790195665575/37778931862957161709568"
+      ],
+      "actual_mse_a_kwh2": 0.42879461379448724,
+      "actual_mse_b_kwh2": 0.462644454872322,
+      "actual_mse_difference_kwh2": -0.03384984107783469,
+      "recorded_half_success": true
+    },
+    {
+      "model_a": "ridge",
+      "model_b": "hist_gradient_boosting",
+      "initial_width_kwh2": 0.1310683187390619,
+      "half_threshold_kwh2": 0.06553415936953096,
+      "terminal_width_kwh2": 0.0017656903526760469,
+      "normalized_terminal_width": 0.013471526679084678,
+      "initial_width_exact": "2417783731950864951/18446744073709551616",
+      "half_threshold_exact": "2417783731950864951/36893488147419103232",
+      "terminal_width_exact": "32571238049232995/18446744073709551616",
+      "initial_interval_exact": [
+        "1567838253500915/4611686018427387904",
+        "2424055084964868611/18446744073709551616"
+      ],
+      "terminal_interval_exact": [
+        "2283869650944353641/36893488147419103232",
+        "2349012127042819631/36893488147419103232"
+      ],
+      "actual_mse_a_kwh2": 0.49117980011672485,
+      "actual_mse_b_kwh2": 0.42879461379448724,
+      "actual_mse_difference_kwh2": 0.06238518632223758,
+      "recorded_half_success": true
+    },
+    {
+      "model_a": "ridge",
+      "model_b": "mlp",
+      "initial_width_kwh2": 0.10712519379313781,
+      "half_threshold_kwh2": 0.053562596896568906,
+      "terminal_width_kwh2": 0.004662561513289438,
+      "normalized_terminal_width": 0.0435244161358811,
+      "initial_width_exact": "988055516874276039/9223372036854775808",
+      "half_threshold_exact": "988055516874276039/18446744073709551616",
+      "terminal_width_exact": "86009078963578169/18446744073709551616",
+      "initial_interval_exact": [
+        "-22769471749403541/2305843009213693952",
+        "896977629876661875/9223372036854775808"
+      ],
+      "terminal_interval_exact": [
+        "60600604366383901/2305843009213693952",
+        "570813913894649377/18446744073709551616"
+      ],
+      "actual_mse_a_kwh2": 0.49117980011672485,
+      "actual_mse_b_kwh2": 0.462644454872322,
+      "actual_mse_difference_kwh2": 0.028535345244402887,
+      "recorded_half_success": true
+    }
+  ],
+  "initial_information": "Only exact retained endpoint total and fixed forecasts; no optional internal value used to form W0 or its half-threshold",
+  "interpretation": "Absolute stored-record audit precision; no financial/materiality threshold, device calibration, native-time accuracy, or winner guarantee inferred",
+  "inputs": {
+    "geometry": {
+      "path": "work/risk_adaptivity_revision/external_validation/replay/geometry.json",
+      "sha256": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0"
+    },
+    "plans": {
+      "path": "work/risk_adaptivity_revision/joint_certification/empirical_external_results/empirical_plans.json",
+      "sha256": "9258e3d7508d333c9aaaaf243495d0a459adba8bf075bab1d244ace7f2ae9387"
+    },
+    "ledger": {
+      "path": "work/risk_adaptivity_revision/joint_certification/empirical_external_results/empirical_cases.csv",
+      "sha256": "50ff4890305ca6aff020d91ae7d6b703508fe3c7486e710fd90a92499e24782d"
+    },
+    "forecasts": {
+      "path": "work/risk_adaptivity_revision/external_validation/operational/fresh_fits_20261012/frozen_forecasts.csv",
+      "sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f"
+    },
+    "counters": {
+      "path": "work/risk_adaptivity_revision/external_heatpump/hourly/train_test_hourly_counters.csv",
+      "sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da"
+    },
+    "raw_provider": {
+      "path": "work/risk_adaptivity_revision/external_heatpump/hourly/system_1_test_2025July.json",
+      "sha256": "5ef47a765ae8b86380b16e602814c425710c89a977b1c8600acec893a0580802"
+    }
+  },
+  "source_sha256": "1b92c35d8326a18bc427934b132497c229c9873091859e7a3df48b280ad55a9e"
+}

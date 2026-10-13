@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "scope": "Independent endpoint-LP verification of equal-cap shared-query outputs.\n\nNo segment-width or marginal-convolution code is imported from the producer.\nChecks use fixed-position first/middle/last blocks per available meter.\n",
+  "selected_ids": [
+    "external/hpm_1/2025-07-01/00",
+    "external/hpm_1/2025-07-16/06",
+    "external/hpm_1/2025-07-31/12",
+    "external/hpm_2/2025-07-01/00",
+    "external/hpm_2/2025-07-16/06",
+    "external/hpm_2/2025-07-31/12",
+    "external/hpm_7/2025-07-01/00",
+    "external/hpm_7/2025-07-16/06",
+    "external/hpm_7/2025-07-31/12"
+  ],
+  "selected_blocks": 9,
+  "all_plan_rows": 558,
+  "endpoint_LP_count": 10584,
+  "max_conditional_line_discrepancy": 6.5503158452884236e-15,
+  "max_batch_guarantee_discrepancy": 2.220446049250313e-16,
+  "max_adaptive_guarantee_discrepancy": 5.551115123125783e-15,
+  "tolerance": 1e-08,
+  "floating_point_not_rational_certificate": true,
+  "producer_plan_sha256": "de721cbb25be6b7af4e13991da3d0b2a1b046aced73f88de520f88ed5b95babb",
+  "source_sha256": "6e795c87aaaaca6bf7699a8cfeb1ed4c5d5490cd0d7beed48c7e485874e5d314"
+}

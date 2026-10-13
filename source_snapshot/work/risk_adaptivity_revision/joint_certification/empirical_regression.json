@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "secondary_roundoff_tie_earliest": true,
+  "zero_game_value": 0.0,
+  "zero_game_gap": 0.0,
+  "solver_source_sha256": "a5cc463e6cd282d0aeacbbf1b2a7befa417023b123336fbb21ee20f5b00a837f"
+}

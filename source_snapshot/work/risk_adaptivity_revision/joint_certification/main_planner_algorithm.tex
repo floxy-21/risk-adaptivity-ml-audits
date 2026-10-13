@@ -1,0 +1,70 @@
+\subsection{Planning two shared prefix queries}
+\label{sec:shared-planner-algorithm}
+We plan one pair of readings for all requested contrasts.  The inputs are
+$m$ normalized coefficient rows $c_r\in\mathbb R^n$, each with range one,
+an exact total $E>0$, and all internal prefix queries
+$P_kx=\sum_{h\leq k}x_h$, where $x=y/E\geq0$ and $\sum_hx_h=1$.
+We assume $n\geq3$ and a budget of two distinct queries.  Define the range
+over a consecutive segment by
+$\Delta_r(a{:}b)=\max_{a\leq h\leq b}c_{rh}-\min_{a\leq h\leq b}c_{rh}$.
+
+Suppose the first query is $k$ and its answer is $t$.  For a proposed
+second query $j\ne k$, the conditional worst width of contrast $r$ is
+$\alpha_{kjr}t+\beta_{kjr}(1-t)$, where
+\[
+ (\alpha_{kjr},\beta_{kjr})=
+ \begin{cases}
+ (\max\{\Delta_r(1{:}j),\Delta_r(j+1{:}k)\},
+             \Delta_r(k+1{:}n)),&j<k,\\
+ (\Delta_r(1{:}k),
+       \max\{\Delta_r(k+1{:}j),\Delta_r(j+1{:}n)\}),&j>k.
+ \end{cases}
+\]
+Within each side of the first boundary, a worst-case allocation places
+its mass in the segment with the larger coefficient range.  Maximizing
+over records and over the finite contrast family commutes, so
+\[
+ g_{kj}(t)=\max_r\{\alpha_{kjr}t+\beta_{kjr}(1-t)\},\qquad
+ A=\min_k\max_{t\in[0,1]}\min_{j\ne k}g_{kj}(t)
+\]
+is the optimal deterministic two-query worst-width guarantee.
+
+\begin{center}
+\fbox{\begin{minipage}{0.94\linewidth}
+\small
+\textbf{Algorithm: two shared queries, exact-total simplex}
+\begin{enumerate}
+\item For each first boundary $k$, form every affine line
+$\ell_{kjr}(t)=(\alpha_{kjr}-\beta_{kjr})t+\beta_{kjr}$.
+\item Form $B_k$ from $0$, $1$, and every intersection in $[0,1]$ of two
+nonparallel lines, including lines belonging to different second queries.
+\item Compute $A_k=\max_{t\in B_k}\min_{j\ne k}\max_r\ell_{kjr}(t)$.
+Choose the smallest boundary index attaining $\min_k A_k$.
+\item Retrieve that boundary's counter value and calculate its normalized
+prefix mass $t$ using the retained endpoint total.
+\item Choose the smallest $j\ne k$ attaining $\min_j g_{kj}(t)$,
+retrieve it, and calculate all terminal segment-width certificates using
+the two shared answers.
+\end{enumerate}
+\end{minipage}}
+\end{center}
+
+Between consecutive points of $B_k$, the ordering of all underlying lines
+is fixed.  The maximum within each group and then the minimum over groups
+therefore select one affine line on that interval.  Its maximum is at an
+endpoint.  This proves that the finite calculation covers every possible
+first answer; it is not a grid approximation.  Equal or coincident lines
+are handled by the stated index rule.
+
+The mathematical algorithm uses exact comparisons.  The reported
+six-interval implementation uses the same construction in floating-point
+arithmetic: it treats values within $10^{-12}$ of a minimum as tied and
+chooses the smallest index, both offline and online.  Its intersection
+routine skips slope differences of magnitude at most $10^{-14}$; a
+257-point grid is an additional numerical check.  Exact rational branch
+and adversarial certificates support the reported exact assurance claims.
+The algorithm above addresses deterministic worst width on the uncapped,
+exact-total simplex.  Bounded-error and capacity analyses use the separate
+conditional calculations described in their sensitivity protocols;
+randomized mean-width and precision-success comparisons retain their own
+optimization objectives.

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "cohort": "external",
+  "blocks": 279,
+  "exact_pair_decision_checks": 16740,
+  "exact_batch_width_checks": 2790,
+  "maximum_replay_difference": 0.0,
+  "maximum_normalized_source_rounding": 1.2789769243681795e-15,
+  "scope": "All ten recorded batch widths, half-width outcomes, and policy mixture summaries recomputed independently. MSE winner/ranking signs reconstructed directly from frozen forecasts with exact rational arithmetic. Plan optimality and the universal theorem require separate proofs/checks.",
+  "source_sha256": "8286a0a920ea914f0751301d62bae310a80eb1d316074057c61aee697fe28c1c",
+  "replay_cases_sha256": "2b6bb0a32462cc756a264b69a1ee3ab011342c3c3ee428a38a0cfd028bcdd6e7",
+  "precision_plans_sha256": "26b1f10f11680883ea51bafba00e3907c7240a48227190c9da119abf56397d04",
+  "original_forecasts_sha256": null,
+  "elapsed_seconds": 6.598561799968593
+}

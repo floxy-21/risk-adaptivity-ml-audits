@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "checks": {
+    "cases": 558,
+    "source_coefficient_rows": 1674,
+    "branch_dual_certificates": 6876,
+    "batch_lower_witnesses": 5580,
+    "best_batch_dual_certificates": 3348,
+    "fixed_adverse_records": 480,
+    "precision_separations": 48,
+    "strengthened_adverse_mixtures": 48,
+    "cross_batch_failures": 2706
+  },
+  "scope": "Hashed frozen source coefficient rows and exact normalization; all branch dual residual bounds; coverage of every feasible first answer with first-matching closed-interval policy; feasible deterministic-batch lower witnesses and best-batch dual upper certificates proving every reported half-width guarantee status; fixed full adverse records and randomized-batch precision upper bounds, including strengthened mixtures when present. Numerical LP optimality is not assumed for the verified upper/lower certificates.",
+  "inputs_sha256": {
+    "frozen_policies.json": "ea02645df33566f2c77df317b15b77dc5c64735f9b7c2766f42c4706597bc0d2",
+    "cases.json": "1ab0be8549f3f35939467c8e7898a08aa6e7ab3a9a78f23efb9ad1a82ee20eb4",
+    "certificates.json": "0f4d2398ab3a2fd85865b282e976384944e2f1e56662739e94248c313dd2bec2",
+    "strengthened_batch_bounds.json": "dee29e5d549d395eeba0c268b69a46e24c04a6cdacdaee3af92ba7c24af8d5df",
+    "batch_upper_certificates.json": "4bdf79856dfbee3a194bcfaae2b7b2fe4bbedc516239a34ec25ba423a16686f1"
+  },
+  "checker_sha256": "1dfa6a262a4369a99c0522d99a0b1a207b74fc8357b12132ab88ff06d0a92c9e",
+  "elapsed_seconds": 7.67818529997021
+}

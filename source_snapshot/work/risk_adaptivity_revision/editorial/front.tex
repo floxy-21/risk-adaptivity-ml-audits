@@ -5,32 +5,34 @@ Corresponding author: \href{mailto:kapoorjishan19@gmail.com}{kapoorjishan19@gmai
 \begin{document}
 \maketitle
 \begin{abstract}
-\textbf{Background.} Auditing a machine-learning model can require retrieving
-missing verification targets. The auditor must choose between a full export,
-a fixed batch of measurements and queries that depend on earlier answers.
-These choices can have different guarantees even with the same reading budget.
+\textbf{Background.} When verification records are incomplete, an auditor
+needs to know whether further readings will make a model comparison precise
+enough. We ask when choosing the next reading after seeing an earlier answer
+improves that guarantee under a fixed budget.
 
-\textbf{Methods.} We study the sharp interval containing a model-loss contrast
-over all records consistent with the available information. The contrast is
-affine, the uncertainty set compact and convex, and the query dictionary finite
-and linear. We classify terminal-width penalties and give exact two-query
-algorithms with independently checkable certificates.
+\textbf{Methods.} We bound model-loss differences over all records compatible
+with the available measurements. We classify scalar width penalties and
+derive shared-query policies with matching lower bounds and executable
+certificates.
 
-\textbf{Results.} Randomized batch and adaptive minimax risks agree for every
-such problem if and only if the nondecreasing penalty is concave. Constructed
-families have identical optimal expected widths but sharply different precision
-guarantees. In 290 of 4,914 frozen forecast comparisons, two adaptive counter
-readings guarantee halving the initial width, whereas optimal randomized-batch
-worst-case success is 50\%. An external source reproduces this gap in 29 of
-1,674 comparisons. Overall recorded gains over the best deterministic
-worst-width batch are 0.407 and 0.119 percentage points. Under illustrative
-1\% internal-reading errors with exact endpoints, all 29 external cases remain
-certifiable using two readings in 22 cases and three in seven. Capacity bounds
-often remove feedback necessity, and measured public-API retrieval favors bulk.
+\textbf{Results.} A shared-query construction has optimal adaptive mean
+joint width $1/2$, versus $2/3$ for randomized batching, with matching
+lower bounds. For scalar width, the two minimax risks agree universally
+exactly for nondecreasing concave penalties. On 165 of 819 original blocks and 57 of 279 external
+blocks, two shared adaptive readings guarantee joint half-width precision,
+whereas optimal randomized-batch worst-case success is exactly 50\%.
+On these subsets, recorded success is 100\% versus 65.45\% and 64.91\%
+for certified optimal batch mixtures. Across the complete panels,
+adaptive gains over fixed worst-width batches are 7.81 and 11.11 percentage
+points; gains over greedy adaptation are 2.20 and 2.15 points. Under
+illustrative 1\% internal errors with exact endpoints, 45 external blocks
+retain an adaptive guarantee that every randomized batch fails to match.
+Capacity information reduces this advantage, and measured public-API retrieval
+favors bulk.
 
-\textbf{Conclusions.} The method identifies which acquisition protocol meets
-a declared assurance requirement. An executable selector chooses among supplied certified protocols using
-declared measurement assumptions and resource limits.
+\textbf{Conclusions.} These guarantees depend on the supplied bounds and
+access rules. The shared-budget evidence is retrospective; physical meter
+accuracy and improved downstream model choice are not established.
 \end{abstract}
 \noindent\textbf{Keywords:} artificial intelligence; machine learning;
 adaptive information; minimax risk; optimal recovery; robust optimization.
@@ -41,10 +43,12 @@ comparison. The auditor can retrieve the full record, choose a batch of
 readings in advance, or choose later readings after seeing earlier answers.
 We call the last option adaptive querying. A sharp interval is the smallest
 interval containing the loss difference for every record compatible with
-the available information. This paper asks when feedback improves the
-guarantee that this interval will be sufficiently narrow. A narrow interval
-can still contain zero, so precision and identifying the better model are
-separate goals.
+the available information. We ask when feedback improves the
+guarantee that this interval will be sufficiently narrow. Width limits how
+much the reported loss difference can vary across compatible records.
+The application requires retrieval to halve that range: a declared uncertainty
+budget for reporting a comparison, not a validated proxy for choosing a winner.
+A narrow interval can still contain zero.
 
 We study affine scalar contrasts on nonempty compact convex uncertainty
 sets, with queries selected from a fixed finite dictionary of linear
@@ -57,43 +61,47 @@ assumed for the missing truth. Fixed bounded measurement errors can be
 included by enlarging the hidden record when the resulting uncertainty set
 is compact and convex.
 
-The computer-science question is how an acquisition algorithm should use
-feedback when its output must be valid for every compatible record. We ask
-which risk objectives permit a feedback advantage, how to compute an
-instance-specific guarantee, and which permitted retrieval protocol should
-implement it. The fitted forecasting models supply fixed prediction vectors;
-the proposed algorithm governs their verification data, rather than learning
-a new predictor.
+The practical decision is which retrieval protocol can meet the auditor's
+required precision. We use fixed model predictions and choose which
+verification readings to retrieve. A certificate checks whether the resulting
+comparison meets the requirement for every compatible record. This differs
+from improving the predictor itself.
 
-The contribution is a classification of when feedback can change minimax
-certificate risk, sharp realizations using admissible information queries,
-and an exact two-query decision rule with checkable precision guarantees.
-Concavity exactly characterizes the nondecreasing width penalties for which
-adaptation never improves randomized minimax risk. A coordinate-query
-construction proves the converse, and a family separates equal mean-width
-optima from success probabilities $1/K$ and one. The classification uses
-established minimax reasoning and Jensen's inequality. A dimension-dependent
-precision consequence adapts established sparse-policy bounds
-\citep{kurtz2026}; we do not claim a new general sparsification theorem.
+The central result is a shared-query separation with explicit policies and
+matching lower bounds (Section~\ref{sec:joint-separations}). A six-interval
+construction has optimal mean joint width $1/2$ for adaptive policies and
+$2/3$ for randomized batches. A worked meter example then certifies a
+different objective: feedback guarantees precision that no randomized
+fixed batch can guarantee. Both arguments have executable proof certificates.
+These results build on the scalar classification: concavity exactly
+characterizes the nondecreasing width penalties for which adaptation never
+improves randomized minimax risk. A coordinate-query construction proves
+the converse. The classification credits established minimax reasoning and
+Jensen's inequality; a dimension-dependent precision consequence adapts
+established sparse-policy bounds \citep{kurtz2026}.
 
-Cumulative meter records test whether this distinction affects actual
-forecast comparisons. Before optional answers are revealed, the two-query
-rule identifies cases where a fixed batch suffices, feedback changes
-feasibility, or two queries do not provide a deterministic guarantee.
-The original and external studies contain 290 of 4,914 and 29 of 1,674 cases,
-respectively, with an exact adaptive-versus-batch precision-success gap of
-one versus one half. These cases span three meters and six model pairs in
-each source. The large worst-case assurance gap is distinct from the small
-overall recorded gains of 0.407 and 0.119 percentage points.
+Cumulative meter records let us ask a concrete question: can the same
+two readings make all six comparisons precise at once? On all 819 original
+and 279 external blocks, the shared adaptive policy improves recorded joint
+precision success by 7.81 and 11.11 percentage points over the best fixed
+worst-width batch. The gains over a strong greedy adaptive policy are 2.20
+and 2.15 points. This is a retrospective extension using the frozen data,
+not an additional independent sample. Bounded-error certificates and capacity
+controls test when the shared-query advantage persists.
+An objective-matched calculation identifies 165 original and 57 external
+blocks where adaptive success is guaranteed and the full-continuum
+randomized-batch precision optimum is exactly $1/2$. On those same blocks,
+the recorded batch success is 65.45\% and 64.91\%, versus 100\% for adaptive
+querying. The subset criterion uses the forecast geometry, not these recorded
+outcomes; the complete panels and their stronger empirical comparators remain
+in the evaluation.
 
-The acquisition interface determines which guarantee is useful. Under the
-declared 1\% internal-reading error allowance and exact endpoints, all 29
-selected external cases remain certifiable: 22 use two readings and seven
-use three. Added capacity information can remove the need for feedback.
-On the measured public API, bulk retrieval is preferable. Our implementation
-therefore chooses among supplied certificates using the permitted
-measurements, reading and round limits, and cost priority. It reports when
-those certificates cannot meet the declared requirements.
+The retrieval service determines which choices are useful. We test bounded
+reading errors and hourly capacity information, which can respectively
+increase the required budget or remove the need for feedback. Bulk retrieval
+is preferable on the measured public API. Our implementation therefore checks
+the permitted measurements and resource limits before choosing among supplied
+bulk, fixed and adaptive certificates.
 
 The paper develops the classification and sharp examples, then computable
 two-query guarantees and their cumulative-meter specialization. The
@@ -164,7 +172,11 @@ Our application uses constrained continuous targets, while the central
 classification concerns the penalty of terminal sharp width. These precise
 distinctions, rather than certification or shared comparisons generally,
 define the contribution relative to model-choice and information-discovery
-frameworks.
+frameworks. The shared-query objective is the established weighted
+$\ell_\infty$ local diameter of a vector target, not a new uncertainty measure.
+Our additional result is its exact two-prefix separation and computable
+guarantees for joint forecast comparisons. Neither shared observations nor
+adaptive vector recovery alone is claimed as new.
 
 \section{Model Comparisons and Sharp Information}
 Let $a,b\in\mathbb R^N$ be two fixed prediction vectors for the same

@@ -1,0 +1,64 @@
+SHARED-BUDGET VALIDATION PLAN -- 13 October 2026
+
+Status: a new analysis of previously used data, not an untouched replication
+or preregistered study. This file fixes the sensitivity reporting scope before
+its cap/error results are incorporated into the manuscript. The earlier
+uncapped/noiseless feasibility results were already inspected.
+
+Question: Can one two-reading acquisition policy narrow all six comparisons
+from four frozen forecasters on the same six-hour block?
+
+Keep every eligible original block (819) and external block (279), with all
+six positive-initial-width contrasts. Do not choose pairs or blocks based on
+the new outcome. Positive initial widths and the fixed denominator are
+checked. Normalize each contrast by its original uncapped, exact-total
+initial width. The primary precision requirement is max_r W_r/W_r0 <= 1/2.
+Do not redefine this denominator after adding a cap or error allowance.
+
+Every selective policy receives two distinct internal cumulative readings
+total, reused across every comparison. A batch receives them in one round;
+an adaptive policy has two rounds. Bulk supplies all five optional readings
+and is a separate service alternative when allowed. Counting readings is
+not counting HTTP requests or money. The prior measured bulk advantage stays.
+
+Uncapped exact calculations: deterministic joint worst-width batch, optimal
+randomized batch for mean joint width, uniform batch, greedy adaptive, exact
+deterministic adaptive two-query rule. Minimax mean risk is E[max_r width],
+not max_r E[width]. The convex simplex vertex argument applies to this mean
+objective, not to a precision-failure indicator. Compare deterministic
+adaptive risk with the randomized-batch lower certificate to identify
+instances with a provable numerical separation. Do not label deterministic
+adaptive solutions globally optimal among randomized adaptive policies.
+
+Selection uses initial coefficient geometry only. Save all plans before
+opening fine-resolution responses in each run. Resolve primary and secondary
+numeric ties within 1e-12, then use the earliest index. Randomized LP optimal
+face refinement uses uniform vertex mean, independent of recorded answers.
+An oracle over that face may be reported only as an explicitly retrospective
+tie diagnostic, never as a deployable baseline or a new selection rule.
+
+Sensitivity: test hourly upper bounds E/2 and E/3 at the unchanged threshold.
+Record any observed trace violating the assumed cap as incompatible, rather
+than quietly removing it. Recompute sharp capped intervals and validate
+new planning formulas by independently assembled endpoint LPs. Do not reuse
+the uncapped vertex-only exactness assertion for capped joint mean risk.
+
+Stored-reading sensitivity: exact endpoints, one fixed latent internal error
+vector with each error bounded by 0.01 E. Validate the unchanged frozen
+two-query policies over every possible permitted answer, using branchwise
+two-completion LPs. Compare with the best deterministic batch under the same
+error model. The external 279-block panel is the primary error-validation
+panel; any added original-panel run must be separately identified. A fixed
+policy's valid upper certificate is not an optimal noisy-adaptive theorem.
+Nominal-response replay uses the actual stored readings and enlarged
+compatible fibers; it is not a device calibration or a noise simulation.
+
+Report all favorable and unfavorable outcomes, per source and meter, mean
+terminal joint width, recorded precision, guarantee coverage, and numerical
+residuals. Preserve capacity/error qualifications and small greedy gains.
+No target effect size or acceptance probability is a pass/fail criterion.
+
+Reproducibility: original BLEM raw traces and counter-dependent geometry
+retain the established raw-regeneration route and are not redistributed.
+Public external caches can support offline replay. Mathematical constructed
+witnesses and derived aggregate result ledgers are separate from raw data.

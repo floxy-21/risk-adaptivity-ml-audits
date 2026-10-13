@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Model contrast & Initial $W_{r,0}$ & Target $W_{r,0}/2$ & Terminal $W_r$ & $W_r/W_{r,0}$\\
+\midrule
+Daily--Boosting & 0.303143 & 0.151571 & 0.001947 & 0.0064\\
+Daily--MLP & 0.194503 & 0.097252 & 0.005336 & 0.0274\\
+Daily--Ridge & 0.172075 & 0.086037 & 0.000673 & 0.0039\\
+Boosting--MLP & 0.213920 & 0.106960 & 0.004617 & 0.0216\\
+Ridge--Boosting & 0.131068 & 0.065534 & 0.001766 & 0.0135\\
+Ridge--MLP & 0.107125 & 0.053563 & 0.004663 & 0.0435\\
+\bottomrule
+\end{tabular}
+\caption{Original loss scale for the existing HPM~1 worked example on 5 July 2025, 12:00--18:00 UTC. The first three numeric columns have units $\mathrm{kWh}^2$: they are widths and width targets for identification intervals of six-target MSE differences on stored API-grid increments. The retained endpoint difference is $E=1.83984375$ kWh. The unchanged adaptive policy retrieves the 14:00 register and then the 13:00 register. Normalization uses the initial width of each contrast, not a common numerical loss scale.}
+\label{tab:absolute_joint_widths}
+\end{table}

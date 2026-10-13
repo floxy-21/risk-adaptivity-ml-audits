@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "all_blocks_checked": 279,
+  "all_positive_width_pairs": 1674,
+  "fixed_position_blocks_for_lp_crosscheck": 9,
+  "conditional_endpoint_lps": 2160,
+  "recorded_endpoint_lps": 216,
+  "max_joint_vertex_error": 0.0,
+  "max_primal_dual_gap": 1.0000450467728683e-10,
+  "max_conditional_line_error": 2.220446049250313e-16,
+  "max_recorded_width_error": 1.1102230246251565e-16,
+  "tolerance": 1e-08,
+  "selected_block_ids": [
+    "external/hpm_1/2025-07-01/00",
+    "external/hpm_1/2025-07-16/06",
+    "external/hpm_1/2025-07-31/12",
+    "external/hpm_2/2025-07-01/00",
+    "external/hpm_2/2025-07-16/06",
+    "external/hpm_2/2025-07-31/12",
+    "external/hpm_7/2025-07-01/00",
+    "external/hpm_7/2025-07-16/06",
+    "external/hpm_7/2025-07-31/12"
+  ],
+  "scope": "Independent numerical endpoint-LP and finite-game checks; not exact rational certification or exhaustive verification of empirical adaptive policies",
+  "source_sha256": "5b07c51bc28a6c0174304b15eb8bae9f9737692fc07c5237dd74760b7365004e",
+  "plan_sha256": "9258e3d7508d333c9aaaaf243495d0a459adba8bf075bab1d244ace7f2ae9387"
+}

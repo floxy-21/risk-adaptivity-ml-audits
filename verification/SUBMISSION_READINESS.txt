@@ -1,0 +1,14 @@
+CURRENT SCIENTIFIC PREPARATION -- 13 October 2026
+Target: PeerJ Computer Science, Research Article.
+Internal review: no unresolved blocking scientific flaw identified after corrections.
+Proof and prior-art review are analytic; reproduction has its separately stated finite scope.
+Current source SHA256: f9554269d768ee25de92e077b301e745a536805699ec9df8509483ad8980e6f2
+Current PDF: 38 pages.
+Submission files: revised_manuscript.tex; revised_manuscript.pdf; Supplemental_Data_S1.zip; Supplemental_Data_S2.zip; peerj_cover_letter.txt. The larger research_supplement.zip preserves development history separately.
+Fresh complete current replay: PASS, 69 steps, 1014 manifested members across the two publisher ZIP files.
+Default replay includes task-bound acquisition checks and manuscript reconstruction; no new forecast fitting, source downloading or HTTP measurement.
+The earlier 29-case fallback result is two readings for 22 cases and three for 7 at the declared 1% internal error with exact endpoints. The current shared-query extension is reported separately.
+Live policies and preparation instructions were inspected through the browser. Final author attestations, unavailable historical exact AI-version identifiers, portal terms and fees remain separate from scientific readiness; see PEERJ_AUTHOR_DECLARATIONS.txt.
+No calibrated individual acceptance probability or greater-than80% threshold is established.
+No paper submitted and no external person contacted.
+Detailed response: PEERJ_REVIEW_AND_RESPONSE_20261013.txt. Current hashes and verification: risk_delivery_verification.json.

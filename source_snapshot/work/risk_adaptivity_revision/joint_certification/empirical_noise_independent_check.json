@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "scope": "Independent two-endpoint LP check of nominal noisy shared-query replay.",
+  "all_rows_checked_for_cap_and_dispatch": 558,
+  "fixed_position_block_ids": [
+    "external/hpm_1/2025-07-01/00",
+    "external/hpm_1/2025-07-16/06",
+    "external/hpm_1/2025-07-31/12",
+    "external/hpm_2/2025-07-01/00",
+    "external/hpm_2/2025-07-16/06",
+    "external/hpm_2/2025-07-31/12",
+    "external/hpm_7/2025-07-01/00",
+    "external/hpm_7/2025-07-16/06",
+    "external/hpm_7/2025-07-31/12"
+  ],
+  "compatible_selected_scenario_rows": 15,
+  "independent_two_endpoint_LPs": 294,
+  "max_joint_width_discrepancy": 1.1102230246251565e-16,
+  "tolerance": 1e-08,
+  "source_sha256": "ed68482a63652c842bbc4e45c154ede2d8f259e2f0e071152e027f60a43d9e0c",
+  "replay_rows_sha256": "85b12d67aa2472ac4eed97c59a4232d4a756282d3d45af42e419f7f5b3ab03ed"
+}

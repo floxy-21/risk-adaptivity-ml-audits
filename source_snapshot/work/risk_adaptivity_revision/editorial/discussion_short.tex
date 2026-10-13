@@ -1,13 +1,11 @@
 \section{Discussion}\subsection{What the method changes in an audit}
-The practical output is a justified acquisition choice. The auditor first
-states the contrast to compare, the precision required, the information
-already available, and the retrieval options. A sufficient initial interval
+The auditor first states the contrast, required precision, available
+information and retrieval options. A sufficient initial interval
 needs no query. Otherwise, a bulk response or fixed batch can avoid feedback;
 adaptive retrieval is useful when it meets the required guarantee with fewer
-permitted readings. This ordering prevents a sophisticated selective policy
-from being used where a simpler service already supplies adequate information.
+permitted readings.
 
-The public API is a concrete example. Its full-range response is admissible,
+The public API's full-range response is admissible,
 uses one request, and is faster on the measured three-task workload. The
 selector therefore recommends bulk. Under the separate restricted-reading
 contract, the same assurance analysis instead justifies 22 two-reading and
@@ -31,35 +29,52 @@ Computational guarantees have narrower scopes. The general polyhedral
 formulations handle a declared batch family and exact deterministic
 two-query planning. The counter rule exploits cumulative sums and a known
 nonnegative total. The compact coordinate solver uses disjoint exact totals
-and unit costs. These efficient specializations do not supply an efficient
+and unit costs. These specializations do not supply an efficient
 arbitrary-budget precision optimizer for every convex set.
 
 \paragraph{What the application establishes.}
-Two public sources exhibit the same exact feedback-dependent assurance gap.
-Its prevalence is 5.90\% and 1.73\%, and overall recorded gains over the best
-fixed deterministic worst-width batch are only 0.407 and 0.119 percentage
-points. Greedy adaptation succeeds on all 29 external separation cases.
-Thus the main benefit is identifying when a guarantee needs feedback, not
-a large observed improvement over every adaptive heuristic. Three systems
-per source, repeated model pairs and six-hour blocks do not establish
-population prevalence.
+With two readings shared across six comparisons, feedback guarantees the
+required precision on 165 original and 57 external blocks where every
+randomized fixed batch has worst-case success at most one half. Matching
+batch constructions attain that bound. This is a change in the assurance
+available at the same budget. The worked example also reports the six
+interval widths in original loss units (Table~\ref{tab:absolute_joint_widths}).
+Across the complete panels, recorded gains over the best fixed worst-width
+batch are 7.81 and 11.11 percentage points, with smaller gains of 2.20 and
+2.15 points over greedy adaptation. We do not infer improved forecasting
+accuracy or operating savings from these precision results.
 
-Illustrative capacity constraints often make feedback unnecessary, while
-measurement errors can increase the sufficient reading budget. The
-sensitivity uses exact endpoints and declared internal errors; deployment
-requires defensible error and physical bounds. The half-initial-width target
-is a declared precision requirement, not a calibrated financial threshold.
-A narrow interval can still contain zero. Model ordering, shared retrievals
-across comparisons, and requests until a decision are separate objectives.
+The earlier, separate-pair analysis has smaller effects: the exact
+feedback-dependent gap occurs in 5.90\% and 1.73\% of cases, while overall
+recorded gains are 0.407 and 0.119 percentage points. Greedy succeeds on all
+29 external separation cases. Both analyses use three systems per source;
+the shared analysis reuses these data. Repeated days and model pairs do not
+establish population prevalence.
+
+The capacity controls show that feedback's larger gains need not survive
+additional hourly information, while internal-reading errors can increase
+the sufficient budget. These are alternative information models, not
+deployment-calibrated bounds (Table~\ref{tab:measurement-assumptions}).
+The half-width target limits the remaining range of each loss contrast;
+we have not validated it as a threshold for financial action or model selection.
+A secondary shared-query check
+certifies a best model on 123 original and 207 external blocks, versus
+122 and 201 for fixed batches and 118 and 208 for greedy adaptation.
+On the external panel, greedy certifies one more best model despite its
+lower joint-precision success. The width objective therefore does not
+uniformly improve model choice.
+Requests until a decision are another objective; neither theorem optimizes it.
 
 \section{Conclusions}
 The risk objective determines whether feedback can improve the worst-case
 guarantee for a model-comparison interval. Concavity gives a complete
 no-improvement classification; nonconcave penalties admit sharp query-based
-separations. An exact two-query rule and checkable certificates turn that
+separations. Simultaneous comparisons have a different boundary: the largest
+normalized width can benefit from feedback even under a mean-risk objective.
+An exact two-query rule and checkable certificates turn that
 distinction into an acquisition decision. The reference implementation chooses among supplied bulk, fixed and adaptive
 certificates using declared access and resource limits. New comparisons require
 new certificates; a catalogue exclusion alone is not an impossibility proof.
 The public-data results show both when feedback changes assurance and when
-bulk or fixed retrieval is preferable. The practical contribution is this
-auditable choice, supported by explicit assumptions and executable evidence.
+bulk or fixed retrieval is preferable. These choices remain conditional on
+the declared uncertainty set and access rules.

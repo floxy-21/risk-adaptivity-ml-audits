@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scope": "Producer rerun refreshed report timing metadata; producer code, plans and scientific rows are byte-identical to the completed full independent audit. All refreshed cohort/meter table means, counts, quantiles and gap summaries rechecked. No full endpoint LP rerun was needed.",
+  "previous_report_sha256": "18f919c839d3ff523a5641a20957fd3e5b0ddcd60e93d6e77acd8699cfa38931",
+  "current_report_sha256": "eb69833a53c1bc110eca28ca05492f8f4811ab2231fabb0af3fc9de6780e5ff2",
+  "producer_sha256": "37f280f4e6e6b1bc0320982ebf4383e4b5b991ae2bd748df80d0c6ba52911ec0",
+  "plan_sha256": "3b6c1dcaf309048cde9ec46691d88b883aa67453d2bf0d73ee98c70f9cdb0a15",
+  "cases_sha256": "b46ee0fbe202ad11a7e904279317f693ee77c56eff74084345f7897d9802d9c8",
+  "max_summary_difference": 0.0,
+  "source_sha256": "02d3be10370c69aa1253ba0f00fea8b8c5aa63644208b415d3720ab8a8b3cdda"
+}

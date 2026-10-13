@@ -1,0 +1,66 @@
+\subsection{An objective-matched randomized batch challenger}
+\label{sec:joint-precision-challenger}
+The following calculation addresses precision success, not expected width.
+It uses the uncapped exact-total simplex and the original threshold $1/2$;
+the bounded-error calculations above define a different information model.
+Write
+\[
+ J_Q(x)=\max_{r=1,\ldots,6}v_{Qr}^{\top}x,
+ \qquad x\geq0,\quad\boldsymbol1^\top x=1,
+\]
+where $v_{Qr}$ contains the normalized coefficient range within each segment
+created by batch $Q$.  These ten batches use the same two prefix queries as
+the adaptive policy.  A deterministic batch guarantees precision exactly
+when every entry of every $v_{Qr}$ is at most $1/2$.
+
+\paragraph{Full-simplex pair-cover certificate.}
+For two batches $Q,R$, suppose that for every contrast pair $(r,s)$ a
+number $\lambda_{rs}\in[0,1]$ satisfies
+\[
+ \lambda_{rs}v_{Qr,i}+(1-\lambda_{rs})v_{Rs,i}
+ \leq\tfrac12\qquad(i=1,\ldots,6).
+\]
+Then $J_Q(x)$ and $J_R(x)$ cannot both exceed $1/2$.  Otherwise some $r,s$
+would have both linear values strictly above $1/2$, and their indicated
+convex combination would be above $1/2$.  Summing the displayed coordinate
+inequalities with weights $x_i$ gives the opposite conclusion.  Consequently,
+the equal mixture of $Q,R$ succeeds with probability at least $1/2$ on
+\emph{every} feasible record.  This includes threshold equality as success.
+Each multiplier is obtained exactly by intersecting six rational interval
+constraints on $\lambda$; no discretization of records is used.
+
+\paragraph{Full-domain upper bounds from finitely many records.}
+We use the six simplex vertices, their 15 pairwise midpoints, and the
+uniform record.  Define $A_{zQ}=\boldsymbol1\{J_Q(z)\leq1/2\}$.
+For any rational probability distribution $\mu$ on these 22 feasible
+records, let $U=\max_Q\sum_z\mu_z A_{zQ}$.  Every randomized batch policy
+has some feasible record with success probability at most $U$: its
+average success over $\mu$ is at most $U$, so its minimum cannot exceed
+that average.  This is the usual finite-game weak-duality argument, not
+a claim that these records exhaust the continuum.  The numerical game
+solver supplies candidate weights; rational normalization and direct
+evaluation of all ten expectations supply the actual checked upper bound.
+If the pair-cover guarantee and this upper bound both equal $1/2$, the
+full-continuum randomized-batch optimum is therefore exactly $1/2$.
+Elsewhere the interval between the lower and upper bound is retained.
+
+\paragraph{Frozen comparison policy.}
+Before replaying answers, we first choose a precision-guaranteeing
+deterministic batch if one exists.  Otherwise we choose a certified equal
+pair if one exists.  Ties minimize worst expected joint width over the six
+vertices, then its uniform vertex average, then the batch indices.  If no
+pair certificate exists, we retain the saved mean-width mixture and assign
+only the trivial precision lower bound zero.  These fallback policies are
+not described as precision-optimal.  Selection uses the frozen coefficients
+only, with unchanged normalization and budget.
+
+All 36 multipliers for every selected pair and the feasible adverse
+weights are exported.  A solver-free rational checker reconstructs the
+coefficients from the hashed source rows, verifies all coordinate
+inequalities, recomputes every finite-record success indicator, and checks
+the lower and upper bounds.  For the complete panels these bounds match
+on 468 of 819 original and 212 of 279 external blocks.  The matching value
+is $1/2$ on 165 and 57 blocks, respectively; the remaining matches have
+value zero or one.  No continuum optimality is inferred for the unmatched
+blocks, nor are these exact-total guarantees transferred to the
+bounded-error sensitivity models.

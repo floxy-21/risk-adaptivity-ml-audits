@@ -1,0 +1,30 @@
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{.19\linewidth}>{\raggedright\arraybackslash}p{.25\linewidth}>{\raggedright\arraybackslash}p{.45\linewidth}}
+\toprule
+Policy & Planning objective & Guarantee and recorded comparison\\
+\midrule
+Exact adaptive & Minimize worst joint width & Optimal among deterministic two-query policies in the declared exact model; replay reports joint precision success.\\
+Fixed batch & Minimize worst joint width & Best deterministic two-query batch for that width objective; not optimized for recorded success.\\
+Greedy adaptive & Sequential width refinement & Heuristic adaptive comparator; no global optimality claim.\\
+Randomized mean batch & Minimize worst expected joint width & Batch-optimal for the uncapped exact simplex; replay reports expected width and precision success separately.\\
+Precision challenger & Maximize worst-case precision success & Globally optimal only where its lower and upper certificates match; elsewhere a certified policy with an explicit gap, including the mean-width fallback.\\
+\bottomrule
+\end{tabular}
+\caption{Objectives are distinct even when all policies share the same two-reading budget, information and query dictionary. Recorded precision success always means $J\leq1/2$; it is neither a minimax success value nor proof that a model winner is identified. The noisy adaptive control freezes an exact-model policy and certifies its guarantees anew, without asserting noisy-policy optimality.}
+\label{tab:joint_objectives}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+Panel & Cases & Closed at 0 & Closed at $1/2$ & Closed at 1 & Open gap & Fallback\\
+\midrule
+Original & 819 & 141 & 165 & 162 & 351 & 492\\
+External & 279 & 27 & 57 & 128 & 67 & 94\\
+\bottomrule
+\end{tabular}
+\caption{Full-panel status of the precision challenger. ``Closed'' means equal certified lower and upper bounds on the continuum batch precision optimum. The three closed columns and open-gap column partition each panel. Fallback is a separate, overlapping policy classification: it includes closed-zero and open-gap instances. Thus 468/819 and 212/279 gaps close, but only the 165 and 57 half-success cases provide the nontrivial $1$-versus-$1/2$ assurance separation.}
+\label{tab:joint_precision_status}
+\end{table}

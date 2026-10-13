@@ -1,0 +1,31 @@
+Post-review daily evaluation extension frozen 2026-10-10 00:55 UTC.
+
+This descriptive extension responds to the supplied external review after the
+final main study completed. It does not change model fits, forecasts or main
+outcomes, and is not independent confirmation on new data.
+
+Use the canonical six-hour contiguous missing block, six-hour exact retained
+totals, all three original mask seeds, all 34 meters, all six named model pairs.
+Evaluate zero queries and the pair-specific optimal-width batch with budget two.
+At each budget, every comparator receives exactly the same revealed observations
+as the paired certificate. Recompute complete-case, uniform, training weekday
+profile and training historical-donor evaluations from those observations.
+Donor matching may use only the visible verification values and training days.
+No retraining or hyperparameter changes are allowed.
+
+For each cohort, budget and named pair (plus all-pair aggregate), rank non-tied
+imputation decisions by absolute evaluator-estimated MSE difference divided by
+the meter's squared training mean. The complete-reference loss is never used to
+select decisions. Break selection ties by meter, date and mask seed. Report
+error-coverage curves on the fixed 5%,10%,...,100% requested-coverage grid and
+matched-coverage comparisons at the certificate's achieved coverage. If exact
+coverage cannot be reached because a baseline abstains on strict ties, disclose
+its actual coverage rather than forcing a decision.
+
+Describe certification and recovery by named pair, including ridge versus
+histogram boosting. Stratify certificate resolution by five equal-frequency
+bins of complete-reference normalized absolute loss margin, with bins formed
+within cohort and pair using zero-budget cases and carried to budget two.
+These truth-margin bins are retrospective diagnostic strata only, never a
+selective-decision rule. No population-level independence is attributed to
+repeated days, seeds or model pairs. Do not distribute per-day BLEM targets.

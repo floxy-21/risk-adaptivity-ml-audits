@@ -1,0 +1,273 @@
+{
+  "status": "PASS",
+  "scope": "Independent constructed prefix-query formula and game checks; no empirical study rerun",
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "coefficients": [
+    "0",
+    "0",
+    "1",
+    "1",
+    "0",
+    "1"
+  ],
+  "E": "1",
+  "budget": 2,
+  "tau": "1/2",
+  "batches": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      4,
+      5
+    ]
+  ],
+  "exact_adaptive_value": "1/2",
+  "first_cut_values": {
+    "1": {
+      "value": "1",
+      "hard_answer": "0",
+      "conditional_lines": {
+        "2": [
+          "0",
+          "1"
+        ],
+        "3": [
+          "0",
+          "1"
+        ],
+        "4": [
+          "0",
+          "1"
+        ],
+        "5": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    "2": {
+      "value": "1",
+      "hard_answer": "0",
+      "conditional_lines": {
+        "1": [
+          "0",
+          "1"
+        ],
+        "3": [
+          "0",
+          "1"
+        ],
+        "4": [
+          "0",
+          "1"
+        ],
+        "5": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    "3": {
+      "value": "1",
+      "hard_answer": "0",
+      "conditional_lines": {
+        "1": [
+          "1",
+          "1"
+        ],
+        "2": [
+          "0",
+          "1"
+        ],
+        "4": [
+          "1",
+          "1"
+        ],
+        "5": [
+          "1",
+          "1"
+        ]
+      }
+    },
+    "4": {
+      "value": "1/2",
+      "hard_answer": "1/2",
+      "conditional_lines": {
+        "1": [
+          "1",
+          "1"
+        ],
+        "2": [
+          "0",
+          "1"
+        ],
+        "3": [
+          "1",
+          "1"
+        ],
+        "5": [
+          "1",
+          "0"
+        ]
+      }
+    },
+    "5": {
+      "value": "1",
+      "hard_answer": "1",
+      "conditional_lines": {
+        "1": [
+          "1",
+          "0"
+        ],
+        "2": [
+          "1",
+          "0"
+        ],
+        "3": [
+          "1",
+          "0"
+        ],
+        "4": [
+          "1",
+          "0"
+        ]
+      }
+    }
+  },
+  "concentration_success_matrix": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ]
+  ],
+  "finite_game_primal": 0.5,
+  "finite_game_dual": 0.5,
+  "normalized_dual_upper_bound": 0.5,
+  "exact_rational_upper_bound": "1/2",
+  "rational_adverse_weights": [
+    "0",
+    "1/2",
+    "0",
+    "0",
+    "1/2",
+    "0"
+  ],
+  "batch_distribution": {
+    "(2, 4)": "1/2",
+    "(4, 5)": "1/2"
+  },
+  "rational_simplex_grid_records": 1287,
+  "grid_minimum_success": "1/2",
+  "grid_scope": "Grid supports debugging only; analytic proof establishes continuum lower bound",
+  "conditional_lps": 800,
+  "fiber_lps": 640,
+  "max_absolute_width_discrepancy": 4.440892098500626e-16,
+  "max_conditional_primal_residual": 0.0,
+  "comparison_tolerance": 2e-08,
+  "runtime_seconds": 9.46217329998035,
+  "source_sha256": "29fbf3cf0f293c691c62f513f44ce640b4ea73e30e30137d06c3012e92b6b73c"
+}

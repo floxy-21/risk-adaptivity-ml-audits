@@ -1,0 +1,28 @@
+Training-convergence amendment frozen 2026-10-10 00:38 UTC before new fits.
+
+At the user's explicit request, the first AI revision run was interrupted at
+00:37:45 UTC because some MLP training runs reached the fixed 200-epoch cap.
+The original diagnostic source, partial outputs, and logs are preserved under
+work/ai_training_diagnostic. This amendment responds solely to the recorded
+training convergence warnings, not held-out forecasting scores, certificates,
+recovery outcomes, or a search for a favorable test result.
+
+Increase the shared MLP max_iter parameter from 200 to 1000. Keep all other
+optimizer, tolerance, no-improvement, seed, architecture, feature, target-scale,
+data-split and experimental settings unchanged. Do not change a model's parameters
+based on its held-out outcomes. The explicit training allowance supersedes the
+200-epoch cap in study_protocol_ai_revision.txt; that earlier protocol is retained
+as an honest development record.
+
+Before a complete verification-scenario rerun, fit only the MLP on the prescribed
+training split of each of the 34 meters, without computing predictions or scores
+on any held-out day. Record training epochs, final training objective, loss-curve
+tail, warnings, run environment, source hashes and model parameters in
+outputs/study_training_preflight.json. If any run still reaches its epoch cap,
+report that training evidence before adopting a further uniform allowance.
+
+Once all training-only preflight fits satisfy the solver's unchanged training-loss
+stopping rule without ConvergenceWarnings, refit fresh models and rerun the entire
+main experiment. Preflight convergence is an optimizer stopping diagnostic; it is
+not a guarantee of global optimality, generalization or predictive superiority.
+No preflight fitted weights are reused in the final experiment.

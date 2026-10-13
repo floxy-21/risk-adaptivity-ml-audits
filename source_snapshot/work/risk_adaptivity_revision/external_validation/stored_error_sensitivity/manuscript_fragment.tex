@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,booktabs,microtype,placeins}
+\begin{document}
+% BEGIN MANUSCRIPT BODY
+\paragraph{Measurement uncertainty and a sufficient reading budget.}\label{sec:stored-error-sensitivity}
+We retain all 29 external half-separation cases and ask whether feedback's
+assurance advantage survives errors in the retrieved internal readings.
+Normalize the retained total to one and divide the original coefficient
+vector by its positive range, without translation. Certificate-LP widths
+are then measured in units of the original $W_0$, with initial width one.
+The hidden record consists of
+$y_h\geq0$, $\sum_h y_h=1$, and five fixed errors
+$e_k\in[-\delta,\delta]$; query $k$ returns
+$\sum_{h\leq k}y_h+e_k$. Errors are fixed before policy randomization.
+The endpoints remain exact, and no hourly cap is imposed in this separate
+sensitivity calculation. Before solving, we fixed
+$\delta\in\{0,0.001,0.01\}$ and the unchanged requirement $W\leq W_0/2$.
+Initial width remains $W_0$, so halving the new initial width gives the
+same threshold. These allowances concern block-total units; they are
+illustrative bounds, not calibrated physical-device specifications.
+
+\begin{table}[htbp]\centering\small
+\caption{Guarantees certified on the fixed 29-case external subset under
+bounded internal-readout errors and exact endpoints. Every passing case
+has adaptive worst-case success one and optimal randomized-batch worst-case
+success exactly $1/2$. All six model pairs are represented at each level.
+Exact lower witnesses rule out a deterministic two-query guarantee in the
+remaining cases.}
+\label{tab:stored-error-certificates}
+\begin{tabular}{lrrrr}\toprule
+Error allowance & Certified cases & System 1 & System 2 & System 7\\\midrule
+$0$ & 29/29 & 2/2 & 14/14 & 13/13\\
+$0.001E$ & 27/29 & 2/2 & 13/14 & 12/13\\
+$0.01E$ & 22/29 & 2/2 & 12/14 & 8/13\\\bottomrule
+\end{tabular}\end{table}
+
+Two solver-free checkers verify all 49 positive-error certificates using
+exact rational weak duality and an explicit correction for residuals in
+the proposed multipliers. The smallest certified margin below $W_0/2$
+exceeds $0.003759W_0$. The complete LPs, multipliers, finite variable bounds
+and derivation are in Online Resource~1, S6. These are upper guarantees
+for the saved first-query/successor supports, not claims of exact
+optimal-width values.
+
+The original batch upper bound $1/2$ survives because zero-error records
+and fibers remain feasible. The two-successor guarantee supplies the
+matching continuum lower bound. Thus the exact separation survives in
+27 and 22 cases, spanning every system and model pair. Independent
+error-eliminated LPs reproduce all 87 case--level calculations with maximum
+discrepancy $1.89\times10^{-15}$.
+
+For the remaining two cases at $0.001E$ and seven at $0.01E$, every legal first query $k$ has a
+rational answer $t_k$ such that, for each possible second query $j$, two
+feasible latent records share first answer $t_k$ and an identical second
+answer, while their target contrast exceeds $W_0/2$. Every deterministic
+two-query policy therefore has a permitted failing record; stopping early
+cannot help. Two exact checkers verify 45 first-answer witnesses and 180
+endpoint pairs, with minimum strict excess $5.9060\times10^{-6}W_0$.
+The loss of the guarantee is caused by larger observational fibers, not
+LP tie breaking. No randomized-adaptive impossibility is asserted.
+
+\paragraph{A certified budget fallback covering all 29 cases.}
+A post-analysis calculation keeps the cases, $0.01E$ allowance, exact
+endpoints and precision threshold, and permits a third reading. Among
+899 fixed-batch LPs, exact upper certificates identify a three-reading
+batch for every case; the largest upper bound is $0.458896W_0$.
+The implemented rule chooses two adaptive readings for 22 cases and a
+fixed three-reading batch for seven, before inspecting optional answers.
+It guarantees precision in all 29 cases.
+
+Its two-query branches minimize certified affine upper bounds by exact
+rational comparisons, without online LPs. Their lower envelope is at most
+$W_0/2$ on the whole first-answer interval $[-0.01,1.01]$.
+Separate tests cover 1,015 constructed executions and reject incompatible
+transcripts. The continuum guarantee comes from the certificates, not
+these tests. This executable branch rule can differ from the earlier
+conditional-width minimizer, so its recorded replay figures are not reused.
+
+\begin{table}[htbp]\centering\small
+\caption{Post-analysis budget fallback on the unchanged 29-case external
+subset at $0.01E$ internal error. Totals sum hard reading allowances across
+separate pairwise audits; they are not measured API requests or costs.}
+\label{tab:stored-error-fallback}
+\begin{tabular}{lrrr}\toprule
+Policy & Guaranteed cases & Maximum budget & Total allowances\\\midrule
+Two-query adaptive & 22/29 & 2 & 58\\
+Minimum fixed-batch budgets & 29/29 & 3 & 87\\
+Certified two-or-three rule & 29/29 & 3 & 65\\\bottomrule
+\end{tabular}\end{table}
+
+These are the minimum per-case deterministic hard budgets: a one-query
+policy is a fixed batch and cannot guarantee the threshold on any of these
+cases; the seven lower witnesses additionally rule out two-query policies.
+The upper certificates attain the corresponding budgets of two and three.
+Every nonadaptive batch with at most two queries still has a failing
+completion, so randomization cannot give sure success using any such batch
+with positive probability. Thus three readings per case also attain the
+minimum nonadaptive budget for sure success. The reduction from 87 to 65 is
+$22/87=25.29\%$ in reserved readings on this selected subset. It does not
+optimize expected stopping costs, share readings across model pairs, or
+change the original two-query result; full-range retrieval remains the
+preferred option on the measured public API.
+\FloatBarrier
+% END MANUSCRIPT BODY
+\end{document}

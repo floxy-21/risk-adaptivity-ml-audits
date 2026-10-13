@@ -1,0 +1,428 @@
+{
+  "status": "PASS",
+  "scope": "Post-review descriptive diagnostics, original cases/policies/threshold unchanged; no new independent cohort",
+  "input_sha256": {
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\counter_adaptive\\pilot\\geometry.json": "6c94583d757db31b33b6388cd29c2d1b6999385c76b049368e58ef97f75424cb",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\counter_adaptive\\pilot\\replay_cases.csv": "ca32b6e9df5c94d1f27429ac78deb2aacb8b2d1e71117f694d0f17b73d586d4b",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\counter_adaptive\\continuation\\geometry.json": "cb176afdd9eaae140d1830b5deb408dd2de041898a8499b93edcf59813ffb12d",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\counter_adaptive\\continuation\\replay_cases.csv": "34d428175b0f6b8f44ffb3dfd5bafb325e4ef1690c96fa81a01a9a66c9c14b55",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\data_blem_consumer-00000001.csv": "9228795c6369ce144fbb929f9d413397545f86e3a95d2f9a0f27c92f1d55ad8d",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\data_blem_consumer-00000002.csv": "93d142217c74ab2c12a98035b3ea178ead234fec0b71942e8e90db5b7e6a2ef3",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\data_blem_consumer-00000003.csv": "db69719d2262ebeb6df39abafffca2805c8a03b1b4777f86eb8aa78acf578b6c"
+  },
+  "counts": {
+    "cases": 4914,
+    "original_policy_rows": 24570,
+    "precision_optimal_rows": 290
+  },
+  "mixture_selection": "Existing coefficient-only half-cover: lowest-index full-cover action if any; otherwise widest prefix and earliest suffix coverage with smallest-index ties, equal probabilities. No replay answers enter selection.",
+  "ordering_margin": "1e-9 * max(1,abs(lower),abs(upper)), same as original replay",
+  "summaries": [
+    {
+      "subset": "all",
+      "policy": "adaptive",
+      "n": 4914,
+      "success": 0.9863654863654864,
+      "relative_width": 0.1859024268960181,
+      "winner": 0.5048840048840049
+    },
+    {
+      "subset": "all",
+      "policy": "det_batch",
+      "n": 4914,
+      "success": 0.9822954822954822,
+      "relative_width": 0.18866137865077653,
+      "winner": 0.49837199837199836
+    },
+    {
+      "subset": "all",
+      "policy": "mean_batch",
+      "n": 4914,
+      "success": 0.9267611787279608,
+      "relative_width": 0.22834204700839403,
+      "winner": 0.4542060335225225
+    },
+    {
+      "subset": "all",
+      "policy": "uniform_batch",
+      "n": 4914,
+      "success": 0.6303825803825804,
+      "relative_width": 0.42592438806324606,
+      "winner": 0.24786324786324787
+    },
+    {
+      "subset": "all",
+      "policy": "greedy_adaptive",
+      "n": 4914,
+      "success": 0.9796499796499797,
+      "relative_width": 0.18836299457715916,
+      "winner": 0.5032560032560033
+    },
+    {
+      "subset": "separation",
+      "policy": "adaptive",
+      "n": 290,
+      "success": 1.0,
+      "relative_width": 0.33724024614040216,
+      "winner": 0.2896551724137931
+    },
+    {
+      "subset": "separation",
+      "policy": "det_batch",
+      "n": 290,
+      "success": 0.9724137931034482,
+      "relative_width": 0.352767301119492,
+      "winner": 0.25517241379310346
+    },
+    {
+      "subset": "separation",
+      "policy": "mean_batch",
+      "n": 290,
+      "success": 0.8001278424772762,
+      "relative_width": 0.4120663933978379,
+      "winner": 0.24425020021022129
+    },
+    {
+      "subset": "separation",
+      "policy": "uniform_batch",
+      "n": 290,
+      "success": 0.41793103448275865,
+      "relative_width": 0.5309796492963041,
+      "winner": 0.18758620689655173
+    },
+    {
+      "subset": "separation",
+      "policy": "greedy_adaptive",
+      "n": 290,
+      "success": 0.9620689655172414,
+      "relative_width": 0.34674779851206466,
+      "winner": 0.28620689655172415
+    },
+    {
+      "subset": "separation",
+      "policy": "precision_optimal_cover",
+      "n": 290,
+      "success": 0.753448275862069,
+      "relative_width": 0.4311592385525177,
+      "winner": 0.22758620689655173
+    }
+  ],
+  "paired": [
+    {
+      "subset": "all",
+      "outcome": "precision",
+      "n": 4914,
+      "both": 4817,
+      "adaptive_only": 30,
+      "batch_only": 10,
+      "neither": 57
+    },
+    {
+      "subset": "all",
+      "outcome": "ordering",
+      "n": 4914,
+      "both": 2411,
+      "adaptive_only": 70,
+      "batch_only": 38,
+      "neither": 2395
+    },
+    {
+      "subset": "separation",
+      "outcome": "precision",
+      "n": 290,
+      "both": 282,
+      "adaptive_only": 8,
+      "batch_only": 0,
+      "neither": 0
+    },
+    {
+      "subset": "separation",
+      "outcome": "ordering",
+      "n": 290,
+      "both": 70,
+      "adaptive_only": 14,
+      "batch_only": 4,
+      "neither": 202
+    }
+  ],
+  "groups": [
+    {
+      "grouping": "meter",
+      "group": "consumer_00000001",
+      "n": 1638,
+      "separation": 97,
+      "adaptive_precision": 0.9884004884004884,
+      "adaptive_ordering": 0.36752136752136755,
+      "det_batch_precision": 0.9871794871794872,
+      "det_batch_ordering": 0.3608058608058608
+    },
+    {
+      "grouping": "meter",
+      "group": "consumer_00000002",
+      "n": 1638,
+      "separation": 103,
+      "adaptive_precision": 0.981074481074481,
+      "adaptive_ordering": 0.4365079365079365,
+      "det_batch_precision": 0.9786324786324786,
+      "det_batch_ordering": 0.43772893772893773
+    },
+    {
+      "grouping": "meter",
+      "group": "consumer_00000003",
+      "n": 1638,
+      "separation": 90,
+      "adaptive_precision": 0.9896214896214897,
+      "adaptive_ordering": 0.7106227106227107,
+      "det_batch_precision": 0.981074481074481,
+      "det_batch_ordering": 0.6965811965811965
+    },
+    {
+      "grouping": "phase",
+      "group": "continuation",
+      "n": 3834,
+      "separation": 222,
+      "adaptive_precision": 0.9882629107981221,
+      "adaptive_ordering": 0.49269692227438705,
+      "det_batch_precision": 0.9833072509128847,
+      "det_batch_ordering": 0.48800208659363586
+    },
+    {
+      "grouping": "phase",
+      "group": "pilot",
+      "n": 1080,
+      "separation": 68,
+      "adaptive_precision": 0.9796296296296296,
+      "adaptive_ordering": 0.5481481481481482,
+      "det_batch_precision": 0.9787037037037037,
+      "det_batch_ordering": 0.5351851851851852
+    }
+  ],
+  "fully_specified_witness": {
+    "id": "consumer_00000001/2017-10-01/06/daily/hist_gradient_boosting",
+    "total_kWh_exact": "23064980899/5000000000",
+    "original_c_binary64": [
+      0.06539888254078319,
+      0.0386948767392525,
+      -0.2192222536787326,
+      -0.05649714849744025,
+      0.025767756204589782,
+      -0.1341764053104054
+    ],
+    "normalized_coefficient_numerators": [
+      82036457153278624,
+      74339551516345942,
+      0,
+      46902318275730752,
+      70613562702081589,
+      24512796865344392
+    ],
+    "denominator": 82036457153278624,
+    "batches": [
+      {
+        "Q": [
+          1,
+          2
+        ],
+        "range_numerators": [
+          0,
+          0,
+          70613562702081589,
+          70613562702081589,
+          70613562702081589,
+          70613562702081589
+        ],
+        "adverse_success": "1/2"
+      },
+      {
+        "Q": [
+          1,
+          3
+        ],
+        "range_numerators": [
+          0,
+          74339551516345942,
+          74339551516345942,
+          46100765836737197,
+          46100765836737197,
+          46100765836737197
+        ],
+        "adverse_success": "0"
+      },
+      {
+        "Q": [
+          1,
+          4
+        ],
+        "range_numerators": [
+          0,
+          74339551516345942,
+          74339551516345942,
+          74339551516345942,
+          46100765836737197,
+          46100765836737197
+        ],
+        "adverse_success": "0"
+      },
+      {
+        "Q": [
+          1,
+          5
+        ],
+        "range_numerators": [
+          0,
+          74339551516345942,
+          74339551516345942,
+          74339551516345942,
+          74339551516345942,
+          0
+        ],
+        "adverse_success": "0"
+      },
+      {
+        "Q": [
+          2,
+          3
+        ],
+        "range_numerators": [
+          7696905636932682,
+          7696905636932682,
+          0,
+          46100765836737197,
+          46100765836737197,
+          46100765836737197
+        ],
+        "adverse_success": "1/2"
+      },
+      {
+        "Q": [
+          2,
+          4
+        ],
+        "range_numerators": [
+          7696905636932682,
+          7696905636932682,
+          46902318275730752,
+          46902318275730752,
+          46100765836737197,
+          46100765836737197
+        ],
+        "adverse_success": "1/2"
+      },
+      {
+        "Q": [
+          2,
+          5
+        ],
+        "range_numerators": [
+          7696905636932682,
+          7696905636932682,
+          70613562702081589,
+          70613562702081589,
+          70613562702081589,
+          0
+        ],
+        "adverse_success": "1/2"
+      },
+      {
+        "Q": [
+          3,
+          4
+        ],
+        "range_numerators": [
+          82036457153278624,
+          82036457153278624,
+          82036457153278624,
+          0,
+          46100765836737197,
+          46100765836737197
+        ],
+        "adverse_success": "0"
+      },
+      {
+        "Q": [
+          3,
+          5
+        ],
+        "range_numerators": [
+          82036457153278624,
+          82036457153278624,
+          82036457153278624,
+          23711244426350837,
+          23711244426350837,
+          0
+        ],
+        "adverse_success": "1/2"
+      },
+      {
+        "Q": [
+          4,
+          5
+        ],
+        "range_numerators": [
+          82036457153278624,
+          82036457153278624,
+          82036457153278624,
+          82036457153278624,
+          0,
+          0
+        ],
+        "adverse_success": "1/2"
+      }
+    ],
+    "cover": {
+      "id": "consumer_00000001/2017-10-01/06/daily/hist_gradient_boosting",
+      "meter": "consumer_00000001",
+      "day": "2017-10-01",
+      "phase": "pilot",
+      "start_hour": 6,
+      "source_geometry": "work\\counter_reproduction_check_20261012T0250\\results\\geometry.json",
+      "model_a": "daily",
+      "model_b": "hist_gradient_boosting",
+      "first": 3,
+      "batches": [
+        [
+          3,
+          5
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "probabilities": [
+        "1/2",
+        "1/2"
+      ],
+      "cover_intervals": [
+        {
+          "second": 5,
+          "left": "0",
+          "right": "17306984150288475/58325212726927787",
+          "alpha": "1",
+          "beta": "23711244426350837/82036457153278624"
+        },
+        {
+          "second": 2,
+          "left": "1016507452019577/7680772039960903",
+          "right": "1",
+          "alpha": "3848452818466341/41018228576639312",
+          "beta": "46100765836737197/82036457153278624"
+        }
+      ],
+      "overlap_length": "73642986580033056313991382206826/447982663137758760646690784311661",
+      "adaptive_guarantee_exact": "1799720145207476819849820061211047/3967655223315118921269597033456224",
+      "batch_optimum_exact": "1/2",
+      "adverse_weights_exact": [
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "1/2",
+        "0"
+      ],
+      "recorded_success_exact": "1/2",
+      "recorded_relative_width_exact": "861391597150252097343443729/1892169317262003377785002976"
+    },
+    "interpretation": "z=y/E and q=(c-min(c))/(max(c)-min(c)); displayed widths normalized by W0. Exact rationals encode the original binary64 coefficient vector."
+  }
+}

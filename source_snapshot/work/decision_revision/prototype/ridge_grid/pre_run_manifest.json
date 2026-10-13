@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-10-11T21:07:03.008458+00:00",
+  "scope": "Development validation only; shared reference CSV filtered before lookup",
+  "kappa_grid": [
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0,
+    16.0
+  ],
+  "selection": "Minimum household-macro mean requests among initially unresolved; exact ties smaller kappa",
+  "prior": "alpha_i=kappa*6*max(Ridge_i,1e-8*max(mean(nonnegative Ridge in whole block),1e-12))/sum whole-block floored weights",
+  "conditioning": "Alpha fixed for whole blocks; retain remaining coordinates original alpha after every observation",
+  "tie_break": "Maximum one-query probability; minimum worst residual width; lowest index",
+  "batch_size": 1,
+  "cap": 6,
+  "input_hashes": {
+    "work\\decision_revision\\prototype\\policy.py": "17b53e572f01f24d09fc1026e5fd5228ac49c48ad04a7c1037c2c84dcea4e257",
+    "work\\decision_revision\\prototype\\ridge_policy.py": "9307c062d42679ecad6c37b5f87ede7d925126a28d5433ca30a4b2dc954bee9f",
+    "work\\decision_revision\\prototype\\run_ridge_grid.py": "910e0a4b83bbbab0729537650abb194ff36431ea2543229f6651a7ba7552dc18",
+    "work\\external_deadline\\validation\\trajectories.jsonl": "2e50b82a7ebc67af414bb6541d4e000dd435a085bdd7d4e93a2880ceb427ec27",
+    "work\\external_deadline\\fitted\\reference_targets.csv": "6ead862b89ad64b798faebd4b7770c8f693aa8b0579dc06c81bf12a674128ecc"
+  }
+}

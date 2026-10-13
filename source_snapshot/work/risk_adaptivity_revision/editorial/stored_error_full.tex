@@ -1,0 +1,134 @@
+
+\paragraph{Certified bounded stored-readout sensitivity.}\label{sec:stored-error-sensitivity}
+We retain all 29 external half-separation cases and ask whether feedback's
+assurance advantage survives errors in the retrieved internal readings.
+Normalize the retained total to one and divide the original coefficient
+vector by its positive range, without translation. Certificate-LP widths
+are then measured in units of the original $W_0$, with initial width one.
+The hidden record consists of
+$y_h\geq0$, $\sum_h y_h=1$, and five fixed errors
+$e_k\in[-\delta,\delta]$; query $k$ returns
+$\sum_{h\leq k}y_h+e_k$. Errors are fixed before policy randomization.
+The endpoints remain exact, and no hourly cap is imposed in this separate
+sensitivity calculation. Before solving, we fixed
+$\delta\in\{0,0.001,0.01\}$ and the unchanged requirement $W\leq W_0/2$.
+Initial width remains $W_0$, so halving the new initial width gives the
+same threshold. These allowances concern block-total units; they are
+illustrative bounds, not calibrated physical-device specifications.
+
+\begin{table}[htbp]\centering\small
+\caption{Guarantees certified on the fixed 29-case external subset under
+bounded internal-readout errors and exact endpoints. Every passing case
+has adaptive worst-case success one and optimal randomized-batch worst-case
+success exactly $1/2$. All six model pairs are represented at each level.
+Exact lower witnesses rule out a deterministic two-query guarantee in the
+remaining cases.}
+\label{tab:stored-error-certificates}
+\begin{tabular}{lrrrr}\toprule
+Error allowance & Certified cases & System 1 & System 2 & System 7\\\midrule
+$0$ & 29/29 & 2/2 & 14/14 & 13/13\\
+$0.001E$ & 27/29 & 2/2 & 13/14 & 12/13\\
+$0.01E$ & 22/29 & 2/2 & 12/14 & 8/13\\\bottomrule
+\end{tabular}\end{table}
+
+The positive-error guarantees in Table~\ref{tab:stored-error-certificates}
+are established by exact rational upper certificates, not a numerical
+threshold tolerance. For each of the 49 successful case--allowance
+combinations, retain its first query and at most two successors. Write
+its shared-answer endpoint LP in minimum form as $f^\top z=-\eta$,
+subject to $Az\leq b$, $Hz=h$ and valid finite bounds $L\leq z\leq U$.
+For rational multipliers $\lambda\leq0$ and unrestricted $\nu$, put
+$r=f-A^\top\lambda-H^\top\nu$. Standard weak duality with a box correction gives
+\[
+ f^\top z\ \geq\ \lambda^\top b+\nu^\top h+
+       \sum_j\min\{r_jL_j,r_jU_j\}=:\ell.
+\]
+Thus $-\ell$ rigorously bounds that support-defined adaptive policy's
+worst width, even without exact stationarity of the proposed multipliers.
+The boxes follow from the model: increments lie in $[0,1]$, errors in
+$[-\delta,\delta]$, $\eta\in[0,1]$, and the first answer in
+$[-\delta,1+\delta]$. Two solver-free implementations reconstruct the LPs
+from the original serialized coefficient fractions and verify every bound.
+All 49 exact upper bounds are below $1/2$; the smallest certified margin
+exceeds $0.003759W_0$. This certifies a policy that chooses an exact
+conditional-width minimizer from its saved successor support, without
+claiming an exact optimal-width value. The $0.01E$ fallback below additionally
+certifies executable branching.
+
+The original exact adverse-profile upper bound $S_B^\star\leq1/2$ remains
+valid because every zero-error record and its old fiber are included in
+the enlarged model. The certified two-successor policy supplies the
+matching all-completions batch lower guarantee by the scalar-first support
+result. Consequently the exact success separation survives in the stated
+27 and 22 cases, including every system and model pair. No deterministic
+batch guarantees the threshold on any of the original 29 cases at these
+error levels. Independent error-eliminated LPs also reproduce all 87
+case--level calculations, with maximum discrepancy $1.89\times10^{-15}$.
+The complete ledger and 49 rational upper certificates remain available.
+
+The remaining two cases at $0.001E$ and seven at $0.01E$ are now resolved
+by separate exact lower witnesses. For every legal first query $k$, a
+rational answer $t_k$ is supplied; for each possible second query $j$, two
+feasible latent records share first answer $t_k$ and an identical second
+answer, while their target contrast exceeds $W_0/2$. A deterministic policy
+must choose one such $j$ after $t_k$, so some permitted record leaves its
+terminal interval wider than the requirement. Stopping earlier gives a
+coarser fiber. Two solver-free checks verify all 45 first-query witnesses
+and 180 endpoint pairs, with smallest strict excess greater than
+$5.9060\times10^{-6}W_0$. Thus no deterministic policy with the same
+two-query budget can guarantee the threshold in those cases. This lower
+bound does not assert impossibility for other budgets or policy objectives.
+The corresponding numerical optimal widths at $0.01E$ range from
+$0.500005906W_0$ to $0.530000000W_0$. The difference from 29/29 at zero error
+is a loss of attainable assurance as the observational fibers expand,
+rather than a missing successful certificate or an LP tie-breaking choice.
+
+\paragraph{A certified budget fallback covering all 29 cases.}
+A separate post-analysis calculation keeps the same cases, $0.01E$ error
+allowance, exact endpoints and $W_0/2$ requirement, but permits a third
+reading when two are insufficient. It enumerates all 31 nonempty fixed
+batches per case (899 LPs). Exact rational upper certificates verify a
+three-reading fixed batch for every case; the largest certified bound is
+$0.458896W_0$. The acquisition rule selects a previously certified
+two-query adaptive support for the 22 cases, and a certified three-query
+fixed batch for the other seven, using only coefficients and initial
+constraints before retrieval. It therefore guarantees the requirement in
+all 29 cases with maximum budget three.
+
+For the 22 two-reading prescriptions, rational conditional dual bounds
+give affine upper bounds indexed by possible second queries. Their lower
+envelope is at most $W_0/2$ on the entire first-answer interval
+$[-0.01,1.01]$, verified at every endpoint and line intersection. The
+implementation selects a minimizing bound by exact rational comparisons,
+then requests that second reading; no online LP is needed. This branch
+rule has the required assurance but need not select the same branch as
+the original conditional-width minimizer, so the earlier recorded replay
+figures are not attributed to it. Separate tests cover 1,015 executions on
+constructed feasible records and reject out-of-model transcripts; the
+continuous guarantee follows from the exact certificates, not these tests.
+
+\begin{table}[htbp]\centering\small
+\caption{Post-analysis budget fallback on the unchanged 29-case external
+subset at $0.01E$ internal error. Totals sum hard reading allowances across
+separate pairwise audits; they are not measured API requests or costs.}
+\label{tab:stored-error-fallback}
+\begin{tabular}{lrrr}\toprule
+Policy & Guaranteed cases & Maximum budget & Total allowances\\\midrule
+Two-query adaptive & 22/29 & 2 & 58\\
+Minimum fixed-batch budgets & 29/29 & 3 & 87\\
+Certified two-or-three rule & 29/29 & 3 & 65\\\bottomrule
+\end{tabular}\end{table}
+
+These are the minimum per-case deterministic hard budgets: a one-query
+policy is a fixed batch and cannot guarantee the threshold on any of these
+cases; the seven lower witnesses additionally rule out two-query policies.
+The upper certificates attain the corresponding budgets of two and three.
+Every nonadaptive batch with at most two queries still has a failing
+completion, so randomization cannot give sure success using any such batch
+with positive probability. Thus three readings per case also attain the
+minimum nonadaptive budget for sure success. The reduction from 87 to 65 is
+$22/87=25.29\%$ in reserved readings on this selected subset. It does not
+optimize expected stopping costs, share readings across model pairs, or
+change the original two-query result; full-range retrieval remains the
+preferred option on the measured public API.
+\FloatBarrier

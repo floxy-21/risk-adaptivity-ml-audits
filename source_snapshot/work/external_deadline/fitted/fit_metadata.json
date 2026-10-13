@@ -1,0 +1,1299 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-11T20:02:52.104727+00:00",
+  "seconds": 257.84120429999894,
+  "households": [
+    {
+      "household_id": "MAC000002",
+      "array_file": "household_000.npz",
+      "training_days": 234,
+      "training_mean_kwh": 0.4655742522257835,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "4cb3ce6ad288a7acb4aa003820eaa8175dcf6e700ccd8efbb62775991c807b0f",
+      "train_y_sha256": "6d3524e7bb39a83fdabe15a00194ecdcc910cf49bee59ef99981adff8e1d043d",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 244,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 56,
+          "feature_complete_days": 52,
+          "candidate_days": 49
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.028067799983546138,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.3045723000250291,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 6.712711300002411,
+          "negative_predictions_clipped": 107,
+          "warnings": [],
+          "epochs": 361,
+          "training_objective_loss": 0.16132264571385754,
+          "target_scale_training_mean_kwh": 0.4655742522257835
+        }
+      ],
+      "learned_prediction_days": 135,
+      "persistence_archive_hours": 3620,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 79,
+        "validation_target_count": 1896,
+        "validation_residual_rmse_kwh": 0.4195602630442158,
+        "training_scale_floor_kwh": 4.655742522257836e-09,
+        "sd_kwh": 0.4195602630442158,
+        "training_mean_kwh": 0.4655742522257835,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000003",
+      "array_file": "household_001.npz",
+      "training_days": 228,
+      "training_mean_kwh": 0.8376039843567252,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "98eb37d91d2dd764092a55eb1380382e3cf71013c766a3387c1be6e477bc8273",
+      "train_y_sha256": "79d5baea544134cb10a59a2eb2935cfcb2745af696a74749b606a2c3fc441585",
+      "counts": {
+        "train": {
+          "complete_reference_days": 261,
+          "feature_complete_days": 239,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.006460499978857115,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.222875200008275,
+          "negative_predictions_clipped": 17,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 6.176408700004686,
+          "negative_predictions_clipped": 586,
+          "warnings": [],
+          "epochs": 306,
+          "training_objective_loss": 0.10685673567779377,
+          "target_scale_training_mean_kwh": 0.8376039843567252
+        }
+      ],
+      "learned_prediction_days": 138,
+      "persistence_archive_hours": 3621,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 79,
+        "validation_target_count": 1896,
+        "validation_residual_rmse_kwh": 0.6120885883013735,
+        "training_scale_floor_kwh": 8.376039843567253e-09,
+        "sd_kwh": 0.6120885883013735,
+        "training_mean_kwh": 0.8376039843567252,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000004",
+      "array_file": "household_002.npz",
+      "training_days": 230,
+      "training_mean_kwh": 0.0704480072463768,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "08a6c8ae8f9d04b63bf57d3f4ad989c50e9a706ab974ebf0362332919d6fb546",
+      "train_y_sha256": "783c2807ddf5e7ca6d050f6941c1acc7d3c42362c13f1a56e217fa7f6544c2a5",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 241,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.005434599996078759,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.2561831000202801,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 11.214867900009267,
+          "negative_predictions_clipped": 257,
+          "warnings": [],
+          "epochs": 539,
+          "training_objective_loss": 0.712122650780758,
+          "target_scale_training_mean_kwh": 0.0704480072463768
+        }
+      ],
+      "learned_prediction_days": 138,
+      "persistence_archive_hours": 3621,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 79,
+        "validation_target_count": 1896,
+        "validation_residual_rmse_kwh": 0.08764255065327733,
+        "training_scale_floor_kwh": 7.04480072463768e-10,
+        "sd_kwh": 0.08764255065327733,
+        "training_mean_kwh": 0.0704480072463768,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000005",
+      "array_file": "household_003.npz",
+      "training_days": 231,
+      "training_mean_kwh": 0.17863167386363635,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "17cd4be1b5520ec81bc41145a1b7aaf8acac6dc54d99d067bb917a72833ebd7c",
+      "train_y_sha256": "70912b65274071e47151d76224084884080b6204d8c0469cb0f97aac62dee9dd",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 242,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.011229999974602833,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.3274039000098128,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 5.595642400003271,
+          "negative_predictions_clipped": 61,
+          "warnings": [],
+          "epochs": 269,
+          "training_objective_loss": 0.30849495493775647,
+          "target_scale_training_mean_kwh": 0.17863167386363635
+        }
+      ],
+      "learned_prediction_days": 138,
+      "persistence_archive_hours": 3621,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 79,
+        "validation_target_count": 1896,
+        "validation_residual_rmse_kwh": 0.22256463867821488,
+        "training_scale_floor_kwh": 1.7863167386363634e-09,
+        "sd_kwh": 0.22256463867821488,
+        "training_mean_kwh": 0.17863167386363635,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000006",
+      "array_file": "household_004.npz",
+      "training_days": 234,
+      "training_mean_kwh": 0.1154668803418803,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "644d299ca4f3acb87382ec01bbf4a4dcf463e8d1cea1c2396684f02f482a0148",
+      "train_y_sha256": "9066e31085e15125eb99e08918a9db9156d22e594526a4a1a5c52cdbdbae4844",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 244,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.005685199983417988,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.2262412999989465,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 5.041871800000081,
+          "negative_predictions_clipped": 2,
+          "warnings": [],
+          "epochs": 242,
+          "training_objective_loss": 0.14111732577233535,
+          "target_scale_training_mean_kwh": 0.1154668803418803
+        }
+      ],
+      "learned_prediction_days": 138,
+      "persistence_archive_hours": 3621,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 79,
+        "validation_target_count": 1896,
+        "validation_residual_rmse_kwh": 0.07426584906263897,
+        "training_scale_floor_kwh": 1.154668803418803e-09,
+        "sd_kwh": 0.07426584906263897,
+        "training_mean_kwh": 0.1154668803418803,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000007",
+      "array_file": "household_005.npz",
+      "training_days": 231,
+      "training_mean_kwh": 0.3767339464105339,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "b2a041cf99035e73f35d426c1694c3e686cab385e877896ca39c370b1508191b",
+      "train_y_sha256": "efa70ec8f28054c3cfea82b608a0448c05e4b6cecf457bbdaad12fd776b6da8d",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 242,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 87,
+          "feature_complete_days": 81,
+          "candidate_days": 77
+        },
+        "test": {
+          "complete_reference_days": 55,
+          "feature_complete_days": 45,
+          "candidate_days": 42
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.00555010000243783,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.2327130999765359,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 13.6976399999985,
+          "negative_predictions_clipped": 56,
+          "warnings": [],
+          "epochs": 425,
+          "training_objective_loss": 0.19147599547939148,
+          "target_scale_training_mean_kwh": 0.3767339464105339
+        }
+      ],
+      "learned_prediction_days": 126,
+      "persistence_archive_hours": 3617,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 77,
+        "validation_target_count": 1848,
+        "validation_residual_rmse_kwh": 0.43755613606265004,
+        "training_scale_floor_kwh": 3.767339464105339e-09,
+        "sd_kwh": 0.43755613606265004,
+        "training_mean_kwh": 0.3767339464105339,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000008",
+      "array_file": "household_006.npz",
+      "training_days": 234,
+      "training_mean_kwh": 0.7348584401531338,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "3bdf31de00cc75fc2249d7615be76ca5fd9f2107fef3b6525e703e4c74e381bf",
+      "train_y_sha256": "82bca1f613f4245d1d55998b6cd6a5fe74f98833cd0173ff4b5b8fc29c220dc8",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 244,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 26,
+          "feature_complete_days": 24,
+          "candidate_days": 19
+        },
+        "test": {
+          "complete_reference_days": 0,
+          "feature_complete_days": 0,
+          "candidate_days": 0
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.008760400000028312,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.41782090000924654,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 7.889786100015044,
+          "negative_predictions_clipped": 1,
+          "warnings": [],
+          "epochs": 201,
+          "training_objective_loss": 0.09450777080157206,
+          "target_scale_training_mean_kwh": 0.7348584401531338
+        }
+      ],
+      "learned_prediction_days": 23,
+      "persistence_archive_hours": 718,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 19,
+        "validation_target_count": 456,
+        "validation_residual_rmse_kwh": 0.4429269305030379,
+        "training_scale_floor_kwh": 7.348584401531339e-09,
+        "sd_kwh": 0.4429269305030379,
+        "training_mean_kwh": 0.7348584401531338,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000009",
+      "array_file": "household_007.npz",
+      "training_days": 230,
+      "training_mean_kwh": 0.3310606884420289,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "8053fac1381895a068f524c6c88a44143f0332b61d4884a87eec4b78992046f5",
+      "train_y_sha256": "9212ae54cfbfb448b715a78936eaebada9834d297a3f23a428714e1b752f78fe",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 241,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.010220800002571195,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.39540959999430925,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 11.61833630001638,
+          "negative_predictions_clipped": 11,
+          "warnings": [],
+          "epochs": 307,
+          "training_objective_loss": 0.11897921250603206,
+          "target_scale_training_mean_kwh": 0.3310606884420289
+        }
+      ],
+      "learned_prediction_days": 138,
+      "persistence_archive_hours": 3621,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 79,
+        "validation_target_count": 1896,
+        "validation_residual_rmse_kwh": 0.24593533166840212,
+        "training_scale_floor_kwh": 3.310606884420289e-09,
+        "sd_kwh": 0.24593533166840212,
+        "training_mean_kwh": 0.3310606884420289,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000010",
+      "array_file": "household_008.npz",
+      "training_days": 234,
+      "training_mean_kwh": 1.0340886748931624,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "548cab3d4aaf520a7dd69052cc6822b0855abafe36fb939e6c0c30b57c61e6c6",
+      "train_y_sha256": "13636973628fa122e110191662d93365fbe6aa9611ba793fc97988b4a16b4e41",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 244,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.009788800001842901,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.4940694000106305,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 10.063568100013072,
+          "negative_predictions_clipped": 3,
+          "warnings": [],
+          "epochs": 267,
+          "training_objective_loss": 0.09500173509317959,
+          "target_scale_training_mean_kwh": 1.0340886748931624
+        }
+      ],
+      "learned_prediction_days": 138,
+      "persistence_archive_hours": 3621,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 79,
+        "validation_target_count": 1896,
+        "validation_residual_rmse_kwh": 0.6725424285075327,
+        "training_scale_floor_kwh": 1.0340886748931624e-08,
+        "sd_kwh": 0.6725424285075327,
+        "training_mean_kwh": 1.0340886748931624,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000011",
+      "array_file": "household_009.npz",
+      "training_days": 232,
+      "training_mean_kwh": 0.6127180316630747,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "0bf1bb1188326f2e4e81654576f175d8fbba6e5baa8254bc8968ecc702cf90a9",
+      "train_y_sha256": "f915529598e6f631e61b4bad294d050a1ab3f38afb6184746e2f51024c9581b0",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 242,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 88,
+          "feature_complete_days": 80,
+          "candidate_days": 75
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.0111359000147786,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.46888159998343326,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 11.809691899979953,
+          "negative_predictions_clipped": 5,
+          "warnings": [],
+          "epochs": 320,
+          "training_objective_loss": 0.13374730598654413,
+          "target_scale_training_mean_kwh": 0.6127180316630747
+        }
+      ],
+      "learned_prediction_days": 135,
+      "persistence_archive_hours": 3620,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 75,
+        "validation_target_count": 1800,
+        "validation_residual_rmse_kwh": 0.3435852664020841,
+        "training_scale_floor_kwh": 6.127180316630747e-09,
+        "sd_kwh": 0.3435852664020841,
+        "training_mean_kwh": 0.6127180316630747,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000012",
+      "array_file": "household_010.npz",
+      "training_days": 232,
+      "training_mean_kwh": 0.07083800287356319,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "7354fcdef5176db0cf72c6b2d252fe98688c115adf424e12ce1959612005b373",
+      "train_y_sha256": "b8a0194896196da21e16d0a48d74b1cac85b00c7e63a68ad3a0a3050c1079c31",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 242,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.008869799989042804,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.3651626000064425,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 24.367880800011335,
+          "negative_predictions_clipped": 387,
+          "warnings": [],
+          "epochs": 617,
+          "training_objective_loss": 0.37416368695742536,
+          "target_scale_training_mean_kwh": 0.07083800287356319
+        }
+      ],
+      "learned_prediction_days": 138,
+      "persistence_archive_hours": 3620,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 79,
+        "validation_target_count": 1896,
+        "validation_residual_rmse_kwh": 0.16776812333578114,
+        "training_scale_floor_kwh": 7.083800287356319e-10,
+        "sd_kwh": 0.16776812333578114,
+        "training_mean_kwh": 0.07083800287356319,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000013",
+      "array_file": "household_011.npz",
+      "training_days": 230,
+      "training_mean_kwh": 0.20597826086956522,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "17acb7c2a8a132dfe99bb623c9ec777dc06a7b20f008d2bce327621f44e6c15a",
+      "train_y_sha256": "3bb5a196fc0f76b6a75faf59222797ce23ec3f9533f6b530622620494c62d49a",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 241,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.009961000003386289,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.438650800002506,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 3.363201800006209,
+          "negative_predictions_clipped": 0,
+          "warnings": [],
+          "epochs": 82,
+          "training_objective_loss": 0.039053617483465634,
+          "target_scale_training_mean_kwh": 0.20597826086956522
+        }
+      ],
+      "learned_prediction_days": 138,
+      "persistence_archive_hours": 3621,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 79,
+        "validation_target_count": 1896,
+        "validation_residual_rmse_kwh": 0.07889984134823236,
+        "training_scale_floor_kwh": 2.0597826086956523e-09,
+        "sd_kwh": 0.07889984134823236,
+        "training_mean_kwh": 0.20597826086956522,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000014",
+      "array_file": "household_012.npz",
+      "training_days": 228,
+      "training_mean_kwh": 0.23322094298245608,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "861bd2b972023f6f3376bca6e130e515b1eba5ecad7c8266dc2436ff940322d0",
+      "train_y_sha256": "28184d62ad1e11a1244630cfc31add831a6aad39e8bd48bde38da77926f5f018",
+      "counts": {
+        "train": {
+          "complete_reference_days": 261,
+          "feature_complete_days": 238,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 87,
+          "feature_complete_days": 79,
+          "candidate_days": 74
+        },
+        "test": {
+          "complete_reference_days": 55,
+          "feature_complete_days": 50,
+          "candidate_days": 46
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.01366479997523129,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.4905119000177365,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 15.026086300000316,
+          "negative_predictions_clipped": 165,
+          "warnings": [],
+          "epochs": 427,
+          "training_objective_loss": 0.2899502937280022,
+          "target_scale_training_mean_kwh": 0.23322094298245608
+        }
+      ],
+      "learned_prediction_days": 129,
+      "persistence_archive_hours": 3617,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 74,
+        "validation_target_count": 1776,
+        "validation_residual_rmse_kwh": 0.29667725620870167,
+        "training_scale_floor_kwh": 2.3322094298245607e-09,
+        "sd_kwh": 0.29667725620870167,
+        "training_mean_kwh": 0.23322094298245608,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000015",
+      "array_file": "household_013.npz",
+      "training_days": 211,
+      "training_mean_kwh": 0.3835227093404423,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "21bbaa25b52be55eb0b7d491c7b67397a18bd2191a5350becea8f411669aa32b",
+      "train_y_sha256": "8625f1ad773770d12f6b12fa0847291bfd62b54547b6583e31decd3611dc8f89",
+      "counts": {
+        "train": {
+          "complete_reference_days": 256,
+          "feature_complete_days": 225,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 87,
+          "feature_complete_days": 77,
+          "candidate_days": 71
+        },
+        "test": {
+          "complete_reference_days": 55,
+          "feature_complete_days": 50,
+          "candidate_days": 46
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.014093099976889789,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.4668612999957986,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 15.215908500016667,
+          "negative_predictions_clipped": 108,
+          "warnings": [],
+          "epochs": 451,
+          "training_objective_loss": 0.1356672712008429,
+          "target_scale_training_mean_kwh": 0.3835227093404423
+        }
+      ],
+      "learned_prediction_days": 127,
+      "persistence_archive_hours": 3608,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 71,
+        "validation_target_count": 1704,
+        "validation_residual_rmse_kwh": 0.4743950632854238,
+        "training_scale_floor_kwh": 3.835227093404423e-09,
+        "sd_kwh": 0.4743950632854238,
+        "training_mean_kwh": 0.3835227093404423,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000017",
+      "array_file": "household_014.npz",
+      "training_days": 231,
+      "training_mean_kwh": 0.2591360028318903,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "cd50e31cb942017f49579d09141a114883a83d88c2a4fb983d883dd925918f2b",
+      "train_y_sha256": "736b7370ff68160116e0827aa78dc28fddc56a8b2418c06d279afbbf17162718",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 242,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 88,
+          "feature_complete_days": 80,
+          "candidate_days": 76
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.010074699996039271,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.3813128999900073,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 18.478804399986984,
+          "negative_predictions_clipped": 142,
+          "warnings": [],
+          "epochs": 446,
+          "training_objective_loss": 0.3006083908813545,
+          "target_scale_training_mean_kwh": 0.2591360028318903
+        }
+      ],
+      "learned_prediction_days": 135,
+      "persistence_archive_hours": 3620,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 76,
+        "validation_target_count": 1824,
+        "validation_residual_rmse_kwh": 0.28042841095615967,
+        "training_scale_floor_kwh": 2.591360028318903e-09,
+        "sd_kwh": 0.28042841095615967,
+        "training_mean_kwh": 0.2591360028318903,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000018",
+      "array_file": "household_015.npz",
+      "training_days": 234,
+      "training_mean_kwh": 0.4368228276175214,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "f4f83290bee7bc63296522b59c3c6d29db62bef1e75f760ea0c22326feaa1676",
+      "train_y_sha256": "73947e363a680092b018821f8331f0f4822e042d748cbe9812cf87b354ed2072",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 244,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.01035789999878034,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.4673241999989841,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 14.632186599978013,
+          "negative_predictions_clipped": 16,
+          "warnings": [],
+          "epochs": 349,
+          "training_objective_loss": 0.12777932137491982,
+          "target_scale_training_mean_kwh": 0.4368228276175214
+        }
+      ],
+      "learned_prediction_days": 138,
+      "persistence_archive_hours": 3621,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 79,
+        "validation_target_count": 1896,
+        "validation_residual_rmse_kwh": 0.28077562437419873,
+        "training_scale_floor_kwh": 4.368228276175214e-09,
+        "sd_kwh": 0.28077562437419873,
+        "training_mean_kwh": 0.4368228276175214,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000019",
+      "array_file": "household_016.npz",
+      "training_days": 234,
+      "training_mean_kwh": 0.26276086182336184,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "1c294a8efbd6468be467e1c061112837f08daff72aa6f916a5fef0758182cea3",
+      "train_y_sha256": "2f6ad8bfb407902320f3d1d23d4eb9562604624974b4058da0dcc5c661c30e4c",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 244,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.013953200017567724,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.35400759999174625,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 7.640175300010014,
+          "negative_predictions_clipped": 3,
+          "warnings": [],
+          "epochs": 206,
+          "training_objective_loss": 0.1767838220814549,
+          "target_scale_training_mean_kwh": 0.26276086182336184
+        }
+      ],
+      "learned_prediction_days": 138,
+      "persistence_archive_hours": 3621,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 79,
+        "validation_target_count": 1896,
+        "validation_residual_rmse_kwh": 0.17733079208664357,
+        "training_scale_floor_kwh": 2.6276086182336185e-09,
+        "sd_kwh": 0.17733079208664357,
+        "training_mean_kwh": 0.26276086182336184,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000020",
+      "array_file": "household_017.npz",
+      "training_days": 228,
+      "training_mean_kwh": 0.2380144371710526,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "241e72582320ed7ff5acd87fdc70d18006a197a36f0a720e7d7e8c505d44ef17",
+      "train_y_sha256": "080900eb214c39bb70d5939327c774fb27320d474d90621762f916d3589837d4",
+      "counts": {
+        "train": {
+          "complete_reference_days": 261,
+          "feature_complete_days": 239,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.00950729998294264,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.379994999995688,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 14.264411999989534,
+          "negative_predictions_clipped": 118,
+          "warnings": [],
+          "epochs": 408,
+          "training_objective_loss": 0.22816422754538013,
+          "target_scale_training_mean_kwh": 0.2380144371710526
+        }
+      ],
+      "learned_prediction_days": 138,
+      "persistence_archive_hours": 3621,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 79,
+        "validation_target_count": 1896,
+        "validation_residual_rmse_kwh": 0.2261371165137697,
+        "training_scale_floor_kwh": 2.3801443717105262e-09,
+        "sd_kwh": 0.2261371165137697,
+        "training_mean_kwh": 0.2380144371710526,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000021",
+      "array_file": "household_018.npz",
+      "training_days": 234,
+      "training_mean_kwh": 0.8921704059294872,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "c4f4fd0099ba1d4c4f51c6e3121d52c9c033d9dc9d6ffb355a70872d54f42976",
+      "train_y_sha256": "e552d38485e198497b0c56cd50fe5769cc44f3feb7edc516b633f2fe176453ce",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 244,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 88,
+          "feature_complete_days": 80,
+          "candidate_days": 76
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.01518339998438023,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.47123880000435747,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 8.161134900001343,
+          "negative_predictions_clipped": 0,
+          "warnings": [],
+          "epochs": 191,
+          "training_objective_loss": 0.05260732039612461,
+          "target_scale_training_mean_kwh": 0.8921704059294872
+        }
+      ],
+      "learned_prediction_days": 135,
+      "persistence_archive_hours": 3620,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 76,
+        "validation_target_count": 1824,
+        "validation_residual_rmse_kwh": 0.47176686142431357,
+        "training_scale_floor_kwh": 8.921704059294871e-09,
+        "sd_kwh": 0.47176686142431357,
+        "training_mean_kwh": 0.8921704059294872,
+        "frozen_before_test_evaluation": true
+      }
+    },
+    {
+      "household_id": "MAC000022",
+      "array_file": "household_019.npz",
+      "training_days": 230,
+      "training_mean_kwh": 0.4604721015036232,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "8e2e142040a50bfeab2fb944ff831342403ce4fade49c934ca154f5bc57a904e",
+      "train_y_sha256": "cb9d87af071d70b3b8c509385f17e26c26722c55deebae3dc975366ec08e842a",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 241,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 56,
+          "feature_complete_days": 52,
+          "candidate_days": 49
+        }
+      },
+      "models": [
+        {
+          "model": "ridge",
+          "seconds": 0.00922589999390766,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "hist_gradient_boosting",
+          "seconds": 0.46545220000552945,
+          "negative_predictions_clipped": 0,
+          "warnings": []
+        },
+        {
+          "model": "mlp",
+          "seconds": 12.185323100013193,
+          "negative_predictions_clipped": 0,
+          "warnings": [],
+          "epochs": 292,
+          "training_objective_loss": 0.05082441415723178,
+          "target_scale_training_mean_kwh": 0.4604721015036232
+        }
+      ],
+      "learned_prediction_days": 135,
+      "persistence_archive_hours": 3617,
+      "surrogate": {
+        "mean_model": "ridge",
+        "validation_days": 79,
+        "validation_target_count": 1896,
+        "validation_residual_rmse_kwh": 0.24034239366079296,
+        "training_scale_floor_kwh": 4.604721015036232e-09,
+        "sd_kwh": 0.24034239366079296,
+        "training_mean_kwh": 0.4604721015036232,
+        "frozen_before_test_evaluation": true
+      }
+    }
+  ],
+  "model_fit_count": 60,
+  "forecast_archive_rows": 69487,
+  "models": [
+    "daily",
+    "ridge",
+    "hist_gradient_boosting",
+    "mlp"
+  ],
+  "feature_names": [
+    "lag2_same_hour",
+    "lag3_same_hour",
+    "lag8_same_hour",
+    "mean_day_minus2",
+    "hour_sin",
+    "hour_cos",
+    "weekday_sin",
+    "weekday_cos",
+    "month_sin",
+    "month_cos"
+  ],
+  "model_parameters": {
+    "ridge": {
+      "alpha": 1.0,
+      "input_standard_scaler": true
+    },
+    "hist_gradient_boosting": {
+      "max_iter": 100,
+      "learning_rate": 0.08,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1,
+      "max_bins": 127,
+      "random_state": 1729,
+      "early_stopping": false
+    },
+    "mlp": {
+      "hidden_layer_sizes": [
+        32,
+        16
+      ],
+      "activation": "relu",
+      "solver": "adam",
+      "alpha": 0.001,
+      "learning_rate_init": 0.001,
+      "batch_size": 256,
+      "max_iter": 1000,
+      "early_stopping": false,
+      "random_state": 1729,
+      "tol": 0.0001,
+      "n_iter_no_change": 10,
+      "shuffle": true,
+      "input_standard_scaler": true,
+      "target_scale": "training mean"
+    }
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.9.1"
+  },
+  "numerical_threads": 2,
+  "prepared_sha256": "a512d3152b67a716cde1d493d15089d80ceff90830c1fd97d91bb9269782c514",
+  "script_sha256": "d03ed8eac3d2d749076eac6749210ad38513b56ce6a664effac33bcb3686e5c4",
+  "output_hashes": {
+    "forecast_archive.csv": "8ddeca53234ee9d4014fa07febc41ad93a00de21c5ac32daeda7d81c15c6056c",
+    "surrogate_parameters.json": "84c18bdca2f29707c4a64b03e3a7a0ae477d7f53fdcd05ab251132b11a7b69c4",
+    "candidate_days.csv": "9d4ac9e5c08f9de17cfa07d6f0bd86f2a0f98a71a03fb73428acb6b4ebdc2013",
+    "reference_targets.csv": "6ead862b89ad64b798faebd4b7770c8f693aa8b0579dc06c81bf12a674128ecc"
+  },
+  "scope": "Fixed training-only models, validation-only residual scale, causal forecast archive; no test comparison or acquisition outcome computed."
+}

@@ -1,0 +1,218 @@
+"""Executable pair-specific deadline audit; selector never receives hidden targets.
+
+Run validation first, then test, against a frozen new causal forecast archive.
+Each JSONL row retains initial information and every complete charged batch.
+No outcome-based filtering or separately optimized budget shortcuts.
+"""
+from pathlib import Path
+from datetime import datetime, timezone
+import argparse, hashlib, itertools, json, math, sys, time
+import numpy as np
+import pandas as pd
+
+HERE=Path(__file__).resolve().parent
+ROOT=HERE.parents[1]
+sys.path.insert(0,str(HERE/'acquisition'))
+from acquisition import select_batch, POLICIES
+
+MODELS=['daily','ridge','hist_gradient_boosting','mlp']
+PAIRS=list(itertools.combinations(range(4),2))
+SEEDS=[1103,2207,3301]
+CAP=6
+
+def digest(p):
+    return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+def stream(*parts):
+    h=hashlib.sha256('|'.join(map(str,parts)).encode()).digest()
+    return np.random.default_rng(int.from_bytes(h[:8],'little'))
+
+def safe(x):
+    if isinstance(x,dict): return {str(k):safe(v) for k,v in x.items()}
+    if isinstance(x,(tuple,list,np.ndarray)): return [safe(v) for v in x]
+    if isinstance(x,(np.integer,)): return int(x)
+    if isinstance(x,(np.floating,float)): return float(x) if math.isfinite(x) else None
+    if isinstance(x,(np.bool_,)): return bool(x)
+    return x
+
+def closure(observed,totals):
+    out=observed.copy(); deductions=[]
+    for g,total in enumerate(totals):
+        idx=np.arange(g*6,(g+1)*6)
+        unknown=idx[np.isnan(out[idx])]
+        residual=float(total)-math.fsum(float(v) for v in out[idx] if math.isfinite(v))
+        if residual < -1e-10*max(1.,abs(total)): raise AssertionError('Infeasible residual')
+        residual=max(0.,residual)
+        if len(unknown)==1:
+            out[unknown[0]]=residual
+            deductions.append({'index':int(unknown[0]),'value':residual,'kind':'singleton','block':g})
+        elif len(unknown)>1 and residual==0:
+            for i in unknown:
+                out[i]=0.;deductions.append({'index':int(i),'value':0.,'kind':'zero-total','block':g})
+    return out,deductions
+
+def interval(a,b,observed,totals):
+    c=2*(b-a)
+    common=math.fsum(float(x*x-y*y) for x,y in zip(a,b))
+    common+=math.fsum(float(c[i]*v) for i,v in enumerate(observed) if math.isfinite(v))
+    lo=hi=common
+    for g,total in enumerate(totals):
+        idx=np.arange(g*6,(g+1)*6); missing=idx[np.isnan(observed[idx])]
+        if not len(missing): continue
+        residual=max(0.,float(total)-math.fsum(float(v) for v in observed[idx] if math.isfinite(v)))
+        lo+=residual*float(np.min(c[missing]));hi+=residual*float(np.max(c[missing]))
+    return lo/24,hi/24
+
+def decision(lo,hi):
+    tol=1e-10*max(1.,abs(lo),abs(hi))
+    if hi < -tol:return 'a',tol
+    if lo > tol:return 'b',tol
+    if hi-lo<=tol:return 'numerical_tie',tol
+    return 'unresolved',tol
+
+class RevealOracle:
+    """Reference is accessible only to reveal and post-selection validation."""
+    def __init__(self,reference): self._reference=np.asarray(reference).copy()
+    def reveal(self,indices): return self._reference[indices].copy()
+    def reference_difference(self,a,b): return float(np.mean((a-self._reference)**2-(b-self._reference)**2))
+    def validate_interval(self,a,b,lo,hi):
+        d=self.reference_difference(a,b)
+        tol=1e-9*max(1.,abs(lo),abs(hi),abs(d))
+        if not lo-tol<=d<=hi+tol: raise AssertionError('Reference enclosure failure')
+        status,_=decision(lo,hi)
+        if (status=='a' and d>=0) or(status=='b' and d<=0):raise AssertionError('Incorrect strict certificate')
+        return d
+
+def trajectory(policy,a,b,initial,totals,oracle,mean,sd,key):
+    observed=initial.copy(); paid=[];stages=[];cost=0;planning=0.
+    lo,hi=interval(a,b,observed,totals);status,_=decision(lo,hi)
+    oracle.validate_interval(a,b,lo,hi)
+    start_status=status; start_bounds=[lo,hi]
+    while status=='unresolved' and cost<CAP:
+        chosen=select_batch(policy,a,b,observed,totals,min(2,CAP-cost),
+                            rng=stream(*key,policy,len(stages)),
+                            surrogate_mean=mean,surrogate_sd=sd)
+        batch=chosen['query_indices'];planning+=chosen['planning_seconds']
+        if not batch: raise AssertionError('Positive-width trajectory failed to progress')
+        if len(set(batch))!=len(batch) or set(batch)&set(paid):raise AssertionError('Duplicate paid request')
+        if any(not np.isnan(observed[i]) for i in batch):raise AssertionError('Query to known coordinate')
+        if len(batch)>min(2,CAP-cost):raise AssertionError('Query cap violation')
+        before=observed.copy();before_bounds=[lo,hi]
+        cost+=len(batch);paid.extend(batch)
+        values=oracle.reveal(batch);observed[batch]=values
+        observed,deductions=closure(observed,totals)
+        lo,hi=interval(a,b,observed,totals);status,_=decision(lo,hi)
+        oracle.validate_interval(a,b,lo,hi)
+        tol=1e-9*max(1.,abs(lo),abs(hi),*map(abs,before_bounds))
+        if lo<before_bounds[0]-tol or hi>before_bounds[1]+tol:raise AssertionError('Information widened interval')
+        stages.append({'batch':batch,'revealed':values,'cost':cost,'before':before,
+                       'after':observed,'deductions':deductions,'before_bounds':before_bounds,
+                       'bounds':[lo,hi],'status':status,**chosen})
+    cert_cost=0 if start_status in ['a','b'] else next((s['cost'] for s in stages if s['status'] in ['a','b']),None)
+    return {'initial_status':start_status,'initial_bounds':start_bounds,'stages':stages,
+            'final_status':status,'paid_requests':cost,'paid_indices':paid,'certification_cost':cert_cost,
+            'planning_seconds':planning,'final_bounds':[lo,hi]}
+
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--forecast-dir',type=Path,required=True)
+    ap.add_argument('--period',choices=['validation','test'],required=True)
+    ap.add_argument('--output-dir',type=Path,required=True);args=ap.parse_args()
+    out=args.output_dir.resolve();out.mkdir(parents=True,exist_ok=False)
+    started=time.perf_counter();fd=args.forecast_dir.resolve()
+    files={p.relative_to(ROOT).as_posix():digest(p) for p in [fd/'forecast_archive.csv',fd/'reference_targets.csv',fd/'candidate_days.csv',
+            fd/'surrogate_parameters.json',HERE/'experiment_protocol.txt',HERE/'period_amendment.txt',HERE/'source_amendment.txt',HERE/'summarize.py',Path(__file__)]}
+    for p in sorted((HERE/'acquisition').glob('*.py')):files[p.relative_to(ROOT).as_posix()]=digest(p)
+    (out/'pre_outcome_manifest.json').write_text(json.dumps({'frozen_utc':datetime.now(timezone.utc).isoformat(),
+        'period':args.period,'inputs':files,'code_uses_all_prescribed_cases':True},indent=2)+'\n')
+    arc=pd.read_csv(fd/'forecast_archive.csv',dtype={'household_id':str})
+    for col in ['target_timestamp_utc','issue_time_utc','persistence_source_time_utc','latest_feature_source_end_utc']:
+        arc[col]=pd.to_datetime(arc[col],utc=True)
+    ref=pd.read_csv(fd/'reference_targets.csv',dtype={'household_id':str})
+    ref['timestamp_utc']=pd.to_datetime(ref['timestamp_utc'],utc=True)
+    candidates=pd.read_csv(fd/'candidate_days.csv',dtype={'household_id':str})
+    candidates['day_utc']=pd.to_datetime(candidates['day_utc'],utc=True)
+    if candidates.eligible.dtype!=bool: candidates['eligible']=candidates.eligible.astype(str).str.lower().eq('true')
+    candidates=candidates[(candidates.period==args.period)&candidates.eligible].sort_values(['household_id','day_utc'])
+    surrogate=json.loads((fd/'surrogate_parameters.json').read_text())
+    if 'households' in surrogate:surrogate=surrogate['households']
+    rows=[];snapshots=[];days_count=0
+    with (out/'trajectories.jsonl').open('w',encoding='utf-8') as trace:
+        for household,days in candidates.groupby('household_id',sort=True):
+            ha=arc[arc.household_id==household].sort_values('target_timestamp_utc')
+            hr=ref[ref.household_id==household].set_index('timestamp_utc')
+            if ha.target_timestamp_utc.duplicated().any():raise AssertionError('Ambiguous duplicate archive row')
+            lookup=ha.set_index('target_timestamp_utc')
+            learned=ha[MODELS[1:]].notna().any(axis=1)
+            if not (ha.loc[learned,'latest_feature_source_end_utc']<=ha.loc[learned,'issue_time_utc']).all():
+                raise AssertionError('Feature timestamp violation')
+            info=surrogate[household]
+            sd=float(info['sd_kwh'])
+            expected=max(float(info['validation_residual_rmse_kwh']),1e-8*float(info['training_mean_kwh']))
+            if sd!=expected:raise AssertionError('Frozen surrogate SD differs from declared validation rule')
+            for day in days.day_utc:
+                stamps=pd.date_range(day,periods=24,freq='h')
+                reference=hr.loc[stamps,'energy_kwh'].to_numpy(float)
+                pred=lookup.loc[stamps,MODELS].to_numpy(float).T
+                if not np.isfinite(reference).all() or not np.isfinite(pred).all():raise AssertionError('Invalid eligible day')
+                early=day+pd.Timedelta(days=1);late=early+pd.Timedelta(hours=12)
+                future=ha[ha.persistence_source_time_utc.isin(stamps)&ha.daily.notna()]
+                earlycopies=future[future.issue_time_utc<=early]
+                latecopies=future[future.issue_time_utc<=late]
+                if len(earlycopies):raise AssertionError('Unexpected early target copy')
+                if len(latecopies)!=24:raise AssertionError('Late target copy missing')
+                copy_by_hour={int((r.persistence_source_time_utc-day).total_seconds()/3600):
+                              {'value':float(r.daily),'target_timestamp_utc':str(r.target_timestamp_utc),
+                               'source_timestamp_utc':str(r.persistence_source_time_utc),'issue_time_utc':str(r.issue_time_utc)}
+                              for r in latecopies.itertuples()}
+                if set(copy_by_hour)!=set(range(24)):raise AssertionError('Nonunique late copies')
+                if not np.array_equal(np.array([copy_by_hour[h]['value'] for h in range(24)]),reference):
+                    raise AssertionError('Permitted copies differ from reference')
+                available={regime:ha[ha.issue_time_utc<=cutoff] for regime,cutoff in [('early',early),('late',late)]}
+                snapshots.append({'household_id':household,'day_utc':str(day),'early_cutoff':str(early),'late_cutoff':str(late),
+                    'available_forecast_rows':{reg:len(v) for reg,v in available.items()},
+                    'available_prediction_values':{reg:{model:int(v[model].notna().sum()) for model in MODELS} for reg,v in available.items()},
+                    'early_future_target_rows':int((available['early'].target_timestamp_utc>=early).sum()),
+                    'early_direct_target_copies':0,'late_direct_target_copies':24,'late_copy_sources':copy_by_hour})
+                totals=np.array([math.fsum(reference[g*6:(g+1)*6]) for g in range(4)])
+                for seed in SEEDS:
+                    start=int(stream('mask',household,str(day),seed).integers(0,19));mask=list(range(start,start+6))
+                    obs=reference.copy();obs[mask]=np.nan;obs,initial_deductions=closure(obs,totals)
+                    for pair_no,(ia,ib) in enumerate(PAIRS):
+                        case_id=f'{household}|{day.date()}|{seed}|{ia}-{ib}'
+                        oracle=RevealOracle(reference);delta=oracle.reference_difference(pred[ia],pred[ib])
+                        base={'case_id':case_id,'household_id':household,'day_utc':str(day),'month':day.strftime('%Y-%m'),
+                              'seed':seed,'pair':f'{MODELS[ia]} vs {MODELS[ib]}','learned_pair':ia!=0,'mask':mask,
+                              'a':pred[ia],'b':pred[ib],'totals':totals,'initial_observed':obs,
+                              'initial_deductions':initial_deductions,'reference_difference':delta,'exact_reference_tie':delta==0,
+                              'near_reference_tie':abs(delta)<=1e-10*max(1.,abs(delta)),'surrogate_sd':sd,'surrogate_mean':pred[1]}
+                        results={}
+                        for policy in POLICIES:
+                            result=trajectory(policy,pred[ia],pred[ib],obs,totals,oracle,pred[1],sd,(household,str(day),seed,ia,ib))
+                            results[policy]=result
+                            rows.append({**{k:base[k] for k in ['case_id','household_id','day_utc','month','seed','pair','learned_pair','exact_reference_tie','near_reference_tie']},
+                                'regime':'early','policy':policy,**{k:result[k] for k in ['initial_status','final_status','paid_requests','certification_cost','planning_seconds']},
+                                'initial_width':result['initial_bounds'][1]-result['initial_bounds'][0],
+                                'final_width':result['final_bounds'][1]-result['final_bounds'][0]})
+                        lateobs=np.array([copy_by_hour[h]['value'] for h in range(24)])
+                        llo,lhi=interval(pred[ia],pred[ib],lateobs,totals);ls,_=decision(llo,lhi)
+                        oracle.validate_interval(pred[ia],pred[ib],llo,lhi)
+                        base.update(policies=results,late_bounds=[llo,lhi],late_status=ls)
+                        trace.write(json.dumps(safe(base),separators=(',',':'),allow_nan=False)+'\n')
+                        rows.append({**{k:base[k] for k in ['case_id','household_id','day_utc','month','seed','pair','learned_pair','exact_reference_tie','near_reference_tie']},
+                            'regime':'late','policy':'free_archive','initial_status':ls,'final_status':ls,'paid_requests':0,
+                            'certification_cost':0 if ls in ['a','b'] else None,'planning_seconds':0.,'initial_width':lhi-llo,'final_width':lhi-llo})
+                days_count+=1
+                if days_count%10==0:print(json.dumps({'period':args.period,'days_done':days_count,'case_rows':len(rows),'seconds':time.perf_counter()-started}),flush=True)
+    pd.DataFrame(rows).to_csv(out/'cases.csv',index=False,float_format='%.17g')
+    (out/'archive_snapshots.json').write_text(json.dumps(safe(snapshots),indent=2)+'\n')
+    for p,expected in files.items():assert digest(ROOT/p)==expected,'Frozen input changed: '+p
+    result={'status':'passed','period':args.period,'completed_utc':datetime.now(timezone.utc).isoformat(),
+            'households':int(candidates.household_id.nunique()),'eligible_days':len(candidates),
+            'base_cases':len(candidates)*18,'policy_rows':len(rows),'wall_seconds':time.perf_counter()-started,
+            'incorrect_certificates':0,'enclosure_failures':0,'timestamp_violations':0,'duplicate_paid_queries':0,
+            'cap_violations':0,'selection_hidden_target_arguments':0,'input_hashes':files,
+            'outputs':{p.name:digest(p) for p in out.iterdir() if p.is_file()}}
+    (out/'run_result.json').write_text(json.dumps(result,indent=2)+'\n')
+    print(json.dumps({k:v for k,v in result.items() if k not in ['input_hashes','outputs']},indent=2))
+
+if __name__=='__main__':main()

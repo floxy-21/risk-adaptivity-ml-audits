@@ -1,0 +1,85 @@
+\subsection{A hardest completion and randomized adaptive optimality}
+\label{sec:adaptive-dual-completion}
+
+Theorem~\ref{prop:risk_classification} already gives equality of randomized
+batch and adaptive mean-width risks for this model. The specialization below
+extracts the common hardest completion directly from the finite-game dual,
+providing a computable optimality certificate for the compact solver.
+Adaptive policies retain the same hard budget $B$, independent random seed,
+exact coordinate information and sharp terminal interval as in
+Section~\ref{sec:risk_setup}.
+
+\begin{proposition}[A common hardest completion]
+\label{prop:adaptive-dual-completion}
+For the disjoint exact-total model, an optimum $w^*$ of
+\eqref{eq:random-dual} defines the active-block values
+$y^*_{gi}=w^*_{gi}$ of a feasible residual completion. Restore each omitted
+constant-coefficient block with any fixed nonnegative allocation of its
+total, and restore the determined singleton and zero-total values.
+For every admissible terminal coordinate set $Q$,
+\begin{equation}
+ W(Q,y^*)\geq R_B.
+ \label{eq:common-hardest-width}
+\end{equation}
+Consequently, if $\mathcal A_B$ is the class of randomized adaptive
+coordinate-query policies satisfying the hard budget, then
+\begin{equation}
+ \inf_{A\in\mathcal A_B}\sup_{y\in\F}
+       \mathbb E[W_A(y)] = R_B.
+ \label{eq:adaptive-random-equality}
+\end{equation}
+The existing compact randomized batch policy attains this value. At $y^*$,
+every execution of every admissible adaptive policy has terminal width at
+least $R_B$, not merely an expectation bounded below by $R_B$.
+\end{proposition}
+
+\begin{proof}
+The dual equalities $\sum_i w^*_{gi}=E_g$ and inequalities $w^*_{gi}\geq0$
+are exactly the active residual target constraints. Restoring the omitted
+blocks gives a member of $\F$; appending the previously observed coordinates
+gives a full record in $F$. Omitted blocks have zero uncertainty contribution.
+Strong linear-programming
+duality gives an optimal dual objective $\eta^*=R_B$; the batch inequalities
+and the identity in \eqref{eq:random-objective} yield
+$W(Q,y^*)=\sum_{g,i}w^*_{gi}v_{gi}(Q)\geq R_B$ for every $Q\in\mathcal Q_B$.
+Querying the last remaining coordinate of a block, repeating a query, or
+querying a coordinate already determined by the retained information adds
+no constraint. Removing those redundant queries leaves an equivalent
+terminal interval. Queries in omitted independent constant-coefficient
+blocks can also be discarded for the width objective: their contrast
+contribution is fixed, and their answers impose no constraint on other
+blocks. The remaining set belongs to $\mathcal Q_B$ and costs no more.
+
+By Proposition~\ref{prop:risk_concavity_transcript}, after fixing the seed,
+the adaptive transcript has exactly the coordinate-observation fiber of
+its terminal set $Q$. Its sharp width is therefore $W(Q,y)$; the query
+choices and stopping decision add no constraints beyond those answers.
+
+At $y^*$ the previous lower bound therefore applies to every terminal
+transcript and seed. Taking expectations and then the worst completion
+gives the lower bound $R_B$ for every adaptive policy. Randomized batches
+are a subclass of adaptive policies, and the compact formulation constructs
+a batch distribution with worst expected width $R_B$, proving equality.
+\end{proof}
+
+This argument uses established linear-programming duality and minimax
+reasoning. Its consequence here is a checkable hardest-record certificate
+for the existing structured optimizer. It does not optimize the expected
+number of requests until certification, the probability that an interval
+excludes zero, or the width on a particular realized historical record.
+
+\paragraph{Extracting a completion from the implementation.}
+The numerical compact implementation explicitly constrains $t_g\geq0$,
+although these bounds are redundant in the mathematical primal. Its
+nonnegative scenario multipliers may therefore satisfy
+$\sum_i\widehat w_{gi}\leq E_g$ rather than equality. In exact arithmetic,
+add each nonnegative mass deficit to a fixed coordinate. Since
+$v_{gi}(Q)\geq0$, this cannot decrease any batch payoff. The resulting
+completion is feasible, and its minimum batch payoff is both at least the
+dual value and at most the primal value; strong duality makes these equal.
+The verification code retains the raw multipliers and records clipping,
+any tiny excess-mass correction, and the added deficits. It checks the
+completed record with the existing weighted pricing oracle and, on small
+instances, by independently enumerating every final coordinate subset
+of size at most $B$, including redundant full-block queries. Numerical
+discrepancies are reported separately from the exact theorem.

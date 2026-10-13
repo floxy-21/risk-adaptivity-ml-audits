@@ -1,0 +1,137 @@
+2026-10-10T00:40:40+00:00 Starting controlled verification-outage study
+2026-10-10T00:40:54+00:00 Fitted household/household_1: train587 test246, 13.48s
+2026-10-10T00:41:05+00:00 Evaluated household/household_1 day50/246
+2026-10-10T00:41:15+00:00 Evaluated household/household_1 day100/246
+2026-10-10T00:41:27+00:00 Evaluated household/household_1 day150/246
+2026-10-10T00:41:41+00:00 Evaluated household/household_1 day200/246
+2026-10-10T00:41:49+00:00 Finished household/household_1; referencechecks135
+2026-10-10T00:41:57+00:00 Fitted portugal/MT_001: train357 test107, 7.63s
+2026-10-10T00:42:06+00:00 Evaluated portugal/MT_001 day50/107
+2026-10-10T00:42:21+00:00 Evaluated portugal/MT_001 day100/107
+2026-10-10T00:42:23+00:00 Finished portugal/MT_001; referencechecks216
+2026-10-10T00:42:25+00:00 Fitted portugal/MT_002: train357 test107, 1.88s
+2026-10-10T00:42:35+00:00 Evaluated portugal/MT_002 day50/107
+2026-10-10T00:42:44+00:00 Evaluated portugal/MT_002 day100/107
+2026-10-10T00:42:45+00:00 Finished portugal/MT_002; referencechecks297
+2026-10-10T00:42:48+00:00 Fitted portugal/MT_003: train357 test107, 2.92s
+2026-10-10T00:43:05+00:00 Evaluated portugal/MT_003 day50/107
+2026-10-10T00:43:16+00:00 Evaluated portugal/MT_003 day100/107
+2026-10-10T00:43:17+00:00 Finished portugal/MT_003; referencechecks372
+2026-10-10T00:43:19+00:00 Fitted portugal/MT_004: train357 test107, 1.59s
+2026-10-10T00:43:32+00:00 Evaluated portugal/MT_004 day50/107
+2026-10-10T00:43:40+00:00 Evaluated portugal/MT_004 day100/107
+2026-10-10T00:43:41+00:00 Finished portugal/MT_004; referencechecks435
+2026-10-10T00:43:43+00:00 Fitted portugal/MT_005: train357 test107, 1.29s
+2026-10-10T00:43:54+00:00 Evaluated portugal/MT_005 day50/107
+2026-10-10T00:44:06+00:00 Evaluated portugal/MT_005 day100/107
+2026-10-10T00:44:09+00:00 Finished portugal/MT_005; referencechecks503
+2026-10-10T00:44:10+00:00 Fitted portugal/MT_006: train357 test107, 1.56s
+2026-10-10T00:44:21+00:00 Evaluated portugal/MT_006 day50/107
+2026-10-10T00:44:30+00:00 Evaluated portugal/MT_006 day100/107
+2026-10-10T00:44:31+00:00 Finished portugal/MT_006; referencechecks569
+2026-10-10T00:44:38+00:00 Fitted portugal/MT_007: train357 test107, 6.77s
+2026-10-10T00:44:50+00:00 Evaluated portugal/MT_007 day50/107
+2026-10-10T00:45:01+00:00 Evaluated portugal/MT_007 day100/107
+2026-10-10T00:45:02+00:00 Finished portugal/MT_007; referencechecks644
+2026-10-10T00:45:04+00:00 Fitted portugal/MT_008: train357 test107, 1.62s
+2026-10-10T00:45:13+00:00 Evaluated portugal/MT_008 day50/107
+2026-10-10T00:45:24+00:00 Evaluated portugal/MT_008 day100/107
+2026-10-10T00:45:26+00:00 Finished portugal/MT_008; referencechecks709
+2026-10-10T00:45:30+00:00 Fitted portugal/MT_009: train357 test107, 4.39s
+2026-10-10T00:45:48+00:00 Evaluated portugal/MT_009 day50/107
+2026-10-10T00:46:00+00:00 Evaluated portugal/MT_009 day100/107
+2026-10-10T00:46:01+00:00 Finished portugal/MT_009; referencechecks777
+2026-10-10T00:46:04+00:00 Fitted portugal/MT_010: train357 test107, 3.45s
+2026-10-10T00:46:13+00:00 Evaluated portugal/MT_010 day50/107
+2026-10-10T00:46:23+00:00 Evaluated portugal/MT_010 day100/107
+2026-10-10T00:46:24+00:00 Finished portugal/MT_010; referencechecks839
+2026-10-10T00:46:25+00:00 Fitted portugal/MT_011: train357 test107, 1.05s
+2026-10-10T00:46:33+00:00 Evaluated portugal/MT_011 day50/107
+2026-10-10T00:46:43+00:00 Evaluated portugal/MT_011 day100/107
+2026-10-10T00:46:44+00:00 Finished portugal/MT_011; referencechecks907
+2026-10-10T00:46:46+00:00 Fitted portugal/MT_013: train357 test107, 2.25s
+2026-10-10T00:46:59+00:00 Evaluated portugal/MT_013 day50/107
+2026-10-10T00:47:06+00:00 Evaluated portugal/MT_013 day100/107
+2026-10-10T00:47:07+00:00 Finished portugal/MT_013; referencechecks1000
+2026-10-10T00:47:09+00:00 Fitted portugal/MT_014: train357 test107, 1.43s
+2026-10-10T00:47:20+00:00 Evaluated portugal/MT_014 day50/107
+2026-10-10T00:47:29+00:00 Evaluated portugal/MT_014 day100/107
+2026-10-10T00:47:30+00:00 Finished portugal/MT_014; referencechecks1000
+2026-10-10T00:47:32+00:00 Fitted portugal/MT_016: train357 test107, 1.33s
+2026-10-10T00:47:39+00:00 Evaluated portugal/MT_016 day50/107
+2026-10-10T00:47:48+00:00 Evaluated portugal/MT_016 day100/107
+2026-10-10T00:47:50+00:00 Finished portugal/MT_016; referencechecks1000
+2026-10-10T00:47:51+00:00 Fitted portugal/MT_017: train357 test107, 1.21s
+2026-10-10T00:48:00+00:00 Evaluated portugal/MT_017 day50/107
+2026-10-10T00:48:08+00:00 Evaluated portugal/MT_017 day100/107
+2026-10-10T00:48:09+00:00 Finished portugal/MT_017; referencechecks1000
+2026-10-10T00:48:11+00:00 Fitted portugal/MT_018: train357 test107, 1.57s
+2026-10-10T00:48:21+00:00 Evaluated portugal/MT_018 day50/107
+2026-10-10T00:48:32+00:00 Evaluated portugal/MT_018 day100/107
+2026-10-10T00:48:34+00:00 Finished portugal/MT_018; referencechecks1000
+2026-10-10T00:48:35+00:00 Fitted portugal/MT_019: train357 test107, 1.75s
+2026-10-10T00:48:45+00:00 Evaluated portugal/MT_019 day50/107
+2026-10-10T00:48:57+00:00 Evaluated portugal/MT_019 day100/107
+2026-10-10T00:48:59+00:00 Finished portugal/MT_019; referencechecks1000
+2026-10-10T00:49:04+00:00 Fitted portugal/MT_020: train357 test107, 5.04s
+2026-10-10T00:49:16+00:00 Evaluated portugal/MT_020 day50/107
+2026-10-10T00:49:27+00:00 Evaluated portugal/MT_020 day100/107
+2026-10-10T00:49:29+00:00 Finished portugal/MT_020; referencechecks1000
+2026-10-10T00:49:30+00:00 Fitted portugal/MT_021: train357 test107, 1.27s
+2026-10-10T00:49:39+00:00 Evaluated portugal/MT_021 day50/107
+2026-10-10T00:49:48+00:00 Evaluated portugal/MT_021 day100/107
+2026-10-10T00:49:51+00:00 Finished portugal/MT_021; referencechecks1000
+2026-10-10T00:49:54+00:00 Fitted portugal/MT_022: train357 test107, 3.03s
+2026-10-10T00:50:04+00:00 Evaluated portugal/MT_022 day50/107
+2026-10-10T00:50:12+00:00 Evaluated portugal/MT_022 day100/107
+2026-10-10T00:50:14+00:00 Finished portugal/MT_022; referencechecks1000
+2026-10-10T00:50:16+00:00 Fitted portugal/MT_023: train357 test107, 1.73s
+2026-10-10T00:50:26+00:00 Evaluated portugal/MT_023 day50/107
+2026-10-10T00:50:35+00:00 Evaluated portugal/MT_023 day100/107
+2026-10-10T00:50:37+00:00 Finished portugal/MT_023; referencechecks1000
+2026-10-10T00:50:38+00:00 Fitted portugal/MT_024: train357 test107, 1.30s
+2026-10-10T00:50:47+00:00 Evaluated portugal/MT_024 day50/107
+2026-10-10T00:50:57+00:00 Evaluated portugal/MT_024 day100/107
+2026-10-10T00:50:58+00:00 Finished portugal/MT_024; referencechecks1000
+2026-10-10T00:51:00+00:00 Fitted portugal/MT_025: train357 test107, 1.85s
+2026-10-10T00:51:08+00:00 Evaluated portugal/MT_025 day50/107
+2026-10-10T00:51:15+00:00 Evaluated portugal/MT_025 day100/107
+2026-10-10T00:51:16+00:00 Finished portugal/MT_025; referencechecks1000
+2026-10-10T00:51:17+00:00 Fitted portugal/MT_026: train357 test107, 0.96s
+2026-10-10T00:51:25+00:00 Evaluated portugal/MT_026 day50/107
+2026-10-10T00:51:31+00:00 Evaluated portugal/MT_026 day100/107
+2026-10-10T00:51:32+00:00 Finished portugal/MT_026; referencechecks1000
+2026-10-10T00:51:33+00:00 Fitted portugal/MT_027: train357 test107, 1.01s
+2026-10-10T00:51:39+00:00 Evaluated portugal/MT_027 day50/107
+2026-10-10T00:51:46+00:00 Evaluated portugal/MT_027 day100/107
+2026-10-10T00:51:47+00:00 Finished portugal/MT_027; referencechecks1000
+2026-10-10T00:51:48+00:00 Fitted portugal/MT_028: train357 test107, 0.96s
+2026-10-10T00:51:56+00:00 Evaluated portugal/MT_028 day50/107
+2026-10-10T00:52:04+00:00 Evaluated portugal/MT_028 day100/107
+2026-10-10T00:52:05+00:00 Finished portugal/MT_028; referencechecks1000
+2026-10-10T00:52:06+00:00 Fitted portugal/MT_029: train357 test107, 1.36s
+2026-10-10T00:52:13+00:00 Evaluated portugal/MT_029 day50/107
+2026-10-10T00:52:19+00:00 Evaluated portugal/MT_029 day100/107
+2026-10-10T00:52:20+00:00 Finished portugal/MT_029; referencechecks1000
+2026-10-10T00:52:21+00:00 Fitted portugal/MT_031: train357 test107, 0.99s
+2026-10-10T00:52:28+00:00 Evaluated portugal/MT_031 day50/107
+2026-10-10T00:52:36+00:00 Evaluated portugal/MT_031 day100/107
+2026-10-10T00:52:37+00:00 Finished portugal/MT_031; referencechecks1000
+2026-10-10T00:52:37+00:00 Fitted portugal/MT_032: train357 test107, 0.91s
+2026-10-10T00:52:44+00:00 Evaluated portugal/MT_032 day50/107
+2026-10-10T00:52:50+00:00 Evaluated portugal/MT_032 day100/107
+2026-10-10T00:52:51+00:00 Finished portugal/MT_032; referencechecks1000
+2026-10-10T00:52:52+00:00 Fitted portugal/MT_033: train357 test107, 0.82s
+2026-10-10T00:52:59+00:00 Evaluated portugal/MT_033 day50/107
+2026-10-10T00:53:06+00:00 Evaluated portugal/MT_033 day100/107
+2026-10-10T00:53:07+00:00 Finished portugal/MT_033; referencechecks1000
+2026-10-10T00:53:12+00:00 Fitted blem_counters/consumer_00000001: train266 test91, 4.34s
+2026-10-10T00:53:18+00:00 Evaluated blem_counters/consumer_00000001 day50/91
+2026-10-10T00:53:23+00:00 Finished blem_counters/consumer_00000001; referencechecks1000
+2026-10-10T00:53:28+00:00 Fitted blem_counters/consumer_00000002: train266 test91, 4.11s
+2026-10-10T00:53:37+00:00 Evaluated blem_counters/consumer_00000002 day50/91
+2026-10-10T00:53:43+00:00 Finished blem_counters/consumer_00000002; referencechecks1000
+2026-10-10T00:53:53+00:00 Fitted blem_counters/consumer_00000003: train266 test91, 10.44s
+2026-10-10T00:54:03+00:00 Evaluated blem_counters/consumer_00000003 day50/91
+2026-10-10T00:54:10+00:00 Finished blem_counters/consumer_00000003; referencechecks1000
+2026-10-10T00:54:10+00:00 COMPLETE wall_seconds=809.8; checks=1000

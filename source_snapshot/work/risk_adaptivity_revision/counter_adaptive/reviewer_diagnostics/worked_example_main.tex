@@ -1,0 +1,44 @@
+\paragraph{One fully inspectable recorded comparison.}\label{sec:worked-counter-example}
+Take meter~1, persistence versus boosting, 1 October 2017, 06:00--12:00
+UTC, the earliest qualifying case for that meter. Its retained total is
+$E=4.6129961798$~kWh. With $z=y/E$ and
+$q=(c-\min c)/(\max c-\min c)$, we have $z\geq0$, $\sum_hz_h=1$ and
+$W/W_0$ equal to the width of $q^\top z$. Exact conversion of the saved
+coefficients gives the following outward enclosures; every displayed
+endpoint is an exact decimal rational:
+\[
+q\in\{1\}\times[.9061,.9062]\times\{0\}
+\times[.5717,.5718]\times[.8607,.8608]\times[.2988,.2989].
+\]
+The initial squared-loss width satisfies
+$1.31295<W_0=E(\max c-\min c)<1.31296$; the required width is
+$\tau=W_0/2$ (approximately $0.656478$).
+
+Query boundary~3 first and observe $t=z_1+z_2+z_3$.
+Query boundary~5 if $t\leq1/4$, and boundary~2 otherwise.
+The coefficient enclosures alone give the conditional bounds
+\[
+\begin{array}{ll}
+t+.2891(1-t)\leq .466825,&0\leq t\leq1/4,\\
+.0939t+.5620(1-t)\leq .444975,&1/4\leq t\leq1.
+\end{array}
+\]
+Both are strictly below $1/2$, proving success for every feasible record.
+
+For the matching batch limitation, place adverse probability $1/2$ each on
+$z=e_2$ and $z=e_5$. The table lists success at the same half-width threshold
+for all ten batches ($ij=\{i,j\}$); the enclosures certify every entry.
+\begin{center}\small
+\begin{tabular}{lrrrrrrrrrr}\toprule
+Batch &12&13&14&15&23&24&25&34&35&45\\\midrule
+$e_2$ &1&0&0&0&1&1&1&0&0&0\\
+$e_5$ &0&0&0&0&0&0&0&0&1&1\\\bottomrule
+\end{tabular}
+\end{center}
+Every column averages at most $1/2$, limiting every randomized batch.
+Conversely, an equal mixture of $\{3,5\}$ and $\{2,3\}$ succeeds on
+at least one branch for every $t$, giving the continuum lower bound $1/2$.
+Thus $S_A=1$ and $S_B^\star=1/2$. Smaller batches cannot improve precision.
+Online Resource~1 retains the exact coefficients and an independent
+rational checker for this printed witness. This is the existing exact-total
+case; it is not a new sample or a measurement-error guarantee.

@@ -1,0 +1,62 @@
+ARCHIVE-ACCESS SENSITIVITY PROTOCOL
+Frozen 2026-10-10 02:13:15 UTC before running the new sensitivity analysis.
+This is a post-review, same-panel extension, not a preregistered or blind study.
+
+Question: how much apparent verification missingness can be eliminated at zero
+query cost by using a saved future daily-persistence forecast that is known to
+copy the actual target from 24 hours earlier?
+
+Use the completed study_predictions.csv and its hash in study_summary.json.
+Do not refit models, change old numerical outputs, select favorable days, or
+create new observed targets. Include all 34 meters, all eligible saved test
+days, all six named model pairs, and seeds 1103, 2207 and 3301. Use contiguous
+gaps of six and twelve hours with the original six-hour exact retained totals.
+
+Compare two declared information regimes:
+1. restricted_record: only the current day's surviving measurements, retained
+   totals and fixed current-day candidate predictions, as in the original study.
+2. available_test_persistence_archive: additionally allow all daily-persistence
+   predictions in the saved test archive for the same meter. A target at t is
+   revealed without a paid query if a saved daily-persistence forecast exists
+   at t+24 hours. Its copied value comes ONLY from that forecast column. The
+   mapping receives timestamp and forecast columns, not hidden target values.
+
+The complete target values are used to validate the copy identity afterward,
+count certificate errors, and simulate paid retrieval only after each batch
+has been fixed. The original forecasting source/hash and causal lag-24 design
+establish why these particular persistence forecasts preserve measurements.
+This is retrospective access to the complete available saved test-persistence
+archive, not a forecast-issue-time or same-day deployment. Missing future
+archive rows remain missing; do not look up raw source measurements for them.
+This is not full informational closure: no nonlinear model inversion, retained
+feature-cache access, other forecast identities or records outside this saved
+test archive are analyzed. Imputed persistence inputs would invalidate the
+free-recovery interpretation; the present source used actual prior readings.
+
+For both regimes evaluate budget zero and at-most-two paid queries using
+optimal_minimax_width and greedy_width_reduction. Choose only among still
+missing coordinates after free revelations; redundant final-in-block readings
+and zero-energy blocks are handled by the existing recovery APIs. Keep the
+same all-case budget convention, including already-certified pairs. Do not
+call resulting average query counts an early-stopping cost optimum.
+
+Report per-meter and cohort/pair aggregates: comparison counts, certification,
+wrong certificates, actual paid query counts, free-revealed fraction of the
+original masked coordinates, remaining widths, and exact-minus-greedy coverage.
+Fractions over masked coordinates count day/mask-seed occurrences; repeated
+model pairs and mask seeds are not independent observations. Cohort coverage
+macro-averages meters. Publish all results, including disappearance or reversal
+of incremental advantages. No new inferential significance claim is planned.
+
+Checks: unique timestamps; future copy timestamp exactly t+24 hours; copy
+identity versus retained truth within stated binary64 tolerance; policy inputs
+exclude hidden values; paid queries never hit free-revealed/observed values;
+all comparison intervals contain the reference; zero incorrect certificates;
+restricted q0/q2 exact and greedy counts and widths reconcile against archived
+study_recovery.csv and study_recovery_pair_seed.csv. Input hashes remain
+unchanged. The script records its hash and this protocol's hash.
+
+All distributed new outputs contain aggregate counts and statistics only.
+No BLEM hourly targets, persistence values, recovered values, or raw traces
+will be included. Local use of the retained full archive is permitted for
+analysis; reproduction regenerates it from the original identified sources.

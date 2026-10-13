@@ -1,0 +1,1655 @@
+{
+  "scope": "Saved real task geometry; no response execution, new API trial or empirical performance result",
+  "examples": [
+    {
+      "task": {
+        "case_id": "hpm_1/2025-07-06/12/ridge/mlp",
+        "system_id": 1,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-06T12:00:00Z",
+        "end_utc": "2025-07-06T18:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-06T13:00:00Z",
+          "2": "2025-07-06T14:00:00Z",
+          "3": "2025-07-06T15:00:00Z",
+          "4": "2025-07-06T16:00:00Z",
+          "5": "2025-07-06T17:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-06T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "ridge",
+          "mlp"
+        ],
+        "contrast_coefficients_exact": [
+          "7930435568702359/72057594037927936",
+          "8645678891063893/1152921504606846976",
+          "5371272457052689/36028797018963968",
+          "8079779251156579/72057594037927936",
+          "8737755062188927/144115188075855872",
+          "1721614923045275/36028797018963968"
+        ],
+        "contrast_constant_exact": "-7592007499867091/72057594037927936",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "11605171/1024",
+        "end_counter_kwh_exact": "5802647/512",
+        "total_kwh_exact": "123/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "f65529540a349c6a82b8cc7aa22c036b29efc0e705742cb7f368435b822ec15f",
+      "coefficient_display_approximate": [
+        0.1100569020459957,
+        0.007498931069042832,
+        0.14908275883387082,
+        0.112129461981533,
+        0.06063035533485727,
+        0.04778441317757828
+      ],
+      "initial_width_exact": "20077909887358525065/1180591620717411303424",
+      "precision_target_exact": "20077909887358525065/2361183241434822606848",
+      "plans": {
+        "public_bulk": {
+          "id": "hpm_1/2025-07-06/12/ridge/mlp",
+          "system_id": 1,
+          "scenario": "public_bulk",
+          "interface_manifest": {
+            "measurement_model": {
+              "latent_target": "nonnegative_six_increment_affine_contrast",
+              "retained_total": "exact_normalized_one",
+              "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+              "error_bound_exact": "1/100",
+              "precision_over_initial_width_exact": "1/2",
+              "calibration": "declared_allowance_not_physical_calibration"
+            },
+            "permitted_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "bulk_returns_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "fixed_batch_allowed": true,
+            "adaptive_allowed": true,
+            "scalar_reading_unit": "one_new_internal_prefix_value",
+            "round_unit": "one_group_of_queries_chosen_before_its_answers",
+            "id": "public_bulk",
+            "bulk_allowed": true,
+            "maximum_optional_readings": null,
+            "maximum_information_rounds": null,
+            "point_transport": "one_http_request_per_scalar",
+            "preference": [
+              "http_requests",
+              "information_rounds",
+              "optional_readings"
+            ],
+            "scenario_kind": "documented_public_capabilities_with_declared_uncertainty_model",
+            "source": "Existing HPM range/point API documentation and frozen public microbenchmark",
+            "exclusion_of_bulk_reason": null
+          },
+          "measurement_model": {
+            "latent_target": "nonnegative_six_increment_affine_contrast",
+            "retained_total": "exact_normalized_one",
+            "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+            "error_bound_exact": "1/100",
+            "precision_over_initial_width_exact": "1/2",
+            "calibration": "declared_allowance_not_physical_calibration"
+          },
+          "preference": [
+            "http_requests",
+            "information_rounds",
+            "optional_readings"
+          ],
+          "budget_units": {
+            "optional_readings": "one_new_internal_prefix_value",
+            "information_rounds": "one_group_of_queries_chosen_before_its_answers",
+            "http_requests": "transport transactions; unknown if not documented"
+          },
+          "maximum_optional_readings": null,
+          "maximum_information_rounds": null,
+          "point_transport": "one_http_request_per_scalar",
+          "scenario_kind": "documented_public_capabilities_with_declared_uncertainty_model",
+          "uses_withheld_answers_for_selection": false,
+          "status": "CERTIFIED",
+          "selected": {
+            "protocol": "bulk_range",
+            "query_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "optional_readings": 5,
+            "information_rounds": 1,
+            "http_requests": 1,
+            "certified_upper_exact": "1729861547686107150205716776708791/5881162112981219564203638039511040",
+            "certificate": {
+              "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+              "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+              "case_id": "hpm_1/2025-07-06/12/ridge/mlp",
+              "guarantee_kind": "superset inclusion of certified fixed batch"
+            },
+            "included_certificate_boundaries": [
+              1,
+              2,
+              4
+            ],
+            "exclusion_reasons": [],
+            "admissible": true
+          },
+          "candidates": [
+            {
+              "protocol": "bulk_range",
+              "query_boundaries": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "optional_readings": 5,
+              "information_rounds": 1,
+              "http_requests": 1,
+              "certified_upper_exact": "1729861547686107150205716776708791/5881162112981219564203638039511040",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_1/2025-07-06/12/ridge/mlp",
+                "guarantee_kind": "superset inclusion of certified fixed batch"
+              },
+              "included_certificate_boundaries": [
+                1,
+                2,
+                4
+              ],
+              "exclusion_reasons": [],
+              "admissible": true
+            },
+            {
+              "protocol": "fixed_batch",
+              "query_boundaries": [
+                1,
+                2,
+                4
+              ],
+              "optional_readings": 3,
+              "information_rounds": 1,
+              "http_requests": 3,
+              "certified_upper_exact": "1729861547686107150205716776708791/5881162112981219564203638039511040",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_1/2025-07-06/12/ridge/mlp",
+                "guarantee_kind": "exact fixed-batch dual upper bound"
+              },
+              "exclusion_reasons": [],
+              "admissible": true
+            },
+            {
+              "protocol": "adaptive",
+              "query_boundaries": null,
+              "first_query": 2,
+              "successor_boundaries": [
+                1,
+                4
+              ],
+              "optional_readings": 2,
+              "information_rounds": 2,
+              "http_requests": 2,
+              "certified_upper_exact": "34417231306808380899258576398501387306939841299927/74487297332966972531535613355510513108390392658700",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/branch_certificates.json",
+                "sha256": "468befdf13f4baa018397a9bc86595ac6d8622c16151e2f939ae754c41e7be6c",
+                "case_id": "hpm_1/2025-07-06/12/ridge/mlp",
+                "guarantee_kind": "exact full-domain affine branching upper bound"
+              },
+              "exclusion_reasons": [],
+              "admissible": true
+            }
+          ],
+          "scope": "Choice among existing certified protocols; no empirical cost prediction or new optimizer"
+        },
+        "restricted_three_readings": {
+          "id": "hpm_1/2025-07-06/12/ridge/mlp",
+          "system_id": 1,
+          "scenario": "restricted_three_readings",
+          "interface_manifest": {
+            "measurement_model": {
+              "latent_target": "nonnegative_six_increment_affine_contrast",
+              "retained_total": "exact_normalized_one",
+              "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+              "error_bound_exact": "1/100",
+              "precision_over_initial_width_exact": "1/2",
+              "calibration": "declared_allowance_not_physical_calibration"
+            },
+            "permitted_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "bulk_returns_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "fixed_batch_allowed": true,
+            "adaptive_allowed": true,
+            "scalar_reading_unit": "one_new_internal_prefix_value",
+            "round_unit": "one_group_of_queries_chosen_before_its_answers",
+            "id": "restricted_three_readings",
+            "bulk_allowed": false,
+            "maximum_optional_readings": 3,
+            "maximum_information_rounds": 2,
+            "point_transport": "unspecified",
+            "preference": [
+              "optional_readings",
+              "information_rounds"
+            ],
+            "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+            "source": "Mathematical individual-prefix query dictionary",
+            "exclusion_of_bulk_reason": "This declared benchmark admits individually selected prefix observations only"
+          },
+          "measurement_model": {
+            "latent_target": "nonnegative_six_increment_affine_contrast",
+            "retained_total": "exact_normalized_one",
+            "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+            "error_bound_exact": "1/100",
+            "precision_over_initial_width_exact": "1/2",
+            "calibration": "declared_allowance_not_physical_calibration"
+          },
+          "preference": [
+            "optional_readings",
+            "information_rounds"
+          ],
+          "budget_units": {
+            "optional_readings": "one_new_internal_prefix_value",
+            "information_rounds": "one_group_of_queries_chosen_before_its_answers",
+            "http_requests": "transport transactions; unknown if not documented"
+          },
+          "maximum_optional_readings": 3,
+          "maximum_information_rounds": 2,
+          "point_transport": "unspecified",
+          "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+          "uses_withheld_answers_for_selection": false,
+          "status": "CERTIFIED",
+          "selected": {
+            "protocol": "adaptive",
+            "query_boundaries": null,
+            "first_query": 2,
+            "successor_boundaries": [
+              1,
+              4
+            ],
+            "optional_readings": 2,
+            "information_rounds": 2,
+            "http_requests": null,
+            "certified_upper_exact": "34417231306808380899258576398501387306939841299927/74487297332966972531535613355510513108390392658700",
+            "certificate": {
+              "path": "external_validation/stored_error_fallback/branch_certificates.json",
+              "sha256": "468befdf13f4baa018397a9bc86595ac6d8622c16151e2f939ae754c41e7be6c",
+              "case_id": "hpm_1/2025-07-06/12/ridge/mlp",
+              "guarantee_kind": "exact full-domain affine branching upper bound"
+            },
+            "exclusion_reasons": [],
+            "admissible": true
+          },
+          "candidates": [
+            {
+              "protocol": "bulk_range",
+              "query_boundaries": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "optional_readings": 5,
+              "information_rounds": 1,
+              "http_requests": 1,
+              "certified_upper_exact": "1729861547686107150205716776708791/5881162112981219564203638039511040",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_1/2025-07-06/12/ridge/mlp",
+                "guarantee_kind": "superset inclusion of certified fixed batch"
+              },
+              "included_certificate_boundaries": [
+                1,
+                2,
+                4
+              ],
+              "exclusion_reasons": [
+                {
+                  "code": "BULK_NOT_ADMISSIBLE",
+                  "reason": "This declared benchmark admits individually selected prefix observations only"
+                },
+                {
+                  "code": "EXCEEDS_OPTIONAL_READINGS",
+                  "reason": "Requires 5, declared maximum 3"
+                }
+              ],
+              "admissible": false
+            },
+            {
+              "protocol": "fixed_batch",
+              "query_boundaries": [
+                1,
+                2,
+                4
+              ],
+              "optional_readings": 3,
+              "information_rounds": 1,
+              "http_requests": null,
+              "certified_upper_exact": "1729861547686107150205716776708791/5881162112981219564203638039511040",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_1/2025-07-06/12/ridge/mlp",
+                "guarantee_kind": "exact fixed-batch dual upper bound"
+              },
+              "exclusion_reasons": [],
+              "admissible": true
+            },
+            {
+              "protocol": "adaptive",
+              "query_boundaries": null,
+              "first_query": 2,
+              "successor_boundaries": [
+                1,
+                4
+              ],
+              "optional_readings": 2,
+              "information_rounds": 2,
+              "http_requests": null,
+              "certified_upper_exact": "34417231306808380899258576398501387306939841299927/74487297332966972531535613355510513108390392658700",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/branch_certificates.json",
+                "sha256": "468befdf13f4baa018397a9bc86595ac6d8622c16151e2f939ae754c41e7be6c",
+                "case_id": "hpm_1/2025-07-06/12/ridge/mlp",
+                "guarantee_kind": "exact full-domain affine branching upper bound"
+              },
+              "exclusion_reasons": [],
+              "admissible": true
+            }
+          ],
+          "scope": "Choice among existing certified protocols; no empirical cost prediction or new optimizer"
+        },
+        "restricted_two_readings": {
+          "id": "hpm_1/2025-07-06/12/ridge/mlp",
+          "system_id": 1,
+          "scenario": "restricted_two_readings",
+          "interface_manifest": {
+            "measurement_model": {
+              "latent_target": "nonnegative_six_increment_affine_contrast",
+              "retained_total": "exact_normalized_one",
+              "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+              "error_bound_exact": "1/100",
+              "precision_over_initial_width_exact": "1/2",
+              "calibration": "declared_allowance_not_physical_calibration"
+            },
+            "permitted_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "bulk_returns_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "fixed_batch_allowed": true,
+            "adaptive_allowed": true,
+            "scalar_reading_unit": "one_new_internal_prefix_value",
+            "round_unit": "one_group_of_queries_chosen_before_its_answers",
+            "id": "restricted_two_readings",
+            "bulk_allowed": false,
+            "maximum_optional_readings": 2,
+            "maximum_information_rounds": 2,
+            "point_transport": "unspecified",
+            "preference": [
+              "optional_readings",
+              "information_rounds"
+            ],
+            "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+            "source": "Mathematical individual-prefix query dictionary",
+            "exclusion_of_bulk_reason": "This declared benchmark admits individually selected prefix observations only"
+          },
+          "measurement_model": {
+            "latent_target": "nonnegative_six_increment_affine_contrast",
+            "retained_total": "exact_normalized_one",
+            "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+            "error_bound_exact": "1/100",
+            "precision_over_initial_width_exact": "1/2",
+            "calibration": "declared_allowance_not_physical_calibration"
+          },
+          "preference": [
+            "optional_readings",
+            "information_rounds"
+          ],
+          "budget_units": {
+            "optional_readings": "one_new_internal_prefix_value",
+            "information_rounds": "one_group_of_queries_chosen_before_its_answers",
+            "http_requests": "transport transactions; unknown if not documented"
+          },
+          "maximum_optional_readings": 2,
+          "maximum_information_rounds": 2,
+          "point_transport": "unspecified",
+          "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+          "uses_withheld_answers_for_selection": false,
+          "status": "CERTIFIED",
+          "selected": {
+            "protocol": "adaptive",
+            "query_boundaries": null,
+            "first_query": 2,
+            "successor_boundaries": [
+              1,
+              4
+            ],
+            "optional_readings": 2,
+            "information_rounds": 2,
+            "http_requests": null,
+            "certified_upper_exact": "34417231306808380899258576398501387306939841299927/74487297332966972531535613355510513108390392658700",
+            "certificate": {
+              "path": "external_validation/stored_error_fallback/branch_certificates.json",
+              "sha256": "468befdf13f4baa018397a9bc86595ac6d8622c16151e2f939ae754c41e7be6c",
+              "case_id": "hpm_1/2025-07-06/12/ridge/mlp",
+              "guarantee_kind": "exact full-domain affine branching upper bound"
+            },
+            "exclusion_reasons": [],
+            "admissible": true
+          },
+          "candidates": [
+            {
+              "protocol": "bulk_range",
+              "query_boundaries": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "optional_readings": 5,
+              "information_rounds": 1,
+              "http_requests": 1,
+              "certified_upper_exact": "1729861547686107150205716776708791/5881162112981219564203638039511040",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_1/2025-07-06/12/ridge/mlp",
+                "guarantee_kind": "superset inclusion of certified fixed batch"
+              },
+              "included_certificate_boundaries": [
+                1,
+                2,
+                4
+              ],
+              "exclusion_reasons": [
+                {
+                  "code": "BULK_NOT_ADMISSIBLE",
+                  "reason": "This declared benchmark admits individually selected prefix observations only"
+                },
+                {
+                  "code": "EXCEEDS_OPTIONAL_READINGS",
+                  "reason": "Requires 5, declared maximum 2"
+                }
+              ],
+              "admissible": false
+            },
+            {
+              "protocol": "fixed_batch",
+              "query_boundaries": [
+                1,
+                2,
+                4
+              ],
+              "optional_readings": 3,
+              "information_rounds": 1,
+              "http_requests": null,
+              "certified_upper_exact": "1729861547686107150205716776708791/5881162112981219564203638039511040",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_1/2025-07-06/12/ridge/mlp",
+                "guarantee_kind": "exact fixed-batch dual upper bound"
+              },
+              "exclusion_reasons": [
+                {
+                  "code": "EXCEEDS_OPTIONAL_READINGS",
+                  "reason": "Requires 3, declared maximum 2"
+                }
+              ],
+              "admissible": false
+            },
+            {
+              "protocol": "adaptive",
+              "query_boundaries": null,
+              "first_query": 2,
+              "successor_boundaries": [
+                1,
+                4
+              ],
+              "optional_readings": 2,
+              "information_rounds": 2,
+              "http_requests": null,
+              "certified_upper_exact": "34417231306808380899258576398501387306939841299927/74487297332966972531535613355510513108390392658700",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/branch_certificates.json",
+                "sha256": "468befdf13f4baa018397a9bc86595ac6d8622c16151e2f939ae754c41e7be6c",
+                "case_id": "hpm_1/2025-07-06/12/ridge/mlp",
+                "guarantee_kind": "exact full-domain affine branching upper bound"
+              },
+              "exclusion_reasons": [],
+              "admissible": true
+            }
+          ],
+          "scope": "Choice among existing certified protocols; no empirical cost prediction or new optimizer"
+        }
+      },
+      "selection_reason": "Pedagogical example; no representative-frequency claim"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-07/06/daily/mlp",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-07T06:00:00Z",
+        "end_utc": "2025-07-07T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-07T07:00:00Z",
+          "2": "2025-07-07T08:00:00Z",
+          "3": "2025-07-07T09:00:00Z",
+          "4": "2025-07-07T10:00:00Z",
+          "5": "2025-07-07T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-07T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "mlp"
+        ],
+        "contrast_coefficients_exact": [
+          "-8256599316845909/2305843009213693952",
+          "-6380099472108203/1152921504606846976",
+          "-1/256",
+          "-5254199565265579/1152921504606846976",
+          "-6004799503160661/1152921504606846976",
+          "-5/1024"
+        ],
+        "contrast_constant_exact": "7218660340225365/36893488147419103232",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "6025779/512",
+        "end_counter_kwh_exact": "6025827/512",
+        "total_kwh_exact": "3/32",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "66a36913e3f2d34aece53f5c881daed0a9f4c3ddcfd91a4f2332f864a9f85c12",
+      "coefficient_display_approximate": [
+        -0.0035807291666666665,
+        -0.005533854166666667,
+        -0.00390625,
+        -0.004557291666666667,
+        -0.005208333333333333,
+        -0.0048828125
+      ],
+      "initial_width_exact": "13510798882111491/73786976294838206464",
+      "precision_target_exact": "13510798882111491/147573952589676412928",
+      "plans": {
+        "public_bulk": {
+          "id": "hpm_2/2025-07-07/06/daily/mlp",
+          "system_id": 2,
+          "scenario": "public_bulk",
+          "interface_manifest": {
+            "measurement_model": {
+              "latent_target": "nonnegative_six_increment_affine_contrast",
+              "retained_total": "exact_normalized_one",
+              "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+              "error_bound_exact": "1/100",
+              "precision_over_initial_width_exact": "1/2",
+              "calibration": "declared_allowance_not_physical_calibration"
+            },
+            "permitted_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "bulk_returns_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "fixed_batch_allowed": true,
+            "adaptive_allowed": true,
+            "scalar_reading_unit": "one_new_internal_prefix_value",
+            "round_unit": "one_group_of_queries_chosen_before_its_answers",
+            "id": "public_bulk",
+            "bulk_allowed": true,
+            "maximum_optional_readings": null,
+            "maximum_information_rounds": null,
+            "point_transport": "one_http_request_per_scalar",
+            "preference": [
+              "http_requests",
+              "information_rounds",
+              "optional_readings"
+            ],
+            "scenario_kind": "documented_public_capabilities_with_declared_uncertainty_model",
+            "source": "Existing HPM range/point API documentation and frozen public microbenchmark",
+            "exclusion_of_bulk_reason": null
+          },
+          "measurement_model": {
+            "latent_target": "nonnegative_six_increment_affine_contrast",
+            "retained_total": "exact_normalized_one",
+            "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+            "error_bound_exact": "1/100",
+            "precision_over_initial_width_exact": "1/2",
+            "calibration": "declared_allowance_not_physical_calibration"
+          },
+          "preference": [
+            "http_requests",
+            "information_rounds",
+            "optional_readings"
+          ],
+          "budget_units": {
+            "optional_readings": "one_new_internal_prefix_value",
+            "information_rounds": "one_group_of_queries_chosen_before_its_answers",
+            "http_requests": "transport transactions; unknown if not documented"
+          },
+          "maximum_optional_readings": null,
+          "maximum_information_rounds": null,
+          "point_transport": "one_http_request_per_scalar",
+          "scenario_kind": "documented_public_capabilities_with_declared_uncertainty_model",
+          "uses_withheld_answers_for_selection": false,
+          "status": "CERTIFIED",
+          "selected": {
+            "protocol": "bulk_range",
+            "query_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "optional_readings": 5,
+            "information_rounds": 1,
+            "http_requests": 1,
+            "certified_upper_exact": "7369275489326771260507693825827/20282409603651674927546878656512",
+            "certificate": {
+              "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+              "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+              "case_id": "hpm_2/2025-07-07/06/daily/mlp",
+              "guarantee_kind": "superset inclusion of certified fixed batch"
+            },
+            "included_certificate_boundaries": [
+              1,
+              2,
+              3
+            ],
+            "exclusion_reasons": [],
+            "admissible": true
+          },
+          "candidates": [
+            {
+              "protocol": "bulk_range",
+              "query_boundaries": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "optional_readings": 5,
+              "information_rounds": 1,
+              "http_requests": 1,
+              "certified_upper_exact": "7369275489326771260507693825827/20282409603651674927546878656512",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_2/2025-07-07/06/daily/mlp",
+                "guarantee_kind": "superset inclusion of certified fixed batch"
+              },
+              "included_certificate_boundaries": [
+                1,
+                2,
+                3
+              ],
+              "exclusion_reasons": [],
+              "admissible": true
+            },
+            {
+              "protocol": "fixed_batch",
+              "query_boundaries": [
+                1,
+                2,
+                3
+              ],
+              "optional_readings": 3,
+              "information_rounds": 1,
+              "http_requests": 3,
+              "certified_upper_exact": "7369275489326771260507693825827/20282409603651674927546878656512",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_2/2025-07-07/06/daily/mlp",
+                "guarantee_kind": "exact fixed-batch dual upper bound"
+              },
+              "exclusion_reasons": [],
+              "admissible": true
+            },
+            {
+              "protocol": "adaptive",
+              "query_boundaries": null,
+              "first_query": null,
+              "successor_boundaries": [],
+              "optional_readings": 2,
+              "information_rounds": 2,
+              "http_requests": 2,
+              "certified_upper_exact": null,
+              "certificate": null,
+              "exclusion_reasons": [
+                {
+                  "code": "NO_TWO_QUERY_GUARANTEE",
+                  "reason": "Existing exact lower witnesses exclude a deterministic two-query guarantee in this case"
+                }
+              ],
+              "admissible": false
+            }
+          ],
+          "scope": "Choice among existing certified protocols; no empirical cost prediction or new optimizer"
+        },
+        "restricted_three_readings": {
+          "id": "hpm_2/2025-07-07/06/daily/mlp",
+          "system_id": 2,
+          "scenario": "restricted_three_readings",
+          "interface_manifest": {
+            "measurement_model": {
+              "latent_target": "nonnegative_six_increment_affine_contrast",
+              "retained_total": "exact_normalized_one",
+              "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+              "error_bound_exact": "1/100",
+              "precision_over_initial_width_exact": "1/2",
+              "calibration": "declared_allowance_not_physical_calibration"
+            },
+            "permitted_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "bulk_returns_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "fixed_batch_allowed": true,
+            "adaptive_allowed": true,
+            "scalar_reading_unit": "one_new_internal_prefix_value",
+            "round_unit": "one_group_of_queries_chosen_before_its_answers",
+            "id": "restricted_three_readings",
+            "bulk_allowed": false,
+            "maximum_optional_readings": 3,
+            "maximum_information_rounds": 2,
+            "point_transport": "unspecified",
+            "preference": [
+              "optional_readings",
+              "information_rounds"
+            ],
+            "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+            "source": "Mathematical individual-prefix query dictionary",
+            "exclusion_of_bulk_reason": "This declared benchmark admits individually selected prefix observations only"
+          },
+          "measurement_model": {
+            "latent_target": "nonnegative_six_increment_affine_contrast",
+            "retained_total": "exact_normalized_one",
+            "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+            "error_bound_exact": "1/100",
+            "precision_over_initial_width_exact": "1/2",
+            "calibration": "declared_allowance_not_physical_calibration"
+          },
+          "preference": [
+            "optional_readings",
+            "information_rounds"
+          ],
+          "budget_units": {
+            "optional_readings": "one_new_internal_prefix_value",
+            "information_rounds": "one_group_of_queries_chosen_before_its_answers",
+            "http_requests": "transport transactions; unknown if not documented"
+          },
+          "maximum_optional_readings": 3,
+          "maximum_information_rounds": 2,
+          "point_transport": "unspecified",
+          "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+          "uses_withheld_answers_for_selection": false,
+          "status": "CERTIFIED",
+          "selected": {
+            "protocol": "fixed_batch",
+            "query_boundaries": [
+              1,
+              2,
+              3
+            ],
+            "optional_readings": 3,
+            "information_rounds": 1,
+            "http_requests": null,
+            "certified_upper_exact": "7369275489326771260507693825827/20282409603651674927546878656512",
+            "certificate": {
+              "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+              "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+              "case_id": "hpm_2/2025-07-07/06/daily/mlp",
+              "guarantee_kind": "exact fixed-batch dual upper bound"
+            },
+            "exclusion_reasons": [],
+            "admissible": true
+          },
+          "candidates": [
+            {
+              "protocol": "bulk_range",
+              "query_boundaries": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "optional_readings": 5,
+              "information_rounds": 1,
+              "http_requests": 1,
+              "certified_upper_exact": "7369275489326771260507693825827/20282409603651674927546878656512",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_2/2025-07-07/06/daily/mlp",
+                "guarantee_kind": "superset inclusion of certified fixed batch"
+              },
+              "included_certificate_boundaries": [
+                1,
+                2,
+                3
+              ],
+              "exclusion_reasons": [
+                {
+                  "code": "BULK_NOT_ADMISSIBLE",
+                  "reason": "This declared benchmark admits individually selected prefix observations only"
+                },
+                {
+                  "code": "EXCEEDS_OPTIONAL_READINGS",
+                  "reason": "Requires 5, declared maximum 3"
+                }
+              ],
+              "admissible": false
+            },
+            {
+              "protocol": "fixed_batch",
+              "query_boundaries": [
+                1,
+                2,
+                3
+              ],
+              "optional_readings": 3,
+              "information_rounds": 1,
+              "http_requests": null,
+              "certified_upper_exact": "7369275489326771260507693825827/20282409603651674927546878656512",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_2/2025-07-07/06/daily/mlp",
+                "guarantee_kind": "exact fixed-batch dual upper bound"
+              },
+              "exclusion_reasons": [],
+              "admissible": true
+            },
+            {
+              "protocol": "adaptive",
+              "query_boundaries": null,
+              "first_query": null,
+              "successor_boundaries": [],
+              "optional_readings": 2,
+              "information_rounds": 2,
+              "http_requests": null,
+              "certified_upper_exact": null,
+              "certificate": null,
+              "exclusion_reasons": [
+                {
+                  "code": "NO_TWO_QUERY_GUARANTEE",
+                  "reason": "Existing exact lower witnesses exclude a deterministic two-query guarantee in this case"
+                }
+              ],
+              "admissible": false
+            }
+          ],
+          "scope": "Choice among existing certified protocols; no empirical cost prediction or new optimizer"
+        },
+        "restricted_two_readings": {
+          "id": "hpm_2/2025-07-07/06/daily/mlp",
+          "system_id": 2,
+          "scenario": "restricted_two_readings",
+          "interface_manifest": {
+            "measurement_model": {
+              "latent_target": "nonnegative_six_increment_affine_contrast",
+              "retained_total": "exact_normalized_one",
+              "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+              "error_bound_exact": "1/100",
+              "precision_over_initial_width_exact": "1/2",
+              "calibration": "declared_allowance_not_physical_calibration"
+            },
+            "permitted_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "bulk_returns_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "fixed_batch_allowed": true,
+            "adaptive_allowed": true,
+            "scalar_reading_unit": "one_new_internal_prefix_value",
+            "round_unit": "one_group_of_queries_chosen_before_its_answers",
+            "id": "restricted_two_readings",
+            "bulk_allowed": false,
+            "maximum_optional_readings": 2,
+            "maximum_information_rounds": 2,
+            "point_transport": "unspecified",
+            "preference": [
+              "optional_readings",
+              "information_rounds"
+            ],
+            "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+            "source": "Mathematical individual-prefix query dictionary",
+            "exclusion_of_bulk_reason": "This declared benchmark admits individually selected prefix observations only"
+          },
+          "measurement_model": {
+            "latent_target": "nonnegative_six_increment_affine_contrast",
+            "retained_total": "exact_normalized_one",
+            "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+            "error_bound_exact": "1/100",
+            "precision_over_initial_width_exact": "1/2",
+            "calibration": "declared_allowance_not_physical_calibration"
+          },
+          "preference": [
+            "optional_readings",
+            "information_rounds"
+          ],
+          "budget_units": {
+            "optional_readings": "one_new_internal_prefix_value",
+            "information_rounds": "one_group_of_queries_chosen_before_its_answers",
+            "http_requests": "transport transactions; unknown if not documented"
+          },
+          "maximum_optional_readings": 2,
+          "maximum_information_rounds": 2,
+          "point_transport": "unspecified",
+          "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+          "uses_withheld_answers_for_selection": false,
+          "status": "ESCALATION_REQUIRED",
+          "selected": null,
+          "candidates": [
+            {
+              "protocol": "bulk_range",
+              "query_boundaries": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "optional_readings": 5,
+              "information_rounds": 1,
+              "http_requests": 1,
+              "certified_upper_exact": "7369275489326771260507693825827/20282409603651674927546878656512",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_2/2025-07-07/06/daily/mlp",
+                "guarantee_kind": "superset inclusion of certified fixed batch"
+              },
+              "included_certificate_boundaries": [
+                1,
+                2,
+                3
+              ],
+              "exclusion_reasons": [
+                {
+                  "code": "BULK_NOT_ADMISSIBLE",
+                  "reason": "This declared benchmark admits individually selected prefix observations only"
+                },
+                {
+                  "code": "EXCEEDS_OPTIONAL_READINGS",
+                  "reason": "Requires 5, declared maximum 2"
+                }
+              ],
+              "admissible": false
+            },
+            {
+              "protocol": "fixed_batch",
+              "query_boundaries": [
+                1,
+                2,
+                3
+              ],
+              "optional_readings": 3,
+              "information_rounds": 1,
+              "http_requests": null,
+              "certified_upper_exact": "7369275489326771260507693825827/20282409603651674927546878656512",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_2/2025-07-07/06/daily/mlp",
+                "guarantee_kind": "exact fixed-batch dual upper bound"
+              },
+              "exclusion_reasons": [
+                {
+                  "code": "EXCEEDS_OPTIONAL_READINGS",
+                  "reason": "Requires 3, declared maximum 2"
+                }
+              ],
+              "admissible": false
+            },
+            {
+              "protocol": "adaptive",
+              "query_boundaries": null,
+              "first_query": null,
+              "successor_boundaries": [],
+              "optional_readings": 2,
+              "information_rounds": 2,
+              "http_requests": null,
+              "certified_upper_exact": null,
+              "certificate": null,
+              "exclusion_reasons": [
+                {
+                  "code": "NO_TWO_QUERY_GUARANTEE",
+                  "reason": "Existing exact lower witnesses exclude a deterministic two-query guarantee in this case"
+                }
+              ],
+              "admissible": false
+            }
+          ],
+          "scope": "Choice among existing certified protocols; no empirical cost prediction or new optimizer"
+        }
+      },
+      "selection_reason": "Pedagogical example; no representative-frequency claim"
+    },
+    {
+      "task": {
+        "case_id": "hpm_7/2025-07-03/06/daily/hist_gradient_boosting",
+        "system_id": 7,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-03T06:00:00Z",
+        "end_utc": "2025-07-03T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-03T07:00:00Z",
+          "2": "2025-07-03T08:00:00Z",
+          "3": "2025-07-03T09:00:00Z",
+          "4": "2025-07-03T10:00:00Z",
+          "5": "2025-07-03T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-03T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "273551857004025/144115188075855872",
+          "-6511879164385045/9223372036854775808",
+          "-5317584522918627/1152921504606846976",
+          "8793793618119285/2305843009213693952",
+          "560880610225649/144115188075855872",
+          "-5907915039901765/2305843009213693952"
+        ],
+        "contrast_constant_exact": "-5106262260811627/73786976294838206464",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "6803171/512",
+        "end_counter_kwh_exact": "13606621/1024",
+        "total_kwh_exact": "279/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "0469c6bab5e2a6f80c87434e958bc2406d7cee760b58c61e549c2cce8aca5af6",
+      "coefficient_display_approximate": [
+        0.001898147312967731,
+        -0.0007060193536989357,
+        -0.004612269353698936,
+        0.0038137000580616373,
+        0.003891891047114522,
+        -0.0025621497284485117
+      ],
+      "initial_width_exact": "2735491603917945501/1180591620717411303424",
+      "precision_target_exact": "2735491603917945501/2361183241434822606848",
+      "plans": {
+        "public_bulk": {
+          "id": "hpm_7/2025-07-03/06/daily/hist_gradient_boosting",
+          "system_id": 7,
+          "scenario": "public_bulk",
+          "interface_manifest": {
+            "measurement_model": {
+              "latent_target": "nonnegative_six_increment_affine_contrast",
+              "retained_total": "exact_normalized_one",
+              "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+              "error_bound_exact": "1/100",
+              "precision_over_initial_width_exact": "1/2",
+              "calibration": "declared_allowance_not_physical_calibration"
+            },
+            "permitted_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "bulk_returns_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "fixed_batch_allowed": true,
+            "adaptive_allowed": true,
+            "scalar_reading_unit": "one_new_internal_prefix_value",
+            "round_unit": "one_group_of_queries_chosen_before_its_answers",
+            "id": "public_bulk",
+            "bulk_allowed": true,
+            "maximum_optional_readings": null,
+            "maximum_information_rounds": null,
+            "point_transport": "one_http_request_per_scalar",
+            "preference": [
+              "http_requests",
+              "information_rounds",
+              "optional_readings"
+            ],
+            "scenario_kind": "documented_public_capabilities_with_declared_uncertainty_model",
+            "source": "Existing HPM range/point API documentation and frozen public microbenchmark",
+            "exclusion_of_bulk_reason": null
+          },
+          "measurement_model": {
+            "latent_target": "nonnegative_six_increment_affine_contrast",
+            "retained_total": "exact_normalized_one",
+            "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+            "error_bound_exact": "1/100",
+            "precision_over_initial_width_exact": "1/2",
+            "calibration": "declared_allowance_not_physical_calibration"
+          },
+          "preference": [
+            "http_requests",
+            "information_rounds",
+            "optional_readings"
+          ],
+          "budget_units": {
+            "optional_readings": "one_new_internal_prefix_value",
+            "information_rounds": "one_group_of_queries_chosen_before_its_answers",
+            "http_requests": "transport transactions; unknown if not documented"
+          },
+          "maximum_optional_readings": null,
+          "maximum_information_rounds": null,
+          "point_transport": "one_http_request_per_scalar",
+          "scenario_kind": "documented_public_capabilities_with_declared_uncertainty_model",
+          "uses_withheld_answers_for_selection": false,
+          "status": "CERTIFIED",
+          "selected": {
+            "protocol": "bulk_range",
+            "query_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "optional_readings": 5,
+            "information_rounds": 1,
+            "http_requests": 1,
+            "certified_upper_exact": "1493973875795873811384740969770653/4415612533361999926234806904422400",
+            "certificate": {
+              "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+              "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+              "case_id": "hpm_7/2025-07-03/06/daily/hist_gradient_boosting",
+              "guarantee_kind": "superset inclusion of certified fixed batch"
+            },
+            "included_certificate_boundaries": [
+              2,
+              3,
+              5
+            ],
+            "exclusion_reasons": [],
+            "admissible": true
+          },
+          "candidates": [
+            {
+              "protocol": "bulk_range",
+              "query_boundaries": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "optional_readings": 5,
+              "information_rounds": 1,
+              "http_requests": 1,
+              "certified_upper_exact": "1493973875795873811384740969770653/4415612533361999926234806904422400",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_7/2025-07-03/06/daily/hist_gradient_boosting",
+                "guarantee_kind": "superset inclusion of certified fixed batch"
+              },
+              "included_certificate_boundaries": [
+                2,
+                3,
+                5
+              ],
+              "exclusion_reasons": [],
+              "admissible": true
+            },
+            {
+              "protocol": "fixed_batch",
+              "query_boundaries": [
+                2,
+                3,
+                5
+              ],
+              "optional_readings": 3,
+              "information_rounds": 1,
+              "http_requests": 3,
+              "certified_upper_exact": "1493973875795873811384740969770653/4415612533361999926234806904422400",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_7/2025-07-03/06/daily/hist_gradient_boosting",
+                "guarantee_kind": "exact fixed-batch dual upper bound"
+              },
+              "exclusion_reasons": [],
+              "admissible": true
+            },
+            {
+              "protocol": "adaptive",
+              "query_boundaries": null,
+              "first_query": null,
+              "successor_boundaries": [],
+              "optional_readings": 2,
+              "information_rounds": 2,
+              "http_requests": 2,
+              "certified_upper_exact": null,
+              "certificate": null,
+              "exclusion_reasons": [
+                {
+                  "code": "NO_TWO_QUERY_GUARANTEE",
+                  "reason": "Existing exact lower witnesses exclude a deterministic two-query guarantee in this case"
+                }
+              ],
+              "admissible": false
+            }
+          ],
+          "scope": "Choice among existing certified protocols; no empirical cost prediction or new optimizer"
+        },
+        "restricted_three_readings": {
+          "id": "hpm_7/2025-07-03/06/daily/hist_gradient_boosting",
+          "system_id": 7,
+          "scenario": "restricted_three_readings",
+          "interface_manifest": {
+            "measurement_model": {
+              "latent_target": "nonnegative_six_increment_affine_contrast",
+              "retained_total": "exact_normalized_one",
+              "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+              "error_bound_exact": "1/100",
+              "precision_over_initial_width_exact": "1/2",
+              "calibration": "declared_allowance_not_physical_calibration"
+            },
+            "permitted_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "bulk_returns_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "fixed_batch_allowed": true,
+            "adaptive_allowed": true,
+            "scalar_reading_unit": "one_new_internal_prefix_value",
+            "round_unit": "one_group_of_queries_chosen_before_its_answers",
+            "id": "restricted_three_readings",
+            "bulk_allowed": false,
+            "maximum_optional_readings": 3,
+            "maximum_information_rounds": 2,
+            "point_transport": "unspecified",
+            "preference": [
+              "optional_readings",
+              "information_rounds"
+            ],
+            "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+            "source": "Mathematical individual-prefix query dictionary",
+            "exclusion_of_bulk_reason": "This declared benchmark admits individually selected prefix observations only"
+          },
+          "measurement_model": {
+            "latent_target": "nonnegative_six_increment_affine_contrast",
+            "retained_total": "exact_normalized_one",
+            "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+            "error_bound_exact": "1/100",
+            "precision_over_initial_width_exact": "1/2",
+            "calibration": "declared_allowance_not_physical_calibration"
+          },
+          "preference": [
+            "optional_readings",
+            "information_rounds"
+          ],
+          "budget_units": {
+            "optional_readings": "one_new_internal_prefix_value",
+            "information_rounds": "one_group_of_queries_chosen_before_its_answers",
+            "http_requests": "transport transactions; unknown if not documented"
+          },
+          "maximum_optional_readings": 3,
+          "maximum_information_rounds": 2,
+          "point_transport": "unspecified",
+          "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+          "uses_withheld_answers_for_selection": false,
+          "status": "CERTIFIED",
+          "selected": {
+            "protocol": "fixed_batch",
+            "query_boundaries": [
+              2,
+              3,
+              5
+            ],
+            "optional_readings": 3,
+            "information_rounds": 1,
+            "http_requests": null,
+            "certified_upper_exact": "1493973875795873811384740969770653/4415612533361999926234806904422400",
+            "certificate": {
+              "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+              "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+              "case_id": "hpm_7/2025-07-03/06/daily/hist_gradient_boosting",
+              "guarantee_kind": "exact fixed-batch dual upper bound"
+            },
+            "exclusion_reasons": [],
+            "admissible": true
+          },
+          "candidates": [
+            {
+              "protocol": "bulk_range",
+              "query_boundaries": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "optional_readings": 5,
+              "information_rounds": 1,
+              "http_requests": 1,
+              "certified_upper_exact": "1493973875795873811384740969770653/4415612533361999926234806904422400",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_7/2025-07-03/06/daily/hist_gradient_boosting",
+                "guarantee_kind": "superset inclusion of certified fixed batch"
+              },
+              "included_certificate_boundaries": [
+                2,
+                3,
+                5
+              ],
+              "exclusion_reasons": [
+                {
+                  "code": "BULK_NOT_ADMISSIBLE",
+                  "reason": "This declared benchmark admits individually selected prefix observations only"
+                },
+                {
+                  "code": "EXCEEDS_OPTIONAL_READINGS",
+                  "reason": "Requires 5, declared maximum 3"
+                }
+              ],
+              "admissible": false
+            },
+            {
+              "protocol": "fixed_batch",
+              "query_boundaries": [
+                2,
+                3,
+                5
+              ],
+              "optional_readings": 3,
+              "information_rounds": 1,
+              "http_requests": null,
+              "certified_upper_exact": "1493973875795873811384740969770653/4415612533361999926234806904422400",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_7/2025-07-03/06/daily/hist_gradient_boosting",
+                "guarantee_kind": "exact fixed-batch dual upper bound"
+              },
+              "exclusion_reasons": [],
+              "admissible": true
+            },
+            {
+              "protocol": "adaptive",
+              "query_boundaries": null,
+              "first_query": null,
+              "successor_boundaries": [],
+              "optional_readings": 2,
+              "information_rounds": 2,
+              "http_requests": null,
+              "certified_upper_exact": null,
+              "certificate": null,
+              "exclusion_reasons": [
+                {
+                  "code": "NO_TWO_QUERY_GUARANTEE",
+                  "reason": "Existing exact lower witnesses exclude a deterministic two-query guarantee in this case"
+                }
+              ],
+              "admissible": false
+            }
+          ],
+          "scope": "Choice among existing certified protocols; no empirical cost prediction or new optimizer"
+        },
+        "restricted_two_readings": {
+          "id": "hpm_7/2025-07-03/06/daily/hist_gradient_boosting",
+          "system_id": 7,
+          "scenario": "restricted_two_readings",
+          "interface_manifest": {
+            "measurement_model": {
+              "latent_target": "nonnegative_six_increment_affine_contrast",
+              "retained_total": "exact_normalized_one",
+              "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+              "error_bound_exact": "1/100",
+              "precision_over_initial_width_exact": "1/2",
+              "calibration": "declared_allowance_not_physical_calibration"
+            },
+            "permitted_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "bulk_returns_boundaries": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "fixed_batch_allowed": true,
+            "adaptive_allowed": true,
+            "scalar_reading_unit": "one_new_internal_prefix_value",
+            "round_unit": "one_group_of_queries_chosen_before_its_answers",
+            "id": "restricted_two_readings",
+            "bulk_allowed": false,
+            "maximum_optional_readings": 2,
+            "maximum_information_rounds": 2,
+            "point_transport": "unspecified",
+            "preference": [
+              "optional_readings",
+              "information_rounds"
+            ],
+            "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+            "source": "Mathematical individual-prefix query dictionary",
+            "exclusion_of_bulk_reason": "This declared benchmark admits individually selected prefix observations only"
+          },
+          "measurement_model": {
+            "latent_target": "nonnegative_six_increment_affine_contrast",
+            "retained_total": "exact_normalized_one",
+            "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+            "error_bound_exact": "1/100",
+            "precision_over_initial_width_exact": "1/2",
+            "calibration": "declared_allowance_not_physical_calibration"
+          },
+          "preference": [
+            "optional_readings",
+            "information_rounds"
+          ],
+          "budget_units": {
+            "optional_readings": "one_new_internal_prefix_value",
+            "information_rounds": "one_group_of_queries_chosen_before_its_answers",
+            "http_requests": "transport transactions; unknown if not documented"
+          },
+          "maximum_optional_readings": 2,
+          "maximum_information_rounds": 2,
+          "point_transport": "unspecified",
+          "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+          "uses_withheld_answers_for_selection": false,
+          "status": "ESCALATION_REQUIRED",
+          "selected": null,
+          "candidates": [
+            {
+              "protocol": "bulk_range",
+              "query_boundaries": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "optional_readings": 5,
+              "information_rounds": 1,
+              "http_requests": 1,
+              "certified_upper_exact": "1493973875795873811384740969770653/4415612533361999926234806904422400",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_7/2025-07-03/06/daily/hist_gradient_boosting",
+                "guarantee_kind": "superset inclusion of certified fixed batch"
+              },
+              "included_certificate_boundaries": [
+                2,
+                3,
+                5
+              ],
+              "exclusion_reasons": [
+                {
+                  "code": "BULK_NOT_ADMISSIBLE",
+                  "reason": "This declared benchmark admits individually selected prefix observations only"
+                },
+                {
+                  "code": "EXCEEDS_OPTIONAL_READINGS",
+                  "reason": "Requires 5, declared maximum 2"
+                }
+              ],
+              "admissible": false
+            },
+            {
+              "protocol": "fixed_batch",
+              "query_boundaries": [
+                2,
+                3,
+                5
+              ],
+              "optional_readings": 3,
+              "information_rounds": 1,
+              "http_requests": null,
+              "certified_upper_exact": "1493973875795873811384740969770653/4415612533361999926234806904422400",
+              "certificate": {
+                "path": "external_validation/stored_error_fallback/fixed_batch_certificates.json",
+                "sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+                "case_id": "hpm_7/2025-07-03/06/daily/hist_gradient_boosting",
+                "guarantee_kind": "exact fixed-batch dual upper bound"
+              },
+              "exclusion_reasons": [
+                {
+                  "code": "EXCEEDS_OPTIONAL_READINGS",
+                  "reason": "Requires 3, declared maximum 2"
+                }
+              ],
+              "admissible": false
+            },
+            {
+              "protocol": "adaptive",
+              "query_boundaries": null,
+              "first_query": null,
+              "successor_boundaries": [],
+              "optional_readings": 2,
+              "information_rounds": 2,
+              "http_requests": null,
+              "certified_upper_exact": null,
+              "certificate": null,
+              "exclusion_reasons": [
+                {
+                  "code": "NO_TWO_QUERY_GUARANTEE",
+                  "reason": "Existing exact lower witnesses exclude a deterministic two-query guarantee in this case"
+                }
+              ],
+              "admissible": false
+            }
+          ],
+          "scope": "Choice among existing certified protocols; no empirical cost prediction or new optimizer"
+        }
+      },
+      "selection_reason": "Pedagogical example; no representative-frequency claim"
+    }
+  ]
+}

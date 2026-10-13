@@ -1,0 +1,18 @@
+After completing the coefficient-only geometry runs, independent review
+confirmed their formulas and primary counts. Two implementation hardening
+changes were applied before final reporting, with no change to thresholds,
+cases, forecasts, query dictionary, budget or policy objectives:
+
+1. Explicit raw/forecast hash gates and exact calendar/meter identity checks.
+   The independent data auditor had already verified those identities.
+2. Conditional second-query minimization uses exact Fraction arithmetic on
+   original serialized coefficients and integer-counter answer ratios. This
+   removes dependence on rounded coefficient normalization and numerical
+   near-tie choices. Both pilot and continuation replay are rerun. The pilot
+   preliminary answers had been seen at amendment time; the change implements
+   the originally specified conditional minimization, not an outcome-tuned
+   decision rule. Scientific outputs are checked for any resulting changes.
+
+study_protocol_execution_v1.py retains the source used for the frozen
+coefficient-only geometry runs; the final entry point is study.py. The
+original protocol.txt is unchanged and its original hash remains recorded.

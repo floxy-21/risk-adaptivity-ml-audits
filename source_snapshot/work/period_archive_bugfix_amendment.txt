@@ -1,0 +1,24 @@
+IMPLEMENTATION CORRECTION BEFORE CORRECTED RESULTS
+2026-10-10 04:00 UTC
+
+The first full run passed every local enclosure and source-copy check but failed
+the prespecified final reconciliation with the original period tables. Exactly
+864 interval rows differed. Diagnosis found four original high-demand masks
+whose stable sort membership changed when pandas' default CSV float parser
+rounded nearly tied target values differently from their original binary64
+values: MT_007 2014-07-12 gap6; MT_011 2014-07-05 gap6;
+MT_023 2014-07-27 gap2; MT_024 2014-04-13 gap12. Four masks times three seeds,
+two block sizes, three total tolerances, two bound methods and six model pairs
+account for all864 mismatches. This is an implementation defect in reproducing
+the already frozen oracle masks, not a scientific protocol change.
+
+Correction: form high-demand mask ranks from the original pinned hourly source
+series already used by the original study; preserve original stable argsort.
+Verify those values agree with the saved target snapshot to roundoff. Observed
+values, copied forecast values, aggregates and fixed model predictions retain
+the same saved-CSV analysis inputs. Contiguous/scattered masks, all methods,
+hyperparameters, cases, budgets and numerical tolerances stay unchanged.
+No outcomes select masks or consumers. Rerun the entire34-meter analysis, with
+four independent workers now that other numerical jobs have ended. Preserve
+the failed first-run reconciliation diagnosis, and require the same original
+table reconciliation to pass without relaxing tolerance.

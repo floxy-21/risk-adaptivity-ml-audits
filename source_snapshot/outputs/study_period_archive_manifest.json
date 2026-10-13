@@ -1,0 +1,129 @@
+{
+  "created_utc": "2026-10-10T03:59:51.853811+00:00",
+  "script_sha256": "258e29c41b18c11bf9f9a15aa9e7c9344d27f0aaa564d6f0d4723d91ce7abdf9",
+  "protocol_sha256": "3a95fb9309a41264097b125dfedb2b7ce51c899433f5427775331ee6e07184a1",
+  "source_hashes": {
+    "study_predictions.csv": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+    "study_summary.json": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196",
+    "study_period_comparisons.csv": "c58640d34b1ca5fad39604b18c3b18f2990182afb11d3268013c896509381854",
+    "study_matched_coverage.csv": "fb06fc7ac041a719b9440d7a5dfcdb097abde0028dee50c8e69d611fcb10a016",
+    "study_archive_access.json": "23f0731d5529443bfb69f4caa0121282f3dd2a7412f0bbdde69247f2f799cccb",
+    "study_recovery.csv": "abd026c12bcd6df64256544d55b4952b5249f0a0368969d3337bc11fa77a4911",
+    "study_recovery_pair_seed.csv": "39802e4c9bd7d2afa48d4ab687284102fe4d1df99fb758ee8e84b10e1fa92443",
+    "run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+    "study_recovery.py": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241",
+    "study_archive_access.py": "de88aaf109b9534402c913789b81f992cd312dc2d17902e953b715198e2ae28b",
+    "energy_rank_bounds.py": "2b555e7fbb676f311b87c38a1cfc8bf81b34743e35a7c43b5ff08d759596f467"
+  },
+  "regimes": {
+    "restricted_daily_product_closed": "Isolated daily evaluators; period aggregator receives only scalar bounds, point loss sums and counts. No cross-day raw forecasts. Historical restricted reference only.",
+    "saved_forecast_archive_closed": "Every saved TEST forecast row for the same meter, all four candidate columns. Every documented t+24 daily-persistence copy is incorporated, including within the evaluated period. Exact aggregate deductions follow. No outside-period forecasts, arrival assumption, nonlinear inversion, feature cache or raw-target fallback."
+  },
+  "within_period_raw_access_equals_saved_archive_here": true,
+  "forecast_archive": {
+    "file": "study_predictions.csv",
+    "sha256": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+    "row_index": "zero-based data row excluding CSV header",
+    "columns": [
+      "daily",
+      "ridge",
+      "hist_gradient_boosting",
+      "mlp"
+    ],
+    "targets_not_accessible_except_observed_or_documented_copies": true
+  },
+  "retained_measurements": "Original full target snapshot supplies nominal disjoint6/24hour totals BEFORE original artificial masks; each case supplies only its declared block size and symmetric0/1/5percent band. This is not measured backup-channel survival.",
+  "mask_design": {
+    "gaps": [
+      2,
+      6,
+      12
+    ],
+    "patterns": [
+      "contiguous",
+      "scattered",
+      "high_demand"
+    ],
+    "seeds": [
+      1103,
+      2207,
+      3301
+    ],
+    "blocks": [
+      6,
+      24
+    ],
+    "taus": [
+      0.0,
+      0.01,
+      0.05
+    ]
+  },
+  "implementation_correction": {
+    "amendment_file": "work/period_archive_bugfix_amendment.txt",
+    "amendment_sha256": "f1d0215c0347b3a596084d953453e416a0d2c8fd6c21267f8fc5d56fa8b7b5c6",
+    "high_demand_rank_source": "Pinned original hourly source series; original stable argsort. Default CSV parse altered4near-tie masks in the failed first implementation. All34meters rerun; no tolerance relaxation."
+  },
+  "denominators": {
+    "bounds_and_completed_imputations": "24*eligible days",
+    "complete_case": "pooled observed-coordinate paired-loss numerator divided by total closed observed count",
+    "legacy_complete_case": "equal-day mean of observed-only contrasts, retained only to diagnose compatibility changes"
+  },
+  "trace_encoding": {
+    "masks": "24-bit nonnegative integers; bit h is target hour h",
+    "value_hashes": "SHA256 of little-endian float64 array bytes; observed vectors retain NaN at missing coordinates",
+    "states": "Deduplicated by exact visible-value hash and block/tolerance; fully observed state has block0,tau-1, empty residual arrays, and is universal for that same visible vector. No hidden-truth substitution.",
+    "blem_values": "Observation and residual/aggregate values omitted where they could reveal raw targets; row references/hashes support raw-dependent regeneration. Daily aggregate loss contributions are included.",
+    "scalar_fields": [
+      "lower_0",
+      "lower_1",
+      "lower_2",
+      "lower_3",
+      "lower_4",
+      "lower_5",
+      "upper_0",
+      "upper_1",
+      "upper_2",
+      "upper_3",
+      "upper_4",
+      "upper_5",
+      "individual_lower_0",
+      "individual_lower_1",
+      "individual_lower_2",
+      "individual_lower_3",
+      "individual_lower_4",
+      "individual_lower_5",
+      "individual_upper_0",
+      "individual_upper_1",
+      "individual_upper_2",
+      "individual_upper_3",
+      "individual_upper_4",
+      "individual_upper_5",
+      "cc_numerator_0",
+      "cc_numerator_1",
+      "cc_numerator_2",
+      "cc_numerator_3",
+      "cc_numerator_4",
+      "cc_numerator_5",
+      "uniform_0",
+      "uniform_1",
+      "uniform_2",
+      "uniform_3",
+      "uniform_4",
+      "uniform_5",
+      "profile_0",
+      "profile_1",
+      "profile_2",
+      "profile_3",
+      "profile_4",
+      "profile_5",
+      "donor_0",
+      "donor_1",
+      "donor_2",
+      "donor_3",
+      "donor_4",
+      "donor_5"
+    ]
+  },
+  "recovery_attribution": "Existing daily archive results only: budget2 PER DAY PER PAIR; no new period-wide paid-query optimization. Free reconstruction and exact-minus-greedy gain must be reported separately."
+}

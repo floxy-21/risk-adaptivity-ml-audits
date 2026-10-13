@@ -1,0 +1,624 @@
+Auditing Machine-Learning Forecasts with Aggregate Targets:
+Exact Deterministic and Randomized Recovery
+
+REPRODUCING THE CONTROLLED ENERGY-TARGET VERIFICATION STUDY
+
+Extract research_supplement.zip into an empty directory and run commands from
+that directory. The archive preserves sibling outputs/ and work/ directories.
+Original raw source records are obtained with the supplied downloader; the
+manuscript is supplied separately. The archive includes its reproducible builder
+and archived generated sections.
+The complete hourly verification-target/prediction archive is intentionally omitted
+because separate redistribution terms for derived BLEM data have not been
+established. The original UCI study's lossless hourly records, a small worked
+example and the separate new-consumer replication's hourly records are included
+with attribution to their CC BY 4.0 sources.
+Aggregate results can be inspected without downloading
+data or fitting models. Regenerate hourly records with the supplied downloader and
+main study script before running analyses that require them.
+
+RECOMMENDED ONE-COMMAND FINAL REPRODUCTION
+
+After installing outputs/requirements-study.txt in the supplied Python version:
+  python work/reproduce_final_revision.py
+
+This creates an isolated work directory, verifies the public period traces and
+interval-recovery aggregates, reruns the documented numerical fixtures, checks
+the public fresh-refit rows independently, and rebuilds the manuscript source
+byte-for-byte against its recorded checksum.
+It does not download raw data, fit models, compile a PDF or submit a paper.
+The final console JSON identifies the new directory and detailed audit report.
+The original inputs and open manuscript remain unchanged.
+
+To regenerate the complete original evaluation inputs and rerun the corrected
+whole-period and interval-recovery analyses without fitting any model:
+  python work/reproduce_review_revision.py --raw
+
+Optional existing pinned data cache:
+  python work/reproduce_review_revision.py --raw --data-dir /path/to/raw/cache
+
+The lossless review_frozen_forecasts.csv preserves original UCI target and
+fitted-prediction strings; BLEM target/persistence fields are blank. The raw
+mode rebuilds those omitted values from the pinned original counters and
+requires the exact original study_predictions.csv SHA256. The executed input
+reconstruction check restored all 89,496 rows exactly, checked 82,944 UCI targets
+and 82,944 persistence copies, and rebuilt 6,552 BLEM rows without refitting.
+outputs/review_raw_reconstruction.json records this input-only test; it must
+not be described as a second complete analysis run. The separate full local
+analysis and clean-package default execution have their own reports.
+
+Detailed public traces are UCI-only. New per-day loss contributions and BLEM
+archive-aware period endpoints can reveal original BLEM readings when combined
+with predictions. Thus the five full study_period_archive case/source/trace
+files and the old full study_recovery_cases.csv are replaced in this package
+by separately named public UCI exports and explicit omission manifests. Full
+original hashes, row counts and source-code regeneration are preserved.
+The default period checker reconstructs all UCI period rows from their traces
+and checks all-cohort aggregate consistency. It does not independently
+reconstruct the omitted BLEM per-case values. The --raw mode restores the
+data and regenerates full new period traces, enabling the full 34-series check.
+Regenerating the OLD full per-day recovery cases additionally requires running
+the original outputs/study_recovery.py after input restoration; default review
+reproduction uses the already supplied old diagnostic summaries.
+
+The period mask correction is recorded in work/period_archive_bugfix_amendment.txt.
+It preserves original-source ordering for four tied high-demand masks that
+changed under default CSV floating-point parsing. All 34 meters were rerun;
+the original frozen protocol and numerical tolerances were not changed.
+outputs/study_period_archive_mask_audit.json records the source equality check.
+
+ENVIRONMENT AND COMMANDS
+
+The tested interpreter was Python 3.12.14. Exact core/dependency versions are in
+outputs/requirements-study.txt and the completed study_summary.json records the
+versions used by the actual analysis. A CPU is sufficient; no GPU is required.
+The downloader and meter-counter preparation scripts use only the standard library.
+Allow approximately 314 MB of downloads and at least 4 GB of free disk space
+for raw data, detailed traces and an isolated verification copy.
+
+Windows PowerShell:
+  py -3.12 work/verify_research_supplement.py
+  py -3.12 -m venv .venv
+  .venv/Scripts/python.exe -m pip install -r outputs/requirements-study.txt
+  .venv/Scripts/python.exe work/download_study_data.py
+  .venv/Scripts/python.exe -m unittest discover -s outputs -p test_energy_rank_bounds.py -v
+  .venv/Scripts/python.exe outputs/study_verification_tests.py
+  .venv/Scripts/python.exe outputs/test_main_ai_revision.py
+  .venv/Scripts/python.exe outputs/test_recovery_adaptivity.py
+  .venv/Scripts/python.exe -m unittest discover -s outputs -p test_study_recovery.py -v
+  .venv/Scripts/python.exe work/prepare_reproduction.py
+  .venv/Scripts/python.exe outputs/study_training_preflight.py
+  .venv/Scripts/python.exe outputs/run_energy_rank_study.py
+  .venv/Scripts/python.exe outputs/export_frozen_forecasts.py
+  .venv/Scripts/python.exe outputs/study_independent_audit.py
+  .venv/Scripts/python.exe outputs/study_matched_coverage.py
+  .venv/Scripts/python.exe outputs/study_runtime_benchmark.py
+  .venv/Scripts/python.exe outputs/study_integrity_check.py
+  .venv/Scripts/python.exe outputs/study_recovery.py
+  .venv/Scripts/python.exe outputs/study_recovery_runtime.py
+  .venv/Scripts/python.exe outputs/study_operator_example.py
+  .venv/Scripts/python.exe outputs/analyze_ai_recovery.py
+  .venv/Scripts/python.exe outputs/analyze_recovery_diagnostics.py
+  .venv/Scripts/python.exe outputs/study_daily_evaluation.py
+  .venv/Scripts/python.exe -m unittest discover -s outputs -p test_study_recovery.py -v
+  .venv/Scripts/python.exe work/analyze_final_results.py
+
+Linux/macOS:
+  python3.12 work/verify_research_supplement.py
+  python3.12 -m venv .venv
+  .venv/bin/python -m pip install -r outputs/requirements-study.txt
+  .venv/bin/python work/download_study_data.py
+  .venv/bin/python -m unittest discover -s outputs -p test_energy_rank_bounds.py -v
+  .venv/bin/python outputs/study_verification_tests.py
+  .venv/bin/python outputs/test_main_ai_revision.py
+  .venv/bin/python outputs/test_recovery_adaptivity.py
+  .venv/bin/python -m unittest discover -s outputs -p test_study_recovery.py -v
+  .venv/bin/python work/prepare_reproduction.py
+  .venv/bin/python outputs/study_training_preflight.py
+  .venv/bin/python outputs/run_energy_rank_study.py
+  .venv/bin/python outputs/export_frozen_forecasts.py
+  .venv/bin/python outputs/study_independent_audit.py
+  .venv/bin/python outputs/study_matched_coverage.py
+  .venv/bin/python outputs/study_runtime_benchmark.py
+  .venv/bin/python outputs/study_integrity_check.py
+  .venv/bin/python outputs/study_recovery.py
+  .venv/bin/python outputs/study_recovery_runtime.py
+  .venv/bin/python outputs/study_operator_example.py
+  .venv/bin/python outputs/analyze_ai_recovery.py
+  .venv/bin/python outputs/analyze_recovery_diagnostics.py
+  .venv/bin/python outputs/study_daily_evaluation.py
+  .venv/bin/python -m unittest discover -s outputs -p test_study_recovery.py -v
+  .venv/bin/python work/analyze_final_results.py
+
+Rerunning the study replaces its study_*.csv and study_*.json result files. To
+retain the distributed results, run in a second extracted copy of the supplement.
+The prepare_reproduction.py command removes only the old matched-coverage,
+recovery, neural-subset, operator-example, daily, archive-access and new-consumer
+extension CSVs before the
+main analysis records hashes. Their respective
+extension scripts regenerate them from the new completed main study. This
+preparation removes no source data or program code.
+Do not copy old cached work/study_*_hourly.pkl files into a clean reproduction.
+The analysis can create these local caches for subsequent runs. A fresh extraction
+contains no caches. Floating-point reductions may differ slightly across platforms;
+completion time and timestamps necessarily differ. Seeds and hyperparameters are fixed.
+
+FILE GUIDE
+
+outputs/energy_rank_bounds.py:
+  Reference implementation for paired MSE bounds, feasible completions, and ranking.
+outputs/test_energy_rank_bounds.py:
+  Independent enumeration/analytical validation of the reference implementation.
+outputs/study_verification_tests.py:
+  Study-specific checks of forecast-origin availability, hidden-target information
+  flow, daylight-saving exclusions, and comparison with a general linear program.
+outputs/test_main_ai_revision.py:
+  Regression checks for numerical cancellation with large forecast/target offsets
+  in the vectorized paired bounds and individual squared-error maxima.
+outputs/study_training_preflight.py and outputs/study_training_preflight.json:
+  Training-only neural convergence diagnostics across all 34 meters. No held-out
+  forecasts or scores are computed; the final study refits every model from scratch.
+outputs/test_recovery_adaptivity.py and outputs/test_recovery_adaptivity.json:
+  Exact finite-state comparison of deterministic adaptive and batch minimax
+  residual-width policies; report records the tested cases and source hash.
+outputs/study_independent_audit.py and outputs/study_independent_audit.json:
+  Independent randomized comparison with general LP/QP solvers; report records
+  numerical discrepancies and hashes of the audited scripts.
+outputs/study_matched_coverage.py, .csv, and .json:
+  Descriptive comparison of point-method decisions at the paired method's
+  scenario-specific coverage, using estimated margins scaled by training energy.
+  Complete-reference outcomes assess the selected decisions; they do not rank
+  them. This is a batch comparison, not confidence calibration or a future guarantee.
+  The report also records overlap between baseline-selected comparisons and
+  matching/opposite certificates or unresolved paired intervals.
+outputs/run_energy_rank_study.py:
+  Data aggregation, temporal splits, fixed forecast fitting, controlled target
+  removal, bounding/comparison/selection methods, and descriptive summaries.
+  Models are daily persistence, ridge, histogram gradient boosting, and a fitted
+  (32,16) multilayer perceptron. The MLP uses training-only feature standardization
+  and target scaling by the training mean; no test-dependent tuning is performed.
+outputs/study_predictions.csv:
+  Regenerated locally, not included in the submission ZIP: frozen hourly truth
+  and four forecasts for every included meter/test day. Its expected source-run
+  hash and omission rationale are in work/prediction_archive_omission.json.
+outputs/export_frozen_forecasts.py and outputs/frozen_forecasts.csv/.json:
+  Frozen fitted forecasts for all 34 meters with target interval timestamps,
+  simulated day-start issue cutoffs, training end date and mean. These are
+  historically simulated forecasts, not originally logged vendor predictions.
+  No true target column is exported. UCI persistence is included under the
+  attributed source license; BLEM persistence is omitted because it exactly
+  copies prior hourly readings. Fitted ridge/boosting/MLP forecasts are retained.
+  This omission avoids direct raw copies without certifying broader data rights.
+outputs/study_comparisons.csv:
+  Trial counts, decisions, contradicted decisions, enclosure and bound widths,
+  grouped by cohort, meter, model pair, missingness scenario, and method.
+outputs/study_selections.csv:
+  Four-model selection outcomes and normalized regret by scenario/selector.
+outputs/study_period_comparisons.csv:
+  Whole-test-period pairwise comparison bounds, truth contrasts and decisions,
+  preserving meter, mask, seed and aggregate-total scenario identities.
+outputs/study_meter_results.json and outputs/study_summary.json:
+  Per-meter and cohort summaries; final environment, timing and provenance records.
+outputs/study_environment.json:
+  Hardware and thread-count record for interpreting the measured study runtime.
+outputs/study_runtime_benchmark.py and outputs/study_runtime_benchmark.json:
+  Separate timing measurements for the verification computations. Treat these
+  as hardware/run-specific measurements, not universal latency guarantees.
+outputs/study_integrity_check.py and outputs/study_integrity_check.json:
+  Final script/protocol/result hash checks and consistency checks across row
+  counts, cohort summaries, decision rates and observed bound coverage.
+outputs/study_recovery.py, .csv, .json, and outputs/test_study_recovery.py:
+  Separate post-main-study extension examining budgeted recovery of missing
+  measurements, its optimization method, and comparison with fixed heuristics.
+  Its own dated protocol and source hashes distinguish it from the main study.
+  Each query assumes one stored interval-energy record can be recovered from
+  a meter buffer or secondary archive; this is not a packet-cost model or a way
+  to retrieve measurements that were never recorded. Recovery is simulated.
+  Policies are pair-specific nonadaptive batches, with no shared all-model budget.
+  Analytical tests run from the archive. Prediction-dependent integration tests
+  explicitly skip until study_predictions.csv has been regenerated; rerun the
+  recovery test command after the full main and recovery runs to execute them.
+outputs/study_recovery_neural.csv:
+  Descriptive per-meter recovery results restricted to pairs involving the MLP,
+  retained as a separately labelled subset of the same dependent comparisons.
+outputs/study_recovery_regression_fixtures.json:
+  Synthetic regression fixtures for corrected recovery-policy corner cases.
+outputs/analyze_ai_recovery.py and outputs/ai_recovery_analysis.json:
+  Descriptive paired recovery-policy differences for all pairs and MLP-involving
+  pairs, using resampling of whole meters rather than dependent trials.
+outputs/analyze_recovery_diagnostics.py and outputs/recovery_diagnostics.json:
+  Exploratory paired differences between exact and greedy recovery by meter,
+  named pair and mask seed, including per-case width and decision diagnostics.
+outputs/study_operator_example.py, .json and .csv:
+  One operator-workflow illustration drawn from the CC BY 4.0 UCI Portugal data,
+  selected as the first chronological unresolved MLP-versus-boosting case rather
+  than selected for successful post-query certification. No BLEM traces are included.
+outputs/study_recovery_pair_seed.csv and outputs/study_recovery_cases.csv:
+  Exploratory named-pair/seed results and per-case width, decision and query-index
+  diagnostics. They do not contain raw recovered interval readings.
+outputs/study_daily_evaluation.py/.json and outputs/study_daily_*.csv:
+  Post-review daily selective-evaluation analysis for six-hour contiguous gaps
+  with exact six-hour totals and zero or two allowed queries. All comparators
+  receive the same pair-specific recovered observations. Abstention ranks by
+  evaluator-visible estimated margins normalized by squared training mean.
+  Results pool daily comparisons within cohort and named pair; selective errors
+  divide incorrect selections by all selected decisions. Certificate coverage
+  also equals meter macro-coverage because day counts match within each cohort.
+  Complete-reference margin quintiles are retrospective diagnostic strata, never
+  a rule for choosing predictions. Days, seeds and pairs remain dependent.
+work/daily_evaluation_protocol.txt and work/recovery_exploratory_amendment.txt:
+  Dated post-review extensions identifying new exploratory comparisons without
+  changing the frozen forecasts or claiming independently prespecified validation.
+outputs/study_recovery_runtime.py and outputs/study_recovery_runtime.json:
+  Separate prepared-input timing comparison for recovery-query policies; the
+  report records both its script hash and the recovery-implementation hash.
+outputs/manuscript_result_tables.json and work/analyze_final_results.py:
+  Manuscript-facing tables generated directly from completed results, with source
+  hashes. The analysis code does not change the main experimental outputs.
+work/compose_final_sections.py, work/compose_review_sections.py,
+work/build_final_manuscript.py, and
+work/final_sections.json:
+  Measured-result section/table composer, self-contained final manuscript
+  template, and archived populated sections. Optional reconstruction commands:
+    python work/compose_final_sections.py
+    python work/build_final_manuscript.py
+  These create work/final_sections.json and outputs/revised_manuscript.tex from
+  the completed analyses; they do not compile a PDF. Check generated narrative
+  interpretations if a reproduction's results differ from the archived results.
+work/check_manuscript_reconstruction.py and
+outputs/manuscript_reconstruction_check.json:
+  Read-only audit of the manuscript against both the archived sections/template
+  and a fresh composition from final results. It reconstructs only inside a new
+  work/data_reconstruction_check_* directory and compares exact bytes. No PDF
+  is compiled. Run after optional manuscript reconstruction:
+    python work/check_manuscript_reconstruction.py
+work/study_protocol.txt, work/study_protocol_blem.txt, and
+work/study_protocol_amendment.txt:
+  Dated local analysis plans and documented technical corrections.
+  These are local protocol records, not an externally registered preregistration.
+  The amendment documents the initial-run interruption, corrected daylight-saving
+  exclusions, information-flow checks, and added period-level audit before restart.
+work/study_protocol_recovery.txt:
+  Separate plan for the recovery extension, written after the main study. This
+  extension must not be described as prespecified before the main-study outcomes.
+work/study_protocol_ai_revision.txt:
+  User-requested revision replacing weekly persistence with a fixed neural model,
+  frozen before new fits but after the earlier results had been inspected. Reusing
+  the same chronological test periods is not independent external confirmation.
+work/study_protocol_training_convergence.txt:
+  User-requested increase in the uniform MLP epoch allowance from 200 to 1000,
+  responding only to training convergence warnings with all other settings fixed.
+  The diagnostic partial run was interrupted; the final analysis is a fresh run.
+work/study_training_preflight_log.txt:
+  Logged training-only preflight epochs and solver stopping diagnostics.
+work/recovery_ai_protocol.txt:
+  Separately dated recovery-policy revision frozen after the main AI rerun began
+  and before recovery outcomes were recomputed. Its hash is recorded by the
+  recovery experiment rather than included in the earlier main-run protocol set.
+work/recovery_cache_amendment.txt and work/solver_validation_amendment.txt:
+  Post-run implementation and validation records for repeated-state caching and
+  explicit rejection of overflowing solver witnesses. The empirical main
+  forecasts and results were not changed by these corrections.
+work/study_run_log.txt and work/study_recovery_log.txt:
+  Console logs from the completed main and recovery runs, respectively.
+work/download_study_data.py:
+  Official UCI downloads, archive/text SHA256 checks, extraction of named members,
+  and invocation of BLEM preparation. Correct existing files are reused.
+work/data_prepare_blem.py:
+  Pinned source downloads and exact counter-endpoint target reconstruction.
+work/data_*_provenance.json and work/data_blem_source_notes.json:
+  Original-source URLs, metadata, checksums, units, and data-use limitations.
+MANIFEST.sha256:
+  SHA256 checksums of every archived content file except the manifest itself.
+work/verify_research_supplement.py:
+  Standard-library integrity check for all files in the extracted archive.
+work/prepare_reproduction.py:
+  Removes only the archived post-main derived CSVs so a fresh run records clean
+  main-study provenance before the extensions are recomputed.
+
+SOURCE DATA AND ATTRIBUTION
+
+1. UCI Individual Household Electric Power Consumption
+   https://doi.org/10.24432/C58K54
+   https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption
+   License: Creative Commons Attribution 4.0 (CC BY 4.0), as listed by UCI.
+   Minute-average global active power is kW. Hourly kWh equals the sum of all
+   sixty finite minute readings divided by 60. One French household is one case;
+   many days from that household do not constitute independently sampled homes.
+
+2. UCI ElectricityLoadDiagrams20112014
+   https://doi.org/10.24432/C58C86
+   https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014
+   License: Creative Commons Attribution 4.0 (CC BY 4.0), as listed by UCI.
+   Original readings are quarter-hour kW. End-of-interval timestamps are shifted
+   back 15 minutes before hourly aggregation; summing four readings and dividing
+   by four yields hourly kWh. The provider uses a fixed Portuguese local-time
+   grid with documented daylight-saving anomalies. Eligibility and exclusions
+   follow the protocol and study code; meter selection uses training data only.
+
+3. BLEM / Discovergy cumulative meter observations
+   Michael Kostmann and Wolfgang K. Härdle (2019), Forecasting in Blockchain-Based
+   Local Energy Markets, Energies 12, 2718. https://doi.org/10.3390/en12142718
+   Original source: https://github.com/QuantLet/BLEM
+   Pinned commit: 756b2c1265f964b70f72625a95d98413cdfb78bd
+   Consumer IDs 00000001, 00000002 and 00000003 were selected lexicographically,
+   before their forecast results were examined. The released time column is
+   Unix milliseconds. The energy column is an integer cumulative import register;
+   the original authors' FUN_getData.R converts counter increments by 1e-10 kWh.
+   Our preparation subtracts integers before conversion and uses exact UTC hour
+   endpoints. Each hour must contain twenty consecutive, nonnegative 3-minute
+   increments. All three records satisfy this condition throughout the released
+   year. No interpolation, tolerance matching, or empirical capacity cap is used.
+   The generated data_blem_hourly_endpoints.csv retains both raw integer counters
+   and actual timestamp endpoints; all matching lags are zero.
+   The source article is CC BY 4.0, but a separate dataset license was not found.
+   Public repository accessibility is not treated as permission to relicense the
+   raw data. Raw BLEM source files and the local study_predictions.csv containing
+   derived hourly verification targets are excluded from this submission archive.
+   Source links, attribution, and download/reconstruction code are supplied.
+
+WHAT THE EXPERIMENT CAN AND CANNOT ESTABLISH
+
+The method evaluates fixed forecasts when some verification targets are unavailable
+but surviving block totals restrict their feasible values. It does not train a new
+forecast architecture or claim improved forecasting accuracy. Synthetic masks are
+applied only after all forecasts have been generated.
+
+For both UCI sources, surviving aggregate totals are derived from complete retained
+truth before masking: aggregate survival is simulated. BLEM supplies actual
+cumulative registers, whose endpoint differences yield exact interval energies,
+but missing-target outages are still simulated. No field deployment, independently
+surviving telemetry channel, or real-world outage probability has been measured.
+
+The main feasibility sets impose nonnegative targets and exact/uncertain aggregate
+totals, with no capacity estimated from observed maxima. Deterministic certificates
+are conditional on these measurement assumptions. They concern the finite evaluated
+cases and do not provide population-level significance or confidence in future data.
+The highest-demand removal pattern is an oracle stress test, not a claimed empirical
+outage mechanism. Three BLEM consumers form an external case series. Whole-meter
+bootstrap intervals are descriptive, especially unstable with only three meters;
+days, model pairs, overlapping masks and repeated seeds are not independent homes.
+
+RELEASE CHECKS
+
+The package builder uses a strict allowlist, refuses a missing final summary, checks
+summary-reported hashes for the main analysis script and result CSVs, and writes
+actual SHA256 hashes for final packaged files. It does not include source archives,
+original raw archives, BLEM target records, cached data, downloaded articles, older gating/pilot artifacts,
+or compiled/source manuscript files. The final builder template is supplied as
+Python source. Data downloads are pinned by exact SHA256 checksums.
+
+POST-REVIEW EVALUATOR-ACCESS SENSITIVITY
+
+Online Resource 1 for Applied Intelligence:
+Auditing Machine-Learning Energy Forecasts with Missing Targets: Sharp Comparisons and Budgeted Recovery
+Jishan Kapoor, Independent Researcher, Toronto M4Y 1C9, Canada
+Correspondence: kapoorjishan19@gmail.com
+
+After regenerating study_predictions.csv and the original recovery outputs, run:
+  python outputs/study_archive_access.py
+
+Keep work/archive_access_protocol.txt in its supplied location. This standalone
+analysis reuses all saved test days, models, seeds and the original six-hour totals.
+It compares restricted record access against access to all saved test persistence
+forecasts. A later daily forecast at t+24 reveals the measured target at t when
+that forecast exists; lookup uses only timestamps and forecast values. Hidden
+truth validates the lookup afterward and simulates paid recovery after batch
+selection. Output files contain aggregate statistics only, not hourly BLEM data.
+The three study_archive_access_*.csv files supply cohort, meter and pair/seed
+statistics; study_archive_access.json records provenance, source hashes,
+reconciliation to earlier results and all checking outcomes. This post-review
+same-panel sensitivity is not preregistered or a new external validation cohort.
+It does not evaluate full information closure or all production forecasts.
+
+To verify the greedy boundary example without downloading raw data, run:
+  python outputs/study_greedy_boundary.py
+
+This checks a constructed one-block width objective using independent exhaustive
+query enumeration and direct paired squared loss at simplex vertices. It is not
+an empirical forecasting benchmark or evidence of field-level cost savings.
+
+The completed manuscript generators now include work/compose_archive_sections.py.
+Run work/compose_final_sections.py only after the archive analysis is complete,
+then work/build_final_manuscript.py to reconstruct the submitted source.
+
+INDEPENDENTLY INTERVAL-BOUNDED TOTALS
+
+interval_total_recovery.py is a separate batch solver for blocks with finite
+0 <= lower <= sum(unknown targets) <= upper, nonnegative uncapped targets,
+exact recovered answers, disjoint coordinate indices and equal query cost.
+Its IntervalTotalBlock and RecoverySolution interfaces are documented in source.
+It allows querying all coordinates, since a final coordinate is not generally
+determined by an uncertain total; constant coefficients can retain uncertainty.
+It does not alter the exact-total empirical run or claim field benefits.
+
+Independent synthetic verification, with SciPy/NumPy installed:
+  python outputs/study_interval_total_recovery.py
+
+The generated JSON records LP extrema, exhaustive query enumeration, conditional
+query-answer cases, exact-total reductions, invalid inputs and source hashes.
+work/compose_interval_sections.py inserts the verified theory and check counts
+into the same final manuscript. Floating-point outputs are not outward-rounded
+machine certificates. Correlated totals and uncertain query answers require
+additional modeling and are outside this solver.
+
+FROZEN REPLICATION ON PREVIOUSLY UNUSED CONSUMERS
+
+After regenerating the original main-study and recovery artifacts, run:
+  python outputs/study_holdout_consumers.py
+
+Keep work/holdout_consumers_protocol.txt and the downloaded UCI electricity
+source in place. The fixed procedure selects the first 30 eligible MT_081--MT_370
+consumers using only the original 2013 training rule; it fits the original four
+models without changing hyperparameters. All primary six-hour-gap comparisons
+are retained under restricted-record and saved-test-persistence-archive access.
+This is a same-source, same-calendar replication with individual consumer fits,
+not external-data or zero-shot validation. No fit is replaced after outcomes.
+
+The JSON records source/protocol/code hashes, all selection statistics, model
+warnings, configurations, paired consumer differences and checking outcomes.
+The six study_holdout_consumers_*.csv files provide hourly predictions/targets,
+pair/seed and consumer aggregates, primary macro and separate pooled cohort
+rates, named-pair results and forecast errors. These new-consumer targets are
+derived solely from UCI ElectricityLoadDiagrams20112014 (DOI10.24432/C58C86),
+licensed CC BY4.0 at https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014.
+Original data attribution is to Artur Trindade, 2015. Changes: interval-end time
+shift, hourly kWh aggregation, training/test eligibility filters and derived
+model predictions. Source provenance and hashes are supplied. This inclusion
+does not extend redistribution permission to the separately sourced BLEM data.
+
+The manuscript composer verifies the completed replication artifacts before
+inserting the new methods/results. Rebuilding the manuscript from the supplied
+aggregates does not require refitting or downloading the full raw source.
+
+Independent checking without original raw data or model fitting:
+  python work/verify_holdout_replication.py
+
+This separate implementation checks all aggregate rows, forecast-error metrics
+and zero-query comparisons from the new-consumer excerpt, plus representative
+direct-loss vertex extrema and exhaustive recovery subsets. It imports none of
+the analysis implementations. The generated study_holdout_independent_audit.json
+records its counts, numeric discrepancies, hashes and limits; in particular it
+does not refit the models or independently rerun every two-query decision.
+
+
+RANDOMIZED RECOVERY AND NATURAL PRECIPITATION EXTENSIONS
+
+The same recommended command now includes the verified additions:
+  python work/reproduce_review_revision.py
+It preserves the earlier period/interval checks and also runs:
+  work/verify_randomized_revision.py
+  work/randomized_recovery_root/verify_compact_policy.py
+  work/new_direction_practical/noaa/reproduce_extracted_panel.py
+The first rebuilds all 20,736 public day-pair cases, every positive support,
+permitted forecast copies and 1,074 compact-versus-finite-game optima (roughly
+one minute in the reference environment). The policy check verifies 48 cases,
+5,800 seeded hard-budget draws and invalid inputs. The NOAA standard-library
+checker reconstructs 260 member-days and 832 raw/preprocessed direct quadratic
+vertices from archived decoded metadata and selected observation records.
+It does not freshly decode the original GRIB files or prove global absence of
+other public observation archives. Full local source/GRIB audits are archived
+separately and state their own scope. No mode fits new forecast models.
+
+These checks run in an additional isolated tree. Their generated timing and
+verification reports cannot overwrite the frozen reports used to generate the
+manuscript. The same builder then reconstructs the exact current TeX; the main
+TeX and PDF are supplied separately and are not in the ZIP. Only six explicit
+work/ theory/application .tex fragments required by the builder are included.
+
+Nested work directories are an explicit file list, never a recursive cache
+copy. The NOAA lightweight_manifest.json lists all selected source excerpts,
+forecast-message provenance, outcomes, code, and caveats. The large GRIB files,
+local dependency installations and full station archives are excluded. To run
+only the quick offline NOAA check, execute:
+  python work/new_direction_practical/noaa/reproduce_extracted_panel.py
+The full-source NOAA build and independent raw audit are optional scripts
+requiring their recorded inputs and ecCodes/NumPy; they are distinct from the
+no-download default. Source snapshots may differ from later mutable NOAA files.
+
+The randomized objective is worst expected residual width with the hidden
+record fixed before the batch draw. It does not guarantee improved realized
+width/certification; the adverse empirical tradeoff is retained. NOAA results
+comprise 9 natural accumulated days, 43 dry-record controls and 9 excluded calendar
+dates. Two natural comparisons are strict, six are sign-ambiguous and one is an
+identified tie. The whole 52-day comparison remains unresolved. No hidden natural
+hourly truth, measured retrieval cost, operational deployment or acceptance
+probability is claimed.
+
+POST-REVIEW TIE POLICY AND SCALING CHECKS
+
+The default command also independently replays the saved target-blind tie
+policies and checks the archived scaling records:
+  python work/reproduce_review_revision.py
+  work/randomized_tie_review/verify_ties.py
+  work/randomized_scaling_review/verify_scaling.py
+
+The tie study retains the original randomized results and all cases. Both
+secondary objectives are selected before reference targets are parsed or used
+for policy selection. The target CSV is byte-hashed earlier for provenance;
+the separate wording amendment records this distinction. Replay
+checks the new saved distributions, secondary optimality, hard query budgets,
+reference-outcome arithmetic and summaries; it does not rerun model fitting or
+replace the original minimax experiment. Source hashes and the exact scope of
+each independent check are supplied in its JSON report. The unchanged adverse
+empirical tradeoff is retained rather than hidden by the tie-policy analysis.
+
+The scaling default verifies source/output checksums, the frozen instance grid,
+size-based enumeration eligibility, complete archived results, numerical
+diagnostics and summaries. It does not claim fresh timing or memory measurement.
+To repeat the frozen measurements in another isolated workspace, use:
+  python work/reproduce_review_revision.py --rerun-scaling
+The measurement harness uses Windows process working-set counters and requires
+Windows for this optional mode. Single-run timings depend on the host and load;
+they are not expected to reproduce bit-for-bit. The original measured results
+remain unchanged, and no runtime-dominance or empirical complexity claim follows
+from these checks. All frozen failures/skips remain part of the output.
+
+The runner explicitly sets each script's sibling import directory so its nested
+Windows execution is independent of the automatic sys.path handling of long
+paths. All new replay outputs are written to copied verification trees, leaving
+the archived reports used for exact manuscript reconstruction unchanged.
+
+RANDOMIZED AUDIT OF THE EXISTING 30-CONSUMER HOLDOUT ARCHIVE
+
+The same default runner also calls:
+  python work/randomized_holdout_review/verify_holdout.py
+The independent checker uses no recovery implementation or optimizer. It
+reconstructs all masks, permitted archive copies and aggregate deductions,
+checks 19,260 saved day-pair cases, 899 positive-width policies and 3,958
+positive-probability batches, and verifies interval containment, query budgets,
+expected-outcome arithmetic and saved primary dual bounds. Generation records
+contain the compact-versus-finite and secondary-optimality checks; the default
+replay does not rerun those optimizations. The frozen barycenter refinement is
+used for every case, and the original primary optimizer remains in separately
+labeled context columns. Neither original experiment nor holdout results are
+replaced. This is a post-review audit of the existing same-source consumer
+forecast archive, with no new fits or prospective/out-of-source validation.
+
+
+FINAL FRESH-REFIT VERIFICATION AND OPTIONAL RETRAINING
+
+Recommended complete no-download entry point:
+  python work/reproduce_final_revision.py
+This invokes the earlier complete review runner unchanged, then runs the
+independent public fresh-refit checker and rebuilds the exact current TeX.
+Every generated report is isolated; archived generation inputs remain pinned.
+The old work/reproduce_review_revision.py command remains available with its
+original no-refitting scope and optional raw/scaling modes.
+
+The completed fresh experiment reparsed pinned raw sources and freshly fitted
+192 estimators for64 series. Its independent full local checker compared
+166,536 targets and666,144 forecast values with exact numerical agreement
+after CSV parsing. This is same-trainer reproducibility, not an independent
+implementation of training or another run of all downstream mask grids.
+The distributed public replay checks61 UCI series/159,984 rows/639,936 forecast
+values and all64 per-fit metadata records. BLEM rows and hourly intermediates
+remain omitted; full local results and aggregate metrics are archived.
+
+Optional genuine fresh training, including reference-archive restoration:
+  python work/reproduce_final_revision.py --fresh-refit
+To use an existing read-only pinned raw cache:
+  python work/reproduce_final_revision.py --fresh-refit --data-dir /path/to/cache
+This creates a new tree, restores the original mixed reference archive from
+pinned raw sources plus the lossless forecast export, then runs the unchanged
+refit.py prepare/fit, full independent checker, public export and public check.
+Missing raw files are downloaded only into that new tree. Historical reports
+are copied aside and never overwritten. Preparation reparses all raw records
+into a new hourly directory; it does not use the restoration's hourly caches.
+The historical raw-reconstruction report is retained as a byte-pinned reference;
+the new actual restoration result has its own separate report.
+
+To test only the optional regeneration prerequisites without training:
+  python work/reproduce_final_revision.py --prepare-refit-only
+This mode restores89,496 original reference rows and prepares all64 series.
+It does not fit a model or imply that training has run during that check.
+Use the pinned package versions; timings are descriptive shared-host values.
+
+The final additive package validation carries forward the previously completed
+full clean replay only for byte-identical scientific members, then runs fresh
+public-refit arithmetic, exact revised-source reconstruction, and raw restoration
+plus clean preparation. work/validate_supplement_delta.py and the archived
+baseline manifest/report document its explicit change allowlist. This is a
+bounded delta validation, not a second full analysis replay. To rerun every
+current distributed check from a fresh ZIP, execute:
+  python work/validate_submission_archive.py

@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-11T19:53:43.936302+00:00",
+  "source": "UK Power Networks Low Carbon London, official London Datastore full archive",
+  "license": "CC BY4.0",
+  "archive": {
+    "name": "LCL-FullData.zip",
+    "bytes": 801674949,
+    "sha256": "68a35598cc8e70898a7651c482216fb096a0a6910c2d180c616632dfc7a9b014"
+  },
+  "member": {
+    "name": "CC_LCL-FullData.csv",
+    "bytes": 8542818238,
+    "sha256": "1df23797368237f41831434b9add6540df8a68001dabf36242d52ca41807511f"
+  },
+  "parser_sha256": "2d47f9350dc98f224f627fe9db1371a9d6c81daf7033a692e26c3dee94f23b42",
+  "protocol_hashes": {
+    "lcl_protocol.txt": "f3c32aa67f3be8140ca0cb8d20a290c16d6ecc14e0968e314816c96add47092f",
+    "lcl_clock_amendment.txt": "858abff672395b31244c9465fada0017b9c21bcded8c4e1ef9dfe2eccd3cfde7"
+  },
+  "source_rows_scanned": 167932474,
+  "source_distinct_households": 5566,
+  "candidate_count": 100,
+  "selected_ids": [
+    "MAC000002",
+    "MAC000003",
+    "MAC000004",
+    "MAC000005",
+    "MAC000006",
+    "MAC000007",
+    "MAC000008",
+    "MAC000009",
+    "MAC000010",
+    "MAC000011",
+    "MAC000012",
+    "MAC000013",
+    "MAC000014",
+    "MAC000015",
+    "MAC000017",
+    "MAC000018",
+    "MAC000019",
+    "MAC000020",
+    "MAC000021",
+    "MAC000022"
+  ],
+  "clock": "Providerlabels treated as assigned benchmark clock. timestamp_utc is timestamp_benchmark suffixed Z for software coordinates; physical UTC and interval-start orientation are not verified.",
+  "reference": "Sum of the two source kWh readings labeled :00 and :30, with no missing-value imputation.",
+  "source_quality_flags": "The original CSV has only ID, tariff, DateTime and kWh; there is no actual/estimated flag. Our validity rule cannot establish absence of every source-level estimate.",
+  "tests": {
+    "status": "passed",
+    "fixtures": 7
+  },
+  "processing_seconds": 441.0067579000024,
+  "outputs": {
+    "daily_quality.csv": {
+      "bytes": 2034904,
+      "sha256": "c88e0daf9137e99b791359732fcb1f3b8c2f787afffea6e1d83e566740fc216b"
+    },
+    "hourly.csv": {
+      "bytes": 17036656,
+      "sha256": "36e933087d45d08e8b4238c62b64f2ab090c0e6b78ec0b96e11ed0e818b4e0b5"
+    },
+    "household_inventory.json": {
+      "bytes": 54607,
+      "sha256": "bf05abcdcee01e338656aad0af992e31530c496a1719828b5e121afa5c11c7a6"
+    },
+    "selected_halfhour_source.csv.gz": {
+      "bytes": 1742412,
+      "sha256": "53b8a1e2c4cf6427dc8167227b72f39c50d8989c4104c82def4d0122a59b08cb"
+    },
+    "selection.json": {
+      "bytes": 2632,
+      "sha256": "c207ef9130c0cd91d328d16909e63104eea916d12621badb887b1c3277c723c9"
+    }
+  }
+}

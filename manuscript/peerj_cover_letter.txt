@@ -1,0 +1,55 @@
+Dear Academic Editor,
+
+Please consider "Risk and Adaptivity in Certifying Machine-Learning Model
+Comparisons" as a Research Article in PeerJ Computer Science.
+
+The paper addresses an algorithmic question in machine-learning evaluation:
+when verification targets are incomplete, when does observing one measurement
+before choosing another improve the guarantee for a model-comparison interval?
+It treats the unknown record as fixed and evaluates acquisition randomness,
+making the information available to the evaluator explicit.
+
+The main result characterizes the nondecreasing penalties of terminal sharp
+interval width for which randomized batch and adaptive querying have equal
+minimax risk for every compact convex uncertainty set and finite linear-query
+dictionary. The proof includes the nonconcave-penalty converse using ordinary
+coordinate queries. Exact two-query algorithms and checkable adverse-completion
+certificates translate the distinction into a computable acquisition decision.
+The manuscript explicitly credits established minimax, optimal-recovery,
+robust-optimization and sparse-policy results and distinguishes their objectives.
+
+Evaluation on two public sources identifies 290 of 4,914 and 29 of 1,674
+forecast-audit tasks where the adaptive precision guarantee is one and the
+optimal randomized-batch worst-case success is one half. The much smaller
+overall recorded improvements are reported alongside those guarantees. A
+declared measurement-error sensitivity requires two readings for 22 external
+cases and three for seven. A measured public API favors bulk retrieval, and
+the supplied selector consequently chooses bulk when that interface is
+admissible. The application claims concern assurance-compatible acquisition
+under explicit constraints; they do not assert general operational superiority
+of adaptive retrieval or a measured reduction in financial cost.
+
+The work fits algorithms and analysis of algorithms, artificial intelligence,
+and data mining and machine learning through the verification and acquisition
+problem, rather than a new predictive architecture. The self-contained editable
+source and research_supplement.zip provide the proof, code, frozen inputs,
+per-case certificates, source provenance and one entry point for offline
+reproduction. The acquisition wrapper binds a saved comparison to its meter,
+timestamps, coefficients, units and declared interface before dispatch; separate
+checks verify those bindings, reconstruct retained counter endpoints, and
+reject malformed requests and readouts.
+This software integration selects among supplied certificates. Separate
+regeneration and refitting routes are identified.
+
+The manuscript is unpublished in a peer-reviewed venue and is not under
+consideration elsewhere. This work received no external funding, and I declare
+no competing interests. Generative-AI assistance under my supervision is
+disclosed in the manuscript. I am the sole author and corresponding author.
+
+Sincerely,
+Jishan Kapoor
+Independent Researcher
+Toronto M4Y 1C9, Canada
+kapoorjishan19@gmail.com
+
+[Prepared locally; not sent or submitted.]

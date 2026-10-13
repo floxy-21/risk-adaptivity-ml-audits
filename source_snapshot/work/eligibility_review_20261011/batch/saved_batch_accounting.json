@@ -1,0 +1,127 @@
+{
+  "status": "passed",
+  "scope": "Every saved prior two-reading policy stage; independent trace accounting, not rerunning acquisition or model fitting.",
+  "script_sha256": "e30221cb1a41b13ae66e6f4679f1fa6dc483fddec9e24529bb660ac9059c0e22",
+  "periods": [
+    {
+      "period": "validation",
+      "cases": 26910,
+      "source_sha256": "2e50b82a7ebc67af414bb6541d4e000dd435a085bdd7d4e93a2880ceb427ec27",
+      "policies": {
+        "exact": {
+          "cases": 26910,
+          "stages": 13723,
+          "queries": 27384,
+          "batch_size_2": 13661,
+          "two_unknown_block_stages": 3738,
+          "batch_size_1": 62
+        },
+        "greedy": {
+          "cases": 26910,
+          "stages": 13901,
+          "queries": 27743,
+          "batch_size_2": 13842,
+          "two_unknown_block_stages": 3678,
+          "batch_size_1": 59
+        },
+        "hara": {
+          "cases": 26910,
+          "stages": 16719,
+          "queries": 33076,
+          "batch_size_2": 16357,
+          "two_unknown_block_stages": 4441,
+          "batch_size_1": 362,
+          "smaller_than_initial_active_capacity": 1
+        },
+        "uniform": {
+          "cases": 26910,
+          "stages": 18246,
+          "queries": 35874,
+          "batch_size_2": 17628,
+          "two_unknown_block_stages": 4894,
+          "batch_size_1": 618
+        },
+        "randomized": {
+          "cases": 26910,
+          "stages": 14134,
+          "queries": 28185,
+          "batch_size_2": 14051,
+          "two_unknown_block_stages": 3864,
+          "batch_size_1": 83
+        }
+      },
+      "issues": [],
+      "undersized_examples": [
+        {
+          "case": "MAC000004|2013-12-11|1103|0-3",
+          "policy": "hara",
+          "query": [
+            17
+          ],
+          "initial_active_capacity": 3,
+          "stage_limit": 2
+        }
+      ]
+    },
+    {
+      "period": "test",
+      "cases": 17532,
+      "source_sha256": "75b6be19ad2faf2e7e3e7a05ff9f5e28c1f5b171a468d475786d9cafe3be72ef",
+      "policies": {
+        "exact": {
+          "cases": 17532,
+          "stages": 9469,
+          "queries": 18901,
+          "batch_size_2": 9432,
+          "two_unknown_block_stages": 2647,
+          "batch_size_1": 37
+        },
+        "greedy": {
+          "cases": 17532,
+          "stages": 9595,
+          "queries": 19154,
+          "batch_size_2": 9559,
+          "two_unknown_block_stages": 2596,
+          "batch_size_1": 36,
+          "smaller_than_initial_active_capacity": 1
+        },
+        "hara": {
+          "cases": 17532,
+          "stages": 11540,
+          "queries": 22817,
+          "batch_size_2": 11277,
+          "two_unknown_block_stages": 3206,
+          "batch_size_1": 263
+        },
+        "uniform": {
+          "cases": 17532,
+          "stages": 12621,
+          "queries": 24790,
+          "batch_size_2": 12169,
+          "two_unknown_block_stages": 3544,
+          "batch_size_1": 452
+        },
+        "randomized": {
+          "cases": 17532,
+          "stages": 9770,
+          "queries": 19475,
+          "batch_size_2": 9705,
+          "two_unknown_block_stages": 2759,
+          "batch_size_1": 65
+        }
+      },
+      "issues": [],
+      "undersized_examples": [
+        {
+          "case": "MAC000022|2014-02-26|2207|0-2",
+          "policy": "greedy",
+          "query": [
+            9
+          ],
+          "initial_active_capacity": 2,
+          "stage_limit": 2
+        }
+      ]
+    }
+  ]
+}

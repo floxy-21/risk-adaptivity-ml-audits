@@ -1,0 +1,76 @@
+\section{Compact Recovery with Disjoint Aggregate Totals}
+\label{sec:structured}
+The general theory applies to any compact convex $F$, but efficient
+optimization still depends on its geometry. Consider residual targets
+$y_{gi}\geq0$ in disjoint blocks $\mathcal M_g$, with exact sums
+$\sum_i y_{gi}=E_g$. Here the intercept $d$ includes all fixed observed
+contributions to the contrast; only unknown coordinates remain in the
+residual notation. Write
+$\F=\prod_g\{y_g\geq0:\sum_i y_{gi}=E_g\}$ for this residual
+representation of the full feasible record $F$. The sharp paired interval has endpoints
+\begin{equation}
+ D^-=d+\sum_g E_g\min_{i\in\mathcal M_g}c_{gi},\qquad
+ D^+=d+\sum_g E_g\max_{i\in\mathcal M_g}c_{gi}.
+ \label{eq:sharp}
+\end{equation}
+Blocks with no missing coordinates are omitted after checking that their
+observed sums equal the recorded totals.
+Each extremum assigns the block's mass to an extremal coefficient;
+disjointness permits simultaneous attainment. A singleton is determined
+by its total, and a zero-total block is entirely determined. Negative
+residual totals indicate inconsistent input rather than a valid feasible
+set. A recorded counter increment must refer to the same units and
+interval as the targets; an approximate physical total requires an
+appropriately widened constraint.
+
+For queried coordinates $Q_g$ and retained set $S_g=\mathcal M_g\setminus Q_g$,
+\begin{equation}
+ W(Q,y)=\sum_g\left(\sum_{i\in S_g}y_{gi}\right)
+                  \operatorname{range}(c_{g,S_g}).
+ \label{eq:querywidth}
+\end{equation}
+The range of an empty set or singleton is zero. In every block with a
+nonempty retained set, all mass can be assigned to unqueried coordinates;
+a fully queried block contributes zero width. Thus the worst width of a fixed batch is
+$\sum_g E_g\operatorname{range}(c_{g,S_g})$.
+
+\subsection{Deterministic recovery as a reference}
+Sort the $m_g$ coefficients in a block. Retaining $m_g-k$ coefficients
+with minimum range is achieved by a consecutive window, giving
+\begin{equation}
+ h_g(k)=E_g\min_{1\leq s\leq k+1}
+       (c_{g,(s+m_g-k-1)}-c_{g,(s)}),\quad 0\leq k\leq m_g-1.
+ \label{eq:window}
+\end{equation}
+Every retained subset spans a window of that size with no larger range,
+which proves the reduction. Allocate queries by
+\begin{equation}
+ D_B=\min_{\sum_g k_g\leq B}\sum_g h_g(k_g),\qquad
+ V(g,b)=\min_k\{V(g-1,b-k)+h_g(k)\}.
+ \label{eq:allocation}
+\end{equation}
+The recurrence minimizes over $0\leq k\leq\min(b,m_g-1)$, has
+$V(0,0)=0$ and infeasible states equal to infinity, and extracts
+$D_B=\min_{0\leq b\leq B}V(G,b)$ for the at-most budget.
+It returns the queried complements of the selected windows. The budget
+is a count of distinct acquired coordinates for one contrast, not a
+measured monetary cost or a shared budget over all pairs of models.
+
+\begin{proposition}[Deterministic adaptive reference]
+\label{prop:det-adapt}
+For nonnegative residual targets with disjoint exact totals and unit
+costs, the deterministic adaptive worst-width optimum equals $D_B$.
+\end{proposition}
+\begin{proof}
+Omit queries whose values are already determined and simulate their
+answers in the policy's history. Answer zero to every remaining query.
+Every positive-total block retains an unqueried coordinate on this
+transcript; assign its mass to such a coordinate at termination. This is
+a feasible completion realizing the transcript. Its terminal width is
+the worst width of the terminal batch and is at least $D_B$. The optimal
+fixed batch supplies the reverse inequality.
+\end{proof}
+This geometry-specific deterministic statement is distinct from the
+general randomized mean-width identity. The following program also
+solves the randomized adaptive problem for mean width.
+

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "arithmetic_fixtures": 4,
+  "rejected_corruptions": [
+    "future feature",
+    "future fitted state",
+    "query cap",
+    "duplicate query",
+    "known query",
+    "hidden initial target",
+    "uncharged requested batch",
+    "wrong certificate"
+  ],
+  "imports_experiment_or_acquisition": false,
+  "external_outcomes_opened": false
+}

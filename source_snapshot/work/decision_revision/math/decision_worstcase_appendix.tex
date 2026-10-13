@@ -1,0 +1,31 @@
+\subsection{A limitation of worst-case decision acquisition}
+\label{app:decision-worstcase}
+\begin{proposition}[Exact worst-case decision cost]
+\label{prop:decision-worstcase}
+Suppose the current sharp paired-loss interval strictly straddles zero,
+all residual totals are exact and positive, and individual exact readings
+have unit cost. In block $g$, let $m_g$ be the number of unknown coordinates
+and $M_g$ the largest multiplicity of an equal coefficient.
+The optimal worst-case number of queries needed to certify one common
+best model of the pair, allowing a known tie, is
+$K^*=\sum_g(m_g-M_g)$. The bound holds for adaptive policies and for
+randomized policies required to certify every feasible record correctly.
+\end{proposition}
+\begin{proof}
+For the upper bound, query all coordinates outside a largest
+equal-coefficient class in each block. The unqueried contribution is
+its common coefficient times the residual total, so the contrast is known.
+For the lower bound, strict straddling supplies a zero-contrast completion
+in the relative interior of the product of simplexes. Fix this record
+before all queries and random draws. If two unknown coordinates in a
+block have different coefficients, transferring a sufficiently small mass
+between them in either direction preserves all answers and totals while
+producing opposite signs. A certificate is therefore impossible until
+each block retains at most one coefficient class. This requires at least
+$m_g-M_g$ queries per block on every realized path at the fixed record.
+\end{proof}
+For distinct coefficients this is $\sum_g(m_g-1)$, so changing the
+objective to worst-case exact stopping cost cannot promise broad savings.
+Average cost under a declared surrogate or empirical record distribution
+is a separate objective. A positive decision tolerance or an assumed
+separation margin changes the problem and must be specified independently.

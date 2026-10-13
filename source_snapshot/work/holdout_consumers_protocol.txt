@@ -1,0 +1,75 @@
+FROZEN NEW-CONSUMER REPLICATION PROTOCOL
+Frozen 2026-10-10 02:58:56 UTC, before candidate numeric outcomes or model fits.
+This protocol was specified after the original study and its archive-access
+sensitivity. It is a replication on previously unused consumers within the same
+UCI Portugal dataset, not a new external dataset, population sample, deployment,
+or independently registered experiment. No favorable result is required.
+
+SOURCE AND SELECTION
+Use the already downloaded, hashed work/data_electricity.txt. Its header contains
+370 ordered meter IDs. Original/pre-AI loaders read only MT_001 through MT_080;
+the original 30 selected consumers are excluded. Candidates are MT_081 through
+MT_370 in ascending ID order. Before outcomes are analyzed, select the first 30
+whose 2013 hourly readings have >=99% finite/nonmissing coverage and >95%
+strictly positive values, exactly the original training-only rule. Parse source
+decimal-comma quarter-hour average kW, shift interval-end timestamps back 15 min,
+and aggregate four readings per hour divided by four to kWh. Selection must not
+use 2014 values, prediction errors, recovery outcomes or convergence warnings.
+If fewer than 30 candidates pass, report failure; do not change the rule.
+
+FROZEN MODEL AND EVALUATION CONFIGURATION
+Reuse daily_design, local_dst_affected and fit_forecasts from the frozen original
+outputs/run_energy_rank_study.py (SHA256
+957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183).
+Train on 2013; test eligible first 28 days of January, April, July and October
+2014. Preserve the original complete-day/history/nonnegativity and DST target
+and lag-day exclusions. Lag1/2/7 days and previous-day mean are causal at the
+declared day-start forecast origin. No future-target inputs are used to fit or
+issue a forecast. Four models and every hyperparameter are unchanged: daily
+persistence, standardized ridge alpha1, the existing fixed HGB specification,
+and standardized MLP(32,16), training-mean target scaling, max_iter1000, fixed
+seed1729 and all other current MLP_PARAMETERS unchanged. Fit each new consumer
+separately; no tuning, warning-driven cap increase, retry, replacement consumer,
+or best-model selection. Report warnings and failures. The existing fitter's
+two-thread limit remains; at most two independent consumer workers may run.
+
+PRIMARY REPLICATION ENDPOINT
+Six-hour contiguous gaps in 24-hour records; exact disjoint six-hour totals;
+mask seeds1103,2207,3301; same SeedSequence(seed,epochday,gi=1) and start in0..18
+as the original experiment. All six unordered fixed-model pairs are retained.
+Compare q0 and at-most-q2 for exact minimax width and greedy width reduction.
+Budgets apply to all cases, including comparisons already certified. Report
+certificate coverage, wrong certificates, truth enclosure, actual query counts,
+initial/realized/worst widths and exact-minus-greedy coverage. All cases and
+unfavorable outcomes are retained. If correctness checks fail, publish a failure
+report rather than claim passage. Unit query cost is a modeled count, not a
+measured operational cost, and budgets are pair-specific.
+
+TWO INFORMATION REGIMES
+Restricted current-record predictions/observations/totals, versus access to all
+available saved test daily-persistence forecasts for the same new consumer.
+Reuse the verified timestamp-and-daily-column-only lookup: the saved forecast
+at t+24 exactly preserves the actual target at t in this fixed pipeline. Add
+those values to observations before batch selection; validate against hidden
+truth only after reconstruction. Never query an already known coordinate.
+No unsaved forecast, nonlinear inversion, feature cache or raw-data fallback is
+allowed. Future copies are retrospective information, not same-day access or
+full informational closure. Archive boundaries remain unknown. Source-copy
+values are free only under this expressly augmented evaluator-access regime.
+
+REPORTING AND INTEGRITY
+Write new, separately named script, prediction CSV, pair/seed, consumer, cohort,
+named-pair and forecast-metric aggregates plus JSON metadata. Do not overwrite
+any existing study outputs. Record selected IDs, training selection statistics,
+fixed configuration, source/protocol/code hashes, runtime environment, warnings
+and model-fit metadata. Verify candidate/original IDs are disjoint, exact causal
+lag features and copied targets, finite nonnegative test truths/predictions,
+query feasibility, interval enclosure, no incorrect certificates, and unchanged
+original input artifact hashes. Preserve source values locally; this extension
+contains only the UCI source, whose original source citation/license applies.
+Primary cohort rates macro-average consumers. Also provide pooled counts/rates
+explicitly. Paired exact-minus-greedy and q2-minus-q0 consumer differences may
+receive descriptive 95% percentile bootstrap intervals (2000 whole-consumer
+resamples, seed1729); these describe this convenience panel, not population or
+independent-day generalization. No result-selected endpoints or new acceptance
+probability will be inferred. Preserve negative results and the access caveat.

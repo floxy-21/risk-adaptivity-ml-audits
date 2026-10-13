@@ -1,0 +1,197 @@
+\title{Risk and Adaptivity in Certifying Machine-Learning Model Comparisons}
+\author{Jishan Kapoor\\Independent Researcher\\Toronto M4Y 1C9, Canada\\
+Corresponding author: \href{mailto:kapoorjishan19@gmail.com}{kapoorjishan19@gmail.com}}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+\textbf{Background.} Auditing a machine-learning model can require retrieving
+missing verification targets. The auditor must choose between a full export,
+a fixed batch of measurements and queries that depend on earlier answers.
+These choices can have different guarantees even with the same reading budget.
+
+\textbf{Methods.} We study the sharp interval containing a model-loss contrast
+over all records consistent with the available information. The contrast is
+affine, the uncertainty set compact and convex, and the query dictionary finite
+and linear. We classify terminal-width penalties and give exact two-query
+algorithms with independently checkable certificates.
+
+\textbf{Results.} Randomized batch and adaptive minimax risks agree for every
+such problem if and only if the nondecreasing penalty is concave. Constructed
+families have identical optimal expected widths but sharply different precision
+guarantees. In 290 of 4,914 frozen forecast comparisons, two adaptive counter
+readings guarantee halving the initial width, whereas optimal randomized-batch
+worst-case success is 50\%. An external source reproduces this gap in 29 of
+1,674 comparisons. Overall recorded gains over the best deterministic
+worst-width batch are 0.407 and 0.119 percentage points. Under illustrative
+1\% internal-reading errors with exact endpoints, all 29 external cases remain
+certifiable using two readings in 22 cases and three in seven. Capacity bounds
+often remove feedback necessity, and measured public-API retrieval favors bulk.
+
+\textbf{Conclusions.} The method identifies which acquisition protocol meets
+a declared assurance requirement. An executable selector chooses among supplied certified protocols using
+declared measurement assumptions and resource limits.
+\end{abstract}
+\noindent\textbf{Keywords:} artificial intelligence; machine learning;
+adaptive information; minimax risk; optimal recovery; robust optimization.
+
+\section{Introduction}
+A model audit may need additional measurements before it can justify a
+comparison. The auditor can retrieve the full record, choose a batch of
+readings in advance, or choose later readings after seeing earlier answers.
+We call the last option adaptive querying. A sharp interval is the smallest
+interval containing the loss difference for every record compatible with
+the available information. This paper asks when feedback improves the
+guarantee that this interval will be sufficiently narrow. A narrow interval
+can still contain zero, so precision and identifying the better model are
+separate goals.
+
+We study affine scalar contrasts on nonempty compact convex uncertainty
+sets, with queries selected from a fixed finite dictionary of linear
+measurements. This formulation includes paired squared-loss comparisons,
+overlapping linear constraints, valid coordinate bounds, signed targets,
+and fixed query costs. Batch and adaptive policies have the same hard
+budget. The unknown record is fixed before the algorithm's random seed is
+drawn; probabilities describe acquisition randomization, not a distribution
+assumed for the missing truth. Fixed bounded measurement errors can be
+included by enlarging the hidden record when the resulting uncertainty set
+is compact and convex.
+
+The computer-science question is how an acquisition algorithm should use
+feedback when its output must be valid for every compatible record. We ask
+which risk objectives permit a feedback advantage, how to compute an
+instance-specific guarantee, and which permitted retrieval protocol should
+implement it. The fitted forecasting models supply fixed prediction vectors;
+the proposed algorithm governs their verification data, rather than learning
+a new predictor.
+
+The contribution is a classification of when feedback can change minimax
+certificate risk, sharp realizations using admissible information queries,
+and an exact two-query decision rule with checkable precision guarantees.
+Concavity exactly characterizes the nondecreasing width penalties for which
+adaptation never improves randomized minimax risk. A coordinate-query
+construction proves the converse, and a family separates equal mean-width
+optima from success probabilities $1/K$ and one. The classification uses
+established minimax reasoning and Jensen's inequality. A dimension-dependent
+precision consequence adapts established sparse-policy bounds
+\citep{kurtz2026}; we do not claim a new general sparsification theorem.
+
+Cumulative meter records test whether this distinction affects actual
+forecast comparisons. Before optional answers are revealed, the two-query
+rule identifies cases where a fixed batch suffices, feedback changes
+feasibility, or two queries do not provide a deterministic guarantee.
+The original and external studies contain 290 of 4,914 and 29 of 1,674 cases,
+respectively, with an exact adaptive-versus-batch precision-success gap of
+one versus one half. These cases span three meters and six model pairs in
+each source. The large worst-case assurance gap is distinct from the small
+overall recorded gains of 0.407 and 0.119 percentage points.
+
+The acquisition interface determines which guarantee is useful. Under the
+declared 1\% internal-reading error allowance and exact endpoints, all 29
+selected external cases remain certifiable: 22 use two readings and seven
+use three. Added capacity information can remove the need for feedback.
+On the measured public API, bulk retrieval is preferable. Our implementation
+therefore chooses among supplied certificates using the permitted
+measurements, reading and round limits, and cost priority. It reports when
+those certificates cannot meet the declared requirements.
+
+The paper develops the classification and sharp examples, then computable
+two-query guarantees and their cumulative-meter specialization. The
+evaluation reports fixed protocols, recorded replay, uncertainty sensitivity
+and actual retrieval measurements. Online Resource~1 provides extended
+proofs, the separate compact coordinate-query solver, historical controls,
+complete case ledgers and executable verification.
+
+\subsection{Related work and the contribution boundary}
+Partial identification studies conclusions that survive incomplete
+observations \citep{manski,polo}. For model comparison, cancellation in
+paired squared losses leaves an affine function of the unknown truth;
+this is established loss structure rather than a new loss function
+\citep{patton}. Active evaluation and model selection acquire labels for
+estimating performance or choosing among predictors
+\citep{sawade,hara,active,okanovic2025}. Our target is the entire sharp
+interval of a fixed-record contrast after exact observations. No estimator
+of the population risk, surrogate label distribution, or new forecasting
+architecture is introduced.
+
+The width of an information fiber is an established local diameter of
+information in optimal recovery \citep{novak2008}. Adaptivity and
+randomization for approximation of linear operators on convex classes
+have a substantial literature \citep{osipenko,krieg2025,krieg2026}.
+The objective here must be distinguished both from actual reconstruction
+error and from an expected global radius. For a scalar fiber, its radius
+is half its width, but the risk considered here is
+$\sup_y\mathbb E_\omega W_{Q_\omega(y)}(y)$: first average the local
+width at a fixed record, then take the worst record. In general this is
+different from averaging a worst-fiber radius after each random choice
+of information. Nor is actual point-estimation error at $y$ necessarily
+half the width of its information fiber. The theorem does not deny
+adaptivity benefits for those other objectives.
+
+Our minimax interchange is an application of \citet{sion1958}, and its
+concave-penalty upper bound is Jensen's inequality. The claim is the
+resulting universal penalty classification, its coordinate-query
+converse, and the exact precision and moment separations. We make no
+claim of inventing minimax theory, local diameter, or the general concept
+of adaptive information. The bounded literature comparison identifies
+these precise objectives and assumptions; it is not a proof of historical
+priority over every optimal-recovery result.
+
+Information-dependent decisions are also established in adjustable robust
+optimization \citep{adjust2024,ddid}. The dimension-dependent precision
+bound below adapts the sufficient-policy result of
+\citet[Theorem~2 and Example~5]{kurtz2026}; its query interpretation and
+sharp examples are made explicit. Weighted-oracle randomized optimization
+and dynamic-program LP constructions are established
+\citep{kawase2024,martin1990}. The supporting aggregate solver contributes
+a structured hard-budget batch representation and dual-completion
+certificate (Online Resource~1, S5/S7). Secondary optimization among tied
+robust solutions follows an established concern \citep{iancu2014}.
+
+Adaptive sampling of cumulative information has close precedents.
+\citet[Section~4.1.1, Corollary~1 and Theorem~3]{gaillard2023}
+study certified scalar integral estimation from sequential evaluations of
+a monotone function. For monotone contrast coefficients, summation by parts
+relates the register problem to weighted monotone integration. Our instance
+test pairs an adaptive precision guarantee with an adverse distribution
+limiting every randomized batch under the same information interface.
+
+\citet[Theorem~1 and Proposition~1]{kuboyama2026} gives exact model-choice
+certificates after adaptive binary labels and compares shared-label paired
+bounds with separate intervals. That work also distinguishes hindsight
+certificate size from acquisition requirements (Theorem~2 and Proposition~3).
+Our application uses constrained continuous targets, while the central
+classification concerns the penalty of terminal sharp width. These precise
+distinctions, rather than certification or shared comparisons generally,
+define the contribution relative to model-choice and information-discovery
+frameworks.
+
+\section{Model Comparisons and Sharp Information}
+Let $a,b\in\mathbb R^N$ be two fixed prediction vectors for the same
+scheduled targets. Their paired mean-squared-error difference is
+\begin{equation}
+ D(y)=\frac1N\sum_{i=1}^N\{(a_i-y_i)^2-(b_i-y_i)^2\}
+ =d+c^\top y,\qquad c_i=\frac{2(b_i-a_i)}N.
+ \label{eq:linear}
+\end{equation}
+All scheduled targets remain in the denominator. Initially observed values,
+documented aggregate measurements and other defensible constraints define
+the feasible set $F$. Any permitted archive record that directly reconstructs
+a target is incorporated before this set is declared. Sharpness is always
+relative to that declared information set.
+
+The attainable interval of $D$ on $F$ is an identification interval for
+this record, not a sampling confidence interval. A negative upper endpoint
+certifies that $a$ has smaller squared loss for every completion; a positive
+lower endpoint certifies $b$. An interval containing zero cannot certify
+a strict winner. Subsequent exact measurements restrict $F$ to a fiber and
+therefore cannot widen its sharp interval. A prescribed width threshold
+instead asks for a precision guarantee, regardless of the interval's location.
+
+The mathematical examples below also describe paired squared-loss widths.
+Given any contrast coefficient $c$, nonnegative predictions
+$a_i=N\max(-c_i,0)/2$ and $b_i=N\max(c_i,0)/2$ realize that coefficient
+in \eqref{eq:linear}. The induced constant changes the interval's position,
+but not its width. Thus the constructions have a model-comparison
+interpretation without being measurements of prediction performance.
+

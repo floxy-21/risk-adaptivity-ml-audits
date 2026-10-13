@@ -1,0 +1,14 @@
+{
+  "filename": "study_predictions.csv",
+  "sha256": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+  "bytes": 11589054,
+  "created_utc": "2026-10-10T00:54:24.166991+00:00",
+  "status": "Verified local artifact intentionally omitted from submission ZIP",
+  "reason": "Complete hourly archive includes derived BLEM observations for which separate redistribution terms have not been established. Original-source download and deterministic preprocessing/model code are supplied. A small attributed UCI-only worked example is included separately under CC BY 4.0.",
+  "regenerate": [
+    "python work/download_study_data.py",
+    "python outputs/study_training_preflight.py",
+    "python work/prepare_reproduction.py",
+    "python outputs/run_energy_rank_study.py"
+  ]
+}

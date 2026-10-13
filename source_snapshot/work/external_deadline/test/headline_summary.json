@@ -1,0 +1,294 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-11T20:19:33.803065+00:00",
+  "period": "test",
+  "B80": {
+    "all": {
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4
+    },
+    "learned": {
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4
+    }
+  },
+  "strongest_greedy_hara_B80": 4,
+  "exact_relative_B80_reduction": 0.0,
+  "exact_no_lower_cap_coverage": true,
+  "fifteen_percent_budget_criterion_met": false,
+  "uniform_has_lower_B80_than_exact": false,
+  "conditional_denominator_rule": "initially_unresolved is regime-specific; the primary comparison uses early initially uncertified cases. Late-after-copy conditional coverage is not the same population.",
+  "household_B80": [
+    {
+      "household_id": "MAC000002",
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000003",
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000004",
+      "exact": 2,
+      "greedy": 2,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 2,
+      "strongest_baseline": 2,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000005",
+      "exact": 2,
+      "greedy": 2,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 2,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000006",
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000007",
+      "exact": 2,
+      "greedy": 2,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 2,
+      "strongest_baseline": 2,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000009",
+      "exact": 2,
+      "greedy": 2,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 2,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000010",
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000011",
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000012",
+      "exact": 2,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": true
+    },
+    {
+      "household_id": "MAC000013",
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000014",
+      "exact": 2,
+      "greedy": 2,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 2,
+      "strongest_baseline": 2,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000015",
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000017",
+      "exact": 2,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": true
+    },
+    {
+      "household_id": "MAC000018",
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000019",
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000020",
+      "exact": 2,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": true
+    },
+    {
+      "household_id": "MAC000021",
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": false
+    },
+    {
+      "household_id": "MAC000022",
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": false
+    }
+  ],
+  "pair_B80": [
+    {
+      "pair": "daily vs hist_gradient_boosting",
+      "exact": 2,
+      "greedy": 2,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 2,
+      "strongest_baseline": 2,
+      "exact_strictly_better": false
+    },
+    {
+      "pair": "daily vs mlp",
+      "exact": 2,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": true
+    },
+    {
+      "pair": "daily vs ridge",
+      "exact": 2,
+      "greedy": 2,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 2,
+      "exact_strictly_better": false
+    },
+    {
+      "pair": "hist_gradient_boosting vs mlp",
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": false
+    },
+    {
+      "pair": "ridge vs hist_gradient_boosting",
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": false
+    },
+    {
+      "pair": "ridge vs mlp",
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4,
+      "strongest_baseline": 4,
+      "exact_strictly_better": false
+    }
+  ],
+  "households_exact_strictly_better": 3,
+  "pairs_exact_strictly_better": 1,
+  "learned_pairs_exact_strictly_better": 0,
+  "counts": {
+    "case_rows": 105192,
+    "base_cases": 17532,
+    "households": 19,
+    "household_days": 974,
+    "initial_unresolved_base_cases": 7679
+  },
+  "claim_scope": "B80 is an integer per-pair executable stopping budget; three seeded paths, household-macro coverage. No monetary/latency measurement or global stopping-optimality claim.",
+  "source_sha256": "f74fa93719f655f4760d690783018dc673fd15930594c6f48ef2a4378db3e6a5",
+  "summary_code_sha256": "d5778af722470fd8e2dac1a5d63071660f6b574036f831cb7ba1ce7c143004c6"
+}

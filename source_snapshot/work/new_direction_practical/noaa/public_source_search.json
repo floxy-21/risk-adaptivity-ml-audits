@@ -1,0 +1,72 @@
+{
+  "checked_utc": "2026-10-10T05:03:53.932906+00:00",
+  "records": [
+    {
+      "name": "raw_200812",
+      "url": "https://www.ncei.noaa.gov/pub/data/hpd/data/hpd_200812.csv",
+      "status": 200,
+      "bytes": 168097,
+      "sha256": "4392b964b306d79dc3ae9d75670510b3f25ef5dbdafab9e7bab21d1ef29cae7b",
+      "saved_file": "search_raw_200812.txt",
+      "station010140_rows": 0
+    },
+    {
+      "name": "raw_200906",
+      "url": "https://www.ncei.noaa.gov/pub/data/hpd/data/hpd_200906.csv",
+      "status": 200,
+      "bytes": 93286,
+      "sha256": "c7cec5b1e252620fb042f473dcfb4ac7adf62214a970018754af2f7db98b22b4",
+      "saved_file": "search_raw_200906.txt",
+      "station010140_rows": 0
+    },
+    {
+      "name": "legacy_15m_metadata",
+      "url": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C00505/html",
+      "status": 200,
+      "bytes": 53080,
+      "sha256": "17ab134d0e3523cca1bea6817b5983c2156d7c323ce391f15ea7e2ee30970bfb",
+      "saved_file": "search_legacy_15m_metadata.txt"
+    },
+    {
+      "name": "new_15m_service",
+      "url": "https://www.ncei.noaa.gov/data/coop-precipitation-15-minute/",
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "name": "old_15m_state",
+      "url": "https://www.ncei.noaa.gov/pub/data/15min_precip-3260/",
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "name": "old_15m_year",
+      "url": "https://www.ncei.noaa.gov/data/precip-15/",
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "name": "digital_receipts_200812",
+      "url": "https://www.ncei.noaa.gov/pub/data/hpd/old/HPD_Received_200812.txt",
+      "status": 200,
+      "bytes": 10211,
+      "sha256": "1dac47c79742d1cc94b486e5ca70dbc60456c2734a78f04d43edbed14271a937",
+      "saved_file": "search_digital_receipts_200812.txt"
+    },
+    {
+      "name": "digital_receipts_200906",
+      "url": "https://www.ncei.noaa.gov/pub/data/hpd/old/HPD_Received_200906.txt",
+      "status": 200,
+      "bytes": 12662,
+      "sha256": "ffc76dbe69468cee8831dcad4f3cb26a963987c041182b18e3da7bd04216b778",
+      "saved_file": "search_digital_receipts_200906.txt"
+    },
+    {
+      "name": "gefs_documentation",
+      "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/Description_of_reforecast_data.pdf",
+      "status": 200,
+      "bytes": 91102,
+      "sha256": "731d7ce32fcc2106427df1f813582eba24c508ccbaaff90c8b77ce80e3c72c42",
+      "saved_file": "search_gefs_documentation.pdf"
+    }
+  ],
+  "scope": "Documented NOAA hourly, parallel15minute and raw digital station/month sources checked. Not an assertion that no other archive exists. Adjacent stations/radar are different measurements, not exact direct reconstructions. Legacy15minute download endpoints currently404; archive beta station export retained.",
+  "notes": "Public15min station file downloaded separately and hashed in source audit; a/A interiors persist. Digital source monthly station search uses exact first-column COOP010140."
+}

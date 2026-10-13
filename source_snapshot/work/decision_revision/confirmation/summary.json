@@ -1,0 +1,398 @@
+{
+  "status": "passed",
+  "selected_kappa": 4.0,
+  "case_count": 17946,
+  "policy_rows": 107676,
+  "eligible_households": 19,
+  "eligible_days": 997,
+  "initially_uncertified_cases": 6997,
+  "best_primary_baseline": "width_one",
+  "relative_mean_reduction": 0.00973806405337263,
+  "descriptive_consumer_bootstrap_interval": [
+    0.0026231785016334608,
+    0.018137070353643297
+  ],
+  "criterion_met": null,
+  "criterion_status": "Pending independent exhaustive hindsight-oracle analysis; relative mean reduction is secondary.",
+  "summaries": [
+    {
+      "population": "all",
+      "policy": "hara_one",
+      "cases": 17946,
+      "households": 19,
+      "macro_mean_requests": 0.95582165285758,
+      "pooled_mean_requests": 0.9549203165050708,
+      "B80": 2,
+      "coverage": [
+        0.6098306768747611,
+        0.7153772544164799,
+        0.8187886550065582,
+        0.9132362689471855,
+        0.9869454918974355,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 0.7323329321161477
+    },
+    {
+      "population": "all",
+      "policy": "ml_decision",
+      "cases": 17946,
+      "households": 19,
+      "macro_mean_requests": 0.7152392624268068,
+      "pooled_mean_requests": 0.7146996545191129,
+      "B80": 1,
+      "coverage": [
+        0.6098306768747611,
+        0.800162327426833,
+        0.9065042633855586,
+        0.970993635573718,
+        0.9972698343123226,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 0.30269522458057313
+    },
+    {
+      "population": "all",
+      "policy": "randomized_one",
+      "cases": 17946,
+      "households": 19,
+      "macro_mean_requests": 0.7437807541811656,
+      "pooled_mean_requests": 0.7432296890672017,
+      "B80": 2,
+      "coverage": [
+        0.6098306768747611,
+        0.7856473665099002,
+        0.8959881651885837,
+        0.9678739967965391,
+        0.9968790404490505,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 7.441433366755889
+    },
+    {
+      "population": "all",
+      "policy": "uniform_decision",
+      "cases": 17946,
+      "households": 19,
+      "macro_mean_requests": 0.7231927744234453,
+      "pooled_mean_requests": 0.7226680040120361,
+      "B80": 2,
+      "coverage": [
+        0.6098306768747611,
+        0.7982570336760646,
+        0.9036123696713853,
+        0.9685728142291131,
+        0.9965343311252305,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 0.22037191573711595
+    },
+    {
+      "population": "all",
+      "policy": "uniform_one",
+      "cases": 17946,
+      "households": 19,
+      "macro_mean_requests": 1.0770167363833132,
+      "pooled_mean_requests": 1.0764515769530814,
+      "B80": 3,
+      "coverage": [
+        0.6098306768747611,
+        0.6861703037889376,
+        0.7723771879591854,
+        0.8756463816312731,
+        0.9789587133625296,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 0.4066309874703442
+    },
+    {
+      "population": "all",
+      "policy": "width_one",
+      "cases": 17946,
+      "households": 19,
+      "macro_mean_requests": 0.7202126504953147,
+      "pooled_mean_requests": 0.7196589769307924,
+      "B80": 2,
+      "coverage": [
+        0.6098306768747611,
+        0.7910799255493538,
+        0.9064886035555633,
+        0.974057901090991,
+        0.998330242434016,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 0.21342231693571753
+    },
+    {
+      "population": "initially_uncertified",
+      "policy": "hara_one",
+      "cases": 6997,
+      "households": 19,
+      "macro_mean_requests": 2.433365945911212,
+      "pooled_mean_requests": 2.4491925110761756,
+      "B80": 4,
+      "coverage": [
+        0.0,
+        0.27689187292706857,
+        0.5458115021160015,
+        0.781103529904664,
+        0.9628271491410542,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 1.87829738455858
+    },
+    {
+      "population": "initially_uncertified",
+      "policy": "ml_decision",
+      "cases": 6997,
+      "households": 19,
+      "macro_mean_requests": 1.8300396171801536,
+      "pooled_mean_requests": 1.8330713162784051,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.4881831998192368,
+        0.7627240044026411,
+        0.9253813936643226,
+        0.993671784933646,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 0.7763567958157731
+    },
+    {
+      "population": "initially_uncertified",
+      "policy": "randomized_one",
+      "cases": 6997,
+      "households": 19,
+      "macro_mean_requests": 1.8969174333573908,
+      "pooled_mean_requests": 1.9062455338002,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.45593479447378615,
+        0.7370966582264704,
+        0.9178824886031746,
+        0.9921686253391777,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 19.08588869512665
+    },
+    {
+      "population": "initially_uncertified",
+      "policy": "uniform_decision",
+      "cases": 6997,
+      "households": 19,
+      "macro_mean_requests": 1.8541585683431219,
+      "pooled_mean_requests": 1.8535086465628126,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.48354474857064744,
+        0.7526246698396213,
+        0.9183533209225241,
+        0.9913186923240855,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 0.565212862629453
+    },
+    {
+      "population": "initially_uncertified",
+      "policy": "uniform_one",
+      "cases": 6997,
+      "households": 19,
+      "macro_mean_requests": 2.745673472690573,
+      "pooled_mean_requests": 2.7608975275117906,
+      "B80": 4,
+      "coverage": [
+        0.0,
+        0.20571387380351713,
+        0.425429280259344,
+        0.6819225361495173,
+        0.9412608370970483,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 1.0429326427244243
+    },
+    {
+      "population": "initially_uncertified",
+      "policy": "width_one",
+      "cases": 6997,
+      "households": 19,
+      "macro_mean_requests": 1.848035909237239,
+      "pooled_mean_requests": 1.8457910533085609,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.46643994839080816,
+        0.7571553159417715,
+        0.9325620360149153,
+        0.9958067904152664,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 0.5473884378631394
+    },
+    {
+      "population": "learned_initially_uncertified",
+      "policy": "hara_one",
+      "cases": 3810,
+      "households": 19,
+      "macro_mean_requests": 2.539090618320243,
+      "pooled_mean_requests": 2.5496062992125985,
+      "B80": 4,
+      "coverage": [
+        0.0,
+        0.24364715708670506,
+        0.5011573031784119,
+        0.7582173501169667,
+        0.9578875712976729,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 1.9512802103409792
+    },
+    {
+      "population": "learned_initially_uncertified",
+      "policy": "ml_decision",
+      "cases": 3810,
+      "households": 19,
+      "macro_mean_requests": 1.8957467420177068,
+      "pooled_mean_requests": 1.8929133858267717,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.46683266859544187,
+        0.732738467245131,
+        0.910761410186544,
+        0.9939207119551765,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 0.7967870867260042
+    },
+    {
+      "population": "learned_initially_uncertified",
+      "policy": "randomized_one",
+      "cases": 3810,
+      "households": 19,
+      "macro_mean_requests": 1.9657523506167611,
+      "pooled_mean_requests": 1.9732283464566929,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.4343207507706403,
+        0.7053920890727453,
+        0.9040564682842146,
+        0.9904783412556389,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 19.708544173213085
+    },
+    {
+      "population": "learned_initially_uncertified",
+      "policy": "uniform_decision",
+      "cases": 3810,
+      "households": 19,
+      "macro_mean_requests": 1.9190644023167762,
+      "pooled_mean_requests": 1.916272965879265,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.46156177210614413,
+        0.7244489804532469,
+        0.9037526105632689,
+        0.9911722345605639,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 0.5838276902268184
+    },
+    {
+      "population": "learned_initially_uncertified",
+      "policy": "uniform_one",
+      "cases": 3810,
+      "households": 19,
+      "macro_mean_requests": 2.803181798285983,
+      "pooled_mean_requests": 2.8165354330708663,
+      "B80": 4,
+      "coverage": [
+        0.0,
+        0.18848026299510673,
+        0.4013673682559076,
+        0.6713452956313781,
+        0.9356252748316242,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 1.0582419424598382
+    },
+    {
+      "population": "learned_initially_uncertified",
+      "policy": "width_one",
+      "cases": 3810,
+      "households": 19,
+      "macro_mean_requests": 1.909600934297556,
+      "pooled_mean_requests": 1.9083989501312335,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.4437164041569789,
+        0.7301493703696571,
+        0.9211744634454366,
+        0.9953588277303714,
+        1.0,
+        1.0
+      ],
+      "unresolved": 0,
+      "numerical_ties": 0,
+      "planning_mean_ms": 0.5610322832203342
+    }
+  ],
+  "scope": "Frozen new-consumer confirmation of a development-selected policy; same source/calendar, simulated archive/outage/totals, no measured monetary costs."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "source_infeasible_under_frozen_rules",
+  "households_evaluated": 20,
+  "selected_households": [],
+  "complete_training_days_total": 0,
+  "complete_validation_days_total": 0,
+  "complete_test_days_total": 0,
+  "eligible_hours_total": 598,
+  "reference_claim": "No REFIT model fitting or acquisition outcomes were produced. Failed source eligibility is retained rather than loosening rules.",
+  "protocol_hashes": {
+    "source_dates_amendment.txt": "e3d9a0eea528a80b9820338f3da7f2b9a1a9fc8212bfc91484d121ca0776ab22",
+    "source_protocol_amendment.txt": "a9e716f05cf43e6065294d3165ee282fe68513903c8d07f2b31acc079fbbb4f2"
+  }
+}

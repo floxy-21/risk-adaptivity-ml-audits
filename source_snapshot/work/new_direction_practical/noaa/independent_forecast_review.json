@@ -1,0 +1,294 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-10T05:11:19.732103+00:00",
+  "wall_seconds": 77.01958459999878,
+  "builder_imported": false,
+  "forecast_records": 260,
+  "raw_grib_messages_redecoded": 2080,
+  "independent_grid_values_redecoded": 2080,
+  "station_grid_index": 333730,
+  "grid_value_max_difference": 0.0,
+  "nonnegative_projection_max_difference": 0.0,
+  "endpoint_max_difference": 2.842170943040401e-14,
+  "negative_derived_bins": [
+    {
+      "date": "2008-12-04",
+      "member": "p01",
+      "first_bin": 6,
+      "signed_difference_mm": -0.01,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-04",
+      "member": "p02",
+      "first_bin": 4,
+      "signed_difference_mm": -0.03,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-11",
+      "member": "p02",
+      "first_bin": 6,
+      "signed_difference_mm": -0.05,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-11",
+      "member": "p04",
+      "first_bin": 6,
+      "signed_difference_mm": -0.02,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-14",
+      "member": "c00",
+      "first_bin": 4,
+      "signed_difference_mm": -0.01,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-14",
+      "member": "p03",
+      "first_bin": 4,
+      "signed_difference_mm": -0.02,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-14",
+      "member": "p04",
+      "first_bin": 2,
+      "signed_difference_mm": -0.01,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-14",
+      "member": "p04",
+      "first_bin": 4,
+      "signed_difference_mm": -0.05,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-17",
+      "member": "c00",
+      "first_bin": 4,
+      "signed_difference_mm": -0.03,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-17",
+      "member": "p01",
+      "first_bin": 4,
+      "signed_difference_mm": -0.02,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-17",
+      "member": "p02",
+      "first_bin": 2,
+      "signed_difference_mm": -0.01,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-17",
+      "member": "p03",
+      "first_bin": 0,
+      "signed_difference_mm": -0.01,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-18",
+      "member": "c00",
+      "first_bin": 6,
+      "signed_difference_mm": -0.009999999999999995,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-19",
+      "member": "c00",
+      "first_bin": 4,
+      "signed_difference_mm": -0.02,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-20",
+      "member": "p01",
+      "first_bin": 2,
+      "signed_difference_mm": -0.01,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-29",
+      "member": "p02",
+      "first_bin": 0,
+      "signed_difference_mm": -0.009999999999999953,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2008-12-29",
+      "member": "p03",
+      "first_bin": 0,
+      "signed_difference_mm": -0.02,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2009-06-05",
+      "member": "c00",
+      "first_bin": 4,
+      "signed_difference_mm": -0.02,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2009-06-05",
+      "member": "p01",
+      "first_bin": 6,
+      "signed_difference_mm": -0.01,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2009-06-05",
+      "member": "p04",
+      "first_bin": 4,
+      "signed_difference_mm": -0.01,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2009-06-11",
+      "member": "p01",
+      "first_bin": 6,
+      "signed_difference_mm": -0.01,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2009-06-13",
+      "member": "c00",
+      "first_bin": 6,
+      "signed_difference_mm": -0.020000000000000018,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2009-06-13",
+      "member": "p03",
+      "first_bin": 6,
+      "signed_difference_mm": -0.010000000000000009,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2009-06-23",
+      "member": "p02",
+      "first_bin": 6,
+      "signed_difference_mm": -0.04999999999999999,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2009-06-26",
+      "member": "p01",
+      "first_bin": 0,
+      "signed_difference_mm": -0.01,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2009-06-27",
+      "member": "p04",
+      "first_bin": 0,
+      "signed_difference_mm": -0.019999999999999962,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2009-06-29",
+      "member": "c00",
+      "first_bin": 0,
+      "signed_difference_mm": -0.03999999999999998,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    },
+    {
+      "date": "2009-06-29",
+      "member": "p02",
+      "first_bin": 0,
+      "signed_difference_mm": -0.01,
+      "packing_step_first": 0.01,
+      "packing_step_total": 0.1,
+      "half_step_sum": 0.055
+    }
+  ],
+  "negative_member_days": 27,
+  "raw_vs_projected_decision_changes": [
+    {
+      "date": "2008-12-14",
+      "raw": "control",
+      "projected": "unresolved"
+    },
+    {
+      "date": "2009-06-11",
+      "raw": "control",
+      "projected": "unresolved"
+    }
+  ],
+  "complete_controls_checked": 43,
+  "all_controls_zero": true,
+  "source_hashes": {
+    "build_panel.py": "434fc862a3995e0e36ee17b4a3b58186c73613d4506af6e83ca5191e5901e110",
+    "protocol.txt": "6c02e2fd3d186c879c1be80dce771d02a32d1f39366d624b71dcd7e909c95114",
+    "implementation_note.txt": "431dc6072200173109d8b86d7a85982eaf4f62126a59eb2680ba8ac3846718d6",
+    "forecast_panel.json": "067fb4ad74fbd11bb09bf49e5165f2af573cc06f42eee21062137c0a4d057a9c",
+    "panel_result.json": "f805aa803f629c0b52d7cbbf3fa2994f11e48fde7b8053d92d8b03124f20fb08",
+    "observation_panel.json": "36ee94939e45cbb3795c297bbce698936e0ef6ce28f6ae3d1565c73c09b0e532"
+  },
+  "headers_sha256": "48939ad990e24cb7c41307a4f39003255cd6a2250196e796522fefbd2715e348",
+  "scope": "Full local raw-GRIB re-decoding, independently computed nearest rectilinear-grid index, fixed observed-source panel, byte-range hashes, all numerical endpoints. A distributed metadata-only reproducer cannot itself repeat raw-GRIB decoding without downloading pinned ranges.",
+  "timing_interpretation": "Published Guan2022 section3b describes physical03UTC initialization and corrections to initial00-03/00-06 fields. Raw header validity confirms the audited06UTC to next06UTC window; nominal00-based leads do not receive an extra3h shift.",
+  "packing_interpretation": "All negative nested differences lie within the stated half-step-sum envelope. This is consistent with differential quantization; the projection is explicitly forecast preprocessing, not proof of original unrounded model values or physical rainfall accuracy."
+}

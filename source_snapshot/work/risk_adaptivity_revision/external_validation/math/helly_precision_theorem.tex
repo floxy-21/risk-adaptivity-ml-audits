@@ -1,0 +1,99 @@
+% Research draft: AI-assisted derivation and internal mathematical review.
+% Not a human-specialist validation or historical-priority claim.
+\begin{theorem}[A dimension-dependent batch guarantee]
+\label{thm:helly-precision}
+Let $F$ be nonempty, compact and convex, and let $T(x)=c^\top x+d$.
+Fix a first-stage exact linear observation $L_0x$, whose feasible-answer
+set $I=L_0F$ has affine dimension $r$. After this answer, a deterministic
+policy chooses one of finitely many second-stage linear measurement
+batches $L_1,\ldots,L_m$. Every combined batch $(L_0,L_j)$ must obey the
+same declared hard budget, and the eligible second-stage batches must not
+depend on the first answer. Suppose the policy's terminal sharp interval
+has width at most $\tau$ for every $x\in F$.
+Then some randomized nonadaptive policy supported on at most $r+1$
+of these combined batches has worst-case precision success at least
+$1/(r+1)$.
+In particular, a sure-precision policy using two scalar queries yields
+a randomized-batch success guarantee of at least $1/2$, even when its
+conditional worst widths are not affine functions of the first answer.
+\end{theorem}
+\begin{proof}
+For $t\in I$, define the conditional worst terminal width
+\[
+ g_j(t)=\max\{c^\top(u-v):u,v\in F,\ L_0u=L_0v=t,
+                                      \ L_ju=L_jv\}.
+\]
+The feasible set is nonempty and compact, so the maximum is attained.
+The expression is exactly the largest terminal sharp width among records
+with first answer $t$: an endpoint pair with equal first and second
+answers belongs to a common terminal fiber, and the endpoints of every
+such fiber are feasible in this maximization.
+
+Each $g_j$ is concave on $I$. Indeed, convex combinations of optimizing
+endpoint pairs at $t_1,t_2$ are feasible at the corresponding convex
+combination of answers, and attain the same convex combination of their
+objective values. The function is also upper semicontinuous: for a
+convergent sequence of answers, compactness gives convergent subsequences
+of optimizing endpoints, whose limits are feasible at the limiting
+answer. Consequently, $g_j$ is finite and measurable.
+
+For a fixed first answer, the policy chooses a single second-stage batch;
+its sure guarantee therefore implies $\min_jg_j(t)\leq\tau$ throughout
+$I$. The strict failure sets
+\[
+ H_j=\{t\in I:g_j(t)>\tau\}
+\]
+are convex by concavity, and $\bigcap_{j=1}^m H_j=\varnothing$.
+Finite Helly's theorem, applied in the affine hull of $I$, gives a
+subfamily $J$ of at most $r+1$ sets with empty intersection. This finite
+form of Helly's theorem does not require the sets to be closed; thus
+using strict failure sets preserves success at equality with $\tau$.
+
+Choose uniformly among the combined batches indexed by $J$. For every
+fixed record $x$, its answer $t=L_0x$ lies outside at least one $H_j$,
+so that batch's actual terminal width is at most $g_j(t)\leq\tau$.
+Its precision success probability is therefore at least $1/|J|$, and
+hence at least $1/(r+1)$, for every record.
+\end{proof}
+
+\paragraph{Stopping and admissibility.}
+Stopping after the first stage is included by allowing the empty
+second-stage batch. Stopping without any query is a fixed batch and
+already supplies success one when it guarantees the precision.
+For ordinary two-query policies, the deterministic first query is fixed
+before any answer, and $r\leq1$. Unequal fixed query costs are allowed
+provided that every batch used in the support is admissible under the
+common hard budget. The result does not allow an answer-dependent query
+dictionary, an answer-dependent budget, or errors chosen after seeing
+the algorithm's random seed.
+
+\paragraph{Sharpness.}
+The manuscript's existing $K$-capacity construction has first-stage
+answer dimension $r=K-1$, using its $K-1$ explicit capacities. Its second
+stage reads all but one of the $K$ bounded quantities. The adaptive policy
+guarantees width $1/K$, whereas even unrestricted admissible randomized
+batches have worst-case precision success exactly $1/K=1/(r+1)$.
+Thus the dimension-dependent constant is sharp, using the already proved
+family. For $r=1$, the three-coordinate example is sharp.
+
+\paragraph{Extraction on polytopes.}
+For a scalar first answer and a guaranteed threshold, at most two
+second-stage actions suffice. A pair $(j,k)$ can be checked with one LP:
+give the two actions separate endpoint pairs sharing a first answer $t$,
+maximize $\eta$, and require both endpoint contrasts to be at least
+$\eta$. Its value is $\max_{t\in I}\min\{g_j(t),g_k(t)\}$.
+The pair covers every first answer precisely when this value is at most
+$\tau$. Testing pairs, together with singleton actions, constructs the
+nonadaptive support without gridding possible answers. This uses at most
+$\binom{m}{2}+m$ LPs after the first stage has been chosen.
+
+The same argument implies
+\[
+ \max_{t\in I}\min_{1\leq j\leq m}g_j(t)
+ =\min_{\substack{J\subseteq\{1,\ldots,m\}\\1\leq|J|\leq2}}
+     \max_{t\in I}\min_{j\in J}g_j(t)
+\]
+for scalar first answers. Compactness and upper semicontinuity give an
+attained left-hand maximum, so the Helly argument applies at its exact
+value. This is a sparse sufficient policy, not a claim that the same two
+actions minimize conditional width at every answer.

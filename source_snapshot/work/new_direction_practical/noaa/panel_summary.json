@@ -1,0 +1,174 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-10T05:12:22.639693+00:00",
+  "script_sha256": "26611d794e960ad6701d7ff3309a5a5ccd1b34ca6fab10eb2aebaeb7ed5911ff",
+  "source_hashes": {
+    "protocol.txt": "6c02e2fd3d186c879c1be80dce771d02a32d1f39366d624b71dcd7e909c95114",
+    "sensitivity_amendment.txt": "05528b5659e8e5f488731147adf07fbc178478ccc7e9ef85b8ffca39957dd12a",
+    "implementation_note.txt": "431dc6072200173109d8b86d7a85982eaf4f62126a59eb2680ba8ac3846718d6",
+    "build_panel.py": "434fc862a3995e0e36ee17b4a3b58186c73613d4506af6e83ca5191e5901e110",
+    "observation_panel.json": "36ee94939e45cbb3795c297bbce698936e0ef6ce28f6ae3d1565c73c09b0e532",
+    "forecast_panel.json": "067fb4ad74fbd11bb09bf49e5165f2af573cc06f42eee21062137c0a4d057a9c",
+    "panel_result.json": "f805aa803f629c0b52d7cbbf3fa2994f11e48fde7b8053d92d8b03124f20fb08",
+    "USC00010140.csv": "acc9ae944c00b783061613c6fd2cb50ec3d547ef7b013df8383dca259ec85cb8",
+    "USC00010140.15m.csv": "a1f4645ff8f52b2bc1dc4ea9f9e9e37c826e8a0a3879dddc31953365adc18237",
+    "station_inventory.csv": "c6ef86880b4028bbcb32a3840d36cf50deb28f2045300df75eee38c71affe69f",
+    "readme.csv.txt": "03d014d8b71f99e4b429ea6036de55fee02e58e7d0fd10e98187ea748297aeaa",
+    "readme.15min.txt": "c760fb981564faee31cdbefbcfa1bc592b6b7341c87110a530b7fc585367ad70",
+    "public_source_search.json": "6a7f584d8597bc55ba7923fc28f0e181b4f4795e1c8c3f22c2fb8d1673360f23"
+  },
+  "natural_days": 9,
+  "complete_dry_controls": 43,
+  "omitted_calendar_days": 9,
+  "forecast_member_days": 260,
+  "grib_messages": 2080,
+  "range_download_bytes": 636156029,
+  "natural_paired_decisions": {
+    "control": 0,
+    "ensemble": 2,
+    "unresolved": 7
+  },
+  "natural_individual_decisions": {
+    "control": 0,
+    "ensemble": 0,
+    "unresolved": 9
+  },
+  "natural_nominal_tolerance_decisions": {
+    "control": 0,
+    "ensemble": 1,
+    "unresolved": 8
+  },
+  "all_case_raw_preprocessing_decision_changes": 2,
+  "packing_repaired_member_days": 27,
+  "packing_repaired_bin_pairs": 28,
+  "maximum_negative_raw_increment_mm": -0.05,
+  "whole52day_interval": [
+    -0.250923980769231,
+    1.195845365384615
+  ],
+  "whole52day_decision": "unresolved",
+  "natural_cases": [
+    {
+      "date": "2008-12-05",
+      "paired": [
+        0.0,
+        0.0
+      ],
+      "decision": "unresolved",
+      "individual_decision": "unresolved",
+      "uniform_decision": "unresolved",
+      "nominal_2p54mm_decision": "unresolved"
+    },
+    {
+      "date": "2008-12-10",
+      "paired": [
+        7.180813000000001,
+        25.373562999999997
+      ],
+      "decision": "ensemble",
+      "individual_decision": "unresolved",
+      "uniform_decision": "ensemble",
+      "nominal_2p54mm_decision": "ensemble"
+    },
+    {
+      "date": "2008-12-11",
+      "paired": [
+        -24.656799000000007,
+        26.474670999999997
+      ],
+      "decision": "unresolved",
+      "individual_decision": "unresolved",
+      "uniform_decision": "ensemble",
+      "nominal_2p54mm_decision": "unresolved"
+    },
+    {
+      "date": "2008-12-17",
+      "paired": [
+        -0.487393,
+        0.43970700000000007
+      ],
+      "decision": "unresolved",
+      "individual_decision": "unresolved",
+      "uniform_decision": "ensemble",
+      "nominal_2p54mm_decision": "unresolved"
+    },
+    {
+      "date": "2008-12-28",
+      "paired": [
+        -1.018356,
+        0.373564
+      ],
+      "decision": "unresolved",
+      "individual_decision": "unresolved",
+      "uniform_decision": "ensemble",
+      "nominal_2p54mm_decision": "unresolved"
+    },
+    {
+      "date": "2008-12-29",
+      "paired": [
+        -0.04185600000000001,
+        0.039424
+      ],
+      "decision": "unresolved",
+      "individual_decision": "unresolved",
+      "uniform_decision": "control",
+      "nominal_2p54mm_decision": "unresolved"
+    },
+    {
+      "date": "2009-06-05",
+      "paired": [
+        -1.15768,
+        1.4801099999999998
+      ],
+      "decision": "unresolved",
+      "individual_decision": "unresolved",
+      "uniform_decision": "ensemble",
+      "nominal_2p54mm_decision": "unresolved"
+    },
+    {
+      "date": "2009-06-14",
+      "paired": [
+        0.6491900000000002,
+        1.470626
+      ],
+      "decision": "ensemble",
+      "individual_decision": "unresolved",
+      "uniform_decision": "ensemble",
+      "nominal_2p54mm_decision": "unresolved"
+    },
+    {
+      "date": "2009-06-24",
+      "paired": [
+        -5e-05,
+        0.04821
+      ],
+      "decision": "unresolved",
+      "individual_decision": "unresolved",
+      "uniform_decision": "ensemble",
+      "nominal_2p54mm_decision": "unresolved"
+    }
+  ],
+  "limitations": [
+    "Purposively selected single-station9event panel; no prevalence or general forecast-skill claim.",
+    "All43complete controls have zero recorded rainfall, mostlyZassumed zeros. They only check degenerate dry bounds.",
+    "No finer truth for natural periods; no natural decision-error rate can be calculated.",
+    "Exactness is conditional on reported totals; nominal2.54mm perturbation is not a validated physical error bound.",
+    "GEFSv12 retrospective forecasts, nominal00cycle and physical03initialization; selected valid windows start06UTC.",
+    "Nearest gridpoint8.6565km away; grid-area vs station observation representativeness remains.",
+    "Nonnegative preprocessing repairs differently packed nested fields; all raw increments and endpoint sensitivity retained.",
+    "No hourly acquisition-cost, recoverability, actual operational deployment, ML model or SOTA claim.",
+    "Public-source closure refers only to documented checked endpoints/files; unavailable legacy endpoints do not prove global absence."
+  ],
+  "natural_paired_outcomes": {
+    "strict_ensemble": 2,
+    "strict_control": 0,
+    "sign_ambiguous": 6,
+    "identified_tie": 1
+  },
+  "complete_dry_control_outcomes": {
+    "strict_control": 14,
+    "strict_ensemble": 7,
+    "identified_tie": 22
+  },
+  "decision_label_note": "Legacy unresolved labels mean no strict decision; exact ties are separately identified here. No frozen numerical result changed."
+}

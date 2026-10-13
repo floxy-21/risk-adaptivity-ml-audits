@@ -1,0 +1,43 @@
+Verification date: 2026-10-11. Only primary texts used. No manuscript edits.
+
+Gaillard, Pierre; Gerchinovitz, Sebastien; de Montbrun, Etienne (2023).
+Adaptive approximation of monotone functions. arXiv:2309.07530v1,
+submitted 14 September 2023; no journal publication established here.
+https://arxiv.org/abs/2309.07530v1
+https://arxiv.org/pdf/2309.07530v1
+Pinpoints: Section 4.1 begins printed page 14; Section 4.1.1,
+Corollary 1 and Theorem 3 appear page 15; randomized Algorithm 2
+and Theorem 4 are in Section 4.1.2. This is already scalar integral
+certification, not solely function reconstruction. GreedyBox is attributed
+there to a generalization of Novak (1992), not introduced by our study.
+
+Kuboyama, Tetsuji (2026). How Many Labels Does Model Choice Need?
+Certificates and Budgets for Selective Prediction. arXiv:2609.18622v1,
+submitted 16 September 2026, 13:10:59 UTC. Verified preprint, not journal article.
+https://arxiv.org/abs/2609.18622v1
+https://arxiv.org/pdf/2609.18622v1
+Pinpoints: Section 3 equations (3)-(4), Theorem 1, printed page 3;
+Proposition 1 page 4; Section 4.1 Theorem 2 page 5;
+Section 4.4 Proposition 3 pages 8-9. Its target is selective-prediction
+AUGRC. The joint-bound versus separate-bound comparison is explicit,
+so it must not be presented as our newly introduced general principle.
+
+Wei, Ningji; Zhang, Peter (2024). Adjustability in robust linear optimization.
+Mathematical Programming 208, 581-628.
+https://link.springer.com/article/10.1007/s10107-023-02049-w
+Official article posted 27 January 2024. Theorem 1/Corollary 1 characterize
+adjustability for its robust-linear setting. Existing bibliography key wei2024.
+
+Vayanos, Phebe; Georghiou, Angelos; Yu, Han (2026).
+Robust Optimization with Decision-Dependent Information Discovery.
+Management Science 72(2), 1509-1528.
+https://pubsonline.informs.org/doi/10.1287/mnsc.2021.00160
+Online publication 20 June 2025; issue February 2026. Existing key ddid.
+Abstract and model concern information whose availability depends on prior
+decisions; K-adaptability supplies tractable decision rules. This is relevant
+context, not an equivalent terminal-width penalty-classification theorem.
+
+Recommended scope: distinguish analytic worst-case guarantees from empirical
+counter outcomes. Counter retrieval assumptions and artificially restricted
+archives do not establish field availability or cost. Do not claim historical
+priority, optimal stopping cost, or novelty of scalar adaptive certification.

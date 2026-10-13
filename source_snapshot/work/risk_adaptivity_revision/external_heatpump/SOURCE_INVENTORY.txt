@@ -1,0 +1,45 @@
+HeatpumpMonitor external-source inventory (frozen metadata study, 2026-10-12 UTC)
+
+Selection source: https://heatpumpmonitor.org/system/list/public.json
+Metadata: https://heatpumpmonitor.org/system/get.json?id=ID
+Feed metadata: https://heatpumpmonitor.org/timeseries/available?id=ID
+API specification: https://heatpumpmonitor.org/api-helper
+License and monitoring boundaries: https://heatpumpmonitor.org/about
+Data: Creative Commons Attribution 4.0 International. Cite HeatpumpMonitor.org / OpenEnergyMonitor, system IDs, retrieval date, and transformations. Website code has separate AGPLv3 terms.
+
+Selected IDs by ascending ID and frozen metadata coverage: 1, 2, 7.
+Training: 2025-01-01T00:00:00Z <= target hour < 2025-07-01T00:00:00Z.
+Test: 2025-07-01T00:00:00Z <= target hour < 2025-08-01T00:00:00Z.
+Input feed: heatpump_elec_kwh, stored cumulative electrical energy, kWh.
+No forecasts fitted and no test performance inspected in this source-selection stage.
+
+ID 1: Selby, Yorkshire. MID metadata 1; 'Other pulse output meter (class 1)'. No model-specific calibration or pulse constant is established. Feed metadata interval 88.17188661160468 seconds, hence do NOT describe this as a fixed 10-second feed. Metadata start 1641911700; end 1791763260 at freeze. Native engine/selection/interpolation semantics not verified.
+ID 2: Llanberis, Gwynedd. MID metadata 1; 'SDM120 Modbus/MBUS Single Phase (class 1)'. Metadata interval 10 seconds, start 1600870460, end 1791770990 at freeze. A named meter does not prove which feed processing chain was used.
+ID 7: Weymouth. MID metadata 1; 'SDM120 Modbus/MBUS Single Phase (class 1)'. Metadata interval 30 seconds, start 1668776160, end 1791771090 at freeze. Native device-register provenance remains unverified.
+
+Documented software semantics:
+https://github.com/openenergymonitor/heatpumpmonitor.org/blob/main/www/Modules/timeseries/timeseries_controller.php
+The /timeseries/data controller forwards start/end, interval, average, delta, timeformat, skipmissing=0 to the configured Emoncms backend. The public response maps feed IDs to named feeds. /available strips backend server, API key and feed IDs. Those private backend details should not be sought or inferred. Average=0 and delta=0 request cumulative samples rather than averages/differences, but do not establish that historic stored values were never repaired.
+
+Backend format context (conditional; native engine not exposed for these IDs):
+https://docs.openenergymonitor.org/emoncms/developer/timeseries/Fixed-interval.html
+PHPFina uses float32 values and floors write timestamps to its interval; missing values can be NaN or optionally joined linearly. Apply these properties only if the relevant backend is established, not as a universal description of all selected feeds.
+
+Cumulative-feed provenance warning:
+https://github.com/openenergymonitor/HeatpumpMonitor/blob/master/HeatpumpMonitorTH/installation.md
+The naming convention identifies cumulative kWh, but documented configurations include both device readings and integrated power; the Wh accumulator can join gaps. Therefore call these STORED CUMULATIVE ENERGY FEEDS until actual per-system processing provenance is established. No-interpolation in our client cannot remove unknown upstream interpolation.
+
+Manufacturer source for systems 2 and 7:
+https://www.eastroneurope.com/images/uploads/brochures/Eastron_SWM-brochure_Jan2023_.pdf
+PDF printed pages 3-4: SDM120 active energy Class 1/Class B, MID B+D, selectable import/export/net/total modes, operating-range and reference conditions. A device-class label does not establish a universal deterministic +/-1% per-hour error band or a per-device calibration. Public system metadata does not identify meter serials, historic mode settings or calibration certificates.
+
+Actual interface and cost boundary:
+https://heatpumpmonitor.org/api-helper
+One request can return a time range and multiple feeds. A full six-hour block's seven hourly cumulative endpoints is an available baseline and must not be excluded.
+https://emoncms.org/site/pricing
+Hosted feeds cost GBP1/feed/year excluding VAT; this is hosting pricing, not evidence of per-reading API billing. No public historical-query price was established. The online timing benchmark must report request counts, returned bytes, elapsed times and failures without converting them into monetary savings.
+
+Reproducibility and uncertainty boundary:
+Raw public metadata and HTTP response hashes are retained in metadata/ and request_log.jsonl. The initial parser overlooked the top-level 'feeds' envelope and requested extra metadata; this was fixed before any time-series values or outcomes were accessed. Selection still follows ascending IDs and original criteria. Public metadata alone does not reveal interior missingness. Training completeness is checked separately under the frozen operational protocol; heldout completeness must not determine source replacement.
+
+External data are not external independent execution, independent human specialist validation, measured production latency, or measured business loss. These require their own evidence.

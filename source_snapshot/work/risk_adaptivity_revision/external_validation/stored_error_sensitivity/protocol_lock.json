@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-12T02:48:31.511543+00:00",
+  "status": "fixed_before_sensitivity_LP_outcomes",
+  "protocol_sha256": "7b4160f082e5a490e631dd312e42bf09a1cc00b49090e2830110a0eae9af01fc",
+  "half_witnesses_sha256": "0fa3f9c32a1a008edb90f2b39a721d2adfc23dbe6dfdce040cd77d435051232a",
+  "geometry_sha256": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0",
+  "solver_sha256": "6abe03124d94e8ca9a8b672eddbbe5b85accdf4b95a350fbabeb39f287026193",
+  "deltas": [
+    0,
+    0.001,
+    0.01
+  ],
+  "expected_case_count": 29
+}

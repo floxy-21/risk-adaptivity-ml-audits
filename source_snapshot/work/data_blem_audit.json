@@ -1,0 +1,52 @@
+{
+  "method": "At exact hourly UTC endpoints, subtract raw cumulative energy integers before multiplying by 1e-10 kWh. Retain only hours with exactly20 consecutive180-second increments, no counter decreases. No interpolation.",
+  "source_paper": "https://doi.org/10.3390/en12142718",
+  "source_repo": "https://github.com/QuantLet/BLEM",
+  "commit": "756b2c1265f964b70f72625a95d98413cdfb78bd",
+  "note": "Forecast missing-target experiment still simulated; counters are real source measurements. Data are a prespecified first-three-consumer sample, not an accuracy-selected subset.",
+  "hourly_sha256": "527b1e3a07e2d1b688354796c41cdce5ee27d1ba3503a041461fce6121c9f56a",
+  "stats": {
+    "consumer-00000001": {
+      "raw_rows": 175201,
+      "duplicate_times": 0,
+      "non_3min_steps": 0,
+      "negative_counter_steps": 0,
+      "first_utc": "2016-12-31T23:00:00+00:00",
+      "last_utc": "2017-12-31T23:00:00+00:00",
+      "valid_hourly_intervals": 8760,
+      "total_valid_kwh": 4603.5412128874,
+      "min_hour_kwh": 0.1782375528,
+      "max_hour_kwh": 2.9998377190000003
+    },
+    "consumer-00000002": {
+      "raw_rows": 175201,
+      "duplicate_times": 0,
+      "non_3min_steps": 0,
+      "negative_counter_steps": 0,
+      "first_utc": "2016-12-31T23:00:00+00:00",
+      "last_utc": "2017-12-31T23:00:00+00:00",
+      "valid_hourly_intervals": 8760,
+      "total_valid_kwh": 5229.719871826101,
+      "min_hour_kwh": 0.251226598,
+      "max_hour_kwh": 3.0242298023000003
+    },
+    "consumer-00000003": {
+      "raw_rows": 175201,
+      "duplicate_times": 0,
+      "non_3min_steps": 0,
+      "negative_counter_steps": 0,
+      "first_utc": "2016-12-31T23:00:00+00:00",
+      "last_utc": "2017-12-31T23:00:00+00:00",
+      "valid_hourly_intervals": 8760,
+      "total_valid_kwh": 3566.6704099466,
+      "min_hour_kwh": 0.0618588614,
+      "max_hour_kwh": 4.0358154542
+    }
+  },
+  "hourly_columns": [
+    "timestamp",
+    "consumer_00000001",
+    "consumer_00000002",
+    "consumer_00000003"
+  ]
+}

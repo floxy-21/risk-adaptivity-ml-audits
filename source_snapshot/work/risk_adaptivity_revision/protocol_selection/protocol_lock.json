@@ -1,0 +1,191 @@
+{
+  "schema": "acquisition-interface-selector-v1",
+  "frozen_utc": "2026-10-12T04:07:08.240545+00:00",
+  "protocol_sha256": "6856a10bee6157fc985df82906df7edc1ddd86d82ecc270ce014fc82ed250c27",
+  "measurement_model": {
+    "latent_target": "nonnegative_six_increment_affine_contrast",
+    "retained_total": "exact_normalized_one",
+    "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+    "error_bound_exact": "1/100",
+    "precision_over_initial_width_exact": "1/2",
+    "calibration": "declared_allowance_not_physical_calibration"
+  },
+  "scenarios": [
+    {
+      "measurement_model": {
+        "latent_target": "nonnegative_six_increment_affine_contrast",
+        "retained_total": "exact_normalized_one",
+        "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+        "error_bound_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "calibration": "declared_allowance_not_physical_calibration"
+      },
+      "permitted_boundaries": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bulk_returns_boundaries": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "fixed_batch_allowed": true,
+      "adaptive_allowed": true,
+      "scalar_reading_unit": "one_new_internal_prefix_value",
+      "round_unit": "one_group_of_queries_chosen_before_its_answers",
+      "id": "public_bulk",
+      "bulk_allowed": true,
+      "maximum_optional_readings": null,
+      "maximum_information_rounds": null,
+      "point_transport": "one_http_request_per_scalar",
+      "preference": [
+        "http_requests",
+        "information_rounds",
+        "optional_readings"
+      ],
+      "scenario_kind": "documented_public_capabilities_with_declared_uncertainty_model",
+      "source": "Existing HPM range/point API documentation and frozen public microbenchmark",
+      "exclusion_of_bulk_reason": null
+    },
+    {
+      "measurement_model": {
+        "latent_target": "nonnegative_six_increment_affine_contrast",
+        "retained_total": "exact_normalized_one",
+        "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+        "error_bound_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "calibration": "declared_allowance_not_physical_calibration"
+      },
+      "permitted_boundaries": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bulk_returns_boundaries": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "fixed_batch_allowed": true,
+      "adaptive_allowed": true,
+      "scalar_reading_unit": "one_new_internal_prefix_value",
+      "round_unit": "one_group_of_queries_chosen_before_its_answers",
+      "id": "restricted_three_readings",
+      "bulk_allowed": false,
+      "maximum_optional_readings": 3,
+      "maximum_information_rounds": 2,
+      "point_transport": "unspecified",
+      "preference": [
+        "optional_readings",
+        "information_rounds"
+      ],
+      "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+      "source": "Mathematical individual-prefix query dictionary",
+      "exclusion_of_bulk_reason": "This declared benchmark admits individually selected prefix observations only"
+    },
+    {
+      "measurement_model": {
+        "latent_target": "nonnegative_six_increment_affine_contrast",
+        "retained_total": "exact_normalized_one",
+        "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+        "error_bound_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "calibration": "declared_allowance_not_physical_calibration"
+      },
+      "permitted_boundaries": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bulk_returns_boundaries": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "fixed_batch_allowed": true,
+      "adaptive_allowed": true,
+      "scalar_reading_unit": "one_new_internal_prefix_value",
+      "round_unit": "one_group_of_queries_chosen_before_its_answers",
+      "id": "restricted_two_readings",
+      "bulk_allowed": false,
+      "maximum_optional_readings": 2,
+      "maximum_information_rounds": 2,
+      "point_transport": "unspecified",
+      "preference": [
+        "optional_readings",
+        "information_rounds"
+      ],
+      "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+      "source": "Mathematical individual-prefix query dictionary",
+      "exclusion_of_bulk_reason": "This declared benchmark admits individually selected prefix observations only"
+    },
+    {
+      "measurement_model": {
+        "latent_target": "nonnegative_six_increment_affine_contrast",
+        "retained_total": "exact_normalized_one",
+        "query_semantics": "stored_internal_prefix_plus_fixed_hidden_error",
+        "error_bound_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "calibration": "declared_allowance_not_physical_calibration"
+      },
+      "permitted_boundaries": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bulk_returns_boundaries": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "fixed_batch_allowed": true,
+      "adaptive_allowed": true,
+      "scalar_reading_unit": "one_new_internal_prefix_value",
+      "round_unit": "one_group_of_queries_chosen_before_its_answers",
+      "id": "restricted_one_round",
+      "bulk_allowed": false,
+      "maximum_optional_readings": 3,
+      "maximum_information_rounds": 1,
+      "point_transport": "unspecified",
+      "preference": [
+        "optional_readings",
+        "information_rounds"
+      ],
+      "scenario_kind": "declared_benchmark_interface_not_observed_provider_service",
+      "source": "Mathematical individual-prefix query dictionary",
+      "exclusion_of_bulk_reason": "This declared benchmark admits individually selected prefix observations only"
+    }
+  ],
+  "inputs": {
+    "external_validation/stored_error_fallback/prescriptions.json": "9152fcd676486e05a21d5cda65b987e6f96a4fd5774496f964e1b7c73b691c75",
+    "external_validation/stored_error_fallback/fixed_batch_certificates.json": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+    "external_validation/stored_error_fallback/branch_certificates.json": "468befdf13f4baa018397a9bc86595ac6d8622c16151e2f939ae754c41e7be6c",
+    "external_validation/stored_error_fallback/policy.py": "3d477e5525a02e1312c9622a91e82e876ec8241f85f84c2793796b7e26a5c383",
+    "external_validation/stored_error_fallback/INDEPENDENT_CERTIFICATE_CHECKS.json": "deb44941ceaec6662b88adcb05b9bd51450bc7613773cd9bd0e76da642fbbfcb",
+    "external_validation/stored_error_fallback/INDEPENDENT_BRANCH_CHECKS.json": "41a3150af8888b09fbb11a34609ab5d4431b6f1a308747bf5513a918c7ec7d2b",
+    "external_validation/stored_error_sensitivity/failure_diagnostics/witnesses.json": "098d646b8b3263802d49270afef3ebac035423c60d53051f8904327f44a00d90",
+    "external_validation/operational/http_benchmark_20261012/trials.json": "7b369f2f5e930ccad1b4f381ee1c5be22a1487adff85bb01f3e51287a5e4f21f",
+    "external_validation/operational/http_benchmark_20261012/request_log.json": "db04c3b9f1d393e8c9b2260a0c6113b6524f508feb5d616cdf26349228a71aea",
+    "external_validation/operational/http_benchmark_20261012/benchmark_plan.json": "9e57325e107a516d6b8767f5c3849db45e7032babbf9ba182026f250b241ef42"
+  },
+  "logical_extra_check": "One hypothetical native multipoint interface with request priority; no provider claim",
+  "execution_test": "All29cases x4scenarios, fixed uniform increments and zero errors",
+  "source_data_or_models_changed": false
+}

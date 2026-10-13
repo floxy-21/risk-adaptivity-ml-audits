@@ -1,0 +1,43 @@
+Suggested placements (current manuscript section titles, not brittle numbers):
+
+1. Introduction, directly after defining the local-width risk question:
+   'A cumulative-register audit supplies a concrete finite information
+   dictionary: surviving outer registers fix a block total, and a query to an
+   internal register divides that total between two subintervals. For fixed ML
+   forecasts this constrains their paired loss contrast. We investigate whether
+   choosing a second register after seeing the first can meet a required
+   precision more reliably than selecting both in advance.'
+   This states the task without promising an as-yet unmeasured benefit.
+
+2. End of 'Computing policies and hardest records on polytopes', after the
+   general two-query LP and before the compact disjoint-total application:
+   insert counter_methods.tex as a structured exact specialization. If the
+   application design is kept with experiments instead, retain a forward
+   reference here and insert the fragment immediately before its results.
+
+3. Opening of the new counter results subsection:
+   'The replay compares six model pairs on three six-hour blocks per eligible
+   day, using frozen forecasts and three previously studied counter meters.
+   Only outer registers and permitted forecasts enter policy construction;
+   internal register answers enter the separate replay. The access rule is
+   a retrospective benchmark specification, not measured production latency.'
+   State first-20-day versus remaining-day phases, counts and results only
+   after matching the actual run. No untouched-source or natural-outage claim.
+
+4. Interpretation and Limitations, before discussing the old 0.97% result:
+   'The counter experiment concerns reliable precision after at most two
+   register queries. A narrow comparison interval need not identify a winning
+   model, and register counts do not establish financial or time savings.
+   Outcomes depend on the declared register-level access interface; an
+   inexpensive whole-gap export would define a different acquisition problem.'
+   Do not reinterpret the unchanged earlier acquisition experiment.
+
+Numerical nuance: study.py reports A normalized by W0, while the fragment
+defines A in absolute loss-width units. State this conversion at the table.
+The exact c=(0,0,1,1,0,1) example has A/W0=0.5, so the conservative numeric
+guarantee flag at threshold 0.5 is false by design; use its separate proof.
+
+Comparator naming: a 'mean-optimal randomized batch' is not a precision-optimal
+batch. The dual finite-profile bound U applies to every randomized batch,
+including a genuinely precision-optimal one. U<1 with A<=tau establishes the
+separation even without computing the latter's exact full-domain optimum.

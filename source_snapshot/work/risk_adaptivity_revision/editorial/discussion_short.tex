@@ -1,0 +1,65 @@
+\section{Discussion}\subsection{What the method changes in an audit}
+The practical output is a justified acquisition choice. The auditor first
+states the contrast to compare, the precision required, the information
+already available, and the retrieval options. A sufficient initial interval
+needs no query. Otherwise, a bulk response or fixed batch can avoid feedback;
+adaptive retrieval is useful when it meets the required guarantee with fewer
+permitted readings. This ordering prevents a sophisticated selective policy
+from being used where a simpler service already supplies adequate information.
+
+The public API is a concrete example. Its full-range response is admissible,
+uses one request, and is faster on the measured three-task workload. The
+selector therefore recommends bulk. Under the separate restricted-reading
+contract, the same assurance analysis instead justifies 22 two-reading and
+seven three-reading prescriptions. The contracts limit different resources:
+65 versus 87 counts reserved scalar readings across the selected 29 audits,
+while 51 versus 29 counts information rounds. A service that values rounds
+more than readings can reasonably choose fixed batches. Actual monetary
+costs and service-wide latency require corresponding operational measurements.
+
+\paragraph{Breadth of the theory and limits of the implementations.}
+The classification applies to any known compact convex feasible set, scalar
+affine target, finite exact-linear query dictionary and answer-independent
+family of legal final query sets. It permits signed targets, overlapping
+constraints, valid upper bounds and unequal fixed costs. It is not restricted
+to energy or disjoint totals. Fixed bounded errors also fit by including
+them in the hidden record, as detailed in Online Resource~1, S6.
+The finite dictionary matters: allowing every linear functional at equal
+cost would permit a direct query of the scalar contrast itself.
+
+Computational guarantees have narrower scopes. The general polyhedral
+formulations handle a declared batch family and exact deterministic
+two-query planning. The counter rule exploits cumulative sums and a known
+nonnegative total. The compact coordinate solver uses disjoint exact totals
+and unit costs. These efficient specializations do not supply an efficient
+arbitrary-budget precision optimizer for every convex set.
+
+\paragraph{What the application establishes.}
+Two public sources exhibit the same exact feedback-dependent assurance gap.
+Its prevalence is 5.90\% and 1.73\%, and overall recorded gains over the best
+fixed deterministic worst-width batch are only 0.407 and 0.119 percentage
+points. Greedy adaptation succeeds on all 29 external separation cases.
+Thus the main benefit is identifying when a guarantee needs feedback, not
+a large observed improvement over every adaptive heuristic. Three systems
+per source, repeated model pairs and six-hour blocks do not establish
+population prevalence.
+
+Illustrative capacity constraints often make feedback unnecessary, while
+measurement errors can increase the sufficient reading budget. The
+sensitivity uses exact endpoints and declared internal errors; deployment
+requires defensible error and physical bounds. The half-initial-width target
+is a declared precision requirement, not a calibrated financial threshold.
+A narrow interval can still contain zero. Model ordering, shared retrievals
+across comparisons, and requests until a decision are separate objectives.
+
+\section{Conclusions}
+The risk objective determines whether feedback can improve the worst-case
+guarantee for a model-comparison interval. Concavity gives a complete
+no-improvement classification; nonconcave penalties admit sharp query-based
+separations. An exact two-query rule and checkable certificates turn that
+distinction into an acquisition decision. The reference implementation chooses among supplied bulk, fixed and adaptive
+certificates using declared access and resource limits. New comparisons require
+new certificates; a catalogue exclusion alone is not an impossibility proof.
+The public-data results show both when feedback changes assurance and when
+bulk or fixed retrieval is preferable. The practical contribution is this
+auditable choice, supported by explicit assumptions and executable evidence.

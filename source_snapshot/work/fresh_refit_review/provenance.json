@@ -1,0 +1,70 @@
+{
+  "status": "FROZEN",
+  "canonical_public_files": [
+    "README.txt",
+    "protocol.txt",
+    "comparison_protocol.txt",
+    "refit.py",
+    "export_public.py",
+    "verify_refit.py",
+    "prepared.json",
+    "selection.json",
+    "fit_metadata.json",
+    "fresh_result.json",
+    "fresh_predictions_public.csv",
+    "omission_manifest.json",
+    "independent_metrics_full.csv",
+    "independent_metrics_public.csv",
+    "independent_verification.json",
+    "independent_verification_public.json",
+    "refit_fragment.tex",
+    "provenance.json"
+  ],
+  "file_sha256": {
+    "README.txt": "53eee2ec0e777ea436c665e15c12475ab02bc7138a318d81450791065a6f4186",
+    "protocol.txt": "18cc6c2ce47acc32fa69f92248af03486d5367884d7d051e6be8eb5e14acc252",
+    "comparison_protocol.txt": "d26bdc2fa28be2e3f6b0a4fd63d6767b3e9bdefbac1dc23fde85f4fea449618e",
+    "refit.py": "d290c07cb6684da309f0a8b974dfe1c376fd68c811acc91777175950a37582db",
+    "export_public.py": "9b1e018b7b8de8aba86093391bac991d03298dedf1bade61f6827641318d3a69",
+    "verify_refit.py": "113894d3fe2d7c90374655870564277d40761e58957e15bcf1d83a8b9b4da86b",
+    "prepared.json": "ae712968860a807eef526a9dccd8c4d3f10e77cb21164fc0980a0a0f1e318754",
+    "selection.json": "6a280a6eb2e477d8a64cdbbdb9ff8799604f9e9799f5d7d306970881a7ec54a7",
+    "fit_metadata.json": "649e20aa82698757773f623251ca6782139d4b2a526451c68d1892736b414eb5",
+    "fresh_result.json": "07cf3bb205eeab3e6bc0016fefeaf7e02bba2fba68b15503e8bc71aff7ab73eb",
+    "fresh_predictions_public.csv": "6e58675c08df1720d124aad3f1343774c9f4df9d7f9981faf30fcbb14d56c9a7",
+    "omission_manifest.json": "0bbc432e3ff22d12dd7fbdd0507dd4e13abc2cf1d9b5cca527c49b7f1270c332",
+    "independent_metrics_full.csv": "402aa6981cb471064dcdabcf9cbebd5427ea373f1517c0d5e95659e94f054042",
+    "independent_metrics_public.csv": "d624de55a7123757bef9066c8168d4b3464c7497ac13eface0cd993820b95e98",
+    "independent_verification.json": "fded2d7e1de498cc17cb8fc4e797be523c480bcc01d0c7b61698c26bc23086c9",
+    "independent_verification_public.json": "517b2a77f48a5e19cdd241122f73f4d9873d9c8e4fedbc4599040a3769d6ab27",
+    "refit_fragment.tex": "23d39d8612258f107e32c4defe13e50a665e819d29836f36abe6e08ef12d0df1"
+  },
+  "private_local_files": {
+    "fresh_predictions.csv": "dcee9ff4dc4947a87c7c9d2acb8d152d506bfdbcde2e2deed0f45271e70d0b21"
+  },
+  "private_local_directories": [
+    "hourly/"
+  ],
+  "source_sha256": {
+    "outputs/run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+    "outputs/energy_rank_bounds.py": "2b555e7fbb676f311b87c38a1cfc8bf81b34743e35a7c43b5ff08d759596f467",
+    "outputs/study_holdout_consumers.py": "444e8ef7d3a7ca79bfd4f20769e99c9925488651d55eae44984b8e3a2fced266",
+    "work/data_prepare_blem.py": "75383782c6565f328a9e6d0fa48eaa90bcdbb6c0106fe3bdee484326bd9115b7",
+    "outputs/study_summary.json": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196",
+    "outputs/study_holdout_consumers.json": "3a31fdc8e41cad926ab1c43d6802d0f4772e948e61fd71b36f6aa357ac686f1e",
+    "outputs/study_predictions.csv": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+    "outputs/study_holdout_consumers_predictions.csv": "6af5c1101850724b2067c14f3bc8abf891b1d12bd04fa3d4a5c24dbbbeb4c9d8",
+    "outputs/review_raw_reconstruction.json": "ad68a29f1012f76e556ca36f7239b9711f7956c712fb0144e2c76d55f0b63fa3"
+  },
+  "raw_source_sha256": {
+    "work/data_uci_household_power.txt": "4259c9d7ece5dbee9ab8d53682baac68d791c864f0f64a52b4043cb3b90894b7",
+    "work/data_electricity.txt": "d51565f2cb5a6b768d06ba1bbd3c084c6e2f3aab07f00c6f2dcb80e90175124b",
+    "work/data_blem_consumer-00000001.csv": "9228795c6369ce144fbb929f9d413397545f86e3a95d2f9a0f27c92f1d55ad8d",
+    "work/data_blem_consumer-00000002.csv": "93d142217c74ab2c12a98035b3ea178ead234fec0b71942e8e90db5b7e6a2ef3",
+    "work/data_blem_consumer-00000003.csv": "db69719d2262ebeb6df39abafffca2805c8a03b1b4777f86eb8aa78acf578b6c"
+  },
+  "scope": "Fresh same-trainer refit of64 series with independent arithmetic/configuration/chronology checker. Public default verifies61 UCI series; full64 raw/hourly replay remains locally executable. Archived full metadata and aggregate results are distributed.",
+  "default_public_verifier": "python work/fresh_refit_review/verify_refit.py --public",
+  "full_local_verifier": "python work/fresh_refit_review/verify_refit.py",
+  "archived_reports_note": "Replays write fresh reports only in copied isolated trees; original archived reports stay frozen."
+}

@@ -1,0 +1,99 @@
+\subsection{Acquiring a reading for a certified model decision}
+\label{sec:decision-acquisition}
+The width objective does not directly minimize requests to a decision.
+We therefore consider a separate, single-query acquisition rule. Its
+probabilities describe a declared acquisition surrogate; the final
+all-completions certificate continues to use the original feasible set.
+Write the current paired loss contrast as
+$D(y)=d+\sum_g\sum_{j\in\mathcal M_g}c_jy_j$.
+For a query $i\in\mathcal M_g$, let $l_i$ and $u_i$ be the extreme
+coefficients remaining in block $g$, and let $A_g,B_g$ be the sharp
+lower and upper contributions of $d$ and the other blocks. Conditional
+on the answer $x\in[0,E_g]$, the updated sharp endpoints are
+\begin{align}
+ L_i(x)&=A_g+E_gl_i+(c_i-l_i)x,\notag\\
+ U_i(x)&=B_g+E_gu_i+(c_i-u_i)x.\label{eq:decision-query-endpoints}
+\end{align}
+The answers that do not certify a strict ranking form the interval
+$J_i=\{x\in[0,E_g]:L_i(x)\leq0\leq U_i(x)\}$.
+If it is nonempty, denote its endpoints by $a_i,b_i$.
+
+\begin{proposition}[One-query certification probability]
+\label{prop:decision-query-probability}
+Suppose $E_g>0$, block $g$ has at least two unknown coordinates, and
+the normalized unknown targets in block $g$ have a Dirichlet
+acquisition surrogate with positive parameters $(\alpha_j)_{j\in\mathcal M_g}$.
+Set $\beta_i=\sum_{j\in\mathcal M_g\setminus\{i\}}\alpha_j$.
+For an initially unresolved nonconstant contrast, the probability
+that query $i$ certifies a strict ranking over all feasible completions is
+\begin{equation}
+ P_i=1-I_{b_i/E_g}(\alpha_i,\beta_i)
+       +I_{a_i/E_g}(\alpha_i,\beta_i),
+ \label{eq:decision-query-probability}
+\end{equation}
+with $P_i=1$ when $J_i$ is empty; an identically-zero contrast is
+a known tie, not a strict ranking. Here $I_z$ is the regularized incomplete
+beta function. Maximizing $P_i$ is optimal for this one-query surrogate
+utility.
+\end{proposition}
+\begin{proof}
+Allocating each block's remaining mass to an extreme coefficient gives
+\eqref{eq:decision-query-endpoints}. The intersection of the two closed affine
+half-lines defining $J_i$ is an interval. The Dirichlet marginal
+$x/E_g\sim\operatorname{Beta}(\alpha_i,\beta_i)$ gives its probability.
+An equality holding on an interval is included in $J_i$; isolated
+endpoints have zero probability under the continuous
+surrogate. The maximizing rule follows from the stated one-stage utility.
+\end{proof}
+
+For the uniform-simplex variant, $\alpha_j=1$ and
+$P_i=1-(1-a_i/E_g)^{m_g-1}+(1-b_i/E_g)^{m_g-1}$.
+For the machine-learning-guided variant, let $p_i$ be the frozen Ridge
+forecast at an original six-hour block's coordinate and define
+\[
+ p_i^+=\max(p_i,0),\quad
+ f_g=10^{-8}\max\!\left(\frac{1}{6}\sum_{j\in I_g}p_j^+,10^{-12}\right),
+ \quad q_i=\max(p_i^+,f_g),\quad
+ \alpha_i=6\kappa\frac{q_i}{\sum_{j\in I_g}q_j}.
+\]
+These parameters are fixed for all six coordinates before recovery.
+Independent block surrogates are used. Conditioning on an observed
+coordinate removes its parameter while preserving all remaining parameters;
+their concentration is not renormalized. The positive concentration
+$\kappa$ is selected using development data and frozen before confirmation.
+Ties in $P_i$ are broken by smaller worst remaining width, then coordinate
+index. The score uses exact zero thresholds; stopping retains the separately
+specified numerical certificate rule.
+
+This policy need not minimize total stopping cost. A narrow exact result
+assumes an initially unresolved, nonconstant contrast, one uncertain block
+with a positive exact total, two or three unknown coordinates after free
+deductions, and no uncertainty elsewhere. Use exact strict-sign
+certification and treat an exactly known tie as terminal. Under the stated
+continuous Dirichlet surrogate, the nonconstant contrast is exactly zero
+with probability zero. After an unresolved first query, at most one further
+query determines the contrast; with two unknown coordinates the first
+query already determines it. The expected number of queries following
+first choice $i$ is therefore $2-P_i$, and maximizing $P_i$ minimizes this
+surrogate cost in this restricted setting. This is not a result for
+positive-tolerance regret stopping or an exact optimality assertion about
+the floating-point stopping implementation. With more unknown coordinates
+or several uncertain blocks, continuation states can matter and the
+argument no longer applies.
+
+The distinction from width optimization is strict. For one block with
+$E=1$, $d=0$, and $c=(-4,-3,0,2)$, the one-query worst remaining widths are
+$(5,6,6,4)$, whereas uniform-simplex certification probabilities are
+$(8/27,27/125,0,1/27)$. The unique width optimum queries coefficient $2$;
+the unique probability optimum queries coefficient $-4$. This constructed
+example establishes objective mismatch, not an estimated application gain.
+It is realizable by nonnegative forecasts: use $a_i=1-c_i/4$,
+$b_i=1+c_i/4$ for these four missing coordinates, then add an observed
+fifth coordinate with $y_5=a_5=0$, $b_5=\sqrt5$ to cancel the fixed
+loss offset. Dividing by five to obtain MSE leaves the query choices
+and probabilities unchanged.
+Decision-region acquisition and expected-cost sequential testing are
+established ideas; the contribution here is their explicit
+aggregate-constrained score and its evaluation with an unchanged
+all-completions stopping certificate.
+

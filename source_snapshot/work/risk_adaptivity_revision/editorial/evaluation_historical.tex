@@ -1,0 +1,94 @@
+\subsection{Archive-consistent certification of saved ML forecasts}
+\label{sec:historical-application}
+The historical study uses 30 Portugal consumption series, one French
+household series and three recorded cumulative-counter series. The four
+forecasters are persistence, ridge regression, histogram gradient boosting
+and a multilayer perceptron. Forecasts, chronological training periods,
+eligibility filters and masks are reused unchanged. Appendix~\ref{app:historical-design}
+specifies the protocol, training history and information boundary.
+
+The archive-aware evaluator receives all saved test forecast rows within
+the declared period. In particular, a saved persistence forecast
+$p_{t+24}^{\rm pers}=y_t$ reveals its earlier target directly. These copies
+and exact aggregate deductions are applied before all methods, using
+source-row traces; hidden reference targets only check the recovered
+values. No inverse reconstruction from other fitted predictor mappings is
+assumed. Later records within the evaluation period are included. The
+whole-period feasible set is the product of the remaining daily blocks
+after this closure, and equal-length daily endpoints may therefore be
+averaged. This is a retrospective benchmark archive rule, not a measured
+production arrival deadline.
+
+The complete Portugal archive-aware exact-total grid contains 9,720
+repeated model-pair comparisons across gap lengths, mechanisms, seeds and
+aggregate resolutions. Direct paired bounds certify 7,836 (80.62\%),
+whereas independently bounded individual losses certify 2,513 (25.85\%).
+The additional 5,323 certificates are a 54.76-percentage-point difference
+under identical information and zero additional queries. In the six-hour-gap
+illustrative cell the counts are 478 of 540 versus 64 of 540. The broader
+grid, rather than that cell, supplies the abstract's empirical result.
+
+Independent subtraction of sharp individual-loss bounds encloses the
+paired interval but may combine extremizers that cannot be the same
+record. For example, predictions $(1,1)$ and $(2,2)$ under
+$y_1+y_2=2$, $y\geq0$, have individual MSE ranges $[0,1]$ and $[1,2]$;
+separate subtraction gives $[-2,0]$, whereas the paired contrast is exactly
+$-1$. For exact totals, each individual-loss minimum is a simplex
+projection and each maximum is attained at a simplex vertex. For uncertain
+totals, the remaining block instead satisfies
+$x\geq0$ and $L\leq\sum_i x_i\leq U$, after subtracting observed contributions.
+The minimum is the projection of its prediction vector onto this band.
+If the nonnegative part of that vector has a sum in $[L,U]$, it is already
+optimal and the minimizing total may be interior. Otherwise the projection
+uses the lower or upper boundary simplex, respectively. The maximum of
+the convex individual squared loss is attained at a vertex of the compact
+band polytope.
+
+The complete 34-series scenario grid contains 66,096 repeated comparisons:
+10,404 are certified by both methods, 23,906 only by pairing and 31,786
+by neither. None is certified only by separate-loss bounds. All 324
+scenario cells, including unresolved cases, appear in the supplement;
+Appendix~\ref{app:certificate-grid} displays their 18 cohort/access/tolerance
+aggregates. The checker verifies the saved sign
+rule, paired-interval nesting and reference enclosure. The redistributable
+endpoint replay covers 60,264 Portugal/household comparisons; the 5,832
+counter comparisons use local original endpoints and require the documented
+raw-source regeneration for an external replay. These are different
+reproduction levels, not interchangeable counts of independent evidence.
+
+The audit adds all-completions support to a point evaluation. The historical
+donor makes zero observed
+whole-period errors at full coverage on the 9,720 Portugal, 324 household
+and 972 counter exact-total comparisons. Those empirical successes do not
+give it an all-completions guarantee. Our certificate can accompany a point
+evaluation by identifying which rankings its declared information actually
+forces; this study does not measure consequential downstream decisions
+changed by that certificate.
+
+\subsection{The retained adverse recovery result}
+On the original Portugal six-hour-gap archive, saved persistence copies
+reconstruct 95.33\% of masked target occurrences for free. Daily certification
+already reaches 96.67\% before paid recovery and 98.71\% after at most two
+readings per model pair; the exact-over-greedy addition is 0.042 percentage
+points. A budget for one pair is not a shared budget for all six pairs.
+No monetary retrieval cost or field latency was measured.
+
+In the archived randomized comparison, all policies see the same closed
+archive. On Portugal, normalized worst width decreases from 29.595\% to
+26.673\% of initial width, but expected width at the actual record increases
+from 20.154\% to 23.670\% (17.45\% relative). Certification decreases
+from 98.795\% to 98.688\%. These are exact expectations over the computed
+mixtures, not Monte Carlo estimates. Width fractions first sum within
+each meter and then average meter ratios. The two-reading budget applies
+separately to each day and pair, including already certified comparisons.
+
+Across 1,074 positive-width public cases, expected realized width improves
+in 14, worsens in 649 and ties in 411. Both target-independent refinements
+in Section~\ref{sec:tie-selection} completed on all 1,074 cases without
+removing the penalty beyond the declared tolerance. This does not imply
+every optimal mixture has identical realized performance. The new theorem
+establishes that adaptation cannot improve the robust mean-width value;
+it does not turn these adverse observed outcomes into an operational benefit.
+The compact solver is therefore an exact risk optimizer, not an empirically
+dominant default acquisition rule.
+

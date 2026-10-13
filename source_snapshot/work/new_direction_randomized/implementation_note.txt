@@ -1,0 +1,7 @@
+Implementation-only correction, before any aggregate outcome was written.
+The first attempted run passed the fixed synthetic checks and reached the
+first positive-width real case, then failed while serializing observed_mask:
+NumPy int64 is not JSON serializable. Convert each mask index to Python int
+before bit shifting. No algorithm, sample, objective, tolerance, comparison,
+protocol or original artifact changed. Rerun the same frozen analysis after
+this serialization correction. The failed attempt wrote no completed result.

@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "scope": "Numerical fresh-versus-frozen forecast comparison, no fitting performed by this checker",
+  "absolute_tolerance": 1e-10,
+  "relative_tolerance": 1e-08,
+  "rows": 2232,
+  "forecast_comparisons": 8928,
+  "nonprediction_columns": "identical",
+  "per_model": {
+    "daily": {
+      "rows": 2232,
+      "max_absolute_difference": 0.0,
+      "max_relative_difference": 0.0
+    },
+    "ridge": {
+      "rows": 2232,
+      "max_absolute_difference": 0.0,
+      "max_relative_difference": 0.0
+    },
+    "hist_gradient_boosting": {
+      "rows": 2232,
+      "max_absolute_difference": 0.0,
+      "max_relative_difference": 0.0
+    },
+    "mlp": {
+      "rows": 2232,
+      "max_absolute_difference": 0.0,
+      "max_relative_difference": 0.0
+    }
+  },
+  "reference_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+  "candidate_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f"
+}

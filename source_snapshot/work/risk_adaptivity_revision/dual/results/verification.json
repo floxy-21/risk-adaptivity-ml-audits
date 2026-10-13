@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-11T23:36:17.952090+00:00",
+  "cases": 80,
+  "scaling_cases": 28,
+  "enumerated_cases": 64,
+  "enumerated_final_sets": 17749,
+  "scaling_cases_independently_enumerated": 12,
+  "max_primal_pricing_absolute_gap": 2.1316282072803006e-14,
+  "max_primal_pricing_normalized_gap": 4.612250360286484e-16,
+  "max_enumeration_primal_normalized_gap": 2.7328566760003855e-16,
+  "max_completed_block_sum_absolute_error": 1.7763568394002505e-15,
+  "max_negative_clip_l1": 0.0,
+  "max_roundoff_excess_removed": 8.881784197001252e-16,
+  "maximum_stationarity_absolute": 1.7763568394002505e-14,
+  "maximum_primal_dual_absolute_gap": 7.105427357601002e-15,
+  "tolerance": {
+    "solver_primal_and_dual_feasibility": 1e-09,
+    "validation": 1e-08,
+    "objective_normalization": "max(1, initial worst-case width)",
+    "block_mass_normalization": "max(1, residual block total)"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "Windows-11-10.0.26100-SP0"
+  },
+  "elapsed_seconds": 32.43187500000931,
+  "source_sha256": {
+    "work/risk_adaptivity_revision/dual/verify_dual.py": "91ead512ed9bd21095ab8d7a6e3e2164c80f7463e5c7a3cacbd8dab80287dad0",
+    "work/risk_adaptivity_revision/dual/dual_certificate.py": "a36909f50781bce6e3c549200ee72137ccb93c8b61ac2bdceef8dd547005e7de",
+    "work/randomized_recovery_root/compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d",
+    "work/new_direction_randomized/randomized_recovery_screen.py": "785629e8ccccb8503907f221d30ee382974af5d4681461d4ce9fbdf45b047d6a",
+    "work/randomized_recovery_root/compact_verification.json": "cdf3cfada40a5db97584682daa2d3551b05e7d9a81d8cf40f3f76ef1761264d0",
+    "work/randomized_scaling_review/instances.json": "b296dfb87fb2c2c52cb5a54aa967a3a01f517b5ca7e4bb598fd258b542830a16"
+  },
+  "output_sha256": {
+    "dual_completions.json": "3c4de18ef91f7aeed86f7ded08ae1ff66e831ee281345a051368a006597f8a07",
+    "summary.csv": "e1a7989c93be3fb09970b3af72b4c31ff340094c6aa997c465782035f0b5f21b"
+  },
+  "scope": "Numerical optimality and hardest-record checks on existing synthetic instances plus declared edge cases. Not new empirical forecast results, formal interval arithmetic, or runtime scaling claims."
+}

@@ -1,0 +1,14 @@
+FROZEN SUPPLEMENT: 2026-10-09 23:44 UTC, before model fitting and outcomes.
+Add a separate external cohort of three BLEM consumers from the authors' public
+QuantLet/BLEM dataset (Energies2019 doi10.3390/en12142718).
+Coverage-only audit: all3 raw counters monotone, precisely180-second samples,
+2016-12-31 23:00UTC to2017-12-31 23:00UTC. Exact hourly endpoint differences,
+integer subtraction before conversion*1e-10 to kWh. No interpolation or endpoint
+tolerance is needed. Rows denote UTC interval start; use full eligible UTC days.
+Fixed split: training before2017-10-01; test2017-10-01 onward. No tuning.
+Same four forecasts and same controlled verification-outage protocol as primary
+cohorts. Totals are sums of exact increments of actual cumulative counters;
+simulated interval removal retains block endpoints. This does not demonstrate
+independence or survival probabilities of different physical telemetry channels.
+Three meters are an external case series, not a representative population sample;
+bootstrap summaries are descriptive and inherently unstable at n=3.

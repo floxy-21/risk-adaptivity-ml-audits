@@ -1,0 +1,79 @@
+RANDOMIZED NONADAPTIVE RECOVERY: FROZEN BOUNDED RESEARCH PROTOCOL
+Frozen 2026-10-10 04:51 UTC, before running new randomized-policy outcomes.
+
+Research only; no manuscript or original scientific outputs may change. This
+test replaces neither the frozen manuscript nor the failed two-step screen.
+The generic minimax game/linear-programming framework is established work;
+the possible contribution is a specialized exact solver and information bound.
+
+Primary data panel: all 31 original public UCI series (30 Portugal and one
+household), every saved test day and all six named pairs of the four original
+frozen forecasts. The original seed 1103 generates one contiguous six-hour
+missing gap per day. Exact six-hour totals; at most two paid readings per DAY
+and MODEL PAIR. No other budgets, gaps, seeds, consumers or tolerances will be
+selected after outcomes. No model fitting or hyperparameter search occurs.
+
+Information: every saved same-meter test forecast row is available, including
+within-test-period next-day daily-persistence copies. Apply every documented
+direct copy and all exact singleton/zero-residual deductions before recovery.
+The mask generator and archive lookup are unchanged. Hidden truth is allowed
+only to form the prescribed retained measurements, answer selected queries,
+and evaluate the fixed distributions afterwards. All policies receive the
+same closed observations, totals, candidates and batch-size budget. Include
+all fully reconstructed/zero-width cases as zeros rather than selecting only
+states where recovery helps. Report unconditional and initially positive-width
+conditional results, by meter, cohort and named pair.
+
+Objective: nature chooses the missing completion before a random nonadaptive
+batch is drawn; nature observes the distribution but not its realized draw.
+For retained set R_g in block g, realized width is
+  sum_g range(c_Rg) * sum_{i in Rg} y_i,
+with empty/singleton ranges zero and c_i=2*(forecast_b-forecast_a)/24.
+Thus the sharp worst EXPECTED width of distribution p is
+  sum_g E_g * max_i sum_Q p_Q 1{i retained by Q} range(c_Rg(Q)).
+Minimize this quantity over distributions on batches with at most two queries.
+This differs from a pathwise guarantee and from an adversary seeing the draw.
+
+Implementation: enumerate all feasible batches for these small blocks and
+solve their finite LP. Queries that recover an already known coordinate or
+every coordinate of an exact-total block are excluded; the last coordinate
+is free. All policy selection accepts only block coefficients and residual
+totals, never hidden targets. The primary comparator is the existing exact
+deterministic minimax batch. Also report the existing strong one-step greedy
+width batch. No duplicated multi-pair query-cost baseline is used.
+
+Report exact finite-distribution expected realized width at the saved truth,
+expected query count, worst expected width and reference-correct expected
+certificate coverage. No Monte Carlo draws, best random seed, or favorable
+support realization is selected. Every conditional bound remains valid when
+its drawn batch is used, but expectation improvement need not improve the
+realized width or certification rate at every fixed truth.
+
+Numerics: scale each nonzero LP by its initial total width. Record the primal
+distribution, group envelope variables, dual weights, objective, equality and
+inequality residuals, dual feasibility and gap, and deterministic comparison
+for every solved state. Retain the complete support, not a sampled policy.
+Check finite-distribution realized width against summed posterior widths and
+verify reference enclosure/correct certificate for every positive-mass batch.
+Require randomized worst expected width <= deterministic exact <= greedy,
+up to explicitly reported numerical tolerances. Record any failed check; do
+not tune a solver tolerance to improve scientific outcomes.
+
+Specialized dual pricing check: for every nontrivial real LP, compare a block
+endpoint/cheapest-interior plus global budget DP oracle against all enumerated
+batches under its optimal nonnegative dual weights. Independently verify the
+same oracle on 64 fixed synthetic states from seed 1729 (one to three blocks,
+each two to six coordinates; budgets zero to four), using arbitrary nonnegative
+dual weights. These are correctness checks, not evidence of practical gains.
+Also include the analytic one-block coefficients (0,1,3,4), total 1, budget 2:
+deterministic optimum 1, randomized optimum 1/2. No synthetic example is used
+to select real cases, budget or cohort.
+
+Evidence interpretation: descriptive finite-panel outcome, not external
+validation, measured retrieval economics, operational outage prevalence or
+acceptance probability. The same archive problem may leave very little paid
+recovery opportunity. Negative or modest results remain in the report.
+
+All new files remain under work/new_direction_randomized. Preserve hashes of
+the original prediction CSV, summary, recovery code, archive helpers, corrected
+period outputs, and manuscript before/after this single run.

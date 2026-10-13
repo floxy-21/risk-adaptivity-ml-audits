@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-10-10T01:04:33.648272+00:00",
+  "rows": 89496,
+  "meters": 34,
+  "models": [
+    "daily",
+    "ridge",
+    "hist_gradient_boosting",
+    "mlp"
+  ],
+  "predicted_unit": "hourly kWh",
+  "raw_targets_included": false,
+  "numeric_ranges": {
+    "truth_kwh": {
+      "min": 0.0,
+      "max": 507.0093457943925
+    },
+    "daily": {
+      "min": 0.0,
+      "max": 507.0093457943925
+    },
+    "ridge": {
+      "min": 0.0,
+      "max": 477.2733779319096
+    },
+    "hist_gradient_boosting": {
+      "min": 0.0511979546550761,
+      "max": 464.58072590738686
+    },
+    "mlp": {
+      "min": 0.0,
+      "max": 463.1718746698119
+    }
+  },
+  "blem_daily_persistence_omitted": true,
+  "omitted_daily_rows": 6552,
+  "issue_time_semantics": "Simulated historical day-start feature cutoff, not an originally logged vendor issue time",
+  "timezone_semantics": "BLEM UTC; Portugal and household retain provider-local naive clocks and documented DST exclusions",
+  "omission_reason": "Daily persistence would copy the previous day of BLEM measurements. Omit that column for BLEM rather than directly redistribute observations. This does not establish broader dataset licensing rights.",
+  "regeneration": "Download original sources and run run_energy_rank_study.py, then export_frozen_forecasts.py",
+  "script_sha256": "2f8c2bef2432be6922a3ddc0df67bf79decfe9f3ff48dad2c7fbb9df9593d842",
+  "source_hashes": {
+    "study_summary.json": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196",
+    "study_predictions.csv": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6"
+  },
+  "output_sha256": "ac6e2ce45745d92c5c51060fd58b768ac5711c633ae37a6576afae3797d5a2c0"
+}

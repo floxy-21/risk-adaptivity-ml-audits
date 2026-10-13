@@ -1,0 +1,140 @@
+{
+  "original_sources": [
+    {
+      "name": "USC00010140.csv",
+      "url": "https://www.ncei.noaa.gov/data/coop-hourly-precipitation/v2/access/USC00010140.csv",
+      "sha256": "acc9ae944c00b783061613c6fd2cb50ec3d547ef7b013df8383dca259ec85cb8",
+      "bytes": 12564597,
+      "distributed_excerpt": "hourly_source_excerpt.csv",
+      "excerpt_rows": 54
+    },
+    {
+      "name": "USC00010140.15m.csv",
+      "url": "https://www.ncei.noaa.gov/pub/data/hpd/auto/v2/beta/15min/all_csv/USC00010140.15m.csv",
+      "sha256": "a1f4645ff8f52b2bc1dc4ea9f9e9e37c826e8a0a3879dddc31953365adc18237",
+      "bytes": 19481948,
+      "distributed_excerpt": "quarter_hour_source_excerpt.csv",
+      "excerpt_rows": 27
+    }
+  ],
+  "distributed_files": {
+    "protocol.txt": {
+      "sha256": "6c02e2fd3d186c879c1be80dce771d02a32d1f39366d624b71dcd7e909c95114",
+      "bytes": 4707
+    },
+    "sensitivity_amendment.txt": {
+      "sha256": "05528b5659e8e5f488731147adf07fbc178478ccc7e9ef85b8ffca39957dd12a",
+      "bytes": 616
+    },
+    "implementation_note.txt": {
+      "sha256": "431dc6072200173109d8b86d7a85982eaf4f62126a59eb2680ba8ac3846718d6",
+      "bytes": 1125
+    },
+    "build_panel.py": {
+      "sha256": "434fc862a3995e0e36ee17b4a3b58186c73613d4506af6e83ca5191e5901e110",
+      "bytes": 11134
+    },
+    "summarize_panel.py": {
+      "sha256": "26611d794e960ad6701d7ff3309a5a5ccd1b34ca6fab10eb2aebaeb7ed5911ff",
+      "bytes": 6014
+    },
+    "reproduce_extracted_panel.py": {
+      "sha256": "7c6660bfde7126a885d2fc390be49583f61531e62dba06f06fc547b226c7e225",
+      "bytes": 3557
+    },
+    "export_lightweight.py": {
+      "sha256": "8f3f0ba848a40b733e65fc335f7252f86155ea8ae0cfe20c470e9ce4be704edf",
+      "bytes": 3391
+    },
+    "observation_panel.json": {
+      "sha256": "36ee94939e45cbb3795c297bbce698936e0ef6ce28f6ae3d1565c73c09b0e532",
+      "bytes": 193846
+    },
+    "forecast_panel.json": {
+      "sha256": "067fb4ad74fbd11bb09bf49e5165f2af573cc06f42eee21062137c0a4d057a9c",
+      "bytes": 1667106
+    },
+    "panel_result.json": {
+      "sha256": "f805aa803f629c0b52d7cbbf3fa2994f11e48fde7b8053d92d8b03124f20fb08",
+      "bytes": 75984
+    },
+    "panel_summary.json": {
+      "sha256": "a4ef3f1272e4a7bcdd28cbbe2f898d4363db9216a33f9f5bcbf0d028cb7a6360",
+      "bytes": 6269
+    },
+    "panel_comparisons.csv": {
+      "sha256": "de59894754f65600df0d0dcf816320387c404d83d26f51525a0566a0f4c610fc",
+      "bytes": 11706
+    },
+    "forecast_values.csv": {
+      "sha256": "207823053307f51d6b299dc9c8d78daad0d04019674c9dc46fd71848c272d953",
+      "bytes": 199861
+    },
+    "hourly_source_excerpt.csv": {
+      "sha256": "4c5f5198d8c164d3e10cd127b2450f8c385d794b035c28c1bb49c5b0627c8b68",
+      "bytes": 19265
+    },
+    "quarter_hour_source_excerpt.csv": {
+      "sha256": "00bc1a16dd6f8de38b0f18349f4a7fd3c9e1cd401fc591e9b0c855192f00801b",
+      "bytes": 35393
+    },
+    "public_source_search.json": {
+      "sha256": "6a7f584d8597bc55ba7923fc28f0e181b4f4795e1c8c3f22c2fb8d1673360f23",
+      "bytes": 3073
+    },
+    "readme.csv.txt": {
+      "sha256": "03d014d8b71f99e4b429ea6036de55fee02e58e7d0fd10e98187ea748297aeaa",
+      "bytes": 18793
+    },
+    "readme.15min.txt": {
+      "sha256": "c760fb981564faee31cdbefbcfa1bc592b6b7341c87110a530b7fc585367ad70",
+      "bytes": 15157
+    },
+    "lightweight_reproduction.json": {
+      "sha256": "62fb28d8d88247232805979db6cacfcf92d3b9c7f4d699099aa449ecd8a35557",
+      "bytes": 847
+    },
+    "README.txt": {
+      "sha256": "8ae06ce9d710c3a40a09d68314f35265496658e41e399d74738ae068a3b4c683",
+      "bytes": 3548
+    },
+    "independent_observation_review.py": {
+      "sha256": "bcd9ceb3cf2d67948fef0ccced0b5c42b992411ff0f1d2bde7b9296f5f5dafcc",
+      "bytes": 6240
+    },
+    "independent_observation_review.json": {
+      "sha256": "00c93b31a8874e754905714670568e9a7ee8fde878796bb5b07ec5e36bd99ff9",
+      "bytes": 9373
+    },
+    "independent_forecast_review.py": {
+      "sha256": "75d508d18e9771027a8a9e98e0fdef242504ceb6f4c0aecca9bea100a855b2e7",
+      "bytes": 10242
+    },
+    "independent_forecast_review.json": {
+      "sha256": "e94c082dc6e588082adf54408c876ac9e13c7498aa33d3d5519e1a6f2fc16d47",
+      "bytes": 8846
+    },
+    "independent_grib_headers.jsonl": {
+      "sha256": "48939ad990e24cb7c41307a4f39003255cd6a2250196e796522fefbd2715e348",
+      "bytes": 1521143
+    },
+    "manuscript_fragment.tex": {
+      "sha256": "236defa2cc0b6940286d96b68920ae56f78c1ad909d79bf790d4b7c07f9ce18a",
+      "bytes": 7467
+    },
+    "bibitems.txt": {
+      "sha256": "fe3909854eebecc29a13d27e35af1a8c39514b82ee40a9152f04c6f5a04c72ec",
+      "bytes": 1167
+    }
+  },
+  "not_distributed": [
+    "gefs_cache/",
+    "python_deps/",
+    "entire multidecade station CSVs",
+    "sourcePDFs"
+  ],
+  "scope": "Small extracted records and all forecastdecode/provenance metadata. Reproduce numerical results from excerpts withoutnetwork/dependencies. Optional full download/decode needs ecCodes and NumPy plus original observation sources. Local independent source audit may require original files; inspect its statedscope.",
+  "gefs_source": "https://noaa-gefs-retrospective.s3.amazonaws.com/",
+  "gefs_range_objects": 260,
+  "gefs_grib_messages": 2080
+}

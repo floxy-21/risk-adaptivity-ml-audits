@@ -1,0 +1,322 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-10T05:08:31.967821+00:00",
+  "independent_of_builder_import": true,
+  "source_hashes": {
+    "protocol.txt": "6c02e2fd3d186c879c1be80dce771d02a32d1f39366d624b71dcd7e909c95114",
+    "observation_panel.json": "36ee94939e45cbb3795c297bbce698936e0ef6ce28f6ae3d1565c73c09b0e532",
+    "USC00010140.csv": "acc9ae944c00b783061613c6fd2cb50ec3d547ef7b013df8383dca259ec85cb8",
+    "USC00010140.15m.csv": "a1f4645ff8f52b2bc1dc4ea9f9e9e37c826e8a0a3879dddc31953365adc18237",
+    "station_inventory.csv": "c6ef86880b4028bbcb32a3840d36cf50deb28f2045300df75eee38c71affe69f",
+    "readme.csv.txt": "03d014d8b71f99e4b429ea6036de55fee02e58e7d0fd10e98187ea748297aeaa",
+    "readme.15min.txt": "c760fb981564faee31cdbefbcfa1bc592b6b7341c87110a530b7fc585367ad70",
+    "public_source_search.json": "6a7f584d8597bc55ba7923fc28f0e181b4f4795e1c8c3f22c2fb8d1673360f23"
+  },
+  "station": {
+    "StnID": "USC00010140",
+    "Lat": "32.2322",
+    "Lon": "-87.4104",
+    "Elev": "53.3",
+    "State/Province": "AL",
+    "Name": "ALBERTA",
+    "WMO_ID": "",
+    "Sample_Interval (min)": "15",
+    "UTC_Offset": "-6",
+    "POR_Date_Range": "19630926-20260902",
+    "PCT_POR_Good": " 94.8%",
+    "Last_Half_POR": "19950315-20260902",
+    "PCT_Last_Half_Good": " 92.5%",
+    "Last_Qtr_POR": "20101208-20260902",
+    "PCT_Last_Qtr_Good": " 91.1%"
+  },
+  "natural_days": 9,
+  "complete_controls": 43,
+  "all_calendar_dates": 61,
+  "exclusions": [
+    {
+      "date": "2008-12-15",
+      "reason": "absent daily row"
+    },
+    {
+      "date": "2008-12-16",
+      "reason": "present but incomplete or flagged"
+    },
+    {
+      "date": "2008-12-21",
+      "reason": "absent daily row"
+    },
+    {
+      "date": "2008-12-22",
+      "reason": "absent daily row"
+    },
+    {
+      "date": "2008-12-23",
+      "reason": "absent daily row"
+    },
+    {
+      "date": "2008-12-24",
+      "reason": "absent daily row"
+    },
+    {
+      "date": "2008-12-25",
+      "reason": "absent daily row"
+    },
+    {
+      "date": "2008-12-26",
+      "reason": "absent daily row"
+    },
+    {
+      "date": "2008-12-27",
+      "reason": "present but incomplete or flagged"
+    }
+  ],
+  "control_measurement_flags": {
+    "g": 2,
+    "Z": 1029,
+    "": 1
+  },
+  "positive_controls": [],
+  "natural_cases": [
+    {
+      "date": "2008-12-05",
+      "kind": "natural_accumulation",
+      "record_total_raw": 50,
+      "record_total_mm": 12.7,
+      "dlysum_used": false,
+      "alternate_15m": {
+        "row_present": true,
+        "source_day": "2008-12-05",
+        "known_zero_quarters": [
+          "0000",
+          "0015",
+          "0030"
+        ],
+        "unknown_quarters_per_three_hour_bin": [
+          9,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "accumulated_start": "00:45 LST",
+        "accumulated_end": "24:00 LST",
+        "accumulated_total_raw": 50,
+        "all_three_hour_targets_still_unresolved": true,
+        "projection_onto_three_hour_targets_unchanged": true
+      }
+    },
+    {
+      "date": "2008-12-10",
+      "kind": "natural_accumulation",
+      "record_total_raw": 50,
+      "record_total_mm": 12.7,
+      "dlysum_used": false,
+      "alternate_15m": {
+        "row_present": true,
+        "source_day": "2008-12-10",
+        "known_zero_quarters": [
+          "0000",
+          "0015",
+          "0030"
+        ],
+        "unknown_quarters_per_three_hour_bin": [
+          9,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "accumulated_start": "00:45 LST",
+        "accumulated_end": "24:00 LST",
+        "accumulated_total_raw": 50,
+        "all_three_hour_targets_still_unresolved": true,
+        "projection_onto_three_hour_targets_unchanged": true
+      }
+    },
+    {
+      "date": "2008-12-11",
+      "kind": "natural_accumulation",
+      "record_total_raw": 130,
+      "record_total_mm": 33.02,
+      "dlysum_used": false,
+      "alternate_15m": {
+        "row_present": true,
+        "source_day": "2008-12-11",
+        "known_zero_quarters": [
+          "0000",
+          "0015",
+          "0030"
+        ],
+        "unknown_quarters_per_three_hour_bin": [
+          9,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "accumulated_start": "00:45 LST",
+        "accumulated_end": "24:00 LST",
+        "accumulated_total_raw": 130,
+        "all_three_hour_targets_still_unresolved": true,
+        "projection_onto_three_hour_targets_unchanged": true
+      }
+    },
+    {
+      "date": "2008-12-17",
+      "kind": "natural_accumulation",
+      "record_total_raw": 20,
+      "record_total_mm": 5.08,
+      "dlysum_used": false,
+      "alternate_15m": {
+        "row_present": true,
+        "source_day": "2008-12-17",
+        "known_zero_quarters": [
+          "0000",
+          "0015",
+          "0030"
+        ],
+        "unknown_quarters_per_three_hour_bin": [
+          9,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "accumulated_start": "00:45 LST",
+        "accumulated_end": "24:00 LST",
+        "accumulated_total_raw": 20,
+        "all_three_hour_targets_still_unresolved": true,
+        "projection_onto_three_hour_targets_unchanged": true
+      }
+    },
+    {
+      "date": "2008-12-28",
+      "kind": "natural_accumulation",
+      "record_total_raw": 20,
+      "record_total_mm": 5.08,
+      "dlysum_used": false,
+      "alternate_15m": {
+        "row_present": true,
+        "source_day": "2008-12-28",
+        "known_zero_quarters": [
+          "0000",
+          "0015",
+          "0030"
+        ],
+        "unknown_quarters_per_three_hour_bin": [
+          9,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "accumulated_start": "00:45 LST",
+        "accumulated_end": "24:00 LST",
+        "accumulated_total_raw": 20,
+        "all_three_hour_targets_still_unresolved": true,
+        "projection_onto_three_hour_targets_unchanged": true
+      }
+    },
+    {
+      "date": "2008-12-29",
+      "kind": "natural_accumulation",
+      "record_total_raw": 20,
+      "record_total_mm": 5.08,
+      "dlysum_used": false,
+      "alternate_15m": {
+        "row_present": true,
+        "source_day": "2008-12-29",
+        "known_zero_quarters": [
+          "0000",
+          "0015",
+          "0030"
+        ],
+        "unknown_quarters_per_three_hour_bin": [
+          9,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "accumulated_start": "00:45 LST",
+        "accumulated_end": "24:00 LST",
+        "accumulated_total_raw": 20,
+        "all_three_hour_targets_still_unresolved": true,
+        "projection_onto_three_hour_targets_unchanged": true
+      }
+    },
+    {
+      "date": "2009-06-05",
+      "kind": "natural_accumulation",
+      "record_total_raw": 31,
+      "record_total_mm": 7.8740000000000006,
+      "dlysum_used": false,
+      "alternate_15m": {
+        "row_present": false,
+        "source_day": "2009-06-05",
+        "all_three_hour_targets_still_unresolved": true,
+        "projection_onto_three_hour_targets_unchanged": true
+      }
+    },
+    {
+      "date": "2009-06-14",
+      "kind": "natural_accumulation",
+      "record_total_raw": 6,
+      "record_total_mm": 1.524,
+      "dlysum_used": false,
+      "alternate_15m": {
+        "row_present": false,
+        "source_day": "2009-06-14",
+        "all_three_hour_targets_still_unresolved": true,
+        "projection_onto_three_hour_targets_unchanged": true
+      }
+    },
+    {
+      "date": "2009-06-24",
+      "kind": "natural_accumulation",
+      "record_total_raw": 38,
+      "record_total_mm": 9.652000000000001,
+      "dlysum_used": false,
+      "alternate_15m": {
+        "row_present": false,
+        "source_day": "2009-06-24",
+        "all_three_hour_targets_still_unresolved": true,
+        "projection_onto_three_hour_targets_unchanged": true
+      }
+    }
+  ],
+  "raw_monthly_sources": [
+    {
+      "file": "hpd_200812.csv",
+      "sha256": "4392b964b306d79dc3ae9d75670510b3f25ef5dbdafab9e7bab21d1ef29cae7b",
+      "rows": 2976,
+      "station010140_rows": 0
+    },
+    {
+      "file": "hpd_200906.csv",
+      "sha256": "c7cec5b1e252620fb042f473dcfb4ac7adf62214a970018754af2f7db98b22b4",
+      "rows": 2154,
+      "station010140_rows": 0
+    }
+  ],
+  "closure_reason": "Every three-hour bin still has at least one unconstrained nonnegative quarter-hour component. Any nonnegative three-hour allocation summing to the recorded total extends to the observed initial zeros and the finer accumulation, so projection remains the same simplex.",
+  "scope": "Closure covers the explicitly inspected NOAA hourly, parallel 15-minute and available monthly raw digital sources. It does not prove no other archive exists. Recorded-total allocation is not a deterministic physical-rain measurement guarantee."
+}

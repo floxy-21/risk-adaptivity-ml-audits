@@ -1,0 +1,259 @@
+{
+  "scope": "constructed algorithmic boundary, not dataset performance or a certification advantage claim",
+  "completed_utc": "2026-10-10T02:21:23.767393+00:00",
+  "python_version": "3.12.14",
+  "tests_run": 3,
+  "all_passed": true,
+  "independent_oracle": "All 16 query subsets of size at most two; direct paired MSE at feasible simplex vertices after zero query answers",
+  "source_hashes": {
+    "study_greedy_boundary.py": "2578aa771048b1d1842d03d24767b947d66c43aa9b99c8eebd1e2d96b4d9b724",
+    "study_recovery.py": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241"
+  },
+  "bruteforce_checked": {
+    "instances": 6,
+    "epsilon_values": [
+      0.0,
+      0.4,
+      0.1,
+      0.01,
+      0.001,
+      1.52587890625e-05
+    ],
+    "query_subsets_per_instance": 16,
+    "query_subsets_total": 96,
+    "simplex_vertices_per_instance": 55,
+    "simplex_vertices_total": 330
+  },
+  "cases": [
+    {
+      "epsilon": 0.0,
+      "coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "budget": 2,
+      "energy": 3.0,
+      "forecast_a": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "forecast_b": [
+        0.0,
+        0.0,
+        0.0,
+        2.5,
+        2.5
+      ],
+      "initial_direct_loss_interval": [
+        -2.5,
+        0.5
+      ],
+      "greedy_queries_zero_based": [
+        0,
+        1
+      ],
+      "exact_queries_zero_based": [
+        3,
+        4
+      ],
+      "initial_width": 3.0,
+      "greedy_width": 3.0,
+      "exact_width": 0.0,
+      "direct_loss_greedy_width": 3.0,
+      "direct_loss_exact_width": 0.0,
+      "greedy_to_optimal_reduction_ratio": 0.0,
+      "greedy_to_optimal_residual_ratio": null,
+      "residual_ratio_note": "undefined when optimal width is zero"
+    },
+    {
+      "epsilon": 0.4,
+      "coefficients": [
+        0.0,
+        0.2,
+        0.4,
+        1.0,
+        1.0
+      ],
+      "budget": 2,
+      "energy": 3.0,
+      "forecast_a": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "forecast_b": [
+        0.0,
+        0.5,
+        1.0,
+        2.5,
+        2.5
+      ],
+      "initial_direct_loss_interval": [
+        -2.75,
+        0.25
+      ],
+      "greedy_queries_zero_based": [
+        0,
+        1
+      ],
+      "exact_queries_zero_based": [
+        3,
+        4
+      ],
+      "initial_width": 3.0,
+      "greedy_width": 1.7999999999999998,
+      "exact_width": 1.2000000000000002,
+      "direct_loss_greedy_width": 1.8,
+      "direct_loss_exact_width": 1.2,
+      "greedy_to_optimal_reduction_ratio": 0.6666666666666669,
+      "greedy_to_optimal_residual_ratio": 1.4999999999999996,
+      "residual_ratio_note": "positive optimum"
+    },
+    {
+      "epsilon": 0.1,
+      "coefficients": [
+        0.0,
+        0.05,
+        0.1,
+        1.0,
+        1.0
+      ],
+      "budget": 2,
+      "energy": 3.0,
+      "forecast_a": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "forecast_b": [
+        0.0,
+        0.125,
+        0.25,
+        2.5,
+        2.5
+      ],
+      "initial_direct_loss_interval": [
+        -2.515625,
+        0.484375
+      ],
+      "greedy_queries_zero_based": [
+        0,
+        1
+      ],
+      "exact_queries_zero_based": [
+        3,
+        4
+      ],
+      "initial_width": 3.0,
+      "greedy_width": 2.7,
+      "exact_width": 0.30000000000000004,
+      "direct_loss_greedy_width": 2.7,
+      "direct_loss_exact_width": 0.2999999999999998,
+      "greedy_to_optimal_reduction_ratio": 0.11111111111111104,
+      "greedy_to_optimal_residual_ratio": 9.0,
+      "residual_ratio_note": "positive optimum"
+    },
+    {
+      "epsilon": 0.01,
+      "coefficients": [
+        0.0,
+        0.005,
+        0.01,
+        1.0,
+        1.0
+      ],
+      "budget": 2,
+      "energy": 3.0,
+      "forecast_a": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "forecast_b": [
+        0.0,
+        0.0125,
+        0.025,
+        2.5,
+        2.5
+      ],
+      "initial_direct_loss_interval": [
+        -2.50015625,
+        0.49984375
+      ],
+      "greedy_queries_zero_based": [
+        0,
+        1
+      ],
+      "exact_queries_zero_based": [
+        3,
+        4
+      ],
+      "initial_width": 3.0,
+      "greedy_width": 2.9699999999999998,
+      "exact_width": 0.03,
+      "direct_loss_greedy_width": 2.97,
+      "direct_loss_exact_width": 0.029999999999999805,
+      "greedy_to_optimal_reduction_ratio": 0.010101010101010183,
+      "greedy_to_optimal_residual_ratio": 99.0,
+      "residual_ratio_note": "positive optimum"
+    },
+    {
+      "epsilon": 0.001,
+      "coefficients": [
+        0.0,
+        0.0005,
+        0.001,
+        1.0,
+        1.0
+      ],
+      "budget": 2,
+      "energy": 3.0,
+      "forecast_a": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "forecast_b": [
+        0.0,
+        0.00125,
+        0.0025,
+        2.5,
+        2.5
+      ],
+      "initial_direct_loss_interval": [
+        -2.5000015625,
+        0.49999843750000006
+      ],
+      "greedy_queries_zero_based": [
+        0,
+        1
+      ],
+      "exact_queries_zero_based": [
+        3,
+        4
+      ],
+      "initial_width": 3.0,
+      "greedy_width": 2.997,
+      "exact_width": 0.003,
+      "direct_loss_greedy_width": 2.997,
+      "direct_loss_exact_width": 0.0030000000000001137,
+      "greedy_to_optimal_reduction_ratio": 0.001001001001001039,
+      "greedy_to_optimal_residual_ratio": 998.9999999999999,
+      "residual_ratio_note": "positive optimum"
+    }
+  ]
+}

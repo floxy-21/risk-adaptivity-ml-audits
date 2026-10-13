@@ -1,0 +1,218 @@
+% Integration fragment: uses the main manuscript's proposition/proof environments.
+% Place after deterministic adaptive recovery; replace its short randomized example.
+% Requires bibliography keys kawase2024 and mastin2015 (see bibitem_suggestions.tex).
+\section{Randomized Recovery under a Hard Budget}
+\label{sec:randomized-recovery}
+
+Randomization permits a different guarantee from deterministic minimax
+recovery. We retain exact disjoint totals, nonnegative uncapped targets,
+unit query costs, and one fixed forecast contrast. All information and
+deterministic deductions available before recovery are incorporated first.
+Remove zero-energy, singleton, and constant-coefficient blocks, whose width
+is already zero. Index the remaining blocks by $g=1,\ldots,G$.
+If none remain, the optimal width is zero and no query is needed.
+Let $\mathcal Q_B$ contain batches with at most $B$ queries in total and
+at most $m_g-1$ in block $g$; querying its final coordinate is redundant.
+A policy selects $Q\sim\pi$ before reading its answers. The hidden record
+$y\in\F$ is fixed before this random draw: the adverse completion may
+depend on $\pi$, but cannot depend on the realized batch.
+
+\subsection{Expected width and an exact finite linear program}
+Write $S_g(Q)=\M_g\setminus Q$, let $d_g(S)$ denote the coefficient range
+on $S$, and set $d_g(S)=0$ for a singleton or empty set. Define
+$v_{gi}(Q)=\boldsymbol{1}\{i\in S_g(Q)\}d_g(S_g(Q))$.
+Equation~\eqref{eq:querywidth} gives
+\begin{equation}
+ W(Q,y)=\sum_g\sum_{i\in\M_g}y_i v_{gi}(Q),\qquad
+ R_B=\min_{\pi\in\Delta(\mathcal Q_B)}\sup_{y\in\F}
+       \mathbb E_{Q\sim\pi}W(Q,y).
+ \label{eq:random-objective}
+\end{equation}
+Here $\Delta(\mathcal Q_B)$ is the set of distributions over admissible
+batches. The budget holds for every draw, rather than only in expectation.
+The coefficients $c_i$ already include the MSE normalization in
+\eqref{eq:linear}.
+
+\begin{proposition}[Finite characterization]
+\label{prop:random-finite}
+For every batch distribution,
+\begin{equation}
+ \sup_{y\in\F}\mathbb E_\pi W(Q,y)
+ =\sum_g E_g\max_{i\in\M_g}\mathbb E_\pi v_{gi}(Q).
+ \label{eq:random-value}
+\end{equation}
+Consequently $R_B$ is the value of the primal and dual programs
+\begin{equation}
+ \begin{aligned}
+ \min_{\pi,t}\quad &\sum_g E_g t_g,\\
+ \text{subject to}\quad
+ &\sum_Q\pi_Qv_{gi}(Q)\leq t_g\quad(g,i),\qquad
+   \sum_Q\pi_Q=1,\quad\pi_Q\geq0;
+ \end{aligned}
+ \label{eq:random-primal}
+\end{equation}
+\begin{equation}
+ \begin{aligned}
+ \max_{w,\eta}\quad &\eta,\\
+ \text{subject to}\quad
+ &\eta\leq\sum_g\sum_i w_{gi}v_{gi}(Q)\quad(Q\in\mathcal Q_B),\\
+ &\sum_i w_{gi}=E_g,\quad w_{gi}\geq0.
+ \end{aligned}
+ \label{eq:random-dual}
+\end{equation}
+The variables $t_g$ and $\eta$ are free; the primal inequalities imply
+$t_g\geq0$.
+\end{proposition}
+\begin{proof}
+Interchanging finite sums makes the expected width linear in each
+block's target vector. Its maximum over a nonnegative simplex of mass
+$E_g$ places that mass on a largest expected coefficient. The blocks are
+independent, proving \eqref{eq:random-value}. Introducing their maxima
+gives the primal. Linear-programming duality gives the stated dual;
+the primal is feasible and has a finite optimum.
+\end{proof}
+
+Mixed-strategy robust optimization and dual separation are established
+methods. Kawase and Sumita provide a general framework based on weighted
+scenario optimization \cite{kawase2024}; Mastin, Jaillet, and Chin study
+randomized minmax regret and improvements over deterministic strategies
+\cite{mastin2015}. The specialization here is the conditional-width
+geometry, the exact coordinate-recovery oracle and compact formulation
+below, and the sharp comparison with deterministic adaptive recovery.
+
+\subsection{An exact pricing oracle}
+To separate \eqref{eq:random-dual}, minimize
+$\sum_{g,i}w_{gi}v_{gi}(Q)$ over admissible batches. Within a block, order
+coefficients increasingly, breaking ties by original coordinate index.
+For local budget $k$, put $r=m_g-k$. If $r\geq2$, fix the first and last
+retained positions $l<u$, with $u-l+1\geq r$. The least cost for these
+endpoints is
+\begin{equation}
+ (c_{g,(u)}-c_{g,(l)})
+ \left(w_{g,(l)}+w_{g,(u)}+
+       \sum_{i\in T_{g,l,u,r}}w_{g,(i)}\right),
+ \label{eq:random-pricing}
+\end{equation}
+where $T_{g,l,u,r}$ contains the $r-2$ smallest interior weights.
+Every retained subset has such endpoints; once they are fixed, its range
+is fixed and these interior choices minimize its nonnegative weighted
+cost. Enumerate the endpoints, assign cost zero when $r=1$, and apply
+the budget-allocation recurrence across blocks. This supplies exact
+polynomial-time separation for rational input. Unlike deterministic
+minimum-range recovery, an optimal weighted retained set need not be
+a consecutive coefficient window.
+
+\subsection{A compact program and an executable batch distribution}
+The following formulation avoids a variable for every possible batch.
+Set $q=\min(B,\sum_g(m_g-1))$. Any smaller batch can be padded to $q$
+queries without widening its conditional interval for any record, so
+requiring exactly $q$ loses no optimality for this objective.
+The case $B=0$ is obtained directly from the original width formula.
+
+Construct a directed acyclic graph with nodes $(g,b)$ for completed
+blocks $0\leq g\leq G$ and budgets $0\leq b\leq q$. For each admissible
+$k$ and endpoint pair $(l,u)$ of a retained set of size $r=m_g-k\geq2$,
+create an edge $e=(g,b,k,l,u)$ from $(g-1,b)$ to $(g,b+k)$.
+For $r=1$, use a single canonical zero-width edge. Impose nonnegative
+unit flow $p_e$ from $(0,0)$ to $(G,q)$, with conservation at all other
+nodes. Impossible nodes and edges may be omitted.
+
+For an endpoint edge, introduce interior joint inclusion masses satisfying
+\begin{equation}
+ 0\leq z_{ei}\leq p_e\quad(l<i<u),\qquad
+ \sum_{l<i<u}z_{ei}=(r-2)p_e.
+ \label{eq:random-hypersimplex}
+\end{equation}
+Its endpoint inclusion masses are $p_e$; interior inclusion masses are
+$z_{ei}$, and all others are zero. Denote these by $\alpha_{ei}$ and
+put $d_e=c_{g,(u)}-c_{g,(l)}$. Zero-width edges contribute zero.
+The compact program minimizes $\sum_gE_gt_g$ subject to the flow
+constraints, \eqref{eq:random-hypersimplex}, and
+\begin{equation}
+ \sum_{e\text{ for block }g}d_e\alpha_{ei}\leq t_g
+ \quad(g,i).
+ \label{eq:random-compact}
+\end{equation}
+
+\begin{proposition}[Exact compact representation]
+\label{prop:random-compact}
+This program has value $R_B$ and yields an attaining distribution with
+at most $B$ queries in every batch. For $B\geq1$, a safe unpruned bound
+on its numbers of variables and constraints is
+$O(B\sum_g\min(B,m_g)m_g^3)$.
+For one block with a fixed local budget, only $O(m_g^3)$ variables are needed.
+\end{proposition}
+\begin{proof}
+A distribution over batches induces flows along their budget paths and
+the corresponding endpoint and interior inclusion masses, satisfying
+all constraints. Conversely, a nonnegative unit flow on an acyclic graph
+decomposes into source-to-sink paths. For any edge with $p_e>0$,
+the vector $(z_{ei}/p_e)_{l<i<u}$ belongs to
+$\{x\in[0,1]^{u-l-1}:\sum_i x_i=r-2\}$. This hypersimplex is the convex
+hull of the indicators of its $(r-2)$-element subsets. To see integrality,
+any nonintegral feasible vector has at least two fractional entries;
+opposite small perturbations of those entries express it as the midpoint
+of two distinct feasible vectors, so it is not a vertex.
+Thus each positive-flow edge admits a distribution of legal interiors.
+Sample a flow path and, conditionally on each selected edge, such an
+interior subset. Every resulting batch uses exactly $q$ queries and
+has the coordinate coefficients in \eqref{eq:random-compact}. Hence
+the two formulations attain the same objective. There are $O(B)$ budget
+layers per block, $O(\min(B,m_g))$ local budget choices, $O(m_g^2)$
+endpoint choices, and $O(m_g)$ interior variables per endpoint edge,
+giving the bound.
+\end{proof}
+
+The decomposition is constructive: sample outgoing edges proportionally
+to their flows and sample a fixed-cardinality subset with the conditional
+interior marginals. For the latter, cumulative marginal intervals and a
+uniform offset in $[0,1)$ give systematic sampling with the required
+cardinality and marginal probabilities. Preserve the original coordinate
+indices when returning the queried complements. The implementation reports
+floating-point feasibility and marginal repairs; its numerical solution
+is not an outward-rounded proof certificate.
+
+\subsection{A sharp separation from deterministic adaptive recovery}
+\begin{proposition}[One-block randomization gap]
+\label{prop:random-gap}
+For one exact-total block with $E>0$, $m$ missing coordinates, and
+$0\leq B\leq m-2$, put $r=m-B$ and
+$h=\min_{|S|=r}d(S)$. Let $D_B=Eh$ be its optimal deterministic
+worst-case width, which also equals the optimum over deterministic
+adaptive policies. Then
+\begin{equation}
+ \frac{r}{m}D_B\leq R_B\leq D_B.
+ \label{eq:random-gap}
+\end{equation}
+When $r$ divides $m$, the lower bound is attained by instances with
+$D_B>0$, so the factor $m/r$ cannot be improved in general.
+\end{proposition}
+\begin{proof}
+Pad every batch to $B$ queries. Each retains $r$ coordinates, and therefore
+\[
+ \sum_{i=1}^m\mathbb E_\pi v_i(Q)
+ =r\mathbb E_\pi d(S(Q))\geq rh.
+\]
+Its largest expected coordinate coefficient is at least $rh/m$;
+\eqref{eq:random-value} proves the lower bound. A point mass at the
+deterministic optimal batch proves the upper bound. Equality of
+deterministic batch and adaptive optima follows from the preceding
+zero-answer argument.
+
+For sharpness, form $m/r$ coefficient clusters, each containing $r$
+equally spaced points of range $h>0$, and separate adjacent clusters
+by gaps strictly greater than $h$. Every $r$-point subset has range
+at least $h$, and a complete cluster attains it. Uniformly retain one
+cluster and query its complement. Each coordinate then has expected
+coefficient $hr/m$, giving $R_B=Ehr/m$.
+\end{proof}
+
+If $D_B=0$, both optima are zero and their ratio is undefined.
+The separation concerns randomized nonadaptive batches versus all
+deterministic adaptive policies; it does not establish optimality among
+randomized adaptive policies. Every realized sharp comparison interval
+contains the comparison value for the fixed record and for every completion
+consistent with its query answers. The improvement is in worst expected width, not a bound
+on every realized width, a higher certification probability, or measured
+retrieval savings. The result does not extend here to overlapping or
+uncertain totals, physical caps, or heterogeneous query costs.

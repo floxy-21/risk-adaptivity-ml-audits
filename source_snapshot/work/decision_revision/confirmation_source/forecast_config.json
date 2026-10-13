@@ -1,0 +1,32 @@
+{
+  "train_start": "2013-01-01",
+  "train_end": "2013-09-30",
+  "validation_start": "2013-10-01",
+  "validation_end": "2013-12-31",
+  "test_start": "2014-01-01",
+  "test_end": "2014-02-28",
+  "household_ids": [
+    "MAC000023",
+    "MAC000024",
+    "MAC000025",
+    "MAC000026",
+    "MAC000027",
+    "MAC000028",
+    "MAC000029",
+    "MAC000030",
+    "MAC000031",
+    "MAC000032",
+    "MAC000033",
+    "MAC000034",
+    "MAC000035",
+    "MAC000036",
+    "MAC000037",
+    "MAC000038",
+    "MAC000039",
+    "MAC000040",
+    "MAC000041",
+    "MAC000042"
+  ],
+  "min_training_days": 30,
+  "protocol_path": "work/decision_revision/confirmation_protocol.json"
+}

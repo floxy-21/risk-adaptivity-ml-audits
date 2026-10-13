@@ -1,0 +1,23 @@
+\paragraph{Numerical hardest-completion certificates.}
+We extracted a dual completion from the unchanged compact solver for all
+28 frozen scaling instances, the 42 earlier small verification instances,
+four separated-cluster examples, and six declared edge cases (80 instances
+in total). The completed nonnegative masses satisfy the residual block
+totals with maximum absolute sum error $1.78\times10^{-15}$. The existing
+weighted pricing oracle computes $\min_Q W(Q,y^*)$; its maximum difference
+from the compact primal is $2.14\times10^{-14}$ in absolute units, or
+$4.62\times10^{-16}$ after division by
+$\max(1,\hbox{initial worst-case width})$. Independently enumerating every
+coordinate subset of size at most the hard budget on 64 small instances
+(including 12 scaling instances) checked 17,749 terminal sets. These
+include shorter batches and redundant full-block queries. The maximum
+normalized enumeration--primal discrepancy is $2.74\times10^{-16}$.
+The LP primal and dual feasibility tolerances are $10^{-9}$; the checking
+threshold is $10^{-8}$ under the stated objective or block-total scaling.
+No negative multiplier required clipping; the largest removed numerical
+excess of a block's mass was $8.89\times10^{-16}$. Genuine dual mass
+deficits are completed at a fixed coordinate and recorded separately.
+The supplement reports every original-order completion, raw multiplier,
+correction, pricing minimizer, exhaustive minimum, and source hash.
+These are ordinary floating-point checks, not outward-rounded
+certificates or additional empirical forecasting results.

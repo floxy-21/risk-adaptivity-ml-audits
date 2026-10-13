@@ -1,0 +1,44 @@
+\paragraph{A hindsight lower bound for record cost.}
+For benchmark case $s$ with fixed reference record $y^{(s)}$, define
+\[
+ C_s^*=\min_{Q\subseteq\mathcal M_s}
+ \bigl\{|Q|:\text{the observed answers }y^{(s)}_Q
+ \text{ permit the specified certificate}\bigr\}.
+\]
+The search uses the same initially available information, aggregate
+closure and unit cost as the evaluated policies. A coordinate with
+$c_i=0$ is not excluded merely for that reason: observing it can constrain
+the other coordinates through their total. The implementation enumerates
+all initially unknown coordinates, including those in inactive blocks.
+This harmless superset has the same exact-arithmetic minimum as the active
+eligibility rule in Section~\ref{sec:external-policies}. An inactive block's
+contrast is already fixed and disjoint from the other blocks, so its
+queries can be deleted without changing a certificate. Likewise, a set
+containing every unknown coordinate of one exact-total block can omit
+one, which aggregate closure determines for free. Thus an optimal subset
+never needs those redundant requests. The supplied zero-coefficient
+regression exercises both the policy APIs and this actual enumeration
+driver; the numerical trace audit checks the implemented stopping rule.
+It uses reference values to evaluate every subset, so it is a hindsight
+lower bound rather than an executable acquisition policy.
+Every correctly terminating policy $\pi$ reveals a set that is feasible
+for this minimization; consequently $C_s^*\leq C_{\pi,s}$ for each record
+and each realized randomized path. For the same fixed nonnegative
+benchmark weights $w_s$ with $\sum_s w_s=1$, write
+$\overline C^*=\sum_s w_sC_s^*$ and
+$\overline C_\pi=\sum_s w_sC_{\pi,s}$.
+If an evaluated policy satisfies
+$\overline C_{\rm eval}\leq(1+\delta)\overline C^*$, then
+\[
+ \overline C_{\rm eval}\leq(1+\delta)\overline C_\pi
+ \quad\text{for every correctly certifying policy on this weighted case set}.
+\]
+This is a statement about the finite benchmark's mean record count, not a
+claim that every case is near-optimal, that the lower bound is attainable
+online, or that future-population costs obey the same ratio. The
+experimental calculation retains its stated numerical certificate rule.
+The ratio must be reported for every comparator: simultaneous proximity
+to the bound shows limited acquisition headroom, not an advantage unique
+to the proposed policy. Cases without a feasible required certificate
+cannot be silently omitted; their coverage and unresolved counts must
+remain explicit.

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "fixed_batch_certificates_exactly_checked": 29,
+  "existing_positive_certificates_linked_not_rerun": 22,
+  "prescriptions_checked": 29,
+  "hybrid_budget_counts": {
+    "2": 22,
+    "3": 7
+  },
+  "minimum_fixed_margin_exact": "210809158834000161826827625490401/5128573827503575559689240943001600",
+  "minimum_fixed_margin": 0.04110483068479396,
+  "maximum_fixed_upper": 0.458895169315206,
+  "verification": "Independent exact row reconstruction and weak-duality residual-box check; no LP solver",
+  "scope": "Certified fixed-batch upper bounds plus correspondence to previously verified two-query support policies; no exact-optimum or physical-device claim",
+  "certificate_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+  "existing_positive_certificate_sha256": "935e6c7e75900a012ca44b41955fbd3e28ce094a1479ea925e5300bbc9d235dd",
+  "source_sha256": "9379c38b32e4d6fea8d98dc00703cd701f45b29849f0252f8659f227863ce38b",
+  "seconds": 0.6853303000098094
+}

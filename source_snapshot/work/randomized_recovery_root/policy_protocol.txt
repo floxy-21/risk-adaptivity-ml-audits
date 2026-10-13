@@ -1,0 +1,20 @@
+ACTIONABLE COMPACT POLICY VALIDATION — frozen before running checks
+10 October 2026. No manuscript or empirical outcome changes.
+
+Validate original-index mapping, hard budgets, actual batch distributions and
+expected coordinate coefficients, not just LP objective values. Use all42
+previously frozen small root verification cases and additional preprocessing
+fixtures (zero energy, singleton, constant coefficients, empty zero block).
+Use an independent exact enumeration of the finite systematic-sampling
+mixture obtained by splitting uniform offsets at cumulative-mass breakpoints;
+combine all positive DAG paths and compare its original-index coefficient
+vector to the API and its objective to the full batch LP.
+Numerical tolerance1e-7 absolute plus1e-7 relative, unchanged from value tests.
+For every small case draw100 reproducible batches using seed2026101007 and
+check pathwise budget, index validity, no duplicate queries and no queries in
+preprocessed zero-width blocks. Also draw1000batches at m120,B6, with reversed
+coefficients to check mapping on the scalable case. Validate corner budgets
+zero and beyond useful capacity and reject invalid totals, vectors and budget.
+Report every numerical projection, normalization and feasibility correction.
+The expected-width guarantee is under a hidden record fixed before the draw.
+This is algorithm validation only; no field impact or empirical dominance claim.

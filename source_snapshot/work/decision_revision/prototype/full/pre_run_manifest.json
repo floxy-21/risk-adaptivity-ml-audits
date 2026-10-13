@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-10-11T21:03:59.244188+00:00",
+  "scope": "Only validation cases evaluated; shared frozen reference file filtered to validation before lookup",
+  "pilot": false,
+  "objective": "Exact uniform-simplex probability of a strict sign certificate after one query",
+  "tie_break": "Minimum worst remaining width, then coordinate index",
+  "batch_size": 1,
+  "cap": 6,
+  "policies": [
+    "decision_probability",
+    "exact_width_one",
+    "greedy_width_one",
+    "hara_one",
+    "uniform_one"
+  ],
+  "input_hashes": {
+    "work\\decision_revision\\prototype\\policy.py": "17b53e572f01f24d09fc1026e5fd5228ac49c48ad04a7c1037c2c84dcea4e257",
+    "work\\decision_revision\\prototype\\run.py": "f3f41dbb3f5b8bf011a8907d88dac311b977fac7fc6c5a79a1ba3435cf5d7da0",
+    "work\\external_deadline\\validation\\trajectories.jsonl": "2e50b82a7ebc67af414bb6541d4e000dd435a085bdd7d4e93a2880ceb427ec27",
+    "work\\external_deadline\\fitted\\reference_targets.csv": "6ead862b89ad64b798faebd4b7770c8f693aa8b0579dc06c81bf12a674128ecc"
+  }
+}

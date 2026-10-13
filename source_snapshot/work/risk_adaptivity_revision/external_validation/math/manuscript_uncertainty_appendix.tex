@@ -1,0 +1,41 @@
+\section{A bounded-error extension and its interpretation}\label{app:stored-error}
+Let $m_h$ be accumulated meter increments, $x_h$ latent physical increments,
+and $r_0,r_6$ stored outer readings, with $E_{\mathrm{obs}}=r_6-r_0$.
+A declared conditional relative-increment allowance $0\leq\alpha<1$ and
+finite storage-error bounds $\delta_k\geq0$ define the following
+polytope, assumed nonempty. It is compact because the upper total bound
+bounds the nonnegative increments and all error coordinates are bounded:
+\[
+\begin{gathered}
+ x_h,m_h\geq0,\quad(1-\alpha)x_h\leq m_h\leq(1+\alpha)x_h,\quad
+ |b|\leq\delta_0,\quad |e_k|\leq\delta_k,\\
+ E_{\mathrm{obs}}-\delta_6\leq b+\sum_hm_h\leq E_{\mathrm{obs}}+\delta_6.
+\end{gathered}
+\]
+An internal query returns the exact stored readout
+$b+\sum_{h\leq k}m_h+e_k=r_k-r_0$, and the target remains $d+c^\top x$.
+Thus fixed stored errors can be coordinates of the latent record, fixed
+before algorithmic randomization, and the convex exact-linear-query
+results apply to this enlarged model. The five first-query LPs have
+146 variables each, or 98 when $\alpha=0$ permits identifying $m=x$.
+
+This is a sensitivity model, not a verified meter specification.
+An accuracy class does not by itself justify applying $\alpha$ to every
+hour, and it is not a relative error bound on a lifetime cumulative register.
+Exact float quantization has a nonconvex graph; a bounded-error polytope
+is a conservative outer model, with optimality only for that model.
+Actual stored values can be replayed, but they do not reveal latent
+physical truth. The original coefficient offset must be retained:
+subtracting $\min_hc_h$ changes the target uncertainty when its total
+is no longer fixed.
+
+Eighteen constructed prototype cases check exact limits, bounded-error
+examples and coupled polytopes. Their scalar-first two-successor values
+agree with the full successor family within $4.0\times10^{-15}$.
+Separate numerical checks include zero-width cases, latent-record feasibility
+and extracted-policy upper values, with maximum discrepancy
+$8.89\times10^{-15}$. These are floating-point within-study checks using
+$10^{-9}$ LP tolerances, not external-meter validation or human specialist
+confirmation. The tested nonzero-error settings destroy the half-width guarantee in the
+constructed example lying exactly at the threshold, so empirical
+robustness must be evaluated rather than inferred.

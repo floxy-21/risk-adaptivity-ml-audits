@@ -1,0 +1,81 @@
+PRE-TEST SCIENTIFIC REVIEW — 11 October 2026
+Scope: evaluate.py, summarize.py, experiment_protocol.txt, period_amendment.txt,
+source_amendment.txt, source/lcl_protocol.txt, config.json and editorial helper.
+No empirical audit outcomes were opened for this review.
+
+Core design assessment
+The evaluator implements a coherent fixed-pair decision-value benchmark.
+Every method starts from identical forecasts, observed targets, exact totals
+and free deductions. Each actual batch is selected without hidden reference
+arguments, charged in full and then revealed; no prefix refund or separately
+optimized nonnested-budget shortcut is used. Queries are distinct and
+eligible, the cap is enforced, and reapplication follows a complete reveal
+and aggregate closure. Stopping costs include all cases and failures, rather
+than only successful comparisons. The batch optimizer's width guarantee is
+not misrepresented as an optimal stopping-cost theorem.
+
+The early/later archive rules preserve every permitted saved forecast row,
+including future-target forecasts. Under the declared lag2 issue schedule,
+the first direct copy of dayD is dayD+2 persistence issued at the later
+cutoff. Same-day target availability is separate from forecast generation.
+Source-clock mapping, constructed totals and simulated availability are
+explicit assumptions; no physical transmission time or selective meter
+transaction saving is measured.
+
+Hara calibration uses the full validation window. The source amendment
+correctly identifies validation replay as retrospective rather than a claim
+that its final SD existed at each earlier validation cutoff. Test acquisition
+is after that calibration window. Household selection uses source training
+quality; zero-test attrition is retained rather than replaced. The LCL source
+is external to the original paper but remains a selected historical panel.
+
+Aggregation and pre-test reporting actions sent to root
+1. Add summarize.py to pre_outcome_manifest inputs. The protocol fixes its
+   primary estimand already, but an explicit aggregator hash makes the
+   executable headline analysis frozen before test outcomes as well.
+2. The current late initially_unresolved subset is defined after late free
+   reconstruction. It is not the same population as early unresolved cases.
+   Either label both conditional denominators as regime-specific, or add a
+   late curve anchored on the common early-unresolved case IDs. Do not compare
+   these two existing conditional curves as if the denominator were fixed.
+3. The protocol explicitly defines primary B80 comparison against the best
+   of greedy/Hara, with uniform shown and any stronger uniform result noted.
+   Preserve that frozen rule; add an explicit uniform-stronger diagnostic.
+   An exact primary-criterion pass would not establish superiority over all
+   baselines if uniform has a smaller budget or better cap coverage.
+
+Interpretation limits to preserve after outcomes
+- A cumulative budget is per daily pair and counts requested hourly target
+  records; in LCL each target sums two half-hour source rows. It is not a
+  measured meter transaction, network request or shared all-model cost.
+- B80 is an integer threshold of a household-macro conditional curve.
+  Households with no initially unresolved cases have undefined conditional
+  ratios; report their exclusions. Ties remain in denominators. Do not
+  interpolate fractional budgets or use a favorable subset of model pairs.
+- Mean query cost includes failures. Strict certification and numerical
+  tie stopping are different statuses; exact reference ties are separately
+  recorded. A numerical tie is not asserted to be an exact mathematical tie.
+- Hara/uniform/randomized results are three seeded executable paths per
+  specified day/pair mask design, not exact expected stopping costs.
+- Independent interval replay checks outcomes and accounting, but correct
+  certificates under feasible totals are not themselves a new measured
+  predictive-accuracy superiority claim.
+- Selector target blindness is an audited API/code information-flow claim.
+  The evaluator process contains reference targets for masking, totals,
+  reveals and validation; it is not a physically isolated secret-data system.
+
+Editorial helper check
+Default wording does not assert a positive external gain, target criterion
+attainment, measured physical timing or high journal acceptance probability.
+It preserves all adverse historical outcomes and full original scientific
+tables/proofs. Actual external findings must populate supplied fragments
+and abstract/discussion/conclusion fields only after independent checks.
+The final scientific wording review remains pending those actual fragments.
+
+Implementation failure note
+The timestamp-unit serialization correction is documented separately in
+forecast/timestamp_unit_correction.txt. It changes no source eligibility,
+period, feature, model hyperparameter, acquisition objective or outcome rule.
+The corrected preparation explicitly stores nanoseconds and fitting checks
+decoded chronology before any estimator. Old code and failed execution
+provenance are preserved; the correction is not a favorable-outcome retry.

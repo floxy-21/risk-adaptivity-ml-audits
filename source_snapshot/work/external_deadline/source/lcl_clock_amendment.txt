@@ -1,0 +1,10 @@
+LCL CLOCK CONVENTION AMENDMENT, 2026-10-11
+Frozen before source quality counts, model fits and recovery outcomes.
+
+The reviewed primary source page identifies half-hour energy values but does not establish a physical timezone or whether each label is the beginning or end of its interval. Consequently, pair labels at :00 and :30 into one benchmark hour and call their sum a paired-label hourly energy reference. The reference interval is defined by labels; a physical start-of-hour interpretation is not asserted.
+
+Retain the provider's date/time labels as a benchmark clock. If exports use timestamp_utc-shaped strings ending in Z for software compatibility, the schema must explicitly flag this as an assigned benchmark clock rather than verified physical UTC. Prefer timestamp_benchmark to avoid confusion.
+
+Conservatively exclude source-clock dates2013-03-31 and2013-10-27 (UK daylight-saving transitions), even if the source supplies48 readings. Mark every hour in these dates ineligible. Downstream causal feature requirements then exclude any day depending on these references at lags2,3,8. The test period January-February2014 is in UK winter.
+
+The noon issuance and early/later audit times are imposed benchmark times, not measured arrival timestamps. These clock conventions do not claim a deployed operational latency benefit.

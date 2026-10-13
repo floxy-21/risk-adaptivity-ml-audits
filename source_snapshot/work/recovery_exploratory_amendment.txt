@@ -1,0 +1,20 @@
+Reviewer-driven exploratory diagnostic amendment, 2026-10-10 00:56 UTC.
+
+The earlier recovery protocol, policies, masks, budgets and primary summaries
+remain unchanged. Following the user's pasted external review, retain extra
+diagnostics during the first final AI-recovery sweep. This amendment follows
+the completed main study; it is not independent preregistration or validation.
+
+Save per-meter, named model pair, seed, gap, budget and policy summaries with
+actual query counts and realized/worst-case widths. For every meter-day,
+named pair, seed and gap, save q2 exact-versus-greedy decisions, query indices,
+realized and worst-case widths, and the pre-recovery interval. Include all
+cases without selecting successful or large improvements. Reference margins
+are the absolute complete-reference MSE differences divided by squared
+training-mean demand, used only for retrospective stratification. They must
+never enter any query or abstention policy. Actual recovered target values
+are not included in the diagnostic case archive.
+
+The operator illustration retains its original first-unresolved selection
+rule. Add lower/upper attaining witness completions before and after recovery
+to make the mathematical mechanism visible; do not change case selection.

@@ -1,0 +1,418 @@
+
+7-Zip (r) 26.04 (x86) : Igor Pavlov : Public domain : 2026-10-05
+
+Scanning the drive for archives:
+1 file, 698108465 bytes (666 MiB)
+
+Listing archive: .\work\external_deadline\source\REFIT_RAW_081116.7z
+
+--
+Path = .\work\external_deadline\source\REFIT_RAW_081116.7z
+Type = 7z
+Physical Size = 698108465
+Headers Size = 827
+Method = LZMA:26
+Solid = +
+Blocks = 2
+
+----------
+Path = RAW_House10_Part1.csv
+Size = 227848722
+Packed Size = 344222402
+Modified = 2016-10-26 08:45:57.0073392
+Attributes = A
+CRC = 69113CA6
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House10_Part2.csv
+Size = 234866845
+Packed Size = 
+Modified = 2016-10-26 08:47:00.6377692
+Attributes = A
+CRC = 07936AFD
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House11_Part1.csv
+Size = 80650514
+Packed Size = 
+Modified = 2016-10-26 08:47:29.2127756
+Attributes = A
+CRC = EDD3DAB3
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House11_Part2.csv
+Size = 214390701
+Packed Size = 
+Modified = 2016-10-26 08:48:27.9799349
+Attributes = A
+CRC = BEDD4F09
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House12_Part1.csv
+Size = 175163733
+Packed Size = 
+Modified = 2016-10-26 08:49:18.8712840
+Attributes = A
+CRC = 6124CF0C
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House12_Part2.csv
+Size = 239239210
+Packed Size = 
+Modified = 2016-10-26 11:11:21.5065754
+Attributes = A
+CRC = A55FD7E8
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House1_Part1.csv
+Size = 243553211
+Packed Size = 
+Modified = 2016-10-26 08:17:40.8200000
+Attributes = A
+CRC = 03DBDD58
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House1_Part2.csv
+Size = 239646944
+Packed Size = 
+Modified = 2016-10-26 08:18:46.1070000
+Attributes = A
+CRC = 61D7F782
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House2_Part1.csv
+Size = 193550246
+Packed Size = 
+Modified = 2016-10-26 08:23:47.9050814
+Attributes = A
+CRC = 7BB3E6F9
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House2_Part2.csv
+Size = 207231573
+Packed Size = 
+Modified = 2016-10-26 08:24:44.5588584
+Attributes = A
+CRC = 3C13698D
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House3_Part1.csv
+Size = 256759625
+Packed Size = 
+Modified = 2016-10-26 08:29:58.2629005
+Attributes = A
+CRC = 9C5DD293
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House3_Part2.csv
+Size = 219478533
+Packed Size = 
+Modified = 2016-10-26 08:30:55.8501334
+Attributes = A
+CRC = 304EA242
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House4_Part1.csv
+Size = 261327114
+Packed Size = 
+Modified = 2016-10-26 08:32:17.1542794
+Attributes = A
+CRC = 6F2A2C3E
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House4_Part2.csv
+Size = 222454028
+Packed Size = 
+Modified = 2016-10-26 08:33:17.1693092
+Attributes = A
+CRC = 3E72707D
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House5_Part1.csv
+Size = 268144288
+Packed Size = 
+Modified = 2016-10-26 08:34:39.4980314
+Attributes = A
+CRC = FEF63D5F
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House5_Part2.csv
+Size = 234473756
+Packed Size = 
+Modified = 2016-10-26 08:35:41.0420613
+Attributes = A
+CRC = F46F7792
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House6_Part1.csv
+Size = 254484451
+Packed Size = 
+Modified = 2016-10-26 08:37:15.3764806
+Attributes = A
+CRC = CFA4C38A
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House6_Part2.csv
+Size = 218804772
+Packed Size = 
+Modified = 2016-10-26 08:38:16.7947616
+Attributes = A
+CRC = E7FD05D5
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House7_Part1.csv
+Size = 225740678
+Packed Size = 
+Modified = 2016-10-26 08:39:25.8551457
+Attributes = A
+CRC = 2A48BEB5
+Encrypted = -
+Method = LZMA:26
+Block = 0
+
+Path = RAW_House7_Part2.csv
+Size = 234103198
+Packed Size = 353885236
+Modified = 2016-10-26 08:40:28.2632177
+Attributes = A
+CRC = E7C1E202
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House8_Part1.csv
+Size = 227111647
+Packed Size = 
+Modified = 2016-10-26 08:41:39.0739552
+Attributes = A
+CRC = E6F1A7DA
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House8_Part2.csv
+Size = 206963038
+Packed Size = 
+Modified = 2016-10-26 08:42:38.4352315
+Attributes = A
+CRC = 5559F231
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House9_Part1.csv
+Size = 178266583
+Packed Size = 
+Modified = 2016-10-26 08:43:40.0919785
+Attributes = A
+CRC = 18EAC4BF
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House9_Part2.csv
+Size = 241086542
+Packed Size = 
+Modified = 2016-10-26 08:44:45.5279318
+Attributes = A
+CRC = 5EB02446
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_13_Part1.csv
+Size = 146764958
+Packed Size = 
+Modified = 2016-10-26 10:21:04.0360867
+Attributes = A
+CRC = B7796EB3
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_13_Part2.csv
+Size = 173629027
+Packed Size = 
+Modified = 2016-10-26 10:21:50.3521415
+Attributes = A
+CRC = E4272C62
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_15_Part1.csv
+Size = 186143244
+Packed Size = 
+Modified = 2016-10-26 10:22:48.8694850
+Attributes = A
+CRC = 81D5E9E2
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_15_Part2.csv
+Size = 226349711
+Packed Size = 
+Modified = 2016-10-26 10:23:51.9617166
+Attributes = A
+CRC = 42940249
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_16_Part1.csv
+Size = 124294372
+Packed Size = 
+Modified = 2016-10-26 10:24:32.9718606
+Attributes = A
+CRC = 8C87E1F3
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_16_Part2.csv
+Size = 218674923
+Packed Size = 
+Modified = 2016-10-26 10:25:33.8200190
+Attributes = A
+CRC = 4FA6A224
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_17_Part1.csv
+Size = 162981460
+Packed Size = 
+Modified = 2016-10-26 10:26:27.9682611
+Attributes = A
+CRC = A21FCA77
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_17_Part2.csv
+Size = 229609883
+Packed Size = 
+Modified = 2016-10-26 10:27:32.3070389
+Attributes = A
+CRC = 6485B246
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_18_Part1.csv
+Size = 169194619
+Packed Size = 
+Modified = 2016-10-26 10:28:26.5691999
+Attributes = A
+CRC = 40494643
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_18_Part2.csv
+Size = 214364126
+Packed Size = 
+Modified = 2016-10-26 10:29:25.5405551
+Attributes = A
+CRC = DF7D4E6A
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_19_Part1.csv
+Size = 157372383
+Packed Size = 
+Modified = 2016-10-26 10:30:16.1515763
+Attributes = A
+CRC = A7AF0FB0
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_19_Part2.csv
+Size = 220036075
+Packed Size = 
+Modified = 2016-10-26 10:31:17.3256095
+Attributes = A
+CRC = E55ACBF6
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_20_Part1.csv
+Size = 150982570
+Packed Size = 
+Modified = 2016-10-26 10:32:07.5796572
+Attributes = A
+CRC = C0185025
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_20_Part2.csv
+Size = 231881629
+Packed Size = 
+Modified = 2016-10-26 10:33:14.4046206
+Attributes = A
+CRC = B1751242
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_21_Part1.csv
+Size = 167269127
+Packed Size = 
+Modified = 2016-10-26 10:34:08.6840654
+Attributes = A
+CRC = D99E8072
+Encrypted = -
+Method = LZMA:26
+Block = 1
+
+Path = RAW_House_21_Part2.csv
+Size = 227381235
+Packed Size = 
+Modified = 2016-10-26 10:35:10.2201593
+Attributes = A
+CRC = E915F798
+Encrypted = -
+Method = LZMA:26
+Block = 1
+

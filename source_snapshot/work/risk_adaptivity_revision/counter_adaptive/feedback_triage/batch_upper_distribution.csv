@@ -1,0 +1,6 @@
+class,upper_exact,cases
+batch_suffices,1,4371
+feedback_required,1/2,290
+adaptive_not_guaranteed,1/4,5
+adaptive_not_guaranteed,1/3,61
+adaptive_not_guaranteed,1/2,187

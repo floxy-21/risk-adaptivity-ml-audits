@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "case_scenario_rows": 116,
+  "candidate_exclusion_checks": 348,
+  "constructed_callback_executions": 109,
+  "blocked_without_callbacks": 7,
+  "scenario_counts": {
+    "public_bulk": {
+      "bulk_range": 29
+    },
+    "restricted_three_readings": {
+      "adaptive": 22,
+      "fixed_batch": 7
+    },
+    "restricted_two_readings": {
+      "adaptive": 22,
+      "escalate": 7
+    },
+    "restricted_one_round": {
+      "fixed_batch": 29
+    }
+  },
+  "resource_totals": {
+    "public_bulk": {
+      "readings": 145,
+      "rounds": 29,
+      "http_requests": 29
+    },
+    "restricted_three_readings": {
+      "readings": 65,
+      "rounds": 51,
+      "http_requests": null
+    },
+    "restricted_two_readings": {
+      "readings": 44,
+      "rounds": 44,
+      "http_requests": null
+    },
+    "restricted_one_round": {
+      "readings": 87,
+      "rounds": 29,
+      "http_requests": null
+    }
+  },
+  "changed_plan_rejected_before_callback": true,
+  "malformed_batch_rejections": 4,
+  "nested_type_aliased_plan_rejections_before_callbacks": 6,
+  "malformed_interface_rejections_before_callbacks": 18,
+  "unsupported_model_budget_unit_rejections": 4,
+  "missing_cost_escalation_checked": true,
+  "counterfactual_native_grouping_checked": true,
+  "http_trials": 30,
+  "http_requests": 60,
+  "trial_requests": 54,
+  "setup_requests": 6,
+  "scope": "Independent integration/source-correspondence check; exact mathematical certificates checked by existing separate programs. No new empirical, physical-calibration or optimization claim.",
+  "selector_sha256": "8aeadd981913d507bde64339b4ca4316763394112df2fe4c4b7c01e63dfde8f5",
+  "protocol_lock_sha256": "f0fbb2b5efbc04db58b446765a1f6c31595a6eb96e809fad1ed2d95e09d6c4a4",
+  "checked_results_directory": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\protocol_selection\\results",
+  "ledger_sha256": "42d92efa7033748e9b3c6dc3920f364e5115d674abd1028d4a06ce50415ce15d",
+  "producer_report_sha256": "1aebe24e4a9d618e010d775031c9f02c286095d85d0d9fceb16221ac0dfbfd24",
+  "recorded_http_summary_sha256": "87ede26e5d9cc18dfa9ca537eaef7a490188a0cd37296bae07912b2e94eb95c2",
+  "source_sha256": "ae597ffda854c67fe115023b25ba2d165594b2eae86038c90338aea4841f63bc",
+  "seconds": 0.571717900049407
+}

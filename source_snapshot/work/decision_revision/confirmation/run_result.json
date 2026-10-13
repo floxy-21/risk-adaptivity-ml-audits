@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "wall_seconds": 219.99802400000044,
+  "cases": 17946,
+  "eligible_days": 997,
+  "late_strict_certified": 17946,
+  "late_paid_requests": 0,
+  "completed_utc": "2026-10-11T21:24:16.733953+00:00",
+  "protocol_sha256": "5c216380943e792cc1215b5b809be6ac7d5bed429fdae191eab7c4873bcf9e54",
+  "source_target_blind_policy_api": true,
+  "outputs": {
+    "bootstrap.csv": "9905a67430275f349e282f31a58f9655c66af816ba95ef9f9387295a204d4a43",
+    "cases.csv": "85fb85d7c95a99d7abb5dd88fe9f4591a089e8148803e2310796395c442c3135",
+    "coverage_curves.csv": "6fedf7f6cd631c544f2ba3c1e1c616cc75b83be80a4f8eefd8a7de208cfb3c3f",
+    "household_costs.csv": "608942beac171dddb85bb8a85289c525f87fbeeebdf7fe3782211c1ac310818d",
+    "pair_costs.csv": "63bf3ec861f130a86198ea5b072240c013a455caf66737a1d69e43c2745343aa",
+    "pre_run_manifest.json": "4a8d8853ef2c4d56e11f4c7c74e195642b5787def2c0c17a1ee66a3de2ff96ab",
+    "source_cases.jsonl": "f82d9cbe6e5a1aca250fbecfba55e81add549d5f14d2fceb76ceb1e15797e31e",
+    "summary.json": "fc2206637eef98d6d99ca6237dd7ffee3079a6d5b958d3e9d35eca567df0aa82",
+    "trajectories.jsonl": "f43a82cd6a4ec90594f7d40344d73158c7f0c45cc09f4c7412d96edb08a92dc2"
+  }
+}

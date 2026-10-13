@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "paired_outcome_rows": 4914,
+  "precision_optimal_outcome_rows": 290,
+  "exact_empirical_witness_batches": 10,
+  "scope": "Bundled-ledger arithmetic and exact rational printed witness; raw counterpart is analyze.py."
+}

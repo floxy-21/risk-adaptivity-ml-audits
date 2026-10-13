@@ -1,0 +1,85 @@
+% Optional concise insertion; the main manuscript is not edited by this agent.
+\subsection{Replication on an external stored-counter source}
+\label{sec:external-hpm}
+We froze a public-source protocol for HeatpumpMonitor.org \citep{hpmabout,hpmapi} before fitting
+forecasts or evaluating acquisition outcomes. The ascending-ID screen
+required public MID status, explicit Class-1 electrical-meter metadata and
+a cumulative electrical-energy feed spanning January--July 2025. The first
+three qualifiers were systems 1, 2 and 7: systems 3 and 6 lacked MID status,
+while 4 and 5 failed calendar coverage. The source rule was locked before
+hourly retrieval. Detailed training gates were fixed after training-only
+inspection but before July retrieval; all three systems met the requirements
+of at least 95\% valid hourly intervals and 90 complete training days, without
+replacement. Bundled metadata, request logs and protocol locks expose this
+chronology and every exclusion. January--June 2025 supplied training data; July supplied 31 test
+days per system. The four existing model specifications were fitted once,
+without retuning or replacement. All three six-hour blocks and six model
+pairs were retained, giving 1,674 tasks with no reference-data attrition
+and no zero-width case. The half-initial-width target, five optional
+internal cumulative samples and two-sample budget were unchanged.
+
+The target here is the difference of consecutive hourly \emph{API-grid
+stored cumulative samples}. The interface can label a selected native
+sample with a grid timestamp \citep{hpmcode}. Native acquisition and historical delivery
+times are unavailable, so chronological forecast features are established
+on the declared grid, not as measured midnight production availability.
+The exact stored-sample model does not assert exact physical energy or
+unconditional Class-1 pointwise error bounds.
+
+The exact triage found 1,614 tasks with a guaranteeing fixed batch, 29
+requiring feedback for a deterministic half-width guarantee, and 31
+without such a two-query adaptive guarantee. The 29 cases span all three
+systems (2, 14 and 13 cases) and all six model pairs. Each has matching
+rational adverse-profile and all-completion covering witnesses proving
+optimal randomized-batch worst-case success exactly $1/2$; adaptation
+guarantees success one. All 29 batch optima are exactly $1/2$, including
+their minimum, median and quartiles.
+
+\begin{table}[htbp]
+\centering\small\setlength{\tabcolsep}{4pt}
+\caption{External stored-sample replay. Success is the probability of
+reaching half initial width. Randomized outcomes average the declared
+mixture exactly over its finite support. The cover policy is specified
+only on the 29 cases with certified batch optimum $1/2$. Full recovery
+uses all five optional samples, outside the two-sample budget; its actual
+API request cost is compared in Section~\ref{sec:actual-api}.}
+\label{tab:external-hpm}
+\begin{tabular}{lrrr}
+\toprule
+Policy & All-task success (\%) & 29-case success (\%) &
+29-case mean $W/W_0$\\
+\midrule
+Exact adaptive & 99.223 & 100.000 & 0.3113\\
+Best deterministic worst-width batch & 99.104 & 96.552 & 0.3736\\
+Greedy adaptive & 99.104 & 100.000 & 0.3114\\
+Mean-width-optimal batch & 95.250 & 82.004 & 0.4003\\
+Precision-optimal covering batch & --- & 81.034 & 0.3942\\
+Uniform batch & 63.053 & 34.138 & 0.5899\\
+Full stored-trace recovery & 100.000 & 100.000 & 0.0000\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In recorded replay, exact adaptation and the best deterministic batch
+both succeed in 1,658 tasks; only adaptation succeeds in three, only the
+batch in one, and neither in twelve. The net observed gain is therefore
+two tasks, or 0.119 percentage points. Ordering certification is 91.219\%
+versus 90.741\%, with 14 adaptive-only and six batch-only decisions.
+The replication extends the information-model separation to a new source;
+it does not demonstrate a large improvement over an ordinary adaptive
+policy or the provider's permitted full-range retrieval. These dependent
+tasks represent three systems, not 1,674 independent deployments.
+Section~\ref{sec:actual-api} compares that full-range alternative under
+the actual provider interface and measured request times.
+
+A separate internal checker verifies 16,740 terminal intervals by exact
+rational arithmetic, all 29 matching half-success witnesses, and the
+two-side adaptive formula for every positive-width task. Independent
+fiber LPs for the earliest task in each system--pair group (360 solves)
+agree with the interval endpoints to $2.78\times10^{-17}$; solver
+feasibility tolerance is $10^{-9}$ and comparison tolerance $2\times10^{-8}$.
+All 2,232 saved persistence values equal the corresponding prior-day
+grid differences. This is independent implementation checking within
+the study, not an external human validation.
+
+\FloatBarrier

@@ -1,0 +1,49 @@
+% Krieg--Ullrich locators below refer explicitly to the author manuscript;
+% journal pagination is not inferred from the manuscript page numbers.
+The certificate width is the established local diameter of information
+\citep[Section~4.1]{novak2008}.
+\citet[Theorems~2--3 and~5]{osipenko} also studies when adaptation cannot
+improve noisy scalar recovery. Those criteria concern deterministic
+reconstruction error and the existence of an optimal nonadaptive linear
+reconstruction; the present criterion instead classifies randomized
+penalties of the complete terminal information-fiber width.
+Classical deterministic results already establish strong limits on
+adaptivity: on convex symmetric classes with linear information,
+\citet[Theorem~4.4]{novak2008} construct nonadaptive information with
+no greater global diameter and at most twice the reconstruction radius.
+For scalar targets the radius comparison is exact
+\citep[Theorem~4.5]{novak2008}. A modern formulation of the factor-two
+bound appears in \citet[Proposition~4.1]{krieg2025}.
+Nonsymmetric convex uncertainty itself is also established:
+\citet{novak1995} compares adaptive and nonadaptive optimal-recovery
+errors using relations between Gelfand and Bernstein widths. The
+classical objective is reconstruction error, whereas our randomized
+penalty applies to the full terminal compatible interval. Our classification allows nonsymmetric convex sets and concerns randomized
+penalties of the terminal local diameter, including a converse and exact
+precision and moment separations. Its mean-risk interchange applies
+\citet[Theorem~3.4]{sion1958}; the concave-penalty upper bound uses Jensen's
+inequality.
+
+For fixed deterministic scalar information, the optimal worst-case
+reconstruction error is half the largest fiber width. The distinction here
+concerns randomized local-width penalties and the order of averaging and
+worst-case evaluation. Specifically, \citet[Section~2]{krieg2025}
+and \citet[Section~9.1, Eq.~(9.15), author manuscript v2]{krieg2026}
+study $\inf_A\sup_{y\in F}\mathbb E_\omega
+\lVert T(y)-A_\omega(y)\rVert$, the error of a selected reconstruction.
+Here the random transcript instead incurs the full compatible-interval
+width $W_{Q_\omega(y)}(y)$.
+Writing its scalar local radius as $r_{Q_\omega(y)}(y)=W_{Q_\omega(y)}(y)/2$,
+our mean risk is $2\sup_y\mathbb E_\omega r_{Q_\omega(y)}(y)$.
+For a randomized batch, this generally differs from
+$2\mathbb E_\omega\sup_y r_{Q_\omega}(y)$, twice the expected global radius
+discussed in \citet[Eq.~(2.4), Remark~6.1 and Section~6.1, author manuscript v2]{krieg2026}.
+The midpoint reconstruction has pointwise error at most the local radius,
+but its error at the actual record need not equal that radius. Consequently,
+neither replacing actual reconstruction error by interval width nor
+interchanging the expectation and supremum preserves the optimization
+problem. The present theorem concerns the terminal local-width risk.
+The fixed measurement dictionary is substantive: if every linear
+functional were directly queryable at the same cost, a scalar affine
+target could be determined by querying its linear part once.
+

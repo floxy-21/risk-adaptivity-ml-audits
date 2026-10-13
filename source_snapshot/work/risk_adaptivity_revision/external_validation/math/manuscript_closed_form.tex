@@ -1,0 +1,35 @@
+\paragraph{Two best-side queries for arbitrary block length.}
+The exact-total calculation extends to $n\geq3$ increments with two prefix
+queries. For first boundary $k$, put $\ell_k=r(0,k)$, $r_k=r(k,n)$, and
+\[
+ \alpha_k=\min_{j<k}\max\{r(0,j),r(j,k)\},\qquad
+ \beta_k=\min_{j>k}\max\{r(k,j),r(j,n)\}.
+\]
+When both sides have a candidate boundary, the conditional optimum is
+\[
+ E\min\{\alpha_kt+r_k(1-t),\ \ell_kt+\beta_k(1-t)\}.
+\]
+Indeed, all left queries have the same right contribution, so the best
+left split is independent of $t$; the right-side argument is identical.
+Thus at most two second queries are needed, one on each side. If
+$\Delta_k=\ell_k+r_k-\alpha_k-\beta_k>0$, their intersection lies at
+$t_k^\star=(r_k-\beta_k)/\Delta_k\in[0,1]$, and
+\[
+ A_k=E\max\left\{\alpha_k,\beta_k,
+                \frac{\ell_kr_k-\alpha_k\beta_k}{\Delta_k}\right\}.
+\]
+These are the two endpoint values and the intersection value of the
+lower envelope. The right split is preferred below the intersection and
+the left above it. If $\Delta_k=0$, the lines coincide and
+$A_k=E\max\{\ell_k,r_k\}$. At $k=1$ only the right split exists and
+$A_1=E\beta_1$; at $k=n-1$, $A_{n-1}=E\alpha_{n-1}$.
+Minimizing over $k$ gives the exact guarantee. Building all contiguous
+coefficient ranges and scanning all side splits costs $O(n^2)$ arithmetic
+operations and $O(n^2)$ storage. The $n\leq2$ cases are fully determined
+by at most one internal reading. Exact rational checks on 91 constructed
+instances agree with the full affine envelope; 16 small instances also
+agree with general-polytope LPs, within $4.45\times10^{-16}$.
+
+This two-line formula concerns uncapped exact totals. Under caps, the
+conditional functions can have additional affine pieces; the polytope
+LP and the general scalar-first support result remain applicable.

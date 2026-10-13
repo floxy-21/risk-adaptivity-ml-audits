@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "scope": "Single fresh fit in isolated stage, no retuning or model-fit retry, network blocked; separate from default replay",
+  "absolute_tolerance": 1e-10,
+  "relative_tolerance": 1e-08,
+  "reference_rows": 2232,
+  "models": [
+    "daily",
+    "ridge",
+    "hist_gradient_boosting",
+    "mlp"
+  ],
+  "setup_note": "Initial harness import failed before fitting because its minimal staging omitted historical fitting dependencies; those packaged scripts were then copied unchanged.",
+  "stage": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\new_bundle_jobs_20261012T024645",
+  "forecast_comparisons": 8928,
+  "per_model": {
+    "daily": {
+      "rows": 2232,
+      "max_absolute_difference": 0.0,
+      "max_relative_difference": 0.0
+    },
+    "ridge": {
+      "rows": 2232,
+      "max_absolute_difference": 0.0,
+      "max_relative_difference": 0.0
+    },
+    "hist_gradient_boosting": {
+      "rows": 2232,
+      "max_absolute_difference": 0.0,
+      "max_relative_difference": 0.0
+    },
+    "mlp": {
+      "rows": 2232,
+      "max_absolute_difference": 0.0,
+      "max_relative_difference": 0.0
+    }
+  },
+  "nonprediction_columns": "identical in order and value",
+  "seconds": 25.602539199986495,
+  "source_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+  "reference_forecast_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+  "fresh_forecast_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f"
+}

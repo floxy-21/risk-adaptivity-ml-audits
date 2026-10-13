@@ -1,0 +1,320 @@
+\section{Information, terminal width, and risk}
+\label{sec:risk_setup}
+Let $F\subset\mathbb R^n$ be nonempty, compact, and convex, and let
+$T(y)=c^\top y+d$ be the scalar quantity to be audited. A fixed finite
+collection of exact linear measurements is available. Write $L_Q$ for
+the measurement matrix of a selected set $Q$, and let $\mathcal Q$ be
+the nonempty finite family of admissible final sets, available to both
+policy classes. Admissibility is determined before observing answers; for example,
+$\sum_{j\in Q}k_j\le B$ for nonnegative fixed costs $k_j$.
+Coordinate observations correspond to rows of the identity matrix.
+The results do not require nonnegative targets or disjoint aggregates.
+
+For a feasible record $y$, define the information fiber and its sharp
+target width by
+\begin{equation}
+ F_Q(y)=\{z\in F:L_Qz=L_Qy\},\qquad
+ W_Q(y)=\max_{z\in F_Q(y)}T(z)-\min_{z\in F_Q(y)}T(z).
+ \label{eq:risk_fiber}
+\end{equation}
+The extrema exist by compactness, and $0\le W_Q(y)\le D_T$, where
+$D_T=\max_F T-\min_F T$. This is the local diameter of the
+scalar information fiber. The optimized quantity is the full fiber's
+diameter, rather than the actual error of a selected point estimate;
+it is not a confidence interval. An additive constant in $T$ does
+not affect $W_Q$. In particular, a paired squared-loss contrast is
+affine in the unknown verification targets and fits this formulation.
+
+A randomized batch policy draws $Q\sim\pi$ before seeing answers. An
+adaptive policy selects successive measurements and a stopping decision
+from the answers already observed and an independent internal random
+seed. Every execution must terminate after finitely many queries at a
+set in $\mathcal Q$. Query and stopping rules are jointly measurable in
+the observed history and seed; observations are exact. For a finite-valued,
+nondecreasing function $\phi:[0,\infty)\to\mathbb R$, define
+\begin{equation}
+ R_{\mathrm{batch}}^{\phi}
+ =\inf_{\pi\in\Delta(\mathcal Q)}\sup_{y\in F}
+   \mathbb E_{Q\sim\pi}\phi(W_Q(y)),\qquad
+ R_{\mathrm{adaptive}}^{\phi}
+ =\inf_{\mathcal P}\sup_{y\in F}
+   \mathbb E\phi(W_{Q_{\mathcal P}(y)}(y)).
+ \label{eq:risk_objectives}
+\end{equation}
+The hidden record is fixed before the random seed is drawn. Thus the
+supremum is outside the expectation. When measurement error is represented
+by additional hidden coordinates, one fixed error vector is part of that
+record for the entire execution. An adversary choosing a new error after
+each query is a different information model. These objectives concern terminal
+width under a hard budget, rather than expected requests until a winner
+is certified. The expectations are well defined: the widths are Borel
+measurable by Proposition~\ref{prop:risk_concavity_transcript}, and a
+finite-valued monotone $\phi$ is Borel measurable and bounded on $[0,D_T]$.
+
+For a required precision $\tau\geq0$, let $\mathcal C$ be either the
+randomized batch or randomized adaptive policy class, and write
+$Q_{\mathcal P}(y,\omega)$ for the terminal set under internal seed
+$\omega$. Define its optimal worst-case precision-success probability by
+\begin{equation}
+\begin{aligned}
+ S_\tau^{\mathcal C}
+ &=\sup_{\mathcal P\in\mathcal C}\inf_{y\in F}
+   \Pr_\omega\!\left\{W_{Q_{\mathcal P}(y,\omega)}(y)\leq\tau\right\}\\
+ &=1-R_{\mathcal C}^{\phi_\tau},\qquad
+   \phi_\tau(w)=\boldsymbol{1}\{w>\tau\},
+\end{aligned}
+\label{eq:risk_precision_success}
+\end{equation}
+where $R_{\mathcal C}^{\phi_\tau}$ denotes the corresponding risk in
+\eqref{eq:risk_objectives}. The identity follows by complementing the
+success event and reversing each supremum or infimum under subtraction
+from one; it does not require an optimal policy to attain either bound.
+The probability concerns the algorithm's seed at a fixed hidden record,
+and equality at the threshold counts as success. Reaching this precision
+does not require the interval to exclude zero, so it need not certify a
+winning model.
+
+\begin{proposition}[Concavity and the transcript fiber]
+\label{prop:risk_concavity_transcript}
+For every fixed $Q$, $W_Q$ is nonnegative, finite, concave, and upper
+semicontinuous on $F$. For every adaptive execution, its terminal
+information fiber is precisely $F_Q(y)$ for its terminal queried set $Q$.
+\end{proposition}
+\begin{proof}
+Choose maximizing and minimizing endpoints $u_k,v_k\in F_Q(y_k)$,
+$k=1,2$. For $0\le\lambda\le1$, convexity of $F$ and linearity of the
+measurements make $\lambda u_1+(1-\lambda)u_2$ and
+$\lambda v_1+(1-\lambda)v_2$ feasible endpoints at
+$\lambda y_1+(1-\lambda)y_2$. Their target difference is
+$\lambda W_Q(y_1)+(1-\lambda)W_Q(y_2)$, proving concavity.
+For upper semicontinuity, take $y_k\to y$ and a subsequence attaining
+the limsup of the widths. Compactness supplies a further subsequence
+whose endpoint pairs converge to $u,v\in F_Q(y)$. Its limiting
+difference is at most $W_Q(y)$.
+
+For the transcript claim, fix the internal random seed. If no query is
+made, both fibers are $F$. Otherwise, any
+$z\in F_Q(y)$ gives the same answer to the first queried measurement.
+Inductively, equal previous answers produce the same next measurement
+and the same next answer. The stopping decision is also unchanged.
+Thus every completion agreeing with all queried answers follows the
+same entire transcript. Conversely, any completion consistent with
+that transcript must agree on every queried answer. Query choices and
+the stopping time therefore impose no additional restrictions on the
+fiber beyond those exact observations. This argument is pointwise in the
+seed; no conditioning on a positive-probability seed event is required.
+\end{proof}
+
+\section{Which width penalties can benefit from adaptation?}
+\label{sec:risk_classification}
+The next result uses classical minimax theory. The contribution is the
+resulting classification for sharp information-fiber widths and its
+coordinate-query converse, rather than a new minimax or duality theorem.
+The proof has two parts. For concave penalties, a single hardest record
+limits every final query set, including those chosen adaptively; Jensen's
+inequality supplies a batch policy meeting that limit. For any nonconcave
+penalty, a three-coordinate construction realizes a strict midpoint
+violation as an adaptive advantage. These arguments establish the universal
+claim; the later numerical checks test implementations on particular inputs.
+
+\begin{proposition}[Universal classification of width penalties]
+\label{prop:risk_classification}
+Let $\phi:[0,\infty)\to\mathbb R$ be finite-valued and nondecreasing.
+Randomized batch and randomized adaptive querying have equal minimax
+$\phi$-risk for every problem satisfying Section~\ref{sec:risk_setup}
+if and only if $\phi$ is concave. More precisely, put
+\begin{equation}
+ \rho=\min_{\pi\in\Delta(\mathcal Q)}\max_{y\in F}
+         \sum_{Q\in\mathcal Q}\pi_Q W_Q(y).
+ \label{eq:risk_rho}
+\end{equation}
+If $\phi$ is concave, then
+\begin{equation}
+ R_{\mathrm{adaptive}}^{\phi}
+ =R_{\mathrm{batch}}^{\phi}=\phi(\rho).
+ \label{eq:risk_concave_value}
+\end{equation}
+Every batch policy attaining~\eqref{eq:risk_rho} simultaneously attains
+this equality for every such concave $\phi$. If $\phi$ is not concave,
+a strict adaptive improvement already occurs on a three-coordinate
+compact convex polytope, with all coordinates queryable at unit cost
+and a hard budget of two.
+\end{proposition}
+\begin{proof}
+The function $\sum_Q\pi_QW_Q(y)$ is affine and continuous in $\pi$,
+and concave and upper semicontinuous in $y$. Sion's minimax theorem
+therefore yields
+\begin{equation}
+ \rho=\max_{y\in F}\min_{Q\in\mathcal Q}W_Q(y).
+ \label{eq:risk_hardest_record}
+\end{equation}
+All values are finite. Writing $G(\pi)=\max_{y\in F}\sum_Q\pi_QW_Q(y)$,
+the bound $|G(\pi)-G(\pi')|\le D_T\|\pi-\pi'\|_1$ proves continuity.
+Thus the minimum in~\eqref{eq:risk_rho} is attained on the compact simplex.
+The maximum in~\eqref{eq:risk_hardest_record} is attained because the
+minimum of finitely many upper semicontinuous functions is upper
+semicontinuous on compact $F$. Hence there is one record $y^\star\in F$
+such that $W_Q(y^\star)\ge\rho$ for every admissible $Q$.
+By Proposition~\ref{prop:risk_concavity_transcript}, every execution of
+every adaptive policy has terminal width at least $\rho$ at this same
+record. Monotonicity gives the lower bound $\phi(\rho)$.
+
+Let $\pi^\star$ attain~\eqref{eq:risk_rho}. Concavity, Jensen's
+inequality, and monotonicity give, for every $y\in F$,
+\[
+ \sum_Q\pi^\star_Q\phi(W_Q(y))
+ \le \phi\!\left(\sum_Q\pi^\star_QW_Q(y)\right)
+ \le\phi(\rho).
+\]
+This proves the upper bound and simultaneous optimality. No continuity
+of $\phi$ at zero is needed; the finite-mixture form of Jensen's
+inequality suffices. For example, $\phi(w)=\boldsymbol{1}\{w>0\}$ is
+concave on $[0,\infty)$ despite its jump at zero.
+
+For necessity, a nonconcave, nondecreasing finite-valued $\phi$ must
+have a strict midpoint-concavity violation: there exist $0\le l<h$ such
+that, with $m=(l+h)/2$,
+\begin{equation}
+ \phi(m)<\{\phi(l)+\phi(h)\}/2.
+ \label{eq:risk_midpoint_violation}
+\end{equation}
+Indeed, if midpoint concavity held, for $0\le x\le z$ and dyadic
+$q_k\uparrow\theta$ its dyadic inequalities and monotonicity would give
+\[
+\phi((1-\theta)x+\theta z)
+\ge\phi((1-q_k)x+q_kz)
+\ge(1-q_k)\phi(x)+q_k\phi(z).
+\]
+Taking the limit only on the right proves full concavity without a
+continuity assumption, a contradiction. Set $d_0=h-l$ and consider
+\begin{equation}
+ F_{l,h}=\{(a,b,c):0\le a\le1,\ 0\le b\le l+d_0a,
+                  \ 0\le c\le h-d_0a\},\qquad T=ha+b+c.
+ \label{eq:risk_converse_polytope}
+\end{equation}
+All three coordinates are available at unit cost, with budget two.
+The widths after querying $\{a,b\}$ and $\{a,c\}$ are respectively
+$h-d_0a$ and $l+d_0a$. An adaptive policy first observes $a$ and then
+queries the coordinate with the larger remaining capacity. Its terminal
+width is at most $m$, so its risk is at most $\phi(m)$.
+At $(a,b,c)=(1/2,0,0)$, these two widths equal $m$, while the width
+after querying $\{b,c\}$ is $h$. Thus every admissible terminal set
+has width at least $m$, and the adaptive optimum is exactly $\phi(m)$.
+
+Now put equal adversarial mass on $(0,0,0)$ and $(1,0,0)$.
+Each batch $\{a,b\}$ or $\{a,c\}$ has average penalty
+$\{\phi(l)+\phi(h)\}/2$. The batch $\{b,c\}$ has width $h$ at both
+records, so its average penalty is no smaller. A batch using fewer
+coordinates cannot improve upon an extension to two coordinates,
+because more observations only shrink the fiber. Every randomized
+batch policy consequently has worst-case risk at least
+$\{\phi(l)+\phi(h)\}/2>\phi(m)$. This is the required strict separation.
+\end{proof}
+
+The universal quantifier is essential. A nonconcave penalty permits an
+adaptive advantage somewhere in this class; it need not yield an
+advantage for every feasible set. The theorem covers heterogeneous fixed
+costs and overlapping constraints at the level of information theory.
+It does not imply a polynomial-time optimizer for an arbitrary feasible
+set or budget.
+
+\subsection{A three-coordinate example}
+\label{sec:risk_small_example}
+Take $0\le a\le1$, $0\le b\le a$, $0\le c\le1-a$, and
+$T=a+b+c$, with two unit-cost queries. The widths for batches
+$\{a,b\}$, $\{a,c\}$, and $\{b,c\}$ are $1-a$, $a$, and $1-b-c$.
+Querying $a$ first and then $c$ if $a\le1/2$, or $b$ otherwise, leaves
+width $\min(a,1-a)\le1/2$.
+
+\begin{table}[htbp]
+\centering
+\caption{Exact constructed-example values. These are mathematical
+guarantees, not forecasting improvements measured on public data.}
+\label{tab:risk_three_coordinate}
+\begin{tabular}{lcc}
+\toprule
+Criterion & Best randomized batch & Best adaptive policy\\
+\midrule
+Worst expected width & $1/2$ & $1/2$\\
+Worst expected squared width & $1/2$ & $1/4$\\
+Worst-case success, width $\le3/4$ & $1/2$ & $1$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+An equal mixture of $\{a,b\}$ and $\{a,c\}$ attains the batch values.
+The endpoint records $(0,0,0)$ and $(1,0,0)$ give the corresponding
+batch lower bounds. At $(1/2,0,0)$ every admissible terminal set has
+width at least $1/2$, establishing the adaptive moment lower bounds.
+The precision separation holds for every threshold $1/2\le\tau<1$.
+Reaching a width threshold is distinct from certifying the sign of $T$:
+a narrow sharp interval may still contain zero.
+
+\section{Growing moment and precision separations}
+\label{sec:risk_growing}
+For $K\ge2$, let $a_1,\ldots,a_K\ge0$ sum to one and impose
+$0\le b_j\le a_j$. The actual queryable coordinates are
+$a_1,\ldots,a_{K-1},b_1,\ldots,b_K$; $a_K$ is determined by the
+first $K-1$ capacities. Define
+\begin{equation}
+ T=\sum_{i<K}a_i+\sum_{j=1}^K b_j,\qquad B=2K-2.
+ \label{eq:risk_K_setup}
+\end{equation}
+This is a compact convex polytope in $2K-1$ dimensions, and every
+coordinate has the same unit cost.
+
+\begin{proposition}[Sharp growing separations]
+\label{prop:risk_K_family}
+For~\eqref{eq:risk_K_setup}, the optimal worst expected width is $1/K$
+for both randomized batch and adaptive policies. For every $p>1$,
+\begin{equation}
+ R_{\mathrm{batch}}^{w^p}=1/K,\qquad
+ R_{\mathrm{adaptive}}^{w^p}=1/K^p.
+ \label{eq:risk_K_moments}
+\end{equation}
+For required width $\tau=1/K$, the best worst-case success probabilities
+are $1/K$ for randomized batches and $1$ for adaptive policies.
+\end{proposition}
+\begin{proof}
+It suffices to consider batches using the full budget: adding observations
+cannot increase width. Such a batch omits exactly one coordinate.
+Omitting $b_j$ leaves width $a_j$; omitting $a_i$, $i<K$, leaves width
+$a_i+a_K-b_i-b_K$. The latter follows because the remaining feasible
+range of $a_i$ is $[b_i,a_i+a_K-b_K]$ and its coefficient in $T$ is one.
+An adaptive policy queries all explicit capacities and then all $b_j$
+except one having the smallest capacity. Its width is
+$\min_j a_j\le1/K$. At the record with all $a_j=1/K$ and all $b_j=0$,
+every full-budget batch has width at least $1/K$. This proves the
+adaptive lower bounds and the mean-width lower bound.
+
+The randomized batch policy omitting each $b_j$ with probability $1/K$
+has expected width exactly $1/K$. Its expected $p$th power is
+$K^{-1}\sum_j a_j^p\le1/K$, since $0\le a_j\le1$ and $p>1$.
+For the reverse moment bound, average over the $K$ records
+$a=e_j$, $b=0$. A batch omitting a $b_j$ has average $p$th-power width
+$1/K$; one omitting an explicit $a_i$ has average $2/K$.
+Therefore every batch distribution has worst-case moment at least $1/K$.
+
+For precision, omitting a uniformly random $b_j$ succeeds with
+probability at least $1/K$ at every record, because at least one capacity
+is no greater than $1/K$. To prove the matching upper bound, use $K$
+records indexed by $j$, with $b=0$,
+\[
+ a_j=\frac{1}{2K},\qquad
+ a_i=\frac{2K-1}{2K(K-1)}\quad(i\ne j).
+\]
+These capacities sum to one. Only the batch omitting $b_j$ reaches
+width at most $1/K$ at record $j$: every other $b$-omitting batch has larger
+width, and every $a$-omitting batch has width $a_i+a_K>1/K$.
+If $q_j$ is the probability of omitting $b_j$, worst-case success is
+at most $\min_j q_j\le1/K$. The adaptive policy always succeeds.
+The precision upper bound uses these interior capacity records;
+checking only vertices would not establish it.
+\end{proof}
+
+The moment ratio is $K^{p-1}$, while the ratio of worst-case success
+probabilities at precision $1/K$ is $K$. These separations use a
+structured constructed feasible set and a budget querying all but one
+coordinate. They establish the possible difference between objectives;
+they do not establish comparable gains at small relative budgets in a
+deployment or in the historical forecasting study.

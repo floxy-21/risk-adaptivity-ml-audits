@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "scope": "Fresh fits with unchanged model specifications and explicit external split; no acquisition or acceptance outcomes computed.",
+  "systems": [
+    {
+      "system_id": 1,
+      "train_days": 174,
+      "training_hourly_valid_fraction": 1.0,
+      "test_calendar_days": 31,
+      "forecast_issue_days": 31,
+      "training_mean_kwh": 0.4616823159871887,
+      "first_train_day": "2025-01-08T00:00:00+00:00",
+      "last_train_day": "2025-06-30T00:00:00+00:00",
+      "fit": {
+        "ridge": {
+          "seconds": 0.028305200015893206,
+          "warnings": []
+        },
+        "hist_gradient_boosting": {
+          "seconds": 0.33110779998241924,
+          "warnings": []
+        },
+        "mlp": {
+          "seconds": 7.278518100007204,
+          "warnings": [],
+          "epochs": 392
+        }
+      },
+      "source_target": "difference of consecutive hourly API-grid stored cumulative kWh samples",
+      "measurement_time_not_claimed": "Native acquisition times/physical hourly interval boundaries are not inferred from API-grid labels."
+    },
+    {
+      "system_id": 2,
+      "train_days": 174,
+      "training_hourly_valid_fraction": 1.0,
+      "test_calendar_days": 31,
+      "forecast_issue_days": 31,
+      "training_mean_kwh": 0.32397414167265326,
+      "first_train_day": "2025-01-08T00:00:00+00:00",
+      "last_train_day": "2025-06-30T00:00:00+00:00",
+      "fit": {
+        "ridge": {
+          "seconds": 0.007817200006684288,
+          "warnings": []
+        },
+        "hist_gradient_boosting": {
+          "seconds": 0.2167207999737002,
+          "warnings": []
+        },
+        "mlp": {
+          "seconds": 4.949794100015424,
+          "warnings": [],
+          "epochs": 279
+        }
+      },
+      "source_target": "difference of consecutive hourly API-grid stored cumulative kWh samples",
+      "measurement_time_not_claimed": "Native acquisition times/physical hourly interval boundaries are not inferred from API-grid labels."
+    },
+    {
+      "system_id": 7,
+      "train_days": 167,
+      "training_hourly_valid_fraction": 0.9986187845303868,
+      "test_calendar_days": 31,
+      "forecast_issue_days": 31,
+      "training_mean_kwh": 0.5582821174058133,
+      "first_train_day": "2025-01-08T00:00:00+00:00",
+      "last_train_day": "2025-06-30T00:00:00+00:00",
+      "fit": {
+        "ridge": {
+          "seconds": 0.005139199987752363,
+          "warnings": []
+        },
+        "hist_gradient_boosting": {
+          "seconds": 0.21721840000827797,
+          "warnings": []
+        },
+        "mlp": {
+          "seconds": 8.975607900007162,
+          "warnings": [],
+          "epochs": 344
+        }
+      },
+      "source_target": "difference of consecutive hourly API-grid stored cumulative kWh samples",
+      "measurement_time_not_claimed": "Native acquisition times/physical hourly interval boundaries are not inferred from API-grid labels."
+    }
+  ],
+  "source_hashes": {
+    "work\\risk_adaptivity_revision\\external_heatpump\\hourly\\train_test_hourly_counters.csv": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da"
+  },
+  "protocol_lock_sha256": "abae34c65056b019ac01b443fa8ef880db50d80509f0a4827885f02b17b8da13",
+  "adapter_sha256": "4f88633d706a3cf131ddfb10cc659f207d997154bd126490cdabe8d4c22721a6",
+  "forecast_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+  "forecast_rows": 2232,
+  "no_retuning_retries_replacement": true,
+  "seconds": 22.734993799997028
+}

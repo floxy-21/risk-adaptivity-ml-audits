@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "check_kind": "Independent arithmetic and saved-dual verification; no recovery implementation or optimizer imported",
+  "consumers": 30,
+  "meter_days": 3210,
+  "cases": 19260,
+  "positive_cases": 899,
+  "positive_probability_batches": 3958,
+  "maximum_actual_width_discrepancy_scaled": 2.2733204207980862e-13,
+  "source_hashes": {
+    "outputs/study_holdout_consumers_predictions.csv": "6af5c1101850724b2067c14f3bc8abf891b1d12bd04fa3d4a5c24dbbbeb4c9d8",
+    "outputs/study_recovery.py": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241",
+    "outputs/study_archive_access.py": "de88aaf109b9534402c913789b81f992cd312dc2d17902e953b715198e2ae28b",
+    "outputs/study_period_archive.py": "258e29c41b18c11bf9f9a15aa9e7c9344d27f0aaa564d6f0d4723d91ce7abdf9",
+    "outputs/run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+    "work/new_direction_randomized/randomized_recovery_screen.py": "785629e8ccccb8503907f221d30ee382974af5d4681461d4ce9fbdf45b047d6a",
+    "work/randomized_tie_review/audit_ties.py": "86e66ba47cd14a7b45fb0aa281d4a372fc5002cc2a28cf567d4d799475fff874",
+    "work/randomized_recovery_root/compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d"
+  },
+  "protocol_sha256": "9b8352fc4a5dcdeb5bae50055e056fbd587f954b163c1d1d38ae768ebfde2fea",
+  "policy_sha256": "80f5210e70c7f4d8d6516f635ea8f227bf728996ecc377b4eb6cde04fac7c6a5",
+  "result_sha256": "62b9503e7d65fa813f634bff2aad5a7adb55deb09168f402c8c2e5d8e60282b7",
+  "checker_sha256": "152b6ab0f92d43e50777d1d4645825d3b430d5899919cff5cd24e3586ea431c1",
+  "checked_utc": "2026-10-11T00:53:47.295015+00:00"
+}

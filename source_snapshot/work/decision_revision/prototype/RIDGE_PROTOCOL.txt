@@ -1,0 +1,48 @@
+ML-GUIDED DEVELOPMENT EXTENSION (separate from the uniform diagnostic)
+
+Inputs and prior
+Use the existing frozen Ridge forecasts as positive profile weights within
+each original six-hour aggregate block. Clip negative forecasts to zero and
+set floor=1e-8*max(mean(nonnegative whole-block forecasts),1e-12), in the same
+energy units as the forecasts. Floor each profile weight at this value.
+Set alpha_i = kappa*6*weight_i/sum(whole-block weights).
+An all-zero Ridge block therefore receives equal alpha_i=kappa.
+
+These alpha values are constructed once from the whole block, before any
+queries. Conditioning on initially observed or subsequently queried targets
+retains each remaining coordinate's original alpha. For residual total E,
+Y_i/E follows Beta(alpha_i,sum(other remaining alpha)). The acquisition score
+is the probability that the post-query sharp paired-loss interval has one
+strict sign, evaluated analytically with the regularized incomplete beta
+function. Tie-break by worst remaining width, then coordinate index.
+
+Development selection (declared before running the grid)
+Fixed finite concentration grid: 0.5, 1, 2, 4, 8, 16.
+Run every concentration on all original validation cases, all six model pairs,
+all three frozen mask seeds. Stop after each individual query if the existing
+strict certificate is available; free exact-total closure is applied first.
+Choose the concentration with the smallest household-macro mean number of
+requests among initially uncertified cases, with smaller kappa breaking an
+exact tie. Report every grid result. No test case is evaluated.
+
+Any selected concentration must be frozen before a new confirmation cohort is
+evaluated. A development gain does not replace the earlier failed test's B80
+criterion or establish untouched-source generalization.
+
+Scope
+This is a query-selection surrogate, not a probabilistically calibrated model
+of actual household consumption. Exact all-completions validity of a returned
+certificate does not depend on the prior. The myopic objective is one-query
+certification probability, not globally optimal expected stopping cost.
+Queries are pair-specific hourly target records. No physical monetary savings
+or measured real-world recovery latency can be inferred from their counts.
+
+Executable
+work/review-env/Scripts/python.exe work/decision_revision/prototype/check_ridge.py
+work/review-env/Scripts/python.exe work/decision_revision/prototype/run_ridge_grid.py
+
+The grid creates ridge_grid/ and refuses to overwrite it. It writes hashes
+before outcomes and verifies those hashes after completing all cases.
+Trajectories retain fixed initial alpha and every candidate score, chosen
+reading, answer, before/after observation vectors, exact-total deductions,
+comparison endpoints, stopping status and accumulated request count.

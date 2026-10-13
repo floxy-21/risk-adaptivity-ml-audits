@@ -1,0 +1,2050 @@
+[
+  {
+    "cohort": "household",
+    "meter": "household_1",
+    "train_days": 587,
+    "test_days": 246,
+    "train_start": "2008-01-01",
+    "train_end": "2009-12-31",
+    "test_start": "2010-01-01",
+    "test_end": "2010-11-25",
+    "training_mean_kwh": 1.0645450927503313,
+    "fit_seconds": 15.321406000002753,
+    "model_fit_seconds": {
+      "ridge": 0.03203689999645576,
+      "hist_gradient_boosting": 0.3655873999960022,
+      "mlp": 14.842904599994654
+    },
+    "mlp_training": {
+      "epochs": 172,
+      "training_objective_loss": 0.15076320278971142,
+      "target_scale_training_mean_kwh": 1.0645450927503313,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 0.6287579790458441,
+      "ridge": 0.3887707908391019,
+      "hist_gradient_boosting": 0.3477185276555282,
+      "mlp": 0.38134242634911736
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "household"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_001",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 6.372245387156556,
+    "fit_seconds": 11.529774399998132,
+    "model_fit_seconds": {
+      "ridge": 0.010686599998734891,
+      "hist_gradient_boosting": 0.3780379000090761,
+      "mlp": 11.108385800005635
+    },
+    "mlp_training": {
+      "epochs": 238,
+      "training_objective_loss": 0.08405776727866378,
+      "target_scale_training_mean_kwh": 6.372245387156556,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 12.65831562940768,
+      "ridge": 8.110135793088972,
+      "hist_gradient_boosting": 10.123115707710724,
+      "mlp": 10.038379234688408
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_002",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 29.627281804139386,
+    "fit_seconds": 4.702606300008483,
+    "model_fit_seconds": {
+      "ridge": 0.017701700009638444,
+      "hist_gradient_boosting": 1.7753430000011576,
+      "mlp": 2.86806880000222
+    },
+    "mlp_training": {
+      "epochs": 30,
+      "training_objective_loss": 0.00455885220699815,
+      "target_scale_training_mean_kwh": 29.627281804139386,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 6.904761642489739,
+      "ridge": 5.014765825781718,
+      "hist_gradient_boosting": 4.9048133455553975,
+      "mlp": 6.265368238558743
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_003",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 2.1968930925975974,
+    "fit_seconds": 5.2270773999916855,
+    "model_fit_seconds": {
+      "ridge": 0.011526999995112419,
+      "hist_gradient_boosting": 0.5830786000005901,
+      "mlp": 4.6069499000004726
+    },
+    "mlp_training": {
+      "epochs": 59,
+      "training_objective_loss": 0.010343361268483453,
+      "target_scale_training_mean_kwh": 2.1968930925975974,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 0.19629483716664528,
+      "ridge": 0.06611486720976975,
+      "hist_gradient_boosting": 0.055410971469500706,
+      "mlp": 0.07472244911253083
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_004",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 108.14085119142507,
+    "fit_seconds": 3.9149207000009483,
+    "model_fit_seconds": {
+      "ridge": 0.016163599997526035,
+      "hist_gradient_boosting": 1.0352427000034368,
+      "mlp": 2.836501199999475
+    },
+    "mlp_training": {
+      "epochs": 33,
+      "training_objective_loss": 0.005630546631270154,
+      "target_scale_training_mean_kwh": 108.14085119142507,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 333.7868311943557,
+      "ridge": 179.7423063993262,
+      "hist_gradient_boosting": 170.7369090025023,
+      "mlp": 169.51211539777583
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_005",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 49.78760304934981,
+    "fit_seconds": 2.9476257000060286,
+    "model_fit_seconds": {
+      "ridge": 0.015391300010378473,
+      "hist_gradient_boosting": 0.4615312999958405,
+      "mlp": 2.4438852000021143
+    },
+    "mlp_training": {
+      "epochs": 36,
+      "training_objective_loss": 0.008919849874701529,
+      "target_scale_training_mean_kwh": 49.78760304934981,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 92.0374788501134,
+      "ridge": 66.2491820452709,
+      "hist_gradient_boosting": 57.35346151836496,
+      "mlp": 58.55153210173262
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_006",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 192.81566793384022,
+    "fit_seconds": 3.0556949000019813,
+    "model_fit_seconds": {
+      "ridge": 0.015594399999827147,
+      "hist_gradient_boosting": 0.8125525999930687,
+      "mlp": 2.203407699998934
+    },
+    "mlp_training": {
+      "epochs": 30,
+      "training_objective_loss": 0.005269722697597609,
+      "target_scale_training_mean_kwh": 192.81566793384022,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 826.4561391875674,
+      "ridge": 453.2828368432235,
+      "hist_gradient_boosting": 375.00010275180966,
+      "mlp": 417.98232326055796
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_007",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 7.488457979762472,
+    "fit_seconds": 8.206019899997045,
+    "model_fit_seconds": {
+      "ridge": 0.012585099990246817,
+      "hist_gradient_boosting": 0.40662979999615345,
+      "mlp": 7.768152399992687
+    },
+    "mlp_training": {
+      "epochs": 205,
+      "training_objective_loss": 0.01961320704078081,
+      "target_scale_training_mean_kwh": 7.488457979762472,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 18.222545151671575,
+      "ridge": 12.3429380228358,
+      "hist_gradient_boosting": 9.658520147032606,
+      "mlp": 14.679121768332546
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_008",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 260.78930449845484,
+    "fit_seconds": 1.74860130000161,
+    "model_fit_seconds": {
+      "ridge": 0.008572600010666065,
+      "hist_gradient_boosting": 0.3140417999966303,
+      "mlp": 1.410750300012296
+    },
+    "mlp_training": {
+      "epochs": 30,
+      "training_objective_loss": 0.003855278997650805,
+      "target_scale_training_mean_kwh": 260.78930449845484,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 1098.8484686557056,
+      "ridge": 557.1613979770008,
+      "hist_gradient_boosting": 467.72013559777054,
+      "mlp": 564.436822861214
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_009",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 54.185704001880474,
+    "fit_seconds": 5.034186999997473,
+    "model_fit_seconds": {
+      "ridge": 0.013209700002335012,
+      "hist_gradient_boosting": 1.0455495999922277,
+      "mlp": 3.953625499998452
+    },
+    "mlp_training": {
+      "epochs": 87,
+      "training_objective_loss": 0.020084354766646596,
+      "target_scale_training_mean_kwh": 54.185704001880474,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 175.08064712393656,
+      "ridge": 129.146880851855,
+      "hist_gradient_boosting": 116.88886283197796,
+      "mlp": 121.34597424130345
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_010",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 60.74813886127928,
+    "fit_seconds": 4.230879199996707,
+    "model_fit_seconds": {
+      "ridge": 0.007877099997131154,
+      "hist_gradient_boosting": 0.32748359999095555,
+      "mlp": 3.879448500010767
+    },
+    "mlp_training": {
+      "epochs": 99,
+      "training_objective_loss": 0.02840205764867967,
+      "target_scale_training_mean_kwh": 60.74813886127928,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 501.226901152566,
+      "ridge": 267.875953439788,
+      "hist_gradient_boosting": 237.4307266210031,
+      "mlp": 243.607719400628
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_011",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 39.681343849015,
+    "fit_seconds": 1.8133813999884296,
+    "model_fit_seconds": {
+      "ridge": 0.009313799993833527,
+      "hist_gradient_boosting": 0.3705986999993911,
+      "mlp": 1.4166699000052176
+    },
+    "mlp_training": {
+      "epochs": 31,
+      "training_objective_loss": 0.006182316736164521,
+      "target_scale_training_mean_kwh": 39.681343849015,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 37.66602701875265,
+      "ridge": 23.389264988497175,
+      "hist_gradient_boosting": 20.130230724972613,
+      "mlp": 22.76223024917885
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_013",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 74.29312935787915,
+    "fit_seconds": 4.072808600001736,
+    "model_fit_seconds": {
+      "ridge": 0.011116599998786114,
+      "hist_gradient_boosting": 0.38044300000183284,
+      "mlp": 3.66284319999977
+    },
+    "mlp_training": {
+      "epochs": 68,
+      "training_objective_loss": 0.010009274070660972,
+      "target_scale_training_mean_kwh": 74.29312935787915,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 1583.4795449052638,
+      "ridge": 315.9896659301208,
+      "hist_gradient_boosting": 205.57571197613032,
+      "mlp": 192.22831757147435
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_014",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 45.12144147171738,
+    "fit_seconds": 2.1543508999893675,
+    "model_fit_seconds": {
+      "ridge": 0.010850499995285645,
+      "hist_gradient_boosting": 0.519129399996018,
+      "mlp": 1.6102332000009483
+    },
+    "mlp_training": {
+      "epochs": 39,
+      "training_objective_loss": 0.007723703643435963,
+      "target_scale_training_mean_kwh": 45.12144147171738,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 146.94526368578912,
+      "ridge": 49.488208898944755,
+      "hist_gradient_boosting": 32.16068966411046,
+      "mlp": 37.461692423422996
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_016",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 33.381813241621636,
+    "fit_seconds": 2.0392439999995986,
+    "model_fit_seconds": {
+      "ridge": 0.007123600007616915,
+      "hist_gradient_boosting": 0.27916979999281466,
+      "mlp": 1.739480000003823
+    },
+    "mlp_training": {
+      "epochs": 43,
+      "training_objective_loss": 0.00788954417549122,
+      "target_scale_training_mean_kwh": 33.381813241621636,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 36.38346985297828,
+      "ridge": 22.602391092789414,
+      "hist_gradient_boosting": 17.69477104644497,
+      "mlp": 19.553195036792687
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_017",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 49.576198403889855,
+    "fit_seconds": 1.3854887000052258,
+    "model_fit_seconds": {
+      "ridge": 0.009358000010251999,
+      "hist_gradient_boosting": 0.28003589999570977,
+      "mlp": 1.0797351999935927
+    },
+    "mlp_training": {
+      "epochs": 29,
+      "training_objective_loss": 0.0038654275229541004,
+      "target_scale_training_mean_kwh": 49.576198403889855,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 35.721554606381936,
+      "ridge": 17.809600885675373,
+      "hist_gradient_boosting": 15.255003820975361,
+      "mlp": 19.72281243320634
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_018",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 250.15111209553046,
+    "fit_seconds": 2.335591299997759,
+    "model_fit_seconds": {
+      "ridge": 0.016744599997764453,
+      "hist_gradient_boosting": 0.5194938000058755,
+      "mlp": 1.7824582000030205
+    },
+    "mlp_training": {
+      "epochs": 42,
+      "training_objective_loss": 0.007266185179346528,
+      "target_scale_training_mean_kwh": 250.15111209553046,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 2205.3638565940932,
+      "ridge": 1126.7457366922742,
+      "hist_gradient_boosting": 815.7822068847686,
+      "mlp": 1031.8577640350538
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_019",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 8.222954173294108,
+    "fit_seconds": 1.623377799987793,
+    "model_fit_seconds": {
+      "ridge": 0.006533200008561835,
+      "hist_gradient_boosting": 0.28651959999115206,
+      "mlp": 1.312675199995283
+    },
+    "mlp_training": {
+      "epochs": 33,
+      "training_objective_loss": 0.008828962606179758,
+      "target_scale_training_mean_kwh": 8.222954173294108,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 2.25986816823358,
+      "ridge": 1.3608527922906157,
+      "hist_gradient_boosting": 1.182065037354678,
+      "mlp": 1.321484574049996
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_020",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 40.88838912951376,
+    "fit_seconds": 2.2874295999936294,
+    "model_fit_seconds": {
+      "ridge": 0.0076905000023543835,
+      "hist_gradient_boosting": 0.3710997000016505,
+      "mlp": 1.893024199991487
+    },
+    "mlp_training": {
+      "epochs": 43,
+      "training_objective_loss": 0.00955221661319412,
+      "target_scale_training_mean_kwh": 40.88838912951376,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 71.78739337961049,
+      "ridge": 47.605381697480595,
+      "hist_gradient_boosting": 43.5220809931815,
+      "mlp": 49.21102477402728
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_021",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 163.6066839475755,
+    "fit_seconds": 2.54930840000452,
+    "model_fit_seconds": {
+      "ridge": 0.012263099997653626,
+      "hist_gradient_boosting": 0.5810630000050878,
+      "mlp": 1.9311902000044938
+    },
+    "mlp_training": {
+      "epochs": 30,
+      "training_objective_loss": 0.005176424915852817,
+      "target_scale_training_mean_kwh": 163.6066839475755,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 872.8863861600468,
+      "ridge": 821.5209196396903,
+      "hist_gradient_boosting": 682.591867255066,
+      "mlp": 777.3623412775266
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_022",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 27.82935766668644,
+    "fit_seconds": 4.215305800011265,
+    "model_fit_seconds": {
+      "ridge": 0.01641449998714961,
+      "hist_gradient_boosting": 1.316709799997625,
+      "mlp": 2.854185599993798
+    },
+    "mlp_training": {
+      "epochs": 50,
+      "training_objective_loss": 0.013119070174560498,
+      "target_scale_training_mean_kwh": 27.82935766668644,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 124.09520633169309,
+      "ridge": 45.7905064197792,
+      "hist_gradient_boosting": 41.19013347622351,
+      "mlp": 39.53698626618219
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_023",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 9.272225270935108,
+    "fit_seconds": 2.2125296000012895,
+    "model_fit_seconds": {
+      "ridge": 0.012475700001232326,
+      "hist_gradient_boosting": 0.3222206000064034,
+      "mlp": 1.8547105000034207
+    },
+    "mlp_training": {
+      "epochs": 36,
+      "training_objective_loss": 0.012326955315173195,
+      "target_scale_training_mean_kwh": 9.272225270935108,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 4.1087043224822235,
+      "ridge": 2.6161393759458034,
+      "hist_gradient_boosting": 2.9479791370863806,
+      "mlp": 2.7805621957588937
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_024",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 31.571121818640574,
+    "fit_seconds": 3.171814599991194,
+    "model_fit_seconds": {
+      "ridge": 0.019627799993031658,
+      "hist_gradient_boosting": 0.8874236999981804,
+      "mlp": 2.221590000001015
+    },
+    "mlp_training": {
+      "epochs": 36,
+      "training_objective_loss": 0.008453399139969736,
+      "target_scale_training_mean_kwh": 31.571121818640574,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 38.59156316757564,
+      "ridge": 22.792768843256585,
+      "hist_gradient_boosting": 17.585567601970304,
+      "mlp": 18.629524736808573
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_025",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 222.33007299493005,
+    "fit_seconds": 2.242525599998771,
+    "model_fit_seconds": {
+      "ridge": 0.01599339999665972,
+      "hist_gradient_boosting": 0.5176649000059115,
+      "mlp": 1.6839177000074415
+    },
+    "mlp_training": {
+      "epochs": 39,
+      "training_objective_loss": 0.006407903569707853,
+      "target_scale_training_mean_kwh": 222.33007299493005,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 1582.506100466134,
+      "ridge": 973.1010059944244,
+      "hist_gradient_boosting": 875.2401645899691,
+      "mlp": 950.6473916919055
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_026",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 20.943889561474307,
+    "fit_seconds": 1.1899517999991076,
+    "model_fit_seconds": {
+      "ridge": 0.00725770001008641,
+      "hist_gradient_boosting": 0.2532606000022497,
+      "mlp": 0.9187922999990406
+    },
+    "mlp_training": {
+      "epochs": 34,
+      "training_objective_loss": 0.009507552484305612,
+      "target_scale_training_mean_kwh": 20.943889561474307,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 15.817082173275336,
+      "ridge": 7.792668419724356,
+      "hist_gradient_boosting": 6.232434295453763,
+      "mlp": 7.56300903686163
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_027",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 19.80357967385087,
+    "fit_seconds": 1.842007700004615,
+    "model_fit_seconds": {
+      "ridge": 0.0064864000014495105,
+      "hist_gradient_boosting": 0.354995500005316,
+      "mlp": 1.4687110999948345
+    },
+    "mlp_training": {
+      "epochs": 36,
+      "training_objective_loss": 0.008522638725954206,
+      "target_scale_training_mean_kwh": 19.80357967385087,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 11.20965112919792,
+      "ridge": 7.732470360234564,
+      "hist_gradient_boosting": 6.9457605990318525,
+      "mlp": 7.476830265989922
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_028",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 67.29965406117533,
+    "fit_seconds": 2.088687099996605,
+    "model_fit_seconds": {
+      "ridge": 0.007143300012103282,
+      "hist_gradient_boosting": 0.40086470000096597,
+      "mlp": 1.664992899997742
+    },
+    "mlp_training": {
+      "epochs": 35,
+      "training_objective_loss": 0.005822508326026685,
+      "target_scale_training_mean_kwh": 67.29965406117533,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 124.19583885856417,
+      "ridge": 55.937360532794926,
+      "hist_gradient_boosting": 42.57027600408948,
+      "mlp": 52.66577400533188
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_029",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 80.65727595567553,
+    "fit_seconds": 3.604223800008185,
+    "model_fit_seconds": {
+      "ridge": 0.009520599996903911,
+      "hist_gradient_boosting": 0.5120462000049883,
+      "mlp": 3.061988899993594
+    },
+    "mlp_training": {
+      "epochs": 52,
+      "training_objective_loss": 0.008089407548602968,
+      "target_scale_training_mean_kwh": 80.65727595567553,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 1032.291116494541,
+      "ridge": 297.71865429937105,
+      "hist_gradient_boosting": 179.65430563416274,
+      "mlp": 176.70372504291797
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_031",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 91.05743448695269,
+    "fit_seconds": 3.825727499992354,
+    "model_fit_seconds": {
+      "ridge": 0.01869490000535734,
+      "hist_gradient_boosting": 1.1895843999955105,
+      "mlp": 2.5888408000027994
+    },
+    "mlp_training": {
+      "epochs": 34,
+      "training_objective_loss": 0.0050401884542822005,
+      "target_scale_training_mean_kwh": 91.05743448695269,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 146.7486363005543,
+      "ridge": 80.13366939805351,
+      "hist_gradient_boosting": 59.16465742792841,
+      "mlp": 74.06820056836058
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_032",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 31.954357915656033,
+    "fit_seconds": 1.7419200000003912,
+    "model_fit_seconds": {
+      "ridge": 0.015191099999356084,
+      "hist_gradient_boosting": 0.3580106000008527,
+      "mlp": 1.3448434000019915
+    },
+    "mlp_training": {
+      "epochs": 32,
+      "training_objective_loss": 0.00988174283101083,
+      "target_scale_training_mean_kwh": 31.954357915656033,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 17.34008697099994,
+      "ridge": 12.498918119767485,
+      "hist_gradient_boosting": 13.32803426080589,
+      "mlp": 15.911805984425964
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal",
+    "meter": "MT_033",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 39.24074846967168,
+    "fit_seconds": 1.3859148000046844,
+    "model_fit_seconds": {
+      "ridge": 0.009752900004968978,
+      "hist_gradient_boosting": 0.29129619999730494,
+      "mlp": 1.0724975999910384
+    },
+    "mlp_training": {
+      "epochs": 29,
+      "training_objective_loss": 0.005168313360108586,
+      "target_scale_training_mean_kwh": 39.24074846967168,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 50.886216754007116,
+      "ridge": 17.73328007487689,
+      "hist_gradient_boosting": 14.158370840526644,
+      "mlp": 19.2515861719325
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "blem_counters",
+    "meter": "consumer_00000001",
+    "train_days": 266,
+    "test_days": 91,
+    "train_start": "2017-01-08",
+    "train_end": "2017-09-30",
+    "test_start": "2017-10-01",
+    "test_end": "2017-12-30",
+    "training_mean_kwh": 0.5207673878680451,
+    "fit_seconds": 7.9344832000060705,
+    "model_fit_seconds": {
+      "ridge": 0.009688799997093156,
+      "hist_gradient_boosting": 0.25842490000650287,
+      "mlp": 7.654098700004397
+    },
+    "mlp_training": {
+      "epochs": 255,
+      "training_objective_loss": 0.060198060129989586,
+      "target_scale_training_mean_kwh": 0.5207673878680451,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 0.09123980100339657,
+      "ridge": 0.05573316300054034,
+      "hist_gradient_boosting": 0.04734410901103725,
+      "mlp": 0.060745417998290786
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "blem_counters"
+  },
+  {
+    "cohort": "blem_counters",
+    "meter": "consumer_00000002",
+    "train_days": 266,
+    "test_days": 91,
+    "train_start": "2017-01-08",
+    "train_end": "2017-09-30",
+    "test_start": "2017-10-01",
+    "test_end": "2017-12-30",
+    "training_mean_kwh": 0.5984033920426065,
+    "fit_seconds": 8.792788800012204,
+    "model_fit_seconds": {
+      "ridge": 0.008589500008383766,
+      "hist_gradient_boosting": 0.4076327000075253,
+      "mlp": 8.360495399989304
+    },
+    "mlp_training": {
+      "epochs": 205,
+      "training_objective_loss": 0.06046261727871673,
+      "target_scale_training_mean_kwh": 0.5984033920426065,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 0.13679774586807866,
+      "ridge": 0.06966640181524583,
+      "hist_gradient_boosting": 0.06620537820887902,
+      "mlp": 0.08116563279073578
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "blem_counters"
+  },
+  {
+    "cohort": "blem_counters",
+    "meter": "consumer_00000003",
+    "train_days": 266,
+    "test_days": 91,
+    "train_start": "2017-01-08",
+    "train_end": "2017-09-30",
+    "test_start": "2017-10-01",
+    "test_end": "2017-12-30",
+    "training_mean_kwh": 0.38955500308107766,
+    "fit_seconds": 17.860384200001135,
+    "model_fit_seconds": {
+      "ridge": 0.014968799994676374,
+      "hist_gradient_boosting": 0.7534576000034576,
+      "mlp": 17.066175400002976
+    },
+    "mlp_training": {
+      "epochs": 443,
+      "training_objective_loss": 0.2751126831158769,
+      "target_scale_training_mean_kwh": 0.38955500308107766,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 0.2970585232033631,
+      "ridge": 0.16920165012878863,
+      "hist_gradient_boosting": 0.15053914727713777,
+      "mlp": 0.17627233407099774
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "blem_counters"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_081",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 99.03006991566679,
+    "fit_seconds": 1.5203831999970134,
+    "model_fit_seconds": {
+      "ridge": 0.011383700009901077,
+      "hist_gradient_boosting": 0.27888540001004003,
+      "mlp": 1.2108609999995679
+    },
+    "mlp_training": {
+      "epochs": 33,
+      "training_objective_loss": 0.005186720414360531,
+      "target_scale_training_mean_kwh": 99.03006991566679,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 194.97618117301732,
+      "ridge": 128.19698244093703,
+      "hist_gradient_boosting": 110.96426430289928,
+      "mlp": 126.82166266088089
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_082",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 45.07843289932253,
+    "fit_seconds": 1.2694697999977507,
+    "model_fit_seconds": {
+      "ridge": 0.011350399989169091,
+      "hist_gradient_boosting": 0.3042393999930937,
+      "mlp": 0.935456899998826
+    },
+    "mlp_training": {
+      "epochs": 34,
+      "training_objective_loss": 0.003376791014381101,
+      "target_scale_training_mean_kwh": 45.07843289932253,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 23.156941111679846,
+      "ridge": 15.205531596319082,
+      "hist_gradient_boosting": 13.50021117884619,
+      "mlp": 15.528863665834733
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_083",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 72.15315239185026,
+    "fit_seconds": 1.1504044000030262,
+    "model_fit_seconds": {
+      "ridge": 0.006392799987224862,
+      "hist_gradient_boosting": 0.23201629999675788,
+      "mlp": 0.9000535000086529
+    },
+    "mlp_training": {
+      "epochs": 28,
+      "training_objective_loss": 0.003979010766739411,
+      "target_scale_training_mean_kwh": 72.15315239185026,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 70.09401798515954,
+      "ridge": 40.00702985685199,
+      "hist_gradient_boosting": 30.62692071710405,
+      "mlp": 40.96716190504017
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_084",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 206.8424679998582,
+    "fit_seconds": 2.9495669000025373,
+    "model_fit_seconds": {
+      "ridge": 0.012694200006080791,
+      "hist_gradient_boosting": 0.3830772000073921,
+      "mlp": 2.53343809999933
+    },
+    "mlp_training": {
+      "epochs": 47,
+      "training_objective_loss": 0.00790235151995898,
+      "target_scale_training_mean_kwh": 206.8424679998582,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 5006.49600728788,
+      "ridge": 1319.9622268465396,
+      "hist_gradient_boosting": 1299.929727509207,
+      "mlp": 1305.382107835856
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_085",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 124.96266067090949,
+    "fit_seconds": 1.969938700000057,
+    "model_fit_seconds": {
+      "ridge": 0.0149018999945838,
+      "hist_gradient_boosting": 0.490490399999544,
+      "mlp": 1.439217599996482
+    },
+    "mlp_training": {
+      "epochs": 31,
+      "training_objective_loss": 0.005171885980132623,
+      "target_scale_training_mean_kwh": 124.96266067090949,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 291.3137740914048,
+      "ridge": 173.83276357705154,
+      "hist_gradient_boosting": 134.41525710279424,
+      "mlp": 165.5480799448938
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_086",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 444.1511253624257,
+    "fit_seconds": 2.4988916000002064,
+    "model_fit_seconds": {
+      "ridge": 0.011589599991566502,
+      "hist_gradient_boosting": 0.3825633999949787,
+      "mlp": 2.0867333999922266
+    },
+    "mlp_training": {
+      "epochs": 47,
+      "training_objective_loss": 0.009639711203108556,
+      "target_scale_training_mean_kwh": 444.1511253624257,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 7060.4138081307565,
+      "ridge": 5107.801635519367,
+      "hist_gradient_boosting": 3928.943105090669,
+      "mlp": 4208.782358117525
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_087",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 113.17715300720111,
+    "fit_seconds": 3.126573700006702,
+    "model_fit_seconds": {
+      "ridge": 0.011999800000921823,
+      "hist_gradient_boosting": 0.38173430001188535,
+      "mlp": 2.712608600006206
+    },
+    "mlp_training": {
+      "epochs": 60,
+      "training_objective_loss": 0.010111661958557693,
+      "target_scale_training_mean_kwh": 113.17715300720111,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 383.00052537737884,
+      "ridge": 191.6197255068911,
+      "hist_gradient_boosting": 194.57597899691459,
+      "mlp": 198.29729505771346
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_088",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 120.4520697167756,
+    "fit_seconds": 4.6547281999955885,
+    "model_fit_seconds": {
+      "ridge": 0.006567799995536916,
+      "hist_gradient_boosting": 0.27836710000701714,
+      "mlp": 4.355684099995415
+    },
+    "mlp_training": {
+      "epochs": 90,
+      "training_objective_loss": 0.01835133520137196,
+      "target_scale_training_mean_kwh": 120.4520697167756,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 1378.8320641513792,
+      "ridge": 703.031244338259,
+      "hist_gradient_boosting": 678.2705243757543,
+      "mlp": 826.902428104884
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_089",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 192.91806228664305,
+    "fit_seconds": 2.950387700009742,
+    "model_fit_seconds": {
+      "ridge": 0.013912900001741946,
+      "hist_gradient_boosting": 0.4208945999998832,
+      "mlp": 2.4914811000053305
+    },
+    "mlp_training": {
+      "epochs": 57,
+      "training_objective_loss": 0.007320896215207625,
+      "target_scale_training_mean_kwh": 192.91806228664305,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 1400.9121542159426,
+      "ridge": 723.0859108728243,
+      "hist_gradient_boosting": 604.7660062755341,
+      "mlp": 594.1576470903186
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_090",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 131.2938507702502,
+    "fit_seconds": 11.306154599995352,
+    "model_fit_seconds": {
+      "ridge": 0.010216099995886907,
+      "hist_gradient_boosting": 0.302632499995525,
+      "mlp": 10.973547500005225
+    },
+    "mlp_training": {
+      "epochs": 239,
+      "training_objective_loss": 0.020788444835674245,
+      "target_scale_training_mean_kwh": 131.2938507702502,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 9882.805931050601,
+      "ridge": 2827.851081002672,
+      "hist_gradient_boosting": 2003.7863236691119,
+      "mlp": 2980.086082900293
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_091",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 143.2149911332111,
+    "fit_seconds": 2.7422408999991603,
+    "model_fit_seconds": {
+      "ridge": 0.011620599994785152,
+      "hist_gradient_boosting": 0.3830004000046756,
+      "mlp": 2.3106352999893716
+    },
+    "mlp_training": {
+      "epochs": 32,
+      "training_objective_loss": 0.0060215698539270585,
+      "target_scale_training_mean_kwh": 143.2149911332111,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 553.870505977603,
+      "ridge": 322.3533445056266,
+      "hist_gradient_boosting": 356.7752659079622,
+      "mlp": 356.382154892208
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_093",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 24.305214894756553,
+    "fit_seconds": 15.075019199997769,
+    "model_fit_seconds": {
+      "ridge": 0.015436299989232793,
+      "hist_gradient_boosting": 0.6193408999970416,
+      "mlp": 14.415595100013888
+    },
+    "mlp_training": {
+      "epochs": 383,
+      "training_objective_loss": 0.4907267789782613,
+      "target_scale_training_mean_kwh": 24.305214894756553,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 3787.660865008753,
+      "ridge": 2181.5843742995394,
+      "hist_gradient_boosting": 1714.3621857910227,
+      "mlp": 2377.639227412109
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_094",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 25.46677673932972,
+    "fit_seconds": 5.746332499998971,
+    "model_fit_seconds": {
+      "ridge": 0.006635400000959635,
+      "hist_gradient_boosting": 0.21191479999106377,
+      "mlp": 5.512715999997454
+    },
+    "mlp_training": {
+      "epochs": 175,
+      "training_objective_loss": 0.15636713944571973,
+      "target_scale_training_mean_kwh": 25.46677673932972,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 714.6519026499709,
+      "ridge": 443.46468215496935,
+      "hist_gradient_boosting": 365.49378997643856,
+      "mlp": 385.4344834173817
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_095",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 16.58884044275996,
+    "fit_seconds": 4.676913799994509,
+    "model_fit_seconds": {
+      "ridge": 0.010562600000412203,
+      "hist_gradient_boosting": 0.42890949999855366,
+      "mlp": 4.218546899995999
+    },
+    "mlp_training": {
+      "epochs": 138,
+      "training_objective_loss": 0.0214814940619357,
+      "target_scale_training_mean_kwh": 16.58884044275996,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 100.34093439766683,
+      "ridge": 17.35986220386137,
+      "hist_gradient_boosting": 13.687774176745583,
+      "mlp": 15.753776066783347
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_096",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 10.814709941947795,
+    "fit_seconds": 3.7115918999916175,
+    "model_fit_seconds": {
+      "ridge": 0.010588999997708015,
+      "hist_gradient_boosting": 0.28785559999232646,
+      "mlp": 3.395057399990037
+    },
+    "mlp_training": {
+      "epochs": 115,
+      "training_objective_loss": 0.019509692162365172,
+      "target_scale_training_mean_kwh": 10.814709941947795,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 19.74847884649485,
+      "ridge": 5.458262146788793,
+      "hist_gradient_boosting": 4.555344232780332,
+      "mlp": 4.896067262974166
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_097",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 196.0884844133732,
+    "fit_seconds": 2.3235622999927728,
+    "model_fit_seconds": {
+      "ridge": 0.005556799995247275,
+      "hist_gradient_boosting": 0.22243819999857806,
+      "mlp": 2.085402000011527
+    },
+    "mlp_training": {
+      "epochs": 87,
+      "training_objective_loss": 0.009109093007954448,
+      "target_scale_training_mean_kwh": 196.0884844133732,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 7448.352077396376,
+      "ridge": 2258.4964168528404,
+      "hist_gradient_boosting": 1390.0161487252042,
+      "mlp": 1443.198931910721
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_098",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 660.8652247280021,
+    "fit_seconds": 1.4582642000023043,
+    "model_fit_seconds": {
+      "ridge": 0.006637300000875257,
+      "hist_gradient_boosting": 0.29332260000228416,
+      "mlp": 1.1449319000093965
+    },
+    "mlp_training": {
+      "epochs": 42,
+      "training_objective_loss": 0.005982668471300804,
+      "target_scale_training_mean_kwh": 660.8652247280021,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 6261.554840828141,
+      "ridge": 4450.3638738974805,
+      "hist_gradient_boosting": 4029.889103028385,
+      "mlp": 4602.286193659179
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_099",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 1186.0105370273109,
+    "fit_seconds": 1.3111283000034746,
+    "model_fit_seconds": {
+      "ridge": 0.005941800001892261,
+      "hist_gradient_boosting": 0.2355976999970153,
+      "mlp": 1.05801030001021
+    },
+    "mlp_training": {
+      "epochs": 41,
+      "training_objective_loss": 0.006496533771060445,
+      "target_scale_training_mean_kwh": 1186.0105370273109,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 49075.65881901441,
+      "ridge": 36200.64806724934,
+      "hist_gradient_boosting": 30428.94317049573,
+      "mlp": 31430.564460193025
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_100",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 62.28873873117821,
+    "fit_seconds": 2.652311199999531,
+    "model_fit_seconds": {
+      "ridge": 0.006594399994355626,
+      "hist_gradient_boosting": 0.21319470000162255,
+      "mlp": 2.4212557999999262
+    },
+    "mlp_training": {
+      "epochs": 98,
+      "training_objective_loss": 0.011320904091763048,
+      "target_scale_training_mean_kwh": 62.28873873117821,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 123.05643085457505,
+      "ridge": 103.88229009054903,
+      "hist_gradient_boosting": 95.63007651302082,
+      "mlp": 110.91783815428907
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_101",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 717.7453806725943,
+    "fit_seconds": 1.5198156999977073,
+    "model_fit_seconds": {
+      "ridge": 0.005417599997599609,
+      "hist_gradient_boosting": 0.24801219999790192,
+      "mlp": 1.2553686000028392
+    },
+    "mlp_training": {
+      "epochs": 40,
+      "training_objective_loss": 0.006544136309312031,
+      "target_scale_training_mean_kwh": 717.7453806725943,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 5223.416683350396,
+      "ridge": 4209.448375171941,
+      "hist_gradient_boosting": 3644.900797640004,
+      "mlp": 4732.414661196896
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_102",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 880.8676982461853,
+    "fit_seconds": 2.4088255999959074,
+    "model_fit_seconds": {
+      "ridge": 0.0094742000073893,
+      "hist_gradient_boosting": 0.3307080000085989,
+      "mlp": 2.0532029000023613
+    },
+    "mlp_training": {
+      "epochs": 47,
+      "training_objective_loss": 0.01153261230086739,
+      "target_scale_training_mean_kwh": 880.8676982461853,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 51630.17827579008,
+      "ridge": 30281.597316723717,
+      "hist_gradient_boosting": 26223.77323285848,
+      "mlp": 27073.422453559917
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_103",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 1132.6674243143584,
+    "fit_seconds": 2.3034289999923203,
+    "model_fit_seconds": {
+      "ridge": 0.008097099998849444,
+      "hist_gradient_boosting": 0.413401600002544,
+      "mlp": 1.8676320999948075
+    },
+    "mlp_training": {
+      "epochs": 29,
+      "training_objective_loss": 0.003918872750759045,
+      "target_scale_training_mean_kwh": 1132.6674243143584,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 9742.473340479388,
+      "ridge": 7848.199255785169,
+      "hist_gradient_boosting": 7402.32381385576,
+      "mlp": 8730.332928368285
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_104",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 541.4363022436697,
+    "fit_seconds": 1.6076331000076607,
+    "model_fit_seconds": {
+      "ridge": 0.009381299998494796,
+      "hist_gradient_boosting": 0.29743709998729173,
+      "mlp": 1.2812125999917043
+    },
+    "mlp_training": {
+      "epochs": 30,
+      "training_objective_loss": 0.005282668168878526,
+      "target_scale_training_mean_kwh": 541.4363022436697,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 3343.2249279741977,
+      "ridge": 2447.818450956384,
+      "hist_gradient_boosting": 1805.689443831677,
+      "mlp": 2784.6263808637086
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_105",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 220.97669389040757,
+    "fit_seconds": 2.9599076000013156,
+    "model_fit_seconds": {
+      "ridge": 0.0111756999976933,
+      "hist_gradient_boosting": 0.2969870000088122,
+      "mlp": 2.6360828999895602
+    },
+    "mlp_training": {
+      "epochs": 76,
+      "training_objective_loss": 0.013811140732093184,
+      "target_scale_training_mean_kwh": 220.97669389040757,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 2243.463971286117,
+      "ridge": 1636.0871571411358,
+      "hist_gradient_boosting": 1654.7479874304124,
+      "mlp": 1663.4260832884968
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_114",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 299.94519883008394,
+    "fit_seconds": 2.229073199996492,
+    "model_fit_seconds": {
+      "ridge": 0.006247500001336448,
+      "hist_gradient_boosting": 0.24169320000510197,
+      "mlp": 1.967150099997525
+    },
+    "mlp_training": {
+      "epochs": 53,
+      "training_objective_loss": 0.008259692623767119,
+      "target_scale_training_mean_kwh": 299.94519883008394,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 4867.944151439086,
+      "ridge": 2378.4680676872867,
+      "hist_gradient_boosting": 1815.8794996070985,
+      "mlp": 2089.7936012586806
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_118",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 100.7750955610126,
+    "fit_seconds": 1.5352125000063097,
+    "model_fit_seconds": {
+      "ridge": 0.012048199991113506,
+      "hist_gradient_boosting": 0.38977920000615995,
+      "mlp": 1.1199010999989696
+    },
+    "mlp_training": {
+      "epochs": 35,
+      "training_objective_loss": 0.006283476735648097,
+      "target_scale_training_mean_kwh": 100.7750955610126,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 131.26360156738613,
+      "ridge": 111.31259387582274,
+      "hist_gradient_boosting": 108.51366932173512,
+      "mlp": 135.0979141698614
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_119",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 80.67330877386416,
+    "fit_seconds": 1.9807739999960177,
+    "model_fit_seconds": {
+      "ridge": 0.007079000002704561,
+      "hist_gradient_boosting": 0.24782619999314193,
+      "mlp": 1.714206099990406
+    },
+    "mlp_training": {
+      "epochs": 45,
+      "training_objective_loss": 0.009466714158626878,
+      "target_scale_training_mean_kwh": 80.67330877386416,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 251.42815839231744,
+      "ridge": 120.04108736123077,
+      "hist_gradient_boosting": 85.43528135402534,
+      "mlp": 86.60456314366773
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_123",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 62.19375143825235,
+    "fit_seconds": 4.208065400001942,
+    "model_fit_seconds": {
+      "ridge": 0.012341900001047179,
+      "hist_gradient_boosting": 0.4293559999932768,
+      "mlp": 3.7514326000091387
+    },
+    "mlp_training": {
+      "epochs": 69,
+      "training_objective_loss": 0.011482390920495425,
+      "target_scale_training_mean_kwh": 62.19375143825235,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 377.04563707051386,
+      "ridge": 115.2364326271189,
+      "hist_gradient_boosting": 98.93179390263795,
+      "mlp": 99.73085022477115
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_124",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 276.1532842802193,
+    "fit_seconds": 1.7701671000104398,
+    "model_fit_seconds": {
+      "ridge": 0.00873860000865534,
+      "hist_gradient_boosting": 0.2783925000112504,
+      "mlp": 1.4647083000018029
+    },
+    "mlp_training": {
+      "epochs": 39,
+      "training_objective_loss": 0.0067146052574738576,
+      "target_scale_training_mean_kwh": 276.1532842802193,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 2980.788133608996,
+      "ridge": 1542.33898262876,
+      "hist_gradient_boosting": 1132.475615958427,
+      "mlp": 1308.9036797191263
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  },
+  {
+    "cohort": "portugal_new_consumers",
+    "meter": "MT_125",
+    "train_days": 357,
+    "test_days": 107,
+    "train_start": "2013-01-01",
+    "train_end": "2013-12-31",
+    "test_start": "2014-01-01",
+    "test_end": "2014-10-25",
+    "training_mean_kwh": 37.83038326113311,
+    "fit_seconds": 2.1373925999942003,
+    "model_fit_seconds": {
+      "ridge": 0.011013099996489473,
+      "hist_gradient_boosting": 0.28985760000068694,
+      "mlp": 1.821630799997365
+    },
+    "mlp_training": {
+      "epochs": 47,
+      "training_objective_loss": 0.007644686822106472,
+      "target_scale_training_mean_kwh": 37.83038326113311,
+      "warnings": []
+    },
+    "mse": {
+      "daily": 45.98536733234295,
+      "ridge": 27.466025125551983,
+      "hist_gradient_boosting": 18.7013244984945,
+      "mlp": 23.441669915296988
+    },
+    "status": "passed",
+    "additional_warnings": [],
+    "fit_cohort": "portugal"
+  }
+]

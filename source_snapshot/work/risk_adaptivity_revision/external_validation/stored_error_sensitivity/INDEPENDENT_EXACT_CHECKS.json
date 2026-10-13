@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "certificate_count": 49,
+  "rational_matrix_checks": 49,
+  "inherited_rational_upper_checks": 49,
+  "smallest_rigorous_margin_exact": "62690716363030944789827837795111/16676489784621688173380802655027200",
+  "smallest_rigorous_margin_float": 0.0037592273417659822,
+  "certificates_sha256": "935e6c7e75900a012ca44b41955fbd3e28ce094a1479ea925e5300bbc9d235dd",
+  "seconds": 1.2162950999918394,
+  "claim": "Rigorous support-defined adaptive precision guarantee; no exact optimum or physical calibration claim."
+}

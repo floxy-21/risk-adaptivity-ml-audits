@@ -1,0 +1,18 @@
+Public interface semantics check, before any July test-data retrieval
+
+Primary controller inspected:
+https://github.com/openenergymonitor/heatpumpmonitor.org/blob/main/www/Modules/timeseries/timeseries_controller.php
+The public route forwards interval, average, delta, timeformat and skipmissing=0 to configured backend feed/data.json. It does not forward limitinterval. Private backend URL, API key and feed IDs are intentionally removed from public metadata; this study does not attempt to recover them.
+
+Documented variable-interval behavior:
+https://docs.openenergymonitor.org/emoncms/developer/timeseries/Variable-interval.html
+https://github.com/emoncms/emoncms/blob/master/Modules/feed/engine/PHPTimeSeries.php
+For average=0, the first stored point at or after the requested time is selected if it is before that requested interval's end. The normal returned timestamp is the requested interval start. Native timestamp is exposed only when limitinterval=2. This is a conditional description of PHPTimeSeries, not proof that a selected installation uses this backend. ID1's noninteger metadata interval motivates the issue but does not establish engine identity.
+
+Consequences:
+1. Returned timestamp equality to the requested UTC grid does not prove native measurement equality to that timestamp.
+2. Point and full-range requests must use the same interval=3600 to preserve the observation operator. A point request may use start=t,end=t+1,interval=3600 (one output grid point); start=end is rejected by some backends. Verify in the operational probe and record failures, not silently change intervals.
+3. Nonnegative consecutive hourly API-grid cumulative differences are an explicitly defined recorded-data target. Do not call them physically exact clock-hour consumption without additional provenance.
+4. Data retrieval now does not establish historic arrival timestamps. No measured intraday availability/latency claim follows from this cache.
+5. The training CSV includes requested_timestamp_utc and returned_timestamp_utc separately; source_timestamp_utc is intentionally empty. No native-time or quantization bound is imputed.
+6. Class1 meter metadata does not resolve unknown upstream integration, gap-joining, counter mode or sampling-time error. A realistic physical-error guarantee remains conditional on stated measurement assumptions and needs robust evaluation beyond exact stored values.

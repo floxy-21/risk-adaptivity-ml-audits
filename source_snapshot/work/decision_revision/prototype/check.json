@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "instances": 200,
+  "queries": 800,
+  "quadrature_points_per_query": 50000,
+  "max_quadrature_probability_error": 1.722228010059279e-05,
+  "max_vertex_endpoint_error": 8.881784197001252e-15,
+  "scope": "Synthetic numerical validation of exact one-step probability only; no stopping optimality claim."
+}

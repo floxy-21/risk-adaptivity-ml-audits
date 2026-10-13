@@ -1,0 +1,43 @@
+\begin{proposition}[A half-success floor for two-register adaptation]
+\label{prop:counter-half-floor}
+In the cumulative-counter model, suppose a deterministic two-query
+adaptive policy guarantees terminal width at most $\tau$ for every
+feasible completion. Then a randomized nonadaptive policy supported on
+at most two batches has worst-case precision success at least $1/2$.
+Consequently, an adverse-profile upper certificate $U(\tau)=1/2$
+establishes the exact optimal randomized-batch success on such an instance.
+\end{proposition}
+\begin{proof}
+If the initial width is already at most $\tau$, a fixed batch trivially
+succeeds. Otherwise $E>0$, and let $k$ be the first query of the
+guaranteeing policy. Its normalized first answer lies in
+$[0,1]$. For each eligible second query $j$, define
+\[
+ G_j=\{t\in[0,1]:EL_{kj}(t)\leq\tau\}.
+\]
+Because $L_{kj}$ is affine, $G_j$ is empty, all of $[0,1]$, a closed
+prefix interval, or a closed suffix interval. The adaptive guarantee
+implies $\bigcup_jG_j=[0,1]$: at each first answer, its chosen second
+query must have conditional worst width at most $\tau$.
+An execution stopping after the first query can be extended by an unused
+second register without increasing width, so such stopping creates no exception.
+
+If some $G_j=[0,1]$, the fixed batch $\{k,j\}$ always succeeds.
+Otherwise, choose the longest prefix interval $[0,a]$ and the suffix
+interval $[b,1]$ with smallest left endpoint. Both exist because the
+union contains the two endpoints, and $a\geq b$ because the union has
+no gap. These two intervals therefore cover $[0,1]$.
+Select the corresponding fixed batches with probability $1/2$ each.
+For any fixed completion, its first answer belongs to at least one of
+the two good intervals, and that batch's actual terminal width is bounded
+by its conditional worst width. Thus the success probability is at least
+$1/2$ at every completion. This matches an upper certificate of $1/2$
+when one exists. Endpoint equality counts as success throughout.
+\end{proof}
+
+For a deterministic construction, among tied longest prefixes or earliest
+suffixes choose the smallest second-query index. This choice depends only
+on the coefficient geometry, not on the observed internal registers.
+The proposition concerns a fixed two-query budget and this scalar-prefix
+information model; it does not assert that arbitrary-budget or arbitrary
+query families have the same floor.

@@ -1,0 +1,93 @@
+{
+  "completed_utc": "2026-10-10T00:59:23.805738+00:00",
+  "cohort": "portugal",
+  "meter": "MT_002",
+  "day": "2014-01-01",
+  "prediction_a": "mlp",
+  "prediction_b": "hist_gradient_boosting",
+  "selection_rule": "First chronologically unresolved pre-recovery case; date then meter ID; no conditioning on post-query outcome",
+  "mask_seed": 1103,
+  "gap_hours": 6,
+  "block_hours": 6,
+  "query_budget": 2,
+  "missing_indices": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "missing_timestamps": [
+    "2014-01-01T04:00:00",
+    "2014-01-01T05:00:00",
+    "2014-01-01T06:00:00",
+    "2014-01-01T07:00:00",
+    "2014-01-01T08:00:00",
+    "2014-01-01T09:00:00"
+  ],
+  "block_totals_kwh": [
+    136.5576102418207,
+    154.33854907539114,
+    173.71977240398286,
+    160.02844950213372
+  ],
+  "before_interval_mse_a_minus_b": [
+    -9.29555819305666,
+    12.735951083463863
+  ],
+  "query_indices": [
+    6,
+    8
+  ],
+  "queries": [
+    {
+      "timestamp": "2014-01-01T06:00:00",
+      "value_kwh": 21.692745376955894
+    },
+    {
+      "timestamp": "2014-01-01T08:00:00",
+      "value_kwh": 23.293029871977225
+    }
+  ],
+  "query_count": 2,
+  "after_interval_mse_a_minus_b": [
+    -1.6243130586950858,
+    -0.5289061736259476
+  ],
+  "after_decision": "MLP",
+  "worst_case_width_before": 22.031509276520527,
+  "worst_case_width_after": 1.7302271614300468,
+  "reference_full_data_gap_for_verification_only": -1.1003817905505497,
+  "witness_validation": {
+    "before": {
+      "nonnegative": true,
+      "observed_coordinates_preserved": true,
+      "maximum_block_total_absolute_error_kwh": 0.0,
+      "evaluated_mse_difference_endpoints": [
+        -9.29555819305666,
+        12.735951083463863
+      ],
+      "matches_reported_interval": true
+    },
+    "after": {
+      "nonnegative": true,
+      "observed_coordinates_preserved": true,
+      "maximum_block_total_absolute_error_kwh": 0.0,
+      "evaluated_mse_difference_endpoints": [
+        -1.6243130586950858,
+        -0.5289061736259476
+      ],
+      "matches_reported_interval": true
+    }
+  },
+  "source_semantics": "Same archived Portugal traces; controlled verification mask and simulated retrieval; supplied totals constructed from complete trace",
+  "hashes": {
+    "script": "79b06a66f7ab89184820eb15e77817e12d0c9bc6b4a593f3c568c167f367cbb2",
+    "predictions": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+    "main_summary": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196",
+    "recovery_source": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241",
+    "protocol": "cd73db39d40e81b8fb9928f5b21fad77eb75c38a2b1af037e288c4270b9b713f",
+    "table": "06828c5607365626fe060aae1e5ad65d7c766316033d1df20d785675c14acd22"
+  }
+}

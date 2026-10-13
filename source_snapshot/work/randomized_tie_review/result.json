@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-11T00:42:00.633835+00:00",
+  "seconds": 21.059465600003023,
+  "case_count": 20736,
+  "positive_cases": 1074,
+  "secondary_lp_count": 2148,
+  "cohort_summary": [
+    {
+      "cohort": "household",
+      "meters": 1,
+      "cases": 1476,
+      "deterministic_worst_width": 0.22038075515037034,
+      "randomized_worst_expected_width": 0.2056970640892788,
+      "deterministic_actual_width": 0.14142707595893048,
+      "randomized_expected_actual_width": 0.15705537347549803,
+      "deterministic_certification": 0.9884823848238482,
+      "randomized_expected_certification": 0.9873368341699862,
+      "dominance_worst_width": 0.20569706408927887,
+      "reference_worst_width": 0.20569706408927887,
+      "dominance_actual_width": 0.1570553734754981,
+      "reference_actual_width": 0.15705537347546009,
+      "dominance_certification": 0.9873368341699861,
+      "reference_certification": 0.98733683416994,
+      "dominance_queries": 0.23577235772357724,
+      "reference_queries": 0.23577235772357724
+    },
+    {
+      "cohort": "portugal",
+      "meters": 30,
+      "cases": 19260,
+      "deterministic_worst_width": 0.2959526986435496,
+      "randomized_worst_expected_width": 0.26672620943432235,
+      "deterministic_actual_width": 0.20153795749317638,
+      "randomized_expected_actual_width": 0.23669984994570695,
+      "deterministic_certification": 0.9879543094496367,
+      "randomized_expected_certification": 0.9868832368948005,
+      "dominance_worst_width": 0.2667262094343254,
+      "reference_worst_width": 0.2667262094343223,
+      "dominance_actual_width": 0.23669984994570856,
+      "reference_actual_width": 0.23669984994569712,
+      "dominance_certification": 0.9868832368947996,
+      "reference_certification": 0.9868832368948021,
+      "dominance_queries": 0.0934579439252336,
+      "reference_queries": 0.0934579439252336
+    }
+  ],
+  "checks": {
+    "dominance": {
+      "realized_improved_vs_original": 0,
+      "realized_worsened_vs_original": 0,
+      "realized_tied_vs_original": 1074,
+      "secondary_strictly_improved": 0,
+      "max_primary_gap": 1.956212969389526e-12,
+      "max_dominance_violation": 5.7495674887775294e-12,
+      "max_secondary_primal_violation": 5.7495674887775294e-12,
+      "max_secondary_dual_residual": 1.8189894035458565e-12,
+      "max_secondary_duality_gap": 1.4258871861017042e-12
+    },
+    "reference": {
+      "realized_improved_vs_original": 0,
+      "realized_worsened_vs_original": 0,
+      "realized_tied_vs_original": 1074,
+      "secondary_strictly_improved": 0,
+      "max_primary_gap": 8.931744233109384e-14,
+      "max_dominance_violation": 2.041700142285663e-13,
+      "max_secondary_primal_violation": 1.3940237852949622e-14,
+      "max_secondary_dual_residual": 1.8189894035458565e-12,
+      "max_secondary_duality_gap": 3.036182416593647e-13
+    }
+  },
+  "maximum_width_identity_error_scaled": 1.817296313433303e-14,
+  "exact_example": {
+    "coefficients": [
+      0,
+      0,
+      2,
+      3
+    ],
+    "total": 1,
+    "budget": 1,
+    "bad_expected_coefficients": [
+      "2",
+      "2",
+      "2",
+      "2"
+    ],
+    "good_expected_coefficients": [
+      "2",
+      "2",
+      "2",
+      "0"
+    ],
+    "minimax_value": 2,
+    "exact_fraction_check": "passed"
+  },
+  "selection_completed_before_reference_read": true,
+  "selection_sha256": "0d80ab7548ac0a37b08088d02b77ff80d1e992adb2ecd5deefe4f72b7e8036ae",
+  "source_hashes": {
+    "work\\new_direction_randomized\\lp_solutions.jsonl": "ec5a31615ccc2e74f9c91bcd065eae392f1a4729d56d327a6a47eb4ab5ef2226",
+    "work\\new_direction_randomized\\cases.csv": "347b95b780a11d5c35882cf9d206bec642bf26ab7b10321f8ff92b881b71ecef",
+    "work\\randomized_tie_review\\protocol.txt": "e5747f0f18b7b07bd908377bd5e094545cf41f2c4c6178b035005cd26c85bdfa",
+    "outputs\\review_frozen_forecasts.csv": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0"
+  },
+  "script_sha256": "86e66ba47cd14a7b45fb0aa281d4a372fc5002cc2a28cf567d4d799475fff874",
+  "support_rows": 4693
+}

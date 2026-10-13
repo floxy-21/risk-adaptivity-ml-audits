@@ -1,0 +1,5 @@
+cohort,regime,comparisons,paired_allow,paired_hold,paired_contradict,separate_allow,separate_hold,separate_contradict,no_strict_donor_proposal,additional_allowed,held_reduction_percent,paired_allow_percent,separate_allow_percent,held_with_opposite_completion,donor_wrong_reference_after_gate,paired_wrong_reference_after_gate
+household,restricted_daily_product_closed,324,102,222,0,45,279,0,0,57,20.43010752688172,31.48148148148148,13.88888888888889,222,1,0
+household,saved_forecast_archive_closed,324,261,63,0,105,219,0,0,156,71.23287671232876,80.55555555555556,32.407407407407405,63,0,0
+portugal,restricted_daily_product_closed,9720,2422,7298,0,238,9482,0,0,2184,23.03311537650285,24.91769547325103,2.448559670781893,7298,75,0
+portugal,saved_forecast_archive_closed,9720,7836,1884,0,2513,7207,0,0,5323,73.85874843901762,80.61728395061728,25.853909465020575,1884,0,0

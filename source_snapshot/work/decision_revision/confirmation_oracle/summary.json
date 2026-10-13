@@ -1,0 +1,370 @@
+{
+  "status": "passed",
+  "scope": "Hindsight enumeration after completed acquisition; hidden values never supplied to policies. Every strictly certifying trace costs at least its per-case minimum. Report every policy; this is not new-method superiority.",
+  "cases": 17946,
+  "subsets_checked": 87732,
+  "squared_loss_vertices_checked": 94496,
+  "maximum_vertex_endpoint_discrepancy": 2.6922908347160046e-15,
+  "summaries": [
+    {
+      "population": "all",
+      "policy": "hara_one",
+      "all_cases": 17946,
+      "strictly_certifiable_cases": 17946,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 0.95582165285758,
+      "oracle_macro_mean_requests_on_same_cases": 0.6728238884440119,
+      "ratio_of_macro_means": 1.420611945078281,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.3999826818237895,
+        1.4410565756097287
+      ],
+      "ratio_at_most_1_10": false,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "all",
+      "policy": "ml_decision",
+      "all_cases": 17946,
+      "strictly_certifiable_cases": 17946,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 0.7152392624268068,
+      "oracle_macro_mean_requests_on_same_cases": 0.6728238884440119,
+      "ratio_of_macro_means": 1.0630408264499729,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.0509564656700519,
+        1.0800759069856818
+      ],
+      "ratio_at_most_1_10": true,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "all",
+      "policy": "randomized_one",
+      "all_cases": 17946,
+      "strictly_certifiable_cases": 17946,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 0.7437807541811656,
+      "oracle_macro_mean_requests_on_same_cases": 0.6728238884440119,
+      "ratio_of_macro_means": 1.1054612759086933,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.091498007135457,
+        1.1228568667089134
+      ],
+      "ratio_at_most_1_10": false,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "all",
+      "policy": "uniform_decision",
+      "all_cases": 17946,
+      "strictly_certifiable_cases": 17946,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 0.7231927744234453,
+      "oracle_macro_mean_requests_on_same_cases": 0.6728238884440119,
+      "ratio_of_macro_means": 1.0748619168322304,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.061208545791993,
+        1.0937106045838532
+      ],
+      "ratio_at_most_1_10": true,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "all",
+      "policy": "uniform_one",
+      "all_cases": 17946,
+      "strictly_certifiable_cases": 17946,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 1.0770167363833132,
+      "oracle_macro_mean_requests_on_same_cases": 0.6728238884440119,
+      "ratio_of_macro_means": 1.6007409292111299,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.554101941268223,
+        1.6659587632786628
+      ],
+      "ratio_at_most_1_10": false,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "all",
+      "policy": "width_one",
+      "all_cases": 17946,
+      "strictly_certifiable_cases": 17946,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 0.7202126504953147,
+      "oracle_macro_mean_requests_on_same_cases": 0.6728238884440119,
+      "ratio_of_macro_means": 1.0704326390088426,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.0591794751367074,
+        1.084773524044122
+      ],
+      "ratio_at_most_1_10": true,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "initially_uncertified",
+      "policy": "hara_one",
+      "all_cases": 6997,
+      "strictly_certifiable_cases": 6997,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 2.433365945911212,
+      "oracle_macro_mean_requests_on_same_cases": 1.690503394295596,
+      "ratio_of_macro_means": 1.4394327477379327,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.4055266239968724,
+        1.4881342426351678
+      ],
+      "ratio_at_most_1_10": false,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "initially_uncertified",
+      "policy": "ml_decision",
+      "all_cases": 6997,
+      "strictly_certifiable_cases": 6997,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 1.8300396171801536,
+      "oracle_macro_mean_requests_on_same_cases": 1.690503394295596,
+      "ratio_of_macro_means": 1.0825412260959701,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.0516337809846976,
+        1.1386338993111662
+      ],
+      "ratio_at_most_1_10": true,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "initially_uncertified",
+      "policy": "randomized_one",
+      "all_cases": 6997,
+      "strictly_certifiable_cases": 6997,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 1.8969174333573908,
+      "oracle_macro_mean_requests_on_same_cases": 1.690503394295596,
+      "ratio_of_macro_means": 1.1221021145289116,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.0939784049557317,
+        1.1682615662958804
+      ],
+      "ratio_at_most_1_10": false,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "initially_uncertified",
+      "policy": "uniform_decision",
+      "all_cases": 6997,
+      "strictly_certifiable_cases": 6997,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 1.8541585683431219,
+      "oracle_macro_mean_requests_on_same_cases": 1.690503394295596,
+      "ratio_of_macro_means": 1.09680854507584,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.0629192263869165,
+        1.156967397117471
+      ],
+      "ratio_at_most_1_10": true,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "initially_uncertified",
+      "policy": "uniform_one",
+      "all_cases": 6997,
+      "strictly_certifiable_cases": 6997,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 2.745673472690573,
+      "oracle_macro_mean_requests_on_same_cases": 1.690503394295596,
+      "ratio_of_macro_means": 1.6241750723219626,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.5663740122085068,
+        1.7035315385013423
+      ],
+      "ratio_at_most_1_10": false,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "initially_uncertified",
+      "policy": "width_one",
+      "all_cases": 6997,
+      "strictly_certifiable_cases": 6997,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 1.848035909237239,
+      "oracle_macro_mean_requests_on_same_cases": 1.690503394295596,
+      "ratio_of_macro_means": 1.0931867486768838,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.0612725586250746,
+        1.1528548648520232
+      ],
+      "ratio_at_most_1_10": true,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "learned_initially_uncertified",
+      "policy": "hara_one",
+      "all_cases": 3810,
+      "strictly_certifiable_cases": 3810,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 2.539090618320243,
+      "oracle_macro_mean_requests_on_same_cases": 1.7456727962204757,
+      "ratio_of_macro_means": 1.454505462774915,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.410508822091762,
+        1.5225722707718896
+      ],
+      "ratio_at_most_1_10": false,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "learned_initially_uncertified",
+      "policy": "ml_decision",
+      "all_cases": 3810,
+      "strictly_certifiable_cases": 3810,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 1.8957467420177068,
+      "oracle_macro_mean_requests_on_same_cases": 1.7456727962204757,
+      "ratio_of_macro_means": 1.0859691152443651,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.0509937958459634,
+        1.1489242572751235
+      ],
+      "ratio_at_most_1_10": true,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "learned_initially_uncertified",
+      "policy": "randomized_one",
+      "all_cases": 3810,
+      "strictly_certifiable_cases": 3810,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 1.9657523506167611,
+      "oracle_macro_mean_requests_on_same_cases": 1.7456727962204757,
+      "ratio_of_macro_means": 1.1260714807911172,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.0936326015437665,
+        1.1777902337369965
+      ],
+      "ratio_at_most_1_10": false,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "learned_initially_uncertified",
+      "policy": "uniform_decision",
+      "all_cases": 3810,
+      "strictly_certifiable_cases": 3810,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 1.9190644023167762,
+      "oracle_macro_mean_requests_on_same_cases": 1.7456727962204757,
+      "ratio_of_macro_means": 1.0993265212539873,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.062165207403046,
+        1.1636868885770837
+      ],
+      "ratio_at_most_1_10": true,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "learned_initially_uncertified",
+      "policy": "uniform_one",
+      "all_cases": 3810,
+      "strictly_certifiable_cases": 3810,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 2.803181798285983,
+      "oracle_macro_mean_requests_on_same_cases": 1.7456727962204757,
+      "ratio_of_macro_means": 1.6057887849057972,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.5487940789022085,
+        1.685516880222539
+      ],
+      "ratio_at_most_1_10": false,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    },
+    {
+      "population": "learned_initially_uncertified",
+      "policy": "width_one",
+      "all_cases": 3810,
+      "strictly_certifiable_cases": 3810,
+      "no_finite_strict_oracle_cases": 0,
+      "households": 19,
+      "policy_macro_mean_requests_on_certifiable_cases": 1.909600934297556,
+      "oracle_macro_mean_requests_on_same_cases": 1.7456727962204757,
+      "ratio_of_macro_means": 1.0939054205530372,
+      "descriptive_household_bootstrap_ratio_95": [
+        1.061036729446265,
+        1.1512497160820911
+      ],
+      "ratio_at_most_1_10": true,
+      "all_case_strict_coverage_at_cap": 1.0,
+      "unresolved_final_cases": 0,
+      "numerical_tie_final_cases": 0
+    }
+  ],
+  "seconds": 17.142585399997188,
+  "tie_rule": "No finite strict certificate is reported as missing oracle cost and retained in all-case coverage/counts. Ratios use exactly matched certifiable cases per household; zero denominator gives no ratio.",
+  "weighting": "Same household weights for policy and oracle; ratio of macro means, not mean of case ratios.",
+  "bootstrap": "2000 paired household resamples, seed8241; descriptive deterministic-panel stability, not a population confidence guarantee.",
+  "inputs": {
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\confirmation\\source_cases.jsonl": "f82d9cbe6e5a1aca250fbecfba55e81add549d5f14d2fceb76ceb1e15797e31e",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\confirmation_fitted\\reference_targets.csv": "1a59d52260fed1a94929406b076ad647512454ce7f08ac70d7ab1bc8c936178c",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\confirmation\\cases.csv": "85fb85d7c95a99d7abb5dd88fe9f4591a089e8148803e2310796395c442c3135",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\confirmation\\run_result.json": "8f7993cb2b0b8ca156de1d5682824d304c0a392b29bee2cd8868f97f15e3f166",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\oracle\\confirmation_oracle.py": "4f9bd6b4df05dd54aa47257cad8161a04eeac0b7b7fdcc993107c8ef4e2c34d7",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\oracle\\hindsight_diagnostic.py": "a68c0aee59131dec2bf848c84e8454fd0b824c18910e2baab7b7a2e166a7f44a"
+  },
+  "outputs": {
+    "cases.csv": "338760d4b60492630059f0c7ace341b062b535c409d79f52db109e1fef3e9025",
+    "coverage_curves.csv": "245e410542ed40f211865666a57189de22ba60c3388dc71d5197c8f30ac57474",
+    "household_means.csv": "0792a63fb97fc2035cd2c6b93810129b40475cb3cffa55492337bd6ae7797491",
+    "input_manifest.json": "a09e34daa4f451424271ef9daa38b2286e176e18480b51cb8077b60c7eb2f7d4"
+  }
+}

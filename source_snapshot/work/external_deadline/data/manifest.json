@@ -1,0 +1,582 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-11T19:44:07.272759+00:00",
+  "protocol_sha256": "35a10fa2422f9f09328487b4d89fec5925d055817596f1b7314b3093ed64a535",
+  "protocol_amendment_sha256": "a9e716f05cf43e6065294d3165ee282fe68513903c8d07f2b31acc079fbbb4f2",
+  "parser_sha256": "deda961f64c9a98f9d020056c4f9788b7d1ce53cd84049922b72d2ce015162ac",
+  "dataset_doi": "10.15129/31da3ece-f902-4e95-a093-e0a9536983c4",
+  "release": "REFIT_RAW_081116",
+  "license": "CC BY 4.0",
+  "archive": {
+    "name": "REFIT_RAW_081116.7z",
+    "bytes": 698108465,
+    "sha256": "f294fe673532220dc527b5e7d7a25e99568bd24acf9fb5be0a0def14af64b2cf"
+  },
+  "source_members": [
+    {
+      "household_id": 1,
+      "member_name": "RAW_House1_Part2.csv",
+      "bytes": 239646944,
+      "sha256": "06a5ed60975b83201c4eba21305e511d7358da87ab69c229d23179de5d92d012",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 2,
+      "member_name": "RAW_House2_Part2.csv",
+      "bytes": 207231573,
+      "sha256": "89735b0e2c99393cef3b6117ec8469c876208e503d4b1843203bc89634f6baa6",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 3,
+      "member_name": "RAW_House3_Part2.csv",
+      "bytes": 219478533,
+      "sha256": "fc26e48a95819c432f99f8ce9c92dfa4b0bfdf678cd216ac50c9674dad049941",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 4,
+      "member_name": "RAW_House4_Part2.csv",
+      "bytes": 222454028,
+      "sha256": "4557fbcb602d4e598876c89760a543f6099a218bb87a1574bb82a86387822913",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 5,
+      "member_name": "RAW_House5_Part2.csv",
+      "bytes": 234473756,
+      "sha256": "aef931abe99048b61eba999f300c5cfd2ab0143840488281f149f278d8d59181",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 6,
+      "member_name": "RAW_House6_Part2.csv",
+      "bytes": 218804772,
+      "sha256": "6b0e2c17ccf6c7cfc33eb6fddf06027f8622a9adea2709bf1c97ffcadff465ab",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 7,
+      "member_name": "RAW_House7_Part2.csv",
+      "bytes": 234103198,
+      "sha256": "57c6a4f8e2ca01d5c01aac5ebf65d1dcb360dc7a4ccd954e488d2c5aed0ed0fe",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 8,
+      "member_name": "RAW_House8_Part2.csv",
+      "bytes": 206963038,
+      "sha256": "7cb306c0f8c66e464a48907b9157dbb341e95b4bfb2137899af7205e0ff344bc",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 9,
+      "member_name": "RAW_House9_Part2.csv",
+      "bytes": 241086542,
+      "sha256": "0b4c54595a8ae1f98d10725e064ebfef76d607d2bf7e5241012c25f9eef50fc2",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 10,
+      "member_name": "RAW_House10_Part2.csv",
+      "bytes": 234866845,
+      "sha256": "26c3b8b46d1e07a476341f0776f68790b3dd02148f9096aede34bea7c43c2d75",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 11,
+      "member_name": "RAW_House11_Part2.csv",
+      "bytes": 214390701,
+      "sha256": "8a209a6a0f0f3b58872a2d00ea9d727088d61be40452b39fd594a8ff65fd911b",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 12,
+      "member_name": "RAW_House12_Part2.csv",
+      "bytes": 239239210,
+      "sha256": "d3b00624954ac565bd7a5021dfecf7520648c44c8756e93cce679bdf6393a6b1",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 13,
+      "member_name": "RAW_House_13_Part2.csv",
+      "bytes": 173629027,
+      "sha256": "503b93ece962cae5ef8226895f4c31ebbb693d70f6b3e54bb10d485cd3dfd2c5",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 15,
+      "member_name": "RAW_House_15_Part2.csv",
+      "bytes": 226349711,
+      "sha256": "8e8eb543202bc3e0ba97b7894dd3759e0a519bd76ef833f56467c54ff8c2398a",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 16,
+      "member_name": "RAW_House_16_Part2.csv",
+      "bytes": 218674923,
+      "sha256": "cf5011922be8ce7ba0e8d7a94cd9dbe81e5fb3f5496b667a81948420fc4b9639",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 17,
+      "member_name": "RAW_House_17_Part2.csv",
+      "bytes": 229609883,
+      "sha256": "60ebda60d3d67bb03a13f5bd3dfa189bab319020e88b11e944cd016b1367a818",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 18,
+      "member_name": "RAW_House_18_Part2.csv",
+      "bytes": 214364126,
+      "sha256": "ac79b35d11b84b2289e10d347f97adcd01da86277489addc8a3617fece7d3dfe",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 19,
+      "member_name": "RAW_House_19_Part2.csv",
+      "bytes": 220036075,
+      "sha256": "7f2939af51cf0f48aad1284bebd2fa71586ae1d795ca2fcb5a0e413532bc85c5",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 20,
+      "member_name": "RAW_House_20_Part2.csv",
+      "bytes": 231881629,
+      "sha256": "e06217a398eef80beb3ddf33e00f7e4507d14ecd95d5d2bbafe58fc40f3fb389",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    },
+    {
+      "household_id": 21,
+      "member_name": "RAW_House_21_Part2.csv",
+      "bytes": 227381235,
+      "sha256": "6668c824760b9bc885b1175f9b95958dbf93def7aeb00cc78397b06c7c5256e5",
+      "columns": [
+        "Time",
+        "Unix",
+        "Aggregate",
+        "Appliance1",
+        "Appliance2",
+        "Appliance3",
+        "Appliance4",
+        "Appliance5",
+        "Appliance6",
+        "Appliance7",
+        "Appliance8",
+        "Appliance9"
+      ]
+    }
+  ],
+  "excluded_members": [
+    {
+      "household_id": 10,
+      "member_name": "RAW_House10_Part1.csv",
+      "bytes": 227848722,
+      "sha256": "9c6ef050d8f05b6820db8b1c5517b2c795b32c122b5a1fb3cfcbc903d0291248",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 11,
+      "member_name": "RAW_House11_Part1.csv",
+      "bytes": 80650514,
+      "sha256": "69a6fd1a19daf35d34d8b8756722e8d369fc80690a333616dead932d48dc3d96",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 12,
+      "member_name": "RAW_House12_Part1.csv",
+      "bytes": 175163733,
+      "sha256": "94efc3b95449df5aae7d1a4fad88c897961fbdccb4660d7c31f176afa2f9e1ca",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 1,
+      "member_name": "RAW_House1_Part1.csv",
+      "bytes": 243553211,
+      "sha256": "849d415c3e2c57ac7db617bc78ef790fa8e6223fe5087a511ed9b1f2c066a00e",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 2,
+      "member_name": "RAW_House2_Part1.csv",
+      "bytes": 193550246,
+      "sha256": "e2341fc9c7f2cfebef27509093e31643fcb7d23c51d768eb412de4711ba9db52",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 3,
+      "member_name": "RAW_House3_Part1.csv",
+      "bytes": 256759625,
+      "sha256": "64bbaca08c1bb4b2efbf95cd1593b33566227149c769e8cbfef7ca08c54d2135",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 4,
+      "member_name": "RAW_House4_Part1.csv",
+      "bytes": 261327114,
+      "sha256": "e88ca05929bd914615689d73b9ff26188de2905bc56a8a00c93e3499ef396436",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 5,
+      "member_name": "RAW_House5_Part1.csv",
+      "bytes": 268144288,
+      "sha256": "7f90c57560f12c3b7a8a404e1419311459ff3e14abf203ac3e504dbfe2ea0c54",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 6,
+      "member_name": "RAW_House6_Part1.csv",
+      "bytes": 254484451,
+      "sha256": "0450e6bc92efc60376d0d2d69ba1625468e8da1194a8d30d6bdae75739fabee1",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 7,
+      "member_name": "RAW_House7_Part1.csv",
+      "bytes": 225740678,
+      "sha256": "075fcdaa4b38ae7d58953568658db2f2ae56fba563502e143b84ac8bb1cc704f",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 8,
+      "member_name": "RAW_House8_Part1.csv",
+      "bytes": 227111647,
+      "sha256": "9957d1fc1e1e6307dd97f34ff2a43a7c43739d431c4aefd1f535863fa088202d",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 9,
+      "member_name": "RAW_House9_Part1.csv",
+      "bytes": 178266583,
+      "sha256": "17d6db51a9d54165187b0e20b899b5f87d6bdec58a2909606f0686fc2f136417",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 13,
+      "member_name": "RAW_House_13_Part1.csv",
+      "bytes": 146764958,
+      "sha256": "5d5969fe36209a960641a01601b72d51f1215da9cc6a1a3a58ca78b76afd829f",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 15,
+      "member_name": "RAW_House_15_Part1.csv",
+      "bytes": 186143244,
+      "sha256": "caeb1f7a7002377563f05b2a152705c8c0a536807f3c91a610b3f6e3a6e8f997",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 16,
+      "member_name": "RAW_House_16_Part1.csv",
+      "bytes": 124294372,
+      "sha256": "5e288cf266e1673fde3d1408c50d7a0b275ff014a5cb4bf3c74c803b3aea6343",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 17,
+      "member_name": "RAW_House_17_Part1.csv",
+      "bytes": 162981460,
+      "sha256": "877f952334bb5ed0a0fe857ff74c964af90aa3a218c16427d23c1c6ab0e023e4",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 18,
+      "member_name": "RAW_House_18_Part1.csv",
+      "bytes": 169194619,
+      "sha256": "a0dd8740f67c102974dbecbf380854f2fb222cc5025427e391364ff42e5016e3",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 19,
+      "member_name": "RAW_House_19_Part1.csv",
+      "bytes": 157372383,
+      "sha256": "cd6b00f9381af71a064311302837a8b12251541535c84b189e133b6ac202fce5",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 20,
+      "member_name": "RAW_House_20_Part1.csv",
+      "bytes": 150982570,
+      "sha256": "b64adbe6f2989f4342a7ccd4196c4c8c24695bbd9f9cf0277fc6218a8c5cc503",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    },
+    {
+      "household_id": 21,
+      "member_name": "RAW_House_21_Part1.csv",
+      "bytes": 167269127,
+      "sha256": "3b8500022e9a125aca55185158c0923fb0509f0523116c6641d6fcf4602595bb",
+      "reason": "Part1 encodes unavailable sensors as zero"
+    }
+  ],
+  "selected_households": [],
+  "households_processed": 20,
+  "reference": "Zero-order hold integral of admissible raw-release aggregate power (including source event-change expansion), kWh; not exact physical energy.",
+  "interpolation": "Our processing adds no gap filling and uses no cleaned values. The raw source already includes event-change expansion. Hold over raw intervals <=16 seconds is the explicit reference convention.",
+  "tests": {
+    "status": "passed",
+    "fixtures": 6
+  },
+  "processing_seconds": 174.63124919999973,
+  "outputs": {
+    "hourly.csv": {
+      "bytes": 5923105,
+      "sha256": "db73d53f9c0816fefdfaa981124c8049c19c540470bd5ac0378f9a23f37e4e74"
+    },
+    "daily_quality.csv": {
+      "bytes": 258359,
+      "sha256": "1619a9a2cf44af555f1f5733d1187d5174c2e45988325e6a7293efc1709b80a5"
+    },
+    "household_inventory.json": {
+      "bytes": 18409,
+      "sha256": "afe1c9e0781197d30e7970a04d00372fa16e9b60333775e497790319318600a1"
+    }
+  }
+}

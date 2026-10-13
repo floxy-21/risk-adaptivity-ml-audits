@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-11T00:49:55.629897+00:00",
+  "meter_days": 3210,
+  "consumers": 30,
+  "cohorts": [
+    "portugal_new_consumers"
+  ],
+  "source_hashes": {
+    "outputs/study_holdout_consumers_predictions.csv": "6af5c1101850724b2067c14f3bc8abf891b1d12bd04fa3d4a5c24dbbbeb4c9d8",
+    "outputs/study_recovery.py": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241",
+    "outputs/study_archive_access.py": "de88aaf109b9534402c913789b81f992cd312dc2d17902e953b715198e2ae28b",
+    "outputs/study_period_archive.py": "258e29c41b18c11bf9f9a15aa9e7c9344d27f0aaa564d6f0d4723d91ce7abdf9",
+    "outputs/run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+    "work/new_direction_randomized/randomized_recovery_screen.py": "785629e8ccccb8503907f221d30ee382974af5d4681461d4ce9fbdf45b047d6a",
+    "work/randomized_tie_review/audit_ties.py": "86e66ba47cd14a7b45fb0aa281d4a372fc5002cc2a28cf567d4d799475fff874",
+    "work/randomized_recovery_root/compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d"
+  },
+  "protocol_sha256": "9b8352fc4a5dcdeb5bae50055e056fbd587f954b163c1d1d38ae768ebfde2fea",
+  "script_sha256": "b71309a04234fef410dfbd43058cfddfedb6df68649095bb854133704156d50a",
+  "selection_input_sha256": "42d092759fc60bdb6b607d72bf901ad20ace5abc96f7bdcb6deb4a9708f8fec7",
+  "free_revealed_or_deduced_values": 18420,
+  "original_missing_values": 19260,
+  "scope": "Preparation forms masked observations and exact measurement totals. Individual withheld values are absent from selection_inputs.jsonl."
+}

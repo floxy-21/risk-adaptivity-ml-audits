@@ -1,0 +1,1350 @@
+{
+  "schema": "saved-audit-task-binding-v1",
+  "inputs": {
+    "external_validation/replay/geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0",
+    "external_validation/stored_error_fallback/fixed_batch_certificates.json": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+    "external_heatpump/july_cache_manifest.json": "fcb4e16cf05ae33c6d126136171346773e939ac4bb84deabed805c13358c8255",
+    "external_validation/operational/fresh_fits_20261012/frozen_forecasts.csv": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+    "external_heatpump/hourly/train_test_hourly_counters.csv": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+    "external_heatpump/hourly/system_1_test_2025July.json": "5ef47a765ae8b86380b16e602814c425710c89a977b1c8600acec893a0580802",
+    "external_heatpump/hourly/system_2_test_2025July.json": "077991d1f334095d5acb3f8d89b2d8a42598a25261c324d7226e9872986695c4",
+    "external_heatpump/hourly/system_7_test_2025July.json": "68fb2b5a83dc382a25cfdee6cbe8c7fa7f4d66e31fea4d72950a6ece602e388a"
+  },
+  "tasks": [
+    {
+      "task": {
+        "case_id": "hpm_1/2025-07-06/12/ridge/mlp",
+        "system_id": 1,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-06T12:00:00Z",
+        "end_utc": "2025-07-06T18:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-06T13:00:00Z",
+          "2": "2025-07-06T14:00:00Z",
+          "3": "2025-07-06T15:00:00Z",
+          "4": "2025-07-06T16:00:00Z",
+          "5": "2025-07-06T17:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-06T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "ridge",
+          "mlp"
+        ],
+        "contrast_coefficients_exact": [
+          "7930435568702359/72057594037927936",
+          "8645678891063893/1152921504606846976",
+          "5371272457052689/36028797018963968",
+          "8079779251156579/72057594037927936",
+          "8737755062188927/144115188075855872",
+          "1721614923045275/36028797018963968"
+        ],
+        "contrast_constant_exact": "-7592007499867091/72057594037927936",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "11605171/1024",
+        "end_counter_kwh_exact": "5802647/512",
+        "total_kwh_exact": "123/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "f65529540a349c6a82b8cc7aa22c036b29efc0e705742cb7f368435b822ec15f"
+    },
+    {
+      "task": {
+        "case_id": "hpm_1/2025-07-17/12/ridge/mlp",
+        "system_id": 1,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-17T12:00:00Z",
+        "end_utc": "2025-07-17T18:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-17T13:00:00Z",
+          "2": "2025-07-17T14:00:00Z",
+          "3": "2025-07-17T15:00:00Z",
+          "4": "2025-07-17T16:00:00Z",
+          "5": "2025-07-17T17:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-17T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "ridge",
+          "mlp"
+        ],
+        "contrast_coefficients_exact": [
+          "4951135794381167/36028797018963968",
+          "7241913170995253/144115188075855872",
+          "7507820236657771/36028797018963968",
+          "6809275394203763/36028797018963968",
+          "5526610834933943/36028797018963968",
+          "1030880412069519/9007199254740992"
+        ],
+        "contrast_constant_exact": "-8917008663561139/36028797018963968",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "2904527/256",
+        "end_counter_kwh_exact": "11618235/1024",
+        "total_kwh_exact": "127/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "961dcd620e0569923a6e5453ce09c4861268ca4cc4b415e567e5d7dedea38db4"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-02/00/hist_gradient_boosting/mlp",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-02T00:00:00Z",
+        "end_utc": "2025-07-02T06:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-02T01:00:00Z",
+          "2": "2025-07-02T02:00:00Z",
+          "3": "2025-07-02T03:00:00Z",
+          "4": "2025-07-02T04:00:00Z",
+          "5": "2025-07-02T05:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-02T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "hist_gradient_boosting",
+          "mlp"
+        ],
+        "contrast_coefficients_exact": [
+          "0",
+          "-5470496591586731/576460752303423488",
+          "4778816756314333/576460752303423488",
+          "-597737811150069/72057594037927936",
+          "-597737811150069/72057594037927936",
+          "-7279313388773411/1152921504606846976"
+        ],
+        "contrast_constant_exact": "4833781363850017/1152921504606846976",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "3010103/256",
+        "end_counter_kwh_exact": "12041303/1024",
+        "total_kwh_exact": "891/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "5f563ddca8d61a8c7f2a9bd71ef8a445931df0da05a5d7fd8b28e828e0acee65"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-02/06/daily/hist_gradient_boosting",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-02T06:00:00Z",
+        "end_utc": "2025-07-02T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-02T07:00:00Z",
+          "2": "2025-07-02T08:00:00Z",
+          "3": "2025-07-02T09:00:00Z",
+          "4": "2025-07-02T10:00:00Z",
+          "5": "2025-07-02T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-02T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "7636646651652997/2305843009213693952",
+          "8003161175503827/1152921504606846976",
+          "6367411012585803/2305843009213693952",
+          "749925748636363/288230376151711744",
+          "5248806051195821/2305843009213693952",
+          "5574696143489409/1152921504606846976"
+        ],
+        "contrast_constant_exact": "-8320256806612799/18446744073709551616",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "12041303/1024",
+        "end_counter_kwh_exact": "1505203/128",
+        "total_kwh_exact": "321/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "8f19c1a81beab060cae1a07ef4fdafcc4cdc5f0f8914f06bd9ad1f818dd3d6b1"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-03/00/hist_gradient_boosting/mlp",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-03T00:00:00Z",
+        "end_utc": "2025-07-03T06:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-03T01:00:00Z",
+          "2": "2025-07-03T02:00:00Z",
+          "3": "2025-07-03T03:00:00Z",
+          "4": "2025-07-03T04:00:00Z",
+          "5": "2025-07-03T05:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-03T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "hist_gradient_boosting",
+          "mlp"
+        ],
+        "contrast_coefficients_exact": [
+          "-5986382465629833/576460752303423488",
+          "6855111373136949/576460752303423488",
+          "-878274155835823/36028797018963968",
+          "-8737012002728345/1152921504606846976",
+          "-8737012002728345/1152921504606846976",
+          "-5257250156109501/1152921504606846976"
+        ],
+        "contrast_constant_exact": "-4900463645554465/2305843009213693952",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "12042753/1024",
+        "end_counter_kwh_exact": "12043589/1024",
+        "total_kwh_exact": "209/256",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "a2b3180e0c93a4f7056a360863908fd9ecf8b9927d53a1e1ee9d8fce67991bbf"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-04/06/daily/mlp",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-04T06:00:00Z",
+        "end_utc": "2025-07-04T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-04T07:00:00Z",
+          "2": "2025-07-04T08:00:00Z",
+          "3": "2025-07-04T09:00:00Z",
+          "4": "2025-07-04T10:00:00Z",
+          "5": "2025-07-04T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-04T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "mlp"
+        ],
+        "contrast_coefficients_exact": [
+          "-6380099472108203/1152921504606846976",
+          "-8631899285793451/1152921504606846976",
+          "-6380099472108203/1152921504606846976",
+          "-7505999378950827/1152921504606846976",
+          "-6004799503160661/1152921504606846976",
+          "-5/1024"
+        ],
+        "contrast_constant_exact": "5828877642716501/18446744073709551616",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "12045605/1024",
+        "end_counter_kwh_exact": "12045703/1024",
+        "total_kwh_exact": "49/512",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "2ff9fc8d10ab2705d9aad7a385b6d0b3441064f7d3092a0d46591b2a153e74ea"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-07/06/daily/mlp",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-07T06:00:00Z",
+        "end_utc": "2025-07-07T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-07T07:00:00Z",
+          "2": "2025-07-07T08:00:00Z",
+          "3": "2025-07-07T09:00:00Z",
+          "4": "2025-07-07T10:00:00Z",
+          "5": "2025-07-07T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-07T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "mlp"
+        ],
+        "contrast_coefficients_exact": [
+          "-8256599316845909/2305843009213693952",
+          "-6380099472108203/1152921504606846976",
+          "-1/256",
+          "-5254199565265579/1152921504606846976",
+          "-6004799503160661/1152921504606846976",
+          "-5/1024"
+        ],
+        "contrast_constant_exact": "7218660340225365/36893488147419103232",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "6025779/512",
+        "end_counter_kwh_exact": "6025827/512",
+        "total_kwh_exact": "3/32",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "66a36913e3f2d34aece53f5c881daed0a9f4c3ddcfd91a4f2332f864a9f85c12"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-09/00/daily/hist_gradient_boosting",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-09T00:00:00Z",
+        "end_utc": "2025-07-09T06:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-09T01:00:00Z",
+          "2": "2025-07-09T02:00:00Z",
+          "3": "2025-07-09T03:00:00Z",
+          "4": "2025-07-09T04:00:00Z",
+          "5": "2025-07-09T05:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-09T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "5692187698368265/1152921504606846976",
+          "-5809875569044043/288230376151711744",
+          "2039448063655957/72057594037927936",
+          "8610127640338803/1152921504606846976",
+          "8234827671391261/1152921504606846976",
+          "8771213819453051/4611686018427387904"
+        ],
+        "contrast_constant_exact": "2413817436776467/288230376151711744",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "12053641/1024",
+        "end_counter_kwh_exact": "3013595/256",
+        "total_kwh_exact": "739/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "0b4da5f6b31c9c4b6f889b4ced7452e8f6181c7c517149639a0425f1fcd727f9"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-14/00/daily/mlp",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-14T00:00:00Z",
+        "end_utc": "2025-07-14T06:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-14T01:00:00Z",
+          "2": "2025-07-14T02:00:00Z",
+          "3": "2025-07-14T03:00:00Z",
+          "4": "2025-07-14T04:00:00Z",
+          "5": "2025-07-14T05:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-14T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "mlp"
+        ],
+        "contrast_coefficients_exact": [
+          "4869762591515211/18446744073709551616",
+          "-347928485804239/36028797018963968",
+          "710173326018999/72057594037927936",
+          "8933116014489965/2305843009213693952",
+          "4743387352252849/1152921504606846976",
+          "-8256599316845909/2305843009213693952"
+        ],
+        "contrast_constant_exact": "6245904123464253/4611686018427387904",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "1507751/128",
+        "end_counter_kwh_exact": "1507825/128",
+        "total_kwh_exact": "37/64",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "b81041b290fa6c6b34b076ec0a70a2fe79619912ce0b565d3e2dbbfff558aa57"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-15/06/ridge/hist_gradient_boosting",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-15T06:00:00Z",
+        "end_utc": "2025-07-15T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-15T07:00:00Z",
+          "2": "2025-07-15T08:00:00Z",
+          "3": "2025-07-15T09:00:00Z",
+          "4": "2025-07-15T10:00:00Z",
+          "5": "2025-07-15T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-15T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "ridge",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "-5542307578624379/1152921504606846976",
+          "-4997967723193237/1152921504606846976",
+          "-7245204728642019/2305843009213693952",
+          "-5105095677887679/1152921504606846976",
+          "-1100340033960837/288230376151711744",
+          "-5425285648453083/1152921504606846976"
+        ],
+        "contrast_constant_exact": "8022064071071867/9223372036854775808",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "6031887/512",
+        "end_counter_kwh_exact": "6031923/512",
+        "total_kwh_exact": "9/128",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "cbe910e7659db6c16cad9d1c09f03860be60a835201963cd2933e499af22b110"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-17/06/ridge/hist_gradient_boosting",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-17T06:00:00Z",
+        "end_utc": "2025-07-17T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-17T07:00:00Z",
+          "2": "2025-07-17T08:00:00Z",
+          "3": "2025-07-17T09:00:00Z",
+          "4": "2025-07-17T10:00:00Z",
+          "5": "2025-07-17T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-17T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "ridge",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "-550690998841897/144115188075855872",
+          "-235351616616611/72057594037927936",
+          "-8269672364000181/4611686018427387904",
+          "-826441730435551/288230376151711744",
+          "-5903901038605475/2305843009213693952",
+          "-125045402297349/72057594037927936"
+        ],
+        "contrast_constant_exact": "7053094274461339/18446744073709551616",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "6033745/512",
+        "end_counter_kwh_exact": "12067595/1024",
+        "total_kwh_exact": "105/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "69a4e4cb899ae6a5952737034842607ba4c79063c616b0fc8f4caf1be64cf0ed"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-19/00/ridge/hist_gradient_boosting",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-19T00:00:00Z",
+        "end_utc": "2025-07-19T06:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-19T01:00:00Z",
+          "2": "2025-07-19T02:00:00Z",
+          "3": "2025-07-19T03:00:00Z",
+          "4": "2025-07-19T04:00:00Z",
+          "5": "2025-07-19T05:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-19T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "ridge",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "-5943589393556311/1152921504606846976",
+          "63876948824895/9007199254740992",
+          "-6888468473710825/576460752303423488",
+          "-5923331214374741/147573952589676412928",
+          "-295779923307985/288230376151711744",
+          "-1336967714172989/288230376151711744"
+        ],
+        "contrast_constant_exact": "-674913079333709/288230376151711744",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "12070183/1024",
+        "end_counter_kwh_exact": "6035471/512",
+        "total_kwh_exact": "759/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "8577094b56926de536450d11c8e2c41cc9368bbc2260fbfa74fcb0c029a45207"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-21/06/daily/hist_gradient_boosting",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-21T06:00:00Z",
+        "end_utc": "2025-07-21T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-21T07:00:00Z",
+          "2": "2025-07-21T08:00:00Z",
+          "3": "2025-07-21T09:00:00Z",
+          "4": "2025-07-21T10:00:00Z",
+          "5": "2025-07-21T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-21T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "6518928011386111/1152921504606846976",
+          "550815442709493/72057594037927936",
+          "507636875829203/72057594037927936",
+          "318525940387189/36028797018963968",
+          "7812878210944899/1152921504606846976",
+          "7768663882864573/1152921504606846976"
+        ],
+        "contrast_constant_exact": "-4940703746631085/4611686018427387904",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "12074151/1024",
+        "end_counter_kwh_exact": "12074263/1024",
+        "total_kwh_exact": "7/64",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "ed8c7d489e8bb7067a6763889f99e68e8cfd3e6948b54c9bf2fe0f8682f5932d"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-22/00/ridge/hist_gradient_boosting",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-22T00:00:00Z",
+        "end_utc": "2025-07-22T06:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-22T01:00:00Z",
+          "2": "2025-07-22T02:00:00Z",
+          "3": "2025-07-22T03:00:00Z",
+          "4": "2025-07-22T04:00:00Z",
+          "5": "2025-07-22T05:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-22T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "ridge",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "4937448978831505/288230376151711744",
+          "8915264221157995/1152921504606846976",
+          "7421376672714477/288230376151711744",
+          "1283157943822063/72057594037927936",
+          "4934439691454407/288230376151711744",
+          "7307967379238539/576460752303423488"
+        ],
+        "contrast_constant_exact": "-8727484012928015/1152921504606846976",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "3018657/256",
+        "end_counter_kwh_exact": "12074991/1024",
+        "total_kwh_exact": "363/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "3126bad7710b7c783dae4f58122b77f69fed2f984990283c3b467a29491ad3a2"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-25/00/daily/mlp",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-25T00:00:00Z",
+        "end_utc": "2025-07-25T06:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-25T01:00:00Z",
+          "2": "2025-07-25T02:00:00Z",
+          "3": "2025-07-25T03:00:00Z",
+          "4": "2025-07-25T04:00:00Z",
+          "5": "2025-07-25T05:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-25T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "mlp"
+        ],
+        "contrast_coefficients_exact": [
+          "-19/1024",
+          "-5/256",
+          "-5817149518686891/288230376151711744",
+          "-1264961851394311/72057594037927936",
+          "-19/1024",
+          "-5441849549739349/288230376151711744"
+        ],
+        "contrast_constant_exact": "60372499778713/18014398509481984",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "6039389/512",
+        "end_counter_kwh_exact": "12079137/1024",
+        "total_kwh_exact": "359/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "77d2d3157fe23db57f04dc0c7a4ae53ae8429e870798e3e948f77c275f53d498"
+    },
+    {
+      "task": {
+        "case_id": "hpm_2/2025-07-28/06/ridge/hist_gradient_boosting",
+        "system_id": 2,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-28T06:00:00Z",
+        "end_utc": "2025-07-28T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-28T07:00:00Z",
+          "2": "2025-07-28T08:00:00Z",
+          "3": "2025-07-28T09:00:00Z",
+          "4": "2025-07-28T10:00:00Z",
+          "5": "2025-07-28T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-28T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "ridge",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "-1763828258757899/288230376151711744",
+          "-5043634877179035/1152921504606846976",
+          "-5473015544867173/1152921504606846976",
+          "-6091874615432907/1152921504606846976",
+          "-6315236468493117/1152921504606846976",
+          "-640509701518299/144115188075855872"
+        ],
+        "contrast_constant_exact": "6054240960608975/4611686018427387904",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "12084573/1024",
+        "end_counter_kwh_exact": "12084673/1024",
+        "total_kwh_exact": "25/256",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "8266b2e4c2947e4ffb876dbc3d737e43d41ef58a01a1976aaf2f3db2b9933dc9"
+    },
+    {
+      "task": {
+        "case_id": "hpm_7/2025-07-01/06/ridge/hist_gradient_boosting",
+        "system_id": 7,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-01T06:00:00Z",
+        "end_utc": "2025-07-01T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-01T07:00:00Z",
+          "2": "2025-07-01T08:00:00Z",
+          "3": "2025-07-01T09:00:00Z",
+          "4": "2025-07-01T10:00:00Z",
+          "5": "2025-07-01T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-01T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "ridge",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "-7398951654115247/576460752303423488",
+          "-8436293496004655/576460752303423488",
+          "-2318688740817985/144115188075855872",
+          "-6150372754233013/576460752303423488",
+          "-1679601008877337/144115188075855872",
+          "-1935091325386745/144115188075855872"
+        ],
+        "contrast_constant_exact": "327748769861359/72057594037927936",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "13605087/1024",
+        "end_counter_kwh_exact": "13605357/1024",
+        "total_kwh_exact": "135/512",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "4b8efc0172ed867ef34551e2ee2a22c4d77c44d506edfcf8c926cae20a6f92fc"
+    },
+    {
+      "task": {
+        "case_id": "hpm_7/2025-07-03/06/daily/hist_gradient_boosting",
+        "system_id": 7,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-03T06:00:00Z",
+        "end_utc": "2025-07-03T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-03T07:00:00Z",
+          "2": "2025-07-03T08:00:00Z",
+          "3": "2025-07-03T09:00:00Z",
+          "4": "2025-07-03T10:00:00Z",
+          "5": "2025-07-03T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-03T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "273551857004025/144115188075855872",
+          "-6511879164385045/9223372036854775808",
+          "-5317584522918627/1152921504606846976",
+          "8793793618119285/2305843009213693952",
+          "560880610225649/144115188075855872",
+          "-5907915039901765/2305843009213693952"
+        ],
+        "contrast_constant_exact": "-5106262260811627/73786976294838206464",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "6803171/512",
+        "end_counter_kwh_exact": "13606621/1024",
+        "total_kwh_exact": "279/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "0469c6bab5e2a6f80c87434e958bc2406d7cee760b58c61e549c2cce8aca5af6"
+    },
+    {
+      "task": {
+        "case_id": "hpm_7/2025-07-08/00/daily/hist_gradient_boosting",
+        "system_id": 7,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-08T00:00:00Z",
+        "end_utc": "2025-07-08T06:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-08T01:00:00Z",
+          "2": "2025-07-08T02:00:00Z",
+          "3": "2025-07-08T03:00:00Z",
+          "4": "2025-07-08T04:00:00Z",
+          "5": "2025-07-08T05:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-08T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "7514526762819255/576460752303423488",
+          "4575150815987923/1152921504606846976",
+          "31184637364623/4503599627370496",
+          "8164792517206363/1152921504606846976",
+          "5520546116402509/576460752303423488",
+          "5101918122791637/2305843009213693952"
+        ],
+        "contrast_constant_exact": "-1605171056157757/1152921504606846976",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "13611055/1024",
+        "end_counter_kwh_exact": "13611179/1024",
+        "total_kwh_exact": "31/256",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "9151c3d2a86eec53e1040f1776d0434e59312a882122dccec0c914a8f5e3c1d6"
+    },
+    {
+      "task": {
+        "case_id": "hpm_7/2025-07-08/00/daily/mlp",
+        "system_id": 7,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-08T00:00:00Z",
+        "end_utc": "2025-07-08T06:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-08T01:00:00Z",
+          "2": "2025-07-08T02:00:00Z",
+          "3": "2025-07-08T03:00:00Z",
+          "4": "2025-07-08T04:00:00Z",
+          "5": "2025-07-08T05:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-08T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "mlp"
+        ],
+        "contrast_coefficients_exact": [
+          "-7130699410003285/1152921504606846976",
+          "-1/128",
+          "-8631899285793451/1152921504606846976",
+          "-6380099472108203/1152921504606846976",
+          "-3/512",
+          "-7/1024"
+        ],
+        "contrast_constant_exact": "105/262144",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "13611055/1024",
+        "end_counter_kwh_exact": "13611179/1024",
+        "total_kwh_exact": "31/256",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "55cd82512c2177caa581c6f8c379bf364cef01901d8e023b706acdc89e1c9d4d"
+    },
+    {
+      "task": {
+        "case_id": "hpm_7/2025-07-10/06/daily/hist_gradient_boosting",
+        "system_id": 7,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-10T06:00:00Z",
+        "end_utc": "2025-07-10T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-10T07:00:00Z",
+          "2": "2025-07-10T08:00:00Z",
+          "3": "2025-07-10T09:00:00Z",
+          "4": "2025-07-10T10:00:00Z",
+          "5": "2025-07-10T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-10T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "-7759539209563019/4611686018427387904",
+          "-7194084367656333/1152921504606846976",
+          "-8319984274498957/1152921504606846976",
+          "16787321914793/72057594037927936",
+          "-424281808261647/144115188075855872",
+          "-5205757333636131/1152921504606846976"
+        ],
+        "contrast_constant_exact": "8107965712480701/9223372036854775808",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "13612593/1024",
+        "end_counter_kwh_exact": "13612877/1024",
+        "total_kwh_exact": "71/256",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "1c556ca49610236a8bcecf35e6b5a2dcba98a5b76d4689af421af64a95ac9618"
+    },
+    {
+      "task": {
+        "case_id": "hpm_7/2025-07-12/12/daily/hist_gradient_boosting",
+        "system_id": 7,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-12T12:00:00Z",
+        "end_utc": "2025-07-12T18:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-12T13:00:00Z",
+          "2": "2025-07-12T14:00:00Z",
+          "3": "2025-07-12T15:00:00Z",
+          "4": "2025-07-12T16:00:00Z",
+          "5": "2025-07-12T17:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-12T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "7421898367346901/2305843009213693952",
+          "7100880341006565/288230376151711744",
+          "23779580880891/9007199254740992",
+          "6046186104334379/1152921504606846976",
+          "7909329272855013/576460752303423488",
+          "7909329272855013/576460752303423488"
+        ],
+        "contrast_constant_exact": "-2146161681872557/576460752303423488",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "13614317/1024",
+        "end_counter_kwh_exact": "3403617/256",
+        "total_kwh_exact": "151/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "f1957d436eb6329fc6c5364500c4cffdc269256601bea74171ab8faa63da8cb2"
+    },
+    {
+      "task": {
+        "case_id": "hpm_7/2025-07-14/06/daily/hist_gradient_boosting",
+        "system_id": 7,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-14T06:00:00Z",
+        "end_utc": "2025-07-14T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-14T07:00:00Z",
+          "2": "2025-07-14T08:00:00Z",
+          "3": "2025-07-14T09:00:00Z",
+          "4": "2025-07-14T10:00:00Z",
+          "5": "2025-07-14T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-14T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "4540881708147499/2305843009213693952",
+          "132814368648697/144115188075855872",
+          "-993085538193927/144115188075855872",
+          "5151176956673835/9223372036854775808",
+          "-6037908994291269/2305843009213693952",
+          "-5205757333636131/1152921504606846976"
+        ],
+        "contrast_constant_exact": "556088898149539/1152921504606846976",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "13615977/1024",
+        "end_counter_kwh_exact": "1702025/128",
+        "total_kwh_exact": "223/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "16b047ecb1e1c0683aaeac870fc9a2a7926b1f15f3c6fe263b1590ae51cc1225"
+    },
+    {
+      "task": {
+        "case_id": "hpm_7/2025-07-15/06/daily/hist_gradient_boosting",
+        "system_id": 7,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-15T06:00:00Z",
+        "end_utc": "2025-07-15T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-15T07:00:00Z",
+          "2": "2025-07-15T08:00:00Z",
+          "3": "2025-07-15T09:00:00Z",
+          "4": "2025-07-15T10:00:00Z",
+          "5": "2025-07-15T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-15T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "hist_gradient_boosting"
+        ],
+        "contrast_coefficients_exact": [
+          "372453954961247/144115188075855872",
+          "-4526367739260851/1152921504606846976",
+          "-6186944398283499/9223372036854775808",
+          "5122027620169259/2305843009213693952",
+          "519045219827543/144115188075855872",
+          "-35780111444425/144115188075855872"
+        ],
+        "contrast_constant_exact": "-1311668608788435/9223372036854775808",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "1702069/128",
+        "end_counter_kwh_exact": "13616773/1024",
+        "total_kwh_exact": "221/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "1cc8e7f5d5ed6188affa9cf5fbee74dd9887521dfe84b2ed907ab39d0ac5cc9c"
+    },
+    {
+      "task": {
+        "case_id": "hpm_7/2025-07-16/06/daily/ridge",
+        "system_id": 7,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-16T06:00:00Z",
+        "end_utc": "2025-07-16T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-16T07:00:00Z",
+          "2": "2025-07-16T08:00:00Z",
+          "3": "2025-07-16T09:00:00Z",
+          "4": "2025-07-16T10:00:00Z",
+          "5": "2025-07-16T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-16T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "ridge"
+        ],
+        "contrast_coefficients_exact": [
+          "7874513172847/562949953421312",
+          "150971070906111/9007199254740992",
+          "60956680178175/4503599627370496",
+          "29765664950175/2251799813685248",
+          "4572332635861301/288230376151711744",
+          "8648804736385621/576460752303423488"
+        ],
+        "contrast_constant_exact": "-734995177562329/144115188075855872",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "6808569/512",
+        "end_counter_kwh_exact": "6808689/512",
+        "total_kwh_exact": "15/64",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "105fde1cfc8797e4d7f40598d4fe98c0e3d47168865ab262ac0b3b6158ffe058"
+    },
+    {
+      "task": {
+        "case_id": "hpm_7/2025-07-22/00/daily/mlp",
+        "system_id": 7,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-22T00:00:00Z",
+        "end_utc": "2025-07-22T06:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-22T01:00:00Z",
+          "2": "2025-07-22T02:00:00Z",
+          "3": "2025-07-22T03:00:00Z",
+          "4": "2025-07-22T04:00:00Z",
+          "5": "2025-07-22T05:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-22T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "mlp"
+        ],
+        "contrast_coefficients_exact": [
+          "-6380099472108203/1152921504606846976",
+          "-3/512",
+          "-3/512",
+          "-3/512",
+          "-6380099472108203/1152921504606846976",
+          "-3/512"
+        ],
+        "contrast_constant_exact": "5494626107872597/18446744073709551616",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "851377/64",
+        "end_counter_kwh_exact": "6811077/512",
+        "total_kwh_exact": "61/512",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "b7d89f9d64c630ecaa55c4d81e03c0a9e7e68e268494a512d65551dfa79da97d"
+    },
+    {
+      "task": {
+        "case_id": "hpm_7/2025-07-24/06/daily/mlp",
+        "system_id": 7,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-24T06:00:00Z",
+        "end_utc": "2025-07-24T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-24T07:00:00Z",
+          "2": "2025-07-24T08:00:00Z",
+          "3": "2025-07-24T09:00:00Z",
+          "4": "2025-07-24T10:00:00Z",
+          "5": "2025-07-24T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-24T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "mlp"
+        ],
+        "contrast_coefficients_exact": [
+          "8729408858345293/576460752303423488",
+          "6038338522756363/144115188075855872",
+          "5877281883212655/288230376151711744",
+          "-8631899285793451/1152921504606846976",
+          "-154880214045357/36028797018963968",
+          "5567238499376625/144115188075855872"
+        ],
+        "contrast_constant_exact": "-5062778990424883/576460752303423488",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "6811639/512",
+        "end_counter_kwh_exact": "13623537/1024",
+        "total_kwh_exact": "259/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "d0d6c7f5fe975aaf9a0a469fef2b9a6e054cf03dd0f8adc9489c641db7257f01"
+    },
+    {
+      "task": {
+        "case_id": "hpm_7/2025-07-26/06/ridge/mlp",
+        "system_id": 7,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-26T06:00:00Z",
+        "end_utc": "2025-07-26T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-26T07:00:00Z",
+          "2": "2025-07-26T08:00:00Z",
+          "3": "2025-07-26T09:00:00Z",
+          "4": "2025-07-26T10:00:00Z",
+          "5": "2025-07-26T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-26T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "ridge",
+          "mlp"
+        ],
+        "contrast_coefficients_exact": [
+          "493699068898863/72057594037927936",
+          "7217059423196043/144115188075855872",
+          "4746776637942693/144115188075855872",
+          "-8221233102886115/288230376151711744",
+          "5685554882370235/144115188075855872",
+          "5299983773011939/576460752303423488"
+        ],
+        "contrast_constant_exact": "-2060375162534861/144115188075855872",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "6813027/512",
+        "end_counter_kwh_exact": "13626249/1024",
+        "total_kwh_exact": "195/1024",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "1429fcbefe02a8a18ba312f4763241139aea08c39a2ad322802792166c8e1869"
+    },
+    {
+      "task": {
+        "case_id": "hpm_7/2025-07-30/06/daily/ridge",
+        "system_id": 7,
+        "source": "HeatpumpMonitor public cached API",
+        "feed_key": "heatpump_elec_kwh",
+        "start_utc": "2025-07-30T06:00:00Z",
+        "end_utc": "2025-07-30T12:00:00Z",
+        "query_timestamps_utc": {
+          "1": "2025-07-30T07:00:00Z",
+          "2": "2025-07-30T08:00:00Z",
+          "3": "2025-07-30T09:00:00Z",
+          "4": "2025-07-30T10:00:00Z",
+          "5": "2025-07-30T11:00:00Z"
+        },
+        "timestamp_semantics": "requested API grid; native measurement and arrival timestamps unknown",
+        "forecast_issue_utc": "2025-07-30T00:00:00Z",
+        "forecast_issue_semantics": "declared retrospective schedule",
+        "models": [
+          "daily",
+          "ridge"
+        ],
+        "contrast_coefficients_exact": [
+          "8924477151599637/576460752303423488",
+          "175626444889659/9007199254740992",
+          "5074982944689067/288230376151711744",
+          "74950381549385/4503599627370496",
+          "44961060705545/2251799813685248",
+          "5401746626228917/288230376151711744"
+        ],
+        "contrast_constant_exact": "-1741395167847851/288230376151711744",
+        "contrast_semantics": "saved paired MSE affine contrast, exact binary64 coefficient representation",
+        "start_counter_kwh_exact": "6815243/512",
+        "end_counter_kwh_exact": "3407685/256",
+        "total_kwh_exact": "127/512",
+        "reading_unit": "kWh cumulative stored readout",
+        "normalization": "(stored counter - exact retained start counter) / exact retained total",
+        "error_bound_over_total_exact": "1/100",
+        "precision_over_initial_width_exact": "1/2",
+        "forecast_artifact_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+        "counter_artifact_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+        "certificate_artifact_sha256": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+        "scope": "This saved task only; metadata binding is not origin authentication or sensor calibration"
+      },
+      "task_sha256": "ab457622144ff2d325dc56b3f08317ea3aad607bef939c64838fb1c981aad6e2"
+    }
+  ],
+  "scope": "Existing29 task bindings; no outcome experiment or change to certificates"
+}

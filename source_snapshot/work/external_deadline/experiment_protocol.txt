@@ -1,0 +1,112 @@
+EXTERNAL FIXED-DEADLINE AUDIT — PRE-OUTCOME ANALYSIS PROTOCOL
+Written 11 October 2026, before model fitting or acquisition outcomes.
+
+Question: how many distinct paid readings does a feasible sequential policy
+request to certify a fixed daily model comparison at an early audit, and
+how does this change when later issued forecasts copy those targets?
+This is a controlled benchmark with constructed temporal totals and a
+declared UTC issue schedule. It measures neither transmission latency nor
+money saved nor availability of selective retrieval in a deployed utility.
+
+SOURCE AND DATES
+Independent source: official REFIT raw-release whole-house Aggregate power,
+all 20 candidate households (IDs 1–21 except14), subject to source-only
+inventory and frozen source protocol/amendments. Source source_protocol.txt
+and source amendment distinguish event-change intermediate filling and
+Part1 zero-coded missing values. Prefer Part2 only; do not use filled cleaned
+records as unqualified measured truth. Targets are quality-filtered
+zero-order-hold hourly energy references, not exact physical integrations.
+Tentative periods: Jan–Sep2014 train, Oct–Dec2014 validation, Jan–Mar2015 test.
+Source-only date/eligibility feasibility may be amended BEFORE fitting or
+acquisition, with reason, previous rule and full household inventory kept.
+No result-based changes to dates, masks, households, seeds or coverage target.
+All source-eligible households and all feature/reference-eligible test days
+are included. At least30 eligible training days are needed to fit models.
+
+FORECASTS AND INFORMATION
+Four fixed families: persistence, Ridge, histogram gradient boosting, MLP.
+Retain existing study hyperparameters and seed1729; no test tuning, retries,
+architecture search or use of old fitted models. For target UTC dayD issue
+at noonD-1 using hourly values of D-2,D-3,D-8, meanD-2, known hour/day-of-week/
+month cyclic variables. Complete input dayD-2 ends at startD-1, before issue.
+Fit parameters on training only and keep fixed during validation and test.
+Predictions clipped nonnegative, MLP targets normalized by training mean.
+Generate a NEW archive including future target days through test_end+2.
+Persistence is issued whenever its D-2 source is present, even if learned
+feature rows are unavailable. Learned forecasts require complete features,
+not the future reference target. Preserve all available forecasts per cutoff.
+Early cutoff=00:00D+1. Later cutoff=noonD+1 after forecast issue. No direct
+copy of D can be available early; D+2 persistence issued later copies D.
+Archive provenance records issue, target and source timestamps. Hidden
+reference data are separate from policy-selection inputs. Free copies must
+come from permitted archive rows, then singleton and zero-total deductions.
+
+MASKS AND PAIRS
+All six unordered named model pairs. One contiguous six-hour gap per day
+and seed; start uniformly over integers0..18. Mask seeds1103,2207,3301,
+stable SHA256-derived per-house/day streams, identical across policies.
+Four constructed exact six-hour totals: hours0–5,6–11,12–17,18–23.
+All24 scheduled hours enter the daily MSE contrast. Masks affect evaluation
+targets, not historically available prediction features or model training.
+
+ACQUISITION AND STOPPING
+Policies: exact deterministic, greedy, Hara acquisition + aggregate
+certificate, uniform without replacement, exact randomized with the
+predeclared uniform-barycenter secondary objective. Each policy uses the
+same observations, forecasts, totals and reveal access. Hara uses Gaussian
+mean from fixed Ridge and household validation RMSE as SD, floored at
+1e-8 times training mean; condition its proposal on residual aggregate sums.
+Gaussian support may include negative values: this is an approximate
+sampling proposal, not the certificate's feasible set or a fitted truth law.
+Use published squared-loss expected absolute contrast, not |a-b| alone.
+
+At each stage apply all free deductions; compute sharp bounds; stop when
+strict ordering is certified or width is numerically zero. Otherwise select
+up to2 eligible distinct coordinates, capped by remaining total budget6;
+charge the full batch before revealing all its entries. Repeat with residual
+constraints. No refund for a certificate that a batch prefix would have
+provided. Never count separately optimized nonnested budgets as a trajectory.
+The sequence is a myopic application of the exact batch-width optimizer,
+not a globally optimal strategy for minimum reads-to-decision. Budgets and
+costs are per day/model pair, not shared across all candidate models.
+Acquisition's documented lexicographic flat-objective refinement prevents
+an empty deterministic batch from making a positive-width trajectory stall.
+Randomized/Hara/uniform policies use one draw stream per mask seed, identified
+by household/day/pair/policy/seed/stage. These are three finite seeded paths,
+not exact expected stopping costs or selection of the best random outcome.
+
+OUTCOMES AND PRACTICAL CRITERION
+Report strict certification curves by integer cumulative paid readings0..6:
+(a) all eligible comparisons;(b) initially unresolved comparisons. Exact
+reference ties, numerical near ties, and unresolved-at-cap cases stay in the
+denominators and are reported separately. Do not call a near tie exact.
+Report all-case and initially unresolved mean/median requested readings,
+cap failures, incorrect strict certificates, enclosure violations, planning
+time and household/model-pair/month summaries. Failure costs are included.
+Primary curve: equal-weight mean of household initially-unresolved curves;
+households with zero initial unresolved cases are explicitly counted and
+excluded only from this undefined conditional ratio. Pooled curves secondary.
+B80=min integerB with primary curve>=0.80, otherwise 'not reached'. Fixed80%
+is checked on validation as a feasibility diagnostic; do not change it.
+Practical planning target: >=15% lower B80 for deterministic exact compared
+with the smallest B80 among greedy and Hara, without lower cap coverage.
+Uniform is also shown, with any stronger uniform result explicitly noted.
+If strongest baseline or exact does not reach80%, report that fact rather
+than an undefined numeric saving. Report learned-versus-learned and household
+results; do not declare broad useful gain from one favorable pair or house.
+No fractional interpolation of a discrete budget or undisclosed test subset.
+Bootstrap, if reported, resamples whole households with all days/seeds/pairs,
+and is descriptive; shared calendar effects limit independent-house claims.
+
+VALIDATION
+Preserve protocol/source/code hashes before evaluation. Independent checker
+must reconstruct every case's free copies, source timestamps, totals, bounds,
+truth containment, decisions, complete-batch charges, query uniqueness,
+eligibility and cap, exact test grid counts and headline aggregation without
+importing acquisition code. Use scale-aware declared numerical tolerances;
+floating-point tests are not a formal interval-arithmetic proof. Preserve
+unfavorable and failed outcomes, and errors plus corrected rerun provenance.
+
+The15% criterion is a preregistered-in-this-workflow planning threshold,
+not a journal criterion or a public prospective preregistration. No test
+outcome supports an editorial acceptance probability in advance.

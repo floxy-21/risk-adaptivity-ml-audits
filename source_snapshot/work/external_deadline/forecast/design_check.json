@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "fits_performed": 0,
+  "external_data_opened": false,
+  "feature_scalar_checks": 17712,
+  "feature_names": [
+    "lag2_same_hour",
+    "lag3_same_hour",
+    "lag8_same_hour",
+    "mean_day_minus2",
+    "hour_sin",
+    "hour_cos",
+    "weekday_sin",
+    "weekday_cos",
+    "month_sin",
+    "month_cos"
+  ],
+  "same_day_future_perturbation_fixtures": 3,
+  "missing_lag_persistence_independence": "passed",
+  "missing_target_forecast_independence": "passed",
+  "training_issue_boundary": "passed",
+  "saved_day_timestamp_unit_roundtrip_fixtures": [
+    "microsecond index",
+    "nanosecond index"
+  ],
+  "frozen_model_parameters_equal": true,
+  "sha256": {
+    "work\\external_deadline\\forecast\\forecast.py": "d03ed8eac3d2d749076eac6749210ad38513b56ce6a664effac33bcb3686e5c4",
+    "work\\external_deadline\\forecast\\check_design.py": "b1511569961229c34cb629841323cd15ca9ef01ff09914905479e2418eb74f7c",
+    "outputs\\run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183"
+  }
+}

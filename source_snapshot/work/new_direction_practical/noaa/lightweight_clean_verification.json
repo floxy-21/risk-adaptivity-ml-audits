@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "stage": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\new_direction_practical\\noaa\\lightweight_check_20261010T051244Z",
+  "manifest_sha256": "568cd84fbababd748685e3ae11f75d6258acc24f8f1cd6e28adbccdec11a1a28",
+  "files_verified": 27,
+  "bytes_verified": 3845870,
+  "entrypoint": "reproduce_extracted_panel.py",
+  "scope": "Fresh whitelist-only extraction: no raw stationfiles, GRIBcache, targetdeps, network or projecthelperimport."
+}

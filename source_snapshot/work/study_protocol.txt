@@ -1,0 +1,60 @@
+FROZEN PROTOCOL: 2026-10-09 23:40 UTC, before study model fitting/results.
+Question: Under explicitly simulated missing verification targets, do preserved
+energy totals identify which of two fixed forecasts has lower daily MSE?
+Data: UCI ElectricityLoadDiagrams20112014 (Portugal client panel) and UCI
+Individual Household Electric Power Consumption (one French household).
+Neither provides independent backup registers for this experiment. Totals will
+be derived from complete retained truth BEFORE masking; this emulates aggregate
+survival and is NOT a field outage study. No forecast improvement is claimed.
+
+Portugal: original 15-minute end-of-interval kW readings, shift index back 15 min,
+hourly interval energy=sum/4. Train 2013; use first 30 meter IDs with >=99% finite
+training hours and >95% positive training hours. Test first 28 days of Jan, Apr,
+Jul, Oct 2014. Exclude the provider's DST transition days from evaluation.
+Household: minute average global active power, hourly kWh=sum/60; require all 60
+finite minutes. Train 2008-2009; test all available complete eligible days 2010.
+Only days with all 24 target values and all origin-available features are used.
+Final counts are reported after these prespecified completeness filters.
+
+Forecasts: previous-day same hour, previous-week same hour, StandardScaler+Ridge
+(alpha=1), HistGradientBoostingRegressor (100 iterations, learning_rate=.08,
+max_leaf_nodes=15,min_samples_leaf=20,l2_regularization=1,max_bins=127,seed=1729).
+No outcome-based hyperparameter search. Fixed features per target hour: lag24,
+lag48,lag168,last24hmean and sine/cosine of hour,weekday,month. At each local-grid
+00:00 origin, all 24 values of each lag are available; last24hmean uses yesterday.
+Hourly feature model shares parameters across horizons. Predictions clipped >=0.
+All forecasts are generated and frozen before target masking.
+
+Verification masks: exactly 2,6,12 targets per 24h day; (i) contiguous random gap,
+(ii) random scattered gap, (iii) highest-demand targets (oracle adversarial stress,
+not an empirical missingness mechanism). Three fixed seeds 1103,2207,3301 for
+random mechanisms; highest-demand repeated across seeds for a balanced design,
+with duplicates explicitly acknowledged. Aggregate blocks: disjoint 6h or24h.
+Total-error sensitivity: symmetric 0%,1%,5% of each complete block's total.
+Feasible targets nonnegative with no upper capacity or smoothness constraints.
+
+Compare all 6 unordered model pairs, per day. Numerical decision margin
+1e-9*max(1,abs(bound endpoints)); indeterminate if interval includes margin.
+Methods: direct sharp paired bounds; separate sharp individual SSE bounds
+combined into an independent envelope; complete-case comparison; uniform
+energy-preserving imputation; training weekday/hour-profile energy-preserving
+imputation; nearest historical training-day donor rescaled to each gap's energy
+(CPI-inspired comparator, NOT claimed to reproduce published CPI).
+Energy-constrained baselines use central aggregate totals; uncertainty sensitivity
+changes bounding methods' feasible sets, not imputers' chosen point completions.
+Donor selected using only surviving verification targets, never hidden targets
+or competing forecasts. All comparison losses use full-day denominator24 except
+complete-case uses observed count (sign unaffected by this shared divisor).
+
+Outcomes: fraction resolved, decisions that contradict full-truth daily MSE,
+error fraction among decisions, enclosure of full-truth pair loss; mean interval
+width. Report also oracle absolute gap, no significance/generalization claim
+from finite-set certification. All trial aggregates retained by meter,pair,gap,
+pattern,block-size,total-tolerance,method. Portugal summaries macro-average over
+30 meters; 2000 resampling replicates at whole-meter level for descriptive95%
+bootstrap intervals. Household reported separately, not as independent homes.
+Do not treat days, overlapping masks, seeds, or model pairs as independent units.
+Prespecified cap-free vectorized formulas cross-checked against reference solver
+on 1000 randomly selected feasible test comparisons. Unit test suite run.
+Save prediction CSV, per-meter/scenario aggregate CSV, summary JSON, data/source
+hashes, package versions, timing, protocol SHA256. No suppressed null scenarios.

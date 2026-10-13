@@ -1,0 +1,127 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-11T21:04:18.616772+00:00",
+  "scope": "Previously used DEVELOPMENT validation only; hindsight diagnostic, not a held-out efficacy test.",
+  "interpretation": "Unattainable-information lower bound: the query subset is chosen using the hidden reference. No operational benefit or test-set confirmation is established.",
+  "cases": 26910,
+  "subsets_checked": 136498,
+  "squared_loss_vertices_checked": 333330,
+  "maximum_initial_endpoint_discrepancy": 0.0,
+  "maximum_vertex_discrepancy": 5.842548667089886e-15,
+  "summaries": {
+    "all": {
+      "cases": 26910,
+      "households": 20,
+      "household_macro_mean_requests": {
+        "oracle_minimum_requests": 0.7130636705661336,
+        "exact_historical_requests": 1.0191542076082614,
+        "greedy_historical_requests": 1.032013326738735,
+        "hara_historical_requests": 1.2334206442492794,
+        "uniform_historical_requests": 1.334662108286659,
+        "randomized_historical_requests": 1.0490267185943352
+      },
+      "oracle_counts": {
+        "0": 15664,
+        "1": 5902,
+        "2": 3342,
+        "3": 1480,
+        "4": 473,
+        "5": 49
+      }
+    },
+    "initially_uncertified": {
+      "cases": 11246,
+      "households": 20,
+      "household_macro_mean_requests": {
+        "oracle_minimum_requests": 1.6805254375703895,
+        "exact_historical_requests": 2.4207823571557627,
+        "greedy_historical_requests": 2.4525135523329227,
+        "hara_historical_requests": 2.934503037396079,
+        "uniform_historical_requests": 3.1735543856760415,
+        "randomized_historical_requests": 2.4920562555665287
+      },
+      "oracle_counts": {
+        "1": 5902,
+        "2": 3342,
+        "3": 1480,
+        "4": 473,
+        "5": 49
+      }
+    }
+  },
+  "oracle_curves": [
+    {
+      "population": "all",
+      "budget": 0,
+      "coverage": 0.5811385946781599
+    },
+    {
+      "population": "all",
+      "budget": 1,
+      "coverage": 0.8011249955031167
+    },
+    {
+      "population": "all",
+      "budget": 2,
+      "coverage": 0.9258302018659551
+    },
+    {
+      "population": "all",
+      "budget": 3,
+      "coverage": 0.9805979332636701
+    },
+    {
+      "population": "all",
+      "budget": 4,
+      "coverage": 0.9982446041229645
+    },
+    {
+      "population": "all",
+      "budget": 5,
+      "coverage": 1.0
+    },
+    {
+      "population": "all",
+      "budget": 6,
+      "coverage": 1.0
+    },
+    {
+      "population": "initially_uncertified",
+      "budget": 0,
+      "coverage": 0.0
+    },
+    {
+      "population": "initially_uncertified",
+      "budget": 1,
+      "coverage": 0.5368957514093713
+    },
+    {
+      "population": "initially_uncertified",
+      "budget": 2,
+      "coverage": 0.8302315085088026
+    },
+    {
+      "population": "initially_uncertified",
+      "budget": 3,
+      "coverage": 0.956290127086587
+    },
+    {
+      "population": "initially_uncertified",
+      "budget": 4,
+      "coverage": 0.9960571754248496
+    },
+    {
+      "population": "initially_uncertified",
+      "budget": 5,
+      "coverage": 1.0
+    },
+    {
+      "population": "initially_uncertified",
+      "budget": 6,
+      "coverage": 1.0
+    }
+  ],
+  "seconds": 86.15933460000088,
+  "input_manifest_sha256": "454b8c3dbd61b1e307c3df8bd72137ddbcc2ac7582eba5d8efea6b5f7b7780f0",
+  "cases_sha256": "4ae3bf4f7454b3deb31187fcc3c615d79ed3e6bc3a9ed9692d7dac252dbdd382"
+}

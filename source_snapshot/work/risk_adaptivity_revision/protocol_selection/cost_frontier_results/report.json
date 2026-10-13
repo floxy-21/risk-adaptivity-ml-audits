@@ -1,0 +1,142 @@
+{
+  "status": "PASS",
+  "analysis_type": "post-analysis exact declared-cost sensitivity",
+  "cases": 29,
+  "case_ratio_rows": 174,
+  "ratio_grid_exact": [
+    "0",
+    "1/4",
+    "1/2",
+    "1",
+    "2",
+    "4"
+  ],
+  "model": "cost = c_read * reserved_scalar_readings + c_round * information_rounds; c_read=1",
+  "switching_condition": "For each of the 22 adaptive-certified cases, adaptive costs 2+2r and fixed costs 3+r: adaptive iff r<1; at r=1 choose fixed for fewer rounds. Seven cases always use fixed-three.",
+  "panel_cost_identities": {
+    "fixed_three": "87+29r",
+    "adaptive_with_fallback": "65+51r",
+    "cost_aware": "min(87+29r,65+51r)"
+  },
+  "tie_rule": "minimum modeled cost, then fewer information rounds, then fewer readings, then protocol name",
+  "summaries": [
+    {
+      "round_to_reading_cost_ratio_exact": "0",
+      "cases": 29,
+      "fixed_three_cost_exact": "87",
+      "adaptive_with_fallback_cost_exact": "65",
+      "cost_aware_cost_exact": "65",
+      "cost_aware_protocol_counts": {
+        "adaptive": 22,
+        "fixed_batch": 7
+      },
+      "cost_aware_reserved_readings": 65,
+      "cost_aware_information_rounds": 51,
+      "fraction_saved_vs_fixed_exact": "22/87",
+      "fraction_saved_vs_adaptive_with_fallback_exact": "0"
+    },
+    {
+      "round_to_reading_cost_ratio_exact": "1/4",
+      "cases": 29,
+      "fixed_three_cost_exact": "377/4",
+      "adaptive_with_fallback_cost_exact": "311/4",
+      "cost_aware_cost_exact": "311/4",
+      "cost_aware_protocol_counts": {
+        "adaptive": 22,
+        "fixed_batch": 7
+      },
+      "cost_aware_reserved_readings": 65,
+      "cost_aware_information_rounds": 51,
+      "fraction_saved_vs_fixed_exact": "66/377",
+      "fraction_saved_vs_adaptive_with_fallback_exact": "0"
+    },
+    {
+      "round_to_reading_cost_ratio_exact": "1/2",
+      "cases": 29,
+      "fixed_three_cost_exact": "203/2",
+      "adaptive_with_fallback_cost_exact": "181/2",
+      "cost_aware_cost_exact": "181/2",
+      "cost_aware_protocol_counts": {
+        "adaptive": 22,
+        "fixed_batch": 7
+      },
+      "cost_aware_reserved_readings": 65,
+      "cost_aware_information_rounds": 51,
+      "fraction_saved_vs_fixed_exact": "22/203",
+      "fraction_saved_vs_adaptive_with_fallback_exact": "0"
+    },
+    {
+      "round_to_reading_cost_ratio_exact": "1",
+      "cases": 29,
+      "fixed_three_cost_exact": "116",
+      "adaptive_with_fallback_cost_exact": "116",
+      "cost_aware_cost_exact": "116",
+      "cost_aware_protocol_counts": {
+        "fixed_batch": 29
+      },
+      "cost_aware_reserved_readings": 87,
+      "cost_aware_information_rounds": 29,
+      "fraction_saved_vs_fixed_exact": "0",
+      "fraction_saved_vs_adaptive_with_fallback_exact": "0"
+    },
+    {
+      "round_to_reading_cost_ratio_exact": "2",
+      "cases": 29,
+      "fixed_three_cost_exact": "145",
+      "adaptive_with_fallback_cost_exact": "167",
+      "cost_aware_cost_exact": "145",
+      "cost_aware_protocol_counts": {
+        "fixed_batch": 29
+      },
+      "cost_aware_reserved_readings": 87,
+      "cost_aware_information_rounds": 29,
+      "fraction_saved_vs_fixed_exact": "0",
+      "fraction_saved_vs_adaptive_with_fallback_exact": "22/167"
+    },
+    {
+      "round_to_reading_cost_ratio_exact": "4",
+      "cases": 29,
+      "fixed_three_cost_exact": "203",
+      "adaptive_with_fallback_cost_exact": "269",
+      "cost_aware_cost_exact": "203",
+      "cost_aware_protocol_counts": {
+        "fixed_batch": 29
+      },
+      "cost_aware_reserved_readings": 87,
+      "cost_aware_information_rounds": 29,
+      "fraction_saved_vs_fixed_exact": "0",
+      "fraction_saved_vs_adaptive_with_fallback_exact": "66/269"
+    }
+  ],
+  "recorded_api": {
+    "full_hourly_range": {
+      "trials": 6,
+      "requests_mean_exact": "1",
+      "information_rounds_mean_exact": "1",
+      "api_io_seconds_mean_exact": "99373060000652911/300000000000000000",
+      "body_bytes_received_mean_exact": "680/3",
+      "api_io_seconds_mean": 0.3312435333355097
+    },
+    "adaptive": {
+      "trials": 6,
+      "requests_mean_exact": "2",
+      "information_rounds_mean_exact": "2",
+      "api_io_seconds_mean_exact": "297905479997280059/600000000000000000",
+      "body_bytes_received_mean_exact": "313/3",
+      "api_io_seconds_mean": 0.4965091333288001
+    }
+  },
+  "recorded_api_scope": "Existing three-task, six-trials-per-policy microbenchmark; separate exact-stored-grid model. Timings are not prices or observations on the 29 error-sensitivity cases.",
+  "scope": "Minimum over supplied per-case certified catalogue under a hypothetical restricted interface. No shared requests, stopping optimization, monetary estimates, field benefit or superiority over the best fixed baseline is claimed.",
+  "baseline_interpretation": "Fixed-three is already optimal for r>=1 and adaptive-with-fixed-fallback already optimal for r<=1. The selector prevents choosing the wrong resource priority; it does not improve upon either baseline in its favorable region.",
+  "source_hashes": {
+    "protocol_lock.json": "f0fbb2b5efbc04db58b446765a1f6c31595a6eb96e809fad1ed2d95e09d6c4a4",
+    "selector.py": "8aeadd981913d507bde64339b4ca4316763394112df2fe4c4b7c01e63dfde8f5",
+    "fixed_batch_certificates.json": "caae8e5d2f9f0ef1ae755b0e9b1c4d2afba3e71a09299967251bb94e0c851ce8",
+    "branch_certificates.json": "468befdf13f4baa018397a9bc86595ac6d8622c16151e2f939ae754c41e7be6c",
+    "recorded_trials.json": "7b369f2f5e930ccad1b4f381ee1c5be22a1487adff85bb01f3e51287a5e4f21f"
+  },
+  "source_sha256": "e232a088d4d8efed317be73023fb03414dade0485e3e36feaffeed2c8f6921ac",
+  "new_network_calls": 0,
+  "new_model_fits": 0
+}

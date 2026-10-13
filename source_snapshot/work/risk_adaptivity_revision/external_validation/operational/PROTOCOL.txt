@@ -1,0 +1,171 @@
+EXTERNAL PUBLIC-INTERFACE VALIDATION -- STAGE A FIXED BEFORE OUTCOMES
+
+Status and scope
+This file fixes the operational design before new forecast or treatment
+outcomes. The source metadata/ID lock must be completed and hashed separately
+before July fine-resolution answers are analyzed. No operational outcome has
+been measured by this protocol at creation. The current paper is unchanged.
+
+Source: HeatpumpMonitor.org public cumulative electricity-kWh feeds.
+Official API: https://heatpumpmonitor.org/api-helper
+Dataset terms and metering description: https://heatpumpmonitor.org/about
+Storage semantics: https://docs.openenergymonitor.org/emoncms/developer/timeseries/Fixed-interval.html
+The API provides time ranges and multiple feeds; full recovery is permitted.
+Feed names do not prove direct device-register provenance. Describe returned
+values as stored cumulative energy-feed samples unless direct-register
+provenance is separately established. Power integration, interpolation/join,
+timestamp flooring and float32 storage must be audited, not assumed absent.
+
+Calendar and selection
+Train: 2025-01-01 00:00 UTC through 2025-07-01 00:00 UTC, exclusive.
+Test:  2025-07-01 00:00 UTC through 2025-08-01 00:00 UTC, exclusive.
+The metadata stage selected and locked system IDs 1,2,7 in
+external_heatpump/selected_systems.json. These are the first three public
+systems in ascending numeric ID order with MID electricity-meter
+metadata, a cumulative electricity feed spanning that calendar, documented
+units, and an unambiguous sample-time convention. Eligibility may use source
+metadata and training data only. Require at least 90 complete eligible
+training days and at least 95% valid hourly training intervals. Report every
+screened ID and reason. Retain the locked IDs; if any fail training criteria,
+report that limitation without substituting a different system.
+The metadata selector must hash its IDs/feed keys/time range before July
+fine-resolution answers are used for evaluation.
+
+Forecasts
+Reuse the existing ten chronological features (daily lags 1,2,7; previous-day
+mean; hour/day-of-week/month sine/cosine pairs) and fixed specifications of
+daily persistence, ridge, histogram gradient boosting and MLP. Use the new
+explicit calendar, never the existing BLEM function's hard-coded 2017 split.
+No outcome-driven retuning, training retries, replacement or new predictors.
+Each test day's forecasts use only values preceding its 00:00 issue time.
+Forecast-input availability is separate from target availability; retain a
+denominator ledger for calendar days/blocks, missing inputs and missing targets.
+
+Scientific replay
+Three six-hour blocks ending at 06:00, 12:00 and 18:00 UTC; all six pairs of
+the four models; all test calendar days retained in the intake ledger.
+Initial information: fixed forecast vectors and outer cumulative endpoints.
+Optional dictionary: the five internal hourly cumulative samples.
+Budget: two optional samples per pair/block, unchanged.
+Primary precision: terminal width <= one half the initial width.
+Curves 0.25,0.4,0.5,0.6,0.75 remain descriptive, not a threshold search.
+Report batch/adaptive/escalate triage, exact-half cases, every meter and pair,
+all-case recorded precision, widths and winner certification. A zero initial
+width is retained as requiring zero optional retrievals.
+
+Measurement uncertainty
+Separate the exact stored-sample model from physical energy accuracy.
+Do not interpret 'Class 1' as an unconditional pointwise +/-1% error bound.
+Preserve the source's storage/time metadata and raw decimal response strings.
+Quantization sensitivity must follow the documented numeric representation;
+physical tolerances require a cited applicable device specification and its
+operating conditions. Do not manufacture an upper consumption cap from a
+test maximum. The uncertainty study must declare its bands before evaluating
+the resulting policy outcomes. Source uncertainty can invalidate a completion
+witness or precision guarantee; retain such failures.
+
+Operational interface audit (before timed treatments)
+Use only public read-only endpoints. Verify inclusive/exclusive endpoints,
+timestamp alignment, average=0, delta=0, unit and missing-value behavior using
+training-period examples. No interpolation is silently treated as measurement.
+The source audit shows variable-interval engines can select the first recorded
+sample in each requested interval and label it with the requested grid time;
+HPM does not expose the actual source sample time. Therefore the target is an
+API-grid cumulative difference, not documented native clock-hour consumption.
+Preserve interval=3600 for point and range requests, average=0 and delta=0.
+Do not coarsen the interval just to batch two timestamps: that could alter
+values or missingness. If two arbitrary point timestamps cannot be obtained
+in one request without additional information, use two requests and record
+one information round for a preselected pair. A one-point query must return
+only the requested sample (or any extra returned values enter the policy's
+information set and byte accounting). Record redirects and response headers.
+
+Strong full-recovery comparator
+For six hourly targets, full recovery needs only seven hourly cumulative
+boundary samples (or the five previously unavailable internal samples).
+Use the provider's interval=3600, average=0, delta=0 endpoint when validated.
+Do not inflate this baseline by downloading the entire native ten-second
+trace. If a single response supplies additional values, all methods may use
+them. If full recovery is faster/cheaper than selective retrieval, report it.
+No per-reading monetary price is assumed; published feed hosting subscriptions
+do not establish per-register billing.
+
+Timed policies
+1. Exact best deterministic two-query worst-width batch.
+2. Mean-width-optimal randomized batch with the existing secondary tie rule.
+3. Existing greedy adaptive policy with favorable pre-answer tie rule.
+4. Exact two-query deterministic adaptive policy.
+5. Full hourly trace recovery through the actual provider interface.
+All use identical initial information and permissible capabilities. Compare
+precision-conditioned workloads; do not call the mean-width policy optimal
+for precision. Randomized timing uses a declared seed (1729); scientific
+success/width expectations use all ten batches on the offline reference trace.
+
+Small public-service timing sample
+After forecasts are frozen, choose the earliest valid positive-initial-width
+July six-hour block for the daily-versus-MLP pair in each selected system.
+Positive initial width is known before optional answers; do not select using
+realized advantage or the adaptive/batch separation. Record any skipped zero
+width or unavailable-input block. Fix these three case IDs before treatments.
+Run two balanced-order repetitions of all five policies. Rotation seed 1729;
+order/repetition labels are retained. Full trace needs one request; each
+selective policy at most two. This is at most 54 treatment requests plus
+six common endpoint point requests if needed (60), with a hard cap
+of 60 total requests in the operational benchmark, including probes/errors.
+No automatic retry; HTTP429 or provider errors are recorded, not discarded.
+Stop benchmark traffic if throttled. Additional source downloads are logged
+separately and coordinated with the metadata/data adapter to avoid duplicates.
+
+Respect a global maximum of one public HTTP request per second and one
+outstanding request. Any client rate-limit waiting is explicitly measured
+separately. Do not interpret this imposed wait as provider retrieval latency.
+No simulated network delay, artificial per-query charge, sleep-based service,
+or controlled server is part of the public-interface experiment.
+
+Measurements
+Record for each request: wall start/end, time to response headers, time to
+body completion, client CPU time, status, redirect, content encoding, received
+body bytes, decoded payload bytes, selected cache headers, URL/parameter hash,
+response hash, requested and returned timestamp counts and mismatches.
+HTTP body bytes are not TLS/socket wire bytes. Header bytes are only separately
+reported if actually observed; do not estimate them as measured wire traffic.
+Record for each completed policy: planning CPU/wall time, request count,
+distinct samples requested/returned, sequential information rounds, total
+received bytes, API I/O elapsed time, rate-limit wait, total end-to-end elapsed
+time (including planning/validation/wait), final precision/winner status.
+Connection reuse settings are the same for all policies; report first versus
+later requests, cache headers and possible provider caching. Public-server
+cold-cache state cannot be asserted or forced by arbitrary cache-busting.
+
+Common setup versus incremental acquisition
+Report both initially retained-endpoint and end-to-end fetching scenarios.
+Common endpoints are not billed only to one method. If full trace can provide
+those endpoints and the interior in a single request, its actual one-request
+end-to-end route is allowed. Keep prediction-training/data-download time apart
+from online audit acquisition; include solver planning in the latter.
+The six common endpoint point requests also validate point/range equivalence;
+no extra probes are added beyond the 60-request cap. Those setup observations
+are counted separately in the initially-retained scenario and included for
+selective end-to-end acquisition; full recovery needs no extra endpoint call.
+For system-wide analysis, recovered measurements are shared across all six
+model pairs. Do not multiply physical retrieval cost by six independent pairs.
+The initial timed microbenchmark is explicitly pairwise, not system-wide cost.
+
+Uncertainty and claims
+Summarize API timings as paired per-case median/range across the two repeats,
+plus every request record. Three independent systems and six runs per policy
+are insufficient for a precise population speedup claim; no IID confidence
+interval over dependent pair/block rows. For the full external replay, report
+meter-balanced effects and individual meters. No acceptance probability is
+inferred from these tests. This protocol does not require a favorable effect.
+Evidence supports a measured public-API benefit only if actual treatment data
+show it against the full-recovery route under equivalent required precision.
+If full recovery dominates, the result limits the deployment claim rather than
+justifying suppressed capabilities or a different hidden-cost model.
+
+Potential local implementation study
+An instrumented local archival service may be useful for controlled profiling
+only after the public interface is understood. It would be labeled a prototype
+deployment with explicit hardware, indexing, caching and service code. It is
+not evidence of the provider's production latency or tariffs. No such service
+is started under this stage-A protocol.

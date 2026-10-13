@@ -1,0 +1,3 @@
+total_tolerance,comparisons,paired_certified,separate_certified,paired_unresolved,separate_unresolved,paired_only,separate_only,paired_coverage_percent,separate_coverage_percent,unresolved_reduction_percent,paired_wrong,separate_wrong,paired_mean_width,separate_mean_width
+0.0,9720,7753,2527,1967,7193,5226,0,79.7633744855967,25.997942386831273,72.65396913666065,0,0,728.0042195903821,45704.422618230965
+0.05,9720,7424,2010,2296,7710,5414,0,76.37860082304528,20.679012345679013,70.22049286640727,0,0,843.8871628381293,54027.416382574775

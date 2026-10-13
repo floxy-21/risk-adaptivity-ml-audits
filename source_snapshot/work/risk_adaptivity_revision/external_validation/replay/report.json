@@ -1,0 +1,486 @@
+{
+  "status": "PASS",
+  "manifest": {
+    "created_utc": "2026-10-12T02:33:50.747657+00:00",
+    "scope": "Frozen external API-grid stored cumulative increments; exact stored-sample model, not physical energy truth",
+    "forecast_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+    "counter_sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+    "protocol_lock_sha256": "abae34c65056b019ac01b443fa8ef880db50d80509f0a4827885f02b17b8da13",
+    "script_sha256": "dba71826d6a33064385019aa8a3de0db367452d1181e95679a627dc10adb7aae",
+    "threshold": "1/2 W0",
+    "policy_stage": "geometry before internal counter answers",
+    "original_routines_sha256": {
+      "study.py": "722f6262660c1ca559c006d6a3a19316d589a3a2049fd0d6fa631a789dd3591b",
+      "triage_analyze.py": "7e24841574c3b4da5f848acf0ff62fad31477fc1c23ef591e7087f798088ad98"
+    },
+    "query_scope": "two of five internal hourly API-grid cumulative samples per pair; six-hour endpoints initially known",
+    "forecast_time_scope": "declared retrospective issue schedule, no measured historical arrival times"
+  },
+  "counts": {
+    "planned_calendar_blocks": 279,
+    "planned_pair_tasks": 1674,
+    "geometry_tasks": 1674,
+    "replay_tasks": 1674,
+    "zero_width": 0,
+    "triage": {
+      "batch_suffices": 1614,
+      "adaptive_not_guaranteed": 31,
+      "feedback_required": 29
+    },
+    "exact_half": 29,
+    "replay_unavailable": 0
+  },
+  "groups": [
+    {
+      "grouping": "system_id",
+      "group": "1",
+      "cases": 558,
+      "zero_width": 0,
+      "batch_suffices": 543,
+      "feedback_required": 2,
+      "adaptive_not_guaranteed": 13,
+      "exact_half": 2
+    },
+    {
+      "grouping": "system_id",
+      "group": "2",
+      "cases": 558,
+      "zero_width": 0,
+      "batch_suffices": 537,
+      "feedback_required": 14,
+      "adaptive_not_guaranteed": 7,
+      "exact_half": 14
+    },
+    {
+      "grouping": "system_id",
+      "group": "7",
+      "cases": 558,
+      "zero_width": 0,
+      "batch_suffices": 534,
+      "feedback_required": 13,
+      "adaptive_not_guaranteed": 11,
+      "exact_half": 13
+    },
+    {
+      "grouping": "model_a_model_b",
+      "group": "daily/hist_gradient_boosting",
+      "cases": 279,
+      "zero_width": 0,
+      "batch_suffices": 260,
+      "feedback_required": 9,
+      "adaptive_not_guaranteed": 10,
+      "exact_half": 9
+    },
+    {
+      "grouping": "model_a_model_b",
+      "group": "daily/mlp",
+      "cases": 279,
+      "zero_width": 0,
+      "batch_suffices": 259,
+      "feedback_required": 7,
+      "adaptive_not_guaranteed": 13,
+      "exact_half": 7
+    },
+    {
+      "grouping": "model_a_model_b",
+      "group": "daily/ridge",
+      "cases": 279,
+      "zero_width": 0,
+      "batch_suffices": 275,
+      "feedback_required": 2,
+      "adaptive_not_guaranteed": 2,
+      "exact_half": 2
+    },
+    {
+      "grouping": "model_a_model_b",
+      "group": "hist_gradient_boosting/mlp",
+      "cases": 279,
+      "zero_width": 0,
+      "batch_suffices": 275,
+      "feedback_required": 2,
+      "adaptive_not_guaranteed": 2,
+      "exact_half": 2
+    },
+    {
+      "grouping": "model_a_model_b",
+      "group": "ridge/hist_gradient_boosting",
+      "cases": 279,
+      "zero_width": 0,
+      "batch_suffices": 272,
+      "feedback_required": 6,
+      "adaptive_not_guaranteed": 1,
+      "exact_half": 6
+    },
+    {
+      "grouping": "model_a_model_b",
+      "group": "ridge/mlp",
+      "cases": 279,
+      "zero_width": 0,
+      "batch_suffices": 273,
+      "feedback_required": 3,
+      "adaptive_not_guaranteed": 3,
+      "exact_half": 3
+    },
+    {
+      "grouping": "system_pair",
+      "group": "1/daily/hist_gradient_boosting",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 91,
+      "feedback_required": 0,
+      "adaptive_not_guaranteed": 2,
+      "exact_half": 0
+    },
+    {
+      "grouping": "system_pair",
+      "group": "1/daily/mlp",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 83,
+      "feedback_required": 0,
+      "adaptive_not_guaranteed": 10,
+      "exact_half": 0
+    },
+    {
+      "grouping": "system_pair",
+      "group": "1/daily/ridge",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 93,
+      "feedback_required": 0,
+      "adaptive_not_guaranteed": 0,
+      "exact_half": 0
+    },
+    {
+      "grouping": "system_pair",
+      "group": "1/hist_gradient_boosting/mlp",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 93,
+      "feedback_required": 0,
+      "adaptive_not_guaranteed": 0,
+      "exact_half": 0
+    },
+    {
+      "grouping": "system_pair",
+      "group": "1/ridge/hist_gradient_boosting",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 92,
+      "feedback_required": 0,
+      "adaptive_not_guaranteed": 1,
+      "exact_half": 0
+    },
+    {
+      "grouping": "system_pair",
+      "group": "1/ridge/mlp",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 91,
+      "feedback_required": 2,
+      "adaptive_not_guaranteed": 0,
+      "exact_half": 2
+    },
+    {
+      "grouping": "system_pair",
+      "group": "2/daily/hist_gradient_boosting",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 90,
+      "feedback_required": 3,
+      "adaptive_not_guaranteed": 0,
+      "exact_half": 3
+    },
+    {
+      "grouping": "system_pair",
+      "group": "2/daily/mlp",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 86,
+      "feedback_required": 4,
+      "adaptive_not_guaranteed": 3,
+      "exact_half": 4
+    },
+    {
+      "grouping": "system_pair",
+      "group": "2/daily/ridge",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 93,
+      "feedback_required": 0,
+      "adaptive_not_guaranteed": 0,
+      "exact_half": 0
+    },
+    {
+      "grouping": "system_pair",
+      "group": "2/hist_gradient_boosting/mlp",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 90,
+      "feedback_required": 2,
+      "adaptive_not_guaranteed": 1,
+      "exact_half": 2
+    },
+    {
+      "grouping": "system_pair",
+      "group": "2/ridge/hist_gradient_boosting",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 88,
+      "feedback_required": 5,
+      "adaptive_not_guaranteed": 0,
+      "exact_half": 5
+    },
+    {
+      "grouping": "system_pair",
+      "group": "2/ridge/mlp",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 90,
+      "feedback_required": 0,
+      "adaptive_not_guaranteed": 3,
+      "exact_half": 0
+    },
+    {
+      "grouping": "system_pair",
+      "group": "7/daily/hist_gradient_boosting",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 79,
+      "feedback_required": 6,
+      "adaptive_not_guaranteed": 8,
+      "exact_half": 6
+    },
+    {
+      "grouping": "system_pair",
+      "group": "7/daily/mlp",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 90,
+      "feedback_required": 3,
+      "adaptive_not_guaranteed": 0,
+      "exact_half": 3
+    },
+    {
+      "grouping": "system_pair",
+      "group": "7/daily/ridge",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 89,
+      "feedback_required": 2,
+      "adaptive_not_guaranteed": 2,
+      "exact_half": 2
+    },
+    {
+      "grouping": "system_pair",
+      "group": "7/hist_gradient_boosting/mlp",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 92,
+      "feedback_required": 0,
+      "adaptive_not_guaranteed": 1,
+      "exact_half": 0
+    },
+    {
+      "grouping": "system_pair",
+      "group": "7/ridge/hist_gradient_boosting",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 92,
+      "feedback_required": 1,
+      "adaptive_not_guaranteed": 0,
+      "exact_half": 1
+    },
+    {
+      "grouping": "system_pair",
+      "group": "7/ridge/mlp",
+      "cases": 93,
+      "zero_width": 0,
+      "batch_suffices": 92,
+      "feedback_required": 1,
+      "adaptive_not_guaranteed": 0,
+      "exact_half": 1
+    }
+  ],
+  "policy_summary": [
+    {
+      "policy": "adaptive",
+      "success_0.5": 0.9922341696535245,
+      "relative_width": 0.128523022180807,
+      "scaled_width": 0.009349383749990947,
+      "winner_probability": 0.9121863799283154,
+      "requested_samples": 2.0,
+      "cases": 1674
+    },
+    {
+      "policy": "det_batch",
+      "success_0.5": 0.9910394265232975,
+      "relative_width": 0.1355852725284654,
+      "scaled_width": 0.012180145261521712,
+      "winner_probability": 0.9074074074074074,
+      "requested_samples": 2.0,
+      "cases": 1674
+    },
+    {
+      "policy": "full_trace",
+      "success_0.5": 1.0,
+      "relative_width": 0.0,
+      "scaled_width": 0.0,
+      "winner_probability": 1.0,
+      "requested_samples": 5.0,
+      "cases": 1674
+    },
+    {
+      "policy": "greedy_adaptive",
+      "success_0.5": 0.9910394265232975,
+      "relative_width": 0.13388497071272548,
+      "scaled_width": 0.01030043982058164,
+      "winner_probability": 0.9109916367980884,
+      "requested_samples": 2.0,
+      "cases": 1674
+    },
+    {
+      "policy": "mean_batch",
+      "success_0.5": 0.9524981619813654,
+      "relative_width": 0.16783496768621864,
+      "scaled_width": 0.02081606464231896,
+      "winner_probability": 0.8879073736857074,
+      "requested_samples": 2.0,
+      "cases": 1674
+    },
+    {
+      "policy": "precision_optimal_cover",
+      "success_0.5": 0.8103448275862069,
+      "relative_width": 0.3941619227937167,
+      "scaled_width": 0.015545504980935931,
+      "winner_probability": 0.7413793103448276,
+      "requested_samples": 2.0,
+      "cases": 29
+    },
+    {
+      "policy": "uniform_batch",
+      "success_0.5": 0.6305256869772998,
+      "relative_width": 0.43210846282755494,
+      "scaled_width": 0.09961143028629012,
+      "winner_probability": 0.7225806451612903,
+      "requested_samples": 2.0,
+      "cases": 1674
+    }
+  ],
+  "half_policy_summary": [
+    {
+      "policy": "adaptive",
+      "success_0.5": 1.0,
+      "relative_width": 0.3113131322679139,
+      "scaled_width": 0.009037727997973501,
+      "winner_probability": 0.7931034482758621,
+      "requested_samples": 2.0,
+      "cases": 29
+    },
+    {
+      "policy": "det_batch",
+      "success_0.5": 0.9655172413793104,
+      "relative_width": 0.3736053454745535,
+      "scaled_width": 0.015786262958860594,
+      "winner_probability": 0.7586206896551724,
+      "requested_samples": 2.0,
+      "cases": 29
+    },
+    {
+      "policy": "full_trace",
+      "success_0.5": 1.0,
+      "relative_width": 0.0,
+      "scaled_width": 0.0,
+      "winner_probability": 1.0,
+      "requested_samples": 5.0,
+      "cases": 29
+    },
+    {
+      "policy": "greedy_adaptive",
+      "success_0.5": 1.0,
+      "relative_width": 0.31136028796276904,
+      "scaled_width": 0.009035832211216527,
+      "winner_probability": 0.7931034482758621,
+      "requested_samples": 2.0,
+      "cases": 29
+    },
+    {
+      "policy": "mean_batch",
+      "success_0.5": 0.8200440611143521,
+      "relative_width": 0.4002937158727155,
+      "scaled_width": 0.016620510467909064,
+      "winner_probability": 0.729629659906539,
+      "requested_samples": 2.0,
+      "cases": 29
+    },
+    {
+      "policy": "precision_optimal_cover",
+      "success_0.5": 0.8103448275862069,
+      "relative_width": 0.3941619227937167,
+      "scaled_width": 0.015545504980935931,
+      "winner_probability": 0.7413793103448276,
+      "requested_samples": 2.0,
+      "cases": 29
+    },
+    {
+      "policy": "uniform_batch",
+      "success_0.5": 0.3413793103448276,
+      "relative_width": 0.5898803153790967,
+      "scaled_width": 0.033800720641862986,
+      "winner_probability": 0.6655172413793103,
+      "requested_samples": 2.0,
+      "cases": 29
+    }
+  ],
+  "paired": [
+    {
+      "subset": "all",
+      "metric": "success_0.5",
+      "n": 1674,
+      "both": 1658,
+      "adaptive_only": 3,
+      "batch_only": 1,
+      "neither": 12
+    },
+    {
+      "subset": "all",
+      "metric": "winner_probability",
+      "n": 1674,
+      "both": 1513,
+      "adaptive_only": 14,
+      "batch_only": 6,
+      "neither": 141
+    },
+    {
+      "subset": "half",
+      "metric": "success_0.5",
+      "n": 29,
+      "both": 28,
+      "adaptive_only": 1,
+      "batch_only": 0,
+      "neither": 0
+    },
+    {
+      "subset": "half",
+      "metric": "winner_probability",
+      "n": 29,
+      "both": 21,
+      "adaptive_only": 2,
+      "batch_only": 1,
+      "neither": 5
+    }
+  ],
+  "verification": {
+    "status": "PASS",
+    "containment": "exact rational containment in all replayed terminal intervals",
+    "sum": "exact rational hourly increments sum to retained total",
+    "max_affine_loss_rounding_discrepancy": 1.3241019734787313e-16,
+    "geometry_cases": 1674,
+    "replay_cases": 1674,
+    "policy_rows": 10073,
+    "all_31_days_per_meter": true,
+    "no_bootstrap": "three systems and dependent pair/block cases: report meter and paired counts, no IID intervals",
+    "independence": "new source and frozen pipeline; same-study implementation, not external human validation"
+  },
+  "seconds": 109.32820889999857
+}

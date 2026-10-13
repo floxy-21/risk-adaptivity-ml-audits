@@ -1,0 +1,96 @@
+\section{Computing policies and hardest records on polytopes}\label{sec:general-algorithms}
+Let $F=\{y\in\mathbb R^n:Ay\le b\}$ be nonempty and compact, and let
+$T(y)=c^\top y+d$. Equalities can be represented by paired inequalities.
+The constant $d$ does not affect width. The first formulation allows any
+declared finite family $\mathcal Q$ of legal batches; $L_Q$ denotes the matrix
+of their exact linear measurements.
+
+\subsection{An enumerative hardest-record formulation}
+Introduce a common record $y$, endpoint witnesses $u_Q,v_Q$ for each
+$Q\in\mathcal Q$, and a scalar $\eta$. Consider
+\begin{equation}\label{eq:general-hardest-lp}
+\begin{aligned}
+\max\quad &\eta\\
+\text{subject to}\quad &Ay\le b,\quad Au_Q\le b,\quad Av_Q\le b
+                         &&(Q\in\mathcal Q),\\
+&L_Qu_Q=L_Qy,\quad L_Qv_Q=L_Qy &&(Q\in\mathcal Q),\\
+&\eta\le c^\top(u_Q-v_Q) &&(Q\in\mathcal Q).
+\end{aligned}
+\end{equation}
+For fixed $y$, the independent witnesses for batch $Q$ can attain its sharp
+width $W_Q(y)$. Thus the largest feasible $\eta$ at that record is
+$\min_Q W_Q(y)$, and the optimum of \eqref{eq:general-hardest-lp} is $\rho$.
+Its common record is a certificate that every legal batch leaves width at
+least $\rho$ there.
+
+The nonnegative dual multipliers $\pi_Q$ of the last constraints form an
+optimal randomized batch policy. Indeed, the free variable $\eta$ forces
+$\sum_Q\pi_Q=1$. Dualizing these constraints first yields
+\[
+\min_{\pi\in\Delta(\mathcal Q)}
+ \max_{y,u_Q,v_Q}\sum_Q\pi_Qc^\top(u_Q-v_Q)
+ =\min_{\pi\in\Delta(\mathcal Q)}\max_{y\in F}
+       \sum_Q\pi_Q W_Q(y)=\rho,
+\]
+where the endpoint feasibility constraints remain in the inner maximization.
+Ordinary linear-programming strong duality supplies the equality and the
+policy; no new duality theorem is asserted. In the implementation, a separate
+LP fixes the extracted $\pi$ and maximizes its expected width, checking the
+upper bound independently of the constraints involving $\eta$.
+
+With $M=|\mathcal Q|$ batches, the formulation has $n(1+2M)+1$ variables.
+It is polynomial in the explicitly enumerated batch family, which may be
+exponential in the number of available measurements. It is a small-instance
+benchmark and certificate generator; the aggregate-specific compact
+formulation avoids this enumeration in its structured setting.
+
+\subsection{An exact deterministic two-query algorithm}\label{sec:two-query}
+Assume every one of the $n\ge2$ coordinates is queryable at unit cost and the
+hard budget is two. An unused query can be added without increasing width,
+so considering two distinct coordinates includes policies that stop earlier.
+For a first query $i$ and feasible answer $t$, define
+\begin{equation}\label{eq:conditional-two-query}
+g_{ij}(t)=\max\{c^\top(u-v):Au\le b,\ Av\le b,\
+                u_i=v_i=t,\ u_j=v_j\},\qquad j\ne i.
+\end{equation}
+This maximizes the terminal width over all feasible records having first
+answer $t$, after second query $j$. The best deterministic policy beginning
+with $i$ therefore has worst width
+$\rho_i=\max_t\min_{j\ne i}g_{ij}(t)$.
+
+\begin{proposition}\label{prop:two-query-lp}
+For each $i$, $\rho_i$ is the value of the following single linear program,
+with one endpoint pair $(u^j,v^j)$ for each $j\ne i$:
+\begin{equation}\label{eq:two-query-lp}
+\begin{aligned}
+\max\quad &\eta\\
+\text{subject to}\quad &Au^j\le b,\quad Av^j\le b &&(j\ne i),\\
+&(u^j)_i=(v^j)_i=t,\quad (u^j)_j=(v^j)_j &&(j\ne i),\\
+&\eta\le c^\top(u^j-v^j) &&(j\ne i).
+\end{aligned}
+\end{equation}
+The optimal deterministic adaptive two-query worst-width value is
+$\min_i\rho_i$.
+\end{proposition}
+\begin{proof}
+At fixed feasible $t$, each endpoint pair has only its own constraints and
+can attain $g_{ij}(t)$. All inequalities on $\eta$ are feasible precisely up
+to their smallest attainable upper bound, $\min_{j\ne i}g_{ij}(t)$.
+Maximizing over the shared $t$ proves the first claim.
+For any deterministic policy beginning with $i$, its chosen second coordinate
+at answer $t$ has conditional worst width at least $\min_jg_{ij}(t)$.
+Conversely, choosing a minimizing $j$ after observing $t$ attains that value.
+Finite tie breaking gives a measurable selection because these polyhedral
+value functions are piecewise linear on their feasible interval. Finally,
+minimize over the first coordinate.
+\end{proof}
+
+For rational input, $n$ LPs of polynomial description size choose the first
+coordinate; after its answer, $n-1$ conditional LPs implement the second
+choice. This is a polynomial-time deterministic two-query procedure in the
+standard bit-complexity model, including the encoding length of rational
+query answers. For arbitrary exact answers, the policy is still defined by
+the conditional LPs; the polynomial bit-complexity statement applies to
+rationally encoded inputs and answers. It does not solve arbitrary-budget
+randomized precision-risk optimization or minimize expected requests until
+certification. No grid of possible first answers is used.

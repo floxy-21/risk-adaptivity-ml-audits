@@ -1,0 +1,118 @@
+% Independent derivation; no production implementation is imported.
+\subsection{Exact two-prefix adaptive width and a batch precision certificate}
+Let $y\in\mathbb R_+^n$ satisfy $\sum_{i=1}^n y_i=E$, where $E\geq0$ is
+known, and let the audited contrast be $T(y)=c^\top y+d$.  Each available query
+returns an exact prefix total $P_k(y)=\sum_{i=1}^k y_i$, $1\leq k<n$.
+Queries have unit cost and every execution may make at most two queries.
+For indices $a\leq b$, write
+\[
+ r(a,b)=\max_{a\leq i\leq b}c_i-\min_{a\leq i\leq b}c_i.
+\]
+The ranges of singleton segments are zero.  If queried prefixes partition
+$\{1,\ldots,n\}$ into consecutive segments $I$, their masses $m_I$ are known
+and the sharp interval width is
+\begin{equation}\label{eq:counter_segment_width}
+ W_Q(y)=\sum_I m_I r(I).
+\end{equation}
+Indeed, the nonnegative targets within a segment can place all its mass on a
+minimum or maximum coefficient, independently across segments.  These
+completions attain both endpoints.
+
+After first querying prefix $k$ and observing $t\in[0,E]$, the exact worst
+terminal width if the second query is $j\ne k$ is the affine function
+\begin{equation}\label{eq:counter_conditional_line}
+ g_{kj}(t)=
+ \begin{cases}
+ t\max\{r(1,j),r(j+1,k)\}+(E-t)r(k+1,n),&j<k,\\
+ tr(1,k)+(E-t)\max\{r(k+1,j),r(j+1,n)\},&j>k.
+ \end{cases}
+\end{equation}
+For example, when $j<k$, the first segment's known mass $t$ can be split
+arbitrarily between the new segments.  Maximizing its contribution therefore
+places the mass in the segment with larger coefficient range.  The unsplit
+right segment contributes $(E-t)r(k+1,n)$.  This proves equality, rather than
+only an upper bound; the case $j>k$ is symmetric.
+
+Consequently, the optimal deterministic adaptive two-query worst-width value
+is
+\begin{equation}\label{eq:counter_adaptive_value}
+ A=\min_{1\leq k<n}\max_{0\leq t\leq E}\min_{j\ne k}g_{kj}(t).
+\end{equation}
+For a fixed first cut, the policy chooses a minimizing second cut after
+observing $t$.  Conversely, any deterministic policy must choose such a
+second cut, and the conditional maximum in
+\eqref{eq:counter_conditional_line} is attainable.  Maximizing over $t$ and
+then minimizing over the first cut proves \eqref{eq:counter_adaptive_value}.
+Stopping after one query cannot improve width over a legal additional query,
+so allowing early stopping does not reduce this value.  The lower envelope
+of finitely many affine functions is concave and piecewise affine.  Its
+maximum is attained at an endpoint or at a pairwise line intersection in
+$[0,E]$.  Equivalently, it is the optimum of
+$\max\{\eta:0\leq t\leq E,\ \eta\leq g_{kj}(t)\ \forall j\ne k\}$.
+For rational input, enumerating these candidates gives an exact rational
+value.  This procedure optimizes a hard-budget worst-width guarantee; it
+does not optimize expected requests until certification.
+
+For a prescribed threshold $\tau\geq0$, take any finite collection of
+feasible profiles $y^1,\ldots,y^s$ and enumerate all two-prefix batches $Q$.
+Define the exact binary matrix
+$H_{\ell Q}=\mathbf1\{W_Q(y^\ell)\leq\tau\}$.
+The finite game
+\begin{equation}\label{eq:counter_batch_upper}
+ U(\tau)=\max_{\pi\in\Delta(\mathcal Q)}\min_\ell
+             \sum_Q\pi_QH_{\ell Q}
+ =\min_{w\in\Delta_s}\max_Q\sum_\ell w_\ell H_{\ell Q}
+\end{equation}
+is an upper bound on the worst-record success probability achievable by
+\emph{any randomized nonadaptive batch}.  Restricting the adverse record
+set can only increase that success value.  For any feasible adverse weights
+$w$, the explicitly calculated quantity
+$\max_Q\sum_\ell w_\ell H_{\ell Q}$ is already a valid upper bound, whether
+or not $w$ is optimal.  Smaller batches are dominated by their extensions
+to two queries.  In general, a concentration-profile game is not an exact
+solution of the continuum precision problem: threshold success need not
+attain its worst value at a vertex.  No such claim is needed for the upper
+bound.  If $\tau\geq A$, the adaptive procedure succeeds for every feasible
+record, and $1-U(\tau)$ is a certified lower bound on its advantage in
+worst-record precision success over every randomized batch.
+
+\paragraph{An exact six-hour separation.}
+Let $E=1$, $c=(0,0,1,1,0,1)$ and $\tau=1/2$.  Query prefix 4 first and write
+$t=P_4(y)$.  Query prefix 5 if $t\leq1/2$, and prefix 2 otherwise.  Its
+terminal width is $\min(t,1-t)\leq1/2$.  Formula
+\eqref{eq:counter_adaptive_value} gives first-cut values
+$(1,1,1,1/2,1)$, so its optimal deterministic adaptive worst width is exactly
+$A=1/2$.
+
+The fixed batch $(2,4)$ has width $1-t$; the fixed batch $(4,5)$ has width
+$t$.  Their equal mixture succeeds with probability at least $1/2$ for
+every record.  Conversely, put adverse probability $1/2$ on $e_1$ and
+$1/2$ on $e_5$.  At $e_5$, every batch except $(4,5)$ has width 1, since
+isolating the fifth coefficient from its two neighbors requires both cuts
+4 and 5.  The batch $(4,5)$ has width 1 at $e_1$.  Thus every batch succeeds
+on at most one of these two adverse records, and every randomized batch
+has worst-record success at most $1/2$.  Its optimal success is therefore
+exactly $1/2$, whereas the adaptive success is 1.
+
+These policies nevertheless have identical optimal worst expected width,
+$1/2$.  The equal batch mixture has expected width $1/2$ at every record;
+the common record $y^*=(e_1+e_5)/2$ has width at least $1/2$ for every final
+batch, including a batch selected by an adaptive transcript.  Exact
+prefix answers and a fixed internal seed define the same observation fiber
+as the final set of queried prefixes: every completion agreeing with those
+answers follows the same adaptive query and stopping sequence.  Thus the
+common-record width lower bound applies to adaptive policies as well.
+The precision advantage concerns reliability of the terminal interval's
+width, not winner identification, forecasting error, or retrieval cost.
+
+\paragraph{Comparator discipline.}
+A natural one-step minimax greedy rule first minimizes
+$E\max\{r(1,k),r(k+1,n)\}$ and then, given $t$, minimizes
+$g_{kj}(t)$.  All five first cuts tie under this greedy first-stage
+criterion in the example.  Choosing cut 1 by index gives worst width 1,
+while choosing cut 4 gives $1/2$.  Consequently, an apparent factor-two
+gain over lexicographic greedy would be a tie-selection effect.  The
+separation proved above instead uses every randomized batch as comparator.
+An empirical greedy study should freeze its tie rule, give all methods
+identical available prefixes and totals, and report sensitivity to the
+best first-stage greedy tie when possible.

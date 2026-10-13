@@ -1,0 +1,60 @@
+{
+  "case": "C27",
+  "method": "compact",
+  "status": "success",
+  "baseline_working_set_bytes": 72908800,
+  "import_seconds": 1.881689899993944,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "value": 0.4516377842919933,
+  "lp_value": 0.45163778429199336,
+  "policy_diagnostics": {
+    "preprocessed_blocks": 0,
+    "active_blocks": 1,
+    "maximum_conditional_projection": 1.1102230246251565e-16,
+    "maximum_unconditional_marginal_change": 1.1102230246251565e-16,
+    "maximum_flow_change": 1.1102230246251565e-16,
+    "maximum_coefficient_change": 1.1102230246251565e-16,
+    "maximum_systematic_cdf_correction": 0.0,
+    "hypersimplex_sum_error": 0.0,
+    "positive_flow_edges": 2,
+    "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+    "lp_primal_feasibility": 3.774758283725532e-15,
+    "objective_change": -5.551115123125783e-17,
+    "lp_dimensions": {
+      "variables": 10076,
+      "equalities": 327,
+      "inequalities": 9798
+    }
+  },
+  "sample_checks": 20,
+  "instrumented_method_seconds": 1.6350324999948498,
+  "method_seconds": 1.6314271000010194,
+  "lp_checks": [
+    {
+      "solver_seconds": 1.4539660000009462,
+      "solver_success": true,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "variables": 10076,
+      "equalities": 327,
+      "inequalities": 9798,
+      "nonzeros": 40673,
+      "primal_absolute": 3.774758283725532e-15,
+      "primal_normalized": 3.774758283725532e-15,
+      "dual_absolute": -0.0,
+      "dual_normalized": -0.0,
+      "stationarity_absolute": 7.632783294297951e-16,
+      "stationarity_normalized": 7.632783294297951e-16,
+      "duality_gap_absolute": 0.0,
+      "duality_gap_normalized": 0.0,
+      "dual_objective": 0.45163778429199336,
+      "diagnostic_seconds": 0.0036053999938303605
+    }
+  ],
+  "peak_working_set_bytes": 102023168,
+  "total_worker_seconds": 3.5330619999876944
+}

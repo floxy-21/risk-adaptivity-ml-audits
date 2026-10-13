@@ -1,0 +1,235 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-11T21:18:24.518762+00:00",
+  "scope": "Independent arithmetic, query objective/proposal, trace, stopping, case-summary and aggregate verification; no production policy/evaluator imports, no fresh fitting.",
+  "reference_period": "validation",
+  "base_cases": 26910,
+  "policy_cases": 134550,
+  "households": 20,
+  "stages_checked": 119448,
+  "candidate_scores_checked": 567031,
+  "randomized_finite_games_checked": 0,
+  "maximum_randomized_primary_error": 0.0,
+  "maximum_randomized_secondary_error": 0.0,
+  "randomized_scope": "Independent primary/secondary finite LP and mixture-moment feasibility/support; exact compact sampler random draw not reconstructed.",
+  "maximum_bound_discrepancy": 5.842548667089886e-15,
+  "maximum_selected_probability_discrepancy": 5.218048215738236e-14,
+  "summaries": [
+    {
+      "subgroup": "all",
+      "policy": "decision_probability",
+      "initially_unresolved": 11246,
+      "households": 20,
+      "macro_mean_requests": 1.7938629079097694,
+      "all_case_macro_mean_requests": 0.7594912561886763,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.5048333451288881,
+        0.7764217266754718,
+        0.93176828206185,
+        0.9931137382240204,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "all",
+      "policy": "exact_width_one",
+      "initially_unresolved": 11246,
+      "households": 20,
+      "macro_mean_requests": 1.8065184563617875,
+      "all_case_macro_mean_requests": 0.764115761175543,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.48190143016345327,
+        0.7776131643278135,
+        0.938623918150449,
+        0.9953430309964972,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "all",
+      "policy": "greedy_width_one",
+      "initially_unresolved": 11246,
+      "households": 20,
+      "macro_mean_requests": 1.8065184563617875,
+      "all_case_macro_mean_requests": 0.764115761175543,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.48190143016345327,
+        0.7776131643278135,
+        0.938623918150449,
+        0.9953430309964972,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "all",
+      "policy": "hara_one",
+      "initially_unresolved": 11246,
+      "households": 20,
+      "macro_mean_requests": 2.39734558712677,
+      "all_case_macro_mean_requests": 1.0117253722865684,
+      "B80": 4,
+      "coverage": [
+        0.0,
+        0.28426412535944645,
+        0.5530749992507943,
+        0.7956224927329589,
+        0.9696927955300307,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "all",
+      "policy": "uniform_one",
+      "initially_unresolved": 11246,
+      "households": 20,
+      "macro_mean_requests": 2.7146504039217825,
+      "all_case_macro_mean_requests": 1.146435834056411,
+      "B80": 4,
+      "coverage": [
+        0.0,
+        0.2034844909792078,
+        0.4383104405826505,
+        0.6957707181653718,
+        0.9477839463509874,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "learned",
+      "policy": "decision_probability",
+      "initially_unresolved": 5878,
+      "households": 20,
+      "macro_mean_requests": 1.8210654355654814,
+      "all_case_macro_mean_requests": 0.812382141581694,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.49258287010986945,
+        0.7662086709343159,
+        0.9288780795494341,
+        0.9912649438408995,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "learned",
+      "policy": "exact_width_one",
+      "initially_unresolved": 5878,
+      "households": 20,
+      "macro_mean_requests": 1.8371378161097986,
+      "all_case_macro_mean_requests": 0.8186928057929643,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.4673811285766639,
+        0.7654487732132645,
+        0.936059772855085,
+        0.9939725092451885,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "learned",
+      "policy": "greedy_width_one",
+      "initially_unresolved": 5878,
+      "households": 20,
+      "macro_mean_requests": 1.8371378161097986,
+      "all_case_macro_mean_requests": 0.8186928057929643,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.4673811285766639,
+        0.7654487732132645,
+        0.936059772855085,
+        0.9939725092451885,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "learned",
+      "policy": "hara_one",
+      "initially_unresolved": 5878,
+      "households": 20,
+      "macro_mean_requests": 2.4391785653101756,
+      "all_case_macro_mean_requests": 1.0840221305585476,
+      "B80": 4,
+      "coverage": [
+        0.0,
+        0.2698400331867002,
+        0.5410327455048726,
+        0.7842836626350478,
+        0.9656649933632039,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "learned",
+      "policy": "uniform_one",
+      "initially_unresolved": 5878,
+      "households": 20,
+      "macro_mean_requests": 2.7174146323517188,
+      "all_case_macro_mean_requests": 1.2089471903191913,
+      "B80": 4,
+      "coverage": [
+        0.0,
+        0.2034903840494536,
+        0.4353256732845824,
+        0.6931692001164799,
+        0.9506001101977652,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    }
+  ],
+  "seconds": 333.8396120000107,
+  "inputs": {
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\external_deadline\\validation\\trajectories.jsonl": "2e50b82a7ebc67af414bb6541d4e000dd435a085bdd7d4e93a2880ceb427ec27",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\external_deadline\\fitted\\reference_targets.csv": "6ead862b89ad64b798faebd4b7770c8f693aa8b0579dc06c81bf12a674128ecc",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\prototype\\full\\pre_run_manifest.json": "f6da8d8c3169a7dd9d0405cea0610ff00b63844a9ea3e3c9d68efdbb1f41c4e4",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\prototype\\full\\trajectories.jsonl": "f62a0035dda8ed2d2bd29040a29e1052240c2ff9d08f33be1ac535212fd2f67f",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\prototype\\full\\cases.csv": "71087cca262879245b9f8036a1573a699b2a448e427d21ab9684cb15e5c28453",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\reviews\\verify_decision.py": "a2249a4e66fda66360b0616f114290ab2ecda5cbf59d578109ca41ccbadca736"
+  },
+  "primary_bootstrap": {
+    "policy": "decision_probability",
+    "comparators": [
+      "exact_width_one",
+      "hara_one"
+    ],
+    "best_observed_comparator": "exact_width_one",
+    "relative_mean_request_reduction": 0.007005490814361748,
+    "seed": 8241,
+    "resamples": 2000,
+    "households": 20,
+    "descriptive_percentile_95_interval": [
+      0.001527189372265539,
+      0.014822958249700173
+    ],
+    "resampling_rule": "Paired whole-household means; best comparator reselected in each resample."
+  }
+}

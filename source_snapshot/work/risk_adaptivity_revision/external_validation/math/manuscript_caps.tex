@@ -1,0 +1,55 @@
+\paragraph{Sensitivity to additional hourly information.}
+Before computing this sensitivity, we fixed the subset to all 290
+original feedback-essential cases and the illustrative caps
+$0\leq x_h\leq E/2$ and $0\leq x_h\leq E/3$.
+These are scenario constraints, not validated physical limits. The primary comparison
+keeps the original absolute requirement $\tau=W_0^{\rm old}/2$.
+A separate calculation halves the new constrained width and therefore
+asks a different precision question (Table~\ref{tab:counter-caps}).
+
+\begin{table}[htbp]\centering\small
+\caption{Illustrative-cap sensitivity of the fixed 290-case subset.
+Each row partitions all cases into a fixed-batch guarantee, a
+feedback-essential deterministic guarantee, and no deterministic
+two-query guarantee. ``Old'' and ``new'' identify the initial width used
+in the threshold, not different data.}
+\label{tab:counter-caps}
+\begin{tabular}{llrrr}\toprule
+Hourly cap & Precision threshold & Batch & Feedback & Unresolved\\\midrule
+None & $W_0^{\rm old}/2$ & 0 & 290 & 0\\
+$E/2$ & $W_0^{\rm old}/2$ & 282 & 8 & 0\\
+$E/3$ & $W_0^{\rm old}/2$ & 290 & 0 & 0\\
+$E/2$ & $W_0^{\rm new}/2$ & 163 & 33 & 94\\
+$E/3$ & $W_0^{\rm new}/2$ & 221 & 0 & 69\\\bottomrule
+\end{tabular}\end{table}
+
+At the unchanged requirement, the $E/2$ cap leaves eight feedback-essential
+cases, five on meter~1 and three on meter~2; all retain exact randomized-batch
+success $1/2$. The $E/3$ cap leaves none; 34 cases already satisfy the
+old threshold without a query. The constructed example
+$E=1$, $c=(0,0,1,1,0,1)$ illustrates the mechanism: imposing $x_h\leq1/2$
+changes the best fixed-batch guarantee from one to $1/2$, matching
+adaptation, while its initial width remains one.
+Thus the original guarantee gap is sensitive to additional valid hourly
+information; it is not established as robust to physical capacity bounds.
+
+After freezing the capped geometry, an exact integer-register check found
+that the recorded trace violates the $E/2$ assumption in 8 of 290 cases
+(meters 1--3: 1, 0, 7) and the $E/3$ assumption in 57 cases (11, 8, 38).
+These correspond to 8 and 48 of the 228 distinct blocks. All cases remain
+in Table~\ref{tab:counter-caps}; the capped guarantees do not cover an
+excluded trace. Compatibility does not establish a physical operating bound.
+None of the eight remaining feedback-essential cases at the unchanged
+threshold violates the $E/2$ cap in its recorded trace; the eight excluded
+cases form a different set.
+
+All results use the original coefficients and total. Exact rational
+bounded-allocation formulas and independently assembled polytope LPs
+agree across every case, batch and first query; the largest discrepancy
+is $6.11\times10^{-16}$ in units of $W_0^{\rm old}$.
+Finite adverse games use only exactly feasible capped profiles.
+Their upper bounds are called exact continuum optima only when a
+matching fixed-batch or two-batch guarantee is supplied.
+The fixed protocol, 1,740-row ledger, coefficients and checkable witnesses
+are included in Online Resource~1. This calculation does not estimate
+full-panel prevalence or measured acquisition savings.

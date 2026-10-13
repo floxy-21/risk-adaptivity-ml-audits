@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "review_date": "2026-10-13",
+  "completed_utc": "2026-10-13T07:16:08.932730+00:00",
+  "scope": "PeerJ structure and source/PDF correspondence; analytic and software reviews are separate. Full clean ZIP replay reported separately.",
+  "manuscript_sha256": "90d01a9893458291d2d22a3bed8cf39938b07497a90680038533dbb0228575ff",
+  "pdf_sha256": "465cca6212e67f5539b4b4ce96112dce97451c85fa2ae601e868ffe8d499fb63",
+  "pdf_pages": 28,
+  "abstract_words": 236,
+  "builtin_main_compile": "success",
+  "manuscript_overfull_or_undefined_warnings": 0,
+  "visual_review": "outputs/peerj_final_visual_review.txt",
+  "export_environment_advisory": "Fontconfig and lineno source-comment encoding advisories; rendered pages separately inspected.",
+  "proof_review_kind": "separate AI-assisted internal analytic review; not external human or formal proof-assistant validation",
+  "novelty_repair": "Explicit comparison with Osipenko Theorems 2--3 and 5, in addition to existing objective-specific comparisons.",
+  "practical_repairs": [
+    "strict interface schema",
+    "canonical typed task/plan binding",
+    "controlled readout rejection",
+    "both task-binding checks integrated into default replay"
+  ],
+  "valid_scientific_ledger_unchanged": true,
+  "input_verification_reports": {
+    "selector": "b3dbb9518b636b8db4db9551cb674b1d9df4f34a35d06c4613250f0ca5b1d2d0",
+    "task_binding": "46fe87595f77f50fad7a8fe364dbf51c6570a46694acf4861a6860bc258b92b1"
+  },
+  "historical_empirical_result_changes": false,
+  "target": "PeerJ Computer Science",
+  "policy_evidence": [
+    "Official PeerJ/Overleaf submission template",
+    "Publisher Computer Science journal factsheet"
+  ],
+  "policy_verification_limit": "Direct current policy pages returned HTTP 403; portal-specific requirements and fees not represented as verified.",
+  "acceptance_probability": "No calibrated individual acceptance probability; internal corrections do not establish an 80% threshold.",
+  "submission_status": "not submitted",
+  "external_contact": false
+}

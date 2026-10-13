@@ -1,0 +1,143 @@
+\subsection{External source and frozen chronological design}\label{sec:external-design}
+We test whether an executable acquisition policy reaches a justified model
+comparison with fewer requested records on a source not used in the earlier
+energy experiments. Low Carbon London (LCL) provides half-hour energy records
+from UK Power Networks through the London Datastore \cite{lcl}. We scan the
+complete official archive and take the 20 lowest household IDs with at least
+90 complete training days among its lowest 100 IDs. Selection uses training
+availability alone, without forecast or acquisition outcomes. The sampling
+frame is deterministic and is not a representative population sample.
+One selected household has no eligible test days and is retained in the
+attrition inventory rather than replaced. All subsequently eligible days
+and all six pairs of the four candidate models enter the analysis.
+
+An hourly reference is the sum of the two finite, nonnegative source values
+labeled at its :00 and :30 positions. Both must be present and unique;
+duplicates, nulls, negative entries and incomplete hours are excluded, with
+no interpolation, replacement by zero or outlier clipping. A complete day
+requires all 24 references; feature availability imposes an additional,
+predeclared restriction. The source has no actual-versus-estimated quality
+flag, so this screen does not identify every possible provider-side
+estimation practice. The provider's physical timezone and interval-endpoint
+convention are not established by the inspected metadata. We therefore map
+its labels onto a declared 24-hour benchmark clock; UTC-shaped timestamps in
+the implementation are experiment coordinates, not verified physical UTC.
+The two 2013 clock-change dates are conservatively excluded. Training is
+January--September 2013, validation October--December 2013, and testing
+January--February 2014. Source records, selection and code hashes were
+frozen before the corresponding evaluation; this is a local protocol freeze,
+not a public preregistration.
+
+The original external-source plan used REFIT raw power records \cite{refitraw}. Under its
+frozen strict reference-quality rule, all 20 houses yielded no complete
+days, so no REFIT forecast or recovery outcome was evaluated. We retained
+that failed feasibility inventory and selected the LCL fallback before
+model fitting or acquisition outcomes. No reference-quality rule was relaxed
+to obtain a favorable result.
+
+\subsection{Causal forecasts and two permitted archives}\label{sec:external-archive}
+The candidates are persistence, standardized Ridge regression, histogram
+gradient boosting and the fixed multilayer perceptron. Learned-model
+specifications, iteration allowances and random states are unchanged from
+the historical study in Appendix~\ref{app:historical-design}; each selected
+household receives its own training-only fit. The new causal feature vector
+contains corresponding-hour values from days $D-2,D-3,D-8$, the mean of day
+$D-2$, and sine/cosine hour, weekday and month terms. Forecasts for day $D$
+are assigned issue time noon on $D-1$. Feature-source records end no later
+than the start of $D-1$; learned forecasts also require that the last
+training target precede their issue time. Persistence copies the
+corresponding hour of $D-2$. Forecast generation does not require its own
+future verification target: available persistence rows are retained even
+when learned features or future reference targets are incomplete.
+
+For each target day the early audit cutoff is the start of $D+1$ and the
+later cutoff is noon on $D+1$, immediately after that issue. Every saved
+prediction permitted by the cutoff is available, including already-issued
+predictions for future targets. At the early cutoff, predictions involving
+day $D$ as a lag have not yet been issued. At the later cutoff, the saved
+persistence forecasts for $D+2$ reveal every target in $D$. Reconstruction
+uses those forecast values and source-row traces, not hidden reference
+values. The historical targets are used afterward to check the copies.
+Because no predictor issued by the early cutoff uses day $D$ as an input,
+inverting these learned forecasts cannot add constraints on its missing
+targets either, conditional on this fixed-model benchmark schedule.
+Both cutoffs, target availability and record access are constructed
+benchmark rules. They do not measure production arrival times or establish
+a physical twelve-hour service-level benefit.
+
+Each day has four exact six-hour totals constructed from its eligible
+references. A single contiguous six-hour gap has a uniformly selected start
+from 0 through 18, using three fixed SHA-256-derived streams per day. Masks
+apply to the audit inputs, not to past model training or issued features.
+Thus the benchmark represents an incomplete audit export while the forecast
+service may later access the underlying readings; it does not simulate a
+persistent physical-meter failure shared by both systems.
+All policies receive the same initially surviving readings, totals and
+permitted archive. Direct copies, singleton residuals and zero residual
+totals are incorporated for free before any request. These controlled totals
+are not evidence that independent registers survived real LCL outages.
+
+\subsection{Executable stopping policies and equal information}\label{sec:external-policies}
+Five policies operate sequentially on each fixed model pair: exact
+deterministic width minimization, greedy width reduction, a Hara-inspired
+proposal, uniform sampling and the randomized robust method with its
+uniform-barycenter secondary optimum. At an unresolved stage each requests
+at most two currently unknown coordinates, reveals the entire batch, applies
+free aggregate deductions and recomputes the comparison interval. It stops
+at a strict certificate, a numerical tie, or six cumulative requested
+coordinates. Every submitted coordinate is charged, including both members
+of a batch that already suffices for certification; there are no refunds or
+duplicate requests. Already certified comparisons use no requests. Each
+policy excludes already determined and contrast-irrelevant coordinates
+from its acquisition candidates under the same rule. Each
+coordinate is an hourly target record composed of two source rows, not a
+measured meter transaction. Requests remain pair-specific; they are not
+shared across the six model pairs.
+
+The Hara-inspired proposal adapts the squared-loss comparison weight
+$|a_i-b_i|\mathbb{E}|a_i+b_i-2Y_i|$ from \cite{hara}. A fixed Ridge mean and
+validation-residual Gaussian scale specify a proposal distribution;
+conditioning independent Gaussian errors on each residual total gives its
+mean and marginal variance. The absolute-value expectation is evaluated
+analytically. Nonnegative support is enforced by the certificate, not by
+this Gaussian proposal. We sample without replacement with these weights,
+using uniform weights if all vanish. This is an explicitly described
+regression adaptation, not a reproduction of the published classification
+experiment or its importance-weighted estimator. No test labels calibrate
+the surrogate. Validation acquisition replay uses the full-validation
+residual scale and is therefore a retrospective calibration diagnostic;
+the test run is chronological because the scale is frozen beforehand.
+
+The exact batch method minimizes worst remaining width at each stage; it
+does not solve a minimum-cost sequential stopping problem. Likewise the
+randomized policy optimizes worst expected width, not expected requests to
+certification. The three fixed streams define three actual acquisition
+paths, not an exact expectation over all randomized trajectories. Every
+policy sees the same available observations and uses the same enclosure and
+strict-sign tests. Numerical ties remain uncertified and are reported rather
+than resolved through hidden reference values.
+If the deterministic routine returns an empty optimal batch despite positive
+width, we select the lexicographically first feasible full batch with the
+same primary optimum. This outcome-independent tie rule prevents a stalled
+acquisition sequence; it does not improve the claimed minimax value.
+
+\subsection{Predeclared decision-cost outcomes}\label{sec:external-metric}
+The primary curve is the fraction certified by cumulative integer budget
+$B=0,\ldots,6$ among initially uncertified comparisons, including numerical
+ties. Fractions are first computed within each household and then averaged
+equally across households with a nonzero denominator. We also report pooled
+counts, the all-case curve, learned-model-only pairs, each household, each
+model pair and each test month. Mean request costs include failures and
+early stops. The descriptive budget $B_{80}$ is the smallest integer whose
+primary coverage reaches 80\%; if none does, it is not reached. Curves count
+only actually executed batches and do not interpolate fractional requests.
+
+Before outcomes we declared a practical planning criterion: at least a
+15\% reduction in $B_{80}$ relative to the better of greedy and Hara, without
+lower coverage at the six-request cap. Uniform and randomized results are
+reported as well, so an uncompetitive baseline cannot be hidden by that
+comparison. This criterion is a study-planning threshold, not a claim of
+statistical significance. Whole-household,
+pair and learned-only diagnostics reveal whether an aggregate result depends
+on a few cases. No household replacement, hyperparameter tuning or acquisition
+retuning is allowed after the test outcomes are opened.

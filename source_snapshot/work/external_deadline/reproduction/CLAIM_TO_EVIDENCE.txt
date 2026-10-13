@@ -1,0 +1,93 @@
+CLAIM-TO-EVIDENCE MAP
+
+1. Sharp paired squared-loss interval under nonnegative disjoint totals.
+Evidence: main mathematical result and explicit attaining completions;
+independent per-stage interval/reference checks; synthetic bounds fixtures.
+Route: --small; default external trajectory replay; earlier historical
+checkers for the retained historical experiments.
+Boundary: conditional on the declared feasible set containing the truth;
+ordinary floating-point checks are not interval-arithmetic formal proofs.
+
+2. Exact deterministic width-optimal recovery batch.
+Evidence: sorted-window/allocation argument and enumerated small checks.
+Route: --small and acquisition/check_acquisition.py.
+Boundary: repeatedly reoptimizing such a batch does not prove optimality
+for total readings required to reach a certificate. The external study
+measures the resulting executable sequence empirically.
+
+3. Exact randomized robust optimization with a specified secondary rule.
+Evidence: endpoint oracle/compact formulation, hard-budget sampler,
+compact-versus-finite examples and two secondary-policy examples.
+Route: --small; separate prior randomized/tie/scaling checkers.
+Boundary: robust expected-width optimality does not imply best realized
+width, certification probability or a unique optimal distribution.
+
+4. Qualified one-block randomization-gap bound.
+Evidence: proof and attaining separated-cluster constructions, retaining
+the stated positive-optimum and retained-cardinality hypotheses.
+Route: earlier randomized small-instance verification, preserved in the
+full historical reproduction route.
+Boundary: not a statement about decision-cost gains in all measured records.
+
+5. Certified multi-model MSE-regret stopping.
+Evidence: pairwise-regret identity in the original appendix and its promoted
+main-text corollary; feasible-set monotonicity proof.
+Boundary: zero regret certifies best-or-tied-best; strict winner needs strict
+pairwise upper bounds. A predeclared positive tolerance is measured in MSE
+units. No new jointly optimal multi-model acquisition policy is claimed.
+
+6. External early-audit certification versus requested readings.
+Evidence: test/trajectories.jsonl, cases.csv, archive_snapshots.json,
+coverage_curves.csv, cost_summary.csv, household_curves.csv, pair_curves.csv,
+month_curves.csv and headline_summary.json, independently reconstructed
+from separate reference targets and permitted forecast rows.
+Route: default replay; --refit for a new fit/acquisition execution; --raw for
+full official source regeneration before fresh fit/acquisition.
+Boundary: the observed B80 comparison and fixed 15% planning criterion are
+reported whether favorable or unfavorable. They are not an acceptance
+threshold, monetary saving or globally optimal stopping theorem.
+
+7. Early/later information contrast.
+Evidence: every snapshot's available-row counts and copy-source timestamps;
+new causal features and archive, including future-target predictions issued
+by the cutoff. Late target copies are obtained from forecast rows, not
+silently read from the hidden reference by the policy.
+Route: default independent replay and forecast chronology fixtures.
+Boundary: source clock and availability are declared benchmark rules;
+production transmission timestamps and latency are unmeasured.
+
+8. Faithful, explicitly adapted modern acquisition comparator.
+Evidence: Hara expected-absolute squared-loss contrast, Gaussian surrogate
+calibrated before test, analytical-vs-numerical integration fixtures and
+common aggregate-certificate evaluation. Author-code reference and license
+are retained in acquisition/.
+Route: --small for formula fixtures; default for resulting traces; --refit
+for newly executed acquisition.
+Boundary: this is Hara acquisition plus an aggregate certificate, not a
+reproduction of the original statistical estimation framework.
+
+9. Source integrity and training-only external cohort choice.
+Evidence: selected literal half-hour rows, full candidate quality inventory,
+selection manifest and Decimal-based independent hourly sum checks.
+Route: default bundled-source verification; --raw additionally re-extracts
+cohort/reference records by reparsing the full official CSV after hash checks.
+Boundary: bundled replay is not independent acquisition of the complete
+source, physical clock verification, or certification that all publisher
+readings were actual rather than estimated.
+
+10. Adverse realized randomized tradeoff and computational scaling.
+Evidence: original/additional-consumer frozen-policy replay; 28 predeclared
+scaling cases with measured runtime/memory and eligible finite comparisons.
+Route: separate unchanged historical reproduction commands, with hashes
+carried forward into this revision. The new default does not rerun that
+entire long suite and does not claim fresh scaling timings.
+Boundary: the unfavorable measured outcomes remain. One-run scaling
+measurements and variable counts do not establish runtime dominance.
+
+11. Exact final paper source reconstruction.
+Evidence: preserved pre-external source, verified external fragments, pure
+editorial integration helper, frozen results and final reconstruction hash.
+Route: default wrapper invokes work/build_external_manuscript.py after
+checking and restoring pinned report bytes in its disposable workspace.
+Boundary: this checks exact TeX bytes. PDF compilation/visual QA and journal
+submission declarations are distinct checks, not consequences of a hash.

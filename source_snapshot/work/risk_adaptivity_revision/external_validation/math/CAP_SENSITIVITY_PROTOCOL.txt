@@ -1,0 +1,72 @@
+CAP SENSITIVITY -- FIXED BEFORE THESE CAPPED GEOMETRY CALCULATIONS
+
+Research question
+Do the existing 290 primary feedback-essential counter instances retain a
+precision advantage when illustrative upper bounds constrain each hour?
+
+Case set
+All 290 cases classified feedback_required by the existing complete
+feedback_triage ledger at the original half-width threshold. The original
+uncapped analysis, case identifiers, coefficient vectors and outer totals
+are frozen. No additional case filtering, forecast fitting or threshold
+tuning is permitted. This is a post-analysis of an explicitly selected
+old-regime subset, not validation on 290 new cases or a full-panel estimate.
+
+Constraint scenarios
+  (i) uncapped exact-total baseline, used as an implementation check;
+ (ii) 0 <= x_h <= E/2 for each of the six hours, sum x_h=E;
+(iii) 0 <= x_h <= E/3 for each hour, sum x_h=E.
+The caps are mathematical sensitivity scenarios, not sourced physical
+limits, training-derived engineering bounds or measured meter ratings.
+No statement that the recorded hidden increments satisfy these caps is
+made by this geometry-only experiment.
+
+Thresholds
+Primary sensitivity: the same absolute tau=0.5*old W0, where
+old W0=E*(max original c-min original c). This keeps the required precision
+fixed while the feasible set changes.
+Secondary descriptive calculation: tau=0.5*new capped initial width.
+Always name this changed normalization; do not substitute it for the
+primary sensitivity result or claim it preserves the original task.
+
+Outputs per case and scenario
+  - new sharp initial width, best deterministic batch worst width D,
+    and exact deterministic two-query adaptive worst width A;
+  - complete decision partition at each of the two thresholds;
+  - finite adverse-profile upper bound on randomized-batch precision;
+  - a matching one/two-batch lower guarantee where available;
+  - numerical primal checks and discrepancies against independent formulas.
+All case outcomes are retained and reported per meter as well as pooled.
+No replay answers are read; no ordering or measured operational gain is
+inferred from this constraint-only sensitivity.
+
+Calculation and checking
+Use the original serialized c and E. For numerical stability, positive
+coefficient and energy rescaling is permitted with the original physical
+scale retained. Generic polytope LPs compute A and D independently of the
+fast exact-total formula. Capped terminal widths are computed by bounded
+allocation within each segment, with an independent LP check on a fixed
+selection of cases. Capped-simplex vertices are exactly feasible rational
+profiles; additional LP witnesses are used only after exact reconstruction
+and feasibility checks. Finite games give upper bounds, not full continuum
+optima unless an independently established lower guarantee meets them.
+The generalized scalar-first Helly argument gives a 1/2 lower guarantee
+when A<=tau; a fixed guaranteeing batch gives one. If bounds do not match,
+report an interval rather than inventing exact optimality.
+
+Numerics
+LP feasibility tolerance 1e-9 in normalized coordinates; independent value
+comparisons 2e-8. Flag cases within 2e-8 of a threshold. Exact constructed
+boundary cases are resolved analytically, not by a favorable margin rule.
+Export input hashes, selected IDs, code, per-case output and runtime.
+
+Required constructed check
+For E=1 and c=(0,0,1,1,0,1), the E/2 cap must give D<=1/2 at the unchanged
+absolute threshold. Independently verify the fixed batch {2,4} result.
+
+Arbitrary-n refinement
+Separately verify the exact-total two-best-side formula for arbitrary n,
+including end boundaries, ties and coincident lines. Compare generated
+rational cases with the full conditional affine envelope; check a fixed
+small subset against generic two-query LPs. State O(n^2) arithmetic work
+and distinguish it from arbitrary capped/noisy models.

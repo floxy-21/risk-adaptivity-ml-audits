@@ -1,0 +1,305 @@
+\subsection{Counter retrieval: a practical adaptive precision separation}
+\label{sec:counter-precision-results}
+The counter study tests the same precision objective as the separation
+theorem on existing frozen ML comparisons. Its operational decision is
+whether to reserve feedback between two register retrievals in order to
+meet a required precision for every feasible energy allocation.
+It uses the three actual cumulative consumption counters described in
+Appendix~\ref{app:historical-design}, their 91 eligible test days, four
+existing forecasters and all six pairs. Blocks are $[00,06)$, $[06,12)$
+and $[12,18)$ UTC, yielding $3\times91\times3\times6=4,914$ audits.
+The 18:00--24:00 block is excluded to avoid ambiguity about the next
+day's forecast availability at midnight. Each audit occurs just after its block ends. Its start/end counters and
+day-start predictions are permitted. The following day's persistence
+forecasts are unavailable under this declared issue schedule; they are
+not suppressed from an already completed full-period archive. No measured
+arrival times are inferred. Increments use integer subtraction at exact
+UTC endpoints before conversion to kWh, with no interpolation.
+
+The interface returns one stored cumulative register per request. Five
+internal hourly registers are eligible and the hard budget is two per
+standalone pair/block audit, for every policy. The six pairs represent
+alternative audits; a joint four-model workflow could share registers and
+would require separate cost accounting. Hourly increments and full-trace exports are
+not offered at that price. This is a specified access replay, not a claim
+that the source deployed such a retrieval service. All information admitted
+by this per-audit protocol is used; concentration-profile witnesses satisfy the retained
+total and nonnegativity constraints. No empirical maximum is imposed as a
+physical cap. Additional defensible caps or measurements would require
+recomputing both policies and adverse witnesses.
+
+The protocol was frozen before the new geometry calculations and
+audit-answer replay. The primary requirement is $W\leq0.5W_0$: a
+scale-free uncertainty-reduction service level known before retrieval,
+not a calibrated economic loss threshold or a guarantee of a winning
+model. An operational auditor can instead specify an absolute MSE-width
+budget; the policy construction accepts that threshold. Here
+the fixed sensitivity fractions are $0.25,0.4,0.5,0.6,0.75$.
+The first 20 eligible days per meter form a 1,080-task feasibility panel;
+the unchanged design continues over the remaining 3,834 tasks. These are
+previously used meters and forecasts, not untouched-source validation.
+For each audit, only its forecasts, outer total and permitted prior-day
+records enter policy construction. The shared preparation step loads
+hourly endpoint tables to restore prior-day persistence; it does not
+enforce physical isolation of source files. The geometry routine receives
+only that audit's forecast-derived coefficients. The second adaptive query
+uses those coefficients, the outer total and the first queried answer;
+unqueried within-block answers enter subsequent outcome evaluation only.
+This is a per-audit dependency restriction. The comparison ledgers
+retain every task; none has zero initial width.
+
+Five policies share these inputs and queries: the exact deterministic
+adaptive worst-width policy; the best deterministic batch for worst width;
+a randomized batch optimizing worst expected width; uniform random choice
+among the ten batches; and greedy adaptive refinement. Greedy minimizes
+the one-query worst width, with ties resolved by the best two-query
+guarantee, then minimizes the conditional second-query worst width.
+This favorable tie rule avoids an artificial gain from a poor greedy tie.
+Deterministic batch ties minimize uniform-vertex mean width. The mean-optimal
+batch uses the same secondary criterion on its optimal face, eliminating
+pointwise-dominated optima up to numerical tolerances. It is not labeled precision-optimal.
+Expectations for randomized policies sum their ten batch probabilities
+exactly, rather than sampling random seeds.
+
+\paragraph{Guarantees before retrieval.}
+Two adaptive readings guarantee the primary precision in 4,661 tasks
+(94.85\%). In 290 tasks (5.90\%), the guarantee is accompanied by an
+adverse-profile certificate limiting \emph{every} randomized batch to
+worst-case success at most 50\%. Thus these are not merely wins over a
+chosen heuristic. The complete decision partition in
+Table~\ref{tab:counter-guarantees} identifies when feedback is needed.
+The six model pairs contribute respectively 45 (persistence/ridge),
+43 (persistence/boosting), 47 (persistence/MLP), 35 (ridge/boosting),
+48 (ridge/MLP) and 72 (boosting/MLP) such cases. The feasibility and
+continuation panels contribute 68 and 222. The instances are identified
+from permitted information before evaluating that audit's replay answers.
+
+\begin{table}[htbp]\centering\small
+\caption{Complete pre-retrieval decision partition at the unchanged primary
+threshold $0.5W_0$, with two optional registers. Batch suffices means
+$D\leq\tau$; feedback essential means $A\leq\tau<D$; no adaptive guarantee
+means $\tau<A$ for deterministic two-query policies. All feedback-essential
+cases have exact optimal randomized-batch success $1/2$. The partition is
+a post-analysis diagnostic; no cases or outcomes are excluded.}
+\label{tab:counter-guarantees}
+\begin{tabular}{lrrrr}\toprule
+Meter & Tasks & Batch suffices & Feedback essential & No adaptive guarantee\\\midrule
+1 & 1,638 & 1,460 & 97 & 81\\
+2 & 1,638 & 1,430 & 103 & 105\\
+3 & 1,638 & 1,481 & 90 & 67\\
+All & 4,914 & 4,371 & 290 & 253\\\bottomrule
+\end{tabular}\end{table}
+
+Corollary~\ref{cor:counter-feedback-triage} makes this an exhaustive
+feasibility decision. A fixed batch already guarantees precision in
+4,371 tasks (88.95\%). The 290 strong-separation cases exhaust the tasks
+where feedback changes feasibility of a deterministic two-query guarantee;
+they are not merely a favorable subset of a larger unidentified group.
+In the remaining 253 tasks (5.15\%), that guarantee requires a changed
+budget, threshold or information set. The supplement's recommendation
+ledger returns a guaranteeing batch, an adaptive first query and conditional
+second-query rule, or an unresolved flag, respectively. It uses only the
+coefficient geometry and initial total. This post-analysis partition
+does not replace the prespecified prevalence screen or reduce the
+two-reading budget; it identifies when a sequential response is necessary
+for the requested assurance.
+
+A post-analysis executable variant uses a guaranteeing fixed batch on
+those 4,371 tasks and the original adaptive policy elsewhere. This preserves
+the original policy's primary precision-success indicator for every
+feasible completion: where a substitution occurs, both policies guarantee
+success; elsewhere they are identical. It therefore avoids the need for a
+sequential response on 88.95\% of tasks without changing this precision
+outcome or the two-reading count. In recorded replay, both reach 98.64\%
+success; the variant's mean width is slightly higher (18.72\% versus
+18.59\% of initial width). This result concerns the number of information
+rounds needed by the specified protocol, not measured latency, retrieval
+cost or preservation of every other objective.
+
+\paragraph{The distribution and exact optimality of the batch bound.}
+Among these 290 cases, the minimum, 25th percentile, median, 75th
+percentile and maximum of the rational adverse-profile bounds are all
+exactly $1/2$. All 290 equal $1/2$; none is below $1/2$, $0.4$, $0.3$
+or $0.2$. This is exact equality, not rounding of nearby LP solutions.
+Corollary~\ref{prop:counter-half-floor} explains why the lower tail
+cannot extend below $1/2$ when a deterministic two-register policy
+guarantees the precision. For each case, a constructed equal mixture of
+two batches succeeds with probability at least $1/2$ on \emph{every}
+completion. The independently checked finite adverse profiles give the
+opposite inequality for every randomized batch. Consequently,
+\[
+ \underbrace{S_B^\star\geq\tfrac12}_{\text{two-batch cover of every completion}}
+ \quad\text{and}\quad
+ \underbrace{S_B^\star\leq\tfrac12}_{\text{finite adverse-profile certificate}}
+ \quad\Longrightarrow\quad S_B^\star=\tfrac12.
+\]
+The finite profile set is sufficient for the upper bound; the lower bound
+comes from the continuum covering proof, not from testing those profiles.
+Thus the 290 cases attain the largest possible precision-success gap
+between guaranteed deterministic adaptation and a randomized batch under
+this two-register structure. This sharp guarantee does not assert a
+similarly large gap on the recorded responses.
+
+\begin{table}[htbp]\centering\small
+\caption{Three inspectable witnesses: the earliest qualifying case from
+each meter, all on 1 October 2017. P=persistence, H=boosting, R=ridge,
+M=MLP; times are UTC. Query indices are hours after block start and
+$t=(C_k-C_0)/E$ is the first answer. The two-branch rule is a sufficient
+precision-guaranteeing policy; the measured adaptive algorithm can choose
+other second queries to minimize conditional width. Each listed batch
+pair is mixed with probabilities $(1/2,1/2)$. Success columns are worst-case
+guarantees at $\tau=W_0/2$, not observed frequencies.}
+\label{tab:counter-witnesses}
+\begin{tabular}{lcllrr}\toprule
+Meter: pair, block & $k$ & Second query & Batch support & $S_A$ & $S_B^\star$\\\midrule
+1: P/H, 06--12 & 3 & $5$ if $t\leq1/4$, else $2$ & $\{3,5\},\{2,3\}$ & 1 & $1/2$\\
+2: P/M, 06--12 & 4 & $5$ if $t\leq1/2$, else $2$ & $\{4,5\},\{2,4\}$ & 1 & $1/2$\\
+3: R/M, 00--06 & 4 & $5$ if $t\leq3/4$, else $1$ & $\{4,5\},\{1,4\}$ & 1 & $1/2$\\\bottomrule
+\end{tabular}\end{table}
+Appendix~\ref{app:complete-counter-witness} gives one complete empirical
+witness, including its rational coefficients and every batch-width vector.
+All 290 exact covering intervals, batch supports, adverse weights and
+case identifiers are supplied, with a program to regenerate them.
+The cover and bound-distribution diagnostic was added after the primary
+replay; it does not change the prespecified policies or thresholds.
+The constructive mixture need not be unique or best on the recorded
+trace among equally minimax-optimal mixtures. Its post-analysis descriptive replay is shown alongside the prespecified
+comparisons below. The rule chooses the longest good prefix and earliest
+good suffix, breaking ties by smallest second-query index, then mixes
+their batches equally. It uses no internal answers. Precision optimality
+holds on the 290 cases only; it does not imply best recorded performance
+among all equally optimal mixtures.
+
+For these same instances the general theorem still rules out an improvement
+in the \emph{optimal worst expected width} through adaptation. The practical
+consequence of the classification is therefore an objective-dependent
+acquisition choice: the mean-width guarantee can use a batch, whereas
+all-completions attainment of this precision requires feedback on the
+certified subset. This statement concerns the uncertainty set and query
+interface, not the frequency of adverse energy profiles in deployment.
+
+\paragraph{Replay on recorded answers.}
+Table~\ref{tab:counter-replay} reports the complete grid and the subset
+selected by the pre-answer guarantee. On that subset, adaptive precision
+success is 100\%, compared with 97.24\% for the best deterministic
+worst-width batch, 80.01\% for the mean-optimal randomized batch and 96.21\%
+for greedy adaptation. Across all tasks, the corresponding adaptive gains
+are 0.407, 5.960 and 0.672 percentage points. All-task precision success
+exceeds each nonadaptive comparator on each meter. The subset's
+deterministic batch also reaches 100\% on meter 2, and its mean realized
+width there is slightly smaller than adaptive; superiority at every
+record or every meter/metric is not asserted.
+
+\begin{table}[htbp]\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Recorded-register replay with two readings per standalone audit.
+All entries are percentages: P is precision success, W is mean $W/W_0$,
+and O is ordering certification (interval excluding zero). The subset is
+selected by pre-answer guarantees. Randomized entries are exact expectations
+over their batch mixtures. The added precision-optimal cover is defined and
+proved optimal only on this subset; dashes make no full-panel claim.}
+\label{tab:counter-replay}
+\begin{tabular}{lrrrrrr}\toprule
+ & \multicolumn{3}{c}{All 4,914 tasks} & \multicolumn{3}{c}{290-case subset}\\
+Policy & P & W & O & P & W & O\\\midrule
+Exact adaptive & 98.64 & 18.59 & 50.49 & 100.00 & 33.72 & 28.97\\
+Best deterministic batch & 98.23 & 18.87 & 49.84 & 97.24 & 35.28 & 25.52\\
+Mean-optimal random batch & 92.68 & 22.83 & 45.42 & 80.01 & 41.21 & 24.43\\
+Precision-optimal cover & -- & -- & -- & 75.34 & 43.12 & 22.76\\
+Uniform random batch & 63.04 & 42.59 & 24.79 & 41.79 & 53.10 & 18.76\\
+Greedy adaptive & 97.96 & 18.84 & 50.33 & 96.21 & 34.67 & 28.62\\
+\bottomrule\end{tabular}\end{table}
+
+The precision-optimal cover succeeds on every recorded trace with
+probability at least $1/2$: 147 cases have success one and 143 have
+success $1/2$, giving $437/580=75.34\%$ overall. Its mean width is
+43.12\% of initial width and its ordering-certification rate is 22.76\%.
+Thus optimal worst-case precision does not entail superior recorded
+success to a policy optimizing a different criterion. The matching
+100\%-versus-50\% assurance result remains independent of these frequencies.
+
+\begin{table}[htbp]\centering\small
+\caption{Paired outcomes: exact adaptation versus the best deterministic
+worst-width batch. A net gain is the difference between the two one-policy
+columns; the rows retain countervailing cases.}\label{tab:paired-outcomes}
+\begin{tabular}{llrrrr}\toprule
+Tasks & Outcome & Both & Adaptive only & Batch only & Neither\\\midrule
+All 4,914 & Precision & 4,817 & 30 & 10 & 57\\
+All 4,914 & Ordering & 2,411 & 70 & 38 & 2,395\\
+Subset 290 & Precision & 282 & 8 & 0 & 0\\
+Subset 290 & Ordering & 70 & 14 & 4 & 202\\
+\bottomrule\end{tabular}\end{table}
+
+Precision success for adaptive/fixed batch is 98.84/98.72\%,
+98.11/97.86\%, and 98.96/98.11\% on meters 1--3. Ordering certification
+is 36.75/36.08\%, 43.65/43.77\%, and 71.06/69.66\%, respectively;
+the fixed batch slightly leads on the second meter for this outcome.
+On the initial 1,080 tasks, precision is 97.96/97.87\%; on the 3,834-task
+continuation it is 98.83/98.33\%. These are within-source temporal summaries,
+not independent replications. Repeated pairs and blocks are not treated
+as independent population observations.
+
+Normalized by squared training mean hourly energy, mean absolute MSE
+widths are 0.34049 (adaptive), 0.35056 (deterministic batch), 0.42274
+(mean-optimal batch), 0.80134 (uniform) and 0.34526 (greedy).
+The paired ordering counts show why a precision guarantee should not be
+read as an automatic model-selection decision.
+
+\begin{table}[htbp]\centering\small
+\caption{The complete predeclared precision curve. Guarantee and separation
+are task counts before retrieval; strong separation uses batch upper bound
+$\leq0.7$. Success is each policy's percentage on all recorded tasks.
+Only $0.5W_0$ is primary.}
+\label{tab:counter-curve}
+\begin{tabular}{rrrrr}\toprule
+$\tau/W_0$ & Guarantees & Strong separation & Adaptive success & Det.\ batch success\\\midrule
+0.25 & 2,614 & 493 & 74.50 & 73.79\\
+0.40 & 4,219 & 576 & 94.85 & 94.28\\
+0.50 & 4,661 & 290 & 98.64 & 98.23\\
+0.60 & 4,847 & 251 & 99.84 & 99.69\\
+0.75 & 4,907 & 107 & 99.98 & 100.00\\\bottomrule
+\end{tabular}\end{table}
+\FloatBarrier
+
+The initial screening target required strong separation in at least 10\%
+of primary tasks, across all meters and at least three pairs, together
+with an observed gain over every nonadaptive comparator overall and per
+meter. The prevalence condition was not met: 5.90\% is reported instead,
+and the primary threshold is unchanged. The other conditions hold.
+The contribution is a certified, identifiable subset with a large
+worst-case precision gap and a smaller observed gain, not ubiquitous
+large average improvement. The complete sensitivity curve is retained
+without promoting a secondary threshold to primary status.
+
+\paragraph{Executable checks.}
+The new triage recomputation independently reconstructs all ten batch
+width vectors and five adaptive envelopes using rational arithmetic on
+the serialized coefficients. All 4,914 finite-profile games have matching
+rational primal and dual values; the largest discrepancy from saved
+numerical geometry is $2.72\times10^{-16}$. Neither an adaptive nor a
+fixed-batch guarantee classification is within $10^{-8}W_0$ of the primary
+threshold. Thus the reported partition is unchanged by the documented
+floating-point margin rule. Its ledger and executable recommendations are
+checked independently of the replay outcomes.
+
+Source audits verify the exact 91-day calendars, all 819 blocks, integer
+counter telescoping and all 6,552 frozen hourly forecast rows. All 4,914
+policy inputs match the original frozen forecast archive numerically,
+including regenerated persistence. Independently written checks validate
+each original serialized coefficient vector's adaptive envelope and
+adverse-profile distribution using rational arithmetic and enumerate all
+ten batches. The final second-query rule uses exact rational coefficients
+and integer-counter answer ratios. This numerical hardening followed the
+preliminary feasibility replay; both panels were then rerun with the same
+objectives, thresholds, query dictionary and case list. The protocol and
+implementation amendment are retained. The LP-derived secondary mean policy's
+maximum optimal-face discrepancy is $2.15\times10^{-10}$.
+Separate raw-register checks reproduce all 24,570 policy evaluations and
+49,140 sharp batch intervals, with zero containment failures and zero
+precision-success discrepancies. In 480 independently assembled endpoint
+LPs, the largest endpoint difference is $2.23\times10^{-16}$.
+Independent numerical cross-checks use scale-aware tolerances of $2\times10^{-8}$;
+the exact rational witness checks apply to the serialized input instances,
+not to unmodeled meter error. Online Resource 1 supplies source hashes,
+policies, aggregate ledgers and the raw-source regeneration command for
+the counter-dependent per-case geometry and query traces.
+

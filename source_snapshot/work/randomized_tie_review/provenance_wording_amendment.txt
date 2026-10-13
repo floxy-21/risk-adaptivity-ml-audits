@@ -1,0 +1,12 @@
+PROVENANCE WORDING CLARIFICATION - 11 October 2026 UTC
+
+Independent source-order checking identified an overly literal sentence in
+the frozen protocol: audit_ties.py reads file bytes to compute the SHA256 of
+review_frozen_forecasts.csv before selecting policies. It does not parse or
+use those reference target values in either optimization stage. The policies
+are saved and hashed before pandas reads the CSV for outcome evaluation.
+
+Accordingly, "not read" in the protocol means "not parsed or used for policy
+selection," not "no filesystem bytes accessed for hashing." The original
+protocol, script, results and hashes remain intact as historical records.
+This clarification changes neither policy inputs nor any experimental result.

@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "scope": "Synthetic mathematical validation only; not empirical study replication",
+  "dirichlet_cases": 100,
+  "monte_carlo_completions_per_case": 100000,
+  "total_completions": 10000000,
+  "largest_absolute_probability_difference": 0.002287989369122556,
+  "absolute_error_threshold": 0.011,
+  "counterexample": {
+    "coefficients": [
+      -4.0,
+      -3.0,
+      0.0,
+      2.0
+    ],
+    "residual_total": 1,
+    "fixed_offset": 0,
+    "one_query_certification_probabilities": [
+      0.2962962962962963,
+      0.21599999999999997,
+      0.0,
+      0.03703703703703709
+    ],
+    "exact_rational_probabilities": [
+      "8/27",
+      "27/125",
+      "0",
+      "1/27"
+    ],
+    "worst_residual_widths": [
+      5.0,
+      6.0,
+      6.0,
+      4.0
+    ],
+    "width_optimal_query_index": 3,
+    "decision_optimal_query_index": 0,
+    "probability_advantage": 0.2592592592592592
+  },
+  "interior_tie_record": [
+    0.1,
+    0.1,
+    0.45,
+    0.35
+  ],
+  "lower_bound_all_subset_checks": 11
+}

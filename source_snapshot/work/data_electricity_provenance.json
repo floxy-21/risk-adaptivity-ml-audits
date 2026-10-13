@@ -1,0 +1,11 @@
+{
+  "source": "https://archive.ics.uci.edu/static/public/321/electricityloaddiagrams20112014.zip",
+  "landing": "https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014",
+  "doi": "10.24432/C58C86",
+  "zip_sha256": "f6c4d0e0df12ecdb9ea008dd6eef3518adb52c559d04a9bac2e1b81dcfc8d4e1",
+  "zip_bytes": 261335609,
+  "license": "CC BY 4.0",
+  "units": "15-minute kW; divide by4 for interval kWh",
+  "timezone": "Portuguese local time; fixed96 values/day; DST artifacts documented bysource",
+  "counter_warning": "No independent retained cumulativecounter. Exact totals derived fromcomplete trace areretrospectively simulated."
+}

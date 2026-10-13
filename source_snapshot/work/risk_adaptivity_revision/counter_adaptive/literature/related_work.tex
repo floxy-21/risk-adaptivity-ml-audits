@@ -1,0 +1,30 @@
+% Verified against the versioned primary sources listed in references.tex.
+Adaptive certification from monotone observations has an established scalar
+counterpart. \citet[Section~4.1.1, Corollary~1 and Theorem~3]{gaillard2023}
+analyze certified integral estimation by sequential evaluations of a monotone
+function, with instance-dependent query-complexity guarantees for GreedyBox.
+Their randomized extension controls expected integration error
+\citep[Section~4.1.2, Theorem~4]{gaillard2023}.
+Our cumulative-counter experiment instead audits an affine contrast of interval
+increments under a fixed query budget; the general theorem classifies penalties
+of the full terminal interval width. Adaptive scalar certification itself is
+therefore background, rather than a claimed contribution.
+
+For machine-learning model choice, \citet[Theorem~1]{kuboyama2026} gives an exact
+all-completions stopping test for selective-prediction comparisons after adaptive
+binary-label queries. Proposition~1 quantifies the advantage of shared-label
+paired bounds over separate loss intervals; Theorem~2 bounds hindsight certificate
+size, and Proposition~3 separates that size from acquisition requirements.
+Our continuous constrained-target setting and fixed-budget width-risk
+classification address a different optimization question. Neither the use of
+paired certificates for model choice nor a comparison with separate intervals is
+claimed as a new general principle. The counter study measures precision under
+declared information access, not minimum requests until a winning model is known.
+
+The broader distinction between fixed and information-dependent decisions also
+appears in adjustable robust optimization \citep{wei2024} and robust optimization
+with decision-dependent information discovery \citep{ddid}. Here the terminal
+output is the sharp scalar identification interval, and the acquisition objective
+is its specified width penalty. Query counts in a retrospective counter archive
+measure that access model; they do not establish monetary savings or production
+retrieval latency.

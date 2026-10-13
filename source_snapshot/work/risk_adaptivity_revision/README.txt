@@ -1,0 +1,156 @@
+ONLINE RESOURCE 1: EXECUTABLE RESEARCH SUPPLEMENT
+Article: Risk and Adaptivity in Certifying Machine-Learning Model Comparisons
+Journal target: PeerJ Computer Science
+Author/correspondence: Jishan Kapoor, kapoorjishan19@gmail.com
+Affiliation: Independent Researcher, Toronto M4Y 1C9, Canada
+
+CURRENT PAPER -- ONE ENTRY COMMAND
+  python work/risk_adaptivity_revision/reproduce.py
+
+Start with work/risk_adaptivity_revision/CURRENT_RESULTS_MAP.txt for a direct
+table-by-table and claim-by-claim map of the current revision: commands,
+inputs, outputs, validation fields and any raw-source requirements.
+The map separates current results from optional historical development.
+The main paper is shortened; full current methods and controls remain in
+editorial/online_extended_methods.tex (S1 scaling; S2 historical gates and
+controls; S3 data/forecast protocol; S4 historical grid; S5 full compact
+construction; S6 extended counter checks, measurement proofs and full
+counter replay; S7 detailed computational verification). Its own reference
+list includes every work cited in those supporting sections.
+
+INTERFACE-AWARE ACQUISITION
+  python work/risk_adaptivity_revision/protocol_selection/selector.py --output-dir protocol_selection_replay
+The reference selector checks 29 existing certificate cases under four
+declared interfaces (116 decisions). Bulk availability, scalar readings,
+information rounds and transport requests are explicit and distinct.
+See protocol_selection/README.txt for dispatch callbacks and checks.
+For a task-bound request/response interface, use protocol_selection/bound_workflow.py.
+APPLICATION_WORKFLOW.txt supplies worked saved comparisons and the envelope schema.
+The default reproduction command also checks all 29 contrast vectors against
+frozen geometry, verifies forecast hashes, reconstructs 58 retained endpoints,
+and exercises rejected task, interface and response metadata. These are
+software and provenance checks, not new empirical gains or device calibration.
+
+READING VERSUS FEEDBACK COST
+  python work/risk_adaptivity_revision/protocol_selection/cost_frontier.py --output-dir outputs/cost_frontier_replay
+  python work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_COST_CHECK.py --results-dir outputs/cost_frontier_replay --output outputs/cost_frontier_check.json
+These commands are included in the current 39-step full replay. The exact
+declared-cost analysis exports 174 case/ratio choices and checks 306 candidates.
+It identifies when feedback is worth its extra information round while keeping
+the same assurance. It does not estimate monetary savings or new API timings.
+
+NEW COUNTER STUDY -- ONE RAW-SOURCE ENTRY COMMAND
+  python work/risk_adaptivity_revision/counter_adaptive/reproduce_counter.py
+
+This rebuilds all4914 cumulative-counter tasks from the3 pinned original files,
+using frozen forecasts, and checks the reported primary guarantees and replay.
+An existing cache may be supplied with --data-dir PATH. The code generates raw-
+dependent geometries and queried answers locally. Read counter_adaptive/README.txt
+for paths, exact commands, runtimes, information scope and numerical treatment.
+The original13-step full replay is retained in executed/full_clean_replay.json;
+its scope predates the counter addition. New fresh replay records are separate.
+
+Extract the ZIP first. Use Python 3.12 and install requirements.txt (identical
+scientific environment to outputs/requirements-study.txt). The tested host is
+Windows11; old optional workflows may rely on Windows conventions. The current
+command verifies every distributed file against MANIFEST.sha256, copies the
+package into a new isolated directory, and executes the classification checks,
+general-polytope LPs, dual-completion checks, paired solver-table reconstruction,
+public whole-period endpoint analysis, and independent historical tie-policy
+checks. The practical and constructed jobs in work/risk_adaptivity_revision/replay_jobs.json
+rerun the pair gate, four-model selection, extended30-consumer grid, two
+independent bound checkers, actual-input audit examples, constructed counter checks, counter ledger consistency and exact feedback-triage
+certificates/recommendations, precision-cover diagnostics, bounded-error checks,
+cap sensitivity, stored-readout error sensitivity, exact upper and lower
+certificates, the two-or-three-reading fallback and its executable rational
+branches, source qualification, cached new-source replay
+and cached HTTP-trace verification.
+Their fresh ledgers
+must match the archived scientific entries within the stated tolerances.
+The command finally reconstructs the exact
+current editable manuscript. It performs no model training; an audit hook blocks
+network calls in every default replay subprocess. The original BLEM raw-source
+route remains separate. Public new-source caches are bundled and replayed offline.
+
+For mathematical checks only:
+  python work/risk_adaptivity_revision/reproduce.py --small
+
+CERTIFIED 29-CASE BUDGET FALLBACK
+The separate post-analysis fallback retains the 1% internal-readout allowance
+and original precision target. It certifies all 29 external cases using two
+readings in 22 cases and three in seven: 65 summed hard reading allowances
+versus 87 for guaranteeing nonadaptive batches. This does not change 22/29
+under a two-reading budget or claim measured API savings. The executable
+policy uses exact rational branching with no online LP. Its proof, code,
+checks and regeneration commands are in
+work/risk_adaptivity_revision/external_validation/stored_error_fallback/README.txt.
+
+Individual entry points and archived runtimes are documented in math/README.txt,
+general/README.txt and dual/README.txt below work/risk_adaptivity_revision.
+The classification check took about11seconds, the general-polytope suite under
+one second, and the80-case dual check about32seconds on the available shared
+host. The default also parses historical empirical traces and checks2,148
+secondary LPs, so allow several minutes plus package extraction/copying time.
+These are planning descriptions of observed runs, not universal runtime bounds.
+
+THE CENTRAL PRACTICAL RESULT
+Before retrieving optional registers, the complete decision rule identifies
+4371 tasks where a fixed batch suffices,290 where feedback is essential and
+253 without a deterministic two-query guarantee. All290 feedback-essential
+cases attain the exact randomized-batch success bound1/2. The post-analysis
+fallback avoids sequential feedback in4371 cases while preserving primary
+precision success pointwise; it does not reduce the two-reading count.
+See counter_adaptive/feedback_triage/README.txt for exact commands and scope.
+
+The complementary historical outcomes are:
+* The additional30-consumer grid certifies7753/9720comparisons versus2527using
+  separate-loss bounds (exact totals), and7424versus2010at5%total tolerance.
+* The original archive certifies933/1620donor-selected models against allthree
+  alternatives versus167with separate-loss bounds:52.72%fewer unresolved cases.
+Both use zero additional readings. These are all-completions historical
+certification gains, not improved donor accuracy or measured production savings.
+The30consumers were previously examined; the extended grid is a fresh computation
+from frozen forecasts, not an untouched-data claim. Practical scripts and
+limits are documented in practical/, practical_multi/ and practical_api/.
+
+The wrapper retains fresh reports in outputs/risk_clean_replay.json and per-step
+logs. Timing, machine metadata, LP witnesses or dual solutions can vary between
+runs. Compare the stated numerical tolerances and counts, not fresh JSON byte
+hashes. Frozen manuscript inputs are restored only after the fresh reports have
+been retained, and the final manuscript must exactly match the SHA256 recorded
+in outputs/risk_release_manifest.json. No output is silently substituted for a
+failed run. The manifest gives expected hashes for every frozen source/output.
+
+REPRODUCTION LEVELS
+1. Current mathematical/empirical replay: command above. Uses bundled forecast
+   records/endpoints. The public certificate-grid replay includes60,264 matched
+   comparisons;5,832 BLEM counter comparisons require raw-source regeneration.
+   The comparative timing table replays archived measurements; it does not rerun
+   the28-process scaling experiment or claim repeated timing estimates.
+2. Previous complete experimental package: restore its exact file layout with
+     python work/risk_adaptivity_revision/restore_previous_package.py --destination work/previous_release_copy
+   Then follow the restored README.txt. All previous scientific members remain
+   byte-identical; only the current main source and top-level README are replaced
+   in this release, with their old versions preserved. This route includes the
+   old acquisition experiment and its unchanged0.9738064% household-average saving.
+   Its denominator and uncertainty calculation have not changed.
+3. Raw inputs and fresh fitting: the restored previous README and
+   work/certificate_grid_review/README.txt distinguish raw UCI reconstruction,
+   BLEM download/regeneration, saved-forecast replay, and fresh model refitting.
+   Those network/training steps are not claimed as fresh executions by the
+   current default command. Historical completed fitting checks are archived
+   with their original scope and hashes. No raw BLEM traces are redistributed.
+
+SCIENTIFIC SCOPE
+The universal classification is proved algebraically. Numerical checks cover
+constructed examples and declared polytope/aggregate fixtures; they are not a
+numerical proof for every convex set. Dual certificates are binary64 numerical
+witnesses with reported feasibility and pricing gaps, not outward-rounded formal
+certificates. Synthetic risk separations are not empirical forecasting gains.
+All historical adverse outcomes are retained. Review notes are not external
+independent replication. No manuscript has been submitted by this package.
+
+
+Frozen task-binding checks run before the external replay regenerates geometry.json.
+The driver rejects a frozen-input check scheduled after a mutating regeneration job.
+Regenerated scientific ledgers are still checked before frozen inputs are restored.

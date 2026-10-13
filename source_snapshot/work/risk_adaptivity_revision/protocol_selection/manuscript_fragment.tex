@@ -1,0 +1,61 @@
+\paragraph{Selecting the acquisition protocol.}
+The interface, budget unit and operational preference must be specified before
+an acquisition guarantee is used. A reference implementation selects among
+the supplied fixed, adaptive and full-range certificates for the 29 cases.
+It checks permitted
+queries, scalar-reading and information-round caps, transport grouping, and
+the requested preference; a missing guarantee triggers escalation rather than
+a relaxed target. This is an integration of the preceding results, not a new
+optimization theorem. A frozen offline evaluation retains all 29 external
+cases, the exact endpoint total, the $0.01E$ stored-readout allowance and the
+unchanged half-width target.
+
+\begin{table}[t]
+\centering\small
+\caption{Protocol selection under four explicitly declared interfaces. The
+restricted interfaces are benchmark assumptions; the public API permits bulk
+retrieval. All rows use the same 29 cases and uncertainty model.}
+\label{tab:protocol-selection}
+\begin{tabular}{p{0.40\linewidth}cp{0.36\linewidth}}
+\hline
+Interface and preference & Certified & Selected protocol \\
+\hline
+Range available; fewest requests & 29/29 & Bulk range in all 29 \\
+Three readings, two rounds; fewest readings & 29/29 & Adaptive two in 22; fixed three in seven \\
+Two readings, two rounds & 22/29 & Adaptive two in 22; escalate seven \\
+Three readings, one round & 29/29 & Fixed three in all 29 \\
+\hline
+\end{tabular}
+\end{table}
+
+Unrestricted range retrieval is preferred on the actual public interface.
+Its five internal values contain each case's certified three-query subset,
+so information monotonicity preserves the precision guarantee under bounded
+stored-readout errors; it does not imply zero uncertainty about true increments.
+The restricted three-reading rule reserves 65 scalar observations in 51
+information rounds, whereas the one-round-per-case rule reserves 87 in 29
+rounds. These are distinct resources. HTTP counts are left unspecified for
+the hypothetical restricted interfaces. In particular, an interface offering
+a single native multipoint request can favor fixed-three under request
+priority while favoring adaptive-two under reading priority.
+
+The preceding three-task API timings support bulk selection on that service;
+they are not measurements on this 29-case sensitivity subset. The supplement exports all
+116 case--interface decisions, exclusions and certificate hashes, with an
+offline callback dispatcher and separate verification. The implementation returns an auditable acquisition plan: a supported
+case, its measurement assumptions, selected query protocol, hard resource
+allowances and the certificate proving its precision. If no supplied plan
+meets the interface, it returns escalation. This catalogue decision alone
+does not prove that every possible policy fails; the seven deterministic
+two-query exclusions additionally have the exact lower witnesses described
+above.
+
+The operational wrapper binds each supplied certificate to its saved model
+pair, exact coefficients, meter, API-grid block, retained endpoints and source
+hashes; readout envelopes with a different task, timestamp, feed or unit are
+rejected. For example, the system~1 ridge--MLP comparison on 6 July 2025,
+12:00--18:00 UTC, uses boundary~2 followed by boundary~1 or~4 under the
+restricted two-reading rule, while its public-interface plan selects bulk
+retrieval. These are checks against accidental task mismatch and a worked
+planning example; measured API trials and constructed dispatch tests remain
+separate, and the wrapper does not authenticate a provider or calibrate a meter.

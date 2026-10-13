@@ -1,0 +1,55 @@
+PROVISIONAL NUMERICAL REVIEW — 11 October 2026
+
+This assessment reads completed evaluator summaries. At the time of this
+review, independent checks of the repaired traces were still running. It
+does not mark these outcomes independently verified or the paper ready.
+
+The predeclared primary practical advantage was not obtained: every policy
+has B80=4 on the test, both for all pairs and learned-model-only pairs. The
+same aggregate B80 tie occurs in the retrospective validation replay. The
+15% exact-versus-better-greedy/Hara criterion is therefore false, with a
+zero relative B80 reduction. This belongs in the abstract, introduction,
+results, discussion and conclusion; it cannot be replaced after the fact
+with a favorable comparison against Hara or uniform alone.
+
+Secondary test evidence is more differentiated. Among initially uncertified
+comparisons, exact mean requests are 2.45151855 versus greedy 2.48461377:
+0.03309521 fewer requests, or 1.33% relative. At budget2 their certification
+rates are 77.6458% versus 75.9746%, while at budget 4 greedy is slightly higher:
+99.5532% versus exact 99.5286%. Thus neither recorded curve dominates the
+other. Exact has larger mean-cost differences from Hara and uniform, but
+those do not override the stronger greedy comparator or the primary null
+result. The generator now reports the signed secondary comparison without
+assuming favorable outcomes.
+
+Breadth is limited for the threshold metric: exact B80 is strictly smaller
+than the better greedy/Hara value in 3/19 households and 1/6 pairs; there are
+zero learned-only pair improvements. The improving pair is persistence
+versus MLP. Pair-specific results must stay visible; they do not establish
+general superiority in learned-model selection.
+
+All-case early certification starts at 56.1237%. At the later constructed
+archive, every eligible test comparison is certified without paid requests.
+This is a valid controlled benchmark consequence of the two-day persistence
+schedule, not a measured service-level deadline or retrieval saving. Full
+coverage at the six-record cap is also partly structural: the imposed gap
+contains six targets and aggregate deductions make full disclosure available
+within that limit. It should not be promoted as distinctive policy efficacy.
+
+The result is useful negative evidence about converting batch-width
+optimality into sequential decision-cost savings. The formal exact
+optimization and all-completions certificate remain the central contribution.
+The new experiment does not substantiate the user's desired large applied
+advantage over a strong elementary baseline, even if all integrity checks
+pass. No effect-size or acceptance-probability claim should be manufactured.
+
+Implementation safeguards added outside benchmark code:
+- Synthetic snapshot regression, five policies and ten later-reveal
+  transitions, passed against the corrected trajectory logger.
+- Generator has explicit primary-failure prose, both early coverage
+  denominators, secondary mean-cost/curve comparison, cost/overhead table,
+  and verification-gated trace-repair disclosure.
+- The exact all-case and conditional curves use distinct panels; late
+  all-case coverage is not plotted as if it used the early denominator.
+
+Final scientific review of the generated manuscript remains pending.

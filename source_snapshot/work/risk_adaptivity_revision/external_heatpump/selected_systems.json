@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "location": "Selby, Yorkshire",
+    "electric_meter": "Other pulse output meter (class 1)",
+    "heat_meter": "Sontex heat meter (class 2)",
+    "mid_metering": 1,
+    "feed_key": "heatpump_elec_kwh",
+    "feed": {
+      "start_time": 1641911700,
+      "end_time": 1791763260,
+      "interval": 88.17188661160468,
+      "npoints": 1699540,
+      "unit": "kWh"
+    },
+    "units": "stored cumulative kWh",
+    "direct_register_provenance": "not verified",
+    "historical_interpolation_status": "not exposed in public feed metadata"
+  },
+  {
+    "id": 2,
+    "location": "Llanberis, Gwynedd",
+    "electric_meter": "SDM120 Modbus/MBUS Single Phase (class 1)",
+    "heat_meter": "Sontex heat meter (class 2)",
+    "mid_metering": 1,
+    "feed_key": "heatpump_elec_kwh",
+    "feed": {
+      "start_time": 1600870460,
+      "end_time": 1791770990,
+      "interval": 10,
+      "npoints": 19090054
+    },
+    "units": "stored cumulative kWh",
+    "direct_register_provenance": "not verified",
+    "historical_interpolation_status": "not exposed in public feed metadata"
+  },
+  {
+    "id": 7,
+    "location": "Weymouth",
+    "electric_meter": "SDM120 Modbus/MBUS Single Phase (class 1)",
+    "heat_meter": "Sontex heat meter (class 2)",
+    "mid_metering": 1,
+    "feed_key": "heatpump_elec_kwh",
+    "feed": {
+      "start_time": 1668776160,
+      "end_time": 1791771090,
+      "interval": 30,
+      "npoints": 4099832,
+      "unit": "kWh"
+    },
+    "units": "stored cumulative kWh",
+    "direct_register_provenance": "not verified",
+    "historical_interpolation_status": "not exposed in public feed metadata"
+  }
+]

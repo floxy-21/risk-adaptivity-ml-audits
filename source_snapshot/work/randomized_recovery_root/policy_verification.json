@@ -1,0 +1,1277 @@
+{
+  "status": "passed",
+  "cases": 48,
+  "seeded_draws": 5800,
+  "invalid_inputs_rejected": 8,
+  "max_atom_coefficient_error": 1.7763568394002505e-15,
+  "max_enumerated_objective_error": 1.8474111129762605e-13,
+  "reports": [
+    {
+      "case": 0,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 1,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 4,
+          "equalities": 2,
+          "inequalities": 3
+        }
+      }
+    },
+    {
+      "case": 1,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 0,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 3,
+          "equalities": 3,
+          "inequalities": 4
+        }
+      }
+    },
+    {
+      "case": 2,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 1,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 4,
+          "equalities": 2,
+          "inequalities": 3
+        }
+      }
+    },
+    {
+      "case": 3,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 0,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 3,
+          "equalities": 3,
+          "inequalities": 4
+        }
+      }
+    },
+    {
+      "case": 4,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 4.440892098500626e-16,
+      "query_count": 1,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 8,
+          "equalities": 5,
+          "inequalities": 8
+        }
+      }
+    },
+    {
+      "case": 5,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 2,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 7,
+          "equalities": 2,
+          "inequalities": 4
+        }
+      }
+    },
+    {
+      "case": 6,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 0,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 4,
+          "equalities": 3,
+          "inequalities": 6
+        }
+      }
+    },
+    {
+      "case": 7,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 1,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 8,
+          "equalities": 5,
+          "inequalities": 8
+        }
+      }
+    },
+    {
+      "case": 8,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 7.105427357601002e-15,
+      "query_count": 1,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 11,
+          "equalities": 5,
+          "inequalities": 12
+        }
+      }
+    },
+    {
+      "case": 9,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 1.7763568394002505e-15,
+      "query_count": 2,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 17,
+          "equalities": 8,
+          "inequalities": 15
+        }
+      }
+    },
+    {
+      "case": 10,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 3,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 11,
+          "equalities": 2,
+          "inequalities": 5
+        }
+      }
+    },
+    {
+      "case": 11,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 0,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 5,
+          "equalities": 3,
+          "inequalities": 8
+        }
+      }
+    },
+    {
+      "case": 12,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 1,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 14,
+          "equalities": 5,
+          "inequalities": 16
+        }
+      }
+    },
+    {
+      "case": 13,
+      "atoms": 4,
+      "coefficient_error": 0.0,
+      "objective_error": 7.105427357601002e-15,
+      "query_count": 2,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 1.1102230246251565e-16,
+        "maximum_unconditional_marginal_change": 5.551115123125783e-17,
+        "maximum_flow_change": 5.551115123125783e-17,
+        "maximum_coefficient_change": 8.881784197001252e-16,
+        "maximum_systematic_cdf_correction": 1.1102230246251565e-16,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 3,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 4.440892098500626e-15,
+        "objective_change": 2.1316282072803006e-14,
+        "lp_dimensions": {
+          "variables": 23,
+          "equalities": 8,
+          "inequalities": 22
+        }
+      }
+    },
+    {
+      "case": 14,
+      "atoms": 6,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 3,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 1.1102230246251565e-16,
+        "maximum_unconditional_marginal_change": 2.7755575615628914e-17,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 4,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 2.7755575615628914e-17,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 31,
+          "equalities": 12,
+          "inequalities": 26
+        }
+      }
+    },
+    {
+      "case": 15,
+      "atoms": 3,
+      "coefficient_error": 0.0,
+      "objective_error": 4.440892098500626e-16,
+      "query_count": 4,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 3,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 16,
+          "equalities": 2,
+          "inequalities": 6
+        }
+      }
+    },
+    {
+      "case": 16,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 1,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 17,
+          "equalities": 5,
+          "inequalities": 20
+        }
+      }
+    },
+    {
+      "case": 17,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 2,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 29,
+          "equalities": 8,
+          "inequalities": 29
+        }
+      }
+    },
+    {
+      "case": 18,
+      "atoms": 7,
+      "coefficient_error": 0.0,
+      "objective_error": 8.881784197001252e-16,
+      "query_count": 3,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 2.220446049250313e-16,
+        "maximum_unconditional_marginal_change": 1.1102230246251565e-16,
+        "maximum_flow_change": 1.1102230246251565e-16,
+        "maximum_coefficient_change": 2.220446049250313e-16,
+        "maximum_systematic_cdf_correction": 1.1102230246251718e-16,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 5,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 1.3877787807814457e-17,
+        "objective_change": 8.881784197001252e-16,
+        "lp_dimensions": {
+          "variables": 41,
+          "equalities": 12,
+          "inequalities": 37
+        }
+      }
+    },
+    {
+      "case": 19,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 4,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 51,
+          "equalities": 17,
+          "inequalities": 42
+        }
+      }
+    },
+    {
+      "case": 20,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 1,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 20,
+          "equalities": 5,
+          "inequalities": 24
+        }
+      }
+    },
+    {
+      "case": 21,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 3.552713678800501e-15,
+      "query_count": 2,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 35,
+          "equalities": 8,
+          "inequalities": 36
+        }
+      }
+    },
+    {
+      "case": 22,
+      "atoms": 4,
+      "coefficient_error": 8.881784197001252e-16,
+      "objective_error": 6.039613253960852e-14,
+      "query_count": 3,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 8.881784197001252e-16,
+        "maximum_unconditional_marginal_change": 4.440892098500626e-16,
+        "maximum_flow_change": 5.551115123125783e-17,
+        "maximum_coefficient_change": 1.7763568394002505e-15,
+        "maximum_systematic_cdf_correction": 1.1102230246251565e-16,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 3,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 5.551115123125783e-16,
+        "objective_change": 1.0658141036401503e-14,
+        "lp_dimensions": {
+          "variables": 51,
+          "equalities": 12,
+          "inequalities": 48
+        }
+      }
+    },
+    {
+      "case": 23,
+      "atoms": 10,
+      "coefficient_error": 2.220446049250313e-16,
+      "objective_error": 8.881784197001252e-16,
+      "query_count": 4,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 2.220446049250313e-16,
+        "maximum_unconditional_marginal_change": 1.1102230246251565e-16,
+        "maximum_flow_change": 1.1102230246251565e-16,
+        "maximum_coefficient_change": 4.440892098500626e-16,
+        "maximum_systematic_cdf_correction": 1.1102230246251565e-16,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 5,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 1.1102230246251565e-16,
+        "objective_change": 1.7763568394002505e-15,
+        "lp_dimensions": {
+          "variables": 66,
+          "equalities": 17,
+          "inequalities": 58
+        }
+      }
+    },
+    {
+      "case": 24,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 0,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 2,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 2,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 6,
+          "equalities": 5,
+          "inequalities": 8
+        }
+      }
+    },
+    {
+      "case": 25,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 5.329070518200751e-15,
+      "query_count": 1,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 2,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 2,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 17,
+          "equalities": 9,
+          "inequalities": 14
+        }
+      }
+    },
+    {
+      "case": 26,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 2,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 2,
+        "maximum_conditional_projection": 6.661338147750939e-16,
+        "maximum_unconditional_marginal_change": 3.3306690738754696e-16,
+        "maximum_flow_change": 3.3306690738754696e-16,
+        "maximum_coefficient_change": 1.7763568394002505e-15,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 2,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 8.881784197001252e-16,
+        "objective_change": -3.552713678800501e-15,
+        "lp_dimensions": {
+          "variables": 38,
+          "equalities": 16,
+          "inequalities": 29
+        }
+      }
+    },
+    {
+      "case": 27,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 3,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 2,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 2,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 22,
+          "equalities": 9,
+          "inequalities": 12
+        }
+      }
+    },
+    {
+      "case": 28,
+      "atoms": 4,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 4,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 2,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 4,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 5.551115123125783e-17,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 30,
+          "equalities": 11,
+          "inequalities": 16
+        }
+      }
+    },
+    {
+      "case": 29,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 0,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 2,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 2,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 9,
+          "equalities": 5,
+          "inequalities": 14
+        }
+      }
+    },
+    {
+      "case": 30,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 1,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 2,
+        "maximum_conditional_projection": 1.1102230246251565e-16,
+        "maximum_unconditional_marginal_change": 1.1102230246251565e-16,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 4.440892098500626e-16,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 2,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 4.440892098500626e-16,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 21,
+          "equalities": 9,
+          "inequalities": 19
+        }
+      }
+    },
+    {
+      "case": 31,
+      "atoms": 6,
+      "coefficient_error": 1.7763568394002505e-15,
+      "objective_error": 1.8474111129762605e-13,
+      "query_count": 2,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 2,
+        "maximum_conditional_projection": 1.1102230246251565e-16,
+        "maximum_unconditional_marginal_change": 1.3877787807814457e-17,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 4.440892098500626e-16,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 5,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 5.551115123125783e-17,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 48,
+          "equalities": 19,
+          "inequalities": 35
+        }
+      }
+    },
+    {
+      "case": 32,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 1.7763568394002505e-15,
+      "query_count": 3,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 2,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 2,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 82,
+          "equalities": 26,
+          "inequalities": 50
+        }
+      }
+    },
+    {
+      "case": 33,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 4,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 2,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 2,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 4,
+          "equalities": 3,
+          "inequalities": 6
+        }
+      }
+    },
+    {
+      "case": 34,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 0,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 2,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 2,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 7,
+          "equalities": 5,
+          "inequalities": 10
+        }
+      }
+    },
+    {
+      "case": 35,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 7.105427357601002e-15,
+      "query_count": 1,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 2,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 2.220446049250313e-16,
+        "maximum_flow_change": 2.220446049250313e-16,
+        "maximum_coefficient_change": 1.7763568394002505e-15,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 2,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 2.220446049250313e-16,
+        "objective_change": 7.105427357601002e-15,
+        "lp_dimensions": {
+          "variables": 21,
+          "equalities": 9,
+          "inequalities": 19
+        }
+      }
+    },
+    {
+      "case": 36,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 0,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 3,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 3,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 9,
+          "equalities": 7,
+          "inequalities": 12
+        }
+      }
+    },
+    {
+      "case": 37,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 1,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 3,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 3,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 20,
+          "equalities": 10,
+          "inequalities": 13
+        }
+      }
+    },
+    {
+      "case": 38,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 2,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 3,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 3,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 28,
+          "equalities": 13,
+          "inequalities": 14
+        }
+      }
+    },
+    {
+      "case": 39,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 3,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 3,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 3,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 30,
+          "equalities": 12,
+          "inequalities": 13
+        }
+      }
+    },
+    {
+      "case": 40,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 4,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 3,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 3,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 26,
+          "equalities": 11,
+          "inequalities": 12
+        }
+      }
+    },
+    {
+      "case": 41,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 0,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 3,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 3,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 9,
+          "equalities": 7,
+          "inequalities": 12
+        }
+      }
+    },
+    {
+      "case": 42,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 0,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 4,
+          "equalities": 3,
+          "inequalities": 6
+        }
+      }
+    },
+    {
+      "case": 43,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 3,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 1,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 2,
+          "equalities": 2,
+          "inequalities": 4
+        }
+      }
+    },
+    {
+      "case": 44,
+      "atoms": 2,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 2,
+      "diagnostics": {
+        "preprocessed_blocks": 4,
+        "active_blocks": 1,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 2,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 7,
+          "equalities": 2,
+          "inequalities": 4
+        }
+      }
+    },
+    {
+      "case": 45,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 0,
+      "diagnostics": {
+        "preprocessed_blocks": 3,
+        "active_blocks": 0,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 0,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic."
+      }
+    },
+    {
+      "case": 46,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 2,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 2,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 2,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+        "lp_primal_feasibility": 0.0,
+        "objective_change": 0.0,
+        "lp_dimensions": {
+          "variables": 24,
+          "equalities": 10,
+          "inequalities": 14
+        }
+      }
+    },
+    {
+      "case": 47,
+      "atoms": 1,
+      "coefficient_error": 0.0,
+      "objective_error": 0.0,
+      "query_count": 0,
+      "diagnostics": {
+        "preprocessed_blocks": 0,
+        "active_blocks": 0,
+        "maximum_conditional_projection": 0.0,
+        "maximum_unconditional_marginal_change": 0.0,
+        "maximum_flow_change": 0.0,
+        "maximum_coefficient_change": 0.0,
+        "maximum_systematic_cdf_correction": 0.0,
+        "hypersimplex_sum_error": 0.0,
+        "positive_flow_edges": 0,
+        "scope": "Floating-point projection and flow normalization; not interval arithmetic."
+      }
+    }
+  ],
+  "large_case": {
+    "m": 120,
+    "budget": 6,
+    "value": 6.6148767605634315,
+    "diagnostics": {
+      "preprocessed_blocks": 0,
+      "active_blocks": 1,
+      "maximum_conditional_projection": 7.216449660063518e-15,
+      "maximum_unconditional_marginal_change": 6.439293542825908e-15,
+      "maximum_flow_change": 0.0,
+      "maximum_coefficient_change": 4.529709940470639e-14,
+      "maximum_systematic_cdf_correction": 8.215650382226158e-15,
+      "hypersimplex_sum_error": 1.4210854715202004e-14,
+      "positive_flow_edges": 3,
+      "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+      "lp_primal_feasibility": 3.497202527569243e-13,
+      "objective_change": 4.529709940470639e-14,
+      "lp_dimensions": {
+        "variables": 3221,
+        "equalities": 30,
+        "inequalities": 3312
+      }
+    }
+  },
+  "source_hashes": {
+    "compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d",
+    "compact_policy.py": "608af8ac008d91a5cbfc16560b532e42e5c208f1edd384091e8e5eba5503d781",
+    "verify_compact_policy.py": "b49608ed0a48a34ee838417cb231c2e7185ee18465cafb9e8baa1aa5be7af2ab",
+    "policy_protocol.txt": "9da3195da0e6e23be520222a66efe238a0dadb1d8130de71d708cc5ef8be1a84"
+  },
+  "source_value_report_sha256": "cdf3cfada40a5db97584682daa2d3551b05e7d9a81d8cf40f3f76ef1761264d0",
+  "seconds": 3.3439269000009517,
+  "scope": "Exact mixture atom reconstruction on small cases; ordinary floating-point LP tolerance. No empirical outcomes changed."
+}

@@ -1,0 +1,10 @@
+{
+  "status": "frozen_before_diagnostic",
+  "created_utc": "2026-10-11T21:02:52.457492+00:00",
+  "scope": "Previously used DEVELOPMENT validation only; hindsight diagnostic, not a held-out efficacy test.",
+  "inputs": {
+    "work\\external_deadline\\validation\\trajectories.jsonl": "2e50b82a7ebc67af414bb6541d4e000dd435a085bdd7d4e93a2880ceb427ec27",
+    "work\\external_deadline\\fitted\\reference_targets.csv": "6ead862b89ad64b798faebd4b7770c8f693aa8b0579dc06c81bf12a674128ecc",
+    "work\\decision_revision\\oracle\\hindsight_diagnostic.py": "a68c0aee59131dec2bf848c84e8454fd0b824c18910e2baab7b7a2e166a7f44a"
+  }
+}

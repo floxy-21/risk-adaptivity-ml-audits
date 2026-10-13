@@ -1,0 +1,194 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-11T23:52:20.923265+00:00",
+  "input_sha256": {
+    "outputs/study_holdout_consumers_predictions.csv": "6af5c1101850724b2067c14f3bc8abf891b1d12bd04fa3d4a5c24dbbbeb4c9d8",
+    "outputs/study_holdout_consumers_selection.json": "2b3e9842be2258856cf090713502cfdf2dab1e0565f4bbfb1134463567d40cd4",
+    "outputs/study_holdout_consumers.json": "3a31fdc8e41cad926ab1c43d6802d0f4772e948e61fd71b36f6aa357ac686f1e",
+    "outputs/run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+    "outputs/study_period_archive.py": "258e29c41b18c11bf9f9a15aa9e7c9344d27f0aaa564d6f0d4723d91ce7abdf9",
+    "outputs/study_archive_access.py": "de88aaf109b9534402c913789b81f992cd312dc2d17902e953b715198e2ae28b",
+    "work/risk_adaptivity_revision/practical/replication_protocol.txt": "73c11c3612decd63d789ec642bbb49d2dccf52c0b7dbc9f77e217a339330d06b",
+    "work/risk_adaptivity_revision/practical/replicate_archive_grid.py": "c56f152f00c0be40e2a2236d2e11b2b72cee339ccd3470a1d06c5f2a4d66ec50"
+  },
+  "counts": {
+    "meter_days": 3210,
+    "day_scenarios": 346680,
+    "fully_archived_days": 3060,
+    "bound_calls": 16200,
+    "source_copy_checks": 73440,
+    "reference_enclosures": 194400,
+    "interval_nesting": 97200
+  },
+  "consumers": 30,
+  "hourly_targets": 77040,
+  "comparisons": 19440,
+  "summaries": [
+    {
+      "total_tolerance": 0.0,
+      "comparisons": 9720,
+      "paired_certified": 7753,
+      "separate_certified": 2527,
+      "paired_unresolved": 1967,
+      "separate_unresolved": 7193,
+      "paired_only": 5226,
+      "separate_only": 0,
+      "paired_coverage_percent": 79.7633744855967,
+      "separate_coverage_percent": 25.997942386831273,
+      "unresolved_reduction_percent": 72.65396913666065,
+      "paired_wrong": 0,
+      "separate_wrong": 0,
+      "paired_mean_width": 728.0042195903821,
+      "separate_mean_width": 45704.422618230965
+    },
+    {
+      "total_tolerance": 0.05,
+      "comparisons": 9720,
+      "paired_certified": 7424,
+      "separate_certified": 2010,
+      "paired_unresolved": 2296,
+      "separate_unresolved": 7710,
+      "paired_only": 5414,
+      "separate_only": 0,
+      "paired_coverage_percent": 76.37860082304528,
+      "separate_coverage_percent": 20.679012345679013,
+      "unresolved_reduction_percent": 70.22049286640727,
+      "paired_wrong": 0,
+      "separate_wrong": 0,
+      "paired_mean_width": 843.8871628381293,
+      "separate_mean_width": 54027.416382574775
+    }
+  ],
+  "meter_timings": [
+    {
+      "meter": "MT_081",
+      "seconds": 1.0829257000004873
+    },
+    {
+      "meter": "MT_082",
+      "seconds": 0.9722558000066783
+    },
+    {
+      "meter": "MT_083",
+      "seconds": 0.9180801999755204
+    },
+    {
+      "meter": "MT_084",
+      "seconds": 0.8269479000009596
+    },
+    {
+      "meter": "MT_085",
+      "seconds": 0.8297321000136435
+    },
+    {
+      "meter": "MT_086",
+      "seconds": 0.7213479999918491
+    },
+    {
+      "meter": "MT_087",
+      "seconds": 0.6997814000060316
+    },
+    {
+      "meter": "MT_088",
+      "seconds": 0.707701100007398
+    },
+    {
+      "meter": "MT_089",
+      "seconds": 1.6989781000011135
+    },
+    {
+      "meter": "MT_090",
+      "seconds": 1.457327100011753
+    },
+    {
+      "meter": "MT_091",
+      "seconds": 1.2789609000028577
+    },
+    {
+      "meter": "MT_093",
+      "seconds": 1.1265136000001803
+    },
+    {
+      "meter": "MT_094",
+      "seconds": 1.6253384000156075
+    },
+    {
+      "meter": "MT_095",
+      "seconds": 1.2577114000159781
+    },
+    {
+      "meter": "MT_096",
+      "seconds": 1.2076583000016399
+    },
+    {
+      "meter": "MT_097",
+      "seconds": 1.2427838000003248
+    },
+    {
+      "meter": "MT_098",
+      "seconds": 1.2454413000086788
+    },
+    {
+      "meter": "MT_099",
+      "seconds": 1.543083700002171
+    },
+    {
+      "meter": "MT_100",
+      "seconds": 1.4813839000125881
+    },
+    {
+      "meter": "MT_101",
+      "seconds": 1.3600214000034612
+    },
+    {
+      "meter": "MT_102",
+      "seconds": 1.3415817999921273
+    },
+    {
+      "meter": "MT_103",
+      "seconds": 1.380284400016535
+    },
+    {
+      "meter": "MT_104",
+      "seconds": 1.3834222999867052
+    },
+    {
+      "meter": "MT_105",
+      "seconds": 1.4226173000060953
+    },
+    {
+      "meter": "MT_114",
+      "seconds": 1.670950100000482
+    },
+    {
+      "meter": "MT_118",
+      "seconds": 1.8673882999864873
+    },
+    {
+      "meter": "MT_119",
+      "seconds": 1.3366397000208963
+    },
+    {
+      "meter": "MT_123",
+      "seconds": 1.2955510999890976
+    },
+    {
+      "meter": "MT_124",
+      "seconds": 1.9225135000015143
+    },
+    {
+      "meter": "MT_125",
+      "seconds": 1.2132192999997642
+    }
+  ],
+  "elapsed_seconds": 39.34617619999335,
+  "max_absolute_enclosure_violation": 8.731149137020111e-11,
+  "max_absolute_nesting_violation": 4.3655745685100555e-11,
+  "decision_margin": "1e-9*max(1,abs(lower),abs(upper))",
+  "checking_tolerance": "1e-8 times corresponding reference/nesting scale",
+  "output_sha256": {
+    "period_cases.csv": "11b689686ad58c83a1e80c1dca7e4b4c8deef8251e526c67d7e804d89d909339",
+    "summary.csv": "4195a5ddd05cb64ae2cc3f7b838d1c5a3c81dde4f5205b7c8a518333e05f4f24"
+  },
+  "interpretation": "Fresh extended comparison-grid execution using frozen forecasts from30existing additional Portugal consumers. Same source/calendar; earlier primary recovery outcomes were already inspected. No untouched-source or blind validation claim, model refit, additional queries, deployment savings, or predicted accuracy improvement. High-demand masks use serialized targets under this newly fixed grid protocol; repeated seed-labelled deterministic masks are dependent."
+}

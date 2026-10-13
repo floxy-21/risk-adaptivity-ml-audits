@@ -1,0 +1,262 @@
+[
+  {
+    "household_id": "MAC000023",
+    "source_rows_in_prepared_window": 20702,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 0,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10283
+  },
+  {
+    "household_id": "MAC000024",
+    "source_rows_in_prepared_window": 20702,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 0,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10283
+  },
+  {
+    "household_id": "MAC000025",
+    "source_rows_in_prepared_window": 20696,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 49,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10277
+  },
+  {
+    "household_id": "MAC000026",
+    "source_rows_in_prepared_window": 20690,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 0,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10275
+  },
+  {
+    "household_id": "MAC000027",
+    "source_rows_in_prepared_window": 20694,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 0,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10279
+  },
+  {
+    "household_id": "MAC000028",
+    "source_rows_in_prepared_window": 13785,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 514,
+    "duplicate_rows": 18,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 6854
+  },
+  {
+    "household_id": "MAC000029",
+    "source_rows_in_prepared_window": 20691,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 508,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10278
+  },
+  {
+    "household_id": "MAC000030",
+    "source_rows_in_prepared_window": 20693,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 0,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10278
+  },
+  {
+    "household_id": "MAC000031",
+    "source_rows_in_prepared_window": 20689,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 0,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "ToU"
+    ],
+    "eligible_hours": 10275
+  },
+  {
+    "household_id": "MAC000032",
+    "source_rows_in_prepared_window": 20702,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 1208,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10283
+  },
+  {
+    "household_id": "MAC000033",
+    "source_rows_in_prepared_window": 20701,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 0,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10282
+  },
+  {
+    "household_id": "MAC000034",
+    "source_rows_in_prepared_window": 20699,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 0,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10281
+  },
+  {
+    "household_id": "MAC000035",
+    "source_rows_in_prepared_window": 20701,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 0,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10282
+  },
+  {
+    "household_id": "MAC000036",
+    "source_rows_in_prepared_window": 20702,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 2473,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10283
+  },
+  {
+    "household_id": "MAC000037",
+    "source_rows_in_prepared_window": 20702,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 20575,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10283
+  },
+  {
+    "household_id": "MAC000038",
+    "source_rows_in_prepared_window": 20700,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 0,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10281
+  },
+  {
+    "household_id": "MAC000039",
+    "source_rows_in_prepared_window": 20694,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 0,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10279
+  },
+  {
+    "household_id": "MAC000040",
+    "source_rows_in_prepared_window": 20703,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 0,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10284
+  },
+  {
+    "household_id": "MAC000041",
+    "source_rows_in_prepared_window": 20701,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 874,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10282
+  },
+  {
+    "household_id": "MAC000042",
+    "source_rows_in_prepared_window": 20696,
+    "null_nonfinite_rows": 0,
+    "negative_rows": 0,
+    "zero_rows": 1888,
+    "duplicate_rows": 28,
+    "offgrid_rows": 0,
+    "tariff_values": [
+      "Std"
+    ],
+    "eligible_hours": 10280
+  }
+]

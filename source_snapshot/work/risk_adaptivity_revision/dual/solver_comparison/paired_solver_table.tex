@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Paired saved solver measurements on all 12 instances eligible for finite enumeration. Within each C/F cell, C is compact and F is finite-game enumeration. $(G,m,B)$ gives blocks, coordinates per block, and budget; D and T denote distinct and tied coefficient profiles. Method times include construction and solving; compact also compiles its executable policy. Peak memory is absolute process working-set memory, including the runtime. Each entry is one archived measurement, not a repeated-run timing estimate.}
+\label{tab:risk_paired_solvers}
+\begin{tabular}{llrrr}
+\toprule
+Case & $(G,m,B)$/profile & LP variables C/F & Time C/F (ms) & Memory C/F (MiB)\\
+\midrule
+C01 & $(1,6,1)$/D & 14/7 & 15.08/6.94 & 71.70/71.24 \\
+C02 & $(1,6,1)$/T & 14/7 & 9.61/8.66 & 71.42/70.93 \\
+C03 & $(1,6,3)$/D & 31/21 & 19.16/11.26 & 71.46/71.11 \\
+C04 & $(1,6,3)$/T & 31/21 & 11.03/6.70 & 71.46/71.28 \\
+C05 & $(1,12,3)$/D & 91/221 & 14.00/23.28 & 71.78/71.94 \\
+C06 & $(1,12,3)$/T & 91/221 & 12.27/15.26 & 71.80/71.89 \\
+C07 & $(1,12,6)$/D & 197/925 & 14.06/65.50 & 72.03/73.84 \\
+C08 & $(1,12,6)$/T & 197/925 & 22.68/77.75 & 72.06/74.02 \\
+C09 & $(2,6,3)$/D & 142/222 & 12.57/28.58 & 71.92/71.78 \\
+C10 & $(2,6,3)$/T & 142/222 & 24.10/31.10 & 71.92/71.90 \\
+C11 & $(2,6,6)$/D & 164/924 & 22.39/32.87 & 72.13/73.42 \\
+C12 & $(2,6,6)$/T & 164/924 & 19.89/59.08 & 72.13/73.24 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,65 @@
+Recovery-budget extension protocol, frozen 2026-10-10 00:05 UTC.
+
+This extension was designed after inspecting the completed main-study results.
+It is explicitly an additional same-panel experiment, not external validation
+or a prospectively registered experiment. No model is refitted or retuned.
+
+Question: can exact energy constraints guide a limited number of recovered
+interval readings to minimize worst-case residual pairwise uncertainty?
+Optimize the worst-case width of the paired squared-error-difference interval,
+not expected accuracy or the probability of resolving a comparison.
+
+Use all archived held-out predictions for all34 meters and all six forecast
+pairs. Use contiguous missing runs of6 and12 hours, six-hour exact energy
+blocks, and all main-study seeds1103,2207,3301. For each day and gap use the
+same SeedSequence [mask_seed, epoch_day, gap_index] with original gap_index1
+for6 and2 for12.
+Budgets are at most0,1,2,3 recovered coordinates, independently for each pair.
+Queries are nonadaptive batch decisions. Selection observes fixed forecasts,
+surviving readings, missing locations and retained aggregate totals only.
+Reveal the original held-out value only after choosing the complete batch.
+These are pair-specific queries, not a shared query set for all four models.
+One query means one recoverable interval-energy record, not a network packet
+or a cumulative-counter snapshot. Practical use assumes the missing record
+exists in a meter buffer or secondary archive; never-recorded data cannot be
+retrieved by this policy. The experiment simulates this retrieval operation.
+
+Policies: exact minimax-width dynamic program; deterministic seeded random;
+largest absolute forecast-contrast coefficient; greedy immediate reduction in
+worst-case width. All avoid querying the final missing coordinate of a block,
+which is already identified by its total. Stop if residual worst-case width is
+zero. Exact DP ties prefer fewer queries, then a deterministic index ordering.
+Random seed70119 with mask_seed, epoch_day, gap_index and pair_index; budgets
+share one random ordering. Tie-breaking for other baselines uses coordinate
+index.
+
+For block energy E and missing coefficients c=2(b-a)/24, the worst-case width
+after querying a subset is E times the range of unqueried coefficients.
+For k queries the minimum remaining range is the shortest range of a sorted
+contiguous coefficient window containing m-k coordinates. Allocate the total
+query budget across disjoint blocks by dynamic programming. This theorem
+requires nonnegative uncapped targets and exact totals; no general claim for
+capacity limits or uncertain totals is made by this extension.
+
+Primary descriptive metrics by cohort, gap and budget: macro-average per-meter
+resolution; zero expected wrong certified rankings conditional on feasibility;
+ratio of summed actual remaining width to summed initial width per meter;
+ratio of summed worst-case remaining width to summed initial width; mean
+queries used. Report actual resolution separately from the optimized width
+objective, since minimax width need not optimize resolution or actual width.
+Macro descriptive bootstrap2000 whole-meter resamples where at least2 meters;
+the convenience panel does not support population-representative claims.
+
+Test before running: exhaustive subset enumeration on small multi-block cases,
+zero mass/ties/singletons and query cap, worst-case width attainability, and
+random interval endpoints against the generic reference solver. Preserve main
+study artifacts. Record extension source/protocol/data/result hashes and all
+results without selecting only successful conditions.
+
+Amendment2026-10-10 00:09 UTC, before any recovery outcome inspection:
+The initial single-mask-seed computation was interrupted before completion.
+Expand to all three seeds used in the main experiment, preserving policies
+and budgets. This improves mask-realization coverage and makes zero-query
+rows exactly comparable to the corresponding main-study conditions. Include
+mask_seed in the random-baseline seed. Recompute every meter from scratch.
+Only progress logs and test outcomes had been inspected before this change.

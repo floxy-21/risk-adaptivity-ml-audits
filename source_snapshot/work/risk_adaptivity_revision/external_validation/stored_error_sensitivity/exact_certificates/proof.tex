@@ -1,0 +1,38 @@
+\paragraph{Exact upper certificates for the positive-error cases.}
+For each of the 27 and 22 positive-allowance survivors, retain its computed
+first query and at most two successor queries. With normalized total one,
+the shared-answer endpoint LP minimizes $f^\top z=-\eta$ under
+$Az\leq b$, $Hz=h$ and a finite box $L\leq z\leq U$.
+Its maximum $\eta$ is the worst width of the policy selecting an exact
+minimizer of conditional width from this successor support.
+The implied boxes are $x_h\in[0,1]$, $e_k\in[-\delta,\delta]$,
+$\eta\in[0,1]$ and first answer $t\in[-\delta,1+\delta]$.
+They preserve the optimum: feasible widths are nonnegative and at most the
+normalized initial width one, and every conditional endpoint pair can
+coincide to permit $\eta=0$.
+
+Take any rational multipliers $\lambda\leq0$ and unrestricted $\nu$, and set
+$r=f-A^\top\lambda-H^\top\nu$. Every feasible point satisfies
+\[
+ f^\top z\geq \lambda^\top b+\nu^\top h+
+       \sum_j\min\{r_jL_j,r_jU_j\}=:\ell.
+\]
+Indeed, $\lambda^\top Az\geq\lambda^\top b$,
+$\nu^\top Hz=\nu^\top h$, and each residual coordinate is bounded by
+its box minimum. Thus $-\ell$ is a rigorous upper bound on worst width,
+even when the proposed multipliers do not satisfy exact stationarity.
+We convert solver multipliers to exact binary64 fractions, clip inequality
+multipliers to the nonpositive half-line, reconstruct the original serialized
+coefficients and positive normalization exactly, and compute this correction
+in rational arithmetic.
+
+All 49 bounds are strictly below $1/2$, with smallest certified margin
+$0.00375922734$ in original-width units. A separate solver-free checker
+reconstructs every matrix and verifies the inequalities using fractions.
+The existing exact adverse-completion upper bound on randomized-batch
+success remains $1/2$ by inclusion of the zero-error records and fibers;
+the certified two-successor policy supplies the matching continuum lower
+guarantee. This certifies the same 27 and 22 cases under the declared
+sensitivity model. It neither asserts an exact optimal-width value nor
+tests a floating-point online branching implementation or a physical
+meter-error calibration.

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "pairs": 12,
+  "compact_faster_count": 8,
+  "finite_faster_count": 4,
+  "compact_fewer_variables_count": 8,
+  "compact_lower_peak_process_memory_count": 6,
+  "median_finite_over_compact_method_time": 1.3792898358729255,
+  "maximum_objective_discrepancy_normalized": 1.260028441002609e-15,
+  "measurement_scope": "Existing single-run measurements, no new timing run. Method implementations perform different post-solve work: compact compiles an executable sampling policy. Absolute peak process working set includes Python and dependencies; not incremental solver memory.",
+  "source_sha256": {
+    "work/risk_adaptivity_revision/dual/summarize_solver_comparison.py": "3d99c6b0703a85639383a948faf457647b33300112e6e8f95459f9f46a719d6f",
+    "work/randomized_scaling_review/results.csv": "5380b8ea2990a9aa54ec46497ac73496672cbca1066d3e8f7ca39e120c18a5b5",
+    "work/randomized_scaling_review/instances.json": "b296dfb87fb2c2c52cb5a54aa967a3a01f517b5ca7e4bb598fd258b542830a16",
+    "work/randomized_scaling_review/results.json": "80a936abea60d54df0d6e9d49f5e17c13baa5567d6d8217abc5ff55e8a1a29f1"
+  },
+  "output_sha256": {
+    "paired_solver_results.csv": "288cd5a89ce43926d6b22ec9ecc5a2bf0ced014cbf771df5b08c7e3692a90494",
+    "paired_solver_table.tex": "2a4ffe2738fd73a78f13589c4347079d401761ec776a66fc654353c75c5641c8"
+  }
+}

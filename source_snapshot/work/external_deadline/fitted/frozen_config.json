@@ -1,0 +1,32 @@
+{
+  "train_start": "2013-01-01",
+  "train_end": "2013-09-30",
+  "validation_start": "2013-10-01",
+  "validation_end": "2013-12-31",
+  "test_start": "2014-01-01",
+  "test_end": "2014-02-28",
+  "household_ids": [
+    "MAC000002",
+    "MAC000003",
+    "MAC000004",
+    "MAC000005",
+    "MAC000006",
+    "MAC000007",
+    "MAC000008",
+    "MAC000009",
+    "MAC000010",
+    "MAC000011",
+    "MAC000012",
+    "MAC000013",
+    "MAC000014",
+    "MAC000015",
+    "MAC000017",
+    "MAC000018",
+    "MAC000019",
+    "MAC000020",
+    "MAC000021",
+    "MAC000022"
+  ],
+  "min_training_days": 30,
+  "protocol_path": "work/external_deadline/source_amendment.txt"
+}

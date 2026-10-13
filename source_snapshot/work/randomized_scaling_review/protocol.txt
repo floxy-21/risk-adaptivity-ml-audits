@@ -1,0 +1,44 @@
+Frozen synthetic scaling protocol, 10 October 2026
+
+No optimization outcomes are inspected before freezing instances.json.
+The primary grid has 24 cases: G in {1,2,4} blocks, equal block size m in
+{6,12}, budget floor(G*m*f) with f in {0.25,0.50}, and two profiles.
+Four additional single-block cases use m in {24,48}, f=0.50, both profiles.
+Distinct-homogeneous: one seeded continuous coefficient vector is permuted
+separately within each block; every block total is 1. Tied-heterogeneous:
+three copies of each equally spaced coefficient, shuffled within blocks;
+block coefficient scales are 2^g and energies span 0.1 to 10 geometrically
+(single-block total 1). Profiles jointly vary ties and heterogeneity; no
+isolated causal effect of either property will be inferred. Seeds depend
+only on G,m,profile, so inputs are identical across the two budgets.
+All coefficients and totals are saved before solving; no case is replaced.
+
+Use the unchanged compact_policy.solve_policy API, which invokes the
+unchanged compact_randomized.solve_compact. Instrument its linprog call in
+memory to capture dimensions, solve time and primal/dual residuals. HiGHS
+is explicitly restricted to one thread. No solver algorithm is replaced.
+Every method/case runs once in a fresh subprocess. Timing after imports
+includes LP construction, solution and compact policy compilation; solver
+time is separate. Import/startup and instrumented residual checks are also
+reported. Peak working set is the Windows whole-process PeakWorkingSetSize
+(baseline interpreter/imports included), not incremental solver memory.
+Parent polls memory every 50 ms: kill if WorkingSetSize exceeds 1 GiB.
+This is a monitored cap, not a hard OS allocation limit. Wall timeout is
+20 seconds per fresh subprocess. Timeouts/errors/memory kills are retained.
+BLAS/OpenMP thread environment variables are 1. Execution is sequential on
+the current shared host, so concurrent unrelated work can affect timings.
+
+Run the unchanged exhaustive finite-game solver only when BOTH its exact
+size-B admissible batch count is <=25,000 and its prefilter Cartesian
+product of local candidate-list sizes is <=100,000. These combinatorial
+counts depend only on dimensions/budget, never results. Record all skips.
+There is no inference that every larger case is infeasible to enumerate.
+
+Record objective, LP dimensions/nonzeros, solver status, absolute and scaled
+primal violation, dual violation, stationarity and primal-dual gap, policy
+compilation corrections and 20 seeded hard-budget/sample-identity checks.
+Compare successful compact and eligible finite-game objectives relative to
+max(1, initial width). Numerical acceptance threshold is 1e-7 for normalized
+diagnostics/discrepancies; these are floating-point checks, not certificates.
+Report every case, failures and skips. No tuning, filtering, repeated seeds,
+runtime-dominance claim or empirical asymptotic-complexity claim is allowed.

@@ -1,0 +1,34 @@
+Protocol fixed before calculating the extended whole-period results.
+Date: 2026-10-11 (UTC; filesystem creation timestamp recorded in run manifest).
+Purpose: extend archive-aware paired-versus-separate certification evidence
+to the existing30additional Portugal consumers. They were used in an earlier
+primary recovery replication; this is not a newly untouched cohort.
+
+Input: outputs/study_holdout_consumers_predictions.csv, all30frozen consumers,
+all107eligible testdays, all4fixed models. No model fitting or retuning.
+Reference: outputs/study_holdout_consumers_selection.json and original runJSON.
+Access: every saved test persistence prediction can reveal its previous-day
+target. No outside-period forecasts or predictor inversion. Exact aggregate
+singleton/zero deductions occur before both compared bound methods.
+
+Full declared grid: gap2/6/12hours; contiguous/scattered/high_demand masks;
+seeds1103/2207/3301; block6/24hours; total tolerance0/5percent; all6modelpairs.
+The deterministic high-demand masks retain all seed-labelled repeats for
+compatibility but these are not independent evidence. Mask generation uses
+the frozen CSV's parsed targets, with stable index tie breaking. Both bounds
+receive exactly the same observed values and nominal totals. Totals are
+constructed before masking. The high-demand rule is an oracle stress only;
+its implied inequalities are not added to the declared feasible set.
+
+Each reported period comparison averages all107daily endpoints and retains
+the common2568target denominator. Decision tolerance is1e-9timesmax(1,absends).
+Reference enclosure and nesting tolerance is1e-8timesmax(1,absrelevantvalues).
+Summaries: certifiedcounts, unresolvedcounts, errorsamongcertificates,
+paired-onlycounts, widths and fullcaseledger, separately for each tolerance.
+No outcome-based case removal, replacement, parameter change, or success target.
+
+Implementation reuses the frozen production bound and archiveclosure routines.
+This is a fresh extension of the comparison grid, not an independent solver
+implementation. Sourcehashes are recorded before outcomes are calculated.
+The reference contrast is used only to check certificates after computing bounds.
+All unfavorable outcomes remain in the output.

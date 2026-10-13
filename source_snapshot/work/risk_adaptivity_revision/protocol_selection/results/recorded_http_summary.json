@@ -1,0 +1,67 @@
+{
+  "trials": 30,
+  "total_requests": 60,
+  "trial_requests": 54,
+  "initial_endpoint_setup_requests": 6,
+  "cases": 3,
+  "repetitions_per_policy_case": 2,
+  "by_policy": {
+    "adaptive": {
+      "trials": 6,
+      "requests": 2.0,
+      "information_rounds": 2.0,
+      "api_io_seconds": 0.4965091333288001,
+      "end_to_end_elapsed_seconds": 1.9842120333341882,
+      "body_bytes_received": 104.33333333333333,
+      "relative_width": 0.15515521302288968,
+      "precision_success": 1.0
+    },
+    "det_batch": {
+      "trials": 6,
+      "requests": 2.0,
+      "information_rounds": 1.0,
+      "api_io_seconds": 0.5392976000099831,
+      "end_to_end_elapsed_seconds": 2.003420949996022,
+      "body_bytes_received": 104.66666666666667,
+      "relative_width": 0.13907711942541623,
+      "precision_success": 1.0
+    },
+    "full_hourly_range": {
+      "trials": 6,
+      "requests": 1.0,
+      "information_rounds": 1.0,
+      "api_io_seconds": 0.3312435333355097,
+      "end_to_end_elapsed_seconds": 1.0395465499993104,
+      "body_bytes_received": 226.66666666666666,
+      "relative_width": 0.0,
+      "precision_success": 1.0
+    },
+    "greedy_adaptive": {
+      "trials": 6,
+      "requests": 2.0,
+      "information_rounds": 2.0,
+      "api_io_seconds": 0.5512940499999482,
+      "end_to_end_elapsed_seconds": 1.9747954000049504,
+      "body_bytes_received": 104.33333333333333,
+      "relative_width": 0.16147160693618284,
+      "precision_success": 1.0
+    },
+    "mean_batch": {
+      "trials": 6,
+      "requests": 2.0,
+      "information_rounds": 1.0,
+      "api_io_seconds": 0.5818574833344125,
+      "end_to_end_elapsed_seconds": 1.9648769166572795,
+      "body_bytes_received": 104.33333333333333,
+      "relative_width": 0.15831340997953627,
+      "precision_success": 1.0
+    }
+  },
+  "scope": "Descriptive recorded microbenchmark on three fixed tasks; not timing evidence for the 29 sensitivity cases",
+  "limits": [
+    "End-to-end time includes separately logged client throttle waits",
+    "Body bytes are not TLS wire bytes; full range includes two retained endpoints",
+    "Zero width is for stored API-grid targets, not a zero physical-error assertion",
+    "Selective setup endpoints are common and outside individual policy-trial timing"
+  ]
+}

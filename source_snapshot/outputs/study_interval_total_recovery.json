@@ -1,0 +1,526 @@
+{
+  "scope": "Synthetic numerical verification of a separate interval-total batch solver; no operational-savings or dataset-performance claim",
+  "completed_utc": "2026-10-10T02:30:55.177746+00:00",
+  "all_passed": true,
+  "seed": 941820,
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "solver": "scipy.optimize.linprog(method='highs') for independent extrema",
+  "counts": {
+    "lp_calls": 3458,
+    "exhaustive_instances": 86,
+    "exhaustive_query_subsets": 1247,
+    "conditional_answer_checks": 482,
+    "exact_total_comparisons": 108,
+    "invalid_input_checks": 25
+  },
+  "maximum_absolute_errors": {
+    "solver_vs_exhaustive_lp": 0.0,
+    "subset_width_vs_lp": 0.0,
+    "conditional_exceeds_zero_answer_width": 0.0,
+    "conditional_formula_vs_lp": 0.0,
+    "exact_total_reduction": 0.0
+  },
+  "named_cases": [
+    {
+      "name": "singleton_uncertain",
+      "budget": 0,
+      "coordinates": 1,
+      "queries": [],
+      "solver_width": 4.0,
+      "exhaustive_lp_width": 4.0
+    },
+    {
+      "name": "singleton_uncertain",
+      "budget": 1,
+      "coordinates": 1,
+      "queries": [
+        0
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "singleton_uncertain",
+      "budget": 3,
+      "coordinates": 1,
+      "queries": [
+        0
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "constant_positive",
+      "budget": 0,
+      "coordinates": 3,
+      "queries": [],
+      "solver_width": 4.0,
+      "exhaustive_lp_width": 4.0
+    },
+    {
+      "name": "constant_positive",
+      "budget": 1,
+      "coordinates": 3,
+      "queries": [],
+      "solver_width": 4.0,
+      "exhaustive_lp_width": 4.0
+    },
+    {
+      "name": "constant_positive",
+      "budget": 2,
+      "coordinates": 3,
+      "queries": [],
+      "solver_width": 4.0,
+      "exhaustive_lp_width": 4.0
+    },
+    {
+      "name": "constant_positive",
+      "budget": 3,
+      "coordinates": 3,
+      "queries": [
+        0,
+        1,
+        2
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "constant_positive",
+      "budget": 5,
+      "coordinates": 3,
+      "queries": [
+        0,
+        1,
+        2
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "constant_negative",
+      "budget": 0,
+      "coordinates": 2,
+      "queries": [],
+      "solver_width": 4.0,
+      "exhaustive_lp_width": 4.0
+    },
+    {
+      "name": "constant_negative",
+      "budget": 1,
+      "coordinates": 2,
+      "queries": [],
+      "solver_width": 4.0,
+      "exhaustive_lp_width": 4.0
+    },
+    {
+      "name": "constant_negative",
+      "budget": 2,
+      "coordinates": 2,
+      "queries": [
+        0,
+        1
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "constant_negative",
+      "budget": 4,
+      "coordinates": 2,
+      "queries": [
+        0,
+        1
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "mixed_sign",
+      "budget": 0,
+      "coordinates": 3,
+      "queries": [],
+      "solver_width": 20.0,
+      "exhaustive_lp_width": 20.0
+    },
+    {
+      "name": "mixed_sign",
+      "budget": 1,
+      "coordinates": 3,
+      "queries": [
+        0
+      ],
+      "solver_width": 7.5,
+      "exhaustive_lp_width": 7.5
+    },
+    {
+      "name": "mixed_sign",
+      "budget": 2,
+      "coordinates": 3,
+      "queries": [
+        0,
+        2
+      ],
+      "solver_width": 1.5,
+      "exhaustive_lp_width": 1.5
+    },
+    {
+      "name": "mixed_sign",
+      "budget": 3,
+      "coordinates": 3,
+      "queries": [
+        0,
+        1,
+        2
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "mixed_sign",
+      "budget": 5,
+      "coordinates": 3,
+      "queries": [
+        0,
+        1,
+        2
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "positive",
+      "budget": 0,
+      "coordinates": 3,
+      "queries": [],
+      "solver_width": 11.0,
+      "exhaustive_lp_width": 11.0
+    },
+    {
+      "name": "positive",
+      "budget": 1,
+      "coordinates": 3,
+      "queries": [
+        2
+      ],
+      "solver_width": 7.0,
+      "exhaustive_lp_width": 7.0
+    },
+    {
+      "name": "positive",
+      "budget": 2,
+      "coordinates": 3,
+      "queries": [
+        1,
+        2
+      ],
+      "solver_width": 3.0,
+      "exhaustive_lp_width": 3.0
+    },
+    {
+      "name": "positive",
+      "budget": 3,
+      "coordinates": 3,
+      "queries": [
+        0,
+        1,
+        2
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "positive",
+      "budget": 5,
+      "coordinates": 3,
+      "queries": [
+        0,
+        1,
+        2
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "negative",
+      "budget": 0,
+      "coordinates": 3,
+      "queries": [],
+      "solver_width": 11.0,
+      "exhaustive_lp_width": 11.0
+    },
+    {
+      "name": "negative",
+      "budget": 1,
+      "coordinates": 3,
+      "queries": [
+        0
+      ],
+      "solver_width": 7.0,
+      "exhaustive_lp_width": 7.0
+    },
+    {
+      "name": "negative",
+      "budget": 2,
+      "coordinates": 3,
+      "queries": [
+        0,
+        1
+      ],
+      "solver_width": 3.0,
+      "exhaustive_lp_width": 3.0
+    },
+    {
+      "name": "negative",
+      "budget": 3,
+      "coordinates": 3,
+      "queries": [
+        0,
+        1,
+        2
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "negative",
+      "budget": 5,
+      "coordinates": 3,
+      "queries": [
+        0,
+        1,
+        2
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "zero_energy",
+      "budget": 0,
+      "coordinates": 2,
+      "queries": [],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": -0.0
+    },
+    {
+      "name": "zero_energy",
+      "budget": 1,
+      "coordinates": 2,
+      "queries": [],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": -0.0
+    },
+    {
+      "name": "zero_energy",
+      "budget": 2,
+      "coordinates": 2,
+      "queries": [],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": -0.0
+    },
+    {
+      "name": "zero_energy",
+      "budget": 4,
+      "coordinates": 2,
+      "queries": [],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": -0.0
+    },
+    {
+      "name": "zero_coefficients",
+      "budget": 0,
+      "coordinates": 2,
+      "queries": [],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": -0.0
+    },
+    {
+      "name": "zero_coefficients",
+      "budget": 1,
+      "coordinates": 2,
+      "queries": [],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": -0.0
+    },
+    {
+      "name": "zero_coefficients",
+      "budget": 2,
+      "coordinates": 2,
+      "queries": [],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": -0.0
+    },
+    {
+      "name": "zero_coefficients",
+      "budget": 4,
+      "coordinates": 2,
+      "queries": [],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": -0.0
+    },
+    {
+      "name": "zero_lower",
+      "budget": 0,
+      "coordinates": 3,
+      "queries": [],
+      "solver_width": 12.0,
+      "exhaustive_lp_width": 12.0
+    },
+    {
+      "name": "zero_lower",
+      "budget": 1,
+      "coordinates": 3,
+      "queries": [
+        2
+      ],
+      "solver_width": 4.0,
+      "exhaustive_lp_width": 4.0
+    },
+    {
+      "name": "zero_lower",
+      "budget": 2,
+      "coordinates": 3,
+      "queries": [
+        0,
+        2
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": -0.0
+    },
+    {
+      "name": "zero_lower",
+      "budget": 3,
+      "coordinates": 3,
+      "queries": [
+        0,
+        2
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": -0.0
+    },
+    {
+      "name": "zero_lower",
+      "budget": 5,
+      "coordinates": 3,
+      "queries": [
+        0,
+        2
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": -0.0
+    },
+    {
+      "name": "exact_total",
+      "budget": 0,
+      "coordinates": 3,
+      "queries": [],
+      "solver_width": 9.0,
+      "exhaustive_lp_width": 9.0
+    },
+    {
+      "name": "exact_total",
+      "budget": 1,
+      "coordinates": 3,
+      "queries": [
+        2
+      ],
+      "solver_width": 3.0,
+      "exhaustive_lp_width": 3.0
+    },
+    {
+      "name": "exact_total",
+      "budget": 2,
+      "coordinates": 3,
+      "queries": [
+        1,
+        2
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "exact_total",
+      "budget": 3,
+      "coordinates": 3,
+      "queries": [
+        1,
+        2
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "exact_total",
+      "budget": 5,
+      "coordinates": 3,
+      "queries": [
+        1,
+        2
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "two_blocks",
+      "budget": 0,
+      "coordinates": 4,
+      "queries": [],
+      "solver_width": 11.0,
+      "exhaustive_lp_width": 11.0
+    },
+    {
+      "name": "two_blocks",
+      "budget": 1,
+      "coordinates": 4,
+      "queries": [
+        0
+      ],
+      "solver_width": 4.0,
+      "exhaustive_lp_width": 4.0
+    },
+    {
+      "name": "two_blocks",
+      "budget": 3,
+      "coordinates": 4,
+      "queries": [
+        0,
+        2
+      ],
+      "solver_width": 2.0,
+      "exhaustive_lp_width": 2.0
+    },
+    {
+      "name": "two_blocks",
+      "budget": 4,
+      "coordinates": 4,
+      "queries": [
+        0,
+        2,
+        5,
+        8
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    },
+    {
+      "name": "two_blocks",
+      "budget": 6,
+      "coordinates": 4,
+      "queries": [
+        0,
+        2,
+        5,
+        8
+      ],
+      "solver_width": 0.0,
+      "exhaustive_lp_width": 0.0
+    }
+  ],
+  "source_hashes": {
+    "interval_total_recovery.py": "ddda244c9a3bafbcf031061b1a35e9c0ea31ca007dbc754138a5fca50c2b8009",
+    "study_interval_total_recovery.py": "459049424acc4b858b3435a188c12244ddcd1ec0e0994b925722665b72bb4a68",
+    "study_recovery.py": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241"
+  }
+}

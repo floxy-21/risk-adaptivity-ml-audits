@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "scope": "Original integer counter replay, exact rational terminal bounds and policy choices; all saved policy metrics; independently assembled endpoint LP sample",
+  "directory": "work\\risk_adaptivity_revision\\counter_adaptive\\pilot",
+  "geometry_sha256": "6c94583d757db31b33b6388cd29c2d1b6999385c76b049368e58ef97f75424cb",
+  "replay_sha256": "ca32b6e9df5c94d1f27429ac78deb2aacb8b2d1e71117f694d0f17b73d586d4b",
+  "trace_sha256": "536c75d4593a050785e0443f1be34f6f0a9e8857b0dd20c0a7fc7ada1238bbeb",
+  "source_sha256": "b5b6a8037dfb47b733bed70217a30697f3a3fb43c60b53012905c916eac74cd6",
+  "raw_source_sha256": {
+    "consumer_00000001": "9228795c6369ce144fbb929f9d413397545f86e3a95d2f9a0f27c92f1d55ad8d",
+    "consumer_00000002": "93d142217c74ab2c12a98035b3ea178ead234fec0b71942e8e90db5b7e6a2ef3",
+    "consumer_00000003": "db69719d2262ebeb6df39abafffca2805c8a03b1b4777f86eb8aa78acf578b6c"
+  },
+  "counts": {
+    "cases": 1080,
+    "policy_rows": 5400,
+    "sharp_batch_intervals": 10800,
+    "independent_endpoint_lps": 240,
+    "exact_policy_matches": 1080,
+    "all_batch_reference_containment": 10800
+  },
+  "maximum_errors": {
+    "outer_total": 0.0,
+    "width": 4.440892098500626e-16,
+    "relative_width": 5.551115123125783e-16,
+    "scaled_width": 2.3314683517128287e-15,
+    "winner_probability": 1.1102230246251565e-16,
+    "success_probability": 0.0,
+    "endpoint_lp": 2.220446049250313e-16,
+    "lp_primal_residual": 4.440892098500626e-16
+  },
+  "comparison_tolerance": 2e-08,
+  "lp_case_indices": [
+    0,
+    98,
+    196,
+    294,
+    392,
+    490,
+    588,
+    686,
+    784,
+    882,
+    980,
+    1079
+  ],
+  "runtime_seconds": 5.872748899972066
+}

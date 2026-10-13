@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "claim": "Deterministic adaptive minimax width equals fixed-batch optimum",
+  "scope": "Integer-grid independent finite checks; not a proof of the continuous theorem",
+  "seed": 21094,
+  "cases": 5952,
+  "case_groups": {
+    "single_exhaustive": 1458,
+    "two_block_exhaustive": 4374,
+    "random_extended": 120
+  },
+  "adaptive_bellman_states": 112458,
+  "integer_comparison_max_absolute_error": 0,
+  "failures": [],
+  "edge_cases": [
+    "zero total",
+    "constant contrast",
+    "negative contrasts",
+    "repeated coefficients",
+    "singleton blocks",
+    "last-coordinate queries",
+    "early stopping",
+    "budget exceeds number of useful queries"
+  ],
+  "randomized_expected_minimax_claim_tested": false,
+  "randomized_counterexample": {
+    "coefficients": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "budget": 2,
+    "equal_mixture_batches": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "deterministic_minimax_width": "E",
+    "randomized_expected_width_for_every_world": "E/2",
+    "integer_worlds_checked": 14,
+    "meaning": "Do not extend the deterministic corollary to expected randomized width"
+  },
+  "python": "3.14.6",
+  "script_sha256": "085e4773e18e2c1132fc4353dff11b06e9ce1f97b5b2ac14118ad7ee4c079505",
+  "elapsed_seconds": 3.144
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Forecasting in Blockchain-Based Local Energy Markets",
+  "authors": [
+    "Michael Kostmann",
+    "Wolfgang K. Härdle"
+  ],
+  "journal": "Energies",
+  "year": 2019,
+  "volume": 12,
+  "article": 2718,
+  "doi": "10.3390/en12142718",
+  "article_license": "CC BY 4.0 as stated on last page",
+  "dataset_license": "The source article explicitly releases all data and code freely at QuantLet/BLEM; no separate repository LICENSE file was found. Cite article and download from original repository; do not mislabel dataset CC BY solely from article license.",
+  "data_description": "Discovergy supplied raw smart-meter observations, aggregated to 3-minute counter snapshots in released files, 2017 full year, 100 consumers and 100 prosumers. This experiment downloads lexicographically first three consumer records only.",
+  "geography": "German energy-market context and German provider; exact household geographic locations not established from inspected data section. Use Discovergy consumer meters without finer location claim.",
+  "interval_units": "Author FUN_getData.R converts diff(energy)*1e-10 to consumption in kWh. Use integer subtraction before conversion.",
+  "snapshots": "All three selected records match exact hourly UTC endpoints; start/end lag is zero, no nearest-neighbor matching or interpolation required. Endpoints CSV preserves both raw timestamps and raw cumulative counters."
+}

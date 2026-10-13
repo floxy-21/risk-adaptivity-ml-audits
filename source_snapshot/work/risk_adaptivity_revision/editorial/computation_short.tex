@@ -1,0 +1,28 @@
+\subsection{Computability and proof checks}
+The proofs establish the universal classification. Numerical checks address
+the implementation separately: 3,202 endpoint LPs and 28 finite games agree
+with the analytic constructions, with largest width discrepancy
+$3.34\times10^{-16}$ against a $2\times10^{-8}$ scale-aware tolerance.
+Six explicit polytopes check overlapping constraints, signed contrasts,
+boxes and coupled capacities. All 37 enumerated batches and 24 possible
+first queries agree with the corresponding LP guarantees. These are small
+formulation checks, not a general scalability claim.
+
+For coordinate queries under disjoint exact totals and unit costs, a
+supporting compact mean-width solver avoids enumerating batches.
+Its retained-endpoint flow representation and feasible dual completion
+and adaptive lower-bound proof are given in Online Resource~1, S5;
+S7 supplies the measured comparisons. General weighted-oracle
+and dynamic-program LP constructions are established
+\citep{kawase2024,martin1990}. The specialized representation and its
+hard-budget policy decomposition are the implementation contribution.
+
+All 28 archived compact settings solved. Twelve prescribed enumerated
+comparisons agreed within $1.27\times10^{-15}$ after normalization.
+Compact was faster in eight and used less whole-process peak memory in
+six; enumeration was faster in the four smallest one-block settings.
+The largest tested LP had 38,820 variables and ran in 9.933--10.012 seconds
+for 48 target coordinates. These are single-run measurements on a shared
+Intel Core i7-8565U host with one numerical thread. The complete timing,
+memory, residual, tie-profile and skip ledgers are in S1/S7.
+No large-scale optimizer for arbitrary convex sets or precision risk is implied.

@@ -1,0 +1,605 @@
+"""Independent replay of decision-directed single-reading acquisition.
+
+No production acquisition, evaluator, summary, or certificate imports. Values
+come from pinned source cases and a separate reference table. This checker
+does not retrain forecasts or establish correctness of the source ingestion.
+"""
+from pathlib import Path
+from datetime import datetime, timezone
+import argparse
+import hashlib
+import importlib.util
+import itertools
+import json
+import math
+import time
+
+import numpy as np
+import pandas as pd
+from scipy.special import betainc, erf
+from scipy.optimize import linprog
+
+
+def digest(path):
+    h = hashlib.sha256()
+    with Path(path).open('rb') as f:
+        for block in iter(lambda: f.read(8*1024*1024), b''):
+            h.update(block)
+    return h.hexdigest()
+
+
+def endpoints(a, b, observed, totals):
+    # Vertex construction and direct squared-loss evaluation independently
+    # implement both extrema; the production code uses a linear constant.
+    lower = np.nan_to_num(observed, nan=0.)
+    upper = lower.copy()
+    differences = b-a
+    for g, total in enumerate(totals):
+        block = range(6*g, 6*(g+1))
+        unknown = [i for i in block if not math.isfinite(observed[i])]
+        residue = float(total) - math.fsum(float(observed[i]) for i in block if math.isfinite(observed[i]))
+        assert residue >= -1e-9*max(1.,abs(total)), 'Infeasible residual total'
+        if unknown:
+            residue = max(0.,residue)
+            lower[min(unknown,key=lambda i:differences[i])] = residue
+            upper[max(unknown,key=lambda i:differences[i])] = residue
+        else:
+            assert abs(residue) <= 1e-9*max(1.,abs(total))
+    def contrast(y):
+        return math.fsum(float((x-v)**2-(z-v)**2) for x,z,v in zip(a,b,y))/len(a)
+    return contrast(lower), contrast(upper)
+
+
+def status(lo, hi):
+    threshold = 1e-10*max(1.,abs(lo),abs(hi))
+    if hi < -threshold:return 'a'
+    if lo > threshold:return 'b'
+    if hi-lo <= threshold:return 'numerical_tie'
+    return 'unresolved'
+
+
+def free_closure(observed, totals):
+    observed = observed.copy()
+    for g,total in enumerate(totals):
+        indices = list(range(6*g,6*(g+1)))
+        unknown = [i for i in indices if not math.isfinite(observed[i])]
+        residual = float(total)-math.fsum(float(observed[i]) for i in indices if math.isfinite(observed[i]))
+        assert residual >= -1e-10*max(1.,abs(total))
+        residual = max(0.,residual)
+        if len(unknown)==1:
+            observed[unknown[0]]=residual
+        elif residual==0:
+            observed[unknown]=0.
+    return observed
+
+
+def alpha_vector(mean, kappa):
+    """Fixed whole-block Ridge-centred Dirichlet shapes, not refitted states."""
+    shapes=np.zeros(len(mean))
+    for g in range(len(mean)//6):
+        indices=np.arange(6*g,6*(g+1))
+        nonnegative=np.maximum(mean[indices],0.)
+        floor=1e-8*max(float(np.mean(nonnegative)),1e-12)
+        positive=np.maximum(nonnegative,floor)
+        shapes[indices]=float(kappa)*6*positive/float(positive.sum())
+    assert np.isfinite(shapes).all() and np.all(shapes>0)
+    return shapes
+
+
+def affine_negative(at_zero, at_total, alpha, beta):
+    """Integrate the affine-negative subinterval of a scaled Beta marginal."""
+    slope=at_total-at_zero
+    if slope==0:return float(at_zero<0)
+    crossing=-at_zero/slope
+    if slope>0:
+        if crossing<=0:return 0.
+        if crossing>=1:return 1.
+        return float(betainc(alpha,beta,crossing))
+    if crossing<=0:return 1.
+    if crossing>=1:return 0.
+    # Reverse the beta shape to avoid cancellation of a near-unit CDF.
+    return float(betainc(beta,alpha,1-crossing))
+
+
+def candidates(a,b,observed,totals,shapes=None):
+    scores=[]
+    for g,total in enumerate(totals):
+        indices=list(range(6*g,6*(g+1)))
+        unknown=[i for i in indices if not math.isfinite(observed[i])]
+        energy=max(0.,float(total)-math.fsum(float(observed[i]) for i in indices if math.isfinite(observed[i])))
+        coeff=[float(b[i]-a[i]) for i in unknown]
+        if len(unknown)<2 or energy<=0 or max(coeff)==min(coeff):continue
+        for i in unknown:
+            zero=observed.copy();zero[i]=0.
+            full=observed.copy();full[i]=energy
+            lo0,hi0=endpoints(a,b,zero,totals)
+            lo1,hi1=endpoints(a,b,full,totals)
+            alpha=1. if shapes is None else float(shapes[i])
+            beta=len(unknown)-1 if shapes is None else math.fsum(float(shapes[j]) for j in unknown if j!=i)
+            probability=affine_negative(hi0,hi1,alpha,beta)+affine_negative(-lo0,-lo1,alpha,beta)
+            assert -1e-10<=probability<=1+1e-10
+            scores.append({'index':i,'probability':max(0.,min(1.,probability)),
+                           'worst_width':max(hi0-lo0,hi1-lo1)})
+    return scores
+
+
+def policy_spec(name, manifest):
+    declared=manifest.get('policy_specs',{}).get(name)
+    if declared is not None:return declared
+    if name in ['decision_probability','uniform_decision']:return {'kind':'uniform_simplex'}
+    if name in ['exact_width_one','greedy_width_one','width_one']:return {'kind':'width'}
+    if name=='hara_one':return {'kind':'hara'}
+    if name=='uniform_one':return {'kind':'uniform'}
+    if name.startswith('ridge_dirichlet_'):
+        return {'kind':'ridge_dirichlet','kappa':float(name.removeprefix('ridge_dirichlet_'))}
+    if name in ['decision_guided','decision_probability_ml','ridge_dirichlet','ml_decision']:
+        return {'kind':'ridge_dirichlet','kappa':float(manifest['selected_kappa'])}
+    if name=='randomized_one':return {'kind':'randomized'}
+    if 'kappa_grid' in manifest and float(name) in manifest['kappa_grid']:
+        return {'kind':'ridge_dirichlet','kappa':float(name)}
+    raise ValueError('Unknown policy needs explicit manifest policy_specs: '+name)
+
+
+def hara_weights(a,b,mean,sd,observed,totals):
+    mu=np.asarray(mean).copy();sigma=np.full(len(mean),float(sd))
+    for g,total in enumerate(totals):
+        indices=list(range(6*g,6*(g+1)))
+        unknown=[i for i in indices if not math.isfinite(observed[i])]
+        if unknown:
+            residue=max(0.,float(total)-math.fsum(float(observed[i]) for i in indices if math.isfinite(observed[i])))
+            mu[unknown]+=(residue-float(mu[unknown].sum()))/len(unknown)
+            sigma[unknown]*=math.sqrt(1-1/len(unknown))
+    distance=np.abs(a+b-2*mu);scale=2*sigma
+    z=np.divide(distance,scale,out=np.zeros_like(scale),where=scale>0)
+    moment=np.where(scale>0,scale*np.sqrt(2/np.pi)*np.exp(-.5*z*z)+distance*erf(z/np.sqrt(2)),distance)
+    return np.abs(a-b)*moment
+
+
+def rng_for(salt,case_id,policy,step):
+    value='|'.join(map(str,[salt,case_id,policy,step]))
+    return np.random.default_rng(int.from_bytes(hashlib.sha256(value.encode()).digest()[:8],'little'))
+
+
+def verify_selection(name,spec,chosen,reported_probability,a,b,observed,totals,mean,sd,case_id,step,manifest,reported_scores=None):
+    shapes=alpha_vector(mean,spec['kappa']) if spec['kind']=='ridge_dirichlet' else None
+    scores=candidates(a,b,observed,totals,shapes)
+    indexed={s['index']:s for s in scores}
+    assert chosen in indexed, 'Selected ineligible coordinate'
+    selected=indexed[chosen]
+    if reported_scores is not None:
+        logged={int(s['index']):s for s in reported_scores}
+        assert set(logged)==set(indexed), 'Candidate score eligibility mismatch'
+        for index,value in indexed.items():
+            assert abs(value['probability']-logged[index]['certificate_probability'])<=3e-9, 'Candidate probability mismatch'
+            assert abs(value['worst_width']-logged[index]['worst_remaining_width'])<=3e-9, 'Candidate worst-width mismatch'
+            if shapes is not None:
+                g=index//6
+                remainder=[j for j in range(g*6,(g+1)*6) if not math.isfinite(observed[j]) and j!=index]
+                assert abs(logged[index]['alpha']-shapes[index])<=1e-10, 'Alpha was not preserved'
+                assert abs(logged[index]['beta']-math.fsum(float(shapes[j]) for j in remainder))<=1e-10, 'Conditional beta shape mismatch'
+    probability_error=0.
+    if spec['kind'] in ['uniform_simplex','ridge_dirichlet']:
+        best=max(s['probability'] for s in scores)
+        assert selected['probability']>=best-3e-9, 'Nonoptimal one-step certificate probability'
+        if reported_probability is not None:
+            probability_error=abs(selected['probability']-reported_probability)
+            assert probability_error<=3e-9, 'Reported acquisition probability mismatch'
+        # Exact floating-point ties can round differently across independent
+        # endpoint formulae. Enforce the secondary criterion on scores whose
+        # uncertainty envelopes separate them from the primary competitors.
+        certain_ties=[s for s in scores if s['probability']==selected['probability']]
+        if certain_ties:
+            best_width=min(s['worst_width'] for s in certain_ties)
+            assert selected['worst_width']<=best_width+3e-9, 'Secondary worst-width criterion mismatch'
+    elif spec['kind']=='width':
+        best=min(s['worst_width'] for s in scores)
+        assert selected['worst_width']<=best+3e-9, 'Nonoptimal one-reading worst width'
+    elif spec['kind'] in ['hara','uniform']:
+        eligible=sorted(indexed)
+        weights=hara_weights(a,b,mean,sd,observed,totals)[eligible] if spec['kind']=='hara' else np.ones(len(eligible))
+        if weights.max()==0:weights=np.ones(len(eligible))
+        probabilities=(weights/weights.max());probabilities/=probabilities.sum()
+        salt=manifest.get('rng_salt','decision-prototype')
+        expected=int(rng_for(salt,case_id,name,step).choice(eligible,p=probabilities))
+        assert chosen==expected, 'Seeded proposal draw mismatch'
+    elif spec['kind']=='randomized':
+        pass # Finite-game and moment-feasibility check below.
+    else:
+        raise ValueError('Unsupported policy kind')
+    return probability_error,len(scores)
+
+
+def verify_randomized(a,b,observed,totals,chosen,diagnostics):
+    """Independent finite one-query game, secondary LP, and mixture support.
+
+The saved diagnostics do not retain flow-edge sampler choices. This checks
+that the query can have positive mass in a mixture with the saved moment
+coefficients, not that the compact sampler's exact random draw was replayed.
+"""
+    c=2*(b-a)/len(a);blocks=[]
+    for g,total in enumerate(totals):
+        block=list(range(g*6,(g+1)*6))
+        unknown=[i for i in block if not math.isfinite(observed[i])]
+        energy=max(0.,float(total)-math.fsum(float(observed[i]) for i in block if math.isfinite(observed[i])))
+        if len(unknown)>1 and energy>0 and np.ptp(c[unknown])>0:blocks.append((unknown,energy))
+    indices=[i for ids,e in blocks for i in ids];position={i:j for j,i in enumerate(indices)}
+    assert chosen in position
+    coeff=np.zeros((len(indices),len(indices)))
+    average=np.zeros(len(indices))
+    initial=0.
+    for ids,energy in blocks:
+        initial+=energy*float(np.ptp(c[ids]))
+        for i in ids:average[position[i]]=energy/len(ids)
+        for q in indices:
+            remaining=[i for i in ids if i!=q]
+            width=float(np.ptp(c[remaining])) if len(remaining)>1 else 0.
+            for i in remaining:coeff[position[i],position[q]]=width
+    vertices=[]
+    for assignment in itertools.product(*(ids for ids,e in blocks)):
+        vertex=np.zeros(len(indices))
+        for i,(ids,energy) in zip(assignment,blocks):vertex[position[i]]=energy
+        vertices.append(vertex)
+    game=np.asarray(vertices)@coeff/initial
+    obj=np.r_[np.zeros(len(indices)),1.]
+    primal=linprog(obj,A_ub=np.c_[game,-np.ones(len(game))],b_ub=np.zeros(len(game)),
+                   A_eq=[np.r_[np.ones(len(indices)),0.]],b_eq=[1.],bounds=[(0,None)]*(len(indices)+1),method='highs')
+    assert primal.success,'Finite singleton randomized primary LP failure'
+    expected=average@coeff/initial
+    secondary=linprog(expected,A_ub=game,b_ub=np.full(len(game),primal.fun+1e-9),
+                      A_eq=[np.ones(len(indices))],b_eq=[1.],bounds=[(0,None)]*len(indices),method='highs')
+    assert secondary.success,'Finite singleton secondary LP failure'
+    saved=np.zeros(len(indices));seen=set()
+    for group in diagnostics['expected_width_coefficients']:
+        for i,v in zip(group['indices'],group['coefficients']):
+            assert i in position and i not in seen
+            seen.add(i);saved[position[i]]=v
+    assert seen==set(indices)
+    reported_worst=sum(e*max(saved[position[i]] for i in ids) for ids,e in blocks)
+    reported_average=float(average@saved)
+    assert abs(reported_worst-diagnostics['robust_expected_width'])<=3e-9*max(1.,initial)
+    assert abs(reported_average-diagnostics['barycenter_expected_width'])<=3e-9*max(1.,initial)
+    assert abs(reported_worst/initial-primal.fun)<=3e-7,'Randomized primary optimum mismatch'
+    assert abs(reported_average/initial-secondary.fun)<=3e-7,'Randomized secondary optimum mismatch'
+    row_scale=np.maximum(np.max(np.abs(coeff),axis=1),1e-12)
+    objective=np.zeros(len(indices));objective[position[chosen]]=-1.
+    support=linprog(objective,A_eq=np.vstack([coeff/row_scale[:,None],np.ones(len(indices))]),
+                    b_eq=np.r_[saved/row_scale,1.],bounds=[(0,None)]*len(indices),method='highs')
+    assert support.success,'Reported expected-width coefficients have no mixture representation'
+    assert support.x[position[chosen]]>1e-12,'Sampled query absent from every compatible mixture'
+    assert np.max(np.abs(coeff@support.x-saved))<=3e-7*max(1.,float(np.max(np.abs(coeff))))
+    return {'primary_error':abs(reported_worst/initial-primal.fun),
+            'secondary_error':abs(reported_average/initial-secondary.fun)}
+
+
+def summary_table(frame):
+    records=[]
+    for subgroup,d in [('all',frame),('learned',frame[frame.learned_pair])]:
+        for policy,g in d.groupby('policy'):
+            conditional=g[~g.initial_status.isin(['a','b'])]
+            values=[]
+            for budget in range(7):
+                byhouse=conditional.assign(cert=conditional.certification_cost.notna()&(conditional.certification_cost<=budget)).groupby('household_id').cert.mean()
+                values.append(float(byhouse.mean()))
+            records.append({'subgroup':subgroup,'policy':policy,'initially_unresolved':len(conditional),
+                'households':conditional.household_id.nunique(),
+                'macro_mean_requests':float(conditional.groupby('household_id').paid_requests.mean().mean()),
+                'all_case_macro_mean_requests':float(g.groupby('household_id').paid_requests.mean().mean()),
+                'B80':next((b for b,v in enumerate(values) if v>=.8),None),
+                'coverage':values,'unresolved_at_stop':int((conditional.final_status=='unresolved').sum())})
+    return records
+
+
+def bootstrap(frame,policy,comparators,seed=8241,count=2000):
+    conditional=frame[~frame.initial_status.isin(['a','b'])]
+    pivot=conditional.groupby(['household_id','policy']).paid_requests.mean().unstack()
+    assert set([policy,*comparators])<=set(pivot.columns)
+    assert pivot[[policy,*comparators]].notna().all().all()
+    matrix=pivot[[policy,*comparators]].to_numpy()
+    means=matrix.mean(axis=0)
+    best=min(range(1,len(means)),key=lambda i:(means[i],comparators[i-1]))
+    relative=1-means[0]/means[best]
+    draws=np.random.default_rng(seed).integers(0,len(matrix),(count,len(matrix)))
+    replicated=matrix[draws].mean(axis=1)
+    # Re-select the stronger comparator within each paired resample. This
+    # estimates the predeclared contrast against the best allowed baseline.
+    delta=1-replicated[:,0]/replicated[:,1:].min(axis=1)
+    return {'policy':policy,'comparators':comparators,'best_observed_comparator':comparators[best-1],
+            'relative_mean_request_reduction':float(relative),'seed':seed,'resamples':count,
+            'households':len(matrix),'descriptive_percentile_95_interval':np.quantile(delta,[.025,.975]).tolist(),
+            'resampling_rule':'Paired whole-household means; best comparator reselected in each resample.',
+            '_samples':delta}
+
+
+def load_forecast_context(directory,period,root):
+    """Reuse an independently authored historical chronology checker only."""
+    path=Path(__file__).with_name('verify_forecast_context.py')
+    spec=importlib.util.spec_from_file_location('_independent_chronology',path)
+    helper=importlib.util.module_from_spec(spec);spec.loader.exec_module(helper)
+    archive=pd.read_csv(directory/'forecast_archive.csv',dtype={'household_id':str})
+    for field in ['target_timestamp_utc','issue_time_utc','persistence_source_time_utc','latest_feature_source_end_utc']:
+        archive[field]=pd.to_datetime(archive[field],utc=True)
+    inventory=pd.read_csv(directory/'candidate_days.csv',dtype={'household_id':str})
+    inventory['day_utc']=pd.to_datetime(inventory.day_utc,utc=True)
+    for field in ['eligible','reference_complete','feature_complete','model_training_available_at_issue','all_forecasts_complete']:
+        inventory[field]=helper.bool_column(inventory[field])
+    feature_checks=helper.check_features(directory,archive,inventory)
+    eligible=inventory[(inventory.period==period)&inventory.eligible]
+    expected=set()
+    for item in eligible.itertuples():
+        for seed in [1103,2207,3301]:
+            for ia,ib in itertools.combinations(range(4),2):
+                expected.add(f'{item.household_id}|{item.day_utc.date()}|{seed}|{ia}-{ib}')
+    surrogate=json.loads((directory/'surrogate_parameters.json').read_text())
+    return {'archive':{h:g.set_index('target_timestamp_utc') for h,g in archive.groupby('household_id')},
+            'surrogate':surrogate.get('households',surrogate),'expected_cases':expected,'features_checked':feature_checks,
+            'chronology_checker_sha256':digest(path),'day_cache':{}}
+
+
+def verify_source_case(case,truth,context,manifest):
+    house=case['household_id'];day=pd.Timestamp(case['day_utc'])
+    key=(house,str(day));models=['daily','ridge','hist_gradient_boosting','mlp']
+    if key not in context['day_cache']:
+        archive=context['archive'][house]
+        timestamps=pd.date_range(day,periods=24,freq='h')
+        rows=archive.loc[timestamps]
+        predictions=rows[models].to_numpy(float).T
+        assert np.isfinite(predictions).all()
+        assert (rows.issue_time_utc<=day+pd.Timedelta(days=1)).all()
+        future=archive[archive.persistence_source_time_utc.isin(timestamps)&archive.daily.notna()]
+        cutoff=day+pd.Timedelta(days=1)
+        assert not len(future[future.issue_time_utc<=cutoff]), 'Early archive target copy ignored'
+        later=future[future.issue_time_utc<=cutoff+pd.Timedelta(hours=12)].sort_values('persistence_source_time_utc')
+        assert len(later)==24 and np.array_equal(later.daily.to_numpy(float),truth)
+        totals=np.asarray([math.fsum(truth[g*6:(g+1)*6]) for g in range(4)])
+        context['day_cache'][key]=(predictions,totals,later.daily.to_numpy(float))
+    predictions,totals,late=context['day_cache'][key]
+    ia,ib=map(int,case['case_id'].split('|')[-1].split('-'))
+    assert case['pair']==f'{models[ia]} vs {models[ib]}' and case['learned_pair']==(ia!=0)
+    assert np.array_equal(np.asarray(case['a']),predictions[ia])
+    assert np.array_equal(np.asarray(case['b']),predictions[ib])
+    assert np.array_equal(np.asarray(case['surrogate_mean']),predictions[1])
+    assert np.array_equal(np.asarray(case['totals']),totals)
+    sd=context['surrogate'][house]['sd_kwh']
+    assert case['surrogate_sd']==sd
+    seed=int(case['case_id'].split('|')[2]);assert seed==case['seed']
+    token='|'.join(map(str,['mask',house,str(day),seed]))
+    stream=np.random.default_rng(int.from_bytes(hashlib.sha256(token.encode()).digest()[:8],'little'))
+    start=int(stream.integers(0,19));mask=list(range(start,start+6))
+    assert case['mask']==mask
+    visible=truth.copy();visible[mask]=np.nan;visible=free_closure(visible,totals)
+    assert np.allclose(np.asarray(case['initial_observed'],float),visible,rtol=0,atol=1e-12,equal_nan=True)
+    if 'initial_alpha' in case:
+        assert np.allclose(case['initial_alpha'],alpha_vector(predictions[1],manifest['selected_kappa']),rtol=0,atol=1e-10)
+    return endpoints(predictions[ia],predictions[ib],late,totals)
+
+
+def main():
+    p=argparse.ArgumentParser()
+    p.add_argument('--run-dir',type=Path,required=True)
+    p.add_argument('--source-cases',type=Path,required=True)
+    p.add_argument('--reference',type=Path,required=True)
+    p.add_argument('--reference-period',default='validation')
+    p.add_argument('--forecast-dir',type=Path)
+    p.add_argument('--output',type=Path)
+    p.add_argument('--primary-policy')
+    p.add_argument('--oracle-dir',type=Path)
+    p.add_argument('--comparators',nargs='+',default=['exact_width_one','hara_one'])
+    args=p.parse_args();started=time.perf_counter()
+    out=args.output or args.run_dir/'independent_verification.json'
+    manifest_path=args.run_dir/'pre_run_manifest.json'
+    manifest=json.loads(manifest_path.read_text())
+    root=Path(__file__).resolve().parents[3]
+    if 'protocol_sha256' in manifest:
+        protocol_path=args.run_dir.parent/'confirmation_protocol.json'
+        assert digest(protocol_path)==manifest['protocol_sha256']
+        protocol=json.loads(protocol_path.read_text())
+        manifest.setdefault('selected_kappa',protocol['selected_kappa'])
+        manifest.setdefault('policies',protocol['policies'])
+        manifest.setdefault('require_all_source_cases',True)
+        manifest.setdefault('rng_salt','decision-confirmation')
+    else:protocol={}
+    hashes={**manifest.get('input_hashes',{}),**manifest.get('fit_inputs',{}),**manifest.get('policy_inputs',{}),**protocol.get('input_hashes',{})}
+    for relative,expected in hashes.items():
+        candidate=Path(relative)
+        if not candidate.is_absolute():candidate=root/candidate
+        assert digest(candidate)==expected, 'Manifest input hash mismatch: '+relative
+    pinned_paths=[args.source_cases,args.reference,manifest_path,args.run_dir/'trajectories.jsonl',args.run_dir/'cases.csv',Path(__file__)]
+    pins={str(path.resolve()):digest(path) for path in pinned_paths}
+    forecast_context=load_forecast_context(args.forecast_dir,args.reference_period,root) if args.forecast_dir else None
+    ref=pd.read_csv(args.reference,dtype={'household_id':str})
+    ref=ref[ref.period==args.reference_period].copy()
+    ref['day']=ref.timestamp_utc.str[:10]
+    references={(h,d):g.sort_values('timestamp_utc').energy_kwh.to_numpy(float) for (h,d),g in ref.groupby(['household_id','day']) if len(g)==24}
+    trace=(args.run_dir/'trajectories.jsonl').open()
+    def advance():
+        line=trace.readline()
+        return json.loads(line) if line else None
+    pending=advance()
+    requested=set();source_seen=set();rows=[]
+    stages=candidate_count=randomized_checks=0;max_probability_error=max_bound_error=0.
+    max_random_primary=max_random_secondary=0.
+    with args.source_cases.open() as source:
+        for line in source:
+            case=json.loads(line);key=case['case_id']
+            assert key not in source_seen;source_seen.add(key)
+            if pending is None or key!=pending['case_id']:continue
+            assert key not in requested
+            requested.add(key)
+            saved=pending
+            declared_policies=manifest.get('policies') or ([str(float(x)) for x in manifest['kappa_grid']] if 'kappa_grid' in manifest else None)
+            if declared_policies:assert set(saved['policies'])==set(declared_policies), 'Policy coverage mismatch'
+            a,b,initial,totals,mean=(np.asarray(case[k],float) for k in ['a','b','initial_observed','totals','surrogate_mean'])
+            truth=references[(case['household_id'],case['day_utc'][:10])]
+            assert len(truth)==24 and np.isfinite(truth).all()
+            if forecast_context:
+                late=verify_source_case(case,truth,forecast_context,manifest)
+                assert max(abs(x-y) for x,y in zip(late,saved['late_bounds']))<=3e-9
+                assert status(*late)==saved['late_status']
+            known=np.isfinite(initial)
+            assert np.max(np.abs(initial[known]-truth[known]),initial=0.)<=1e-9
+            true_contrast=float(np.mean((a-truth)**2-(b-truth)**2))
+            for name,run in saved['policies'].items():
+                spec=policy_spec(name,manifest)
+                if 'initial_alpha' in run:
+                    assert spec['kind']=='ridge_dirichlet'
+                    assert np.max(np.abs(np.asarray(run['initial_alpha'])-alpha_vector(mean,spec['kappa'])))<=1e-10
+                observed=free_closure(initial,totals)
+                low,high=endpoints(a,b,observed,totals);current=status(low,high)
+                assert current==run['initial_status']
+                assert low-3e-9<=true_contrast<=high+3e-9
+                assert current!='a' or true_contrast<0
+                assert current!='b' or true_contrast>0
+                initial_status=current;paid=[]
+                for step,record in enumerate(run.get('trace',run.get('stages',[]))):
+                    assert current=='unresolved' and len(paid)<6, 'Queries after stop or cap'
+                    q=int(record['query']);value=float(record['value'])
+                    assert q not in paid and not math.isfinite(observed[q])
+                    assert abs(value-float(truth[q]))<=1e-12*max(1.,abs(value)), 'Returned target mismatch'
+                    chosen_detail=record.get('chosen') or {}
+                    probability=record.get('chosen_probability',chosen_detail.get('certificate_probability'))
+                    error,n=verify_selection(name,spec,q,probability,a,b,observed,totals,mean,case['surrogate_sd'],key,step,manifest,record.get('scores'))
+                    if spec['kind']=='randomized':
+                        checked=verify_randomized(a,b,observed,totals,q,record['diagnostics'])
+                        randomized_checks+=1
+                        max_random_primary=max(max_random_primary,checked['primary_error'])
+                        max_random_secondary=max(max_random_secondary,checked['secondary_error'])
+                    max_probability_error=max(max_probability_error,error);candidate_count+=n
+                    before=(low,high)
+                    if 'before' in record:
+                        assert np.allclose(np.asarray(record['before'],float),observed,rtol=0,atol=1e-12,equal_nan=True), 'Before snapshot mismatch'
+                        assert max(abs(x-y) for x,y in zip(before,record['before_bounds']))<=3e-9
+                    observed[q]=value;paid.append(q);observed=free_closure(observed,totals)
+                    if 'after' in record:
+                        assert np.allclose(np.asarray(record['after'],float),observed,rtol=0,atol=1e-12,equal_nan=True), 'After snapshot mismatch'
+                        assert record['cost']==len(paid), 'Cumulative query count mismatch'
+                    low,high=endpoints(a,b,observed,totals);current=status(low,high)
+                    bound_error=max(abs(x-y) for x,y in zip([low,high],record['bounds']))
+                    assert bound_error<=3e-9*max(1.,abs(low),abs(high)), 'Trace bound mismatch'
+                    max_bound_error=max(max_bound_error,bound_error)
+                    assert low>=before[0]-3e-9 and high<=before[1]+3e-9, 'Information widens interval'
+                    assert low-3e-9<=true_contrast<=high+3e-9
+                    assert record['status']==current
+                    assert current!='a' or true_contrast<0
+                    assert current!='b' or true_contrast>0
+                    stages+=1
+                assert current==run['final_status'] and len(paid)==run['paid_requests']
+                certificate=len(paid) if current in ['a','b'] else None
+                assert certificate==run['certification_cost']
+                assert current!='unresolved' or len(paid)==6, 'Unexplained early failure'
+                rows.append({k:case[k] for k in ['case_id','household_id','day_utc','pair','learned_pair']}|
+                            {'policy':name,'initial_status':initial_status,'final_status':current,'paid_requests':len(paid),'certification_cost':certificate})
+            pending=advance()
+            if len(requested)%5000==0:print(json.dumps({'checked_cases':len(requested),'seconds':time.perf_counter()-started}),flush=True)
+    trace.close()
+    assert pending is None, 'Run contains a case absent from source or non-source ordering'
+    expected_all=manifest.get('pilot') is False or manifest.get('require_all_source_cases',False) or 'kappa_grid' in manifest
+    if expected_all:assert requested==source_seen, 'Missing source cases'
+    if forecast_context:assert requested==forecast_context['expected_cases'], 'Case grid differs from forecast eligibility inventory'
+    frame=pd.DataFrame(rows)
+    saved_frame=pd.read_csv(args.run_dir/'cases.csv')
+    if 'policy' not in saved_frame and 'kappa' in saved_frame:
+        saved_frame['policy']=saved_frame.kappa.map(lambda x:str(float(x)))
+    assert len(saved_frame)==len(frame)
+    merge=frame.merge(saved_frame,on=['case_id','policy'],suffixes=('_checked','_saved'),validate='one_to_one')
+    for column in ['household_id','day_utc','pair','learned_pair','initial_status','final_status','paid_requests','certification_cost']:
+        left,right=merge[column+'_checked'],merge[column+'_saved']
+        assert ((left==right)|(left.isna()&right.isna())).all(), 'Case summary mismatch: '+column
+    summaries=summary_table(frame)
+    existing_path=args.run_dir/'summary.json'
+    if existing_path.exists():
+        existing=json.loads(existing_path.read_text())
+        original={(r['subgroup'],r.get('policy',str(float(r['kappa'])) if 'kappa' in r else None)):r for r in existing.get('summaries',[]) if 'subgroup' in r}
+        for record in summaries:
+            reported=original.get((record['subgroup'],record['policy']))
+            if reported is None:continue
+            for field in ['initially_unresolved','households','B80','unresolved_at_stop']:
+                assert record[field]==reported[field], 'Reported summary mismatch: '+field
+            for field in ['macro_mean_requests','coverage']:
+                assert np.max(np.abs(np.asarray(record[field])-np.asarray(reported[field])))<=1e-12
+        if 'selected_kappa' in existing:
+            if 'kappa_grid' in manifest:
+                selected=min((r for r in summaries if r['subgroup']=='all'),key=lambda r:(r['macro_mean_requests'],float(r['policy'])))
+                assert float(selected['policy'])==existing['selected_kappa'], 'Concentration selection mismatch'
+        for reported in existing.get('summaries',[]):
+            if 'population' not in reported:continue
+            group=frame[frame.policy==reported['policy']]
+            if reported['population'] in ['initially_uncertified','learned_initially_uncertified']:
+                group=group[~group.initial_status.isin(['a','b'])]
+            if reported['population']=='learned_initially_uncertified':group=group[group.learned_pair]
+            assert len(group)==reported['cases'] and group.household_id.nunique()==reported['households']
+            assert abs(group.groupby('household_id').paid_requests.mean().mean()-reported['macro_mean_requests'])<=1e-12
+            curve=[]
+            for budget in range(7):
+                value=group.assign(cert=group.certification_cost.notna()&(group.certification_cost<=budget)).groupby('household_id').cert.mean().mean()
+                curve.append(float(value))
+            assert max(abs(x-y) for x,y in zip(curve,reported['coverage']))<=1e-12
+            assert next((i for i,v in enumerate(curve) if v>=.8),None)==reported['B80']
+            assert int((group.final_status=='unresolved').sum())==reported['unresolved']
+            assert int((group.final_status=='numerical_tie').sum())==reported['numerical_ties']
+    report={'status':'passed','created_utc':datetime.now(timezone.utc).isoformat(),
+        'scope':'Independent arithmetic, query objective/proposal, trace, stopping, case-summary and aggregate verification; no production policy/evaluator imports, no fresh fitting.',
+        'reference_period':args.reference_period,'base_cases':len(requested),'policy_cases':len(frame),
+        'households':frame.household_id.nunique(),'stages_checked':stages,'candidate_scores_checked':candidate_count,
+        'randomized_finite_games_checked':randomized_checks,'maximum_randomized_primary_error':max_random_primary,
+        'maximum_randomized_secondary_error':max_random_secondary,
+        'randomized_scope':'Independent primary/secondary finite LP and mixture-moment feasibility/support; exact compact sampler random draw not reconstructed.',
+        'maximum_bound_discrepancy':max_bound_error,'maximum_selected_probability_discrepancy':max_probability_error,
+        'summaries':summaries,'seconds':time.perf_counter()-started,
+        'inputs':pins}
+    if forecast_context:report['source_case_chronology']={k:v for k,v in forecast_context.items() if k in ['features_checked','chronology_checker_sha256']}
+    if args.primary_policy:
+        estimate=bootstrap(frame,args.primary_policy,args.comparators)
+        samples=estimate.pop('_samples')
+        report['primary_bootstrap']=estimate
+        if (args.run_dir/'bootstrap.csv').exists():
+            logged=pd.read_csv(args.run_dir/'bootstrap.csv').relative_reduction.to_numpy()
+            assert np.max(np.abs(samples-logged))<=1e-12, 'Bootstrap replicate mismatch'
+        if existing_path.exists() and 'relative_mean_reduction' in existing:
+            assert abs(estimate['relative_mean_request_reduction']-existing['relative_mean_reduction'])<=1e-12
+            assert np.max(np.abs(np.asarray(estimate['descriptive_percentile_95_interval'])-np.asarray(existing['descriptive_consumer_bootstrap_interval'])))<=1e-12
+            assert estimate['best_observed_comparator']==existing['best_primary_baseline']
+            final={r['policy']:r['coverage'][-1] for r in summaries if r['subgroup']=='all'}
+            meets=(estimate['relative_mean_request_reduction']>=.15 and estimate['descriptive_percentile_95_interval'][0]>0 and final[args.primary_policy]>=max(final[p] for p in args.comparators))
+            if existing['criterion_met'] is not None:
+                assert bool(meets)==existing['criterion_met']
+            report['primary_bootstrap']['interpretation']='Secondary relative-baseline comparison; not the new oracle-efficiency primary criterion.'
+    if args.oracle_dir:
+        oracle=json.loads((args.oracle_dir/'summary.json').read_text())
+        assert oracle['status']=='passed'
+        for path,expected in oracle['inputs'].items():assert digest(path)==expected,'Oracle input hash mismatch'
+        for relative,expected in oracle['outputs'].items():assert digest(args.oracle_dir/relative)==expected,'Oracle output hash mismatch'
+        oracle_cases=pd.read_csv(args.oracle_dir/'cases.csv')
+        assert set(oracle_cases.case_id)==set(frame.case_id)
+        combined=frame.merge(oracle_cases[['case_id','oracle_minimum_requests']],on='case_id',validate='many_to_one')
+        strict=combined.certification_cost.notna()
+        assert combined.loc[strict,'oracle_minimum_requests'].notna().all()
+        assert (combined.loc[strict,'oracle_minimum_requests']<=combined.loc[strict,'certification_cost']).all()
+        for entry in oracle['summaries']:
+            selected=combined[combined.policy==entry['policy']]
+            if entry['population']!='all':selected=selected[~selected.initial_status.isin(['a','b'])]
+            if entry['population']=='learned_initially_uncertified':selected=selected[selected.learned_pair]
+            finite=selected[selected.oracle_minimum_requests.notna()]
+            means=finite.groupby('household_id')[['paid_requests','oracle_minimum_requests']].mean()
+            ratio=float(means.paid_requests.mean()/means.oracle_minimum_requests.mean()) if means.oracle_minimum_requests.mean()>0 else None
+            assert len(selected)==entry['all_cases'] and len(finite)==entry['strictly_certifiable_cases']
+            assert (ratio is None and entry['ratio_of_macro_means'] is None) or abs(ratio-entry['ratio_of_macro_means'])<=1e-12
+            if ratio is not None:
+                values=means.to_numpy();draw=np.random.default_rng(8241).integers(0,len(values),(2000,len(values)))
+                averages=values[draw].mean(axis=1);ratios=averages[:,0]/averages[:,1]
+                assert np.max(np.abs(np.quantile(ratios,[.025,.975])-entry['descriptive_household_bootstrap_ratio_95']))<=1e-12
+        primary_policy=args.primary_policy or 'ml_decision'
+        primary=next(r for r in oracle['summaries'] if r['population']=='initially_uncertified' and r['policy']==primary_policy)
+        primary_pass=bool(primary['ratio_of_macro_means'] is not None and primary['ratio_of_macro_means']<=1.10 and primary['all_case_strict_coverage_at_cap']==1. and primary['no_finite_strict_oracle_cases']==0)
+        report['oracle_efficiency_primary']={'policy':primary_policy,'population':'initially_uncertified',
+            'ratio_of_macro_means':primary['ratio_of_macro_means'],
+            'descriptive_household_bootstrap_ratio_95':primary['descriptive_household_bootstrap_ratio_95'],
+            'criterion_met':primary_pass,'oracle_summary_sha256':digest(args.oracle_dir/'summary.json'),
+            'scope':'Finite-panel ratio to exhaustive hindsight certificate lower bound; all policy ratios retained. Does not establish comparative superiority or an acceptance probability.'}
+        report['inputs'][str((args.oracle_dir/'summary.json').resolve())]=digest(args.oracle_dir/'summary.json')
+        report['inputs'][str((args.oracle_dir/'cases.csv').resolve())]=digest(args.oracle_dir/'cases.csv')
+    for path,expected in pins.items():assert digest(path)==expected,'Checker input changed during verification'
+    out.write_text(json.dumps(report,indent=2)+'\n')
+    print(json.dumps({k:v for k,v in report.items() if k not in ['summaries','inputs']},indent=2))
+
+
+if __name__=='__main__':main()

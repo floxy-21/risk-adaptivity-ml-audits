@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "case_levels": 9,
+  "unique_cases": 7,
+  "legal_first_queries_checked": 45,
+  "endpoint_pairs_checked": 180,
+  "by_delta": {
+    "1/1000": {
+      "case_levels": 2,
+      "minimum_certified_lower": 0.5021666666666664,
+      "maximum_certified_lower": 0.503
+    },
+    "1/100": {
+      "case_levels": 7,
+      "minimum_certified_lower": 0.5000059060297954,
+      "maximum_certified_lower": 0.53
+    }
+  },
+  "minimum_strict_margin_exact": "231625733590097946267/39218517618895276000000000",
+  "minimum_strict_margin": 5.906029795437803e-06,
+  "verification": "Exact Fraction feasibility and transcript checks; no LP or numerical tolerance",
+  "scope": "Deterministic adaptive policies with at most two distinct permitted counter queries; fixed hidden-error model only",
+  "not_established": [
+    "randomized adaptive impossibility",
+    "physical calibration of error bounds"
+  ],
+  "certificate_sha256": "098d646b8b3263802d49270afef3ebac035423c60d53051f8904327f44a00d90",
+  "source_sha256": "c724d680a18414ac5a2119869ff1f07fe05efc22544a7863e0437ea36f762dca",
+  "input_sha256": {
+    "case_ledger_sha256": "b737483dc76c0c8dcdc2c75be612c9230ac6cb99cf8e735cca7a130aeb0c06f5",
+    "geometry_sha256": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0",
+    "diagnostic_protocol_sha256": "fe3a70a988b1ba6ed0571690e2d4538903345e49140aebb8312edc90783cf40c"
+  },
+  "seconds": 0.5409593000076711
+}

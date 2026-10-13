@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-11T00:50:29.023267+00:00",
+  "case_count": 19260,
+  "positive_cases": 899,
+  "policy_sha256": "80f5210e70c7f4d8d6516f635ea8f227bf728996ecc377b4eb6cde04fac7c6a5",
+  "selection_input_sha256": "42d092759fc60bdb6b607d72bf901ad20ace5abc96f7bdcb6deb4a9708f8fec7",
+  "protocol_sha256": "9b8352fc4a5dcdeb5bae50055e056fbd587f954b163c1d1d38ae768ebfde2fea",
+  "script_sha256": "b71309a04234fef410dfbd43058cfddfedb6df68649095bb854133704156d50a",
+  "max_compact_discrepancy_normalized": 6.937006869846107e-14,
+  "seconds": 22.647948099998757,
+  "reference_target_archive_opened_by_selection": false,
+  "secondary_rule": "uniform-within-block barycenter width on primary minimax face; audit_ties.refine(reference)"
+}

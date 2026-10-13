@@ -1,0 +1,1984 @@
+% ONLINE RESOURCE 1: current extended methods and historical controls.
+% LaTeX content fragment, not a replacement manuscript.
+% Cross-references retain their semantic labels from the main source.
+\section{S1. Complete compact scaling grid}
+\begin{table}[htbp]
+\centering\small
+\caption{Frozen compact-policy scaling audit. Each row contains two coefficient/total profiles; all runs succeeded. Time and peak-memory ranges span those profiles. Vars. is the LP variable count; Finite is the number of prescribed exhaustive comparisons completed.}
+\label{tab:compact-scaling-audit}
+\begin{tabular}{rrrrrrr}
+\hline
+$G$ & $m$ & $B$ & Vars. & Method time (s) & Peak (MiB) & Finite \\
+\hline
+1 & 6 & 1 & 14 & 0.010--0.015 & 71.4--71.7 & 2/2 \\
+1 & 6 & 3 & 31 & 0.011--0.019 & 71.5--71.5 & 2/2 \\
+1 & 12 & 3 & 91 & 0.012--0.014 & 71.8--71.8 & 2/2 \\
+1 & 12 & 6 & 197 & 0.014--0.023 & 72.0--72.1 & 2/2 \\
+2 & 6 & 3 & 142 & 0.013--0.024 & 71.9--71.9 & 2/2 \\
+2 & 6 & 6 & 164 & 0.020--0.022 & 72.1--72.1 & 2/2 \\
+2 & 12 & 6 & 1,346 & 0.091--0.127 & 75.7--76.1 & 0/2 \\
+2 & 12 & 12 & 2,974 & 0.246--0.594 & 80.2--80.4 & 0/2 \\
+4 & 6 & 6 & 946 & 0.042--0.053 & 74.2--74.2 & 0/2 \\
+4 & 6 & 12 & 1,162 & 0.047--0.069 & 74.8--74.8 & 0/2 \\
+4 & 12 & 12 & 22,538 & 3.356--4.056 & 126.3--126.8 & 0/2 \\
+4 & 12 & 24 & 38,820 & 9.933--10.012 & 160.5--168.6 & 0/2 \\
+1 & 24 & 12 & 1,366 & 0.091--0.105 & 75.6--75.7 & 0/2 \\
+1 & 48 & 24 & 10,076 & 0.606--1.631 & 97.3--97.3 & 0/2 \\
+\hline
+\end{tabular}
+\end{table}
+\FloatBarrier
+\section{S2. Historical certification, gates and controls}
+\subsection{Archive-consistent certification of saved ML forecasts}
+\label{sec:historical-application}
+The historical study uses 30 Portugal consumption series, one French
+household series and three recorded cumulative-counter series. The four
+forecasters are persistence, ridge regression, histogram gradient boosting
+and a multilayer perceptron. Forecasts, chronological training periods,
+eligibility filters and masks are reused unchanged. Appendix~\ref{app:historical-design}
+specifies the protocol, training history and information boundary.
+
+The archive-aware evaluator receives all saved test forecast rows within
+the declared period. In particular, a saved persistence forecast
+$p_{t+24}^{\rm pers}=y_t$ reveals its earlier target directly. These copies
+and exact aggregate deductions are applied before all methods, using
+source-row traces; hidden reference targets only check the recovered
+values. No inverse reconstruction from other fitted predictor mappings is
+assumed. Later records within the evaluation period are included. The
+whole-period feasible set is the product of the remaining daily blocks
+after this closure, and equal-length daily endpoints may therefore be
+averaged. This is a retrospective benchmark archive rule, not a measured
+production arrival deadline.
+
+The complete Portugal archive-aware exact-total grid contains 9,720
+repeated model-pair comparisons across gap lengths, mechanisms, seeds and
+aggregate resolutions. Direct paired bounds certify 7,836 (80.62\%),
+whereas independently bounded individual losses certify 2,513 (25.85\%).
+The additional 5,323 certificates are a 54.76-percentage-point difference
+under identical information and zero additional queries. In the six-hour-gap
+illustrative cell the counts are 478 of 540 versus 64 of 540. The broader
+grid, rather than that cell, supplies the abstract's empirical result.
+
+Independent subtraction of sharp individual-loss bounds encloses the
+paired interval but may combine extremizers that cannot be the same
+record. For example, predictions $(1,1)$ and $(2,2)$ under
+$y_1+y_2=2$, $y\geq0$, have individual MSE ranges $[0,1]$ and $[1,2]$;
+separate subtraction gives $[-2,0]$, whereas the paired contrast is exactly
+$-1$. For exact totals, each individual-loss minimum is a simplex
+projection and each maximum is attained at a simplex vertex. For uncertain
+totals, the remaining block instead satisfies
+$x\geq0$ and $L\leq\sum_i x_i\leq U$, after subtracting observed contributions.
+The minimum is the projection of its prediction vector onto this band.
+If the nonnegative part of that vector has a sum in $[L,U]$, it is already
+optimal and the minimizing total may be interior. Otherwise the projection
+uses the lower or upper boundary simplex, respectively. The maximum of
+the convex individual squared loss is attained at a vertex of the compact
+band polytope.
+
+The complete 34-series scenario grid contains 66,096 repeated comparisons:
+10,404 are certified by both methods, 23,906 only by pairing and 31,786
+by neither. None is certified only by separate-loss bounds. All 324
+scenario cells, including unresolved cases, appear in the supplement;
+Appendix~\ref{app:certificate-grid} displays their 18 cohort/access/tolerance
+aggregates. The checker verifies the saved sign
+rule, paired-interval nesting and reference enclosure. The redistributable
+endpoint replay covers 60,264 Portugal/household comparisons; the 5,832
+counter comparisons use local original endpoints and require the documented
+raw-source regeneration for an external replay. These are different
+reproduction levels, not interchangeable counts of independent evidence.
+
+The audit adds all-completions support to a point evaluation. The historical
+donor makes zero observed
+whole-period errors at full coverage on the 9,720 Portugal, 324 household
+and 972 counter exact-total comparisons. Those empirical successes do not
+give it an all-completions guarantee. Our certificate can accompany a point
+evaluation by identifying which rankings its declared information actually
+forces; this study does not measure consequential downstream decisions
+changed by that certificate.
+
+\subsection{A certificate gate for proposed model comparisons}
+\label{sec:practical_gate}
+An imputation rule can propose a model ranking before its robustness to
+missing verification targets has been established. We implement a separate
+gate that receives that proposed direction and the two certificate endpoints,
+and returns \emph{allow}, \emph{hold}, or \emph{contradict}. A proposal is allowed
+only when the entire interval supports its direction, using the existing
+scaled $10^{-9}$ sign margin. The gate accepts no hidden reference targets.
+Its output supports retrospective model-comparison decisions.
+
+On the original Portugal archive-aware exact-total grid, paired certificates
+allow 7,836 of 9,720 historical-donor proposals, compared with 2,513 for
+separate-loss certificates under identical information and zero additional
+queries. The number held falls from 7,207 to 1,884, a derived reduction of
+73.86\% in unresolved certificates. All 1,884 held paired comparisons have a
+sharp endpoint supporting the opposite ranking beyond the numerical decision
+margin. Consequently, the declared information admits an opposing completion
+even though the donor's realized ranking is correct in every case. Neither
+certificate method contradicts a donor proposal in this grid. This result
+quantifies the distinction between an observed correct imputation and an
+all-completions certificate. Separate-loss intervals are the matched
+certificate comparator, not the strongest point-imputation predictor.
+
+The executable action ledger covers all 20,088 public exact-total comparisons
+across both access regimes and both public cohorts. It fixes gate decisions
+before consulting reference contrasts. Constructing 40,176 gate outputs and
+their ledger columns took 0.462\,s after CSV parsing; the complete replay took
+7.704\,s. These are postprocessing times for frozen endpoints, not times for
+regenerating the forecast archive or computing all bounds.
+
+\subsection{Extended archive certification on the additional consumers}
+\label{sec:extended_archive_replication}
+To extend the earlier primary-scenario replication, we ran the full declared
+comparison grid on the existing 30 additional Portugal consumers: three gap
+lengths, three mask rules, three seed labels, two aggregate lengths, and all
+six model pairs, separately for exact totals and 5\% total tolerance.
+Each period comparison retains all 107 eligible days and a 2,568-target loss
+denominator. The grid protocol and input hashes were saved before this run;
+no models were refitted or cases removed by outcome. These consumers had
+already contributed to an earlier six-hour recovery analysis. This is a new
+full-grid computation from frozen forecasts, not a newly untouched source
+or a blind prospective replication. The deterministic high-demand masks use
+the serialized targets with stable tie breaking; repeated seed labels for
+that rule are dependent stress cases.
+
+\begin{table}[t]
+\centering
+\caption{Fresh whole-period archive-aware certification on the existing
+30 additional Portugal consumers. Each row contains 9,720 comparisons under
+matched information and zero queries. Unresolved reduction is relative to
+the separate-loss unresolved count, not an acquisition-saving measure.}
+\label{tab:extended_archive_replication}
+\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrr}
+\toprule
+Total tolerance & Paired & Separate & Paired unresolved & Unresolved reduction\\
+\midrule
+Exact & 7,753 (79.76\%) & 2,527 (26.00\%) & 1,967 & 72.65\%\\
+5\% & 7,424 (76.38\%) & 2,010 (20.68\%) & 2,296 & 70.22\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The archive reconstruction uses only saved persistence prediction rows and
+their documented one-day copy relationship. Exact-total singleton and
+zero-residual deductions precede both bound methods. Every permitted direct
+copy is used before uncertainty is calculated. Of 3,210 meter-days, 3,060
+are completely reconstructed and therefore yield point intervals for every
+grid setting; the implementation bypasses unnecessary optimizations in
+those cases. The 346,680 day--scenario evaluations require 16,200 bound
+calls for the remaining days. The fresh computation and output generation
+took 39.35\,s. Neither bound method issues an incorrect comparison against
+the held reference, and every separate-loss certificate is also paired-
+certified. The comparison counts are dependent, so they are not interpreted
+as independent Bernoulli trials.
+
+An independently assembled whole-period linear program checks 432 cases
+covering the first and last declared consumers, every gap, mask, aggregate
+length and tolerance, and the first seed. Its 864 endpoint optimizations
+agree with the production paired endpoints to $1.14\times10^{-13}$ in
+absolute units and $1.67\times10^{-15}$ after the declared endpoint scaling;
+the largest LP constraint violation is zero at the stored precision.
+The LP feasibility tolerances are $10^{-9}$, and the endpoint comparison
+tolerance is $10^{-8}\max(1,|D^-|,|D^+|)$. This checker takes 19.86\,s and
+imports no production bound routine. It checks the paired-bound evaluation,
+not an independent forecast refit or every separate-loss quadratic program.
+These checks validate the extended grid's paired-certificate calculations.
+\subsection{Authenticating a selected model against all alternatives}
+\label{sec:practical-model-selection}
+A practical certificate gate can accompany an existing model-selection
+rule. First, the historical donor imputation proposes the model with the
+smallest completed-period MSE among persistence, ridge, gradient boosting
+and the MLP. Second, the gate authenticates that proposal only if its
+paired interval certifies a lower MSE than each of the other three models.
+Otherwise it returns unresolved. Selection uses the saved donor loss
+differences alone; hidden targets are inspected only after selection and
+certification. A unique donor preference is required, and nonunique cases
+would remain in the denominator. Both bound methods receive the same
+proposed model and the same archive information, with zero additional
+queries.
+
+This secondary analysis aggregates the existing six pair comparisons into
+one four-model selection scenario; it is not an independent replication.
+For the Portugal exact-total archive, paired bounds authenticate 933 of
+1,620 proposals (57.59\%), compared with 167 (10.31\%) using separate-loss
+bounds. The difference is 47.28 percentage points, with a descriptive
+whole-consumer bootstrap interval of 40.80--53.77 points. Unresolved
+proposals decrease from 1,453 to 687, a 52.72\% reduction relative to the
+separate-bound unresolved count. This is a reduction in unresolved
+benchmark cases, not measured staff time, retrieval cost or deployment
+failures. The proposed models are gradient boosting in 1,242 scenarios,
+the MLP in 216 and ridge in 162; these repeated scenarios share 30 consumers.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Authentication of the donor-selected model against all three
+alternatives under the saved forecast archive. Paired and Separate count
+certified four-model selections, not individually certified model pairs.
+At 1\% and 5\% total tolerance the original proposed model is held fixed
+while its certificate is recomputed from the saved wider bounds.}
+\label{tab:practical-model-selection}
+\begin{tabular}{lrrrrr}
+\toprule
+Source & Total tol. & Scenarios & Paired & Separate & Gain (pp)\\
+\midrule
+Portugal & 0\% & 1,620 & 933 & 167 & 47.28 \\
+Portugal & 1\% & 1,620 & 919 & 156 & 47.10 \\
+Portugal & 5\% & 1,620 & 850 & 127 & 44.63 \\
+French household & 0\% & 54 & 42 & 12 & 55.56 \\
+French household & 1\% & 54 & 42 & 12 & 55.56 \\
+French household & 5\% & 54 & 38 & 6 & 59.26 \\
+Counters & 0\% & 162 & 162 & 102 & 37.04 \\
+Counters & 1\% & 162 & 162 & 100 & 38.27 \\
+Counters & 5\% & 162 & 162 & 93 & 42.59 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+All scenarios have a unique donor preference, and none has a contrary
+certificate or an erroneous proposed winner relative to the reference
+period. Thus the result demonstrates additional all-completions
+authentication, not an accuracy improvement over the donor. It also does
+not establish that a certified historical winner will outperform the
+other models on future data. Among the 933 authenticated Portugal
+proposals, the median guaranteed minimum MSE advantage over the three
+competitors is $0.001382$ times the squared training-period mean target;
+this scale is fixed from training data and is not a percentage reduction
+in unknown test MSE.
+
+The complete public replay checks 5,022 Portugal/household scenarios over
+the three tolerances; the local full-source check adds 486 counter
+scenarios. The source exports donor proposals only for exact totals, so
+the tolerance analysis explicitly holds that proposal fixed and does not
+claim a fresh donor imputation at larger tolerances. The checker verifies
+all six source pair rows, additive donor scores, interval nesting, sign
+rules, the three required favorable comparisons and monotonicity under
+widening totals. The supplement includes the case ledger, input hashes
+and reproduction command. Bootstrap intervals resample all 54 scenarios
+of a consumer together in 2,000 draws. The reported 95\% interval is the
+percentile interval, using the 2.5th and 97.5th percentiles of the bootstrap
+mean coverage difference with NumPy's default linear quantile interpolation.
+The generator is \texttt{numpy.random.default\_rng(20261012)}.
+It is reinitialized for each cohort/tolerance group, so the same consumer
+index draws are reused across Portugal tolerances.
+The intervals describe convenience-panel
+stability and do not capture shared calendar shocks. The one-household
+and three-counter cohorts are not assigned population confidence intervals.
+\subsection{Executable audit decisions and independent reconstruction}
+\label{sec:executable-gate}
+The supplement includes a working audit interface, beyond a table of saved
+endpoints. It accepts surviving readings, fixed predictions, declared
+totals and permitted persistence-copy records. It reconstructs targets
+from the archive, computes all six paired intervals, and returns attaining
+endpoint completions. A ranking is allowed only when its entire interval
+has the required sign; otherwise the interface withholds the certificate.
+A best model is reported only if it is certified against every alternative.
+The input schema rejects a hidden-reference-target field. Source-row traces
+and residual-total deductions accompany the output.
+
+Two actual frozen-forecast examples exercise this interface. Selection
+uses the first six-hour contiguous-mask record with permitted copies and
+the first without in the existing source ordering, rather than favorable
+model errors. For consumer MT\_001 on 1 January 2014, all six missing
+readings are reconstructed and all six pair rankings are certified; on
+28 January, six readings remain unknown, one comparison is certified and
+five are withheld. The latter persistence-minus-ridge MSE interval is
+$[0.85544,2.93641]$, certifying ridge for that comparison but not a best
+model overall. Both examples use zero paid readings. Held reference targets
+enter the subsequent checker only. The totals and missingness remain
+constructed benchmark inputs, not newly observed production failures.
+
+Twenty-four independently assembled endpoint LPs verify these outputs.
+The maximum absolute endpoint disagreement is $1.78\times10^{-15}$,
+with zero recorded known-coordinate and original-total witness residuals.
+The acceptance threshold is $2\times10^{-8}$ times the maximum of one,
+the absolute interval endpoints and the aggregate totals; HiGHS feasibility
+tolerances are $10^{-9}$. Small residual arithmetic corrections are recorded.
+This is floating-point verification,
+not formal interval arithmetic. These examples demonstrate usable
+decision and witness outputs, not an additional performance estimate.
+
+A second checker independently reconstructs two fixed scenarios for all
+30 additional consumers: 6,420 daily snapshots and 360 period comparisons.
+It uses 1,800 calls to a separately written reference bound implementation
+and 1,200 water-filling/vertex individual-loss optimizations, without
+importing production closure or bound routines. Maximum normalized
+endpoint differences are $1.07\times10^{-14}$ for paired bounds and
+$1.10\times10^{-14}$ for separate-loss bounds, within a $2\times10^{-8}$
+checking tolerance. It also checks all 19,440 ledger counts and issued
+sign decisions. Together with the whole-period LP checks, this validates
+both sides of the new comparison rather than its summary arithmetic alone.
+\FloatBarrier
+\subsection{The retained adverse recovery result}
+On the original Portugal six-hour-gap archive, saved persistence copies
+reconstruct 95.33\% of masked target occurrences for free. Daily certification
+already reaches 96.67\% before paid recovery and 98.71\% after at most two
+readings per model pair; the exact-over-greedy addition is 0.042 percentage
+points. A budget for one pair is not a shared budget for all six pairs.
+No monetary retrieval cost or field latency was measured.
+
+In the archived randomized comparison, all policies see the same closed
+archive. On Portugal, normalized worst width decreases from 29.595\% to
+26.673\% of initial width, but expected width at the actual record increases
+from 20.154\% to 23.670\% (17.45\% relative). Certification decreases
+from 98.795\% to 98.688\%. These are exact expectations over the computed
+mixtures, not Monte Carlo estimates. Width fractions first sum within
+each meter and then average meter ratios. The two-reading budget applies
+separately to each day and pair, including already certified comparisons.
+
+Across 1,074 positive-width public cases, expected realized width improves
+in 14, worsens in 649 and ties in 411. Both target-independent refinements
+in Section~\ref{sec:tie-selection} completed on all 1,074 cases without
+removing the penalty beyond the declared tolerance. This does not imply
+every optimal mixture has identical realized performance. The new theorem
+establishes that adaptation cannot improve the robust mean-width value;
+it does not turn these adverse observed outcomes into an operational benefit.
+The compact solver is therefore an exact risk optimizer, not an empirically
+dominant default acquisition rule.
+
+\section{S3. Full historical design and reproducibility}\label{app:historical-design}
+The following specifications document the reused historical study. Its
+archived broader recovery tests are distinguished from this revision's
+new mathematical checks and extended additional-consumer grid.
+No new forecast fit is introduced.
+
+\subsection{Data sources and chronological splits}
+The primary evaluation uses 34 consumption series from three public sources
+(Table~\ref{tab:data}). The Portugal panel uses the first 30 eligible meter
+IDs in the ordered UCI ElectricityLoadDiagrams20112014 file \citep{portugal}.
+Eligibility requires at least 99\% finite and more than 95\% positive
+training-hour values. The training year is 2013; test windows are the first
+28 days of January, April, July, and October 2014. The original end-stamped
+15-minute average-kW readings are shifted to interval starts and converted
+to hourly energy by summing four values and dividing by four.
+
+The UCI French household trace \citep{uci} supplies a separate scale and
+load pattern. Training uses 2008--2009 and testing uses eligible days in
+2010. Hourly kWh is the sum of 60 minute-average kW values divided by 60;
+all 60 readings must be valid. For both UCI sources, the spring and autumn
+clock-transition dates and target days whose 1-, 2-, or 7-day lags touch
+them are excluded in training and testing. This prevents documented local
+time-grid artifacts from contaminating the features. Every eligible day
+must contain all 24 targets and all required causal features. The retained
+totals in these two sources are constructed from the complete trace before
+masking; they are not separate backup-register measurements.
+
+The third source contains actual cumulative Discovergy consumption counters
+released with the BLEM study \citep{blem}. We use the first three consumer
+IDs in the pinned source version identified in the supplement. Each raw
+series contains 175,201 readings on an uninterrupted three-minute grid,
+without counter decreases. Hourly energy is calculated from integer
+counter differences at exact UTC hour endpoints, using the source's
+$10^{-10}$ conversion to kWh. Training uses January--September 2017 and
+testing uses October--December 2017, subject to complete-day and feature
+availability. First and last partial days are excluded. Here the retained
+six-hour or daily totals can be obtained directly from the recorded
+counter endpoints. Removing interval targets is still an artificial outage:
+the experiment assumes these endpoints remain available and does not
+measure an independent communication channel's survival rate.
+
+\begin{table}[t]
+\centering\normalsize
+\caption{Data retained after feature and quality filters. Training and
+test counts are days per series; totals are test meter-days.}
+\label{tab:data}
+\begin{tabular}{lrrrr}
+\toprule
+Source & Meters & Train & Test & Total\\
+\midrule
+Portugal & 30 & 357 & 107 & 3,210\\
+French household & 1 & 587 & 246 & 246\\
+Counter meters & 3 & 266 & 91 & 273\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The study contains 3,729 test meter-days. A dated local protocol records
+the design and amendments for counter data, daylight-saving handling,
+information-flow checks, and whole-period comparisons. This is not a
+registered study. The household trace was used during implementation
+development and is reported separately. After inspecting an earlier
+four-model analysis, we replaced weekly persistence with an MLP in a
+dated expansion of the candidate model set. An initial neural run exposed training-iteration-limit
+warnings; a documented amendment increased the training allowance based
+on those training diagnostics, retaining the architecture and all other
+hyperparameters. The final configuration was checked for training convergence
+before the final evaluation run. The retained split therefore is not a new blind
+validation panel. No hyperparameters were selected using the revised
+evaluation outcomes. All reported empirical values come from the revised
+run; the earlier results are not mixed with it. The underlying records
+remain historical (2010--2017), rather than newly collected 2026 loads.
+
+
+\subsection{Forecasts and information cutoffs}
+The four candidates are previous-day persistence, ridge regression,
+histogram gradient boosting, and a multilayer perceptron (MLP) neural
+network. Boosting and the MLP provide nonlinear AI models; persistence and
+ridge provide simple references. Each forecast supplies all 24 targets at
+the start of a day. In this retrospective benchmark, issue time is a
+simulated historical day-start cutoff enforced through feature timestamps;
+these are not contemporaneously logged vendor forecasts.
+Features for target hour $h$ are lagged values at 24, 48, and 168 hours,
+the mean of the previous day, and sine/cosine encodings of hour, weekday,
+and month. All features are available at the common issue time. The
+regression models share parameters across the 24 target hours.
+
+Ridge uses training-only standardization and regularization parameter 1.
+Gradient boosting uses 100 iterations, learning rate 0.08, at most 15
+leaves, minimum leaf size 20, $L_2$ regularization 1, 127 bins, and seed
+1729. The MLP has two hidden layers of 32 and 16 rectified-linear units,
+Adam optimization, learning rate 0.001, $L_2$ penalty 0.001, minibatches
+of 256, and at most 1000 epochs, with seed 1729. Its features are standardized
+using training data only; targets are divided by the training mean and
+predictions are rescaled to kWh. Validation-based early stopping is disabled;
+the library's training-loss convergence rule remains enabled. The supplement
+records iterations, final training losses, fit times, and warnings for every
+meter. Negative predictions are clipped to zero. The configurations are
+fixed before the final evaluation run; no search on its evaluation outcomes is
+performed. Training periods,
+data-quality filters, and the experiment protocol are stored with the
+reproduction code. Forecasts are generated once and reused for every
+verification scenario. The experiment isolates missing \emph{verification}
+targets, not damaged inputs at forecast issue time.
+
+\paragraph{Fresh model-fitting verification.}
+As archived verification of the earlier study, a fresh fitting replay was executed for all 34 original series plus a separate 30-consumer Portugal replication cohort from the same source/calendar, from the pinned raw sources, bypassing the previous hourly caches and any fitted model state. All 192 Ridge, histogram-boosting, and MLP estimators completed under the declared settings and seeds; daily persistence was reconstructed. No training warnings were captured, and MLP stopping epochs ranged from 28 to 443. A separately written checker found exact numerical agreement after CSV parsing for all 166,536 targets and 666,144 forecast values, checked 768 complete-reference MSE/RMSE/MAE quantities and 384 model-pair rankings with no ranking changes, and independently reconstructed the feature and train/test eligibility calculations for all 64 series. On the same Intel Core i7-8565U host, raw-data preparation took 52.8~s and the sequential fresh fitting phase took 262.9~s with two numerical threads; these are descriptive shared-host measurements. This verifies fresh execution of the original trainer with independent arithmetic and chronology checks. It does not constitute an independent training implementation, a new cohort, or another run of the downstream mask grids.
+
+\subsection{Missingness and retained totals}
+For each eligible 24-target record we remove exactly 2, 6, or 12 targets.
+The mechanisms are a contiguous gap with a random start, a random scattered
+set, and the highest-demand targets. The last is an oracle stress test of
+selective missingness, not an estimated mechanism of real communication
+failure. Disjoint 6-hour and 24-hour totals are retained. These alternatives
+use the same masks within each mechanism, record, and seed. Three seeds
+are used for stochastic masks. The deterministic high-demand condition is
+not treated as additional independent evidence when repeated in the design.
+
+The exact-total setting is augmented by symmetric uncertainty intervals of
+1\% and 5\% of each complete aggregate. Bounds use the widened feasible
+set; point-imputation comparators continue to use the central supplied
+total. This isolates sensitivity to uncertainty in the surviving totals.
+All methods see the same surviving interval values. No learned load cap,
+smoothness constraint, or hidden high-resolution target is supplied to an
+imputer or bound calculation.
+
+\subsection{Comparators and decisions}
+The direct paired bounds are compared with sharp individual MSE bounds
+combined by independent subtraction. Both methods can decline to establish
+a strict ordering. The point-evaluation comparators are complete-case
+scoring, uniform allocation of missing energy, allocation in proportion to
+a weekday/hour profile estimated from training data, and an energy-rescaled
+historical donor selected using surviving target coordinates. The donor
+comparator is inspired by the energy-preservation principle of CPI
+\citep{cpi}; it is not presented as a reproduction of CPI's complete
+published algorithm. Training-based shapes are independent of the competing
+test forecasts. If a shape has zero mass on a missing block, uniform
+allocation supplies the fallback.
+
+Each energy-preserving filling subtracts the observed consumption from
+the retained total, then distributes that residual over missing intervals.
+The complete reference is used only for evaluation of the resulting
+ordering. Complete-case scoring uses its common observed-count
+denominator; only its ordering is compared with the full-record target.
+Its numerical loss magnitude is not substituted for a full-day MSE.
+
+For each pair, a decision is correct if its strict sign agrees with the
+complete-reference MSE difference. We report the proportion of comparisons
+resolved and errors among those decisions, together with the rate of
+unresolved comparisons. A method can achieve zero decision errors by
+always declining, so resolution is essential. 
+
+\subsection{Archive-consistent whole-period audits}\label{sec:period-information}
+The historical audit covers all eligible test days of one meter and one
+fixed model pair. Its target is the paired MSE over those same hourly
+coordinates, with denominator $N=24d$ for $d$ retained days. The benchmark
+snapshot specifies surviving hourly readings, six-hour or daily aggregate
+bands, and the permitted saved forecast records. Actual production arrival
+times are unavailable; this is a retrospective access rule, not a measured
+deadline or latency experiment.
+
+The operative \emph{saved-forecast archive} regime supplies every saved
+test forecast row for that meter and all four candidates. For each masked
+target at time $t$, an available daily-persistence prediction at $t+24$
+provides $y_t$ directly. This includes later forecast rows inside the
+evaluation period. The available saved test archive and the within-period
+raw forecast vectors coincide in this benchmark; the result uses no
+additional outside-period forecasts. Reconstruction reads timestamps and that forecast
+column only; hidden reference targets subsequently check the copied value.
+Every copy has a source-row trace. Training records used by the profile
+and donor baselines remain confined to the original chronological training
+period. Unsaved forecasts and feature caches are excluded. The feasible set
+does not impose inverse constraints from other fitted predictor mappings,
+including the ridge model; all four prediction columns are used for scoring,
+but only the documented direct persistence identity is used for reconstruction.
+
+An \emph{isolated-daily summary} reference supplies each daily evaluator
+only that day's forecasts, surviving readings and aggregates. The period
+aggregator receives scalar comparison endpoints, point-score sums and
+counts, not cross-day raw forecast vectors. This deliberately limited
+reference is not the information set of an analyst holding the complete
+period's raw predictions. Both regimes also deduce a remaining singleton
+from an exact residual total and all remaining zeros from a zero upper
+residual total. A singleton with a positive-width total interval remains
+unknown. The original daily experiments retain their frozen supplied-input
+protocol; they are not relabelled as reanalyses with these enlarged observations.
+
+Writing $O_0$ for surviving readings, $R(\mathcal A)$ for verified direct
+copies from the permitted archive and $C$ for aggregate-determined values,
+the new observed set is $O_{\mathcal A}=O_0\cup R(\mathcal A)\cup C$.
+For exact totals the comparison set is
+\begin{equation}
+ \F_{\mathcal A}=\{y:y_i=o_i\ (i\in O_{\mathcal A}),\quad
+ y_i\geq0\ (i\notin O_{\mathcal A}),\quad
+ \textstyle\sum_{i\in I_g}y_i=T_g\ \text{for every }g\}.
+ \label{eq:archive-set}
+\end{equation}
+For interval totals, replace the last equality by its declared lower and
+upper bounds. Once copies fix coordinates, the remaining blocks are still
+disjoint. The whole-period endpoints are therefore sharp \emph{for this
+stated augmented product set}. Averaging updated daily endpoints is valid
+here because every day has 24 targets; unequal day lengths would require
+target-count weighting. This is not a claim of maximal information closure
+under inversion of the fitted predictor mappings.
+
+All period comparators receive the same enlarged observed set and retained
+totals. Complete-case scoring pools observed paired-loss sums and divides
+by the total observed-coordinate count across days. Its magnitude is not
+a full-period MSE; only its sign is compared with the full-period reference.
+The imputation methods and bounds use the full $24d$ denominator. Exact-total
+point methods may abstain at the paired method's scenario-level coverage:
+within cohort, gap, mask and aggregate settings, they retain the largest
+absolute period contrasts divided by the squared training-period mean
+hourly energy, with a fixed identity-based tie rule.
+Reference outcomes are consulted only afterwards to count errors. Selection
+shortfalls and unfavorable results are retained. This is a descriptive
+score-based comparison, not a calibrated confidence procedure.
+
+The reanalysis retains the original 34 meters, all three gap lengths,
+three masks, three seeds, both aggregate lengths and three tolerances.
+It refits no models. The oracle high-demand mask ranks the original hourly
+source values before CSV serialization, preserving the original stable
+tie order. This oracle stress does not add inequalities implied by the
+mask-generation rule to the evaluator's declared product set.
+Compatibility checks preserve the historical
+restricted endpoints separately; donor and deletion scores can change after
+exact deductions, and deletion additionally changes from a mean of daily
+observed scores to pooled observed-coordinate scoring.
+These whole-period tables are zero-query audits. Recovery experiments use
+at most two readings \emph{per day and per model pair}; they do not solve
+an unrestricted two-reading budget over the entire period.
+Query eligibility is determined after free closure and before selecting the
+nonadaptive batch; no sequential cancellation or refund rule is evaluated.
+Period decisions require the stated $10^{-9}\max(1,|D^-|,|D^+|)$
+sign margin. Enclosure checks allow $10^{-8}\max(1,|D_{\rm ref}|)$;
+non-widening checks allow $10^{-8}$ times the maximum of one and the
+absolute restricted endpoints. Exact-deduction values retain their
+binary64 subtraction results and are never replaced by hidden truth.
+These tolerances diagnose floating-point consistency, not formal
+outward-rounded enclosure.
+
+
+\subsection{Archived recovery experiment}
+A recovery experiment was added after inspecting the original verification
+analysis. For the evaluation including the MLP, a new dated protocol fixed six
+acquisition policies and a separate summary of the three MLP-involving
+model pairs before revised outcomes were calculated. The experiment reuses
+the newly fitted forecasts of all 34 series; it does not fit models on
+recovered targets or tune their parameters.
+This extension uses contiguous gaps of six and twelve hours, exact six-hour
+totals, all three main-study mask seeds, and budgets of zero through three
+recovered targets per model pair. It is a same-panel extension rather than
+external validation.
+
+The optimal batch rule is compared with seeded random recovery, recovery
+of the largest absolute contrast coefficients, and greedy selection of the
+next target yielding the largest immediate worst-case width reduction.
+Two further policies sample with weights proportional to $|a_i-b_i|$ or
+$(a_i-b_i)^2$, inspired by the prediction-only limiting distributions of
+Sawade et al.\ \citep{sawade}. We adapt these weights to sampling without
+replacement among eligible missing records, then apply the same retained-total
+certificate. These are acquisition-policy adaptations, not reproductions
+of the original importance-weighted risk estimator or Wald test.
+All avoid querying the final missing value in a block, which its total
+already determines. Selection uses only evaluator-visible information;
+the complete batch is fixed before withheld values are revealed.
+The budgets are applied to the same full set of comparisons, including
+comparisons already resolved without recovery. This experiment measures
+width refinement and final resolution, not the minimum retrieval cost to
+establish a winner or an early-stopping repair policy.
+
+We report final resolution, actual queries used, realized remaining width,
+and the worst possible post-recovery width. A width fraction is the sum of
+remaining widths divided by the sum of initial widths within a meter,
+then averaged over meters. The optimization guarantee concerns the
+worst-case width; realized width and resolution are evaluated separately.
+Pre-execution tests include exhaustive query-subset comparison on 120
+small multiblock problems at four budgets, 100 generic-bound checks,
+information invariance, zero-energy/tie cases, and two greedy counterexamples.
+Post-run checks verify source hashes and exact agreement of zero-budget
+counts with the corresponding main-study settings.
+
+
+
+\subsection{Uncertainty, numerical checks, and reproducibility}
+The interval $[D^-,D^+]$ is an identification interval for a fixed record,
+not a statistical confidence interval. The main panel summaries average
+over meters; repeated masks, model pairs, and days are not counted as
+independent households. Descriptive 95\% bootstrap intervals resample
+entire panel meters 2,000 times, preserving within-meter dependence. The
+small external cohorts are reported separately. The ordered meter selection
+is a convenience sample, so these intervals describe stability within this
+panel rather than population sampling uncertainty. Resampling individual
+meters does not account for shared cross-meter shocks. Neither bootstrap ranges
+nor deterministic identification bounds establish future forecasting
+superiority.
+
+The standard-library reference implementation returns both bounds and
+attaining completions. Tests include exhaustive comparison with 250
+small integer polytopes, uncertain totals with an interior optimum under
+caps, feasibility failures, weighted losses, and refinement monotonicity.
+The vectorized experimental implementation is checked against the reference
+solver on 1,000 randomly selected feasible comparisons. In the experimental
+pipeline, a negative residual total with magnitude at most
+$10^{-9}\max(1,|T_g|)$ is clipped to zero; larger negative residuals are
+rejected. The recovery interface also accepts a fully observed block only
+when the absolute total discrepancy is within that tolerance. This
+roundoff convention is separate from the strict reference API, the
+measurement-uncertainty intervals, and the decision margin. It is not a
+license to repair inconsistent physical measurements. Numerical decisions
+use a margin of $10^{-9}\max(1,|D^-|,|D^+|)$ in the study's stated loss
+scale. These are floating-point computations, not a formally verified
+interval-arithmetic implementation. The mathematical propositions concern
+real arithmetic; the numerical margin avoids decisions close to zero.
+
+Further integration tests check forecast-feature causality,
+daylight-saving exclusions, 100 random linear-program comparisons, and
+invariance to replacing hidden targets while preserving all evaluator-visible
+values and totals. An independently implemented computational check compares 1,800 paired
+extrema against a general linear-programming solver and 600 individual
+minima against constrained numerical optimization. Here independence means
+different checker implementations and optimization algorithms within the
+same study; it does not mean verification by an external investigator.
+These checks supplement
+the proofs and do not substitute for the experimental resolution results.
+Regression tests additionally cover nonfinite inputs, inconsistent totals,
+negative consumption, array-shape mismatches, and cancellation at large
+common offsets. Objective values are evaluated from differences of prediction
+residuals at attaining completions, avoiding the subtraction of large
+squared forecasts. This improves numerical stability but does not convert
+floating-point computations into formal interval arithmetic.
+
+The measured held-out targets and fixed forecasts in the original
+34-series evaluation range from 0.00 to 507.01 kWh per hourly target;
+their aggregate ranges and source hash are in \texttt{frozen\_forecasts.json}.
+Computation uses binary64 arithmetic. Stress regressions separately check
+common offsets near $10^{10}$ against 80-digit decimal calculations, and
+contrast preservation with targets of $10^{16}$. These are specific
+regression checks, not an accuracy guarantee throughout that magnitude
+range. Nonfinite inputs and detected arithmetic overflow are rejected.
+Applications requiring a machine-certified enclosure should use
+outward-rounded interval arithmetic or an appropriate exact solver.
+
+
+All scenarios, including unresolved outcomes and unfavorable comparator
+results, are retained. Data-source identifiers and hashes, meter IDs, splits,
+forecast-file checksums and regeneration code, per-meter scenario summaries,
+package versions, and the
+protocol are included in the reproducibility materials. Forecast and data
+preparation costs are distinguished from the calculation of the comparison
+bounds.
+
+
+
+\section{S4. Complete historical grid aggregates}\label{app:certificate-grid}
+\begin{table}[htbp]
+\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Complete historical scenario grid, aggregated within cohort, access
+regime and relative total tolerance. Both: both bound methods certify;
+paired only: only paired bounds certify; neither: neither certifies;
+separate only: only separate-loss bounds certify. All results use identical
+information and zero additional queries. Repeated consumers, pairs, masks
+and tolerances share observations. The supplement retains all 324 cells.}
+\label{tab:certificate-grid}
+\begin{tabular}{lllrrrrr}
+\toprule
+Source & Access & Tol. & Cases & Both & Paired only & Neither & Separate only\\
+\midrule
+Counters & Restricted & 0\% & 972 & 137 & 231 & 604 & 0 \\
+Counters & Restricted & 1\% & 972 & 117 & 241 & 614 & 0 \\
+Counters & Restricted & 5\% & 972 & 72 & 243 & 657 & 0 \\
+Counters & Archive & 0\% & 972 & 826 & 146 & 0 & 0 \\
+Counters & Archive & 1\% & 972 & 820 & 152 & 0 & 0 \\
+Counters & Archive & 5\% & 972 & 788 & 184 & 0 & 0 \\
+Household & Restricted & 0\% & 324 & 45 & 57 & 222 & 0 \\
+Household & Restricted & 1\% & 324 & 37 & 63 & 224 & 0 \\
+Household & Restricted & 5\% & 324 & 18 & 72 & 234 & 0 \\
+Household & Archive & 0\% & 324 & 105 & 156 & 63 & 0 \\
+Household & Archive & 1\% & 324 & 100 & 160 & 64 & 0 \\
+Household & Archive & 5\% & 324 & 84 & 165 & 75 & 0 \\
+Portugal & Restricted & 0\% & 9,720 & 238 & 2,184 & 7,298 & 0 \\
+Portugal & Restricted & 1\% & 9,720 & 187 & 1,994 & 7,539 & 0 \\
+Portugal & Restricted & 5\% & 9,720 & 121 & 1,384 & 8,215 & 0 \\
+Portugal & Archive & 0\% & 9,720 & 2,513 & 5,323 & 1,884 & 0 \\
+Portugal & Archive & 1\% & 9,720 & 2,382 & 5,412 & 1,926 & 0 \\
+Portugal & Archive & 5\% & 9,720 & 1,814 & 5,739 & 2,167 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+The redistributable endpoint replay covers 60,264 Portugal/household
+comparisons. The 5,832 counter comparisons were checked from the original
+local endpoints; their bundled summaries are reproducible after the
+documented BLEM raw-source regeneration, rather than from redistributed
+counter endpoints. These two reproduction scopes are explicitly separated.
+
+\section{S5. Full structured coordinate-recovery construction}
+\section{Compact Recovery with Disjoint Aggregate Totals}
+\label{sec:structured}
+The general theory applies to any compact convex $F$, but efficient
+optimization still depends on its geometry. Consider residual targets
+$y_{gi}\geq0$ in disjoint blocks $\mathcal M_g$, with exact sums
+$\sum_i y_{gi}=E_g$. Here the intercept $d$ includes all fixed observed
+contributions to the contrast; only unknown coordinates remain in the
+residual notation. Write
+$\F=\prod_g\{y_g\geq0:\sum_i y_{gi}=E_g\}$ for this residual
+representation of the full feasible record $F$. The sharp paired interval has endpoints
+\begin{equation}
+ D^-=d+\sum_g E_g\min_{i\in\mathcal M_g}c_{gi},\qquad
+ D^+=d+\sum_g E_g\max_{i\in\mathcal M_g}c_{gi}.
+ \label{eq:sharp}
+\end{equation}
+Blocks with no missing coordinates are omitted after checking that their
+observed sums equal the recorded totals.
+Each extremum assigns the block's mass to an extremal coefficient;
+disjointness permits simultaneous attainment. A singleton is determined
+by its total, and a zero-total block is entirely determined. Negative
+residual totals indicate inconsistent input rather than a valid feasible
+set. A recorded counter increment must refer to the same units and
+interval as the targets; an approximate physical total requires an
+appropriately widened constraint.
+
+For queried coordinates $Q_g$ and retained set $S_g=\mathcal M_g\setminus Q_g$,
+\begin{equation}
+ W(Q,y)=\sum_g\left(\sum_{i\in S_g}y_{gi}\right)
+                  \operatorname{range}(c_{g,S_g}).
+ \label{eq:querywidth}
+\end{equation}
+The range of an empty set or singleton is zero. In every block with a
+nonempty retained set, all mass can be assigned to unqueried coordinates;
+a fully queried block contributes zero width. Thus the worst width of a fixed batch is
+$\sum_g E_g\operatorname{range}(c_{g,S_g})$.
+
+\subsection{Deterministic recovery as a reference}
+Sort the $m_g$ coefficients in a block. Retaining $m_g-k$ coefficients
+with minimum range is achieved by a consecutive window, giving
+\begin{equation}
+ h_g(k)=E_g\min_{1\leq s\leq k+1}
+       (c_{g,(s+m_g-k-1)}-c_{g,(s)}),\quad 0\leq k\leq m_g-1.
+ \label{eq:window}
+\end{equation}
+Every retained subset spans a window of that size with no larger range,
+which proves the reduction. Allocate queries by
+\begin{equation}
+ D_B=\min_{\sum_g k_g\leq B}\sum_g h_g(k_g),\qquad
+ V(g,b)=\min_k\{V(g-1,b-k)+h_g(k)\}.
+ \label{eq:allocation}
+\end{equation}
+The recurrence minimizes over $0\leq k\leq\min(b,m_g-1)$, has
+$V(0,0)=0$ and infeasible states equal to infinity, and extracts
+$D_B=\min_{0\leq b\leq B}V(G,b)$ for the at-most budget.
+It returns the queried complements of the selected windows. The budget
+is a count of distinct acquired coordinates for one contrast, not a
+measured monetary cost or a shared budget over all pairs of models.
+
+\begin{proposition}[Deterministic adaptive reference]
+\label{prop:det-adapt}
+For nonnegative residual targets with disjoint exact totals and unit
+costs, the deterministic adaptive worst-width optimum equals $D_B$.
+\end{proposition}
+\begin{proof}
+Omit queries whose values are already determined and simulate their
+answers in the policy's history. Answer zero to every remaining query.
+Every positive-total block retains an unqueried coordinate on this
+transcript; assign its mass to such a coordinate at termination. This is
+a feasible completion realizing the transcript. Its terminal width is
+the worst width of the terminal batch and is at least $D_B$. The optimal
+fixed batch supplies the reverse inequality.
+\end{proof}
+This geometry-specific deterministic statement is distinct from the
+general randomized mean-width identity. The following program also
+solves the randomized adaptive problem for mean width.
+
+\subsection{Randomized recovery under a hard budget}
+\label{sec:randomized-recovery}
+
+Randomization permits a different guarantee from deterministic minimax
+recovery. We retain exact disjoint totals, nonnegative uncapped targets,
+unit query costs, and one fixed forecast contrast. The benchmark first incorporates permitted direct persistence copies
+and aggregate-determined values. Sharpness is relative to the declared
+feasible set; inverse constraints from other fitted predictors are not
+included in the evaluated archive regime.
+Remove zero-energy, singleton, and constant-coefficient blocks, whose width
+is already zero. Index the remaining blocks by $g=1,\ldots,G$.
+If none remain, the optimal width is zero and no query is needed.
+Let $\mathcal Q_B$ contain batches with at most $B$ queries in total and
+at most $m_g-1$ in block $g$; querying its final coordinate is redundant.
+A policy selects $Q\sim\pi$ before reading its answers. The hidden record
+$y\in\F$ is fixed before this random draw: the adverse completion may
+depend on $\pi$, but cannot depend on the realized batch.
+
+\subsection{Expected width and an exact finite linear program}
+Write $S_g(Q)=\M_g\setminus Q$, let $d_g(S)$ denote the coefficient range
+on $S$, and set $d_g(S)=0$ for a singleton or empty set. Define
+$v_{gi}(Q)=\boldsymbol{1}\{i\in S_g(Q)\}d_g(S_g(Q))$.
+Equation~\eqref{eq:querywidth} gives
+\begin{equation}
+ W(Q,y)=\sum_g\sum_{i\in\M_g}y_{gi} v_{gi}(Q),\qquad
+ R_B=\min_{\pi\in\Delta(\mathcal Q_B)}\sup_{y\in\F}
+       \mathbb E_{Q\sim\pi}W(Q,y).
+ \label{eq:random-objective}
+\end{equation}
+Here $\Delta(\mathcal Q_B)$ is the set of distributions over admissible
+batches. The budget holds for every draw, rather than only in expectation.
+The coefficients $c_i$ already include the MSE normalization in
+\eqref{eq:linear}.
+
+\begin{proposition}[Finite characterization]
+\label{prop:random-finite}
+For every batch distribution,
+\begin{equation}
+ \sup_{y\in\F}\mathbb E_\pi W(Q,y)
+ =\sum_g E_g\max_{i\in\M_g}\mathbb E_\pi v_{gi}(Q).
+ \label{eq:random-value}
+\end{equation}
+Consequently $R_B$ is the value of the primal and dual programs
+\begin{equation}
+ \begin{aligned}
+ \min_{\pi,t}\quad &\sum_g E_g t_g,\\
+ \text{subject to}\quad
+ &\sum_Q\pi_Qv_{gi}(Q)\leq t_g\quad(g,i),\qquad
+   \sum_Q\pi_Q=1,\quad\pi_Q\geq0;
+ \end{aligned}
+ \label{eq:random-primal}
+\end{equation}
+\begin{equation}
+ \begin{aligned}
+ \max_{w,\eta}\quad &\eta,\\
+ \text{subject to}\quad
+ &\eta\leq\sum_g\sum_i w_{gi}v_{gi}(Q)\quad(Q\in\mathcal Q_B),\\
+ &\sum_i w_{gi}=E_g,\quad w_{gi}\geq0.
+ \end{aligned}
+ \label{eq:random-dual}
+\end{equation}
+The variables $t_g$ and $\eta$ are free; the primal inequalities imply
+$t_g\geq0$.
+\end{proposition}
+\begin{proof}
+Interchanging finite sums makes the expected width linear in each
+block's target vector. Its maximum over a nonnegative simplex of mass
+$E_g$ places that mass on a largest expected coefficient. The blocks are
+independent, proving \eqref{eq:random-value}. Introducing their maxima
+gives the primal. Linear-programming duality gives the stated dual;
+the primal is feasible and has a finite optimum.
+\end{proof}
+
+Mixed-strategy robust optimization and dual separation are established
+methods. Kawase and Sumita provide a general framework based on weighted
+scenario optimization \citep{kawase2024}; Mastin, Jaillet, and Chin study
+randomized minmax regret and improvements over deterministic strategies
+\citep{mastin2015}. The specialization here is the conditional-width
+geometry, the exact coordinate-recovery oracle and compact formulation
+below, and the adaptive optimality certificate below.
+
+\subsection{An exact pricing oracle}
+To separate \eqref{eq:random-dual}, minimize
+$\sum_{g,i}w_{gi}v_{gi}(Q)$ over admissible batches. Within a block, order
+coefficients increasingly, breaking ties by original coordinate index.
+For local budget $k$, put $r=m_g-k$. If $r\geq2$, fix the first and last
+retained positions $l<u$, with $u-l+1\geq r$. The least cost for these
+endpoints is
+\begin{equation}
+ (c_{g,(u)}-c_{g,(l)})
+ \left(w_{g,(l)}+w_{g,(u)}+
+       \sum_{i\in T_{g,l,u,r}}w_{g,(i)}\right),
+ \label{eq:random-pricing}
+\end{equation}
+where $T_{g,l,u,r}$ contains the $r-2$ smallest interior weights.
+Every retained subset has such endpoints; once they are fixed, its range
+is fixed and these interior choices minimize its nonnegative weighted
+cost. Enumerate the endpoints, assign cost zero when $r=1$, and apply
+the budget-allocation recurrence across blocks. This supplies exact
+polynomial-time separation for rational input. Unlike deterministic
+minimum-range recovery, an optimal weighted retained set need not be
+a consecutive coefficient window.
+
+\subsection{A compact program and an executable batch distribution}
+The following formulation avoids a variable for every possible batch.
+Set $q=\min(B,\sum_g(m_g-1))$. Any smaller batch can be padded to $q$
+queries without widening its conditional interval for any record, so
+requiring exactly $q$ loses no optimality for this objective.
+The case $B=0$ is obtained directly from the original width formula.
+
+Construct a directed acyclic graph with nodes $(g,b)$ for completed
+blocks $0\leq g\leq G$ and budgets $0\leq b\leq q$. For each admissible
+$k$ and endpoint pair $(l,u)$ of a retained set of size $r=m_g-k\geq2$,
+create an edge $e=(g,b,k,l,u)$ from $(g-1,b)$ to $(g,b+k)$.
+For $r=1$, use a single canonical zero-width edge. Impose nonnegative
+unit flow $p_e$ from $(0,0)$ to $(G,q)$, with conservation at all other
+nodes. Impossible nodes and edges may be omitted.
+
+For an endpoint edge, introduce interior joint inclusion masses satisfying
+\begin{equation}
+ 0\leq z_{ei}\leq p_e\quad(l<i<u),\qquad
+ \sum_{l<i<u}z_{ei}=(r-2)p_e.
+ \label{eq:random-hypersimplex}
+\end{equation}
+Its endpoint inclusion masses are $p_e$; interior inclusion masses are
+$z_{ei}$, and all others are zero. Denote these by $\alpha_{ei}$ and
+put $d_e=c_{g,(u)}-c_{g,(l)}$. Zero-width edges contribute zero.
+The compact program minimizes $\sum_gE_gt_g$ subject to the flow
+constraints, \eqref{eq:random-hypersimplex}, and
+\begin{equation}
+ \sum_{e\text{ for block }g}d_e\alpha_{ei}\leq t_g
+ \quad(g,i).
+ \label{eq:random-compact}
+\end{equation}
+
+\begin{proposition}[Exact compact representation]
+\label{prop:random-compact}
+This program has value $R_B$ and yields an attaining distribution with
+at most $B$ queries in every batch. For $B\geq1$, a safe unpruned bound
+on its numbers of variables and constraints is
+$O(B\sum_g\min(B,m_g)m_g^3)$.
+For one block with a fixed local budget, only $O(m_g^3)$ variables are needed.
+\end{proposition}
+\begin{proof}
+A distribution over batches induces flows along their budget paths and
+the corresponding endpoint and interior inclusion masses, satisfying
+all constraints. Conversely, a nonnegative unit flow on an acyclic graph
+decomposes into source-to-sink paths. For any edge with $p_e>0$,
+the vector $(z_{ei}/p_e)_{l<i<u}$ belongs to
+$\{x\in[0,1]^{u-l-1}:\sum_i x_i=r-2\}$. This hypersimplex is the convex
+hull of the indicators of its $(r-2)$-element subsets. To see integrality,
+any nonintegral feasible vector has at least two fractional entries;
+opposite small perturbations of those entries express it as the midpoint
+of two distinct feasible vectors, so it is not a vertex.
+Thus each positive-flow edge admits a distribution of legal interiors.
+Sample a flow path and, conditionally on each selected edge, such an
+interior subset. Every resulting batch uses exactly $q$ queries and
+has the coordinate coefficients in \eqref{eq:random-compact}. Hence
+the two formulations attain the same objective. There are $O(B)$ budget
+layers per block, $O(\min(B,m_g))$ local budget choices, $O(m_g^2)$
+endpoint choices, and $O(m_g)$ interior variables per endpoint edge,
+giving the bound.
+\end{proof}
+
+The decomposition is constructive: sample outgoing edges proportionally
+to their flows and sample a fixed-cardinality subset with the conditional
+interior marginals. For the latter, cumulative marginal intervals and a
+uniform offset in $[0,1)$ give systematic sampling with the required
+cardinality and marginal probabilities. Preserve the original coordinate
+indices when returning the queried complements. The implementation reports
+floating-point feasibility and marginal repairs; its numerical solution
+is not an outward-rounded proof certificate.
+
+\subsection{A sharp separation from deterministic adaptive recovery}
+\begin{proposition}[One-block randomization gap]
+\label{prop:random-gap}
+For one exact-total block with $E>0$, $m$ missing coordinates, and
+$0\leq B\leq m-2$, put $r=m-B$ and
+$h=\min_{|S|=r}d(S)$. Let $D_B=Eh$ be its optimal deterministic
+worst-case width, which also equals the optimum over deterministic
+adaptive policies. Then
+\begin{equation}
+ \frac{r}{m}D_B\leq R_B\leq D_B.
+ \label{eq:random-gap}
+\end{equation}
+When $r$ divides $m$, the lower bound is attained by instances with
+$D_B>0$, so the factor $m/r$ cannot be improved in general.
+\end{proposition}
+\begin{proof}
+Pad every batch to $B$ queries. Each retains $r$ coordinates, and therefore
+\[
+ \sum_{i=1}^m\mathbb E_\pi v_i(Q)
+ =r\mathbb E_\pi d(S(Q))\geq rh.
+\]
+Its largest expected coordinate coefficient is at least $rh/m$;
+\eqref{eq:random-value} proves the lower bound. A point mass at the
+deterministic optimal batch proves the upper bound. Equality of
+deterministic batch and adaptive optima follows from the preceding
+zero-answer argument.
+
+For sharpness, form $m/r$ coefficient clusters, each containing $r$
+equally spaced points of range $h>0$, and separate adjacent clusters
+by gaps strictly greater than $h$. Every $r$-point subset has range
+at least $h$, and a complete cluster attains it. Uniformly retain one
+cluster and query its complement. Each coordinate then has expected
+coefficient $hr/m$, giving $R_B=Ehr/m$.
+\end{proof}
+
+If $D_B=0$, both optima are zero and their ratio is undefined.
+The ratio also compares the optimal randomized adaptive mean width with
+the deterministic adaptive optimum, by the dual-completion result below. Every realized sharp comparison interval
+contains the comparison value for the fixed record and for every completion
+consistent with its query answers. The improvement is in worst expected width, not a bound
+on every realized width, a higher certification probability, or measured
+retrieval savings. This structured gap formula and compact implementation do not extend here
+to overlapping or uncertain totals, physical caps, or heterogeneous query
+costs. The general information theorem does allow such convex constraints
+and fixed costs.
+
+
+\subsection{Choosing among equally robust policies}\label{sec:tie-selection}
+The primary minimax objective need not select a unique policy. Robust
+optima can be dominated away from their worst case, a general issue studied
+by Iancu and Trichakis~\citep{iancu2014}. For example, take one block with
+$E=1$, $c=(0,2,4,12)$ and $B=2$. A policy retaining pairs
+$\{1,2\},\{1,3\},\{2,3\}$ with probabilities $0.4,0.2,0.4$ has expected
+coefficient vector $(1.6,1.6,1.6,0)$. Retaining $\{1,2\}$ and $\{3,4\}$
+with probabilities $0.8,0.2$ instead gives $(1.6,1.6,1.6,1.6)$.
+Both have optimal worst expected width $1.6$: dual weights
+$(0.2,0.6,0.2,0)$ certify this value. The first policy is never worse,
+and is strictly better when $y_4>0$.
+
+Write $e_{gi}(\pi)=\mathbb E_\pi v_{gi}(Q)$. After finding $R_B$, a
+target-independent secondary rule minimizes
+\begin{equation}
+ H(\pi)=\sum_g\frac{E_g}{m_g}\sum_{i\in\M_g} e_{gi}(\pi)
+ \quad\text{subject to}\quad
+ \sum_g E_g\max_i e_{gi}(\pi)\leq R_B.
+ \label{eq:secondary-policy}
+\end{equation}
+This is expected width at the uniform-within-block feasible completion,
+not an estimated load distribution. It is a linear objective on the
+optimal face of the finite LP. A policy that is no worse at every feasible
+record and strictly better somewhere would also improve $H$, contradicting
+secondary optimality. Thus this standard refinement removes dominated
+expected-width functions; it need not identify a unique distribution or
+maximize certification.
+
+We also check the stronger requirement of never worsening the archived
+policy $\pi_0$. Expected-width dominance is equivalent to
+$\sum_g E_g\max_i[e_{gi}(\pi)-e_{gi}(\pi_0)]\leq0$.
+Block epigraph variables, free in sign, encode this condition linearly.
+Minimizing $H$ over that set preserves a primary-optimal $\pi_0$'s robust
+value in exact arithmetic. The two refinements answer different questions:
+the first chooses a reference criterion on the optimal face; the second
+only allows improvements over the particular saved policy. Neither uses
+hidden targets or guarantees that certification improves.
+
+\subsection{A hardest completion and randomized adaptive optimality}
+\label{sec:adaptive-dual-completion}
+
+Theorem~\ref{prop:risk_classification} already gives equality of randomized
+batch and adaptive mean-width risks for this model. The specialization below
+extracts the common hardest completion directly from the finite-game dual,
+providing a computable optimality certificate for the compact solver.
+Adaptive policies retain the same hard budget $B$, independent random seed,
+exact coordinate information and sharp terminal interval as in
+Section~\ref{sec:risk_setup}.
+
+\begin{proposition}[A common hardest completion]
+\label{prop:adaptive-dual-completion}
+For the disjoint exact-total model, an optimum $w^*$ of
+\eqref{eq:random-dual} defines the active-block values
+$y^*_{gi}=w^*_{gi}$ of a feasible residual completion. Restore each omitted
+constant-coefficient block with any fixed nonnegative allocation of its
+total, and restore the determined singleton and zero-total values.
+For every admissible terminal coordinate set $Q$,
+\begin{equation}
+ W(Q,y^*)\geq R_B.
+ \label{eq:common-hardest-width}
+\end{equation}
+Consequently, if $\mathcal A_B$ is the class of randomized adaptive
+coordinate-query policies satisfying the hard budget, then
+\begin{equation}
+ \inf_{A\in\mathcal A_B}\sup_{y\in\F}
+       \mathbb E[W_A(y)] = R_B.
+ \label{eq:adaptive-random-equality}
+\end{equation}
+The existing compact randomized batch policy attains this value. At $y^*$,
+every execution of every admissible adaptive policy has terminal width at
+least $R_B$, not merely an expectation bounded below by $R_B$.
+\end{proposition}
+
+\begin{proof}
+The dual equalities $\sum_i w^*_{gi}=E_g$ and inequalities $w^*_{gi}\geq0$
+are exactly the active residual target constraints. Restoring the omitted
+blocks gives a member of $\F$; appending the previously observed coordinates
+gives a full record in $F$. Omitted blocks have zero uncertainty contribution.
+Strong linear-programming
+duality gives an optimal dual objective $\eta^*=R_B$; the batch inequalities
+and the identity in \eqref{eq:random-objective} yield
+$W(Q,y^*)=\sum_{g,i}w^*_{gi}v_{gi}(Q)\geq R_B$ for every $Q\in\mathcal Q_B$.
+Querying the last remaining coordinate of a block, repeating a query, or
+querying a coordinate already determined by the retained information adds
+no constraint. Removing those redundant queries leaves an equivalent
+terminal interval. Queries in omitted independent constant-coefficient
+blocks can also be discarded for the width objective: their contrast
+contribution is fixed, and their answers impose no constraint on other
+blocks. The remaining set belongs to $\mathcal Q_B$ and costs no more.
+
+By Proposition~\ref{prop:risk_concavity_transcript}, after fixing the seed,
+the adaptive transcript has exactly the coordinate-observation fiber of
+its terminal set $Q$. Its sharp width is therefore $W(Q,y)$; the query
+choices and stopping decision add no constraints beyond those answers.
+
+At $y^*$ the previous lower bound therefore applies to every terminal
+transcript and seed. Taking expectations and then the worst completion
+gives the lower bound $R_B$ for every adaptive policy. Randomized batches
+are a subclass of adaptive policies, and the compact formulation constructs
+a batch distribution with worst expected width $R_B$, proving equality.
+\end{proof}
+
+This argument uses established linear-programming duality and minimax
+reasoning. Its consequence here is a checkable hardest-record certificate
+for the existing structured optimizer. It does not optimize the expected
+number of requests until certification, the probability that an interval
+excludes zero, or the width on a particular realized historical record.
+
+\paragraph{Extracting a completion from the implementation.}
+The numerical compact implementation explicitly constrains $t_g\geq0$,
+although these bounds are redundant in the mathematical primal. Its
+nonnegative scenario multipliers may therefore satisfy
+$\sum_i\widehat w_{gi}\leq E_g$ rather than equality. In exact arithmetic,
+add each nonnegative mass deficit to a fixed coordinate. Since
+$v_{gi}(Q)\geq0$, this cannot decrease any batch payoff. The resulting
+completion is feasible, and its minimum batch payoff is both at least the
+dual value and at most the primal value; strong duality makes these equal.
+The verification code retains the raw multipliers and records clipping,
+any tiny excess-mass correction, and the added deficits. It checks the
+completed record with the existing weighted pricing oracle and, on small
+instances, by independently enumerating every final coordinate subset
+of size at most $B$, including redundant full-block queries. Numerical
+discrepancies are reported separately from the exact theorem.
+\section{S6. Extended counter and measurement checks}
+\begin{proposition}[Two best-side splits for an arbitrary block]
+Let $n\geq3$, $E>0$, $x\geq0$, $\sum_{h=1}^n x_h=E$, and let the target be
+$d+\sum_hc_hx_h$. Each query returns one internal prefix sum. Write
+$r(p,q)=\max_{p<h\leq q}c_h-\min_{p<h\leq q}c_h$.
+For first boundary $k$, put $\ell_k=r(0,k)$ and $r_k=r(k,n)$.
+Define each of the following quantities whenever its corresponding
+side has an eligible second boundary:
+\[
+ \alpha_k=\min_{1\leq j<k}\max\{r(0,j),r(j,k)\},\qquad
+ \beta_k=\min_{k<j<n}\max\{r(k,j),r(j,n)\}.
+\]
+Choose a minimizing boundary on each side, breaking ties by smallest index.
+When both sides are nonempty, for normalized first answer $t=s_k/E$,
+the optimal conditional worst width is
+\[
+ E\min\{\alpha_k t+r_k(1-t),\ \ell_k t+\beta_k(1-t)\}.
+\]
+Thus only one best boundary on each side is needed, independently of $t$.
+If $\Delta_k=\ell_k+r_k-\alpha_k-\beta_k>0$, the switch is
+\[
+ t_k^\star=\frac{r_k-\beta_k}{\Delta_k}\in[0,1],
+\]
+and the worst width for this first boundary is
+\[
+ A_k=E\max\left\{\alpha_k,\beta_k,
+          \frac{\ell_kr_k-\alpha_k\beta_k}{\Delta_k}\right\}.
+\]
+Use the best right split below the switch and the best left split above
+it; either is valid at equality. If $\Delta_k=0$, the two lines coincide
+and $A_k=E\max\{\ell_k,r_k\}$. At $k=1$ only the right split exists and
+$A_1=E\beta_1$; at $k=n-1$ only the left split exists and
+$A_{n-1}=E\alpha_{n-1}$. The optimal deterministic two-query guarantee is
+$\min_k A_k$.
+\end{proposition}
+\begin{proof}
+All second queries left of $k$ have the common right-side contribution
+$r_k(1-t)$; minimizing their remaining term $t$ times a split range
+selects the same minimizing boundary for every $t\geq0$. The right-side
+argument is identical. Moreover $\alpha_k\leq\ell_k$ and
+$\beta_k\leq r_k$. Hence $\Delta_k\geq0$, and when it is positive the
+displayed intersection belongs to $[0,1]$. The maximum of the lower
+envelope occurs at an endpoint or that intersection. Its endpoint
+values are $\beta_k,\alpha_k$, and its intersection value is the displayed
+quotient. If $\Delta_k=0$, both nonnegative differences vanish, so the
+lines coincide. At an outer eligible boundary the single-hour side has
+zero coefficient range, giving the stated one-line values.
+\end{proof}
+
+All contiguous ranges can be built in $O(n^2)$ arithmetic operations
+and stored in $O(n^2)$ space. Scanning the candidates for every
+$\alpha_k,\beta_k$ costs another $O(n^2)$ operations; the closed forms
+then cost $O(n)$. This is an arithmetic-operation bound for the exact-total,
+uncapped two-prefix problem, not a bit-complexity or noisy-polytope claim.
+For $n=2$, the single internal register determines both increments;
+for $n=1$ the total already determines the only increment.
+
+\paragraph{Uniform-cap verification oracle.}
+For the separate sensitivity scenarios $0\leq x_h\leq u$, a segment
+containing sorted coefficients $a_1\leq\cdots\leq a_m$ has a sharp-width
+function of its retained mass $s$ with slopes
+\[
+ a_m-a_1,\ a_{m-1}-a_2,\ldots,\ a_1-a_m,
+\]
+each over a mass interval of length $u$. These slopes are nonincreasing.
+For a collection of segments with an unknown allocation of a fixed total
+mass, merge their slope lists in decreasing order and integrate to that
+mass. This computes the largest sum of their sharp widths: allocating
+mass to the greatest available marginal slope respects each segment's
+precedence because its slopes are already decreasing.
+
+For a first prefix of mass $s$, the conditional worst width of a second
+query is the merged-left value at $s$ plus the merged-right value at
+$E-s$. It is concave and piecewise affine, with breakpoints at multiples
+of $u$ and at $E$ minus those multiples, restricted to the feasible
+first-answer interval
+$[\max(0,E-(n-k)u),\min(E,ku)]$.
+On each common breakpoint interval, compute the lower affine envelope
+over second queries, including intersections, and maximize it. This gives
+an exact rational oracle when the inputs are rational. It independently
+checks the generic endpoint LP; it does not reuse the uncapped two-line
+formula under caps.
+\subsection{Counter retrieval: a practical adaptive precision separation}
+\label{sec:counter-precision-results}
+The counter study tests the same precision objective as the separation
+theorem on existing frozen ML comparisons. Its operational decision is
+whether to reserve feedback between two register retrievals in order to
+meet a required precision for every feasible energy allocation.
+It uses the three actual cumulative consumption counters described in
+Appendix~\ref{app:historical-design}, their 91 eligible test days, four
+existing forecasters and all six pairs. Blocks are $[00,06)$, $[06,12)$
+and $[12,18)$ UTC, yielding $3\times91\times3\times6=4,914$ audits.
+The 18:00--24:00 block is excluded to avoid ambiguity about the next
+day's forecast availability at midnight. Each audit occurs just after its block ends. Its start/end counters and
+day-start predictions are permitted. The following day's persistence
+forecasts are unavailable under this declared issue schedule; they are
+not suppressed from an already completed full-period archive. No measured
+arrival times are inferred. Increments use integer subtraction at exact
+UTC endpoints before conversion to kWh, with no interpolation.
+
+The interface returns one stored cumulative register per request. Five
+internal hourly registers are eligible and the hard budget is two per
+standalone pair/block audit, for every policy. The six pairs represent
+alternative audits; a joint four-model workflow could share registers and
+would require separate cost accounting. Hourly increments and full-trace exports are
+not offered at that price. This is a specified access replay, not a claim
+that the source deployed such a retrieval service. All information admitted
+by this per-audit protocol is used; concentration-profile witnesses satisfy the retained
+total and nonnegativity constraints. No empirical maximum is imposed as a
+physical cap. Additional defensible caps or measurements would require
+recomputing both policies and adverse witnesses.
+
+The protocol was frozen before the new geometry calculations and
+audit-answer replay. The primary requirement is $W\leq0.5W_0$: a
+scale-free uncertainty-reduction service level known before retrieval,
+not a calibrated economic loss threshold or a guarantee of a winning
+model. An operational auditor can instead specify an absolute MSE-width
+budget; the policy construction accepts that threshold. Here
+the fixed sensitivity fractions are $0.25,0.4,0.5,0.6,0.75$.
+The first 20 eligible days per meter form a 1,080-task feasibility panel;
+the unchanged design continues over the remaining 3,834 tasks. These are
+previously used meters and forecasts, not untouched-source validation.
+For each audit, only its forecasts, outer total and permitted prior-day
+records enter policy construction. The shared preparation step loads
+hourly endpoint tables to restore prior-day persistence; it does not
+enforce physical isolation of source files. The geometry routine receives
+only that audit's forecast-derived coefficients. The second adaptive query
+uses those coefficients, the outer total and the first queried answer;
+unqueried within-block answers enter subsequent outcome evaluation only.
+This is a per-audit dependency restriction. The comparison ledgers
+retain every task; none has zero initial width.
+
+Five policies share these inputs and queries: the exact deterministic
+adaptive worst-width policy; the best deterministic batch for worst width;
+a randomized batch optimizing worst expected width; uniform random choice
+among the ten batches; and greedy adaptive refinement. Greedy minimizes
+the one-query worst width, with ties resolved by the best two-query
+guarantee, then minimizes the conditional second-query worst width.
+This favorable tie rule avoids an artificial gain from a poor greedy tie.
+Deterministic batch ties minimize uniform-vertex mean width. The mean-optimal
+batch uses the same secondary criterion on its optimal face, eliminating
+pointwise-dominated optima up to numerical tolerances. It is not labeled precision-optimal.
+Expectations for randomized policies sum their ten batch probabilities
+exactly, rather than sampling random seeds.
+
+\paragraph{Guarantees before retrieval.}
+Two adaptive readings guarantee the primary precision in 4,661 tasks
+(94.85\%). In 290 tasks (5.90\%), the guarantee is accompanied by an
+adverse-profile certificate limiting \emph{every} randomized batch to
+worst-case success at most 50\%. Thus these are not merely wins over a
+chosen heuristic. The complete decision partition in
+Table~\ref{tab:counter-guarantees} identifies when feedback is needed.
+The six model pairs contribute respectively 45 (persistence/ridge),
+43 (persistence/boosting), 47 (persistence/MLP), 35 (ridge/boosting),
+48 (ridge/MLP) and 72 (boosting/MLP) such cases. The feasibility and
+continuation panels contribute 68 and 222. The instances are identified
+from permitted information before evaluating that audit's replay answers.
+
+\begin{table}[htbp]\centering\small
+\caption{Complete pre-retrieval decision partition at the unchanged primary
+threshold $0.5W_0$, with two optional registers. Batch suffices means
+$D\leq\tau$; feedback essential means $A\leq\tau<D$; no adaptive guarantee
+means $\tau<A$ for deterministic two-query policies. All feedback-essential
+cases have exact optimal randomized-batch success $1/2$. The partition is
+a post-analysis diagnostic; no cases or outcomes are excluded.}
+\label{tab:counter-guarantees}
+\begin{tabular}{lrrrr}\toprule
+Meter & Tasks & Batch suffices & Feedback essential & No adaptive guarantee\\\midrule
+1 & 1,638 & 1,460 & 97 & 81\\
+2 & 1,638 & 1,430 & 103 & 105\\
+3 & 1,638 & 1,481 & 90 & 67\\
+All & 4,914 & 4,371 & 290 & 253\\\bottomrule
+\end{tabular}\end{table}
+
+Corollary~\ref{cor:counter-feedback-triage} makes this an exhaustive
+feasibility decision. A fixed batch already guarantees precision in
+4,371 tasks (88.95\%). The 290 strong-separation cases exhaust the tasks
+where feedback changes feasibility of a deterministic two-query guarantee;
+they are not merely a favorable subset of a larger unidentified group.
+In the remaining 253 tasks (5.15\%), that guarantee requires a changed
+budget, threshold or information set. The supplement's recommendation
+ledger returns a guaranteeing batch, an adaptive first query and conditional
+second-query rule, or an unresolved flag, respectively. It uses only the
+coefficient geometry and initial total. This post-analysis partition
+does not replace the prespecified prevalence screen or reduce the
+two-reading budget; it identifies when a sequential response is necessary
+for the requested assurance.
+
+A post-analysis executable variant uses a guaranteeing fixed batch on
+those 4,371 tasks and the original adaptive policy elsewhere. This preserves
+the original policy's primary precision-success indicator for every
+feasible completion: where a substitution occurs, both policies guarantee
+success; elsewhere they are identical. It therefore avoids the need for a
+sequential response on 88.95\% of tasks without changing this precision
+outcome or the two-reading count. In recorded replay, both reach 98.64\%
+success; the variant's mean width is slightly higher (18.72\% versus
+18.59\% of initial width). This result concerns the number of information
+rounds needed by the specified protocol, not measured latency, retrieval
+cost or preservation of every other objective.
+
+\paragraph{The distribution and exact optimality of the batch bound.}
+Among these 290 cases, the minimum, 25th percentile, median, 75th
+percentile and maximum of the rational adverse-profile bounds are all
+exactly $1/2$. All 290 equal $1/2$; none is below $1/2$, $0.4$, $0.3$
+or $0.2$. This is exact equality, not rounding of nearby LP solutions.
+Corollary~\ref{prop:counter-half-floor} explains why the lower tail
+cannot extend below $1/2$ when a deterministic two-register policy
+guarantees the precision. For each case, a constructed equal mixture of
+two batches succeeds with probability at least $1/2$ on \emph{every}
+completion. The independently checked finite adverse profiles give the
+opposite inequality for every randomized batch. Consequently,
+\[
+ \underbrace{S_B^\star\geq\tfrac12}_{\text{two-batch cover of every completion}}
+ \quad\text{and}\quad
+ \underbrace{S_B^\star\leq\tfrac12}_{\text{finite adverse-profile certificate}}
+ \quad\Longrightarrow\quad S_B^\star=\tfrac12.
+\]
+The finite profile set is sufficient for the upper bound; the lower bound
+comes from the continuum covering proof, not from testing those profiles.
+Thus the 290 cases attain the largest possible precision-success gap
+between guaranteed deterministic adaptation and a randomized batch under
+this two-register structure. This sharp guarantee does not assert a
+similarly large gap on the recorded responses.
+
+\begin{table}[htbp]\centering\small
+\caption{Three inspectable witnesses: the earliest qualifying case from
+each meter, all on 1 October 2017. P=persistence, H=boosting, R=ridge,
+M=MLP; times are UTC. Query indices are hours after block start and
+$t=(C_k-C_0)/E$ is the first answer. The two-branch rule is a sufficient
+precision-guaranteeing policy; the measured adaptive algorithm can choose
+other second queries to minimize conditional width. Each listed batch
+pair is mixed with probabilities $(1/2,1/2)$. Success columns are worst-case
+guarantees at $\tau=W_0/2$, not observed frequencies.}
+\label{tab:counter-witnesses}
+\begin{tabular}{lcllrr}\toprule
+Meter: pair, block & $k$ & Second query & Batch support & $S_A$ & $S_B^\star$\\\midrule
+1: P/H, 06--12 & 3 & $5$ if $t\leq1/4$, else $2$ & $\{3,5\},\{2,3\}$ & 1 & $1/2$\\
+2: P/M, 06--12 & 4 & $5$ if $t\leq1/2$, else $2$ & $\{4,5\},\{2,4\}$ & 1 & $1/2$\\
+3: R/M, 00--06 & 4 & $5$ if $t\leq3/4$, else $1$ & $\{4,5\},\{1,4\}$ & 1 & $1/2$\\\bottomrule
+\end{tabular}\end{table}
+Appendix~\ref{app:complete-counter-witness} gives one complete empirical
+witness, including its rational coefficients and every batch-width vector.
+All 290 exact covering intervals, batch supports, adverse weights and
+case identifiers are supplied, with a program to regenerate them.
+The cover and bound-distribution diagnostic was added after the primary
+replay; it does not change the prespecified policies or thresholds.
+The constructive mixture need not be unique or best on the recorded
+trace among equally minimax-optimal mixtures. Its post-analysis descriptive replay is shown alongside the prespecified
+comparisons below. The rule chooses the longest good prefix and earliest
+good suffix, breaking ties by smallest second-query index, then mixes
+their batches equally. It uses no internal answers. Precision optimality
+holds on the 290 cases only; it does not imply best recorded performance
+among all equally optimal mixtures.
+
+For these same instances the general theorem still rules out an improvement
+in the \emph{optimal worst expected width} through adaptation. The practical
+consequence of the classification is therefore an objective-dependent
+acquisition choice: the mean-width guarantee can use a batch, whereas
+all-completions attainment of this precision requires feedback on the
+certified subset. This statement concerns the uncertainty set and query
+interface, not the frequency of adverse energy profiles in deployment.
+
+\paragraph{Replay on recorded answers.}
+Table~\ref{tab:counter-replay} reports the complete grid and the subset
+selected by the pre-answer guarantee. On that subset, adaptive precision
+success is 100\%, compared with 97.24\% for the best deterministic
+worst-width batch, 80.01\% for the mean-optimal randomized batch and 96.21\%
+for greedy adaptation. Across all tasks, the corresponding adaptive gains
+are 0.407, 5.960 and 0.672 percentage points. All-task precision success
+exceeds each nonadaptive comparator on each meter. The subset's
+deterministic batch also reaches 100\% on meter 2, and its mean realized
+width there is slightly smaller than adaptive; superiority at every
+record or every meter/metric is not asserted.
+
+\begin{table}[htbp]\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Recorded-register replay with two readings per standalone audit.
+All entries are percentages: P is precision success, W is mean $W/W_0$,
+and O is ordering certification (interval excluding zero). The subset is
+selected by pre-answer guarantees. Randomized entries are exact expectations
+over their batch mixtures. The added precision-optimal cover is defined and
+proved optimal only on this subset; dashes make no full-panel claim.}
+\label{tab:counter-replay}
+\begin{tabular}{lrrrrrr}\toprule
+ & \multicolumn{3}{c}{All 4,914 tasks} & \multicolumn{3}{c}{290-case subset}\\
+Policy & P & W & O & P & W & O\\\midrule
+Exact adaptive & 98.64 & 18.59 & 50.49 & 100.00 & 33.72 & 28.97\\
+Best deterministic batch & 98.23 & 18.87 & 49.84 & 97.24 & 35.28 & 25.52\\
+Mean-optimal random batch & 92.68 & 22.83 & 45.42 & 80.01 & 41.21 & 24.43\\
+Precision-optimal cover & -- & -- & -- & 75.34 & 43.12 & 22.76\\
+Uniform random batch & 63.04 & 42.59 & 24.79 & 41.79 & 53.10 & 18.76\\
+Greedy adaptive & 97.96 & 18.84 & 50.33 & 96.21 & 34.67 & 28.62\\
+\bottomrule\end{tabular}\end{table}
+
+The precision-optimal cover succeeds on every recorded trace with
+probability at least $1/2$: 147 cases have success one and 143 have
+success $1/2$, giving $437/580=75.34\%$ overall. Its mean width is
+43.12\% of initial width and its ordering-certification rate is 22.76\%.
+Thus optimal worst-case precision does not entail superior recorded
+success to a policy optimizing a different criterion. The matching
+100\%-versus-50\% assurance result remains independent of these frequencies.
+
+\begin{table}[htbp]\centering\small
+\caption{Paired outcomes: exact adaptation versus the best deterministic
+worst-width batch. A net gain is the difference between the two one-policy
+columns; the rows retain countervailing cases.}\label{tab:paired-outcomes}
+\begin{tabular}{llrrrr}\toprule
+Tasks & Outcome & Both & Adaptive only & Batch only & Neither\\\midrule
+All 4,914 & Precision & 4,817 & 30 & 10 & 57\\
+All 4,914 & Ordering & 2,411 & 70 & 38 & 2,395\\
+Subset 290 & Precision & 282 & 8 & 0 & 0\\
+Subset 290 & Ordering & 70 & 14 & 4 & 202\\
+\bottomrule\end{tabular}\end{table}
+
+Precision success for adaptive/fixed batch is 98.84/98.72\%,
+98.11/97.86\%, and 98.96/98.11\% on meters 1--3. Ordering certification
+is 36.75/36.08\%, 43.65/43.77\%, and 71.06/69.66\%, respectively;
+the fixed batch slightly leads on the second meter for this outcome.
+On the initial 1,080 tasks, precision is 97.96/97.87\%; on the 3,834-task
+continuation it is 98.83/98.33\%. These are within-source temporal summaries,
+not independent replications. Repeated pairs and blocks are not treated
+as independent population observations.
+
+Normalized by squared training mean hourly energy, mean absolute MSE
+widths are 0.34049 (adaptive), 0.35056 (deterministic batch), 0.42274
+(mean-optimal batch), 0.80134 (uniform) and 0.34526 (greedy).
+The paired ordering counts show why a precision guarantee should not be
+read as an automatic model-selection decision.
+
+\begin{table}[htbp]\centering\small
+\caption{The complete predeclared precision curve. Guarantee and separation
+are task counts before retrieval; strong separation uses batch upper bound
+$\leq0.7$. Success is each policy's percentage on all recorded tasks.
+Only $0.5W_0$ is primary.}
+\label{tab:counter-curve}
+\begin{tabular}{rrrrr}\toprule
+$\tau/W_0$ & Guarantees & Strong separation & Adaptive success & Det.\ batch success\\\midrule
+0.25 & 2,614 & 493 & 74.50 & 73.79\\
+0.40 & 4,219 & 576 & 94.85 & 94.28\\
+0.50 & 4,661 & 290 & 98.64 & 98.23\\
+0.60 & 4,847 & 251 & 99.84 & 99.69\\
+0.75 & 4,907 & 107 & 99.98 & 100.00\\\bottomrule
+\end{tabular}\end{table}
+\FloatBarrier
+
+The initial screening target required strong separation in at least 10\%
+of primary tasks, across all meters and at least three pairs, together
+with an observed gain over every nonadaptive comparator overall and per
+meter. The prevalence condition was not met: 5.90\% is reported instead,
+and the primary threshold is unchanged. The other conditions hold.
+The contribution is a certified, identifiable subset with a large
+worst-case precision gap and a smaller observed gain, not ubiquitous
+large average improvement. The complete sensitivity curve is retained
+without promoting a secondary threshold to primary status.
+
+\paragraph{Executable checks.}
+The new triage recomputation independently reconstructs all ten batch
+width vectors and five adaptive envelopes using rational arithmetic on
+the serialized coefficients. All 4,914 finite-profile games have matching
+rational primal and dual values; the largest discrepancy from saved
+numerical geometry is $2.72\times10^{-16}$. Neither an adaptive nor a
+fixed-batch guarantee classification is within $10^{-8}W_0$ of the primary
+threshold. Thus the reported partition is unchanged by the documented
+floating-point margin rule. Its ledger and executable recommendations are
+checked independently of the replay outcomes.
+
+Source audits verify the exact 91-day calendars, all 819 blocks, integer
+counter telescoping and all 6,552 frozen hourly forecast rows. All 4,914
+policy inputs match the original frozen forecast archive numerically,
+including regenerated persistence. Independently written checks validate
+each original serialized coefficient vector's adaptive envelope and
+adverse-profile distribution using rational arithmetic and enumerate all
+ten batches. The final second-query rule uses exact rational coefficients
+and integer-counter answer ratios. This numerical hardening followed the
+preliminary feasibility replay; both panels were then rerun with the same
+objectives, thresholds, query dictionary and case list. The protocol and
+implementation amendment are retained. The LP-derived secondary mean policy's
+maximum optimal-face discrepancy is $2.15\times10^{-10}$.
+Separate raw-register checks reproduce all 24,570 policy evaluations and
+49,140 sharp batch intervals, with zero containment failures and zero
+precision-success discrepancies. In 480 independently assembled endpoint
+LPs, the largest endpoint difference is $2.23\times10^{-16}$.
+Independent numerical cross-checks use scale-aware tolerances of $2\times10^{-8}$;
+the exact rational witness checks apply to the serialized input instances,
+not to unmodeled meter error. Online Resource 1 supplies source hashes,
+policies, aggregate ledgers and the raw-source regeneration command for
+the counter-dependent per-case geometry and query traces.
+
+\section{A Complete Empirical Precision Witness}
+\label{app:complete-counter-witness}
+Consider meter 1, persistence versus boosting, 1 October 2017, 06:00--12:00
+UTC: the earliest qualifying case for that meter. Its measured block total is
+$E=23064980899/5000000000$ kWh. Set $z=y/E$ and
+$q=(c-\min_hc_h)/(\max_hc_h-\min_hc_h)$. This positive normalization
+preserves widths as fractions of $W_0$ because the total is exact. The
+following rational vector encodes the original serialized binary64
+coefficients exactly (no displayed-decimal rounding is used):
+\[
+q=\frac1M\begin{pmatrix}
+82036457153278624\\74339551516345942\\0\\46902318275730752\\70613562702081589\\24512796865344392
+\end{pmatrix},\qquad M=82036457153278624,\qquad \sum_hz_h=1.
+\]
+For any batch $Q$, the normalized width is $v_Q^\top z$.
+Table~\ref{tab:complete-witness-widths} supplies every $Mv_Q$.
+The adverse distribution assigns probability $1/2$ each to $z=e_2$ and
+$z=e_5$. Its success column is at most $1/2$ for every batch, proving
+the batch upper bound at threshold $1/2$.
+
+\begin{table}[htbp]\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Complete witness width vectors. Entries are exact integer
+numerators divided by $M$; notation $[a,b,c]_{2,1,3}$ means that $a$
+is repeated twice, $b$ once and $c$ three times. Success averages over
+$e_2,e_5$, not the observed trace.}\label{tab:complete-witness-widths}
+\begin{tabular}{clc}\toprule
+$Q$ & $Mv_Q$ (run lengths) & Adverse success\\\midrule
+$\{1,2\}$ & $[0,70613562702081589]_{2,4}$ & $1/2$\\
+$\{1,3\}$ & $[0,74339551516345942,46100765836737197]_{1,2,3}$ & $0$\\
+$\{1,4\}$ & $[0,74339551516345942,46100765836737197]_{1,3,2}$ & $0$\\
+$\{1,5\}$ & $[0,74339551516345942,0]_{1,4,1}$ & $0$\\
+$\{2,3\}$ & $[7696905636932682,0,46100765836737197]_{2,1,3}$ & $1/2$\\
+$\{2,4\}$ & $[7696905636932682,46902318275730752,46100765836737197]_{2,2,2}$ & $1/2$\\
+$\{2,5\}$ & $[7696905636932682,70613562702081589,0]_{2,3,1}$ & $1/2$\\
+$\{3,4\}$ & $[82036457153278624,0,46100765836737197]_{3,1,2}$ & $0$\\
+$\{3,5\}$ & $[82036457153278624,23711244426350837,0]_{3,2,1}$ & $1/2$\\
+$\{4,5\}$ & $[82036457153278624,0]_{4,2}$ & $1/2$\\
+\bottomrule\end{tabular}\end{table}
+
+The adaptive witness queries boundary $3$ first and observes
+$t=z_1+z_2+z_3$. It queries $5$ if $t\leq1/4$ and $2$ otherwise.
+Its two conditional upper bounds, in units of $W_0$, are
+\[
+ \begin{aligned}
+ L_{3,5}(t)&=t+\frac{23711244426350837}{M}(1-t),\\
+ L_{3,2}(t)&=\frac{7696905636932682}{M}t+
+                    \frac{46100765836737197}{M}(1-t).
+ \end{aligned}
+\]
+On their selected branches both are at most $1/2$ (the maximum is
+approximately $0.4668$). These branches cover every $t\in[0,1]$.
+The equal mixture of batches $\{3,5\}$ and $\{2,3\}$ therefore succeeds
+on every feasible record with probability at least $1/2$. Together with
+the adverse column above this gives $S_B^\star=1/2$ and $S_A=1$.
+The certificate concerns the serialized contrast and exact-total model;
+additional measurement or capacity constraints require a new calculation.
+
+\section{A bounded-error extension and its interpretation}\label{app:stored-error}
+Let $m_h$ be accumulated meter increments, $x_h$ latent physical increments,
+and $r_0,r_6$ stored outer readings, with $E_{\mathrm{obs}}=r_6-r_0$.
+A declared conditional relative-increment allowance $0\leq\alpha<1$ and
+finite storage-error bounds $\delta_k\geq0$ define the following
+polytope, assumed nonempty. It is compact because the upper total bound
+bounds the nonnegative increments and all error coordinates are bounded:
+\[
+\begin{gathered}
+ x_h,m_h\geq0,\quad(1-\alpha)x_h\leq m_h\leq(1+\alpha)x_h,\quad
+ |b|\leq\delta_0,\quad |e_k|\leq\delta_k,\\
+ E_{\mathrm{obs}}-\delta_6\leq b+\sum_hm_h\leq E_{\mathrm{obs}}+\delta_6.
+\end{gathered}
+\]
+An internal query returns the exact stored readout
+$b+\sum_{h\leq k}m_h+e_k=r_k-r_0$, and the target remains $d+c^\top x$.
+Thus fixed stored errors can be coordinates of the latent record, fixed
+before algorithmic randomization, and the convex exact-linear-query
+results apply to this enlarged model. The five first-query LPs have
+146 variables each, or 98 when $\alpha=0$ permits identifying $m=x$.
+
+This is a sensitivity model, not a verified meter specification.
+An accuracy class does not by itself justify applying $\alpha$ to every
+hour, and it is not a relative error bound on a lifetime cumulative register.
+Exact float quantization has a nonconvex graph; a bounded-error polytope
+is a conservative outer model, with optimality only for that model.
+Actual stored values can be replayed, but they do not reveal latent
+physical truth. The original coefficient offset must be retained:
+subtracting $\min_hc_h$ changes the target uncertainty when its total
+is no longer fixed.
+
+Eighteen constructed prototype cases check exact limits, bounded-error
+examples and coupled polytopes. Their scalar-first two-successor values
+agree with the full successor family within $4.0\times10^{-15}$.
+Separate numerical checks include zero-width cases, latent-record feasibility
+and extracted-policy upper values, with maximum discrepancy
+$8.89\times10^{-15}$. These are floating-point within-study checks using
+$10^{-9}$ LP tolerances, not external-meter validation or human specialist
+confirmation. The tested nonzero-error settings destroy the half-width guarantee in the
+constructed example lying exactly at the threshold, so empirical
+robustness must be evaluated rather than inferred.
+
+\paragraph{Certified bounded stored-readout sensitivity.}\label{sec:stored-error-sensitivity}
+We retain all 29 external half-separation cases and ask whether feedback's
+assurance advantage survives errors in the retrieved internal readings.
+Normalize the retained total to one and divide the original coefficient
+vector by its positive range, without translation. Certificate-LP widths
+are then measured in units of the original $W_0$, with initial width one.
+The hidden record consists of
+$y_h\geq0$, $\sum_h y_h=1$, and five fixed errors
+$e_k\in[-\delta,\delta]$; query $k$ returns
+$\sum_{h\leq k}y_h+e_k$. Errors are fixed before policy randomization.
+The endpoints remain exact, and no hourly cap is imposed in this separate
+sensitivity calculation. Before solving, we fixed
+$\delta\in\{0,0.001,0.01\}$ and the unchanged requirement $W\leq W_0/2$.
+Initial width remains $W_0$, so halving the new initial width gives the
+same threshold. These allowances concern block-total units; they are
+illustrative bounds, not calibrated physical-device specifications.
+
+\begin{table}[htbp]\centering\small
+\caption{Guarantees certified on the fixed 29-case external subset under
+bounded internal-readout errors and exact endpoints. Every passing case
+has adaptive worst-case success one and optimal randomized-batch worst-case
+success exactly $1/2$. All six model pairs are represented at each level.
+Exact lower witnesses rule out a deterministic two-query guarantee in the
+remaining cases.}
+\label{tab:stored-error-certificates}
+\begin{tabular}{lrrrr}\toprule
+Error allowance & Certified cases & System 1 & System 2 & System 7\\\midrule
+$0$ & 29/29 & 2/2 & 14/14 & 13/13\\
+$0.001E$ & 27/29 & 2/2 & 13/14 & 12/13\\
+$0.01E$ & 22/29 & 2/2 & 12/14 & 8/13\\\bottomrule
+\end{tabular}\end{table}
+
+The positive-error guarantees in Table~\ref{tab:stored-error-certificates}
+are established by exact rational upper certificates, not a numerical
+threshold tolerance. For each of the 49 successful case--allowance
+combinations, retain its first query and at most two successors. Write
+its shared-answer endpoint LP in minimum form as $f^\top z=-\eta$,
+subject to $Az\leq b$, $Hz=h$ and valid finite bounds $L\leq z\leq U$.
+For rational multipliers $\lambda\leq0$ and unrestricted $\nu$, put
+$r=f-A^\top\lambda-H^\top\nu$. Standard weak duality with a box correction gives
+\[
+ f^\top z\ \geq\ \lambda^\top b+\nu^\top h+
+       \sum_j\min\{r_jL_j,r_jU_j\}=:\ell.
+\]
+Thus $-\ell$ rigorously bounds that support-defined adaptive policy's
+worst width, even without exact stationarity of the proposed multipliers.
+The boxes follow from the model: increments lie in $[0,1]$, errors in
+$[-\delta,\delta]$, $\eta\in[0,1]$, and the first answer in
+$[-\delta,1+\delta]$. Two solver-free implementations reconstruct the LPs
+from the original serialized coefficient fractions and verify every bound.
+All 49 exact upper bounds are below $1/2$; the smallest certified margin
+exceeds $0.003759W_0$. This certifies a policy that chooses an exact
+conditional-width minimizer from its saved successor support, without
+claiming an exact optimal-width value. The $0.01E$ fallback below additionally
+certifies executable branching.
+
+The original exact adverse-profile upper bound $S_B^\star\leq1/2$ remains
+valid because every zero-error record and its old fiber are included in
+the enlarged model. The certified two-successor policy supplies the
+matching all-completions batch lower guarantee by the scalar-first support
+result. Consequently the exact success separation survives in the stated
+27 and 22 cases, including every system and model pair. No deterministic
+batch guarantees the threshold on any of the original 29 cases at these
+error levels. Independent error-eliminated LPs also reproduce all 87
+case--level calculations, with maximum discrepancy $1.89\times10^{-15}$.
+The complete ledger and 49 rational upper certificates remain available.
+
+The remaining two cases at $0.001E$ and seven at $0.01E$ are now resolved
+by separate exact lower witnesses. For every legal first query $k$, a
+rational answer $t_k$ is supplied; for each possible second query $j$, two
+feasible latent records share first answer $t_k$ and an identical second
+answer, while their target contrast exceeds $W_0/2$. A deterministic policy
+must choose one such $j$ after $t_k$, so some permitted record leaves its
+terminal interval wider than the requirement. Stopping earlier gives a
+coarser fiber. Two solver-free checks verify all 45 first-query witnesses
+and 180 endpoint pairs, with smallest strict excess greater than
+$5.9060\times10^{-6}W_0$. Thus no deterministic policy with the same
+two-query budget can guarantee the threshold in those cases. This lower
+bound does not assert impossibility for other budgets or policy objectives.
+The corresponding numerical optimal widths at $0.01E$ range from
+$0.500005906W_0$ to $0.530000000W_0$. The difference from 29/29 at zero error
+is a loss of attainable assurance as the observational fibers expand,
+rather than a missing successful certificate or an LP tie-breaking choice.
+
+\paragraph{A certified budget fallback covering all 29 cases.}
+A separate post-analysis calculation keeps the same cases, $0.01E$ error
+allowance, exact endpoints and $W_0/2$ requirement, but permits a third
+reading when two are insufficient. It enumerates all 31 nonempty fixed
+batches per case (899 LPs). Exact rational upper certificates verify a
+three-reading fixed batch for every case; the largest certified bound is
+$0.458896W_0$. The acquisition rule selects a previously certified
+two-query adaptive support for the 22 cases, and a certified three-query
+fixed batch for the other seven, using only coefficients and initial
+constraints before retrieval. It therefore guarantees the requirement in
+all 29 cases with maximum budget three.
+
+For the 22 two-reading prescriptions, rational conditional dual bounds
+give affine upper bounds indexed by possible second queries. Their lower
+envelope is at most $W_0/2$ on the entire first-answer interval
+$[-0.01,1.01]$, verified at every endpoint and line intersection. The
+implementation selects a minimizing bound by exact rational comparisons,
+then requests that second reading; no online LP is needed. This branch
+rule has the required assurance but need not select the same branch as
+the original conditional-width minimizer, so the earlier recorded replay
+figures are not attributed to it. Separate tests cover 1,015 executions on
+constructed feasible records and reject out-of-model transcripts; the
+continuous guarantee follows from the exact certificates, not these tests.
+
+\begin{table}[htbp]\centering\small
+\caption{Post-analysis budget fallback on the unchanged 29-case external
+subset at $0.01E$ internal error. Totals sum hard reading allowances across
+separate pairwise audits; they are not measured API requests or costs.}
+\label{tab:stored-error-fallback}
+\begin{tabular}{lrrr}\toprule
+Policy & Guaranteed cases & Maximum budget & Total allowances\\\midrule
+Two-query adaptive & 22/29 & 2 & 58\\
+Minimum fixed-batch budgets & 29/29 & 3 & 87\\
+Certified two-or-three rule & 29/29 & 3 & 65\\\bottomrule
+\end{tabular}\end{table}
+
+These are the minimum per-case deterministic hard budgets: a one-query
+policy is a fixed batch and cannot guarantee the threshold on any of these
+cases; the seven lower witnesses additionally rule out two-query policies.
+The upper certificates attain the corresponding budgets of two and three.
+Every nonadaptive batch with at most two queries still has a failing
+completion, so randomization cannot give sure success using any such batch
+with positive probability. Thus three readings per case also attain the
+minimum nonadaptive budget for sure success. The reduction from 87 to 65 is
+$22/87=25.29\%$ in reserved readings on this selected subset. It does not
+optimize expected stopping costs, share readings across model pairs, or
+change the original two-query result; full-range retrieval remains the
+preferred option on the measured public API.
+\FloatBarrier
+\section{S7. Detailed computational verification}
+\section{Computational Verification and Historical Application}
+\label{sec:evaluation}
+The evaluation separates proofs, constructed algorithm checks, saved-forecast
+replay, a frozen external-source replication with fresh model fits, and
+an actual public-API retrieval benchmark. The historical forecast inputs
+remain unchanged. LP calculations use explicit floating-point tolerances;
+particular serialized counter coefficients and adverse distributions are
+also checked using exact rational arithmetic. These checks establish
+the reported computation under its measurement model. The external-source
+study is a new public-data replication by the same author, not independent
+human validation.
+
+\subsection{Comparative formulations and scaling}
+The existing frozen grid has 24 base aggregate instances with one, two or four
+blocks, six or twelve coordinates per block, budgets near one quarter or
+one half of the coordinates, and two joint coefficient/total profiles.
+Four additional one-block profiles use 24 or 48 coordinates, giving 28 in total. The cases
+and enumeration rule were fixed before that audit. All 28 compact solves
+completed; the 12 prescribed finite-game comparisons agreed within
+$1.27\times10^{-15}$ after scaling by $\max(1,W_0)$. The other 16 cases
+were skipped by the enumeration rule, not observed to fail.
+
+Table~\ref{tab:risk_paired_solvers} exposes both methods' measured
+construction/solve times and whole-worker peak memory on the same eligible
+cases, including cases where enumeration is faster. This is comparative
+evidence against the enumerated formulation, not against every alternative
+compact solver. The larger compact-only runs establish operability within
+this grid rather than a measured speedup over an unexecuted competitor.
+Detailed per-case dimensions, residuals and outcomes are bundled.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Paired saved solver measurements on all 12 instances eligible for finite enumeration. Within each C/F cell, C is compact and F is finite-game enumeration. $(G,m,B)$ gives blocks, coordinates per block, and budget; D and T denote distinct and tied coefficient profiles. Method times include construction and solving; compact also compiles its executable policy. Peak memory is absolute process working-set memory, including the runtime. Each entry is one archived measurement, not a repeated-run timing estimate.}
+\label{tab:risk_paired_solvers}
+\begin{tabular}{llrrr}
+\toprule
+Case & $(G,m,B)$/profile & LP variables C/F & Time C/F (ms) & Memory C/F (MiB)\\
+\midrule
+C01 & $(1,6,1)$/D & 14/7 & 15.08/6.94 & 71.70/71.24 \\
+C02 & $(1,6,1)$/T & 14/7 & 9.61/8.66 & 71.42/70.93 \\
+C03 & $(1,6,3)$/D & 31/21 & 19.16/11.26 & 71.46/71.11 \\
+C04 & $(1,6,3)$/T & 31/21 & 11.03/6.70 & 71.46/71.28 \\
+C05 & $(1,12,3)$/D & 91/221 & 14.00/23.28 & 71.78/71.94 \\
+C06 & $(1,12,3)$/T & 91/221 & 12.27/15.26 & 71.80/71.89 \\
+C07 & $(1,12,6)$/D & 197/925 & 14.06/65.50 & 72.03/73.84 \\
+C08 & $(1,12,6)$/T & 197/925 & 22.68/77.75 & 72.06/74.02 \\
+C09 & $(2,6,3)$/D & 142/222 & 12.57/28.58 & 71.92/71.78 \\
+C10 & $(2,6,3)$/T & 142/222 & 24.10/31.10 & 71.92/71.90 \\
+C11 & $(2,6,6)$/D & 164/924 & 22.39/32.87 & 72.13/73.42 \\
+C12 & $(2,6,6)$/T & 164/924 & 19.89/59.08 & 72.13/73.24 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+The compact method is faster in eight of the 12 paired archived runs;
+enumeration is faster in the four six-coordinate single-block cases.
+Compact has fewer variables in eight cases and lower whole-process peak
+memory in six. Its timing includes executable-policy compilation, whereas
+the enumerated method solves the finite game. No repeated-run statistical
+speedup claim is made. Online Resource~1 retains all 28 compact settings, including every
+small-case comparison and predetermined enumeration skip. Every case has at most 48 underlying target coordinates. The largest
+four-block case has 12 targets per block, budget 24, and 38,820 LP variables;
+the 48-coordinate, 24-query one-block formulation uses 10,076 variables
+for a family containing $32{,}247{,}603{,}683{,}100$ fixed-size batches.
+
+The archived measurements used an Intel Core i7-8565U, Windows 11 and one
+numerical thread. Times include construction, solution and compact policy
+compilation after imports; peak memory includes interpreter and imports.
+Each method/case ran once on a shared host. Enumeration required at most
+25,000 fixed-size legal batches and at most 100,000 prefilter candidate
+products, which explains the 16 predetermined skips. The 20-second and
+1-GiB polling limits did not trigger. Two profiles jointly vary ties and
+total heterogeneity, so their effects are not isolated. The largest
+normalized primal, stationarity and duality residuals are respectively
+$3.78\times10^{-15}$, $5.22\times10^{-15}$ and $5.78\times10^{-16}$;
+the archived numerical acceptance threshold is $10^{-7}$. All 560
+sampled-policy hard-budget and coordinate-validity checks passed.
+
+\subsection{Dual completions and adaptive lower bounds}
+\paragraph{Numerical hardest-completion certificates.}
+We extracted a dual completion from the unchanged compact solver for all
+28 frozen scaling instances, the 42 earlier small verification instances,
+four separated-cluster examples, and six declared edge cases (80 instances
+in total). The completed nonnegative masses satisfy the residual block
+totals with maximum absolute sum error $1.78\times10^{-15}$. The existing
+weighted pricing oracle computes $\min_Q W(Q,y^*)$; its maximum difference
+from the compact primal is $2.14\times10^{-14}$ in absolute units, or
+$4.62\times10^{-16}$ after division by
+$\max(1,\hbox{initial worst-case width})$. Independently enumerating every
+coordinate subset of size at most the hard budget on 64 small instances
+(including 12 scaling instances) checked 17,749 terminal sets. These
+include shorter batches and redundant full-block queries. The maximum
+normalized enumeration--primal discrepancy is $2.74\times10^{-16}$.
+The LP primal and dual feasibility tolerances are $10^{-9}$; the checking
+threshold is $10^{-8}$ under the stated objective or block-total scaling.
+No negative multiplier required clipping; the largest removed numerical
+excess of a block's mass was $8.89\times10^{-16}$. Genuine dual mass
+deficits are completed at a fixed coordinate and recorded separately.
+The supplement reports every original-order completion, raw multiplier,
+correction, pricing minimizer, exhaustive minimum, and source hash.
+These are ordinary floating-point checks, not outward-rounded
+certificates or additional empirical forecasting results.
+
+\subsection{General polytopes and analytic separations}
+An independently written implementation constructs the general LPs directly
+from six explicit inequality systems with three to five coordinates and a
+two-query budget. It covers boxes, a simplex, exact totals, overlapping
+constraints and a coupled capacity set. Every legal two-coordinate batch
+is evaluated at the computed hardest record. A separately assembled
+worst-mean LP checks each dual-derived batch distribution. All 37 batches
+and 24 possible first-query choices are retained. Table~\ref{tab:general-values}
+distinguishes three objectives instead of calling their different values
+optimization discrepancies.
+\begin{table}[htbp]\centering\small
+\caption{Six constructed polytope checks, with budget two. Mean is the
+optimal randomized worst expected width (batch and adaptive); adaptive
+and batch columns are deterministic worst widths. Each row's complete
+inequalities and witnesses are supplied.}\label{tab:general-values}
+\begin{tabular}{lrrr}\toprule
+Polytope & Mean & Deterministic adaptive & Deterministic batch\\\midrule
+Capacity triangle & 0.5 & 0.5 & 1\\
+Box with signed contrast & 1.5 & 1.5 & 1.5\\
+Simplex & 1 & 1 & 1\\
+Overlapping constraints & 2.5 & 2.5 & 2.5\\
+Fixed total & 1 & 1 & 1\\
+Coupled capacities & 0.666667 & 0.666667 & 1\\
+\bottomrule\end{tabular}\end{table}
+\FloatBarrier
+Maximum primal--dual and hardest-record discrepancies are
+$1.12\times10^{-16}$ and $5.56\times10^{-16}$, against a $10^{-8}$
+checking tolerance and $10^{-9}$ LP feasibility tolerances. The triangle
+returns first-query worst widths $(0.5,1,1)$, selecting its capacity
+coordinate. The general hardest-record solves take 0.003--0.048 seconds
+on these small instances; the first includes solver initialization.
+These six instances check the formulations, not large-scale performance
+or all possible adaptive policies by enumeration.
+
+Separate checks solve 3,202 endpoint LPs for 1,601 fibers and 28 finite
+games for $K=2,\ldots,8$. They include four scaled/offset converse examples,
+the exact rational interior witnesses for precision, and 25 adaptive
+records per $K$. The largest absolute width discrepancy is
+$3.34\times10^{-16}$; the largest endpoint constraint residual is
+$2.23\times10^{-16}$, against a $2\times10^{-8}$ scale-aware width
+tolerance. The analytic proofs establish the universal claims;
+finite numerical checks do not. In particular, the precision verification
+uses interior witnesses rather than assuming vertex-only maximization
+for an indicator penalty.
+\begin{table}[htbp]\centering\small
+\caption{Exact family values from Theorem~\ref{prop:risk_K_family},
+also checked numerically for the displayed sizes. Success is the worst-case
+probability of width at most $1/K$. These are constructed mathematical
+instances, not percentages of empirical forecasting improvement.}
+\label{tab:family-values}
+\begin{tabular}{rrrrrr}\toprule
+$K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, adaptive\\\midrule
+2 & 2 & $1/2$ & $1/2\; /\;1/4$ & 50\% & 100\%\\
+4 & 6 & $1/4$ & $1/4\; /\;1/16$ & 25\% & 100\%\\
+8 & 14 & $1/8$ & $1/8\; /\;1/64$ & 12.5\% & 100\%\\
+\bottomrule\end{tabular}\end{table}
+\FloatBarrier
+
+\begin{thebibliography}{99}
+\bibitem[Hebrail and Berard(2006)]{uci}
+Hebrail, G., \& Berard, A. (2006). Individual household electric power
+consumption [Data set]. UCI Machine Learning Repository.
+\url{https://doi.org/10.24432/C58K54}
+
+\bibitem[Iancu and Trichakis(2014)]{iancu2014}
+Iancu, D. A., \& Trichakis, N. (2014). Pareto efficiency in robust optimization.
+\emph{Management Science, 60}(1), 130--147.
+\url{https://doi.org/10.1287/mnsc.2013.1753}
+
+\bibitem[Kawase and Sumita(2024)]{kawase2024}
+Kawase, Y., \& Sumita, H. (2024). Randomized strategies for robust
+combinatorial optimization with approximate separation.
+\emph{Algorithmica, 86}, 566--584.
+\url{https://doi.org/10.1007/s00453-023-01175-3}
+
+\bibitem[Kostmann and H\"ardle(2019)]{blem}
+Kostmann, M., \& H\"ardle, W. K. (2019). Forecasting in blockchain-based
+local energy markets. \emph{Energies, 12}, 2718.
+\url{https://doi.org/10.3390/en12142718}
+Source data: \url{https://github.com/QuantLet/BLEM}.
+
+\bibitem[Mastin et~al.(2015)]{mastin2015}
+Mastin, A., Jaillet, P., \& Chin, S. (2015).
+Randomized minmax regret for combinatorial optimization under uncertainty.
+In \emph{Algorithms and Computation (ISAAC 2015)}, Lecture Notes in
+Computer Science, 9472, 491--501. Springer.
+\url{https://doi.org/10.1007/978-3-662-48971-0_42}
+
+\bibitem[Sawade et~al.(2012)]{sawade}
+Sawade, C., Landwehr, N., \& Scheffer, T. (2012).
+Active comparison of prediction models.
+\emph{Advances in Neural Information Processing Systems, 25}.
+\url{https://proceedings.neurips.cc/paper_files/paper/2012/file/92fb0c6d1758261f10d052e6e2c1123c-Paper.pdf}
+
+\bibitem[Trindade(2015)]{portugal}
+Trindade, A. (2015). ElectricityLoadDiagrams20112014 [Data set].
+UCI Machine Learning Repository.
+\url{https://doi.org/10.24432/C58C86}
+
+\bibitem[Weber et~al.(2021)]{cpi}
+Weber, M., Turowski, M., \c{C}akmak, H. K., Mikut, R., K\"uhnapfel, U.,
+\& Hagenmeyer, V. (2021). Data-driven copy-paste imputation for energy
+time series. \emph{IEEE Transactions on Smart Grid, 12}(6), 5409--5419.
+\url{https://doi.org/10.1109/TSG.2021.3101831}
+\end{thebibliography}

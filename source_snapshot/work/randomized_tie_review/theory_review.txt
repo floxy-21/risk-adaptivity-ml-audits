@@ -1,0 +1,116 @@
+INDEPENDENT MATHEMATICAL REVIEW OF RANDOMIZED MINIMAX TIE REFINEMENT
+
+Scope: an exact-total product of nonnegative simplices, a fixed hidden record
+before the random batch, and the same finite set of hard-budget query batches.
+This note checks the optimization logic; it does not validate empirical output.
+
+1. A primary minimax optimum can be uniformly dominated.
+
+Take one block with E=1, coefficients c=(0,0,2,3), and budget B=1. Index
+coordinates by 0,1,2,3. For a retained set S of size three, the expected-width
+column is its coefficient range times its indicator.
+
+Retained S       Column                    Bad-policy probability
+{0,1,2}         (2,2,2,0)                  1/3
+{0,1,3}         (3,3,0,3)                  2/9
+{0,2,3}         (3,0,3,3)                  2/9
+{1,2,3}         (0,3,3,3)                  2/9
+
+The bad mixture has expected coefficients (2,2,2,2) and expected width 2
+for every feasible y. The deterministic policy retaining {0,1,2} has expected
+coefficients (2,2,2,0) and expected width 2-2*y_3. Thus it is never worse and
+is strictly better when y_3>0. Both have worst expected width exactly 2.
+The feasible hidden record y=(1/3,1/3,1/3,0) gives width 2 for every listed
+batch, certifying that no randomized mixture can improve the primary optimum.
+A zero-query batch has width 3 and does not affect that lower bound.
+
+2. Notation and normalization for the proposed finite-game audit.
+
+Let a_gi(pi)=sum_Q pi_Q*v_gi(Q) be the expected coefficient before multiplying
+by the unknown target. Let w_g=E_g/W_initial and M_gi,Q=w_g*v_gi(Q), with
+W_initial positive. Put z_gi(pi)=(M*pi)_gi and x_gi=y_gi/E_g for positive-energy
+blocks. Then the normalized expected width is sum_gi x_gi*z_gi(pi), where
+each x_g is nonnegative with sum_i x_gi=1. Consequently
+
+  primary value F(pi) = sum_g max_i z_gi(pi),
+  uniform-vertex mean H(pi) = sum_g (1/m_g)*sum_i z_gi(pi).
+
+H is the average expected width over all product-simplex vertices under equal
+weights within each block. Equivalently it is width at the interior barycenter.
+It is not an empirical expectation over load shapes, a learned distribution,
+or a guarantee about realized targets.
+
+3. Policy A: exact dominance refinement of the archived policy pi_0.
+
+Let z0=M*pi_0. Minimize H(pi) subject to
+
+  pi>=0, sum_Q pi_Q=1,
+  (M*pi)_gi-z0_gi <= d_g for all g,i,
+  sum_g d_g <= 0,
+
+where d_g is free in sign. This is an exact linear encoding of
+
+  max_x [expected_width(pi,x)-expected_width(pi_0,x)]
+       = sum_g max_i[(M*pi)_gi-z0_gi] <= 0.
+
+Allowing negative d_g is essential: improvements in one block can compensate
+for an increase in another block. Componentwise bounds M*pi<=z0 are sufficient
+but not necessary for uniform dominance over the product-simplex record set.
+
+The archived policy is feasible. If it is exactly primary-optimal, every
+feasible refinement remains primary-optimal: F(pi)<=F(pi_0)=F*, and no feasible
+policy can have F(pi)<F*. Minimizing H also selects a policy undominated in
+expected width over all feasible records. Indeed, any further uniformly
+dominating policy remains feasible by transitivity. If domination is strict
+at any feasible record, its mean at the full-support barycenter is strictly
+smaller (the difference is affine), contradicting optimality of H.
+
+If pi_0 is only approximately optimal numerically, the mathematical statement
+is instead that the refinement is no worse than pi_0 and therefore no worse
+than its established optimality tolerance. Do not describe a floating-point
+solver output as an exact machine-verifiable certificate.
+
+4. Policy B: canonical primary-then-mean lexicographic objective.
+
+First solve the primary game, obtaining F*. Then minimize H(pi) subject to
+
+  pi>=0, sum_Q pi_Q=1,
+  (M*pi)_gi <= t_g for all g,i,
+  sum_g t_g <= F*.
+
+For exact arithmetic this solves the primary optimum face, preserves the
+minimax optimum, and is undominated over feasible records by the same
+full-support-mean argument. It uses only coefficients, retained totals,
+budget, and the declared coordinate symmetry; hidden target values are absent.
+
+Policy B need not dominate the archived policy pointwise. Its observed mean
+width may therefore improve or worsen. Its objective is canonical, but the
+policy need not be unique: multiple mixtures or coefficient vectors can attain
+both objectives. No claim of unique policy or unique certification outcomes
+follows without another specified selection rule.
+
+5. Numerical and interpretation checks required.
+
+- Compute z0 from the actual archived mixture, not merely a rounded reported
+  objective. Check simplex feasibility, nonnegative probabilities, and support.
+- Independently compute both policies' worst expected width from sum of block
+  maxima, and Policy A's dominance residual from sum of block difference maxima.
+- A numerical F* below the attainable optimum can make stage two infeasible.
+  Do not silently add slack and still call the result exact primary preservation.
+  Log any tolerance or fallback and bound its effect.
+- Policies use the same hard-budget batch columns and permitted information.
+  Solver selection must not inspect withheld target values or certification.
+- Smaller expected width, including pointwise expected-width dominance, does
+  not imply nested realized intervals, improvement on every random draw, higher
+  certification probability, or equal/better certification for each fixed record.
+- This is a post-review sensitivity analysis of existing cases, not a new cohort.
+  Retain the archived policies/results and report both refinements regardless
+  of favorable or unfavorable realized outcomes.
+- Lexicographic LP refinement is standard optimization methodology; the generic
+  tie-breaking principle itself should not be claimed as new.
+
+Conclusion: the proposed A and B formulations are valid. Policy A exactly
+addresses avoidable pointwise expected-width inefficiency of saved mixtures;
+Policy B provides a declared outcome-blind secondary objective on the minimax
+optimal face. Neither promises superiority over deterministic recovery on the
+observed panel or repairs the absence of field retrieval-cost measurements.

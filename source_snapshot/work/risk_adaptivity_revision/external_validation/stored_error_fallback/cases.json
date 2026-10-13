@@ -1,0 +1,1945 @@
+[
+  {
+    "id": "hpm_1/2025-07-06/12/ridge/mlp",
+    "system_id": 1,
+    "model_a": "ridge",
+    "model_b": "mlp",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.7298749422452155,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.7298749422452155
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.7213341341110939,
+        "selected_batch": [
+          1,
+          2
+        ],
+        "selected_batch_width": 0.7213341341110939
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.29413600823345154,
+        "selected_batch": [
+          1,
+          2,
+          4
+        ],
+        "selected_batch_width": 0.29413600823345154
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.13408302922376342,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_batch_width": 0.13408302922376342
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.048796553935786066,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.048796553935786066
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      4
+    ],
+    "fixed_certified_upper_exact": "1729861547686107150205716776708791/5881162112981219564203638039511040",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_1/2025-07-17/12/ridge/mlp",
+    "system_id": 1,
+    "model_a": "ridge",
+    "model_b": "mlp",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.6021333262536399,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.6021333262536399
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5610798936915475,
+        "selected_batch": [
+          2,
+          3
+        ],
+        "selected_batch_width": 0.5610798936915475
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.27439985374343134,
+        "selected_batch": [
+          1,
+          2,
+          4
+        ],
+        "selected_batch_width": 0.27439985374343134
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.1581576323584602,
+        "selected_batch": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.1581576323584602
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.04290526408367645,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.04290526408367645
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      4
+    ],
+    "fixed_certified_upper_exact": "176017538983075908787716434235141/641463676389766986142731311513600",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_2/2025-07-02/00/hist_gradient_boosting/mlp",
+    "system_id": 2,
+    "model_a": "hist_gradient_boosting",
+    "model_b": "mlp",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.9341592751209375,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.9341592751209375
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5510493423394258,
+        "selected_batch": [
+          2,
+          3
+        ],
+        "selected_batch_width": 0.5510493423394258
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.1540904816953904,
+        "selected_batch": [
+          1,
+          2,
+          3
+        ],
+        "selected_batch_width": 0.1540904816953904
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.05156008814039744,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.05156008814039744
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.051560088140397475,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.051560088140397475
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      3
+    ],
+    "fixed_certified_upper_exact": "177815807702048676542444920116563/1153970094360267066536177015193600",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_2/2025-07-02/06/daily/hist_gradient_boosting",
+    "system_id": 2,
+    "model_a": "daily",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.782469882152169,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.782469882152169
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5621285116194321,
+        "selected_batch": [
+          1,
+          2
+        ],
+        "selected_batch_width": 0.5621285116194321
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.1442753313264996,
+        "selected_batch": [
+          1,
+          2,
+          5
+        ],
+        "selected_batch_width": 0.1442753313264996
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.07868733480784973,
+        "selected_batch": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.07868733480784973
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.04653077446024845,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.04653077446024845
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      5
+    ],
+    "fixed_certified_upper_exact": "698978580870987183821356615404411/4844754639926460802800137587916800",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_2/2025-07-03/00/hist_gradient_boosting/mlp",
+    "system_id": 2,
+    "model_a": "hist_gradient_boosting",
+    "model_b": "mlp",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.6219210927267252,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.6219210927267252
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5568237226253258,
+        "selected_batch": [
+          1,
+          2
+        ],
+        "selected_batch_width": 0.5568237226253258
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.12143696708871476,
+        "selected_batch": [
+          1,
+          2,
+          3
+        ],
+        "selected_batch_width": 0.12143696708871476
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.043212012655951135,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.043212012655951135
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.043212012655951135,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.043212012655951135
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      3
+    ],
+    "fixed_certified_upper_exact": "2286876667127295898612186865699661/18831799920172880608495378261606400",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_2/2025-07-04/06/daily/mlp",
+    "system_id": 2,
+    "model_a": "daily",
+    "model_b": "mlp",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.7549999999999999,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.7549999999999999
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.6350000000000002,
+        "selected_batch": [
+          1,
+          2
+        ],
+        "selected_batch_width": 0.6350000000000002
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.395,
+        "selected_batch": [
+          1,
+          2,
+          4
+        ],
+        "selected_batch_width": 0.395
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.16500000000000004,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_batch_width": 0.16500000000000004
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.04999999999999982,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.04999999999999982
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      4
+    ],
+    "fixed_certified_upper_exact": "267051726448080678904709712445457/676080320121722422524902165708800",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_2/2025-07-07/06/daily/mlp",
+    "system_id": 2,
+    "model_a": "daily",
+    "model_b": "mlp",
+    "existing_two_query_certificate": false,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.8366666666666669,
+        "selected_batch": [
+          1
+        ],
+        "selected_batch_width": 0.8366666666666669
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.6766666666666663,
+        "selected_batch": [
+          1,
+          2
+        ],
+        "selected_batch_width": 0.6766666666666663
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.36333333333333284,
+        "selected_batch": [
+          1,
+          2,
+          3
+        ],
+        "selected_batch_width": 0.36333333333333284
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.2066666666666661,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_batch_width": 0.2066666666666661
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.05333333333333279,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.05333333333333279
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      3
+    ],
+    "fixed_certified_upper_exact": "7369275489326771260507693825827/20282409603651674927546878656512",
+    "hybrid_hard_query_budget": 3
+  },
+  {
+    "id": "hpm_2/2025-07-09/00/daily/hist_gradient_boosting",
+    "system_id": 2,
+    "model_a": "daily",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.553904418205985,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.553904418205985
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5280159058253928,
+        "selected_batch": [
+          2,
+          3
+        ],
+        "selected_batch_width": 0.5280159058253928
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.14922139071916066,
+        "selected_batch": [
+          1,
+          2,
+          3
+        ],
+        "selected_batch_width": 0.14922139071916066
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.04756693352494425,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.04756693352494425
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.04125267306170303,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.04125267306170303
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      3
+    ],
+    "fixed_certified_upper_exact": "1877347858512216548987383949469113/12580956721181098133096353706803200",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_2/2025-07-14/00/daily/mlp",
+    "system_id": 2,
+    "model_a": "daily",
+    "model_b": "mlp",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.6948277154326399,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.6948277154326399
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5218726443849994,
+        "selected_batch": [
+          2,
+          3
+        ],
+        "selected_batch_width": 0.5218726443849994
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.33209432328784644,
+        "selected_batch": [
+          1,
+          2,
+          5
+        ],
+        "selected_batch_width": 0.33209432328784644
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.05550787976012733,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.05550787976012733
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.0444329756965606,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.0444329756965606
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      5
+    ],
+    "fixed_certified_upper_exact": "105144342590637799854942283636219/316609876223336650165043435929600",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_2/2025-07-15/06/ridge/hist_gradient_boosting",
+    "system_id": 2,
+    "model_a": "ridge",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": false,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.9402608844767417,
+        "selected_batch": [
+          1
+        ],
+        "selected_batch_width": 0.9402608844767417
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5508222065530899,
+        "selected_batch": [
+          2,
+          3
+        ],
+        "selected_batch_width": 0.5508222065530899
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.390702637437718,
+        "selected_batch": [
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.390702637437718
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.3143138093033175,
+        "selected_batch": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.3143138093033175
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.05344424283793651,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.05344424283793651
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      2,
+      3,
+      5
+    ],
+    "fixed_certified_upper_exact": "84446308725278442092451616290149/216139592194946326203042942156800",
+    "hybrid_hard_query_budget": 3
+  },
+  {
+    "id": "hpm_2/2025-07-17/06/ridge/hist_gradient_boosting",
+    "system_id": 2,
+    "model_a": "ridge",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.5518275319514553,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.5518275319514553
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5246494801702143,
+        "selected_batch": [
+          2,
+          4
+        ],
+        "selected_batch_width": 0.5246494801702143
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.29072585242224486,
+        "selected_batch": [
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.29072585242224486
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.17889933657550605,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.17889933657550605
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.0405979379661312,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.0405979379661312
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      2,
+      3,
+      5
+    ],
+    "fixed_certified_upper_exact": "9839492355636774883380433392029/33844573069979603294064581017600",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_2/2025-07-19/00/ridge/hist_gradient_boosting",
+    "system_id": 2,
+    "model_a": "ridge",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.650315882899158,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.650315882899158
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.633297360064081,
+        "selected_batch": [
+          1,
+          2
+        ],
+        "selected_batch_width": 0.633297360064081
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.2723783580568961,
+        "selected_batch": [
+          1,
+          2,
+          3
+        ],
+        "selected_batch_width": 0.2723783580568961
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.0978446479570546,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.0978446479570546
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.050202535520356056,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.050202535520356056
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      3
+    ],
+    "fixed_certified_upper_exact": "21543681701081495292751795557769/79094689661728972975426899017728",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_2/2025-07-21/06/daily/hist_gradient_boosting",
+    "system_id": 2,
+    "model_a": "daily",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.6666375077383071,
+        "selected_batch": [
+          1
+        ],
+        "selected_batch_width": 0.6666375077383071
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5742602266612278,
+        "selected_batch": [
+          1,
+          4
+        ],
+        "selected_batch_width": 0.5742602266612278
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.21371940127410344,
+        "selected_batch": [
+          1,
+          3,
+          4
+        ],
+        "selected_batch_width": 0.21371940127410344
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.0517903924091192,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_batch_width": 0.0517903924091192
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.04071846372484,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.04071846372484
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      3,
+      4
+    ],
+    "fixed_certified_upper_exact": "48125330796994899/225179981368524800",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_2/2025-07-22/00/ridge/hist_gradient_boosting",
+    "system_id": 2,
+    "model_a": "ridge",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.7310259071494886,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.7310259071494886
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5352824710959452,
+        "selected_batch": [
+          2,
+          3
+        ],
+        "selected_batch_width": 0.5352824710959452
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.3126205066461203,
+        "selected_batch": [
+          1,
+          2,
+          3
+        ],
+        "selected_batch_width": 0.3126205066461203
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.08082183727942249,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.08082183727942249
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.04494347734682291,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.04494347734682291
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      3
+    ],
+    "fixed_certified_upper_exact": "2924278987202884076010643691122343/9354085624693537874278638996684800",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_2/2025-07-25/00/daily/mlp",
+    "system_id": 2,
+    "model_a": "daily",
+    "model_b": "mlp",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.6270793333362503,
+        "selected_batch": [
+          3
+        ],
+        "selected_batch_width": 0.6270793333362503
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5166374068004931,
+        "selected_batch": [
+          1,
+          3
+        ],
+        "selected_batch_width": 0.5166374068004931
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.2753981088446692,
+        "selected_batch": [
+          1,
+          3,
+          4
+        ],
+        "selected_batch_width": 0.2753981088446692
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.1589379918373055,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_batch_width": 0.1589379918373055
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.04247787482994428,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.04247787482994428
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      3,
+      4
+    ],
+    "fixed_certified_upper_exact": "1467607501126324739555798066123/5329039866261711629688032460800",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_2/2025-07-28/06/ridge/hist_gradient_boosting",
+    "system_id": 2,
+    "model_a": "ridge",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.6394676591896138,
+        "selected_batch": [
+          1
+        ],
+        "selected_batch_width": 0.6394676591896138
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.6010792990698723,
+        "selected_batch": [
+          1,
+          2
+        ],
+        "selected_batch_width": 0.6010792990698723
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.24512201308757112,
+        "selected_batch": [
+          1,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.24512201308757112
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.14885527926918618,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.14885527926918618
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.04448463675014258,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.04448463675014258
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      3,
+      5
+    ],
+    "fixed_certified_upper_exact": "5047169770068217966144197315323/20590438641123089889469294182400",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_7/2025-07-01/06/ridge/hist_gradient_boosting",
+    "system_id": 7,
+    "model_a": "ridge",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.6083682340961172,
+        "selected_batch": [
+          3
+        ],
+        "selected_batch_width": 0.6083682340961172
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5205498069602714,
+        "selected_batch": [
+          1,
+          3
+        ],
+        "selected_batch_width": 0.5205498069602714
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.29444455863305585,
+        "selected_batch": [
+          1,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.29444455863305585
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.21308307408226326,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.21308307408226326
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.042185479397776636,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.042185479397776636
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      3,
+      5
+    ],
+    "fixed_certified_upper_exact": "34525996133826532121113593059701/117258054603255989805002627481600",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_7/2025-07-03/06/daily/hist_gradient_boosting",
+    "system_id": 7,
+    "model_a": "daily",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": false,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.77024553073141,
+        "selected_batch": [
+          3
+        ],
+        "selected_batch_width": 0.77024553073141
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.7638814862039442,
+        "selected_batch": [
+          1,
+          3
+        ],
+        "selected_batch_width": 0.7638814862039442
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.3383389879678546,
+        "selected_batch": [
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.3383389879678546
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.05913245551230111,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.05913245551230111
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.05048968229947684,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.05048968229947684
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      2,
+      3,
+      5
+    ],
+    "fixed_certified_upper_exact": "1493973875795873811384740969770653/4415612533361999926234806904422400",
+    "hybrid_hard_query_budget": 3
+  },
+  {
+    "id": "hpm_7/2025-07-08/00/daily/hist_gradient_boosting",
+    "system_id": 7,
+    "model_a": "daily",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.6867949607068458,
+        "selected_batch": [
+          1
+        ],
+        "selected_batch_width": 0.6867949607068458
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5278197321425174,
+        "selected_batch": [
+          1,
+          5
+        ],
+        "selected_batch_width": 0.5278197321425174
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.2710794600140628,
+        "selected_batch": [
+          1,
+          2,
+          5
+        ],
+        "selected_batch_width": 0.2710794600140628
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.05440200654466178,
+        "selected_batch": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.05440200654466178
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.040727336005817044,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.040727336005817044
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      5
+    ],
+    "fixed_certified_upper_exact": "3046734786025020186412065814582463/11239268315891446872700026145996800",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_7/2025-07-08/00/daily/mlp",
+    "system_id": 7,
+    "model_a": "daily",
+    "model_b": "mlp",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.7200000000000002,
+        "selected_batch": [
+          3
+        ],
+        "selected_batch_width": 0.7200000000000002
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5828571428571427,
+        "selected_batch": [
+          1,
+          3
+        ],
+        "selected_batch_width": 0.5828571428571427
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.17999999999999972,
+        "selected_batch": [
+          1,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.17999999999999972
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.17999999999999972,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.17999999999999972
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.045714285714285825,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.045714285714285825
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      3,
+      5
+    ],
+    "fixed_certified_upper_exact": "53241325209585778388292516421231/295785140053253489485900519833600",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_7/2025-07-10/06/daily/hist_gradient_boosting",
+    "system_id": 7,
+    "model_a": "daily",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.7480011882250146,
+        "selected_batch": [
+          3
+        ],
+        "selected_batch_width": 0.7480011882250146
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.6467603493389542,
+        "selected_batch": [
+          1,
+          3
+        ],
+        "selected_batch_width": 0.6467603493389542
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.2458698705400421,
+        "selected_batch": [
+          1,
+          3,
+          4
+        ],
+        "selected_batch_width": 0.2458698705400421
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.17083224195423266,
+        "selected_batch": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.17083224195423266
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.04760515006980632,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.04760515006980632
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      3,
+      4
+    ],
+    "fixed_certified_upper_exact": "31700438504742080485551571257159/128931773686273514366971569766400",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_7/2025-07-12/12/daily/hist_gradient_boosting",
+    "system_id": 7,
+    "model_a": "daily",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.9742182016487793,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.9742182016487793
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5230702703783805,
+        "selected_batch": [
+          1,
+          2
+        ],
+        "selected_batch_width": 0.5230702703783805
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.1608376172844131,
+        "selected_batch": [
+          1,
+          2,
+          4
+        ],
+        "selected_batch_width": 0.1608376172844131
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.049548766465150204,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_batch_width": 0.049548766465150204
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.049548766465150204,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.049548766465150204
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      4
+    ],
+    "fixed_certified_upper_exact": "183692792515911538165782604541591/1142100931469800551414012334571520",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_7/2025-07-14/06/daily/hist_gradient_boosting",
+    "system_id": 7,
+    "model_a": "daily",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.8439556212096161,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.8439556212096161
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5865559465163346,
+        "selected_batch": [
+          2,
+          3
+        ],
+        "selected_batch_width": 0.5865559465163346
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.24949884090839772,
+        "selected_batch": [
+          2,
+          3,
+          4
+        ],
+        "selected_batch_width": 0.24949884090839772
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.15942218483894754,
+        "selected_batch": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.15942218483894754
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.048268348459248454,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.048268348459248454
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      2,
+      3,
+      4
+    ],
+    "fixed_certified_upper_exact": "327947220710283192071334204804699/1314423824640882109050107251916800",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_7/2025-07-15/06/daily/hist_gradient_boosting",
+    "system_id": 7,
+    "model_a": "daily",
+    "model_b": "hist_gradient_boosting",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.8675756034529776,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.8675756034529776
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.528274688458105,
+        "selected_batch": [
+          1,
+          3
+        ],
+        "selected_batch_width": 0.528274688458105
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.4540164939590544,
+        "selected_batch": [
+          1,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.4540164939590544
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.2198862981764351,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.2198862981764351
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.047526153527524276,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.047526153527524276
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      3,
+      5
+    ],
+    "fixed_certified_upper_exact": "2839275533834222170028899520480479/6253683669233133065017800995635200",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_7/2025-07-16/06/daily/ridge",
+    "system_id": 7,
+    "model_a": "daily",
+    "model_b": "ridge",
+    "existing_two_query_certificate": true,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.7871733593026402,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.7871733593026402
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.7523900520391384,
+        "selected_batch": [
+          1,
+          2
+        ],
+        "selected_batch_width": 0.7523900520391384
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.27883405756834545,
+        "selected_batch": [
+          1,
+          2,
+          4
+        ],
+        "selected_batch_width": 0.27883405756834545
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.1376377231790385,
+        "selected_batch": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.1376377231790385
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.055444833582186104,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.055444833582186104
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      4
+    ],
+    "fixed_certified_upper_exact": "500865115709778688411187390147/1796283854553919699532591923200",
+    "hybrid_hard_query_budget": 2
+  },
+  {
+    "id": "hpm_7/2025-07-22/00/daily/mlp",
+    "system_id": 7,
+    "model_a": "daily",
+    "model_b": "mlp",
+    "existing_two_query_certificate": false,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 1.0,
+        "selected_batch": [
+          1
+        ],
+        "selected_batch_width": 1.0
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.9999999999999989,
+        "selected_batch": [
+          1,
+          2
+        ],
+        "selected_batch_width": 1.0
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.06000000000000172,
+        "selected_batch": [
+          1,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.06000000000000172
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.060000000000003495,
+        "selected_batch": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.060000000000003495
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.06000000000000172,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.06000000000000172
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      4,
+      5
+    ],
+    "fixed_certified_upper_exact": "79228162514278340973635305347/1320469375237737787079996211200",
+    "hybrid_hard_query_budget": 3
+  },
+  {
+    "id": "hpm_7/2025-07-24/06/daily/mlp",
+    "system_id": 7,
+    "model_a": "daily",
+    "model_b": "mlp",
+    "existing_two_query_certificate": false,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.9351332189607381,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.9351332189607381
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5587797903151538,
+        "selected_batch": [
+          3,
+          5
+        ],
+        "selected_batch_width": 0.5587797903151538
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.45889516931520596,
+        "selected_batch": [
+          1,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.45889516931520596
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.11019438081595342,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "selected_batch_width": 0.11019438081595342
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.04951167985399546,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.04951167985399546
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      3,
+      5
+    ],
+    "fixed_certified_upper_exact": "2353477754917787618017792846010399/5128573827503575559689240943001600",
+    "hybrid_hard_query_budget": 3
+  },
+  {
+    "id": "hpm_7/2025-07-26/06/ridge/mlp",
+    "system_id": 7,
+    "model_a": "ridge",
+    "model_b": "mlp",
+    "existing_two_query_certificate": false,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.8675037621689113,
+        "selected_batch": [
+          2
+        ],
+        "selected_batch_width": 0.8675037621689113
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.5652484937322221,
+        "selected_batch": [
+          3,
+          4
+        ],
+        "selected_batch_width": 0.5652484937322221
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.4101455220866918,
+        "selected_batch": [
+          1,
+          3,
+          4
+        ],
+        "selected_batch_width": 0.4101455220866918
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.2566229402748305,
+        "selected_batch": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.2566229402748305
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.055993952694216906,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.055993952694216906
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      3,
+      4
+    ],
+    "fixed_certified_upper_exact": "16738963158202752490572522279844057/40812253838686698487452321343078400",
+    "hybrid_hard_query_budget": 3
+  },
+  {
+    "id": "hpm_7/2025-07-30/06/daily/ridge",
+    "system_id": 7,
+    "model_a": "daily",
+    "model_b": "ridge",
+    "existing_two_query_certificate": false,
+    "budget_results": [
+      {
+        "budget": 1,
+        "minimum_numerical_width": 0.7463645492153805,
+        "selected_batch": [
+          1
+        ],
+        "selected_batch_width": 0.7463645492153805
+      },
+      {
+        "budget": 2,
+        "minimum_numerical_width": 0.6440498241989028,
+        "selected_batch": [
+          1,
+          4
+        ],
+        "selected_batch_width": 0.6440498241989028
+      },
+      {
+        "budget": 3,
+        "minimum_numerical_width": 0.3023393463919315,
+        "selected_batch": [
+          1,
+          2,
+          4
+        ],
+        "selected_batch_width": 0.3023393463919315
+      },
+      {
+        "budget": 4,
+        "minimum_numerical_width": 0.24888715883658163,
+        "selected_batch": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.24888715883658163
+      },
+      {
+        "budget": 5,
+        "minimum_numerical_width": 0.050936696395789974,
+        "selected_batch": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selected_batch_width": 0.050936696395789974
+      }
+    ],
+    "minimum_certified_fixed_budget": 3,
+    "certified_fixed_batch": [
+      1,
+      2,
+      4
+    ],
+    "fixed_certified_upper_exact": "88013264756082480404308116120263/291107544573402388332448789299200",
+    "hybrid_hard_query_budget": 3
+  }
+]

@@ -1,0 +1,256 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-11T21:22:15.204272+00:00",
+  "scope": "Independent arithmetic, query objective/proposal, trace, stopping, case-summary and aggregate verification; no production policy/evaluator imports, no fresh fitting.",
+  "reference_period": "validation",
+  "base_cases": 26910,
+  "policy_cases": 161460,
+  "households": 20,
+  "stages_checked": 121616,
+  "candidate_scores_checked": 605563,
+  "randomized_finite_games_checked": 0,
+  "maximum_randomized_primary_error": 0.0,
+  "maximum_randomized_secondary_error": 0.0,
+  "randomized_scope": "Independent primary/secondary finite LP and mixture-moment feasibility/support; exact compact sampler random draw not reconstructed.",
+  "maximum_bound_discrepancy": 5.842548667089886e-15,
+  "maximum_selected_probability_discrepancy": 5.451195050909519e-13,
+  "summaries": [
+    {
+      "subgroup": "all",
+      "policy": "0.5",
+      "initially_unresolved": 11246,
+      "households": 20,
+      "macro_mean_requests": 1.7921949502617114,
+      "all_case_macro_mean_requests": 0.7587600782091498,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.5035671051719545,
+        0.778429367640845,
+        0.932371121585106,
+        0.993437455340383,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "all",
+      "policy": "1.0",
+      "initially_unresolved": 11246,
+      "households": 20,
+      "macro_mean_requests": 1.7818103845492093,
+      "all_case_macro_mean_requests": 0.7541820315616048,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.5085083797129968,
+        0.7820309121618252,
+        0.933959186384462,
+        0.9936911371915068,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "all",
+      "policy": "16.0",
+      "initially_unresolved": 11246,
+      "households": 20,
+      "macro_mean_requests": 1.7828754785323653,
+      "all_case_macro_mean_requests": 0.7543229109461528,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.5087386901082145,
+        0.7813165522861267,
+        0.9333267548653362,
+        0.9937425242079568,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "all",
+      "policy": "2.0",
+      "initially_unresolved": 11246,
+      "households": 20,
+      "macro_mean_requests": 1.7814805436079553,
+      "all_case_macro_mean_requests": 0.7538011150411148,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.5093340430346645,
+        0.7821310500353983,
+        0.933332797606021,
+        0.9937215657159614,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "all",
+      "policy": "4.0",
+      "initially_unresolved": 11246,
+      "households": 20,
+      "macro_mean_requests": 1.7805561869346047,
+      "all_case_macro_mean_requests": 0.7533896138037742,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.5096033424042932,
+        0.7824098661619314,
+        0.9336924779967587,
+        0.993738126502412,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "all",
+      "policy": "8.0",
+      "initially_unresolved": 11246,
+      "households": 20,
+      "macro_mean_requests": 1.78158306940811,
+      "all_case_macro_mean_requests": 0.7538570948001797,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.5096394471426712,
+        0.7815184401229016,
+        0.933420916823905,
+        0.993838126502412,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "learned",
+      "policy": "0.5",
+      "initially_unresolved": 5878,
+      "households": 20,
+      "macro_mean_requests": 1.8149489277806818,
+      "all_case_macro_mean_requests": 0.8101106841051291,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.49211330870950504,
+        0.7705318811687082,
+        0.9300626465213835,
+        0.9923432358197213,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "learned",
+      "policy": "1.0",
+      "initially_unresolved": 5878,
+      "households": 20,
+      "macro_mean_requests": 1.8040231560108606,
+      "all_case_macro_mean_requests": 0.804945007090145,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.4972721543386277,
+        0.7743261107517168,
+        0.9318703265774234,
+        0.9925082523213714,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "learned",
+      "policy": "16.0",
+      "initially_unresolved": 5878,
+      "households": 20,
+      "macro_mean_requests": 1.8039033702878036,
+      "all_case_macro_mean_requests": 0.8046035872346218,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.4972013054660156,
+        0.7740526305562127,
+        0.9323172583918898,
+        0.9925254352980785,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "learned",
+      "policy": "2.0",
+      "initially_unresolved": 5878,
+      "households": 20,
+      "macro_mean_requests": 1.803021082900644,
+      "all_case_macro_mean_requests": 0.8040893907775001,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.4978646797975073,
+        0.7746946398778233,
+        0.9321056129533632,
+        0.9923139844706625,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "learned",
+      "policy": "4.0",
+      "initially_unresolved": 5878,
+      "households": 20,
+      "macro_mean_requests": 1.8022584452905588,
+      "all_case_macro_mean_requests": 0.8038211040918248,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.4975165438864093,
+        0.7750835889594451,
+        0.9326293337170692,
+        0.9925120881465176,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    },
+    {
+      "subgroup": "learned",
+      "policy": "8.0",
+      "initially_unresolved": 5878,
+      "households": 20,
+      "macro_mean_requests": 1.8023404826049674,
+      "all_case_macro_mean_requests": 0.8039659242551866,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.4978613714726163,
+        0.7745988648495719,
+        0.93248227489354,
+        0.9927170061793046,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0
+    }
+  ],
+  "seconds": 354.1032186000084,
+  "inputs": {
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\external_deadline\\validation\\trajectories.jsonl": "2e50b82a7ebc67af414bb6541d4e000dd435a085bdd7d4e93a2880ceb427ec27",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\external_deadline\\fitted\\reference_targets.csv": "6ead862b89ad64b798faebd4b7770c8f693aa8b0579dc06c81bf12a674128ecc",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\prototype\\ridge_grid\\pre_run_manifest.json": "e02dbbea1eca60fc74cc023ac07111f3f3e7bb5a4151227ad8f65ee70945e447",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\prototype\\ridge_grid\\trajectories.jsonl": "fafe2c2d025835a9f7223899c77dbdeee54cba0ebf51b7fa082bad56645f44cc",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\prototype\\ridge_grid\\cases.csv": "78af8e8777095165c775bc04b223a61f232dd15afeedd10433c12c4c9d43af34",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\reviews\\verify_decision.py": "a2249a4e66fda66360b0616f114290ab2ecda5cbf59d578109ca41ccbadca736"
+  }
+}

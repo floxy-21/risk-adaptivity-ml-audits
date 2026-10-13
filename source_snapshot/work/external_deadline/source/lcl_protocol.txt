@@ -1,0 +1,36 @@
+LOW CARBON LONDON SOURCE FALLBACK PROTOCOL
+Frozen 2026-10-11 before LCL values, quality counts, model fits or acquisition outcomes were inspected.
+
+Reason for source change
+The REFIT raw source inventory under the frozen quality rule yields no complete days in the households processed so far. REFIT is retained as a failed source-feasibility attempt; its rule is not loosened to produce results. No REFIT forecasting or recovery outcome was evaluated. Low Carbon London provides direct half-hour energy readings and explicit missing values, removing the need to integrate event-expanded power. Adoption remains conditional on verifying the official source documentation and quality inventory.
+
+Source
+UK Power Networks, SmartMeter Energy Consumption Data in London Households, London Datastore.
+https://data.london.gov.uk/dataset/smartmeter-energy-consumption-data-in-london-households-vqm0d
+https://data.london.gov.uk/download/vqm0d/3527bf39-d93e-4071-8451-df2ade1ea4f2/LCL-FullData.zip
+Dataset landing HTML identifies CC BY4.0 and 801,674,949 archive bytes.
+Use only this official archive. No cleaned derivative or gap imputation.
+
+Sampling fixed before inspection
+Collect the100 lowest distinct household IDs in numeric/lexicographic source-ID order. This is a deterministic bounded source panel, not a representative population sample.
+Within those100, retain the20 lowest IDs with at least90 complete training days after the source screening below. Household selection uses training-period quality only. No validation/test counts, energy magnitudes, forecast accuracy, model rankings or acquisition outcomes affect selection.
+If fewer than20 satisfy the criterion, retain all qualifying IDs and report the shortfall rather than searching later IDs.
+The selected IDs are frozen before model fitting. Every subsequent available validation/test day is included subject only to the unchanged reference and causal-lag availability rules.
+
+Chronology
+Training: 2013-01-01 inclusive to2013-10-01 exclusive.
+Validation: 2013-10-01 inclusive to2014-01-01 exclusive.
+Test: 2014-01-01 inclusive to2014-03-01 exclusive.
+Preserve at least8 previous days for causal lag features and2 later days where records exist.
+Timestamp interpretation must follow source documentation. If the documentation does not establish a physical timezone, retain the database-clock convention and explicitly disclose that benchmark deadlines are constructed; do not invent a UTC assertion. Duplicate or missing clock entries are excluded as below.
+
+Reference and screening
+Each eligible hour requires exactly2 distinct, finite, nonnegative kWh readings on its :00 and :30 source-clock positions. Sum those2 directly; no interpolation, zero replacement, partial-hour rescaling or power integration.
+Null/nonfinite/negative readings and duplicate timestamp groups are flagged and invalidate the hour. Do not silently merge even equal duplicates.
+Each complete day requires all24 eligible hourly references. Invalid/unavailable hours carry no energy reference value. Record exclusions by household/date/reason.
+If an original quality flag marks an estimated/substituted observation, exclude it. If no such flag is provided, say so; finite values do not establish the absence of every source-side estimation practice.
+Tariff status is retained for the inventory but does not determine inclusion or exclusion.
+Constructed temporal totals are sums of the eligible hourly references and are controlled benchmark inputs, not independent outage-surviving registers.
+
+Provenance
+Save the official landing HTML, original archive, ZIP member inventory, input/output SHA256, source code hashes, all candidate-household counts, selected IDs and the exact reason for the REFIT-to-LCL change. No hidden-target outcomes are read during this preparation.

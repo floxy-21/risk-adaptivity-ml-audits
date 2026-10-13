@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "failed_case_levels": 9,
+  "unique_cases": 7,
+  "by_delta": {
+    "1/1000": 2,
+    "1/100": 7
+  },
+  "legal_first_query_witnesses": 45,
+  "exact_endpoint_pairs": 180,
+  "minimum_strict_margin_exact": "231625733590097946267/39218517618895276000000000",
+  "minimum_strict_margin": 5.906029795437803e-06,
+  "maximum_lower_vs_previous_numeric_gap": 2.0601742534154255e-11,
+  "scope": "Exact feasible lower witnesses prove deterministic two-query impossibility in the declared model; no randomized adaptive or physical-device impossibility claim",
+  "source_sha256": "21cc5f0f2aaa4fba758dc3e0dc03d54d5c35c5df085f79a9f18fe876f7b608c2",
+  "witnesses_sha256": "098d646b8b3263802d49270afef3ebac035423c60d53051f8904327f44a00d90",
+  "seconds": 2.8595973000046797
+}

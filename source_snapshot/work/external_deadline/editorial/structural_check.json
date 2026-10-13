@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "baseline_text_sha256": "66a3d33a491866eaa5c2b8f35b6469b2e3cb5cdaec484610c2ec0a3958fa78bf",
+  "integrated_text_sha256": "b5a023c3905098a6a5417c05f32001a38b795a2b4887e4af26e47fb026b83825",
+  "hash_scope": "UTF-8 encoding of supplied text strings, after caller newline normalization; not necessarily original file bytes.",
+  "original_named_environments_preserved": 65,
+  "original_tables_preserved": 25,
+  "original_figures_preserved": 3,
+  "original_labels_preserved": 87,
+  "final_labels": 92,
+  "original_bibliography_entries_preserved": 34,
+  "main_text_rough_words": 10465,
+  "baseline_main_text_rough_words": 18369,
+  "page_count_not_assessed": true,
+  "numbering_notice": "Moved floats/equations and added corollary are renumbered automatically; label identities remain unchanged. Never retain old numeric section/table references in external reports.",
+  "test_kind": "Structural integration of explicit synthetic non-result placeholders; no output manuscript written.",
+  "unverified_results_rejected": true,
+  "reintegration_rejected": true,
+  "pure_repeated_output_identical": true,
+  "decision_corollary_exact_copy": true,
+  "helper_sha256": "1b8a98b185d51e76a982b94b2bf4c618dda9f76cb8948d9cfbd2d3bb78fa8920"
+}

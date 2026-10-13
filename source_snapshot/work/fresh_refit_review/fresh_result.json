@@ -1,0 +1,563 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-11T01:15:48.107342+00:00",
+  "wall_seconds": 262.8705425999942,
+  "series_planned": 64,
+  "series_completed": 64,
+  "trained_estimators_completed": 192,
+  "prediction_rows": 166536,
+  "failures": [],
+  "source_hashes": {
+    "outputs/run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+    "outputs/energy_rank_bounds.py": "2b555e7fbb676f311b87c38a1cfc8bf81b34743e35a7c43b5ff08d759596f467",
+    "outputs/study_holdout_consumers.py": "444e8ef7d3a7ca79bfd4f20769e99c9925488651d55eae44984b8e3a2fced266",
+    "work/data_prepare_blem.py": "75383782c6565f328a9e6d0fa48eaa90bcdbb6c0106fe3bdee484326bd9115b7",
+    "outputs/study_summary.json": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196",
+    "outputs/study_holdout_consumers.json": "3a31fdc8e41cad926ab1c43d6802d0f4772e948e61fd71b36f6aa357ac686f1e",
+    "outputs/study_predictions.csv": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+    "outputs/study_holdout_consumers_predictions.csv": "6af5c1101850724b2067c14f3bc8abf891b1d12bd04fa3d4a5c24dbbbeb4c9d8",
+    "outputs/review_raw_reconstruction.json": "ad68a29f1012f76e556ca36f7239b9711f7956c712fb0144e2c76d55f0b63fa3"
+  },
+  "raw_source_hashes": {
+    "work/data_uci_household_power.txt": "4259c9d7ece5dbee9ab8d53682baac68d791c864f0f64a52b4043cb3b90894b7",
+    "work/data_electricity.txt": "d51565f2cb5a6b768d06ba1bbd3c084c6e2f3aab07f00c6f2dcb80e90175124b",
+    "work/data_blem_consumer-00000001.csv": "9228795c6369ce144fbb929f9d413397545f86e3a95d2f9a0f27c92f1d55ad8d",
+    "work/data_blem_consumer-00000002.csv": "93d142217c74ab2c12a98035b3ea178ead234fec0b71942e8e90db5b7e6a2ef3",
+    "work/data_blem_consumer-00000003.csv": "db69719d2262ebeb6df39abafffca2805c8a03b1b4777f86eb8aa78acf578b6c"
+  },
+  "source_files_unchanged": {
+    "outputs/run_energy_rank_study.py": true,
+    "outputs/energy_rank_bounds.py": true,
+    "outputs/study_holdout_consumers.py": true,
+    "work/data_prepare_blem.py": true,
+    "outputs/study_summary.json": true,
+    "outputs/study_holdout_consumers.json": true,
+    "outputs/study_predictions.csv": true,
+    "outputs/study_holdout_consumers_predictions.csv": true,
+    "outputs/review_raw_reconstruction.json": true
+  },
+  "raw_files_unchanged": {
+    "work/data_uci_household_power.txt": true,
+    "work/data_electricity.txt": true,
+    "work/data_blem_consumer-00000001.csv": true,
+    "work/data_blem_consumer-00000002.csv": true,
+    "work/data_blem_consumer-00000003.csv": true
+  },
+  "protocol_sha256": "18cc6c2ce47acc32fa69f92248af03486d5367884d7d051e6be8eb5e14acc252",
+  "comparison_protocol_sha256": "d26bdc2fa28be2e3f6b0a4fd63d6767b3e9bdefbac1dc23fde85f4fea449618e",
+  "driver_sha256": "d290c07cb6684da309f0a8b974dfe1c376fd68c811acc91777175950a37582db",
+  "config": {
+    "models": [
+      "daily",
+      "ridge",
+      "hist_gradient_boosting",
+      "mlp"
+    ],
+    "mlp": {
+      "hidden_layer_sizes": [
+        32,
+        16
+      ],
+      "activation": "relu",
+      "solver": "adam",
+      "alpha": 0.001,
+      "learning_rate_init": 0.001,
+      "batch_size": 256,
+      "max_iter": 1000,
+      "early_stopping": false,
+      "random_state": 1729,
+      "tol": 0.0001,
+      "n_iter_no_change": 10,
+      "shuffle": true
+    },
+    "ridge_alpha": 1.0,
+    "hgb": {
+      "max_iter": 100,
+      "learning_rate": 0.08,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1,
+      "max_bins": 127,
+      "random_state": 1729,
+      "early_stopping": false
+    },
+    "numerical_threads": 2,
+    "workers": 1,
+    "original_selected_ids": [
+      "MT_001",
+      "MT_002",
+      "MT_003",
+      "MT_004",
+      "MT_005",
+      "MT_006",
+      "MT_007",
+      "MT_008",
+      "MT_009",
+      "MT_010",
+      "MT_011",
+      "MT_013",
+      "MT_014",
+      "MT_016",
+      "MT_017",
+      "MT_018",
+      "MT_019",
+      "MT_020",
+      "MT_021",
+      "MT_022",
+      "MT_023",
+      "MT_024",
+      "MT_025",
+      "MT_026",
+      "MT_027",
+      "MT_028",
+      "MT_029",
+      "MT_031",
+      "MT_032",
+      "MT_033"
+    ],
+    "holdout_selected_ids": [
+      "MT_081",
+      "MT_082",
+      "MT_083",
+      "MT_084",
+      "MT_085",
+      "MT_086",
+      "MT_087",
+      "MT_088",
+      "MT_089",
+      "MT_090",
+      "MT_091",
+      "MT_093",
+      "MT_094",
+      "MT_095",
+      "MT_096",
+      "MT_097",
+      "MT_098",
+      "MT_099",
+      "MT_100",
+      "MT_101",
+      "MT_102",
+      "MT_103",
+      "MT_104",
+      "MT_105",
+      "MT_114",
+      "MT_118",
+      "MT_119",
+      "MT_123",
+      "MT_124",
+      "MT_125"
+    ]
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1"
+  },
+  "hourly_files": {
+    "hourly/blem.pkl": "b1f1af69e7e6900f8f9a046a9ec4fb4ade32cd8c325300bab03138c29c26f955",
+    "hourly/data_blem_hourly.csv": "527b1e3a07e2d1b688354796c41cdce5ee27d1ba3503a041461fce6121c9f56a",
+    "hourly/data_blem_hourly_endpoints.csv": "2d8a88d83123216d71329c1745a4dbf1d0c47b34ba1a22b6529f348f4e5987eb",
+    "hourly/data_blem_preparation_audit.json": "979518dbfc7b994242fa47d1f55a144af49c2486bc21ca346fb97ae5d7f0dc69",
+    "hourly/household.pkl": "27f8ff2e48a855e7f1a859578b8239e2a8d7c5e4eb3d9d4c89ea3e8f06ebcfcb",
+    "hourly/portugal_holdout.pkl": "0ca9285136493b275178bd43a459d1e4bc71b06226b52036a628361eae12e4eb",
+    "hourly/portugal_original.pkl": "d612a5d667e2f9f9d1c9f2af540b510f5567d717dc6948be051b99d64f9ca3c7"
+  },
+  "jobs": [
+    {
+      "cohort": "household",
+      "meter": "household_1",
+      "fit_cohort": "household",
+      "hourly_file": "hourly/household.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_001",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_002",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_003",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_004",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_005",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_006",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_007",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_008",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_009",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_010",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_011",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_013",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_014",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_016",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_017",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_018",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_019",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_020",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_021",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_022",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_023",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_024",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_025",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_026",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_027",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_028",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_029",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_031",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_032",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_033",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_original.pkl"
+    },
+    {
+      "cohort": "blem_counters",
+      "meter": "consumer_00000001",
+      "fit_cohort": "blem_counters",
+      "hourly_file": "hourly/blem.pkl"
+    },
+    {
+      "cohort": "blem_counters",
+      "meter": "consumer_00000002",
+      "fit_cohort": "blem_counters",
+      "hourly_file": "hourly/blem.pkl"
+    },
+    {
+      "cohort": "blem_counters",
+      "meter": "consumer_00000003",
+      "fit_cohort": "blem_counters",
+      "hourly_file": "hourly/blem.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_081",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_082",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_083",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_084",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_085",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_086",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_087",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_088",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_089",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_090",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_091",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_093",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_094",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_095",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_096",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_097",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_098",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_099",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_100",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_101",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_102",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_103",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_104",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_105",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_114",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_118",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_119",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_123",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_124",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_125",
+      "fit_cohort": "portugal",
+      "hourly_file": "hourly/portugal_holdout.pkl"
+    }
+  ],
+  "cache_existed_before_preparation": false,
+  "old_hourly_cache_reads": false,
+  "model_state_reads": false,
+  "scope": "Fresh execution of unchanged declared trainer from newly rebuilt pinned raw series, before independent comparison. No saved model or old forecast supplies training/predictions. No mask-grid rerun.",
+  "output_hashes": {
+    "fresh_predictions.csv": "dcee9ff4dc4947a87c7c9d2acb8d152d506bfdbcde2e2deed0f45271e70d0b21",
+    "fit_metadata.json": "649e20aa82698757773f623251ca6782139d4b2a526451c68d1892736b414eb5",
+    "prepared.json": "ae712968860a807eef526a9dccd8c4d3f10e77cb21164fc0980a0a0f1e318754",
+    "selection.json": "6a280a6eb2e477d8a64cdbbdb9ff8799604f9e9799f5d7d306970881a7ec54a7"
+  }
+}

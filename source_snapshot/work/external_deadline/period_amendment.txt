@@ -1,0 +1,19 @@
+SOURCE-ONLY PERIOD AMENDMENT — 11 October 2026
+Made before any forecast fit or acquisition outcome in this external study.
+The official raw081116 README distinguishes Part1's missing-sensor zero
+coding from Part2's explicit NaNs. Part2 archive headers begin around
+27June2014, so the original Jan–Sep2014 training proposal would provide at
+most about95days before quality/feature exclusions. Use Part2 only and:
+  training: 2014-07-01 through2014-12-31 UTC
+  validation: 2015-01-01 through2015-01-31 UTC
+  test: 2015-02-01 through2015-03-31 UTC.
+Source-only90/20/20complete-day minima remain unchanged for the inventory.
+All other pre-outcome criteria remain in experiment_protocol.txt.
+Frozen fitted parameters become available only after their training targets
+have ended. Learned archive rows with issue_time<training_data_end are
+therefore unavailable (including Jan1 validation's noonDec31issue).
+This boundary exclusion is determined by chronology, not prediction quality.
+Persistence issuance does not require the learned-model feature set.
+The raw release still contains publisher-filled event-change intermediate
+values and polling uncertainty; the reference-target definition retains
+those qualifications rather than claiming interpolation-free measurements.

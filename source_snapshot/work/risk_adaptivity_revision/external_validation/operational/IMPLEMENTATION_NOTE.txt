@@ -1,0 +1,20 @@
+Pre-outcome clarification of the frozen protocol's 'unambiguous sample-time
+convention' wording:
+
+The available convention is an unambiguous REQUESTED API grid time. It is not
+verified native measurement time. System 1 has irregular interval metadata;
+systems 2 and 7 have regular-looking intervals, but engine/private acquisition
+settings are not exposed. A variable-interval backend may return the first
+stored sample in the requested interval and label it with the requested time.
+The public proxy does not forward the native-timestamp option.
+
+Accordingly all three locked IDs 1,2,7 are retained, and the forecast target
+is the difference of consecutive hourly API-grid cumulative kWh samples.
+There is no assertion of exact clock-hour physical energy, arrival timestamps,
+or direct-register provenance. Point and range queries preserve interval3600,
+average0,delta0,timeformatunix; additional values cannot be silently discarded
+to pretend that an unrestricted provider interface enforces a two-value budget.
+
+This interpretation was settled from metadata, source code and training data
+before new July forecast/treatment outcomes. The frozen protocol is preserved.
+No source replacement or outcome-based time/threshold selection is authorized.

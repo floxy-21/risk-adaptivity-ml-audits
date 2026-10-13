@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "cases": 22,
+  "optimizer_calls": 0,
+  "arithmetic": "Exact rational conditional dual bounds and envelope intersections",
+  "minimum_branch_margin_exact": "62690716363031407655401058125511/16676489784621687247649656214366400",
+  "maximum_branch_upper_exact": "8275554175947812216169427049057689/16676489784621687247649656214366400",
+  "seconds": 0.0493764000129886
+}

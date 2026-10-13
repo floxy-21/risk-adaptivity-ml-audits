@@ -1,0 +1,109 @@
+From a forecast comparison to a valid acquisition request
+========================================================
+
+The reference implementation answers a concrete question: which permitted
+measurements can make this saved model comparison precise enough, while
+respecting the declared acquisition budget? It returns a protocol and an
+auditable mathematical certificate. A sufficiently narrow interval does not
+necessarily exclude zero or identify a winning model.
+
+1. Identify the audit, not just the algorithm.
+   The task records the meter/feed, completed six-hour API-grid block, two
+   frozen models, six exact saved contrast coefficients and constant, known
+   starting/ending counters, and forecast/data artifact hashes. For this
+   implementation the 29 supported tasks are listed in task_manifest.json.
+   A different target vector, block, error allowance or model pair needs a
+   new validated certificate; borrowing an old case ID is rejected.
+
+2. Describe the acquisition interface and the objective.
+   A new scalar counter value, an HTTP transaction and an information round
+   are different resources. The actual public HPM range interface returns
+   all five internal values in one request. The selector chooses it. The
+   restricted individual-query scenarios are declared mathematical access
+   models, not restrictions observed at HPM. They illustrate how a service
+   with a reading cap or a feedback constraint should use the same guarantee.
+
+3. Select before looking at optional answers.
+   BoundWorkflow.plan(task, interface) verifies the complete saved descriptor
+   and selects among its existing certificates. The output identifies each
+   excluded candidate and reason, the exact upper bound, budget units, and
+   certificate/source hashes. An unsupported task or insufficient budget is
+   rejected or escalated; neither the threshold nor the hidden record changes.
+   Selection is among the supplied certificates. Except where an explicit
+   lower witness applies, escalation does not prove that every conceivable
+   alternative acquisition policy would fail.
+
+4. Dispatch a request tied to that task.
+   Each callback request carries the task hash, complete task descriptor and
+   requested boundaries. Its response must carry the same task hash, meter,
+   feed, API-grid timestamp, boundary and kWh unit, plus an exact decimal or
+   rational counter token. The wrapper normalizes this absolute reading as
+   (counter - known start counter)/known total and checks transcript feasibility.
+   Adaptive choice uses exact rational affine bounds, with no online optimizer.
+   Metadata mismatch is caught; a maliciously mislabeled response is not
+   authenticated by this software, and sensor accuracy is not calibrated.
+
+5. Retain the evidence trail.
+   Keep the plan, response envelopes, result and artifact hashes together.
+   The returned guarantee is conditional on the stated fixed-error model and
+   exact retained endpoints. The task timestamps are API-grid timestamps;
+   they do not establish historical native arrival times. The declared error
+   allowance 0.01E is an illustrative sensitivity, not a device specification.
+
+Worked saved tasks
+------------------
+These examples use actual existing forecast coefficients and known totals.
+They are chosen to explain the two permitted actions, not to estimate their
+frequency. Exact coefficients and metadata are in workflow_examples.json;
+the displayed coefficient decimals below are approximate.
+
+A. System 1, 2025-07-06, 12:00--18:00 UTC, ridge versus MLP.
+   E = 0.1201171875 kWh.
+   c = (0.1100569020, 0.0074989311, 0.1490827588,
+        0.1121294620, 0.0606303553, 0.0477844132).
+   Public interface: retrieve the whole range in one request.
+   Restricted reading-priority interface: query boundary 2 (14:00), then
+   boundary 1 (13:00) or 4 (16:00), according to the certified affine-bound
+   comparison using the first answer. Two readings guarantee the half-width
+   target throughout the declared error model. The second timestamp may be
+   earlier than the first because these are retrieved historical readings.
+
+B. System 2, 2025-07-07, 06:00--12:00 UTC, daily persistence versus MLP.
+   E = 0.09375 kWh.
+   c = (-0.0035807292, -0.0055338542, -0.0039062500,
+        -0.0045572917, -0.0052083333, -0.0048828125).
+   Public interface: retrieve the whole range.
+   Restricted interface: preselect boundaries (1,2,3), corresponding to
+   07:00, 08:00 and 09:00. Three readings certify precision. A two-reading
+   cap triggers escalation; the existing exact lower witness rules out a
+   deterministic two-query guarantee in this declared uncertainty model.
+
+C. System 7, 2025-07-03, 06:00--12:00 UTC, daily persistence versus gradient boosting.
+   E = 0.2724609375 kWh.
+   c = (0.0018981473, -0.0007060194, -0.0046122694,
+        0.0038137001, 0.0038918910, -0.0025621497).
+   Public interface: retrieve the whole range.
+   Restricted interface: use the certified fixed boundaries (2,3,5), namely
+   08:00, 09:00 and 11:00. Two readings again require escalation.
+
+Which actions were actually measured?
+-------------------------------------
+The earlier HTTP experiment sent 60 requests in 30 policy trials on three
+different prespecified tasks (the first July block for each system). Its
+range API I/O averaged 0.331 s, compared with 0.497 s for adaptive retrieval.
+The 29-case selectors and examples above are offline uses of saved geometry.
+The dispatch unit tests use a constructed uniform profile and zero error;
+they do not constitute new provider calls, observed savings or production
+deployments. All source data and measured trial outputs remain unchanged.
+
+Commands from the supplement root
+---------------------------------
+python work/risk_adaptivity_revision/protocol_selection/check_bound_workflow.py --output-dir bound_workflow_checks
+python work/risk_adaptivity_revision/protocol_selection/generate_workflow_examples.py
+
+For programmatic use, import BoundWorkflow from bound_workflow.py, obtain the
+saved descriptor with workflow.task(case_id), then call workflow.plan(task,
+workflow.selector.scenario("public_bulk")). Supply your actual read_point and
+read_batch adapters only to workflow.execute(plan, ...). The source contains
+the complete envelope schema. No credential, network adapter, artificial
+delay, per-reading tariff or new measurement service is invented here.

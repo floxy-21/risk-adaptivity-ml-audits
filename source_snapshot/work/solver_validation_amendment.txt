@@ -1,0 +1,16 @@
+Post-run numerical validation amendment, 2026-10-10 01:13 UTC.
+
+The completed main study and its result files remain unchanged. A final
+generic-API review found that extreme signed coordinate lower bounds could
+overflow an attaining completion even when equal forecasts masked this
+overflow in the zero objective. The solver now rejects nonfinite witnesses
+explicitly. This guard does not affect the nonnegative, finite-scale domain
+of the empirical study or its reference comparisons. A new regression test
+reproduces the failure and confirms rejection; all prior tests still pass.
+
+Refresh the independent numerical audit to compare both the experimental
+implementation and final generic solver against the same1800 independent
+LP extrema, alongside600 individual-error QP checks. Record both final source
+hashes in the validation report. Refresh the generic runtime report as well.
+These are validation-only checks after the main run, not a new empirical
+experiment and not an alteration to the original execution history.

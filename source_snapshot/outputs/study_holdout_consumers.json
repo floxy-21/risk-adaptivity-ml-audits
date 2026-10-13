@@ -1,0 +1,5080 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-10T03:07:43.938716+00:00",
+  "wall_seconds": 284.7835961000019,
+  "selection": {
+    "frozen_utc": "2026-10-10T03:03:35.208473+00:00",
+    "selected_ids": [
+      "MT_081",
+      "MT_082",
+      "MT_083",
+      "MT_084",
+      "MT_085",
+      "MT_086",
+      "MT_087",
+      "MT_088",
+      "MT_089",
+      "MT_090",
+      "MT_091",
+      "MT_093",
+      "MT_094",
+      "MT_095",
+      "MT_096",
+      "MT_097",
+      "MT_098",
+      "MT_099",
+      "MT_100",
+      "MT_101",
+      "MT_102",
+      "MT_103",
+      "MT_104",
+      "MT_105",
+      "MT_114",
+      "MT_118",
+      "MT_119",
+      "MT_123",
+      "MT_124",
+      "MT_125"
+    ],
+    "selection_statistics": [
+      {
+        "meter": "MT_081",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_082",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_083",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_084",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_085",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_086",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_087",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_088",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_089",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_090",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_091",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_092",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9167808219178082
+      },
+      {
+        "meter": "MT_093",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_094",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_095",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_096",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_097",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_098",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_099",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_100",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_101",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_102",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_103",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_104",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_105",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_106",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_107",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_108",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_109",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_110",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_111",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_112",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_113",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_114",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_115",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_116",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_117",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_118",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_119",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_120",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_121",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_122",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_123",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_124",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_125",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_126",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_127",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.98162100456621
+      },
+      {
+        "meter": "MT_128",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_129",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_130",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.43447488584474886
+      },
+      {
+        "meter": "MT_131",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.5178082191780822
+      },
+      {
+        "meter": "MT_132",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.5301369863013699
+      },
+      {
+        "meter": "MT_133",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_134",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_135",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_136",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_137",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_138",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_139",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_140",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_141",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_142",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_143",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_144",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_145",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_146",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_147",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_148",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_149",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9997716894977169
+      },
+      {
+        "meter": "MT_150",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_151",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_152",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_153",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_154",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_155",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_156",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_157",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9997716894977169
+      },
+      {
+        "meter": "MT_158",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_159",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_160",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_161",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_162",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9997716894977169
+      },
+      {
+        "meter": "MT_163",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_164",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_165",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.3221461187214612
+      },
+      {
+        "meter": "MT_166",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_167",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_168",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_169",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_170",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.8410958904109589
+      },
+      {
+        "meter": "MT_171",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_172",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_173",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_174",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_175",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_176",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_177",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_178",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_179",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.03287671232876712
+      },
+      {
+        "meter": "MT_180",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_181",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_182",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_183",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_184",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_185",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.5315068493150685
+      },
+      {
+        "meter": "MT_186",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.26449771689497714
+      },
+      {
+        "meter": "MT_187",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_188",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_189",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_190",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_191",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_192",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_193",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_194",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_195",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_196",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_197",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_198",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_199",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_200",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_201",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_202",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_203",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_204",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_205",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_206",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_207",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_208",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_209",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_210",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_211",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_212",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_213",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_214",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_215",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_216",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9997716894977169
+      },
+      {
+        "meter": "MT_217",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_218",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_219",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_220",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_221",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_222",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_223",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_224",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.5232876712328767
+      },
+      {
+        "meter": "MT_225",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_226",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_227",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_228",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_229",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_230",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_231",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_232",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_233",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_234",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_235",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_236",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_237",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_238",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_239",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_240",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_241",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_242",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_243",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_244",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_245",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_246",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_247",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_248",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_249",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_250",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_251",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_252",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_253",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_254",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_255",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_256",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_257",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_258",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_259",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_260",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_261",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_262",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_263",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_264",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_265",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_266",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_267",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_268",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_269",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_270",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_271",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_272",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_273",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9997716894977169
+      },
+      {
+        "meter": "MT_274",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_275",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_276",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_277",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_278",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_279",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_280",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_281",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_282",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_283",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_284",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_285",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_286",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_287",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_288",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_289",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.09041095890410959
+      },
+      {
+        "meter": "MT_290",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_291",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_292",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_293",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_294",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_295",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_296",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_297",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_298",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_299",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_300",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_301",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_302",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_303",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_304",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_305",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.06301369863013699
+      },
+      {
+        "meter": "MT_306",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_307",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_308",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_309",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_310",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_311",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_312",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_313",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_314",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_315",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_316",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_317",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_318",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_319",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_320",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_321",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_322",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.33972602739726027
+      },
+      {
+        "meter": "MT_323",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_324",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_325",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_326",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_327",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_328",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_329",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_330",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_331",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9990867579908675
+      },
+      {
+        "meter": "MT_332",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_333",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_334",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_335",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_336",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_337",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_338",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_339",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_340",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_341",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_342",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_343",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_344",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_345",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9997716894977169
+      },
+      {
+        "meter": "MT_346",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9996575342465753
+      },
+      {
+        "meter": "MT_347",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.0
+      },
+      {
+        "meter": "MT_348",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.5552511415525114
+      },
+      {
+        "meter": "MT_349",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9992009132420091
+      },
+      {
+        "meter": "MT_350",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_351",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_352",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_353",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_354",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_355",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_356",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_357",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.998972602739726
+      },
+      {
+        "meter": "MT_358",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_359",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_360",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9997716894977169
+      },
+      {
+        "meter": "MT_361",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_362",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9998858447488584
+      },
+      {
+        "meter": "MT_363",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9997716894977169
+      },
+      {
+        "meter": "MT_364",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9997716894977169
+      },
+      {
+        "meter": "MT_365",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_366",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9997716894977169
+      },
+      {
+        "meter": "MT_367",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9996575342465753
+      },
+      {
+        "meter": "MT_368",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_369",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 1.0
+      },
+      {
+        "meter": "MT_370",
+        "training_hour_count": 8760,
+        "training_nonmissing_fraction": 1.0,
+        "training_positive_fraction": 0.9968036529680365
+      }
+    ],
+    "config": {
+      "candidate_first": "MT_081",
+      "candidate_last": "MT_370",
+      "selected_count": 30,
+      "selection_year": 2013,
+      "minimum_nonmissing_fraction": 0.99,
+      "strict_minimum_positive_fraction": 0.95,
+      "train_year": 2013,
+      "test_year": 2014,
+      "test_months": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "test_max_day": 28,
+      "models": [
+        "daily",
+        "ridge",
+        "hist_gradient_boosting",
+        "mlp"
+      ],
+      "gap_hours": 6,
+      "total_block_hours": 6,
+      "seeds": [
+        1103,
+        2207,
+        3301
+      ],
+      "budgets": [
+        0,
+        2
+      ],
+      "policies": [
+        "optimal_minimax_width",
+        "greedy_width_reduction"
+      ],
+      "regimes": [
+        "restricted_record",
+        "available_test_persistence_archive"
+      ],
+      "workers": 2,
+      "training_threads_per_worker": 2,
+      "bootstrap_seed": 1729,
+      "bootstrap_resamples": 2000,
+      "ridge_alpha": 1.0,
+      "hgb": {
+        "max_iter": 100,
+        "learning_rate": 0.08,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 20,
+        "l2_regularization": 1.0,
+        "max_bins": 127,
+        "random_state": 1729,
+        "early_stopping": false
+      },
+      "mlp": {
+        "hidden_layer_sizes": [
+          32,
+          16
+        ],
+        "activation": "relu",
+        "solver": "adam",
+        "alpha": 0.001,
+        "learning_rate_init": 0.001,
+        "batch_size": 256,
+        "max_iter": 1000,
+        "early_stopping": false,
+        "random_state": 1729,
+        "tol": 0.0001,
+        "n_iter_no_change": 10,
+        "shuffle": true
+      },
+      "mlp_target_scaling": "training mean; invert then nonnegative clipping",
+      "selection_uses_test_values": false,
+      "tuning_or_consumer_replacement": false
+    },
+    "config_sha256": "87840b2c70e3d498b4202be8e899433f2b8b5ad2ae6bf1a5c55e29145d1cb0d1",
+    "protocol_sha256": "5caf4e2b5274d0815dd6b1bebfc1875609336137f1a5594c721cc7b8318a7aed",
+    "source_text_sha256": "d51565f2cb5a6b768d06ba1bbd3c084c6e2f3aab07f00c6f2dcb80e90175124b",
+    "source_zip_sha256": "f6c4d0e0df12ecdb9ea008dd6eef3518adb52c559d04a9bac2e1b81dcfc8d4e1",
+    "script_sha256": "444e8ef7d3a7ca79bfd4f20769e99c9925488651d55eae44984b8e3a2fced266",
+    "helper_hashes": {
+      "study_archive_access.py": "de88aaf109b9534402c913789b81f992cd312dc2d17902e953b715198e2ae28b",
+      "study_recovery.py": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241",
+      "run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+      "energy_rank_bounds.py": "2b555e7fbb676f311b87c38a1cfc8bf81b34743e35a7c43b5ff08d759596f467"
+    },
+    "original_artifact_hashes": {
+      "study_predictions.csv": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+      "study_summary.json": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196",
+      "study_recovery.csv": "abd026c12bcd6df64256544d55b4952b5249f0a0368969d3337bc11fa77a4911",
+      "study_recovery_pair_seed.csv": "39802e4c9bd7d2afa48d4ab687284102fe4d1df99fb758ee8e84b10e1fa92443",
+      "run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+      "study_recovery.py": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241"
+    },
+    "outcomes_inspected_before_selection": false
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1"
+  },
+  "meters": 30,
+  "heldout_meter_days": 3210,
+  "target_rows": 77040,
+  "unique_pair_mask_comparisons_per_regime": 57780,
+  "checks": {
+    "timestamp_only_lookup": true,
+    "missing_future_row_not_filled": true,
+    "hidden_truth_column_rejected": true,
+    "causal_lag24_feature_identity": true,
+    "same_visible_information_query_invariance": true,
+    "evaluations": 462240,
+    "wrong_certificates": 0,
+    "enclosure_failures": 0,
+    "worst_width_failures": 0,
+    "free_copy_checks": 9630,
+    "query_feasibility_checks": 462240,
+    "unchanged_original_artifacts": true,
+    "source_text_matches_verified_zip": true,
+    "consumer_ids_disjoint": true,
+    "causal_features_verified": true,
+    "frozen_config_unchanged": true
+  },
+  "failures": [],
+  "fit_metadata": [
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_081",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 99.03006991566679,
+      "fit_seconds": 1.9971680999988166,
+      "model_fit_seconds": {
+        "ridge": 0.03283540000120411,
+        "hist_gradient_boosting": 0.4548721999999543,
+        "mlp": 1.3900374000004376
+      },
+      "mlp_training": {
+        "epochs": 33,
+        "training_objective_loss": 0.005186720414360531,
+        "target_scale_training_mean_kwh": 99.03006991566679,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 194.97618117301732,
+        "ridge": 128.19698244093703,
+        "hist_gradient_boosting": 110.96426430289928,
+        "mlp": 126.82166266088089
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_082",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 45.07843289932253,
+      "fit_seconds": 1.9262691999974777,
+      "model_fit_seconds": {
+        "ridge": 0.03290170000036596,
+        "hist_gradient_boosting": 0.4473628000014287,
+        "mlp": 1.325221799997962
+      },
+      "mlp_training": {
+        "epochs": 34,
+        "training_objective_loss": 0.003376791014381101,
+        "target_scale_training_mean_kwh": 45.07843289932253,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 23.156941111679846,
+        "ridge": 15.205531596319082,
+        "hist_gradient_boosting": 13.50021117884619,
+        "mlp": 15.528863665834733
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_083",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 72.15315239185026,
+      "fit_seconds": 1.6043070000014268,
+      "model_fit_seconds": {
+        "ridge": 0.008955499997682637,
+        "hist_gradient_boosting": 0.29210539999985485,
+        "mlp": 1.2870449999973061
+      },
+      "mlp_training": {
+        "epochs": 28,
+        "training_objective_loss": 0.003979010766739411,
+        "target_scale_training_mean_kwh": 72.15315239185026,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 70.09401798515954,
+        "ridge": 40.00702985685199,
+        "hist_gradient_boosting": 30.62692071710405,
+        "mlp": 40.96716190504017
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_084",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 206.8424679998582,
+      "fit_seconds": 2.918007000000216,
+      "model_fit_seconds": {
+        "ridge": 0.009482900000875816,
+        "hist_gradient_boosting": 0.27576589999807766,
+        "mlp": 2.615587100000994
+      },
+      "mlp_training": {
+        "epochs": 47,
+        "training_objective_loss": 0.00790235151995898,
+        "target_scale_training_mean_kwh": 206.8424679998582,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 5006.49600728788,
+        "ridge": 1319.9622268465396,
+        "hist_gradient_boosting": 1299.929727509207,
+        "mlp": 1305.382107835856
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_085",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 124.96266067090949,
+      "fit_seconds": 1.4973352999986673,
+      "model_fit_seconds": {
+        "ridge": 0.008644200002891012,
+        "hist_gradient_boosting": 0.3011756999985664,
+        "mlp": 1.17377530000158
+      },
+      "mlp_training": {
+        "epochs": 31,
+        "training_objective_loss": 0.005171885980132623,
+        "target_scale_training_mean_kwh": 124.96266067090949,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 291.3137740914048,
+        "ridge": 173.83276357705154,
+        "hist_gradient_boosting": 134.41525710279424,
+        "mlp": 165.5480799448938
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_086",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 444.1511253624257,
+      "fit_seconds": 2.0525715999974636,
+      "model_fit_seconds": {
+        "ridge": 0.008855699998093769,
+        "hist_gradient_boosting": 0.30200949999925797,
+        "mlp": 1.7268593000007968
+      },
+      "mlp_training": {
+        "epochs": 47,
+        "training_objective_loss": 0.009639711203108556,
+        "target_scale_training_mean_kwh": 444.1511253624257,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 7060.4138081307565,
+        "ridge": 5107.801635519367,
+        "hist_gradient_boosting": 3928.943105090669,
+        "mlp": 4208.782358117525
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_087",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 113.17715300720111,
+      "fit_seconds": 2.4011921000019356,
+      "model_fit_seconds": {
+        "ridge": 0.009756200000992976,
+        "hist_gradient_boosting": 0.27742790000047535,
+        "mlp": 2.098881400001119
+      },
+      "mlp_training": {
+        "epochs": 60,
+        "training_objective_loss": 0.010111661958557693,
+        "target_scale_training_mean_kwh": 113.17715300720111,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 383.00052537737884,
+        "ridge": 191.6197255068911,
+        "hist_gradient_boosting": 194.57597899691459,
+        "mlp": 198.29729505771346
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_088",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 120.4520697167756,
+      "fit_seconds": 3.5038361999977496,
+      "model_fit_seconds": {
+        "ridge": 0.0085696000023745,
+        "hist_gradient_boosting": 0.3196733000004315,
+        "mlp": 3.1623442999989493
+      },
+      "mlp_training": {
+        "epochs": 90,
+        "training_objective_loss": 0.01835133520137196,
+        "target_scale_training_mean_kwh": 120.4520697167756,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 1378.8320641513792,
+        "ridge": 703.031244338259,
+        "hist_gradient_boosting": 678.2705243757543,
+        "mlp": 826.902428104884
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_089",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 192.91806228664305,
+      "fit_seconds": 2.141708399998606,
+      "model_fit_seconds": {
+        "ridge": 0.007778700000926619,
+        "hist_gradient_boosting": 0.2576133000002301,
+        "mlp": 1.864668599999277
+      },
+      "mlp_training": {
+        "epochs": 57,
+        "training_objective_loss": 0.007320896215207625,
+        "target_scale_training_mean_kwh": 192.91806228664305,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 1400.9121542159426,
+        "ridge": 723.0859108728243,
+        "hist_gradient_boosting": 604.7660062755341,
+        "mlp": 594.1576470903186
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_090",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 131.2938507702502,
+      "fit_seconds": 8.164929700000357,
+      "model_fit_seconds": {
+        "ridge": 0.007333199999266071,
+        "hist_gradient_boosting": 0.24171280000155093,
+        "mlp": 7.9048383999979706
+      },
+      "mlp_training": {
+        "epochs": 239,
+        "training_objective_loss": 0.020788444835674245,
+        "target_scale_training_mean_kwh": 131.2938507702502,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 9882.805931050601,
+        "ridge": 2827.851081002672,
+        "hist_gradient_boosting": 2003.7863236691119,
+        "mlp": 2980.086082900293
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_091",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 143.2149911332111,
+      "fit_seconds": 1.3847735000017565,
+      "model_fit_seconds": {
+        "ridge": 0.007214099998236634,
+        "hist_gradient_boosting": 0.3005989999983285,
+        "mlp": 1.0653779999993276
+      },
+      "mlp_training": {
+        "epochs": 32,
+        "training_objective_loss": 0.0060215698539270585,
+        "target_scale_training_mean_kwh": 143.2149911332111,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 553.870505977603,
+        "ridge": 322.3533445056266,
+        "hist_gradient_boosting": 356.7752659079622,
+        "mlp": 356.382154892208
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_093",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 24.305214894756553,
+      "fit_seconds": 21.500124599999253,
+      "model_fit_seconds": {
+        "ridge": 0.017288999999436783,
+        "hist_gradient_boosting": 0.37223359999916283,
+        "mlp": 21.084011199996894
+      },
+      "mlp_training": {
+        "epochs": 383,
+        "training_objective_loss": 0.4907267789782613,
+        "target_scale_training_mean_kwh": 24.305214894756553,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 3787.660865008753,
+        "ridge": 2181.5843742995394,
+        "hist_gradient_boosting": 1714.3621857910227,
+        "mlp": 2377.639227412109
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_094",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 25.46677673932972,
+      "fit_seconds": 10.337215300001844,
+      "model_fit_seconds": {
+        "ridge": 0.011083099998359103,
+        "hist_gradient_boosting": 0.4395680999987235,
+        "mlp": 9.869668800001818
+      },
+      "mlp_training": {
+        "epochs": 175,
+        "training_objective_loss": 0.15636713944571973,
+        "target_scale_training_mean_kwh": 25.46677673932972,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 714.6519026499709,
+        "ridge": 443.46468215496935,
+        "hist_gradient_boosting": 365.49378997643856,
+        "mlp": 385.4344834173817
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_095",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 16.58884044275996,
+      "fit_seconds": 8.505476300000737,
+      "model_fit_seconds": {
+        "ridge": 0.01700920000075712,
+        "hist_gradient_boosting": 0.40920590000314405,
+        "mlp": 8.055512799997814
+      },
+      "mlp_training": {
+        "epochs": 138,
+        "training_objective_loss": 0.0214814940619357,
+        "target_scale_training_mean_kwh": 16.58884044275996,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 100.34093439766683,
+        "ridge": 17.35986220386137,
+        "hist_gradient_boosting": 13.687774176745583,
+        "mlp": 15.753776066783347
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_096",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 10.814709941947795,
+      "fit_seconds": 7.147684700001264,
+      "model_fit_seconds": {
+        "ridge": 0.01542909999989206,
+        "hist_gradient_boosting": 0.42985789999875124,
+        "mlp": 6.674814399997558
+      },
+      "mlp_training": {
+        "epochs": 115,
+        "training_objective_loss": 0.019509692162365172,
+        "target_scale_training_mean_kwh": 10.814709941947795,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 19.74847884649485,
+        "ridge": 5.458262146788793,
+        "hist_gradient_boosting": 4.555344232780332,
+        "mlp": 4.896067262974166
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_097",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 196.0884844133732,
+      "fit_seconds": 5.517492699997092,
+      "model_fit_seconds": {
+        "ridge": 0.01773219999813591,
+        "hist_gradient_boosting": 0.45482500000071013,
+        "mlp": 5.018684899998334
+      },
+      "mlp_training": {
+        "epochs": 87,
+        "training_objective_loss": 0.009109093007954448,
+        "target_scale_training_mean_kwh": 196.0884844133732,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 7448.352077396376,
+        "ridge": 2258.4964168528404,
+        "hist_gradient_boosting": 1390.0161487252042,
+        "mlp": 1443.198931910721
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_098",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 660.8652247280021,
+      "fit_seconds": 2.9500905999993847,
+      "model_fit_seconds": {
+        "ridge": 0.01440520000323886,
+        "hist_gradient_boosting": 0.2933076000008441,
+        "mlp": 2.6241147000000637
+      },
+      "mlp_training": {
+        "epochs": 42,
+        "training_objective_loss": 0.005982668471300804,
+        "target_scale_training_mean_kwh": 660.8652247280021,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 6261.554840828141,
+        "ridge": 4450.3638738974805,
+        "hist_gradient_boosting": 4029.889103028385,
+        "mlp": 4602.286193659179
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_099",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 1186.0105370273109,
+      "fit_seconds": 2.7252486999968824,
+      "model_fit_seconds": {
+        "ridge": 0.011979300001257798,
+        "hist_gradient_boosting": 0.4090054999978747,
+        "mlp": 2.2812338000003365
+      },
+      "mlp_training": {
+        "epochs": 41,
+        "training_objective_loss": 0.006496533771060445,
+        "target_scale_training_mean_kwh": 1186.0105370273109,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 49075.65881901441,
+        "ridge": 36200.64806724934,
+        "hist_gradient_boosting": 30428.94317049573,
+        "mlp": 31430.564460193025
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_100",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 62.28873873117821,
+      "fit_seconds": 5.874819099997694,
+      "model_fit_seconds": {
+        "ridge": 0.01135939999949187,
+        "hist_gradient_boosting": 0.2936022000030789,
+        "mlp": 5.550183099996502
+      },
+      "mlp_training": {
+        "epochs": 98,
+        "training_objective_loss": 0.011320904091763048,
+        "target_scale_training_mean_kwh": 62.28873873117821,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 123.05643085457505,
+        "ridge": 103.88229009054903,
+        "hist_gradient_boosting": 95.63007651302082,
+        "mlp": 110.91783815428907
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_101",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 717.7453806725943,
+      "fit_seconds": 2.7974667999988014,
+      "model_fit_seconds": {
+        "ridge": 0.012868600002548192,
+        "hist_gradient_boosting": 0.39921790000153123,
+        "mlp": 2.3602159000001848
+      },
+      "mlp_training": {
+        "epochs": 40,
+        "training_objective_loss": 0.006544136309312031,
+        "target_scale_training_mean_kwh": 717.7453806725943,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 5223.416683350396,
+        "ridge": 4209.448375171941,
+        "hist_gradient_boosting": 3644.900797640004,
+        "mlp": 4732.414661196896
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_102",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 880.8676982461853,
+      "fit_seconds": 2.953076699999656,
+      "model_fit_seconds": {
+        "ridge": 0.01553300000159652,
+        "hist_gradient_boosting": 0.4425956999984919,
+        "mlp": 2.4723553999974683
+      },
+      "mlp_training": {
+        "epochs": 47,
+        "training_objective_loss": 0.01153261230086739,
+        "target_scale_training_mean_kwh": 880.8676982461853,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 51630.17827579008,
+        "ridge": 30281.597316723717,
+        "hist_gradient_boosting": 26223.77323285848,
+        "mlp": 27073.422453559917
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_103",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 1132.6674243143584,
+      "fit_seconds": 2.1682809999983874,
+      "model_fit_seconds": {
+        "ridge": 0.011025100000551902,
+        "hist_gradient_boosting": 0.4558154000005743,
+        "mlp": 1.6823546000014176
+      },
+      "mlp_training": {
+        "epochs": 29,
+        "training_objective_loss": 0.003918872750759045,
+        "target_scale_training_mean_kwh": 1132.6674243143584,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 9742.473340479388,
+        "ridge": 7848.199255785169,
+        "hist_gradient_boosting": 7402.32381385576,
+        "mlp": 8730.332928368285
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_104",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 541.4363022436697,
+      "fit_seconds": 1.2660551000008127,
+      "model_fit_seconds": {
+        "ridge": 0.00801810000120895,
+        "hist_gradient_boosting": 0.20848669999759295,
+        "mlp": 1.037125399998331
+      },
+      "mlp_training": {
+        "epochs": 30,
+        "training_objective_loss": 0.005282668168878526,
+        "target_scale_training_mean_kwh": 541.4363022436697,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 3343.2249279741977,
+        "ridge": 2447.818450956384,
+        "hist_gradient_boosting": 1805.689443831677,
+        "mlp": 2784.6263808637086
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_105",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 220.97669389040757,
+      "fit_seconds": 2.7528276999983063,
+      "model_fit_seconds": {
+        "ridge": 0.00810049999927287,
+        "hist_gradient_boosting": 0.2646600000007311,
+        "mlp": 2.4679954999992333
+      },
+      "mlp_training": {
+        "epochs": 76,
+        "training_objective_loss": 0.013811140732093184,
+        "target_scale_training_mean_kwh": 220.97669389040757,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 2243.463971286117,
+        "ridge": 1636.0871571411358,
+        "hist_gradient_boosting": 1654.7479874304124,
+        "mlp": 1663.4260832884968
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_114",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 299.94519883008394,
+      "fit_seconds": 2.6064791999997396,
+      "model_fit_seconds": {
+        "ridge": 0.009339899999758927,
+        "hist_gradient_boosting": 0.4013701999974728,
+        "mlp": 2.180439900002966
+      },
+      "mlp_training": {
+        "epochs": 53,
+        "training_objective_loss": 0.008259692623767119,
+        "target_scale_training_mean_kwh": 299.94519883008394,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 4867.944151439086,
+        "ridge": 2378.4680676872867,
+        "hist_gradient_boosting": 1815.8794996070985,
+        "mlp": 2089.7936012586806
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_118",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 100.7750955610126,
+      "fit_seconds": 1.5031622999995307,
+      "model_fit_seconds": {
+        "ridge": 0.007140000001527369,
+        "hist_gradient_boosting": 0.284979399999429,
+        "mlp": 1.1997125999987475
+      },
+      "mlp_training": {
+        "epochs": 35,
+        "training_objective_loss": 0.006283476735648097,
+        "target_scale_training_mean_kwh": 100.7750955610126,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 131.26360156738613,
+        "ridge": 111.31259387582274,
+        "hist_gradient_boosting": 108.51366932173512,
+        "mlp": 135.0979141698614
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_119",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 80.67330877386416,
+      "fit_seconds": 2.105700700001762,
+      "model_fit_seconds": {
+        "ridge": 0.014168000001518521,
+        "hist_gradient_boosting": 0.37924890000067535,
+        "mlp": 1.6941025000014633
+      },
+      "mlp_training": {
+        "epochs": 45,
+        "training_objective_loss": 0.009466714158626878,
+        "target_scale_training_mean_kwh": 80.67330877386416,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 251.42815839231744,
+        "ridge": 120.04108736123077,
+        "hist_gradient_boosting": 85.43528135402534,
+        "mlp": 86.60456314366773
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_123",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 62.19375143825235,
+      "fit_seconds": 3.5026527000009082,
+      "model_fit_seconds": {
+        "ridge": 0.012623700000403915,
+        "hist_gradient_boosting": 0.2664629999999306,
+        "mlp": 3.2131322999994154
+      },
+      "mlp_training": {
+        "epochs": 69,
+        "training_objective_loss": 0.011482390920495425,
+        "target_scale_training_mean_kwh": 62.19375143825235,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 377.04563707051386,
+        "ridge": 115.2364326271189,
+        "hist_gradient_boosting": 98.93179390263795,
+        "mlp": 99.73085022477115
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_124",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 276.1532842802193,
+      "fit_seconds": 1.6646335999976145,
+      "model_fit_seconds": {
+        "ridge": 0.007981799997651251,
+        "hist_gradient_boosting": 0.28532819999963976,
+        "mlp": 1.3590024000004632
+      },
+      "mlp_training": {
+        "epochs": 39,
+        "training_objective_loss": 0.0067146052574738576,
+        "target_scale_training_mean_kwh": 276.1532842802193,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 2980.788133608996,
+        "ridge": 1542.33898262876,
+        "hist_gradient_boosting": 1132.475615958427,
+        "mlp": 1308.9036797191263
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_125",
+      "train_days": 357,
+      "test_days": 107,
+      "train_start": "2013-01-01",
+      "train_end": "2013-12-31",
+      "test_start": "2014-01-01",
+      "test_end": "2014-10-25",
+      "training_mean_kwh": 37.83038326113311,
+      "fit_seconds": 4.932765699999436,
+      "model_fit_seconds": {
+        "ridge": 0.03945230000317679,
+        "hist_gradient_boosting": 2.554898800000956,
+        "mlp": 2.312391800001933
+      },
+      "mlp_training": {
+        "epochs": 47,
+        "training_objective_loss": 0.007644686822106472,
+        "target_scale_training_mean_kwh": 37.83038326113311,
+        "warnings": []
+      },
+      "mse": {
+        "daily": 45.98536733234295,
+        "ridge": 27.466025125551983,
+        "hist_gradient_boosting": 18.7013244984945,
+        "mlp": 23.441669915296988
+      },
+      "additional_warnings": [],
+      "status": "passed"
+    }
+  ],
+  "provenance_by_meter": [
+    {
+      "meter": "MT_081",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_082",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_083",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_084",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_085",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_086",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_087",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_088",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_089",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_090",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_091",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_093",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_094",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_095",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_096",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_097",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_098",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_099",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_100",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_101",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_102",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_103",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_104",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_105",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_114",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_118",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_119",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_123",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_124",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    },
+    {
+      "meter": "MT_125",
+      "test_days": 107,
+      "target_rows": 2568,
+      "target_rows_with_saved_next_day_copy": 2448,
+      "test_days_with_free_copy": 102,
+      "masked_coordinate_occurrences_all_seeds": 1926,
+      "free_coordinate_occurrences_all_seeds": 1836,
+      "max_copy_absolute_error": 0.0
+    }
+  ],
+  "cohort_results": [
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 0,
+      "policy": "greedy_width_reduction",
+      "pair_trials": 57780,
+      "decisions": 55973,
+      "wrong_decisions": 0,
+      "enclosed_truth": 57780,
+      "initial_width_sum": 20884175.311833534,
+      "actual_width_sum": 20884175.311833534,
+      "worst_width_sum": 20884175.311833534,
+      "queries_sum": 0,
+      "original_missing_sum": 346680,
+      "free_revealed_sum": 330480,
+      "pooled_resolved_fraction": 0.9687262028383524,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 361.4429787440902,
+      "pooled_mean_actual_remaining_width": 361.4429787440902,
+      "pooled_mean_worst_case_remaining_width": 361.4429787440902,
+      "resolved_fraction": 0.9687262028383524,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 361.4429787440903,
+      "mean_actual_remaining_width": 361.4429787440903,
+      "mean_worst_case_remaining_width": 361.4429787440903
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 0,
+      "policy": "optimal_minimax_width",
+      "pair_trials": 57780,
+      "decisions": 55973,
+      "wrong_decisions": 0,
+      "enclosed_truth": 57780,
+      "initial_width_sum": 20884175.311833534,
+      "actual_width_sum": 20884175.311833534,
+      "worst_width_sum": 20884175.311833534,
+      "queries_sum": 0,
+      "original_missing_sum": 346680,
+      "free_revealed_sum": 330480,
+      "pooled_resolved_fraction": 0.9687262028383524,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 361.4429787440902,
+      "pooled_mean_actual_remaining_width": 361.4429787440902,
+      "pooled_mean_worst_case_remaining_width": 361.4429787440902,
+      "resolved_fraction": 0.9687262028383524,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 361.4429787440903,
+      "mean_actual_remaining_width": 361.4429787440903,
+      "mean_worst_case_remaining_width": 361.4429787440903
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 2,
+      "policy": "greedy_width_reduction",
+      "pair_trials": 57780,
+      "decisions": 56920,
+      "wrong_decisions": 0,
+      "enclosed_truth": 57780,
+      "initial_width_sum": 20884175.311833534,
+      "actual_width_sum": 3982263.0682260073,
+      "worst_width_sum": 6135703.849802069,
+      "queries_sum": 5395,
+      "original_missing_sum": 346680,
+      "free_revealed_sum": 330480,
+      "pooled_resolved_fraction": 0.9851159570785739,
+      "pooled_mean_queries": 0.09337140879196953,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 361.4429787440902,
+      "pooled_mean_actual_remaining_width": 68.92113306033242,
+      "pooled_mean_worst_case_remaining_width": 106.19079006234111,
+      "resolved_fraction": 0.9851159570785739,
+      "mean_queries": 0.09337140879196953,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 361.4429787440903,
+      "mean_actual_remaining_width": 68.92113306033242,
+      "mean_worst_case_remaining_width": 106.19079006234112
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 2,
+      "policy": "optimal_minimax_width",
+      "pair_trials": 57780,
+      "decisions": 56955,
+      "wrong_decisions": 0,
+      "enclosed_truth": 57780,
+      "initial_width_sum": 20884175.311833534,
+      "actual_width_sum": 3626261.055203834,
+      "worst_width_sum": 5603209.834838076,
+      "queries_sum": 5395,
+      "original_missing_sum": 346680,
+      "free_revealed_sum": 330480,
+      "pooled_resolved_fraction": 0.9857217030114226,
+      "pooled_mean_queries": 0.09337140879196953,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 361.4429787440902,
+      "pooled_mean_actual_remaining_width": 62.75979673249972,
+      "pooled_mean_worst_case_remaining_width": 96.97490195289159,
+      "resolved_fraction": 0.9857217030114227,
+      "mean_queries": 0.09337140879196953,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 361.4429787440903,
+      "mean_actual_remaining_width": 62.75979673249972,
+      "mean_worst_case_remaining_width": 96.97490195289157
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 0,
+      "policy": "greedy_width_reduction",
+      "pair_trials": 57780,
+      "decisions": 14457,
+      "wrong_decisions": 0,
+      "enclosed_truth": 57780,
+      "initial_width_sum": 499222123.8909704,
+      "actual_width_sum": 499222123.8909704,
+      "worst_width_sum": 499222123.8909704,
+      "queries_sum": 0,
+      "original_missing_sum": 346680,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.25020768431983387,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 8640.050603858956,
+      "pooled_mean_actual_remaining_width": 8640.050603858956,
+      "pooled_mean_worst_case_remaining_width": 8640.050603858956,
+      "resolved_fraction": 0.25020768431983387,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 8640.050603858956,
+      "mean_actual_remaining_width": 8640.050603858956,
+      "mean_worst_case_remaining_width": 8640.050603858956
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 0,
+      "policy": "optimal_minimax_width",
+      "pair_trials": 57780,
+      "decisions": 14457,
+      "wrong_decisions": 0,
+      "enclosed_truth": 57780,
+      "initial_width_sum": 499222123.8909704,
+      "actual_width_sum": 499222123.8909704,
+      "worst_width_sum": 499222123.8909704,
+      "queries_sum": 0,
+      "original_missing_sum": 346680,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.25020768431983387,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 8640.050603858956,
+      "pooled_mean_actual_remaining_width": 8640.050603858956,
+      "pooled_mean_worst_case_remaining_width": 8640.050603858956,
+      "resolved_fraction": 0.25020768431983387,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 8640.050603858956,
+      "mean_actual_remaining_width": 8640.050603858956,
+      "mean_worst_case_remaining_width": 8640.050603858956
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 2,
+      "policy": "greedy_width_reduction",
+      "pair_trials": 57780,
+      "decisions": 36375,
+      "wrong_decisions": 0,
+      "enclosed_truth": 57780,
+      "initial_width_sum": 499222123.8909704,
+      "actual_width_sum": 94788165.12222494,
+      "worst_width_sum": 144290279.20312917,
+      "queries_sum": 115466,
+      "original_missing_sum": 346680,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.6295430944963655,
+      "pooled_mean_queries": 1.998373139494635,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 8640.050603858956,
+      "pooled_mean_actual_remaining_width": 1640.5013001423492,
+      "pooled_mean_worst_case_remaining_width": 2497.235707911547,
+      "resolved_fraction": 0.6295430944963656,
+      "mean_queries": 1.998373139494635,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 8640.050603858956,
+      "mean_actual_remaining_width": 1640.5013001423492,
+      "mean_worst_case_remaining_width": 2497.235707911547
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 2,
+      "policy": "optimal_minimax_width",
+      "pair_trials": 57780,
+      "decisions": 37042,
+      "wrong_decisions": 0,
+      "enclosed_truth": 57780,
+      "initial_width_sum": 499222123.8909704,
+      "actual_width_sum": 87398081.69241808,
+      "worst_width_sum": 132742737.13783802,
+      "queries_sum": 115454,
+      "original_missing_sum": 346680,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.6410868812737972,
+      "pooled_mean_queries": 1.998165455174801,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 8640.050603858956,
+      "pooled_mean_actual_remaining_width": 1512.600929256111,
+      "pooled_mean_worst_case_remaining_width": 2297.3820896129805,
+      "resolved_fraction": 0.6410868812737971,
+      "mean_queries": 1.998165455174801,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 8640.050603858956,
+      "mean_actual_remaining_width": 1512.600929256111,
+      "mean_worst_case_remaining_width": 2297.3820896129805
+    }
+  ],
+  "named_pair_results": [
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 0,
+      "policy": "greedy_width_reduction",
+      "model_a": "daily",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 9374,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 4164775.1359487595,
+      "actual_width_sum": 4164775.13594876,
+      "worst_width_sum": 4164775.1359487595,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9734164070612669,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 432.47924568522944,
+      "pooled_mean_actual_remaining_width": 432.4792456852295,
+      "pooled_mean_worst_case_remaining_width": 432.47924568522944,
+      "resolved_fraction": 0.9734164070612669,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 432.47924568522944,
+      "mean_actual_remaining_width": 432.47924568522944,
+      "mean_worst_case_remaining_width": 432.47924568522944
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 0,
+      "policy": "greedy_width_reduction",
+      "model_a": "daily",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 9363,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 4496261.2590308115,
+      "actual_width_sum": 4496261.2590308115,
+      "worst_width_sum": 4496261.2590308115,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9722741433021806,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 466.9014806885578,
+      "pooled_mean_actual_remaining_width": 466.9014806885578,
+      "pooled_mean_worst_case_remaining_width": 466.9014806885578,
+      "resolved_fraction": 0.9722741433021808,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 466.9014806885578,
+      "mean_actual_remaining_width": 466.9014806885578,
+      "mean_worst_case_remaining_width": 466.9014806885578
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 0,
+      "policy": "greedy_width_reduction",
+      "model_a": "daily",
+      "model_b": "ridge",
+      "pair_trials": 9630,
+      "decisions": 9376,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 3082992.7787039923,
+      "actual_width_sum": 3082992.778703992,
+      "worst_width_sum": 3082992.7787039923,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9736240913811007,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 320.14462914890885,
+      "pooled_mean_actual_remaining_width": 320.1446291489088,
+      "pooled_mean_worst_case_remaining_width": 320.14462914890885,
+      "resolved_fraction": 0.9736240913811007,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 320.14462914890885,
+      "mean_actual_remaining_width": 320.1446291489088,
+      "mean_worst_case_remaining_width": 320.14462914890885
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 0,
+      "policy": "greedy_width_reduction",
+      "model_a": "hist_gradient_boosting",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 9255,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 3491729.7448558365,
+      "actual_width_sum": 3491729.744855836,
+      "worst_width_sum": 3491729.7448558365,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9610591900311527,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 362.58875855200796,
+      "pooled_mean_actual_remaining_width": 362.5887585520079,
+      "pooled_mean_worst_case_remaining_width": 362.58875855200796,
+      "resolved_fraction": 0.9610591900311526,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 362.5887585520079,
+      "mean_actual_remaining_width": 362.5887585520079,
+      "mean_worst_case_remaining_width": 362.5887585520079
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 0,
+      "policy": "greedy_width_reduction",
+      "model_a": "ridge",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 9308,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 2509692.2999992,
+      "actual_width_sum": 2509692.2999992,
+      "worst_width_sum": 2509692.2999992,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9665628245067498,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 260.6118691587954,
+      "pooled_mean_actual_remaining_width": 260.6118691587954,
+      "pooled_mean_worst_case_remaining_width": 260.6118691587954,
+      "resolved_fraction": 0.9665628245067498,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 260.6118691587954,
+      "mean_actual_remaining_width": 260.61186915879546,
+      "mean_worst_case_remaining_width": 260.6118691587954
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 0,
+      "policy": "greedy_width_reduction",
+      "model_a": "ridge",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 9297,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 3138724.0932949353,
+      "actual_width_sum": 3138724.093294935,
+      "worst_width_sum": 3138724.0932949353,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9654205607476636,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 325.9318892310421,
+      "pooled_mean_actual_remaining_width": 325.931889231042,
+      "pooled_mean_worst_case_remaining_width": 325.9318892310421,
+      "resolved_fraction": 0.9654205607476636,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 325.9318892310421,
+      "mean_actual_remaining_width": 325.9318892310421,
+      "mean_worst_case_remaining_width": 325.9318892310421
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 0,
+      "policy": "optimal_minimax_width",
+      "model_a": "daily",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 9374,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 4164775.1359487595,
+      "actual_width_sum": 4164775.13594876,
+      "worst_width_sum": 4164775.1359487595,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9734164070612669,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 432.47924568522944,
+      "pooled_mean_actual_remaining_width": 432.4792456852295,
+      "pooled_mean_worst_case_remaining_width": 432.47924568522944,
+      "resolved_fraction": 0.9734164070612669,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 432.47924568522944,
+      "mean_actual_remaining_width": 432.47924568522944,
+      "mean_worst_case_remaining_width": 432.47924568522944
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 0,
+      "policy": "optimal_minimax_width",
+      "model_a": "daily",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 9363,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 4496261.2590308115,
+      "actual_width_sum": 4496261.2590308115,
+      "worst_width_sum": 4496261.2590308115,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9722741433021806,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 466.9014806885578,
+      "pooled_mean_actual_remaining_width": 466.9014806885578,
+      "pooled_mean_worst_case_remaining_width": 466.9014806885578,
+      "resolved_fraction": 0.9722741433021808,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 466.9014806885578,
+      "mean_actual_remaining_width": 466.9014806885578,
+      "mean_worst_case_remaining_width": 466.9014806885578
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 0,
+      "policy": "optimal_minimax_width",
+      "model_a": "daily",
+      "model_b": "ridge",
+      "pair_trials": 9630,
+      "decisions": 9376,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 3082992.7787039923,
+      "actual_width_sum": 3082992.778703992,
+      "worst_width_sum": 3082992.7787039923,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9736240913811007,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 320.14462914890885,
+      "pooled_mean_actual_remaining_width": 320.1446291489088,
+      "pooled_mean_worst_case_remaining_width": 320.14462914890885,
+      "resolved_fraction": 0.9736240913811007,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 320.14462914890885,
+      "mean_actual_remaining_width": 320.1446291489088,
+      "mean_worst_case_remaining_width": 320.14462914890885
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 0,
+      "policy": "optimal_minimax_width",
+      "model_a": "hist_gradient_boosting",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 9255,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 3491729.7448558365,
+      "actual_width_sum": 3491729.744855836,
+      "worst_width_sum": 3491729.7448558365,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9610591900311527,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 362.58875855200796,
+      "pooled_mean_actual_remaining_width": 362.5887585520079,
+      "pooled_mean_worst_case_remaining_width": 362.58875855200796,
+      "resolved_fraction": 0.9610591900311526,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 362.5887585520079,
+      "mean_actual_remaining_width": 362.5887585520079,
+      "mean_worst_case_remaining_width": 362.5887585520079
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 0,
+      "policy": "optimal_minimax_width",
+      "model_a": "ridge",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 9308,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 2509692.2999992,
+      "actual_width_sum": 2509692.2999992,
+      "worst_width_sum": 2509692.2999992,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9665628245067498,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 260.6118691587954,
+      "pooled_mean_actual_remaining_width": 260.6118691587954,
+      "pooled_mean_worst_case_remaining_width": 260.6118691587954,
+      "resolved_fraction": 0.9665628245067498,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 260.6118691587954,
+      "mean_actual_remaining_width": 260.61186915879546,
+      "mean_worst_case_remaining_width": 260.6118691587954
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 0,
+      "policy": "optimal_minimax_width",
+      "model_a": "ridge",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 9297,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 3138724.0932949353,
+      "actual_width_sum": 3138724.093294935,
+      "worst_width_sum": 3138724.0932949353,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9654205607476636,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 325.9318892310421,
+      "pooled_mean_actual_remaining_width": 325.931889231042,
+      "pooled_mean_worst_case_remaining_width": 325.9318892310421,
+      "resolved_fraction": 0.9654205607476636,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 325.9318892310421,
+      "mean_actual_remaining_width": 325.9318892310421,
+      "mean_worst_case_remaining_width": 325.9318892310421
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 2,
+      "policy": "greedy_width_reduction",
+      "model_a": "daily",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 9517,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 4164775.1359487595,
+      "actual_width_sum": 789141.5689844546,
+      "worst_width_sum": 1208812.7053343512,
+      "queries_sum": 900,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9882658359293873,
+      "pooled_mean_queries": 0.09345794392523364,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 432.47924568522944,
+      "pooled_mean_actual_remaining_width": 81.94616500357785,
+      "pooled_mean_worst_case_remaining_width": 125.52572225694198,
+      "resolved_fraction": 0.9882658359293873,
+      "mean_queries": 0.09345794392523364,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 432.47924568522944,
+      "mean_actual_remaining_width": 81.94616500357783,
+      "mean_worst_case_remaining_width": 125.52572225694198
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 2,
+      "policy": "greedy_width_reduction",
+      "model_a": "daily",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 9502,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 4496261.2590308115,
+      "actual_width_sum": 818136.4289714084,
+      "worst_width_sum": 1270905.6854878676,
+      "queries_sum": 900,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9867082035306335,
+      "pooled_mean_queries": 0.09345794392523364,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 466.9014806885578,
+      "pooled_mean_actual_remaining_width": 84.95705389111198,
+      "pooled_mean_worst_case_remaining_width": 131.97359143176195,
+      "resolved_fraction": 0.9867082035306335,
+      "mean_queries": 0.09345794392523364,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 466.9014806885578,
+      "mean_actual_remaining_width": 84.95705389111198,
+      "mean_worst_case_remaining_width": 131.97359143176195
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 2,
+      "policy": "greedy_width_reduction",
+      "model_a": "daily",
+      "model_b": "ridge",
+      "pair_trials": 9630,
+      "decisions": 9503,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 3082992.7787039923,
+      "actual_width_sum": 541417.1582060764,
+      "worst_width_sum": 858312.4323801269,
+      "queries_sum": 900,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9868120456905504,
+      "pooled_mean_queries": 0.09345794392523364,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 320.14462914890885,
+      "pooled_mean_actual_remaining_width": 56.221927124203155,
+      "pooled_mean_worst_case_remaining_width": 89.12901686190311,
+      "resolved_fraction": 0.9868120456905504,
+      "mean_queries": 0.09345794392523364,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 320.14462914890885,
+      "mean_actual_remaining_width": 56.22192712420314,
+      "mean_worst_case_remaining_width": 89.12901686190311
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 2,
+      "policy": "greedy_width_reduction",
+      "model_a": "hist_gradient_boosting",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 9446,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 3491729.7448558365,
+      "actual_width_sum": 782191.800745547,
+      "worst_width_sum": 1168502.1184171746,
+      "queries_sum": 900,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9808930425752855,
+      "pooled_mean_queries": 0.09345794392523364,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 362.58875855200796,
+      "pooled_mean_actual_remaining_width": 81.22448605872762,
+      "pooled_mean_worst_case_remaining_width": 121.33978384394337,
+      "resolved_fraction": 0.9808930425752855,
+      "mean_queries": 0.09345794392523364,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 362.5887585520079,
+      "mean_actual_remaining_width": 81.22448605872763,
+      "mean_worst_case_remaining_width": 121.33978384394337
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 2,
+      "policy": "greedy_width_reduction",
+      "model_a": "ridge",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 9476,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 2509692.2999992,
+      "actual_width_sum": 426156.36834082456,
+      "worst_width_sum": 662984.109868826,
+      "queries_sum": 900,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9840083073727933,
+      "pooled_mean_queries": 0.09345794392523364,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 260.6118691587954,
+      "pooled_mean_actual_remaining_width": 44.25299775086444,
+      "pooled_mean_worst_case_remaining_width": 68.84570195937965,
+      "resolved_fraction": 0.9840083073727933,
+      "mean_queries": 0.09345794392523364,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 260.6118691587954,
+      "mean_actual_remaining_width": 44.25299775086444,
+      "mean_worst_case_remaining_width": 68.84570195937967
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 2,
+      "policy": "greedy_width_reduction",
+      "model_a": "ridge",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 9476,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 3138724.0932949353,
+      "actual_width_sum": 625219.7429776961,
+      "worst_width_sum": 966186.798313723,
+      "queries_sum": 895,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9840083073727933,
+      "pooled_mean_queries": 0.09293873312564901,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 325.9318892310421,
+      "pooled_mean_actual_remaining_width": 64.92416853350946,
+      "pooled_mean_worst_case_remaining_width": 100.33092402011661,
+      "resolved_fraction": 0.9840083073727933,
+      "mean_queries": 0.09293873312564901,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 325.9318892310421,
+      "mean_actual_remaining_width": 64.92416853350946,
+      "mean_worst_case_remaining_width": 100.3309240201166
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 2,
+      "policy": "optimal_minimax_width",
+      "model_a": "daily",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 9525,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 4164775.1359487595,
+      "actual_width_sum": 657859.5580625851,
+      "worst_width_sum": 1002080.3714933678,
+      "queries_sum": 900,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9890965732087228,
+      "pooled_mean_queries": 0.09345794392523364,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 432.47924568522944,
+      "pooled_mean_actual_remaining_width": 68.3135574312134,
+      "pooled_mean_worst_case_remaining_width": 104.0581901862272,
+      "resolved_fraction": 0.9890965732087228,
+      "mean_queries": 0.09345794392523364,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 432.47924568522944,
+      "mean_actual_remaining_width": 68.3135574312134,
+      "mean_worst_case_remaining_width": 104.0581901862272
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 2,
+      "policy": "optimal_minimax_width",
+      "model_a": "daily",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 9507,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 4496261.2590308115,
+      "actual_width_sum": 752455.4478256627,
+      "worst_width_sum": 1156665.1234625792,
+      "queries_sum": 900,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9872274143302181,
+      "pooled_mean_queries": 0.09345794392523364,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 466.9014806885578,
+      "pooled_mean_actual_remaining_width": 78.13659894347484,
+      "pooled_mean_worst_case_remaining_width": 120.11060472093241,
+      "resolved_fraction": 0.9872274143302181,
+      "mean_queries": 0.09345794392523364,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 466.9014806885578,
+      "mean_actual_remaining_width": 78.13659894347484,
+      "mean_worst_case_remaining_width": 120.11060472093241
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 2,
+      "policy": "optimal_minimax_width",
+      "model_a": "daily",
+      "model_b": "ridge",
+      "pair_trials": 9630,
+      "decisions": 9508,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 3082992.7787039923,
+      "actual_width_sum": 519382.5796688187,
+      "worst_width_sum": 822252.4896735855,
+      "queries_sum": 900,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.987331256490135,
+      "pooled_mean_queries": 0.09345794392523364,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 320.14462914890885,
+      "pooled_mean_actual_remaining_width": 53.93380889603517,
+      "pooled_mean_worst_case_remaining_width": 85.38447452477523,
+      "resolved_fraction": 0.987331256490135,
+      "mean_queries": 0.09345794392523364,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 320.14462914890885,
+      "mean_actual_remaining_width": 53.933808896035174,
+      "mean_worst_case_remaining_width": 85.38447452477524
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 2,
+      "policy": "optimal_minimax_width",
+      "model_a": "hist_gradient_boosting",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 9453,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 3491729.7448558365,
+      "actual_width_sum": 686250.8974796273,
+      "worst_width_sum": 1055758.0969651022,
+      "queries_sum": 900,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.981619937694704,
+      "pooled_mean_queries": 0.09345794392523364,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 362.58875855200796,
+      "pooled_mean_actual_remaining_width": 71.26177543921364,
+      "pooled_mean_worst_case_remaining_width": 109.6322011386399,
+      "resolved_fraction": 0.981619937694704,
+      "mean_queries": 0.09345794392523364,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 362.5887585520079,
+      "mean_actual_remaining_width": 71.26177543921362,
+      "mean_worst_case_remaining_width": 109.6322011386399
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 2,
+      "policy": "optimal_minimax_width",
+      "model_a": "ridge",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 9482,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 2509692.2999992,
+      "actual_width_sum": 414661.5175287534,
+      "worst_width_sum": 643214.0419043576,
+      "queries_sum": 900,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9846313603322949,
+      "pooled_mean_queries": 0.09345794392523364,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 260.6118691587954,
+      "pooled_mean_actual_remaining_width": 43.05934761461614,
+      "pooled_mean_worst_case_remaining_width": 66.79273540024482,
+      "resolved_fraction": 0.9846313603322948,
+      "mean_queries": 0.09345794392523364,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 260.6118691587954,
+      "mean_actual_remaining_width": 43.05934761461614,
+      "mean_worst_case_remaining_width": 66.79273540024481
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "available_test_persistence_archive",
+      "budget": 2,
+      "policy": "optimal_minimax_width",
+      "model_a": "ridge",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 9480,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 3138724.0932949353,
+      "actual_width_sum": 595651.0546383874,
+      "worst_width_sum": 923239.711339083,
+      "queries_sum": 895,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 55080,
+      "pooled_resolved_fraction": 0.9844236760124611,
+      "pooled_mean_queries": 0.09293873312564901,
+      "pooled_free_revealed_fraction": 0.9532710280373832,
+      "pooled_mean_initial_width": 325.9318892310421,
+      "pooled_mean_actual_remaining_width": 61.85369207044521,
+      "pooled_mean_worst_case_remaining_width": 95.87120574652991,
+      "resolved_fraction": 0.9844236760124611,
+      "mean_queries": 0.09293873312564901,
+      "free_revealed_fraction": 0.9532710280373832,
+      "mean_initial_width": 325.9318892310421,
+      "mean_actual_remaining_width": 61.85369207044521,
+      "mean_worst_case_remaining_width": 95.87120574652992
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 0,
+      "policy": "greedy_width_reduction",
+      "model_a": "daily",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 2983,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 94276544.53761414,
+      "actual_width_sum": 94276544.53761414,
+      "worst_width_sum": 94276544.53761414,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.3097611630321911,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 9789.88001429015,
+      "pooled_mean_actual_remaining_width": 9789.88001429015,
+      "pooled_mean_worst_case_remaining_width": 9789.88001429015,
+      "resolved_fraction": 0.3097611630321911,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 9789.88001429015,
+      "mean_actual_remaining_width": 9789.88001429015,
+      "mean_worst_case_remaining_width": 9789.88001429015
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 0,
+      "policy": "greedy_width_reduction",
+      "model_a": "daily",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 2592,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 106368111.38068776,
+      "actual_width_sum": 106368111.38068776,
+      "worst_width_sum": 106368111.38068776,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.2691588785046729,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 11045.494432054804,
+      "pooled_mean_actual_remaining_width": 11045.494432054804,
+      "pooled_mean_worst_case_remaining_width": 11045.494432054804,
+      "resolved_fraction": 0.26915887850467285,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 11045.494432054804,
+      "mean_actual_remaining_width": 11045.494432054804,
+      "mean_worst_case_remaining_width": 11045.494432054804
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 0,
+      "policy": "greedy_width_reduction",
+      "model_a": "daily",
+      "model_b": "ridge",
+      "pair_trials": 9630,
+      "decisions": 3130,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 72164296.71253854,
+      "actual_width_sum": 72164296.71253854,
+      "worst_width_sum": 72164296.71253854,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.32502596053997923,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 7493.696439515944,
+      "pooled_mean_actual_remaining_width": 7493.696439515944,
+      "pooled_mean_worst_case_remaining_width": 7493.696439515944,
+      "resolved_fraction": 0.32502596053997923,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 7493.696439515945,
+      "mean_actual_remaining_width": 7493.696439515945,
+      "mean_worst_case_remaining_width": 7493.696439515945
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 0,
+      "policy": "greedy_width_reduction",
+      "model_a": "hist_gradient_boosting",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 1496,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 83418767.65096325,
+      "actual_width_sum": 83418767.65096325,
+      "worst_width_sum": 83418767.65096325,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.1553478712357217,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 8662.385010484242,
+      "pooled_mean_actual_remaining_width": 8662.385010484242,
+      "pooled_mean_worst_case_remaining_width": 8662.385010484242,
+      "resolved_fraction": 0.1553478712357217,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 8662.385010484242,
+      "mean_actual_remaining_width": 8662.385010484242,
+      "mean_worst_case_remaining_width": 8662.385010484242
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 0,
+      "policy": "greedy_width_reduction",
+      "model_a": "ridge",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 2265,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 64488847.96884797,
+      "actual_width_sum": 64488847.96884797,
+      "worst_width_sum": 64488847.96884797,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.235202492211838,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 6696.661263639457,
+      "pooled_mean_actual_remaining_width": 6696.661263639457,
+      "pooled_mean_worst_case_remaining_width": 6696.661263639457,
+      "resolved_fraction": 0.235202492211838,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 6696.661263639457,
+      "mean_actual_remaining_width": 6696.661263639457,
+      "mean_worst_case_remaining_width": 6696.661263639457
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 0,
+      "policy": "greedy_width_reduction",
+      "model_a": "ridge",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 1991,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 78505555.64031877,
+      "actual_width_sum": 78505555.64031877,
+      "worst_width_sum": 78505555.64031877,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.2067497403946002,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 8152.186463169134,
+      "pooled_mean_actual_remaining_width": 8152.186463169134,
+      "pooled_mean_worst_case_remaining_width": 8152.186463169134,
+      "resolved_fraction": 0.2067497403946002,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 8152.186463169134,
+      "mean_actual_remaining_width": 8152.186463169134,
+      "mean_worst_case_remaining_width": 8152.186463169134
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 0,
+      "policy": "optimal_minimax_width",
+      "model_a": "daily",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 2983,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 94276544.53761414,
+      "actual_width_sum": 94276544.53761414,
+      "worst_width_sum": 94276544.53761414,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.3097611630321911,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 9789.88001429015,
+      "pooled_mean_actual_remaining_width": 9789.88001429015,
+      "pooled_mean_worst_case_remaining_width": 9789.88001429015,
+      "resolved_fraction": 0.3097611630321911,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 9789.88001429015,
+      "mean_actual_remaining_width": 9789.88001429015,
+      "mean_worst_case_remaining_width": 9789.88001429015
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 0,
+      "policy": "optimal_minimax_width",
+      "model_a": "daily",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 2592,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 106368111.38068776,
+      "actual_width_sum": 106368111.38068776,
+      "worst_width_sum": 106368111.38068776,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.2691588785046729,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 11045.494432054804,
+      "pooled_mean_actual_remaining_width": 11045.494432054804,
+      "pooled_mean_worst_case_remaining_width": 11045.494432054804,
+      "resolved_fraction": 0.26915887850467285,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 11045.494432054804,
+      "mean_actual_remaining_width": 11045.494432054804,
+      "mean_worst_case_remaining_width": 11045.494432054804
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 0,
+      "policy": "optimal_minimax_width",
+      "model_a": "daily",
+      "model_b": "ridge",
+      "pair_trials": 9630,
+      "decisions": 3130,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 72164296.71253854,
+      "actual_width_sum": 72164296.71253854,
+      "worst_width_sum": 72164296.71253854,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.32502596053997923,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 7493.696439515944,
+      "pooled_mean_actual_remaining_width": 7493.696439515944,
+      "pooled_mean_worst_case_remaining_width": 7493.696439515944,
+      "resolved_fraction": 0.32502596053997923,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 7493.696439515945,
+      "mean_actual_remaining_width": 7493.696439515945,
+      "mean_worst_case_remaining_width": 7493.696439515945
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 0,
+      "policy": "optimal_minimax_width",
+      "model_a": "hist_gradient_boosting",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 1496,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 83418767.65096325,
+      "actual_width_sum": 83418767.65096325,
+      "worst_width_sum": 83418767.65096325,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.1553478712357217,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 8662.385010484242,
+      "pooled_mean_actual_remaining_width": 8662.385010484242,
+      "pooled_mean_worst_case_remaining_width": 8662.385010484242,
+      "resolved_fraction": 0.1553478712357217,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 8662.385010484242,
+      "mean_actual_remaining_width": 8662.385010484242,
+      "mean_worst_case_remaining_width": 8662.385010484242
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 0,
+      "policy": "optimal_minimax_width",
+      "model_a": "ridge",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 2265,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 64488847.96884797,
+      "actual_width_sum": 64488847.96884797,
+      "worst_width_sum": 64488847.96884797,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.235202492211838,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 6696.661263639457,
+      "pooled_mean_actual_remaining_width": 6696.661263639457,
+      "pooled_mean_worst_case_remaining_width": 6696.661263639457,
+      "resolved_fraction": 0.235202492211838,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 6696.661263639457,
+      "mean_actual_remaining_width": 6696.661263639457,
+      "mean_worst_case_remaining_width": 6696.661263639457
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 0,
+      "policy": "optimal_minimax_width",
+      "model_a": "ridge",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 1991,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 78505555.64031877,
+      "actual_width_sum": 78505555.64031877,
+      "worst_width_sum": 78505555.64031877,
+      "queries_sum": 0,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.2067497403946002,
+      "pooled_mean_queries": 0.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 8152.186463169134,
+      "pooled_mean_actual_remaining_width": 8152.186463169134,
+      "pooled_mean_worst_case_remaining_width": 8152.186463169134,
+      "resolved_fraction": 0.2067497403946002,
+      "mean_queries": 0.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 8152.186463169134,
+      "mean_actual_remaining_width": 8152.186463169134,
+      "mean_worst_case_remaining_width": 8152.186463169134
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 2,
+      "policy": "greedy_width_reduction",
+      "model_a": "daily",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 6519,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 94276544.53761414,
+      "actual_width_sum": 16762749.850047002,
+      "worst_width_sum": 25362562.227921028,
+      "queries_sum": 19256,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.6769470404984423,
+      "pooled_mean_queries": 1.9995846313603323,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 9789.88001429015,
+      "pooled_mean_actual_remaining_width": 1740.6801505760127,
+      "pooled_mean_worst_case_remaining_width": 2633.703242774769,
+      "resolved_fraction": 0.6769470404984423,
+      "mean_queries": 1.9995846313603323,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 9789.88001429015,
+      "mean_actual_remaining_width": 1740.6801505760125,
+      "mean_worst_case_remaining_width": 2633.7032427747695
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 2,
+      "policy": "greedy_width_reduction",
+      "model_a": "daily",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 6169,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 106368111.38068776,
+      "actual_width_sum": 20451294.265009556,
+      "worst_width_sum": 31290072.04946234,
+      "queries_sum": 19257,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.6406022845275182,
+      "pooled_mean_queries": 1.9996884735202491,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 11045.494432054804,
+      "pooled_mean_actual_remaining_width": 2123.7065695752394,
+      "pooled_mean_worst_case_remaining_width": 3249.2286655724133,
+      "resolved_fraction": 0.6406022845275181,
+      "mean_queries": 1.9996884735202491,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 11045.494432054804,
+      "mean_actual_remaining_width": 2123.7065695752394,
+      "mean_worst_case_remaining_width": 3249.228665572414
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 2,
+      "policy": "greedy_width_reduction",
+      "model_a": "daily",
+      "model_b": "ridge",
+      "pair_trials": 9630,
+      "decisions": 6623,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 72164296.71253854,
+      "actual_width_sum": 12911106.974302042,
+      "worst_width_sum": 19569097.35156767,
+      "queries_sum": 19260,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.6877466251298027,
+      "pooled_mean_queries": 2.0,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 7493.696439515944,
+      "pooled_mean_actual_remaining_width": 1340.7172351300148,
+      "pooled_mean_worst_case_remaining_width": 2032.0973366113885,
+      "resolved_fraction": 0.6877466251298027,
+      "mean_queries": 2.0,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 7493.696439515945,
+      "mean_actual_remaining_width": 1340.7172351300148,
+      "mean_worst_case_remaining_width": 2032.0973366113883
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 2,
+      "policy": "greedy_width_reduction",
+      "model_a": "hist_gradient_boosting",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 5204,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 83418767.65096325,
+      "actual_width_sum": 17198030.442107726,
+      "worst_width_sum": 26052965.61948433,
+      "queries_sum": 19233,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.5403946002076844,
+      "pooled_mean_queries": 1.997196261682243,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 8662.385010484242,
+      "pooled_mean_actual_remaining_width": 1785.8806274255166,
+      "pooled_mean_worst_case_remaining_width": 2705.3962221686743,
+      "resolved_fraction": 0.5403946002076843,
+      "mean_queries": 1.9971962616822432,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 8662.385010484242,
+      "mean_actual_remaining_width": 1785.8806274255164,
+      "mean_worst_case_remaining_width": 2705.3962221686743
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 2,
+      "policy": "greedy_width_reduction",
+      "model_a": "ridge",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 6092,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 64488847.96884797,
+      "actual_width_sum": 11696607.122511247,
+      "worst_width_sum": 17959981.801295456,
+      "queries_sum": 19245,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.6326064382139148,
+      "pooled_mean_queries": 1.9984423676012462,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 6696.661263639457,
+      "pooled_mean_actual_remaining_width": 1214.6009473012718,
+      "pooled_mean_worst_case_remaining_width": 1865.0033023152082,
+      "resolved_fraction": 0.6326064382139148,
+      "mean_queries": 1.9984423676012462,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 6696.661263639457,
+      "mean_actual_remaining_width": 1214.6009473012718,
+      "mean_worst_case_remaining_width": 1865.0033023152087
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 2,
+      "policy": "greedy_width_reduction",
+      "model_a": "ridge",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 5768,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 78505555.64031877,
+      "actual_width_sum": 15768376.468247367,
+      "worst_width_sum": 24055600.15339834,
+      "queries_sum": 19215,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.5989615784008308,
+      "pooled_mean_queries": 1.9953271028037383,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 8152.186463169134,
+      "pooled_mean_actual_remaining_width": 1637.4222708460402,
+      "pooled_mean_worst_case_remaining_width": 2497.9854780268265,
+      "resolved_fraction": 0.5989615784008306,
+      "mean_queries": 1.9953271028037383,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 8152.186463169134,
+      "mean_actual_remaining_width": 1637.4222708460402,
+      "mean_worst_case_remaining_width": 2497.9854780268265
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 2,
+      "policy": "optimal_minimax_width",
+      "model_a": "daily",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 6615,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 94276544.53761414,
+      "actual_width_sum": 15192879.497590804,
+      "worst_width_sum": 22984659.973821606,
+      "queries_sum": 19249,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.6869158878504673,
+      "pooled_mean_queries": 1.998857736240914,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 9789.88001429015,
+      "pooled_mean_actual_remaining_width": 1577.6614223874149,
+      "pooled_mean_worst_case_remaining_width": 2386.7767366377575,
+      "resolved_fraction": 0.6869158878504673,
+      "mean_queries": 1.998857736240914,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 9789.88001429015,
+      "mean_actual_remaining_width": 1577.6614223874146,
+      "mean_worst_case_remaining_width": 2386.776736637758
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 2,
+      "policy": "optimal_minimax_width",
+      "model_a": "daily",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 6275,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 106368111.38068776,
+      "actual_width_sum": 19080846.96292072,
+      "worst_width_sum": 28951566.923316356,
+      "queries_sum": 19253,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.6516095534787124,
+      "pooled_mean_queries": 1.9992731048805814,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 11045.494432054804,
+      "pooled_mean_actual_remaining_width": 1981.3963616740104,
+      "pooled_mean_worst_case_remaining_width": 3006.39324229661,
+      "resolved_fraction": 0.6516095534787123,
+      "mean_queries": 1.9992731048805816,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 11045.494432054804,
+      "mean_actual_remaining_width": 1981.3963616740107,
+      "mean_worst_case_remaining_width": 3006.39324229661
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 2,
+      "policy": "optimal_minimax_width",
+      "model_a": "daily",
+      "model_b": "ridge",
+      "pair_trials": 9630,
+      "decisions": 6716,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 72164296.71253854,
+      "actual_width_sum": 11669408.9902793,
+      "worst_width_sum": 17780848.407770652,
+      "queries_sum": 19259,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.6974039460020769,
+      "pooled_mean_queries": 1.9998961578400831,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 7493.696439515944,
+      "pooled_mean_actual_remaining_width": 1211.7766345046002,
+      "pooled_mean_worst_case_remaining_width": 1846.401703818344,
+      "resolved_fraction": 0.6974039460020768,
+      "mean_queries": 1.9998961578400831,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 7493.696439515945,
+      "mean_actual_remaining_width": 1211.7766345046002,
+      "mean_worst_case_remaining_width": 1846.401703818344
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 2,
+      "policy": "optimal_minimax_width",
+      "model_a": "hist_gradient_boosting",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 5333,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 83418767.65096325,
+      "actual_width_sum": 15879553.368645929,
+      "worst_width_sum": 24159694.633905802,
+      "queries_sum": 19233,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.5537902388369678,
+      "pooled_mean_queries": 1.997196261682243,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 8662.385010484242,
+      "pooled_mean_actual_remaining_width": 1648.967120316296,
+      "pooled_mean_worst_case_remaining_width": 2508.794873718152,
+      "resolved_fraction": 0.5537902388369678,
+      "mean_queries": 1.9971962616822432,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 8662.385010484242,
+      "mean_actual_remaining_width": 1648.9671203162957,
+      "mean_worst_case_remaining_width": 2508.794873718152
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 2,
+      "policy": "optimal_minimax_width",
+      "model_a": "ridge",
+      "model_b": "hist_gradient_boosting",
+      "pair_trials": 9630,
+      "decisions": 6198,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 64488847.96884797,
+      "actual_width_sum": 10815669.247014077,
+      "worst_width_sum": 16468930.656927051,
+      "queries_sum": 19245,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.643613707165109,
+      "pooled_mean_queries": 1.9984423676012462,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 6696.661263639457,
+      "pooled_mean_actual_remaining_width": 1123.1224555570175,
+      "pooled_mean_worst_case_remaining_width": 1710.1693309373884,
+      "resolved_fraction": 0.643613707165109,
+      "mean_queries": 1.9984423676012462,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 6696.661263639457,
+      "mean_actual_remaining_width": 1123.1224555570175,
+      "mean_worst_case_remaining_width": 1710.1693309373884
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "gap_hours": 6,
+      "regime": "restricted_record",
+      "budget": 2,
+      "policy": "optimal_minimax_width",
+      "model_a": "ridge",
+      "model_b": "mlp",
+      "pair_trials": 9630,
+      "decisions": 5905,
+      "wrong_decisions": 0,
+      "enclosed_truth": 9630,
+      "initial_width_sum": 78505555.64031877,
+      "actual_width_sum": 14759723.625967253,
+      "worst_width_sum": 22397036.54209655,
+      "queries_sum": 19215,
+      "original_missing_sum": 57780,
+      "free_revealed_sum": 0,
+      "pooled_resolved_fraction": 0.6131879543094496,
+      "pooled_mean_queries": 1.9953271028037383,
+      "pooled_free_revealed_fraction": 0.0,
+      "pooled_mean_initial_width": 8152.186463169134,
+      "pooled_mean_actual_remaining_width": 1532.6815810973264,
+      "pooled_mean_worst_case_remaining_width": 2325.7566502696313,
+      "resolved_fraction": 0.6131879543094496,
+      "mean_queries": 1.9953271028037383,
+      "free_revealed_fraction": 0.0,
+      "mean_initial_width": 8152.186463169134,
+      "mean_actual_remaining_width": 1532.6815810973264,
+      "mean_worst_case_remaining_width": 2325.7566502696313
+    }
+  ],
+  "paired_consumer_comparisons": [
+    {
+      "regime": "restricted_record",
+      "comparison": "exact_minus_greedy_q2",
+      "meters": 30,
+      "mean_coverage_difference_percentage_points": 1.154378677743164,
+      "descriptive_ci95_percentage_points": [
+        1.00380754586362,
+        1.3032623745240572
+      ],
+      "positive_meters": 30,
+      "negative_meters": 0,
+      "tied_meters": 0,
+      "per_meter_differences": {
+        "MT_081": 1.1941848390446486,
+        "MT_082": 1.4537902388369661,
+        "MT_083": 1.0384215991692647,
+        "MT_084": 1.4537902388369606,
+        "MT_085": 0.9865005192107978,
+        "MT_086": 1.9210799584631344,
+        "MT_087": 0.8826583592938753,
+        "MT_088": 1.4018691588784993,
+        "MT_089": 1.4537902388369717,
+        "MT_090": 0.7268951194184914,
+        "MT_091": 1.7653167185877505,
+        "MT_093": 0.20768431983384517,
+        "MT_094": 0.674974039460019,
+        "MT_095": 0.7268951194184803,
+        "MT_096": 0.830737279335414,
+        "MT_097": 1.0384215991692702,
+        "MT_098": 0.36344755970924014,
+        "MT_099": 1.5576323987538943,
+        "MT_100": 1.7133956386292892,
+        "MT_101": 0.9345794392523366,
+        "MT_102": 0.6230529595015577,
+        "MT_103": 1.0903426791277204,
+        "MT_104": 1.5576323987538943,
+        "MT_105": 1.1941848390446541,
+        "MT_114": 1.6095534787123666,
+        "MT_118": 1.2461059190031154,
+        "MT_119": 1.0903426791277315,
+        "MT_123": 1.2461059190031154,
+        "MT_124": 1.0384215991692591,
+        "MT_125": 1.6095534787123555
+      }
+    },
+    {
+      "regime": "restricted_record",
+      "comparison": "exact_q2_minus_q0",
+      "meters": 30,
+      "mean_coverage_difference_percentage_points": 39.08791969539632,
+      "descriptive_ci95_percentage_points": [
+        36.853193146417446,
+        41.11115437867773
+      ],
+      "positive_meters": 30,
+      "negative_meters": 0,
+      "tied_meters": 0,
+      "per_meter_differences": {
+        "MT_081": 41.38110072689511,
+        "MT_082": 34.890965732087224,
+        "MT_083": 37.7466251298027,
+        "MT_084": 39.40809968847352,
+        "MT_085": 44.75597092419522,
+        "MT_086": 41.38110072689512,
+        "MT_087": 41.53686396677051,
+        "MT_088": 45.79439252336448,
+        "MT_089": 45.32710280373832,
+        "MT_090": 25.02596053997923,
+        "MT_091": 48.28660436137072,
+        "MT_093": 21.75493250259605,
+        "MT_094": 32.45067497403946,
+        "MT_095": 32.346832814122536,
+        "MT_096": 38.52544132917965,
+        "MT_097": 33.437175493250265,
+        "MT_098": 35.51401869158878,
+        "MT_099": 39.25233644859813,
+        "MT_100": 36.3447559709242,
+        "MT_101": 39.771547248182756,
+        "MT_102": 45.63862928348909,
+        "MT_103": 39.875389408099686,
+        "MT_104": 36.812045690550356,
+        "MT_105": 42.782969885773625,
+        "MT_114": 45.898234683281416,
+        "MT_118": 39.719626168224295,
+        "MT_119": 40.44652128764278,
+        "MT_123": 40.7061266874351,
+        "MT_124": 41.692627206645895,
+        "MT_125": 44.13291796469367
+      }
+    },
+    {
+      "regime": "available_test_persistence_archive",
+      "comparison": "exact_minus_greedy_q2",
+      "meters": 30,
+      "mean_coverage_difference_percentage_points": 0.06057459328487558,
+      "descriptive_ci95_percentage_points": [
+        0.03461405330564382,
+        0.08826583592939012
+      ],
+      "positive_meters": 18,
+      "negative_meters": 2,
+      "tied_meters": 10,
+      "per_meter_differences": {
+        "MT_081": 0.051921079958472394,
+        "MT_082": 0.051921079958472394,
+        "MT_083": 0.05192107995846129,
+        "MT_084": 0.05192107995846129,
+        "MT_085": 0.25960539979231756,
+        "MT_086": 0.15576323987538387,
+        "MT_087": 0.0,
+        "MT_088": 0.0,
+        "MT_089": 0.20768431983385627,
+        "MT_090": 0.0,
+        "MT_091": 0.15576323987539498,
+        "MT_093": 0.0,
+        "MT_094": 0.0,
+        "MT_095": 0.0,
+        "MT_096": 0.10384215991693369,
+        "MT_097": 0.05192107995846129,
+        "MT_098": 0.0,
+        "MT_099": 0.05192107995846129,
+        "MT_100": 0.0,
+        "MT_101": -0.05192107995846129,
+        "MT_102": -0.05192107995846129,
+        "MT_103": 0.10384215991693369,
+        "MT_104": 0.051921079958472394,
+        "MT_105": 0.15576323987539498,
+        "MT_114": 0.0,
+        "MT_118": 0.10384215991692258,
+        "MT_119": 0.10384215991692258,
+        "MT_123": 0.051921079958472394,
+        "MT_124": 0.0,
+        "MT_125": 0.15576323987539498
+      }
+    },
+    {
+      "regime": "available_test_persistence_archive",
+      "comparison": "exact_q2_minus_q0",
+      "meters": 30,
+      "mean_coverage_difference_percentage_points": 1.6995500173070286,
+      "descriptive_ci95_percentage_points": [
+        1.5022499134648688,
+        1.9090083073727953
+      ],
+      "positive_meters": 30,
+      "negative_meters": 0,
+      "tied_meters": 0,
+      "per_meter_differences": {
+        "MT_081": 2.2845275181723856,
+        "MT_082": 1.9210799584631455,
+        "MT_083": 1.9730010384216068,
+        "MT_084": 0.830737279335414,
+        "MT_085": 2.9075804776739433,
+        "MT_086": 2.2326064382139132,
+        "MT_087": 1.7653167185877505,
+        "MT_088": 2.336448598130836,
+        "MT_089": 2.544132917964692,
+        "MT_090": 0.6230529595015577,
+        "MT_091": 2.1287642782969907,
+        "MT_093": 0.4672897196261627,
+        "MT_094": 1.0384215991692702,
+        "MT_095": 0.8826583592938753,
+        "MT_096": 1.505711318795433,
+        "MT_097": 1.4537902388369606,
+        "MT_098": 2.0768431983385294,
+        "MT_099": 1.4018691588785104,
+        "MT_100": 1.7653167185877394,
+        "MT_101": 1.349948078920049,
+        "MT_102": 2.180685358255452,
+        "MT_103": 1.2980269989615767,
+        "MT_104": 2.0768431983385294,
+        "MT_105": 2.1287642782969907,
+        "MT_114": 1.505711318795433,
+        "MT_118": 1.869158878504673,
+        "MT_119": 1.6095534787123555,
+        "MT_123": 1.2980269989615878,
+        "MT_124": 1.4537902388369606,
+        "MT_125": 2.0768431983385294
+      }
+    }
+  ],
+  "forecast_metrics_macro": {
+    "daily": {
+      "mse_kwh2": 5820.470283594667,
+      "rmse_kwh": 53.27125428590053,
+      "mae_kwh": 30.01971211393199
+    },
+    "hist_gradient_boosting": {
+      "mse_kwh2": 3046.350121277496,
+      "rmse_kwh": 37.04545666789513,
+      "mae_kwh": 22.917902867945422
+    },
+    "mlp": {
+      "mse_kwh2": 3330.578053532021,
+      "rmse_kwh": 39.411774698118435,
+      "mae_kwh": 25.985793414542318
+    },
+    "ridge": {
+      "mse_kwh2": 3597.7406350014276,
+      "rmse_kwh": 40.426886284042936,
+      "mae_kwh": 25.137164441385146
+    }
+  },
+  "output_hashes": {
+    "study_holdout_consumers_predictions.csv": "6af5c1101850724b2067c14f3bc8abf891b1d12bd04fa3d4a5c24dbbbeb4c9d8",
+    "study_holdout_consumers_pair_seed.csv": "8c474d7ed5cd53082519189d98ff97e96d595a83d41cb01a24ac9afb02a46373",
+    "study_holdout_consumers_meters.csv": "4f8cbf0cf4c06c2d594dfd3bda852d0a5cb021753fb50d50f509ac4e685020f5",
+    "study_holdout_consumers_cohorts.csv": "a5984fd76d0d10f7e1422be0b8846c6663797187018bd084d39e3d484b970191",
+    "study_holdout_consumers_named_pairs.csv": "b729622f14abb8bb62afd37a258ccb2f7d2faaae25793860301507bde7be244a",
+    "study_holdout_consumers_forecast_metrics.csv": "902a85ec21274c0f1f09f9b0d4ab8d2c28804740bbbbc25bc3069e39b21af961"
+  },
+  "interpretation": "Frozen post-review replication on previously unused consumers within the same historical UCI source and calendar. All scenarios retained. Primary rates macro-average consumers; pooled rates are separate. Bootstrap intervals are descriptive whole-consumer panel stability, not population confidence. Two access regimes are modeled; future persistence access is retrospective and incomplete. No deployment, retrieval economics, external-dataset validation, or acceptance probability is established."
+}

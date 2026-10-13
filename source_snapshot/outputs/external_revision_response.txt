@@ -1,0 +1,97 @@
+RESPONSE TO THE EXTERNAL DECISION-COST REVIEW
+Updated 2026-10-11T20:36:23.325101+00:00
+
+The requested experiment, code correction, and manuscript reorganization
+have been implemented. The new experiment does not meet the predeclared
+15% budget-reduction target. This unfavorable result is retained in the
+abstract, main results, discussion and conclusion.
+
+1. External source and actual new fits
+The initial REFIT raw-source quality screen admitted no complete days under
+the frozen complete-support rule. Its failure and source-only amendments
+are retained. Low Carbon London was selected before any forecasting or
+acquisition outcome. Twenty households were selected using training data;
+19 supply eligible test days and the excluded household is not replaced.
+All 60 new Ridge/HGB/MLP fits completed. The test contains 974 household-days
+and 17,532 day/mask/model-pair comparisons. Validation contains 1,495 days.
+Temporal totals, outages and archive cutoffs are constructed benchmark
+conditions, not production incidents or independently surviving registers.
+
+2. Consistent early and later archives
+New causal forecasts use D-2, D-3 and D-8 inputs and a noon D-1 issue rule.
+Every issued record available by each cutoff is included. No early issued
+predictor depends on the missing day D values. The later persistence rows
+reveal all D targets without a paid request. Copy values come from saved
+forecast rows with source provenance, not from hidden reference lookups.
+The benchmark clock is explicit; actual production arrival times and
+physical UTC interpretation of source labels are not claimed.
+
+3. Executable acquisition and measured decision cost
+All five policies use the same observations/totals/certificate, charge the
+entire selected batch, skip certified cases and stop within six requests.
+The Hara comparator implements an explicitly labeled regression acquisition
+adaptation using a pre-test surrogate. Requests remain separate per pair.
+The exact routine optimizes each current worst-width batch; neither its
+complete stopping sequence nor the shared cost of selecting all models is
+claimed optimal. Both all-case and initially-uncertified coverage curves,
+mean/median requests, unresolved counts and planning overhead are included.
+
+Every policy has B80=4 on the test, also for learned-only comparisons.
+Exact mean requested records are 2.4515, versus 2.4846 for greedy among
+initially uncertified cases: 1.33% fewer on this secondary endpoint.
+Exact conditional coverage is higher at two requests and slightly lower at
+four; neither curve dominates. All comparisons are certified at the cap.
+The later archive yields 100% strict certification with zero paid requests.
+The improvement target is not attained and was not replaced after outcomes.
+
+4. Checks and transparent logging correction
+An independently written same-study checker replayed all 44,442 base cases,
+266,652 policy/regime rows and 129,718 acquired batches.
+Both periods have zero detected incorrect certificates, enclosure failures,
+chronology violations, duplicate paid queries and cap violations.
+Source features, complete case grids, all summaries and B80 were checked.
+This is not an external investigator's replication or an independent
+implementation of the learning algorithms.
+
+The first replay found mutable aliasing in intermediate logged observation
+arrays. The executable logger now copies snapshots. Original compressed
+traces, original run metadata and executed source remain available.
+Corrected snapshots use only recorded before states, batch answers and
+aggregate deductions. Every original/repaired pair was compared: only
+the after field changed, and each old discrepancy was exactly the next
+batch's reveal mutation. Query selection, bounds, costs, decisions and all
+numerical summary files are unchanged. A multistage regression fixture
+passes for all five policies. This repair is not described as a new run.
+
+5. Mathematical and editorial changes
+The minimax-regret decision-stopping corollary is promoted to the main text.
+The external decision workflow and results precede the historical evidence;
+the detailed earlier design and repeated experiments move to appendices.
+All previous theorem/proposition/proof environments and historical tables
+are preserved by the composition audit. Recent limited-label model-selection
+work and the specific Hara adaptation are distinguished from our guarantees.
+The prior secondary-optimum reruns, 17.45% adverse randomized-width result,
+and 28-instance measured runtime/memory study remain visible and unchanged.
+
+6. Reproducibility delivery
+research_supplement.zip includes exact source manifests, selected literal
+source rows, all model inputs/forecasts, archive snapshots, complete old and
+corrected traces, independent checks, summaries and the manuscript builder.
+From its extracted root:
+  python work/reproduce_external_revision.py --small
+  python work/reproduce_external_revision.py
+  python work/reproduce_external_revision.py --refit
+The raw-source route is documented in work/external_deadline/reproduction/README.txt.
+The default route replays saved results and exactly rebuilds the current
+TeX; it does not refit models or rerun every historical experiment. The
+original completed fitting run is separate evidence. Clean extracted-package
+verification is reported separately in external_supplement_delta_verification.json.
+
+Assessment
+The finite methodological, implementation and reporting changes are done.
+The evidence is stronger and more transparent, but it does not demonstrate
+the requested large acquisition-cost advantage over greedy. The paper's
+strongest contribution remains exact aggregate-constrained optimization and
+certified comparison. This revision supports a methods-oriented submission
+argument, not a high-probability applied-superiority or acceptance claim.
+No journal submission has been made by this revision workflow.

@@ -1,0 +1,110 @@
+\subsection{When two counter readings need feedback}
+\label{sec:counter-precision-results}
+The first replay uses three actual cumulative consumption counters \citep{blem}, 91
+eligible days per meter, and four frozen forecasters (persistence, ridge,
+boosted trees and an MLP). Each of their six pairs is audited on six-hour
+blocks ending at 06:00, 12:00 and 18:00 UTC: 4,914 tasks in total.
+The auditor receives the block's endpoint counters and day-start forecasts.
+Next-day persistence copies are unavailable at these intraday cutoffs under
+the declared issue schedule. No production arrival times are inferred.
+Source and fitting details are in Online Resource~1, S3.
+
+The restricted interface offers five internal hourly counters and a budget
+of two scalar readings per standalone pair/block audit. This is a specified
+access replay, not a provider tariff or a demonstrated deployed service.
+Hourly-increment queries and bulk exports are separate interfaces, examined
+below. Every policy uses the same retained total, nonnegativity constraints
+and forecast-derived coefficients. The primary target, fixed before the
+geometry and answer replay, is $W\leq W_0/2$. This is a precision requirement;
+it need not establish which model wins. Query choices use only permitted
+information and previous queried answers. Unqueried answers enter outcome
+evaluation after the choice. The shared preparation files are not physically
+isolated, so this is an audited dependency rule rather than a security boundary.
+
+Table~\ref{tab:counter-guarantees} gives the complete decision partition.
+A fixed batch suffices on 88.95\% of tasks. Feedback changes the attainable
+deterministic guarantee on 5.90\%, spanning all three meters and all six
+model pairs. The remaining 5.15\% require more information, a larger budget
+or a weaker requirement. The first 20 days per meter contributed 1,080 tasks;
+the unchanged continuation contributed 3,834. These reused meters are not
+an untouched-source replication.
+
+\begin{table}[htbp]\centering\small
+\caption{Decisions before optional answers, at $W\leq W_0/2$ with two
+readings. ``Feedback needed'' means $A\leq\tau<D$; ``unresolved'' means
+$\tau<A$ for deterministic policies. All 290 feedback cases have exact
+optimal randomized-batch worst-case success $1/2$.}
+\label{tab:counter-guarantees}
+\begin{tabular}{lrrrr}\toprule
+Meter & Tasks & Fixed batch suffices & Feedback needed & Unresolved\\\midrule
+1 & 1,638 & 1,460 & 97 & 81\\
+2 & 1,638 & 1,430 & 103 & 105\\
+3 & 1,638 & 1,481 & 90 & 67\\
+All & 4,914 & 4,371 & 290 & 253\\\bottomrule
+\end{tabular}\end{table}
+
+For every feedback case, a constructed equal mixture of two batches
+succeeds on at least half of all random choices at every feasible record.
+A finite adverse-profile certificate gives the reverse bound for every
+randomized batch. These establish a continuum optimum, not just a sampled
+upper bound: $S_B^\star\geq1/2$ and $S_B^\star\leq1/2$.
+Consequently, the minimum, quartiles, median and maximum of the 290 exact
+bounds all equal $1/2$; none is below 40\% or 30\%.
+Corollary~\ref{prop:counter-half-floor} explains this structural floor.
+The worked example below supplies the complete argument for one recorded
+comparison. S6 retains the earliest qualifying witness from each meter,
+including exact coefficients, covers and adverse weights.
+
+% WORKED_EXAMPLE_MAIN
+
+The replay compares exact adaptive worst-width planning, the best fixed
+worst-width batch, a mean-width-optimal randomized batch, uniform batching
+and greedy adaptation. Greedy's first-query ties use the best two-query
+guarantee; its second query minimizes conditional worst width. Batch ties
+minimize uniform-vertex mean width. The mean-optimal policy uses that same
+answer-independent secondary criterion on its optimal face. Randomized
+outcomes are exact expectations over ten batch probabilities. The added
+precision-optimal cover is defined only on the 290-case subset and uses
+coefficient-based, answer-independent tie breaking.
+
+\begin{table}[htbp]\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Recorded replay, two readings per audit. P: precision success;
+W: mean width relative to $W_0$; O: interval excludes zero. All entries
+are percentages. The subset is selected by pre-answer guarantees.}
+\label{tab:counter-replay}
+\begin{tabular}{lrrrrrr}\toprule
+ & \multicolumn{3}{c}{All 4,914 tasks} & \multicolumn{3}{c}{290-case subset}\\
+Policy & P & W & O & P & W & O\\\midrule
+Exact adaptive & 98.64 & 18.59 & 50.49 & 100.00 & 33.72 & 28.97\\
+Best deterministic batch & 98.23 & 18.87 & 49.84 & 97.24 & 35.28 & 25.52\\
+Mean-optimal random batch & 92.68 & 22.83 & 45.42 & 80.01 & 41.21 & 24.43\\
+Precision-optimal cover & -- & -- & -- & 75.34 & 43.12 & 22.76\\
+Uniform random batch & 63.04 & 42.59 & 24.79 & 41.79 & 53.10 & 18.76\\
+Greedy adaptive & 97.96 & 18.84 & 50.33 & 96.21 & 34.67 & 28.62\\\bottomrule
+\end{tabular}\end{table}
+\FloatBarrier
+
+The large worst-case success gap is not a large average replay gain.
+Relative to the best deterministic batch, adaptation gains 0.407 percentage
+points over all tasks: 30 are adaptive-only successes and ten are batch-only
+successes. On the subset, eight are adaptive-only and none batch-only.
+The precision-optimal cover can perform worse on recorded answers than
+policies optimizing other risks. The prespecified 10\% prevalence target
+was not met (5.90\%); it is not replaced by a secondary threshold.
+All five predeclared precision fractions, paired ordering outcomes and
+per-meter summaries remain in S6. Blocks and model pairs are dependent.
+
+A post-analysis implementation uses a guaranteeing fixed batch on the
+4,371 eligible tasks and the adaptive rule elsewhere. It preserves precision
+success at every completion while removing the need for feedback on
+88.95\% of tasks. Both versions reach 98.64\% recorded success; mean width
+changes from 18.59\% to 18.72\% of $W_0$. This saves a dependency between
+answers, not readings, and is not a measured latency saving.
+
+Exact rational checks reconstruct every batch and adaptive envelope.
+Raw-source replay reproduces all 24,570 policy evaluations and 49,140 batch
+intervals with no containment or success discrepancy. Independent endpoint
+LPs and scale-aware tolerances are documented in S6; source calendars,
+integer counter subtraction and all 6,552 frozen forecast rows are checked.
+The geometric separation is proved on the stated record model; these
+checks do not establish physical meter accuracy.

@@ -1,0 +1,80 @@
+PeerJ final manuscript: analytic regression and visual review
+Date: 13 October 2026 (America/New_York)
+Source: outputs/revised_manuscript.tex
+Source SHA-256: a5b59b3f83e3ea84715b39a4f8f0c30cacfb47f9a39c6a2c017461a31522b77f
+PDF: outputs/revised_manuscript.pdf
+PDF SHA-256: 38d610d9061860e5e7eaebe822eeec1d368ee102cf1f9207538d19938d539b2d
+Both hashes verified from disk in this review.
+
+SCOPE AND OBSERVED RESULT
+PASS for the targeted final regression/visual review. No newly identified mathematical contradiction or visible layout defect requires an edit before delivery.
+This is an AI-assisted internal check. It is not external human peer review, a formal proof verification, or an exhaustive novelty assessment.
+
+ANALYTIC REGRESSION
+- Revisited the final universal classification and proof against the earlier direct analytic review. The concavity, upper-semicontinuity, minimax, common-hardest-record, transcript, Jensen and nonconcave-converse arguments remain mathematically consistent.
+- The added fixed-latent-error sentence at the risk definition makes the adversarial timing assumption explicit. It accurately limits the theorem to one record/error vector fixed before the policy seed. Fresh answer-dependent adversarial noise is correctly separated as a different model.
+- The Osipenko paragraph now distinguishes deterministic reconstruction error and existence of a nonadaptive linear reconstruction from randomized penalties of the entire information-fiber width. This is mathematically consistent with the manuscript's contribution boundary. The separate novelty review supplies its primary-source pinpoint check; this short regression review does not independently re-establish the bibliographic facts.
+- The finite query-dictionary caveat is correct: if the target's linear functional were admissible as an equal-cost query, one query would determine the affine target. The broader theory does not imply operational value for every possible query interface.
+- Catalogue scope is now explicit in the introduction, selector description and conclusion. Exclusion from the supplied catalogue is not claimed to prove universal impossibility. The separate seven-case exact deterministic two-query lower certificates remain identified as stronger evidence.
+- The concrete wrapper example is framed as binding the supplied certificate to its case, coefficients, endpoint information, source and metadata. It does not become a claim of general optimization, provider authentication or physical calibration.
+- Original two-query 22/29 and three-query fallback 29/29 remain distinguished. The 65-versus-87 allowance total concerns deterministic hard reading budgets under the same declared uncertainty; the text does not repurpose it as expected stopping cost or measured API savings.
+- The public-API bulk result and adverse small-gain findings remain visible. General theory and narrower computational specializations are clearly separated.
+
+VISUAL INSPECTION
+Used the PDF skill's read-only rendered-page review workflow.
+Inspected current contact sheets contact-01.png (pages 1-12), contact-13.png (13-24), contact-25.png (25-28), plus full-size page-04.png and pages 21-26 in work/pdf_export/decision_rendered.
+- All 28 current pages are visible in the inspected contact sheets.
+- No clipped content, table collisions, missing-glyph blocks, overlapping headings, footer intrusion or unexplained blank pages were observed.
+- Page 4 prior-art table is readable, has clean ragged-right columns, clear rules, and fits its page.
+- Page 21 API table and page 22 protocol-selector table fit their margins. Numerical columns and long descriptions remain legible.
+- Pages 23-24 present adverse findings, discussion, conclusion and catalogue limits visibly rather than hiding them in supporting material.
+- Pages 25-26 show availability/declaration sections and the accurate author-supervised AI-assistance disclosure without clipping.
+- References continue coherently through page 28 in the contact view. Readable line numbers and page numbers are retained.
+The render directory also contains older page images beyond page 28; those were not treated as pages of this final PDF and were not reviewed as current output.
+
+No manuscript or PDF edits, compilation, or new experiments were performed in this final read-only review.
+
+FINAL WORDING FOLLOW-UP (13 October 2026)
+Current source SHA-256 verified: d6fd3f378c016f845673f1c57919093156a6af7fe6eb2de9023b4b20b3413ee5
+Current PDF SHA-256 verified: f9eaaa6baec0bcd1b3c837bb075b9c8185b40c0cabed789dca99a13316d33478
+The supplementary declaration now says that the separate check checks saved contrasts against frozen geometry, verifies forecast hashes, and reconstructs retained endpoints from cached API records. This accurately narrows the described operation and does not alter any theorem, proof assumption, policy guarantee or experimental result. The preceding analytic assessment remains applicable; no proof correction follows from this documentation change.
+Inspected the newly rendered full pages 25, 26, 27 and 28. The revised paragraph fits on page 25, declaration headings remain legible and separated, and references on pages 26-28 are unclipped. No overlap, missing glyph or visible layout defect was observed. Final read-only follow-up: PASS.
+
+FINAL READABILITY AND PRACTICAL-EXAMPLE FOLLOW-UP (13 October 2026)
+Current source SHA-256 verified from disk:
+90d01a9893458291d2d22a3bed8cf39938b07497a90680038533dbb0228575ff
+Current PDF SHA-256 verified from disk:
+465cca6212e67f5539b4b4ce96112dce97451c85fa2ae601e868ffe8d499fb63
+Current PDF: 28 pages. Inspected contact-01, contact-13 and contact-25,
+covering current pages 1--28, and full-size pages 15,16,22,25,26.
+The render directory retains older images beyond page28; these were excluded.
+
+PASS for this bounded internal read-only review. No new scientific or visible
+layout blocker was identified. The first-use explanation of sharp intervals,
+removed redundant prior-art table and shortened supplement inventory improve
+readability. Related-work pinpoint attributions remain present.
+
+The full recorded example on pages15--16 is manually checkable from its printed
+outward coefficient enclosures. The branch bounds 0.466825 and0.444975 follow
+from the stated affine expressions. The two adverse profiles give average
+success at most1/2 in every batch column, while the stated two-batch cover
+supplies the continuum lower bound. Its exact-total scope remains explicit.
+The example and its small table continue across the page boundary without
+clipping; labels, quantities and the continuation remain clear.
+
+The cost frontier on page22 has legible columns and consistent arithmetic:
+fixed87+29r, adaptive with fallback65+51r, equality at r=1. The caption and
+discussion state that these are declared reading-charge units, not measured
+prices or latency. Both methods retain the same guarantee; no baseline is
+falsely presented as uniformly inferior. Actual API timing remains separate.
+
+Declarations on pages25--26 remain readable. The AI-assistance statement credits
+the author's topic, objectives and supervision while retaining substantive
+assistance and author responsibility. Unrecorded model versions are disclosed
+rather than invented. This is transparent reporting, not certification that a
+journal's version-information request is fully satisfied.
+
+No cropped text, table collision, missing glyph, footer intrusion or reference
+overflow was observed. No manuscript, code, PDF, ZIP or numerical result was
+modified by this review. It is not external human peer review, formal theorem
+verification, exhaustive novelty validation or an acceptance prediction.

@@ -1,0 +1,81 @@
+\subsection{Authenticating a selected model against all alternatives}
+\label{sec:practical-model-selection}
+A practical certificate gate can accompany an existing model-selection
+rule. First, the historical donor imputation proposes the model with the
+smallest completed-period MSE among persistence, ridge, gradient boosting
+and the MLP. Second, the gate authenticates that proposal only if its
+paired interval certifies a lower MSE than each of the other three models.
+Otherwise it returns unresolved. Selection uses the saved donor loss
+differences alone; hidden targets are inspected only after selection and
+certification. A unique donor preference is required, and nonunique cases
+would remain in the denominator. Both bound methods receive the same
+proposed model and the same archive information, with zero additional
+queries.
+
+This secondary analysis aggregates the existing six pair comparisons into
+one four-model selection scenario; it is not an independent replication.
+For the Portugal exact-total archive, paired bounds authenticate 933 of
+1,620 proposals (57.59\%), compared with 167 (10.31\%) using separate-loss
+bounds. The difference is 47.28 percentage points, with a descriptive
+whole-consumer bootstrap interval of 40.80--53.77 points. Unresolved
+proposals decrease from 1,453 to 687, a 52.72\% reduction relative to the
+separate-bound unresolved count. This is a reduction in unresolved
+benchmark cases, not measured staff time, retrieval cost or deployment
+failures. The proposed models are gradient boosting in 1,242 scenarios,
+the MLP in 216 and ridge in 162; these repeated scenarios share 30 consumers.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Authentication of the donor-selected model against all three
+alternatives under the saved forecast archive. Paired and Separate count
+certified four-model selections, not individually certified model pairs.
+At 1\% and 5\% total tolerance the original proposed model is held fixed
+while its certificate is recomputed from the saved wider bounds.}
+\label{tab:practical-model-selection}
+\begin{tabular}{lrrrrr}
+\toprule
+Source & Total tol. & Scenarios & Paired & Separate & Gain (pp)\\
+\midrule
+Portugal & 0\% & 1,620 & 933 & 167 & 47.28 \\
+Portugal & 1\% & 1,620 & 919 & 156 & 47.10 \\
+Portugal & 5\% & 1,620 & 850 & 127 & 44.63 \\
+French household & 0\% & 54 & 42 & 12 & 55.56 \\
+French household & 1\% & 54 & 42 & 12 & 55.56 \\
+French household & 5\% & 54 & 38 & 6 & 59.26 \\
+Counters & 0\% & 162 & 162 & 102 & 37.04 \\
+Counters & 1\% & 162 & 162 & 100 & 38.27 \\
+Counters & 5\% & 162 & 162 & 93 & 42.59 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+All scenarios have a unique donor preference, and none has a contrary
+certificate or an erroneous proposed winner relative to the reference
+period. Thus the result demonstrates additional all-completions
+authentication, not an accuracy improvement over the donor. It also does
+not establish that a certified historical winner will outperform the
+other models on future data. Among the 933 authenticated Portugal
+proposals, the median guaranteed minimum MSE advantage over the three
+competitors is $0.001382$ times the squared training-period mean target;
+this scale is fixed from training data and is not a percentage reduction
+in unknown test MSE.
+
+The complete public replay checks 5,022 Portugal/household scenarios over
+the three tolerances; the local full-source check adds 486 counter
+scenarios. The source exports donor proposals only for exact totals, so
+the tolerance analysis explicitly holds that proposal fixed and does not
+claim a fresh donor imputation at larger tolerances. The checker verifies
+all six source pair rows, additive donor scores, interval nesting, sign
+rules, the three required favorable comparisons and monotonicity under
+widening totals. The supplement includes the case ledger, input hashes
+and reproduction command. Bootstrap intervals resample all 54 scenarios
+of a consumer together in 2,000 draws. The reported 95\% interval is the
+percentile interval, using the 2.5th and 97.5th percentiles of the bootstrap
+mean coverage difference with NumPy's default linear quantile interpolation.
+The generator is \texttt{numpy.random.default\_rng(20261012)}.
+It is reinitialized for each cohort/tolerance group, so the same consumer
+index draws are reused across Portugal tolerances.
+The intervals describe convenience-panel
+stability and do not capture shared calendar shocks. The one-household
+and three-counter cohorts are not assigned population confidence intervals.

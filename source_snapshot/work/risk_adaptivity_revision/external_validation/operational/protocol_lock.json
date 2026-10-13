@@ -1,0 +1,27 @@
+{
+  "status": "fixed_before_external_forecast_or_treatment_outcomes",
+  "created_utc": "2026-10-12T02:20:03.969830+00:00",
+  "protocol_sha256": "ec406250bc0b400a86351ab223aaa0e6773aa3b787d52ad3e463fec6222ee838",
+  "selected_systems_sha256": "536d90046d069cabb888aa0a1be9083cca12c29ce89f7996f9f91e987e5158e9",
+  "source_selection_protocol_sha256": "ed1985ed81448de60582344ae83dae0999fc0a7267d27ff12a8d857dd3a51cc8",
+  "original_forecast_program_sha256": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+  "implementation_sha256": {
+    "measurement.py": "eaa3ca6ed6055031b7308aad33e458a2aaf083c15f593728ab1d8644f7f7004f",
+    "train_external.py": "4f88633d706a3cf131ddfb10cc659f207d997154bd126490cdabe8d4c22721a6",
+    "test_measurement.py": "3449d60778ffc3292ea63b93bd779da25b2053abaa894bc7b028a03082ac2d38"
+  },
+  "systems": [
+    1,
+    2,
+    7
+  ],
+  "train_start": "2025-01-01T00:00:00Z",
+  "test_start": "2025-07-01T00:00:00Z",
+  "test_end_exclusive": "2025-08-01T00:00:00Z",
+  "only_training_values_inspected": true,
+  "provider_benchmark_requests_made": 0,
+  "no_paper_modified_or_submitted": true,
+  "no_outreach": true,
+  "implementation_status": "Transport offline unit tests only; explicit-split forecast adapter not yet executed; interface benchmark awaits canonical July adapter and runner.",
+  "interface_limits": "Stored hourly API-grid cumulative samples; no verified native timestamp or direct-register provenance; full hourly-range recovery is mandatory comparator."
+}

@@ -1,0 +1,1874 @@
+{
+  "frozen_utc": "2026-10-10T03:03:35.208473+00:00",
+  "selected_ids": [
+    "MT_081",
+    "MT_082",
+    "MT_083",
+    "MT_084",
+    "MT_085",
+    "MT_086",
+    "MT_087",
+    "MT_088",
+    "MT_089",
+    "MT_090",
+    "MT_091",
+    "MT_093",
+    "MT_094",
+    "MT_095",
+    "MT_096",
+    "MT_097",
+    "MT_098",
+    "MT_099",
+    "MT_100",
+    "MT_101",
+    "MT_102",
+    "MT_103",
+    "MT_104",
+    "MT_105",
+    "MT_114",
+    "MT_118",
+    "MT_119",
+    "MT_123",
+    "MT_124",
+    "MT_125"
+  ],
+  "selection_statistics": [
+    {
+      "meter": "MT_081",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_082",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_083",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_084",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_085",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_086",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_087",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_088",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_089",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_090",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_091",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_092",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9167808219178082
+    },
+    {
+      "meter": "MT_093",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_094",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_095",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_096",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_097",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_098",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_099",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_100",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_101",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_102",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_103",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_104",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_105",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_106",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_107",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_108",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_109",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_110",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_111",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_112",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_113",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_114",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_115",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_116",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_117",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_118",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_119",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_120",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_121",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_122",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_123",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_124",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_125",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_126",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_127",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.98162100456621
+    },
+    {
+      "meter": "MT_128",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_129",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_130",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.43447488584474886
+    },
+    {
+      "meter": "MT_131",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.5178082191780822
+    },
+    {
+      "meter": "MT_132",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.5301369863013699
+    },
+    {
+      "meter": "MT_133",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_134",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_135",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_136",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_137",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_138",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_139",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_140",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_141",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_142",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_143",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_144",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_145",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_146",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_147",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_148",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_149",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9997716894977169
+    },
+    {
+      "meter": "MT_150",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_151",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_152",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_153",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_154",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_155",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_156",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_157",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9997716894977169
+    },
+    {
+      "meter": "MT_158",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_159",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_160",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_161",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_162",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9997716894977169
+    },
+    {
+      "meter": "MT_163",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_164",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_165",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.3221461187214612
+    },
+    {
+      "meter": "MT_166",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_167",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_168",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_169",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_170",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.8410958904109589
+    },
+    {
+      "meter": "MT_171",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_172",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_173",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_174",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_175",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_176",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_177",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_178",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_179",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.03287671232876712
+    },
+    {
+      "meter": "MT_180",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_181",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_182",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_183",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_184",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_185",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.5315068493150685
+    },
+    {
+      "meter": "MT_186",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.26449771689497714
+    },
+    {
+      "meter": "MT_187",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_188",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_189",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_190",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_191",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_192",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_193",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_194",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_195",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_196",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_197",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_198",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_199",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_200",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_201",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_202",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_203",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_204",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_205",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_206",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_207",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_208",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_209",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_210",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_211",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_212",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_213",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_214",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_215",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_216",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9997716894977169
+    },
+    {
+      "meter": "MT_217",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_218",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_219",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_220",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_221",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_222",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_223",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_224",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.5232876712328767
+    },
+    {
+      "meter": "MT_225",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_226",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_227",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_228",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_229",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_230",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_231",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_232",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_233",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_234",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_235",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_236",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_237",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_238",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_239",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_240",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_241",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_242",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_243",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_244",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_245",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_246",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_247",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_248",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_249",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_250",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_251",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_252",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_253",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_254",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_255",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_256",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_257",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_258",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_259",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_260",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_261",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_262",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_263",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_264",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_265",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_266",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_267",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_268",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_269",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_270",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_271",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_272",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_273",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9997716894977169
+    },
+    {
+      "meter": "MT_274",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_275",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_276",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_277",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_278",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_279",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_280",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_281",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_282",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_283",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_284",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_285",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_286",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_287",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_288",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_289",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.09041095890410959
+    },
+    {
+      "meter": "MT_290",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_291",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_292",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_293",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_294",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_295",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_296",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_297",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_298",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_299",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_300",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_301",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_302",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_303",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_304",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_305",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.06301369863013699
+    },
+    {
+      "meter": "MT_306",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_307",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_308",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_309",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_310",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_311",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_312",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_313",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_314",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_315",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_316",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_317",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_318",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_319",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_320",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_321",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_322",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.33972602739726027
+    },
+    {
+      "meter": "MT_323",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_324",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_325",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_326",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_327",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_328",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_329",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_330",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_331",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9990867579908675
+    },
+    {
+      "meter": "MT_332",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_333",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_334",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_335",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_336",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_337",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_338",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_339",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_340",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_341",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_342",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_343",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_344",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_345",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9997716894977169
+    },
+    {
+      "meter": "MT_346",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9996575342465753
+    },
+    {
+      "meter": "MT_347",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.0
+    },
+    {
+      "meter": "MT_348",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.5552511415525114
+    },
+    {
+      "meter": "MT_349",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9992009132420091
+    },
+    {
+      "meter": "MT_350",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_351",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_352",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_353",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_354",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_355",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_356",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_357",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.998972602739726
+    },
+    {
+      "meter": "MT_358",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_359",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_360",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9997716894977169
+    },
+    {
+      "meter": "MT_361",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_362",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9998858447488584
+    },
+    {
+      "meter": "MT_363",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9997716894977169
+    },
+    {
+      "meter": "MT_364",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9997716894977169
+    },
+    {
+      "meter": "MT_365",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_366",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9997716894977169
+    },
+    {
+      "meter": "MT_367",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9996575342465753
+    },
+    {
+      "meter": "MT_368",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_369",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 1.0
+    },
+    {
+      "meter": "MT_370",
+      "training_hour_count": 8760,
+      "training_nonmissing_fraction": 1.0,
+      "training_positive_fraction": 0.9968036529680365
+    }
+  ],
+  "config": {
+    "candidate_first": "MT_081",
+    "candidate_last": "MT_370",
+    "selected_count": 30,
+    "selection_year": 2013,
+    "minimum_nonmissing_fraction": 0.99,
+    "strict_minimum_positive_fraction": 0.95,
+    "train_year": 2013,
+    "test_year": 2014,
+    "test_months": [
+      1,
+      4,
+      7,
+      10
+    ],
+    "test_max_day": 28,
+    "models": [
+      "daily",
+      "ridge",
+      "hist_gradient_boosting",
+      "mlp"
+    ],
+    "gap_hours": 6,
+    "total_block_hours": 6,
+    "seeds": [
+      1103,
+      2207,
+      3301
+    ],
+    "budgets": [
+      0,
+      2
+    ],
+    "policies": [
+      "optimal_minimax_width",
+      "greedy_width_reduction"
+    ],
+    "regimes": [
+      "restricted_record",
+      "available_test_persistence_archive"
+    ],
+    "workers": 2,
+    "training_threads_per_worker": 2,
+    "bootstrap_seed": 1729,
+    "bootstrap_resamples": 2000,
+    "ridge_alpha": 1.0,
+    "hgb": {
+      "max_iter": 100,
+      "learning_rate": 0.08,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "max_bins": 127,
+      "random_state": 1729,
+      "early_stopping": false
+    },
+    "mlp": {
+      "hidden_layer_sizes": [
+        32,
+        16
+      ],
+      "activation": "relu",
+      "solver": "adam",
+      "alpha": 0.001,
+      "learning_rate_init": 0.001,
+      "batch_size": 256,
+      "max_iter": 1000,
+      "early_stopping": false,
+      "random_state": 1729,
+      "tol": 0.0001,
+      "n_iter_no_change": 10,
+      "shuffle": true
+    },
+    "mlp_target_scaling": "training mean; invert then nonnegative clipping",
+    "selection_uses_test_values": false,
+    "tuning_or_consumer_replacement": false
+  },
+  "config_sha256": "87840b2c70e3d498b4202be8e899433f2b8b5ad2ae6bf1a5c55e29145d1cb0d1",
+  "protocol_sha256": "5caf4e2b5274d0815dd6b1bebfc1875609336137f1a5594c721cc7b8318a7aed",
+  "source_text_sha256": "d51565f2cb5a6b768d06ba1bbd3c084c6e2f3aab07f00c6f2dcb80e90175124b",
+  "source_zip_sha256": "f6c4d0e0df12ecdb9ea008dd6eef3518adb52c559d04a9bac2e1b81dcfc8d4e1",
+  "script_sha256": "444e8ef7d3a7ca79bfd4f20769e99c9925488651d55eae44984b8e3a2fced266",
+  "helper_hashes": {
+    "study_archive_access.py": "de88aaf109b9534402c913789b81f992cd312dc2d17902e953b715198e2ae28b",
+    "study_recovery.py": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241",
+    "run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+    "energy_rank_bounds.py": "2b555e7fbb676f311b87c38a1cfc8bf81b34743e35a7c43b5ff08d759596f467"
+  },
+  "original_artifact_hashes": {
+    "study_predictions.csv": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+    "study_summary.json": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196",
+    "study_recovery.csv": "abd026c12bcd6df64256544d55b4952b5249f0a0368969d3337bc11fa77a4911",
+    "study_recovery_pair_seed.csv": "39802e4c9bd7d2afa48d4ab687284102fe4d1df99fb758ee8e84b10e1fa92443",
+    "run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+    "study_recovery.py": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241"
+  },
+  "outcomes_inspected_before_selection": false
+}

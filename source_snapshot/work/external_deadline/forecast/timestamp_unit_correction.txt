@@ -1,0 +1,27 @@
+IMPLEMENTATION CORRECTION — 11 October 2026
+
+The first external fitting execution stopped before writing a forecast
+archive or evaluating any audit outcome. It encountered an empty validation
+slice and failed the feature/training-state timestamp assertion. Inspection
+identified a serialization defect: pandas3 DatetimeIndex.asi8 can return
+microsecond counts, while the field was named days_ns and later decoded
+using the nanosecond default. Correct source dates therefore decoded near
+1970. Prepared features and training masks were formed before serialization;
+the defect was in the subsequent date decoding, not a change in the data or
+model specifications. The root execution log retains the failed run and
+its extent (the first household's three estimators may have completed before
+the chronological guard stopped execution).
+
+The corrected preparation explicitly uses days.as_unit('ns').asi8. Fitting
+explicitly decodes with unit='ns', then verifies training dates and the
+stored last training-data availability BEFORE any estimator fitting. The
+synthetic design check now performs actual NPZ save/load round trips from
+both microsecond- and nanosecond-index dates through the same decoder.
+
+The previous implementation and design-check report are retained as
+forecast_before_timestamp_unit_fix.py.txt and
+design_check_before_timestamp_unit_fix.json. Re-preparation and the corrected
+fitting execution use the same frozen source, selected households, periods,
+features, models, seeds, eligibility rules and calibration rule. This is an
+implementation-failure rerun, not an outcome-driven training retry or a
+research-design amendment. No external acquisition outcomes had been run.

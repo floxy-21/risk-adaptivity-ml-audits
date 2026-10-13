@@ -1,0 +1,33 @@
+{
+  "status": "frozen",
+  "inputs": {
+    "work/external_deadline/prior_release/revised_manuscript.tex": "3d8ece5b7d2af6447e197d9c27cd2edbf5f4c4210dec81b8b423b8cf9ca70845",
+    "work/external_deadline/editorial/external_design.tex": "8190d74a1365924bc41053df0768ae8d2c571f54eca4d7d58f70e87738c156d4",
+    "work/external_deadline/editorial/make_results.py": "b5d364a2ee2721fb188cc2860254df9cbfee72eec74717a176787b6310cdac33",
+    "work/external_deadline/editorial/integrate_external.py": "1b8a98b185d51e76a982b94b2bf4c618dda9f76cb8948d9cfbd2d3bb78fa8920",
+    "work/external_deadline/review/decision_corollary.tex": "31b6b35a2e3e370ed7f9f9a187e42d0de1bf734756eaa5ec1aa0d50b0df9054d",
+    "work/build_external_manuscript.py": "a4245c0e24fe546eac7050cc6953a4fa10d5b834494c7be299a9416c19f587ad",
+    "work/external_deadline/fitted/fit_metadata.json": "3da3a4d7888cdba0fa39507618a3d39d06a60ec58389b2a59ec94797ad5ce263",
+    "work/external_deadline/fitted/prepared.json": "a512d3152b67a716cde1d493d15089d80ceff90830c1fd97d91bb9269782c514",
+    "work/external_deadline/source/lcl_reference_verification.json": "f327cf8d2e24ee05f6ee3227f5168c6491f035fafad1b46f91bea0897edc85ed",
+    "work/external_deadline/validation/headline_summary.json": "e4915b1fd88c4e15b08dd140cfc862b91cce8ef2064d12fcdef625e656ac8f37",
+    "work/external_deadline/validation/coverage_curves.csv": "cba3b2ba6d1efd04b0e65f8a6771aa4ab494b99c136c730e9e597535963ae355",
+    "work/external_deadline/validation/cost_summary.csv": "f6840fa2b87846a847efd334c64a058108e7e6964e24acf53843e882615826b8",
+    "work/external_deadline/validation/pair_curves.csv": "54dcdd1a391288cd4543b6968a187e34900ca3fb94b1c52d163d7bee677f8016",
+    "work/external_deadline/validation/month_curves.csv": "9d7ffaf646d706a88baa1e2fe249e0f5a6b6223c0e38c85d4b3c0b2a49c2946f",
+    "work/external_deadline/validation/household_curves.csv": "024215c3964f88b2dd65a679bcd244ac8ac73b0ee5fa1705a8e1ad5375fc84a6",
+    "work/external_deadline/validation/independent_verification.json": "a9043f7491c96ebf717d0d18448cd31521b387d53ed6cf0e010abf923ae6b370",
+    "work/external_deadline/validation/run_result.json": "59b098df0a2a8477a83bbe4e6f7355c8c6dc7eed9ccff1d4795ce7ab9848cb8e",
+    "work/external_deadline/test/headline_summary.json": "165c4a9f2b34cf9b4d2ccf1828c3d2b4a34f3bb3c837fb4f654f089ff003c036",
+    "work/external_deadline/test/coverage_curves.csv": "a68e2fe2941fbd40de228bbfac37d78546c6d1dd18294447cafcafdfec90ddeb",
+    "work/external_deadline/test/cost_summary.csv": "bd5aa8dac0379499e10efb1f93ce35ceabcaa5ddd38257da4a9e6e2812ce2799",
+    "work/external_deadline/test/pair_curves.csv": "d238a31456de5c59004e2f49a51a77672b7214fc6e1c066492fc556ca408440d",
+    "work/external_deadline/test/month_curves.csv": "e3c081ea20a1e1fc0f541c7f0407b7338f8e9b0af3da775a2a40ab3e188aa5d0",
+    "work/external_deadline/test/household_curves.csv": "420736e0e8607486c29dada21dbf02b0346a395b4dc77cde8f874066b0512117",
+    "work/external_deadline/test/independent_verification.json": "ae9e265648cd6a617770ec189ef93a659f9ea1e4e44984f10bb202490c4ca9a1",
+    "work/external_deadline/test/run_result.json": "a2883c589f07862d8448e16fa766732d255d30f755b717381467ade435c4d7fb"
+  },
+  "manuscript_sha256": "86a7423c0be9dc6ff14f441f6b9583b0d587ed372b13bae130d35dcc2da0c2b3",
+  "baseline_sha256": "3d8ece5b7d2af6447e197d9c27cd2edbf5f4c4210dec81b8b423b8cf9ca70845",
+  "scope": "Exact source composition after source and trajectory checks; does not imply journal acceptance."
+}

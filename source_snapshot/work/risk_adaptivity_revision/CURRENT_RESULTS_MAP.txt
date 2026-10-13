@@ -1,0 +1,916 @@
+CURRENT FOCUSED MANUSCRIPT: TABLE AND VERIFICATION CORRESPONDENCE
+Risk and Adaptivity in Certifying Machine-Learning Model Comparisons
+Source: outputs/revised_manuscript.tex
+Use semantic LaTeX labels below; table numbers change when new evidence is inserted.
+Moved supporting material is current, not discarded: see
+editorial/online_extended_methods.tex sections S1--S7. Its uncompiled LaTeX
+content fragment preserves methods and tables; numerical CSV/JSON outputs and
+entry commands below are usable without compiling another document.
+The current main text keeps the complete universal proof and the cumulative
+query algorithms. The compact-coordinate specialization, comparative timings,
+general-polytope test table and dual checks are indexed in S5/S7. Original
+counter diagnostics, full empirical witness and bounded-error derivations
+are in S6; historical forecasting specifications are in S3. These relocations
+change presentation, not the archived numerical outputs. The supporting
+fragment supplies its own alphabetized reference list.
+
+ONE ENTRY POINT
+From the extracted supplement root, after installing requirements.txt:
+  python work/risk_adaptivity_revision/reproduce.py
+
+This is the current paper's entry point. No earlier README is needed to follow
+this map. All paths below are relative to the extracted supplement root. The
+wrapper checks MANIFEST.sha256, creates an isolated stage, executes the current
+checks, saves their fresh reports/logs, compares scientific results with frozen
+results, and reconstructs the current TeX. It does not refit forecasting models,
+download raw inputs or rerun the archived process-level scaling measurements.
+Network access is blocked during default subprocess execution. The new public
+API-grid counter replay and cached HTTP checks use only bundled public inputs.
+Its final report is outputs/risk_clean_replay.json; stage-specific reports are
+listed below. Read its actual status and steps, not merely the existence of a
+frozen report. --small runs mathematical checks only, not the empirical checks.
+The historical 13-step full-run record is archived separately at
+work/risk_adaptivity_revision/executed/full_clean_replay.json; it predates the
+current extensions and does not establish completion of the current 39-step
+replay. Read outputs/risk_clean_replay.json for the current run's status and
+steps. The new counter study is documented separately below and in
+counter_adaptive/executed/raw_reproduction_report.json; it extends the paper
+without altering the archived historical scientific results.
+
+For focused inspection, the exact commands below reproduce individual results.
+Use a disposable extracted copy for commands without --output or --output-dir:
+some historical checkers write their report at a fixed path. The one-entry
+wrapper handles this isolation and retains fresh reports before restoring the
+few frozen composition inputs needed for byte-identical manuscript generation.
+Timing and alternative optimal LP witnesses can differ on a new execution.
+MANIFEST.sha256 records frozen file hashes; checking tolerances, not the fresh
+report's entire byte hash, determine numerical reproduction.
+
+tab:risk_three_coordinate -- Exact three-coordinate example
+LaTeX label: tab:risk_three_coordinate
+Command:
+  python work/risk_adaptivity_revision/math/check_classification.py
+Input: constructed constraints and coefficient vectors in that script; the
+  analytic argument is work/risk_adaptivity_revision/math/theorem_proof.tex.
+Frozen output and default fresh output:
+  work/risk_adaptivity_revision/math/classification_verification.json
+Selection: K_family entry K=2 and three_coordinate_converse entry l=0,h=1.
+  Mean = batch_moment_1_lower_game = 1/2; squared batch/adaptive risks =
+  batch_moment_2_lower_game = 1/2 and analytic_adaptive_squared_risk = 1/4.
+  The precision-success values 1/2 and 1 follow from the analytic proof for
+  every threshold in [1/2,1); the numerical K=2 precision game checks the
+  boundary threshold 1/2. The table's threshold 3/4 is an analytic consequence,
+  not a distinct numerical experiment. See the proof for upper bounds and
+  the corresponding endpoint formulas. These are exact constructed values,
+  not an empirical forecast gain.
+
+tab:risk_paired_solvers -- Compact versus finite-game solver, all eligible cases
+LaTeX label: tab:risk_paired_solvers
+Command:
+  python work/risk_adaptivity_revision/dual/summarize_solver_comparison.py --output-dir outputs/risk_solver_replay
+Inputs:
+  work/randomized_scaling_review/instances.json
+  work/randomized_scaling_review/results.csv
+  work/randomized_scaling_review/results.json
+Frozen outputs:
+  work/risk_adaptivity_revision/dual/solver_comparison/paired_solver_results.csv
+  work/risk_adaptivity_revision/dual/solver_comparison/paired_solver_table.tex
+  work/risk_adaptivity_revision/dual/solver_comparison/verification.json
+Fresh outputs: the same basenames in outputs/risk_solver_replay/.
+Selection: every enumerated-eligible case C01--C12, paired by case, with both
+  compact and finite method rows. CSV fields compact_variables/finite_variables,
+  compact_method_seconds/finite_method_seconds, and compact_peak_process_mib/
+  finite_peak_process_mib produce the three C/F table columns. Coordinates,
+  block count, budget and profile specify each row. No fastest-only selection.
+Checks: normalized_objective_gap; compact is faster in eight cases, finite in
+  four, compact uses fewer variables in eight and lower process peak in six.
+Interpretation: each underlying method/case is ONE ARCHIVED measurement.
+  Method time includes construction and solving; compact also compiles its
+  policy. Peak is absolute worker-process working set, including the runtime.
+  Summarizing this table does NOT perform new timing or memory measurements.
+
+Online Resource S1 -- Entire compact scaling grid
+LaTeX label: tab:compact-scaling-audit
+Archived-data validation command:
+  python work/randomized_scaling_review/verify_scaling.py
+Inputs: work/randomized_scaling_review/instances.json, results.csv, results.json,
+  provenance.json and the saved case outputs referenced by those manifests.
+Frozen reports/table:
+  work/randomized_scaling_review/summary.json
+  work/randomized_scaling_review/archival_verification.json
+  work/randomized_scaling_review/scaling_fragment.tex
+Selection: all 28 successful method=compact rows in results.csv. Group by
+  (blocks,coordinates_per_block,budget); each displayed row contains the two
+  distinct/tied profiles. Vars = variables (identical within the displayed
+  group); time = min/max method_seconds; memory = min/max peak_working_set_mib.
+  Finite counts completed finite rows for the corresponding group (0/2 or 2/2).
+  The 24 base cases are 1/2/4 blocks, 6/12 coordinates, two budget fractions,
+  two profiles. Four larger cases use one block, 24/48 coordinates and half
+  the coordinates as budget. The 16 unenumerated cases were prespecified skips.
+Related fields: primal_normalized, stationarity_normalized,
+  duality_gap_normalized and finite_objective_discrepancy_normalized.
+  All 560 sampled-policy checks test hard-budget and valid-coordinate behavior;
+  they are not 560 independent complete width-identity checks.
+Optional NEW measurement command:
+  python work/randomized_scaling_review/verify_scaling.py --rerun
+This creates new isolated process measurements of the declared grid. It does
+not replace the frozen paper table or turn single-run timings into a replicated
+timing estimate. Windows process-memory support and the pinned environment are
+needed for like-for-like memory measurements. The current default entry point
+reconstructs tab:risk_paired_solvers from these archived inputs; it does not execute --rerun.
+
+tab:general-values -- Six general polytopes, three distinct objectives
+LaTeX label: tab:general-values
+Command:
+  python work/risk_adaptivity_revision/general/check_general_lp.py --output outputs/risk_general_replay.json
+Input: cases() in that script gives all A,b,c inequalities/contrasts explicitly.
+Frozen report: work/risk_adaptivity_revision/general/verification.json
+Fresh report: outputs/risk_general_replay.json
+Selection: all cases, in order capacity_triangle, box4_signed, simplex4,
+  overlap5, fixed_total4, coupled4. Table columns read mean.mean_value,
+  two_query.optimal_deterministic_adaptive_width, and
+  mean.best_deterministic_batch_width. The exact row values are
+  (1/2,1/2,1), (3/2,3/2,3/2), (1,1,1), (5/2,5/2,5/2), (1,1,1),
+  (2/3,2/3,1). These are constructed instances, not real-data improvements.
+Major checks: all 37 enumerated batches and 24 possible first-query choices
+  remain in the report; inspect mean.batch_checks, the two_query first-query
+  records, max_primal_dual_gap and max_hard_record_gap. The triangle first-query
+  worst widths are 1/2,1,1. Independent endpoint and worst-mean LPs validate the
+  certificates; this is not exhaustive enumeration of adaptive policies.
+Tolerance: report.tolerance=1e-8, with HiGHS tolerances in highs_options.
+Frozen maximum gaps: 1.1102230246251565e-16 and 5.551115123125783e-16.
+Algorithm/proof source: work/risk_adaptivity_revision/general/algorithms.tex.
+
+tab:family-values -- Growing analytic family
+LaTeX label: tab:family-values
+Command/input/output: the same classification command and report as tab:risk_three_coordinate.
+Selection: K_family rows K=2,4,8 (the report retains every K=2,...,8).
+Columns: hard_budget=2K-2; batch_moment_1_lower_game=1/K;
+  batch_moment_2_lower_game=1/K; analytic_adaptive_squared_risk=1/K^2;
+  batch_precision_success_upper_game=1/K;
+  analytic_adaptive_precision_success=1.
+Major checks: endpoint_LPs_solved=3202, fiber_endpoint_pairs_checked=1601,
+  finite_games_solved=28; four scaled/offset converse fixtures, all all-but-one
+  batches in the stated family, interior precision witnesses, and 25 checked
+  adaptive records per K. maximum_absolute_width_discrepancy is
+  3.3306690738754696e-16; maximum_endpoint_primal_constraint_residual is
+  2.220446049250313e-16. Acceptance uses 2e-8*max(1,abs(analytic width)).
+  The theorem supplies universal conclusions; finitely many LP checks do not
+  prove the universal classification or certify every precision threshold.
+
+COUNTER RESULTS -- Cumulative-counter adaptive precision (NEW)
+Labels: tab:counter-guarantees, tab:counter-witnesses, tab:counter-replay, tab:counter-curve
+Fresh complete entry command:
+  python work/risk_adaptivity_revision/counter_adaptive/reproduce_counter.py
+This downloads/checks only the3 pinned original BLEM counter files, reconstructs
+endpoints, generates geometry before replay, runs all4914 audits, produces all
+summaries and independently checks every geometry. No forecast refit. See
+counter_adaptive/README.txt for exact scopes and standalone raw replay checks.
+With an existing cache, append --data-dir PATH. The output tree is new each run.
+
+Bundled summaries: counter_adaptive/summary/report.json; certificate_ledger.csv;
+all_policy_summary.csv; separation_policy_summary.csv; all_meter_summary.csv;
+separation_meter_summary.csv; all_model_a_model_b_summary.csv; phase summaries;
+precision_guarantee_curve.csv and precision_replay_curve.csv.
+All paths in this paragraph are under work/risk_adaptivity_revision/.
+tab:counter-guarantees uses feedback_triage/report.json counts and by_meter; all three
+classes are independently reconstructed from exact original coefficients. tab:counter-witnesses uses
+math_review/half_cover_verification.json representative_witnesses (earliest case
+per meter); its switches1/4,1/2,3/4 have exact continuum covering certificates.
+Run check_half_cover.py after raw regeneration, with --geometry NEW/results/geometry.json
+--data-dir RAW_CACHE --output outputs/counter_half_cover.json. This post-analysis
+diagnostic exports all290two-batch witnesses and exact batch optima of1/2.
+The distribution is also in summary/batch_bound_distribution.json. It is a point
+mass at1/2, not only a rounded upper-bound summary. tab:counter-replay uses replay
+all/separation: success_0.5 and relative_width multiplied by100. tab:counter-curve uses the
+complete five-row guarantee and replay curves. Strong primary cases290/4914;
+all4661 adaptive guarantees. The primary10% screening target failed (5.90%).
+The subgroup is selected from pre-answer guarantees, not favorable replay.
+
+Independent reports: counter_adaptive/math_review/{pilot,continuation}_verification.json
+and {pilot,continuation}_replay_verification.json. Full rational checks apply
+to all4914 serialized original-coefficient instances; raw replay checks all
+24570policy rows. Direct source audit: counter_adaptive/data_audit/.
+The guarantee reports' main counters sum all FIVE thresholds; primary counts
+come from primary_exact_witnesses. Do not misread them as primary-only counts.
+Per-case raw-derived geometry and register answers are regenerated from original
+sources by the command above, not included as raw traces in this ZIP.
+The default main replay runs the constructed counter check and validates bundled
+ledger/report correspondence; it does not claim a fresh raw-source counter run.
+
+Online Resource S2 (additional consumers) -- Extended grid on the existing 30 additional consumers
+LaTeX label: tab:extended_archive_replication
+Command:
+  python work/risk_adaptivity_revision/practical/replicate_archive_grid.py --output-dir outputs/risk_replication_replay
+Inputs:
+  outputs/study_holdout_consumers_predictions.csv
+  outputs/study_holdout_consumers_selection.json
+  outputs/study_holdout_consumers.json
+  work/risk_adaptivity_revision/practical/replication_protocol.txt
+  outputs/run_energy_rank_study.py, outputs/study_period_archive.py,
+  outputs/study_archive_access.py
+Frozen outputs: work/risk_adaptivity_revision/practical/replication/
+  run_manifest.json, period_cases.csv, summary.csv, verification.json.
+Fresh outputs: the same basenames in outputs/risk_replication_replay/.
+Selection: every period_cases row, grouped by total_tolerance (0 and .05).
+  verification.summaries or summary.csv supplies paired_certified,
+  separate_certified, paired_unresolved, separate_unresolved and
+  unresolved_reduction_percent. Each row has 9720 comparisons, six pairs,
+  30 consumers and the full 3 gaps x 3 patterns x 3 seeds x 2 block-size grid.
+  Exact: 7753 versus 2527; 5%: 7424 versus 2010. Unresolved reductions are
+  72.653969% and 70.220493%, relative to separate-loss unresolved cases.
+  All bound methods have zero wrong issued decisions and zero separate-only
+  certifications under the numerical sign rule.
+Checks: 19440 period comparisons, 3210 meter-days, 77040 hourly targets;
+  source copies come from permitted persistence forecast rows, not hidden
+  reference values. Input hashes, counts, elapsed_seconds, decision_margin,
+  checking_tolerance and output hashes are recorded. The high-demand masks use
+  hidden values only to define the declared oracle stress mask, not to supply
+  unobserved evaluator readings. Its repeated seeds are dependent.
+Scope: fresh extended-grid computation from previously examined consumers and
+  frozen forecasts, no refitting and no newly untouched cohort/calendar.
+
+Online Resource S2 (model selection) -- Certifying a donor-selected model against all three alternatives
+LaTeX label: tab:practical-model-selection
+Public command:
+  python work/risk_adaptivity_revision/practical_multi/evaluate_model_selection.py --source public --output-dir outputs/risk_selection_replay
+Public input: outputs/study_period_archive_public_cases.csv
+Frozen public outputs: work/risk_adaptivity_revision/practical_multi/results_public/
+  case_ledger.csv, report.json, table_rows.tex.
+Frozen full outputs: the same basenames under practical_multi/results_full/.
+Fresh public outputs: the same basenames in outputs/risk_selection_replay/.
+Selection: report.summary grouped by cohort and total_tolerance (0,.01,.05);
+  table fields scenarios, paired_certified, separate_certified and
+  coverage_difference_percentage_points. Original Portugal: 933/167, 919/156,
+  850/127 out of 1620. French household: 42/12,42/12,38/6 out of 54. Full-source
+  counters: 162/102,162/100,162/93 out of 162.
+Public replay covers 5022 scenarios. The three counter rows add 486 scenarios
+  and require the full source endpoint file; they are archived local checks,
+  not fresh executions by the default public command. Full route is below.
+Related practical statements: summary[cohort=portugal,total_tolerance=0]
+  has coverage_difference_percentage_points=47.2839506 and
+  unresolved_case_reduction_percent=52.7185134. The latter denominator is
+  1620-167, not acquisitions or forecast errors. Its
+  paired_certified_minimum_advantage_scaled_p10_median_p90[1] gives the stated
+  median 0.001382 after rounding. Scale is squared training-period mean target.
+  selected_model_reference_errors and opposite_pair_certificates are zero.
+Candidate rule: choose a unique exact-total historical-donor winner using saved
+  donor contrasts; authenticate its three comparisons. Keep this candidate
+  fixed at 1% and 5% total tolerance. No newly imputed wider-total donor or test
+  reference target enters candidate selection. Nonunique cases stay in the
+  denominator (none occur in this ledger).
+Bootstrap: group all 54 scenario indicators within each sorted consumer ID;
+  compute the per-consumer mean paired-minus-separate coverage. When >=10
+  consumers are present, initialize numpy.random.default_rng(20261012), draw
+  2000 vectors of 30 consumer indices with replacement, average differences,
+  and use numpy.quantile(...,[.025,.975]) with its default linear method.
+  Report field paired_consumer_bootstrap_95_difference_pp is the paired,
+  descriptive percentile interval in percentage points (Portugal exact:
+  40.80--53.77 after rounding). Seed is reset per cohort/tolerance group, so the
+  same index draws recur across tolerances. No BCa or studentization; no CI for
+  one household or three counters. Shared-calendar/population uncertainty is
+  not estimated by this convenience-panel bootstrap.
+
+Online Resource S3 -- Original source series and retained train/test day counts
+LaTeX label: tab:data
+Inputs: outputs/study_summary.json, fields meters[].cohort, train_days,
+  test_days; outputs/study_meter_results.json retains matching meta records.
+Exact read-only summary command:
+  python -c "import json;from collections import defaultdict;d=defaultdict(list);[d[r['cohort']].append(r) for r in json.load(open('outputs/study_summary.json'))['meters']];[print(k,len(v),sorted(set(r['train_days'] for r in v)),sorted(set(r['test_days'] for r in v)),sum(r['test_days'] for r in v)) for k,v in sorted(d.items())]"
+Output is stdout, columns cohort, series count, training days, test days,
+  total test meter-days. Expected rows: Portugal 30/357/107/3210; French
+  household 1/587/246/246; counters 3/266/91/273. Total test meter-days=3729.
+Production source of this metadata: outputs/run_energy_rank_study.py.
+  This table is an archived original-study design, not a fresh fitting claim
+  by the current replay. Historical fresh-fit checks are mapped below.
+
+Online Resource S4 -- Complete original historical comparison grid
+LaTeX label: tab:certificate-grid
+Public command:
+  python work/certificate_grid_review/summarize_certificates.py --source public --output-dir outputs/risk_grid_replay
+Input: outputs/study_period_archive_public_cases.csv, with its manifest
+  outputs/study_period_archive_public_manifest.json and source provenance.
+Frozen full table: work/certificate_grid_review/results_full/cohort_counts.csv
+  and table_rows.tex; companion grid_counts.csv, grid_seed_counts.csv and
+  verification.json retain every cell/seed and all checks. Public equivalents
+  are in work/certificate_grid_review/results_public/.
+Fresh outputs: the same basenames in outputs/risk_grid_replay/.
+Selection: every cohort_counts row, sorted by cohort, regime, total_tolerance.
+  Columns comparisons, both, paired_only, neither and separate_only map directly
+  to the table. Paired certification = both+paired_only; separate = both.
+  The full table contains 18 rows/66096 matched comparisons/324 scenario cells;
+  the public replay contains 12 rows/60264 comparisons/216 cells. The omitted
+  5832 counter comparisons need the explicit full-source route below.
+Abstract headline: cohort=portugal, regime=saved_forecast_archive_closed,
+  total_tolerance=0: comparisons=9720,both=2513,paired_only=5323,neither=1884,
+  separate_only=0. Thus paired=7836 (80.617284%) and separate=2513 (25.853909%).
+  The same exact-total archive selection for household/counters has 324/972
+  comparisons, respectively. Historical-donor method rows in the corresponding
+  source CSV have full coverage and zero errors; they are accuracy comparisons,
+  not all-completions certificates. Select method=historical_donor with the
+  same cohort/regime/total_tolerance to verify this distinct statement.
+Checks: verification.json checks.* validates unique matched keys, common
+  information metadata, recorded signs, paired-inside-separate, reference
+  enclosure, no wrong certificates, no separate-only certificates, complete
+  declared grid, and the historical 540-case illustration. The illustration
+  is verification.portugal_example, not the abstract's full-grid denominator.
+
+MAJOR VERIFICATION A -- Compact dual completion, including adaptive lower bound
+Command:
+  python work/risk_adaptivity_revision/dual/verify_dual.py --output-dir outputs/risk_dual_replay
+Inputs: work/randomized_recovery_root/compact_verification.json (42 small and
+  four separated-cluster instances); work/randomized_scaling_review/instances.json
+  (28 cases); six explicit edge cases in verify_dual.py. Implementations:
+  work/randomized_recovery_root/compact_randomized.py,
+  work/new_direction_randomized/randomized_recovery_screen.py (existing weighted
+  pricing oracle), work/risk_adaptivity_revision/dual/dual_certificate.py.
+Frozen outputs: work/risk_adaptivity_revision/dual/results/dual_completions.json,
+  summary.csv, verification.json. Fresh equivalents: outputs/risk_dual_replay/.
+Fields: cases=80,enumerated_cases=64,enumerated_final_sets=17749,
+  scaling_cases_independently_enumerated=12. Each completion retains original
+  inequality multipliers, mass_completion adjustments, completed feasible
+  target masses, primal_value, pricing_minimum and independent enumeration.
+  Raw dual mass deficits can be filled because all width coefficients are
+  nonnegative; tiny excess-mass roundoff repairs are recorded separately.
+  max_primal_pricing_absolute_gap=2.1316282072803006e-14;
+  max_primal_pricing_normalized_gap=4.612250360286484e-16;
+  max_enumeration_primal_normalized_gap=2.7328566760003855e-16;
+  max_completed_block_sum_absolute_error=1.7763568394002505e-15.
+  Width comparison scale=max(1,initial worst-case width); tolerance=1e-8;
+  mass scale=max(1,block total); solver feasibility tolerances=1e-9.
+  Enumeration includes all subsets of size <=B, including redundant full-block
+  queries, not merely maximal informative subsets. Proof/transcript source:
+  work/risk_adaptivity_revision/dual/adaptive_dual_proof.tex. Numerical checks
+  support the computed certificate, not an independent proof for all policies.
+
+MAJOR VERIFICATION B -- Pairwise practical gate
+Command:
+  python work/risk_adaptivity_revision/practical/audit_decision_gate.py --output-dir outputs/risk_gate_replay
+Inputs: outputs/study_period_archive_public_cases.csv and public manifest;
+  gate implementation work/risk_adaptivity_revision/practical/certificate_gate.py.
+Frozen outputs: work/risk_adaptivity_revision/practical/results/action_ledger.csv,
+  cohort_summary.csv, verification.json. Fresh equivalents: outputs/risk_gate_replay/.
+Selection: all exact-total public records in BOTH regimes (20088 matched pair
+  comparisons); each gives paired and separate gate outputs (40176 total).
+  verification.primary_portugal_archive_exact supplies paired_allow=7836,
+  separate_allow=2513, paired_hold=1884, separate_hold=7207; the held reduction
+  is (7207-1884)/7207=73.8587498%. All 1884 paired holds admit the opposite
+  strict direction at an interval endpoint under the numerical decision rule.
+  This is endpoint-supported alternative-completion evidence; only the worked
+  API examples below export entire attaining vectors. Gate decisions are fixed
+  before reference contrasts are consulted; check gate_phase_fingerprint_before_reference.
+  seconds records endpoint-ledger postprocessing, not new endpoint optimization.
+
+MAJOR VERIFICATION C -- Independent whole-period LP on additional consumers
+Run the Online Resource S2 (additional consumers) command first, then:
+  python work/risk_adaptivity_revision/practical/check_replication_lp.py --replication-dir outputs/risk_replication_replay --output-dir outputs/risk_replication_lp_replay
+Inputs: frozen additional-consumer predictions/selection and the Online Resource S2 (additional consumers) ledger.
+Frozen outputs: work/risk_adaptivity_revision/practical/replication/
+  independent_lp_cases.csv and independent_lp_verification.json.
+Fresh equivalents: outputs/risk_replication_lp_replay/.
+Selection: first/last declared consumers, first seed 1103, every gap, mask,
+  block size, total tolerance and six model pairs: 432 period comparisons,
+  864 endpoint LPs. No production bound imports. Report fields
+  max_absolute_endpoint_difference=1.1368683772161603e-13,
+  max_normalized_endpoint_difference=1.6731819081986821e-15,
+  max_absolute_constraint_violation=0. Tolerance=1e-8*max(1,abs(production
+  endpoints)); HiGHS primal/dual feasibility tolerances=1e-9. This checks paired
+  bounds; the independent separate-loss check is next.
+
+MAJOR VERIFICATION D -- Independent paired AND separate-loss reconstruction
+After Online Resource S2 (additional consumers):
+  python work/risk_adaptivity_revision/practical_api/replication_independent_check.py --replication-dir outputs/risk_replication_replay --output outputs/risk_replication_independent.json
+Inputs: additional-consumer predictions/selection and Online Resource S2 (additional consumers) period_cases.csv;
+  standard-library reference outputs/energy_rank_bounds.py. It does not import
+  production archive closure or bound routines. Independent water-filling minima
+  and simplex-vertex maxima check separate losses.
+Frozen output:
+  work/risk_adaptivity_revision/practical_api/replication_independent_verification.json
+Fresh output: outputs/risk_replication_independent.json.
+Selection: all 30 consumers; fixed scenarios (gap6,contiguous,seed1103,block6,
+  exact) and (gap12,scattered,seed3301,block24,5%); every day and model pair.
+  daily_snapshots_recomputed=6420; period_comparisons_independently_recomputed=360;
+  reference_API_calls=1800; independent_individual_loss_calls=1200;
+  direct_copy_occurrences=55080. whole_ledger_comparisons_checked=19440 checks
+  all counts/signs, but only the stated 360 cases have independently recomputed
+  endpoints. Maximum normalized paired/separate discrepancies are
+  1.0658141036401503e-14 and 1.0974658789118257e-14, respectively.
+  Tolerance=2e-8*max(1,abs(reported endpoints)); full per-case checks are retained.
+
+MAJOR VERIFICATION E -- Executable evaluator-only audit examples
+Command:
+  python work/risk_adaptivity_revision/practical_api/prepare_and_verify.py --output-dir outputs/risk_api_replay
+Inputs: outputs/review_frozen_forecasts.csv,
+  outputs/study_period_archive_public_links.csv.gz,
+  outputs/study_period_archive_public_aggregates.csv.gz;
+  practical_api/audit_api.py and outputs/energy_rank_bounds.py.
+Frozen outputs: work/risk_adaptivity_revision/practical_api/
+  copies_available_input.json, copies_available_output.json,
+  copies_absent_input.json, copies_absent_output.json, verification.json.
+Fresh equivalents: outputs/risk_api_replay/.
+Selection is fixed before outcomes: first public Portugal six-hour contiguous
+  seed1103/block6/exact-total link with a saved copy and first without one in
+  source order. The selected days are MT_001 on 2014-01-01 and 2014-01-28.
+  Six free copies give six allowed pair rankings in the first case; zero copies
+  and six remaining unknowns give one allowed/five held in the second. The
+  persistence-minus-ridge interval in the latter is approximately
+  [0.8554385111,2.9364114153], certifying ridge's lower historical MSE.
+  Complete lower/upper feasible vectors, free-source traces, aggregate deductions
+  and model-choice/hold outputs are exported; both cases use zero paid queries.
+  The schema rejects hidden_truth. Preparation uses targets to manufacture the
+  declared benchmark mask/totals; the gate itself receives evaluator-only JSON.
+Independent checks: 24 endpoint LPs, maximum absolute disagreement
+  1.7763568394002505e-15; zero known-coordinate and original-total residuals.
+  Actual checker tolerance: 2e-8*max(1,absolute pair endpoints,all block totals),
+  recorded per example as absolute_acceptance_tolerance; LP tolerances=1e-9.
+  This is floating-point verification, not outward-rounded interval arithmetic.
+Standalone use, requiring no hidden data or forecasting libraries:
+  python work/risk_adaptivity_revision/practical_api/run_example.py work/risk_adaptivity_revision/practical_api/copies_absent_input.json --output outputs/audit_example.json
+
+MAJOR VERIFICATION F -- Historical adverse outcomes and optimal-face selection
+Command (isolated copy; writes its report in place):
+  python work/randomized_tie_review/verify_ties.py
+Inputs: work/new_direction_randomized/lp_solutions.jsonl, cases.csv;
+  work/randomized_tie_review/policies.jsonl, selection_complete.json, cases.csv,
+  result.json; permitted public forecast records and hashes named in those files.
+Frozen/fresh checker output: work/randomized_tie_review/independent_verification.json.
+Numerical summaries: work/randomized_tie_review/result.json, cohort_summary
+  entry cohort=portugal; deterministic_worst_width=.2959526986 versus
+  randomized_worst_expected_width=.2667262094 of initial width; corresponding
+  realized-width fractions .2015379575 versus .2366998499; certification
+  .9879543094 versus .9868832369. These are original outcomes, not new benefits.
+  work/new_direction_randomized/result.json records actual_width_strict_improvements
+  =14, actual_width_strict_worsenings=649; 411 ties complete 1074 positive cases.
+  The two target-independent optimal-face refinements solve 2148 secondary LPs;
+  result.checks.dominance and result.checks.reference both retain 1074 realized
+  ties against the original policy. No unfavorable cases are deleted. Selection
+  hashes establish that policies were fixed before reference targets were read.
+
+ARCHIVED FITTING, DESIGN AND NUMERICAL IMPLEMENTATION CLAIMS
+These claims concern completed earlier checks. They are not all freshly executed
+by the current one-entry command. Their scripts/data remain supplied.
+
+Fitting check available using distributed public outputs (isolated copy):
+  python work/fresh_refit_review/verify_refit.py --public
+Inputs: work/fresh_refit_review/fresh_predictions_public.csv, fit_metadata.json,
+  outputs/review_frozen_forecasts.csv, outputs/study_holdout_consumers_predictions.csv
+  and the source/selection manifests used by that checker.
+Output: work/fresh_refit_review/independent_verification_public.json.
+This compares 61 UCI series/159984 hourly rows and archived fit metadata for all
+64 series. It does not independently recreate the omitted counter hourly rows.
+Full archived reports: work/fresh_refit_review/independent_verification.json,
+  independent_metrics_full.csv, prepared.json, fresh_result.json, fit_metadata.json.
+Select rows_compared=166536,series_compared=64,forecast_values_compared=666144,
+  complete_reference_metrics_checked=768,complete_period_pair_rankings_checked=384;
+  per_model_discrepancies has zero errors. Three trained estimators per series
+  give192 fits; persistence is reconstructed. Epoch/warning/timing data are in
+  fit_metadata.json, prepared.json and fresh_result.json. These use the original
+  trainer with separately written arithmetic/chronology checks, not an
+  independently implemented trainer.
+Full local check after raw sources and fresh outputs have been recreated:
+  python work/fresh_refit_review/verify_refit.py
+Actual new refitting requires an isolated tree with raw inputs, the original
+paths/protocols, and no existing prepared.json, fresh_predictions.csv or hourly/
+in work/fresh_refit_review/. Then run refit.py prepare, refit.py fit and
+verify_refit.py in that directory's supplied script paths. The driver refuses
+to overwrite prior fitting outputs. This optional training is NOT default replay.
+
+Reference numerical tests (run these exact scripts in an isolated copy):
+  python outputs/test_energy_rank_bounds.py
+  python outputs/study_verification_tests.py
+  python outputs/test_study_recovery.py
+  python outputs/test_recovery_adaptivity.py
+  python outputs/study_independent_audit.py
+  python outputs/test_main_ai_revision.py
+Inputs are fixed/random-seeded constructed fixtures in the named scripts,
+  outputs/energy_rank_bounds.py and the experimental/recovery implementation.
+Outputs are unittest stdout plus outputs/test_recovery_adaptivity.json and
+  outputs/study_independent_audit.json for the report-writing scripts.
+Claims mapped: 250 small integer polytopes and attainment/refinement tests;
+  vectorized/reference comparisons; 120 small multiblock cases at four budgets;
+  100 generic bound cases; ties, zero totals and greedy counterexamples;
+  independent endpoint LP/projection/vertex checks. Read the exact script tests
+  and JSON fields for fixture counts, not the number of unittest methods.
+  test_energy_rank_bounds.py contains the large-offset decimal and large-target
+  regressions and invalid/nonfinite input checks. They are specific regression
+  fixtures, not a guarantee for an entire numeric magnitude range.
+  outputs/frozen_forecasts.json records the original34-series forecast/target
+  ranges and hash; this is the source of the 0.00--507.01 kWh range statement.
+
+UNCHANGED HISTORICAL ACQUISITION RESULT (NOT A NEW PAPER BENEFIT)
+Source: work/decision_revision/confirmation/summary.json,
+  relative_mean_reduction=0.00973806405337263 (multiply by100 for0.9738064%).
+  descriptive_consumer_bootstrap_interval and household_costs.csv retain the
+  original denominator and uncertainty calculation. No current table repackages
+  this as a large operational gain.
+Exact independent check command (does not rerun forecasts/policy selection):
+  python work/decision_revision/reviews/verify_decision_confirmation.py --run-dir work/decision_revision/confirmation --source-cases work/decision_revision/confirmation/source_cases.jsonl --reference work/decision_revision/confirmation_fitted/reference_targets.csv --reference-period test --forecast-dir work/decision_revision/confirmation_fitted --primary-policy ml_decision --comparators width_one hara_one --output outputs/unchanged_confirmation_check.json
+Output: outputs/unchanged_confirmation_check.json; recorded comparison should
+  equal the original summary. Optional hindsight-oracle verification is a
+  distinct historical analysis, not needed to check the unchanged0.9738064%.
+
+OPTIONAL FULL COUNTER ENDPOINT ROUTE -- ONLINE RESOURCE S2 AND S4
+The public ZIP does not redistribute BLEM raw traces or their target-bearing
+full endpoint file. It retains aggregate full reports, hashes and regeneration
+code. The default current replay does NOT freshly rerun historical BLEM counter rows;
+the new public API-grid source has a separate bundled cached replay below.
+Use Windows, Python3.12.14 and outputs/requirements-study.txt for the original
+byte-hash comparison; the original full CSV uses Windows CRLF. Another platform
+may produce numerically identical rows with a different byte hash.
+
+1. Reconstruct original inputs in a new stage, without fitting:
+  python work/reproduce_review_revision.py --raw --reconstruct-only
+Optional --data-dir <pinned-raw-cache> reuses sources; otherwise missing sources
+are downloaded to the stage. The script prints the stage path. Substitute that
+path for <STAGE> in all following commands. This stage preserves the original
+scripts' sibling-import and source-path layout.
+
+2. Generate full period endpoints from that stage's reconstructed inputs:
+  python -c "import runpy,sys;from pathlib import Path;p=Path(sys.argv[1]).resolve();sys.argv=[str(p)];sys.path.insert(0,str(p.parent));runpy.run_path(str(p),run_name='__main__')" "<STAGE>/outputs/study_period_archive.py"
+Output: <STAGE>/outputs/study_period_archive_cases.csv and its full provenance.
+
+3. Reproduce all Online Resource S4 rows from those full endpoints:
+  python work/certificate_grid_review/summarize_certificates.py --source full --input-root "<STAGE>" --output-dir outputs/full_grid_recheck
+
+4. Reproduce all Online Resource S2 (model selection) rows from the same full endpoints:
+  python work/risk_adaptivity_revision/practical_multi/evaluate_model_selection.py --source full --input "<STAGE>/outputs/study_period_archive_cases.csv" --output-dir outputs/full_model_selection_recheck
+
+Evidence boundary: historical raw reconstruction checked89496 original rows,
+including6552 counter rows, against the original prediction archive hash. The
+entire above reconstruction-to-endpoint-to-table chain was inspected, but was
+not freshly executed together in this revision. Archived full table analyses
+were actually executed on the existing local full endpoint file. A successful
+public default run must not be described as fresh full-source regeneration.
+
+MANUSCRIPT CORRESPONDENCE AND EXPECTED OUTPUTS
+  python work/risk_adaptivity_revision/build_manuscript.py
+The current reproduction wrapper invokes this only after successful checks.
+It reads the frozen scientific reports and current editorial fragments named
+in outputs/risk_release_manifest.json and requires the current TeX output hash.
+The distributed file hashes are in MANIFEST.sha256. A reader should retain
+outputs/risk_clean_replay.json and its fresh stage logs to distinguish executed
+checks from the frozen evidence. None of the scripts estimates an acceptance
+probability, establishes new forecast accuracy, measures production retrieval
+cost, or changes the historical acquisition denominator.
+
+COMPLETE FEEDBACK TRIAGE -- tab:counter-guarantees AND OPERATIONAL COROLLARY
+This post-analysis result retains the original primary threshold and all4914
+cases. It does not replace the failed10% prevalence target.
+Counts:4371 fixed-batch sufficient,290 feedback essential,253 no deterministic
+two-query adaptive guarantee. The290 exhaust the feedback-essential class;
+all have matching continuum batch lower and adverse-profile upper values1/2.
+This global fixed-batch test evaluates all ten batches, not only batches
+sharing the chosen adaptive first query (which would find only4182).
+
+Bundled exact certificate and recommendation check:
+  python work/risk_adaptivity_revision/counter_adaptive/feedback_triage/verify_bundled.py --output outputs/feedback_triage_check.json
+This is included in the main default replay. It checks4914 rational game
+primal/dual certificates and the recommendation ledger; it does not regenerate
+coefficients from raw data.
+Full regeneration: run the counter reproduce_counter.py command above. Its
+all-panel run now also executes feedback_triage/analyze.py on fresh geometry
+and replay, reconstructing all batch and conditional adaptive coefficients,
+then runs verify_bundled.py on those fresh outputs.
+Standalone analysis:
+  python work/risk_adaptivity_revision/counter_adaptive/feedback_triage/analyze.py --help
+Use that documented geometry/replay input interface after raw regeneration.
+Frozen outputs under counter_adaptive/feedback_triage/:
+  report.json, case_ledger.csv, recommendations.json, policy_summary.csv,
+  batch_upper_distribution.csv, verification.json.
+The post-analysis batch/adaptive fallback preserves primary precision success
+for every completion while avoiding a sequential response in4371 cases.
+All methods still retrieve2 readings. Its recorded mean relative width rises
+from0.1859024 to0.187236; neither cost nor wall-clock latency is measured.
+No exact full-continuum intermediate batch optimum is claimed for the253
+cases without a deterministic adaptive guarantee.
+
+
+CURRENT ADDITIONS -- SEMANTIC LABELS, NOT TABLE NUMBERS
+
+SCALAR-FIRST SUPPORT AND BOUNDED STORED-ERROR PROTOTYPES
+Labels: thm:helly-precision; app:stored-error.
+Proof and declared model:
+  work/risk_adaptivity_revision/external_validation/math/helly_precision_theorem.tex
+  work/risk_adaptivity_revision/external_validation/math/measurement_model.txt
+Default jobs: bounded_uncertainty_prototype and bounded_uncertainty_edges.
+Commands:
+  python work/risk_adaptivity_revision/external_validation/math/robust_two_query.py --output outputs/bounded_uncertainty_prototype.json
+  python work/risk_adaptivity_revision/external_validation/math/INTERNAL_EDGE_CHECK.py --output outputs/bounded_uncertainty_edges.json
+Input: 18 constructed polytope fixtures in robust_two_query.py, seed 20261012.
+The second script independently assembles the fixed-policy worst-mean LP,
+checks zero-width dual normalization, uncertain-total constant contrasts and
+K=2,...,8 exact precision witnesses. It raises on violations, then emits PASS.
+Fresh reports contain all primal/dual values, feasibility errors and tolerances.
+LP tolerance 1e-9; comparison tolerance 2e-8. These are within-study numerical
+checks, not human validation or physical meter-error calibration.
+
+ARBITRARY-LENGTH TWO-QUERY FORMULA AND ILLUSTRATIVE CAPS
+Labels: prop:counter-two-query; eq:counter-adaptive-value; tab:counter-caps.
+Default job: cap_sensitivity_bundled.
+  python work/risk_adaptivity_revision/external_validation/math/check_cap_package.py --output outputs/cap_sensitivity_check.json
+Inputs under external_validation/math: cap_sensitivity_coefficients.json,
+cap_sensitivity_bundled_cases.csv, cap_sensitivity_witnesses.json,
+CAP_SENSITIVITY_PROTOCOL.txt, cap_sensitivity_manifest.json and
+cap_sensitivity_report.json. All 290 original feedback-essential cases remain.
+The checker recomputes 1,740 exact rational rows from frozen contrast vectors;
+positive block total cancels. It checks 23,780 feasible profiles, finite-game
+primal/dual certificates and separate all-completion lower covers. Matching
+bounds alone license an exact continuum optimum. The bundled ledger omits raw
+E/old_W0/new_W0 columns; no private counter inputs are required. Runtime about
+53 seconds on the recorded host. Outputs include source/input hashes.
+
+At fixed original tau=old W0/2, E/2 gives batch/feedback/unresolved counts
+282/8/0 and E/3 gives 290/0/0. At the different threshold new W0/2, counts are
+163/33/94 and 221/0/69. The full initial subset is 0/290/0. The cap scenarios
+are not physical specifications. Separate recorded-trace compatibility flags
+are in cap_trace_compatibility_cases.csv and cap_trace_compatibility.json:
+8/290 traces violate E/2 and 57/290 violate E/3; none were dropped. This raw
+compatibility check is archived, not reexecuted by the default bundled route.
+
+Optional full geometry/LP and raw-compatibility commands are documented in
+external_validation/math/README.txt. run_cap_sensitivity.py checks all ten
+batches and five first-query LPs per case/scenario and 91 constructed arbitrary-n
+instances (16 also with general LPs). Maximum discrepancies are in its report.
+It requires original source-derived geometries, deliberately absent from the
+ZIP. export_cap_bundle.py creates the distributable contrast/relative ledger
+inputs after that raw-route run. Do not describe coefficient replay as source
+reconstruction or forecasting-model refitting.
+
+PRECISION-OPTIMAL COVER REPLAY AND COMPLETE PAIRED OUTCOMES
+Labels: tab:counter-replay; tab:paired-outcomes; app:complete-counter-witness;
+  tab:complete-witness-widths.
+Bundled command:
+  python work/risk_adaptivity_revision/counter_adaptive/reviewer_diagnostics/verify_bundled.py --output outputs/reviewer_counter_diagnostics.json
+Inputs under counter_adaptive/reviewer_diagnostics: outcome_ledger.csv,
+precision_cover_ledger.csv and report.json; complete_witness.tex is the printed
+witness. The checker reconstructs counts and that witness directly.
+The deterministic two-batch cover is precision-optimal on the 290-case subset,
+not selected by hidden replay success. Its 147 certain and 143 half-probability
+recorded successes give 437/580=75.34%; optimal worst-case precision is not a
+claim of best realized performance. Paired counts retain countervailing cases.
+The complete empirical witness uses original serialized rational coefficients
+and every batch vector. The default check verifies bundled correspondence;
+raw BLEM replay remains a distinct regeneration route.
+
+NEW-SOURCE CACHED COUNTER REPLAY
+Labels: sec:external-hpm; tab:external-hpm.
+Default jobs: external_counter_cached_replay, then external_counter_independent_check.
+  python work/risk_adaptivity_revision/external_validation/replay/run_external.py
+  python work/risk_adaptivity_revision/external_validation/replay/check_external.py
+Inputs: external_heatpump/hourly/train_test_hourly_counters.csv and six original
+provider JSON files system_{1,2,7}_{train_2025H1,test_2025July}.json;
+external_validation/operational/fresh_fits_20261012/frozen_forecasts.csv and
+training_report.json; operational/protocol_lock.json. These publicly sourced
+cached values are included. Forecasts are hash-pinned; no model refit or network
+call occurs in these two commands. The producer takes about 109 seconds and
+the separate checker about 12 seconds on the recorded host.
+
+Fresh fixed-path outputs under external_validation/replay: geometry.json,
+half_witnesses.json, initial_intake.csv, replay_cases.csv, replay_attrition.csv,
+query_trace.json, policy/meter/pair/meter-pair/half summary CSVs,
+geometry_group_counts.csv, report.json, verification.json, independent_checks.json.
+The wrapper retains reports, compares scientific CSVs/counts with the frozen
+package, then restores declared mutable inputs before rebuilding the manuscript.
+
+The independent checker verifies original provider decimal tokens, temporal
+persistence rows, exact rational intervals, continuum half witnesses and
+independently assembled endpoint LPs. Its LP sample is the earliest positive-
+width case for every meter/model pair, all ten batches. See report.counts,
+policy_summary, half_policy_summary and paired for table values; the attrition
+ledger retains incomplete cases. Stored API-grid values are not verified native
+clock-hour physical energy or evidence of historical delivery by an audit time.
+
+ACTUAL HTTP INTERFACE MEASUREMENTS -- CACHED CHECK ONLY
+Labels: sec:actual-api; tab:actual-api.
+Default job: http_cached_verification.
+  python work/risk_adaptivity_revision/external_validation/operational/verify_http.py --benchmark-dir work/risk_adaptivity_revision/external_validation/operational/http_benchmark_20261012
+Inputs: benchmark_plan.json, request_log.json, trials.json, setup_requests.json,
+and the separately cached original July provider JSONs. The checker reconstructs
+all 60 received body hashes, verifies 30 trials and independently checks 12
+adaptive second choices. Fresh measurement_summary.csv, per_case_measurements.csv
+and verification.json are retained and compared before restoration.
+
+This command verifies recorded HTTP measurements; it does not repeat requests
+or timings. The live interface supplies the entire seven-point range in one
+request, yielding zero stored-record uncertainty. Two-point selective policies
+use two requests. Client I/O, planning, throttle waiting and body bytes are
+reported separately; no measured production saving is inferred. Request logs
+are not TLS-wire-byte or provider-CPU measurements. Repeating live traffic is
+an explicit separate command in operational/README.txt and is never a default
+package job. Fresh forecast fitting is likewise optional and separate.
+
+
+EXTERNAL FIXED STORED-READOUT ERROR SENSITIVITY
+Label: sec:stored-error-sensitivity.
+Default job: external_stored_error_sensitivity. This runs BEFORE the cached
+external geometry producer because its frozen input hashes identify the exact
+29-case subset; the producer's fresh timing-bearing geometry may have a new hash.
+  python work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/run_sensitivity.py
+Inputs: external_validation/replay/geometry.json and half_witnesses.json;
+external_validation/math/robust_two_query.py; local PROTOCOL.txt and
+protocol_lock.json. No raw meter response, network or fitting is used.
+Outputs: report.json, case_ledger.csv, inputs.json and witnesses.json in
+external_validation/stored_error_sensitivity/. Default replay retains fresh
+reports and checks the 87-row scientific ledger before restoring frozen files.
+
+All 29 frozen cases and fixed delta/E levels 0,0.001,0.01 are retained. Exact
+outer totals are unchanged; five fixed latent internal errors enlarge the
+convex feasible set. Adaptive half-original-width classifications are 29,27,22;
+no deterministic batch guarantees the target at any level. The old rational
+adverse completions retain the half upper bound by zero-error fiber inclusion.
+The initially numerical support checks are now strengthened by the exact
+residual-corrected rational certificates described below. Device calibration
+is not inferred. The 7,482 LPs
+took 58.68 seconds in the original run. Source IDs, coefficients, all first-query
+LP values, support values, numerical residuals and margins are exported.
+This sensitivity does not replay measured physical errors or infer a deployed
+meter's accuracy from its nominal class.
+
+
+OPTIONAL NEW-SOURCE FRESH FIT -- SEPARATE FROM DEFAULT REPLAY
+  python work/risk_adaptivity_revision/external_validation/operational/train_external.py --counter-csv work/risk_adaptivity_revision/external_heatpump/hourly/train_test_hourly_counters.csv --output-dir NEW_FIT_DIRECTORY
+  python work/risk_adaptivity_revision/external_validation/operational/compare_fresh_forecasts.py --candidate NEW_FIT_DIRECTORY/frozen_forecasts.csv --output outputs/external_fresh_fit_comparison.json
+The adapter also imports the preserved outputs/run_energy_rank_study.py and
+outputs/energy_rank_bounds.py, so retain the supplement's directory layout.
+The comparator checks all 2,232 row keys/nonforecast columns and 8,928 forecast
+values with fixed absolute tolerance 1e-10 and relative tolerance 1e-8; matching
+byte hashes alone are not its acceptance criterion. The actual isolated
+same-study rerun matched all predictions exactly, without retuning or retries,
+and took 25.60 seconds on the recorded host. Model fitting is intentionally
+not part of the default cached replay. It does not establish external human
+validation, physical meter accuracy or independent implementation replication.
+
+
+EXACT POSITIVE-ERROR SUPPORT CERTIFICATES
+Label: sec:stored-error-sensitivity.
+Default jobs: stored_error_exact_certificates and
+stored_error_independent_exact_certificates, both BEFORE the numerical
+sensitivity producer and external cached geometry producer.
+  python work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/check_exact_certificates.py --output outputs/stored_error_exact_certificates.json
+  python work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/INDEPENDENT_EXACT_CHECK.py
+Inputs: exact_certificates/certificates.json, the frozen geometry and sensitivity
+ledger/protocol. Both standard-library checkers independently reconstruct the
+endpoint LP. The first verifies original exact coefficients, all rows, finite
+boxes, signed multipliers and rigorous residual correction without calling a
+solver. The separately written second checker additionally rechecks the old
+rational adverse-profile weights against all ten batch width vectors.
+
+All 49 positive-level certificates (27 at 1/1000, 22 at 1/100) have exact upper
+bound strictly below 1/2; the smallest certified margin is
+62690716363030944789827837795111/16676489784621688173380802655027200,
+approximately 0.0037592273417659822. Inputs and results were not reselected.
+The proof is exact_certificates/proof.tex. These certificates prove a
+support-defined adaptive policy guarantee, not exact optimal-width values or
+a floating-point online branch implementation. The error bounds remain
+illustrative and not physically calibrated. The original adverse upper bound
+and the continuum support lower guarantee establish the same half batch value
+on these certified cases.
+
+Generation is optional and separate from checking:
+  python work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/build_exact_certificates.py
+This uses LP multipliers only as proposals and then validates exact upper bounds.
+It writes certificates.json and generation_report.json; default replay executes
+the two solver-free verifiers instead. Their reports preserve the distinction
+between a rigorous guarantee and a numerical optimal objective estimate.
+
+The optional fresh-fit execution is recorded in
+external_validation/operational/fresh_fit_reproduction.json and
+fresh_fit_comparison.json: one isolated same-study fit, 8,928 forecast values,
+zero maximum difference. Its initial missing-import staging setup error occurred
+before fitting and is disclosed. The default entry still performs no fitting.
+
+EXACT NEGATIVE-CASE DIAGNOSIS -- SAME TWO-QUERY PROBLEM
+Label: sec:stored-error-sensitivity.
+Default jobs: stored_error_failure_lower_certificates and
+stored_error_independent_failure_lower_certificates, before mutable replays.
+  python work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/check_lower_witnesses.py --output outputs/stored_error_lower_certificates.json
+  python work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/INDEPENDENT_LOWER_CHECK.py
+Inputs: failure_diagnostics/witnesses.json, original geometry and sensitivity
+ledger. Both checks use exact rational feasibility, equal observed readouts
+and strict width inequalities. All nine failed case/allowance combinations
+(two at .001, seven at .01) have 45 first-query witnesses and 180 endpoint
+pairs. Minimum strict excess: 5.9060297954e-6 W0. This rules out deterministic
+two-query guarantees, including early stopping; it is not a randomized-policy
+or physical-meter impossibility claim. Optional regeneration and proof are
+documented in failure_diagnostics/README.txt.
+
+CERTIFIED BUDGET FALLBACK AND EXECUTABLE BRANCH RULE
+Label: tab:stored-error-fallback.
+Default jobs: stored_error_fallback_fixed_certificates,
+stored_error_fallback_branch_certificates, stored_error_fallback_execution.
+  python work/risk_adaptivity_revision/external_validation/stored_error_fallback/INDEPENDENT_CERTIFICATE_CHECK.py --output outputs/stored_error_fallback_fixed.json
+  python work/risk_adaptivity_revision/external_validation/stored_error_fallback/INDEPENDENT_BRANCH_CHECK.py --output outputs/stored_error_fallback_branches.json
+  python work/risk_adaptivity_revision/external_validation/stored_error_fallback/policy.py --self-test --output outputs/stored_error_fallback_execution.json
+The first checker verifies 29 fixed three-query rational upper certificates.
+The second reconstructs 44 conditional affine dual bounds, proves whole-domain
+coverage for 22 first-answer intervals, and checks the actual callback policy
+at every envelope breakpoint and intervening midpoint. The execution test
+uses 1,015 constructed case/record combinations and rejects 29 deliberately
+infeasible transcripts. All three checks run without an LP solver or network.
+Together with the positive and negative two-query certificates, the policy
+has minimum deterministic hard budgets of two in 22 cases and three in seven.
+The 65-versus-87 total is summed reserved readings on the conditional 29-case
+subset, not average stopping costs, HTTP savings or a new two-query result.
+The rational-affine branch can differ from the old conditional-width-minimum
+branch; earlier recorded replay figures are not transferred to this policy.
+Optional regeneration (in a disposable extracted copy, before mutable replays):
+  python work/risk_adaptivity_revision/external_validation/stored_error_fallback/run_fallback.py
+  python work/risk_adaptivity_revision/external_validation/stored_error_fallback/build_branch_certificates.py
+This re-solves all 899 nonempty fixed batches and rebuilds exact certificates
+and prescriptions; it took about nine seconds plus subsecond branching work.
+The default verifies the resulting proof objects instead of repeating these
+proposal LPs. The complete scope and input hashes are in that directory's README.
+
+EXTERNAL SOURCE QUALIFICATION AND CHRONOLOGY
+Label: sec:external-hpm. Default job: external_source_qualification.
+  python work/risk_adaptivity_revision/external_validation/operational/check_source_qualification.py --output outputs/external_source_qualification.json
+The standard-library checker reconstructs the entire ascending-ID stopping
+prefix 1--7, selected systems 1/2/7 and the exclusions; verifies all 41 cached
+response hashes, raw training availability and feature-eligible day counts;
+and checks the documented event order. Source criteria preceded hourly data;
+the detailed training gates followed training inspection and preceded July
+retrieval. Internal timestamps are not external preregistration. Full metadata,
+counts and history are mapped in external_heatpump/SELECTION_AND_CHRONOLOGY_README.txt.
+
+
+tab:protocol-selection -- Interface-aware choice among certified protocols
+Main text, immediately after the actual public API benchmark.
+Commands from extracted supplement root:
+  python work/risk_adaptivity_revision/protocol_selection/selector.py --output-dir outputs/protocol_selection_replay
+  python work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_CHECK.py --results-dir outputs/protocol_selection_replay --output-dir outputs/protocol_selection_check
+Frozen inputs: protocol_selection/PROTOCOL.txt and protocol_lock.json pin the
+four interfaces and ten source files (existing fixed/branch certificates,
+case prescriptions, negative witnesses and cached HTTP records). No newly
+accessed answers or timing samples determine the interface choices.
+Frozen outputs: protocol_selection/results/{report.json,case_ledger.json,
+case_ledger.csv,recorded_http_summary.json}; independent_results/report.json.
+Checks: all116 case/interface decisions,348 candidate admissibility checks,
+exact certificate provenance,109 constructed callback executions,seven
+blocked dispatches, changed-plan/invalid-input rejection, and request/reading
+priority under an explicitly hypothetical native multipoint service.
+Table selection: all29 cases in each of four declared interfaces; no omitted
+cases or retuned precision thresholds. Bulk29; restricted3:adaptive22+fixed7;
+restricted2:adaptive22+escalation7; one-round3:fixed29. Reserved readings65
+versus87 and information rounds51 versus29 measure distinct resources.
+Bulk contains each supplied three-reading certificate, so monotonicity gives
+the bounded-error guarantee without claiming zero true-target uncertainty.
+The recorded HTTP summary checks30 policy trials and60 requests(54 trial+6
+common setup); those timings concern three tasks, not the29 sensitivity cases.
+The restricted interfaces are declared benchmark contracts, not demonstrated
+provider restrictions or new deployments. The code selects among supplied
+certificates, not an exhaustive optimizer for every acquisition problem.
+
+TASK-BOUND DISPATCH AND INTERFACE VALIDATION
+Current main text: paragraph immediately after tab:protocol-selection.
+  python work/risk_adaptivity_revision/protocol_selection/check_bound_workflow.py --output-dir outputs/bound_workflow_check
+  python work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_BINDING_CHECK.py --output-dir outputs/independent_binding_check
+Default jobs: bound_acquisition_workflow, independent_task_binding.
+The second checker compares all 29 saved contrast vectors and constants with
+the frozen geometry, verifies the forecast artifact hashes, and independently
+reconstructs 58 retained endpoints from cached decimal counter tokens. It does
+not derive the contrasts anew from the forecast CSV. It checks task_manifest.json
+correspondence rather than trusting a case ID alone.
+Both checkers exercise callback dispatch and pre-callback rejection of
+changed plans, incorrect task metadata and unsupported interface values.
+Constructed dispatch records are software tests, not new meter observations.
+The selector's independent checker also rejects non-Boolean permission flags,
+Boolean/float query identifiers, malformed budgets and missing schema fields.
+APPLICATION_WORKFLOW.txt and workflow_examples.json document saved examples
+and the exact request/response envelope. New cases require new certificates.
+
+Frozen task-binding checks run before the external replay regenerates geometry.json.
+The driver rejects a frozen-input check scheduled after a mutating regeneration job.
+Regenerated scientific ledgers are still checked before frozen inputs are restored.
+
+tab:protocol-cost-frontier -- Reserved readings versus information rounds
+  python work/risk_adaptivity_revision/protocol_selection/cost_frontier.py --output-dir outputs/cost_frontier_replay
+  python work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_COST_CHECK.py --results-dir outputs/cost_frontier_replay --output outputs/cost_frontier_check.json
+Inputs: protocol_selection/protocol_lock.json; unchanged fixed and adaptive
+  certificates in external_validation/stored_error_fallback/; archived HTTP
+  trials in external_validation/operational/http_benchmark_20261012/trials.json.
+Frozen outputs: protocol_selection/cost_frontier_results/{report.json,
+  case_ledger.json,case_ledger.csv}; protocol_selection/cost_frontier_independent.json.
+Default jobs: protocol_cost_frontier, protocol_cost_frontier_independent.
+Selection: all 29 external sensitivity cases, ratios 0,1/4,1/2,1,2,4.
+Report summaries supply every table value. Costs are exact rational reading-
+charge units. All 174 choices retain the same declared precision guarantee;
+306 supplied per-case candidates are independently evaluated. The identity
+(3+r)-(2+2r)=1-r establishes the switching rule over all nonnegative ratios.
+The optimum is over supplied certified protocols, not arbitrary acquisition
+strategies. Baseline-optimal regions are explicit. No price or field saving
+is measured. Existing API means are recalculated separately from 12 archived
+trials and do not calibrate the declared cost ratio.
+
+sec:worked-counter-example -- Complete printed real-case witness
+  python work/risk_adaptivity_revision/counter_adaptive/reviewer_diagnostics/check_worked_example.py --output outputs/printed_worked_example_check.json
+Default job: printed_worked_example.
+Input: counter_adaptive/reviewer_diagnostics/report.json, fully_specified_witness.
+Frozen output: counter_adaptive/reviewer_diagnostics/worked_example_verification.json.
+The exact-rational check reconstructs the normalized coefficient vector from
+the bundled original binary64 coefficients, verifies the displayed outward
+enclosures, total, initial width, two continuum branch maxima and all ten
+adverse batch-success columns. The main text supplies the compact example;
+tab:counter-witnesses with all three meter examples remains in S6.
+Optional --geometry PATH checks coefficients, total and saved width against
+locally regenerated counter geometry. It is not required by the default run.
+No raw-source replay or new sample is claimed by this printed-witness check.

@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "scope": "Source and policy-input verification only; no policy objective, choice, replay result, advantage or case selection inspected.",
+  "geometry_inputs": [
+    {
+      "path": "work\\risk_adaptivity_revision\\counter_adaptive\\pilot\\geometry.json",
+      "sha256": "6c94583d757db31b33b6388cd29c2d1b6999385c76b049368e58ef97f75424cb",
+      "declared_phase": "pilot",
+      "input_cases": 1080
+    }
+  ],
+  "policy_input_cases_checked": 1080,
+  "cases_by_panel": {
+    "pilot": 1080
+  },
+  "exact_source_meters": [
+    "consumer_00000001",
+    "consumer_00000002",
+    "consumer_00000003"
+  ],
+  "days_per_meter": 91,
+  "frozen_hourly_rows": 6552,
+  "original_archive_sha256": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+  "public_export_sha256": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0",
+  "raw_sha256": {
+    "consumer_00000001": "9228795c6369ce144fbb929f9d413397545f86e3a95d2f9a0f27c92f1d55ad8d",
+    "consumer_00000002": "93d142217c74ab2c12a98035b3ea178ead234fec0b71942e8e90db5b7e6a2ef3",
+    "consumer_00000003": "db69719d2262ebeb6df39abafffca2805c8a03b1b4777f86eb8aa78acf578b6c"
+  },
+  "learned_forecast_max_absolute_difference": 0.0,
+  "daily_persistence_reconstructed_rows": 6552,
+  "daily_persistence_rows_with_nonzero_float_difference": 0,
+  "daily_persistence_max_absolute_difference_kwh": 0.0,
+  "maximum_policy_input_absolute_discrepancies": {
+    "E": 0,
+    "W0": 0,
+    "d": 0,
+    "normalization_scale": 0,
+    "c": 0,
+    "c_normalized": 0,
+    "c_vs_original_frozen_daily": 0,
+    "d_vs_original_frozen_daily": 0
+  },
+  "policy_input_tolerance": "1e-12*max(1,abs(expected scalar) or maximum absolute vector element)",
+  "original_persistence_check_tolerance": "2e-14*max(1,abs(old),abs(regenerated))",
+  "persistence_interpretation": "Direct integer-difference division can differ by final floating parsing bits from the original hourly-CSV-parsed persistence. This is quantified, not described as byte-identical.",
+  "script_sha256": "f8bb59b82fc0ec2d4185aeea8562c1ea7620f5ee7e65f294b2ab9d23547d4b27",
+  "data_audit_script_sha256": "c316abb6424f03bc8df006465224adf57ea218e90fa89293b96af8e067eb13e8"
+}

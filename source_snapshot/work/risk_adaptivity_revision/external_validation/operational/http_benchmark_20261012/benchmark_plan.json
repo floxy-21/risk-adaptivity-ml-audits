@@ -1,0 +1,154 @@
+{
+  "status": "frozen_before_timed_responses",
+  "protocol_sha256": "ec406250bc0b400a86351ab223aaa0e6773aa3b787d52ad3e463fec6222ee838",
+  "source_forecast_sha256": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+  "counter_source_hashes": {
+    "work\\risk_adaptivity_revision\\external_heatpump\\hourly\\train_test_hourly_counters.csv": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da"
+  },
+  "code_sha256": "06829131953335a8ae6e1e590b9fa774c05230b023b7bf1ed991d093d51a904e",
+  "cases": [
+    {
+      "id": "hpm_1/2025-07-01T00:00:00+00:00/daily/mlp",
+      "system_id": 1,
+      "start_unix": 1751328000,
+      "start_utc": "2025-07-01T00:00:00+00:00",
+      "C0": "11326.8623046875",
+      "C6": "11326.982421875",
+      "E": 0.1201171875,
+      "W0": 0.020173531318804797,
+      "c": [
+        0.03953919354425883,
+        0.0704498641499073,
+        0.0804360545576356,
+        0.12256383274014643,
+        0.18475878726242553,
+        0.20748794208455243
+      ],
+      "d": -0.17183151956526058,
+      "models": [
+        "daily",
+        "mlp"
+      ]
+    },
+    {
+      "id": "hpm_2/2025-07-01T00:00:00+00:00/daily/mlp",
+      "system_id": 2,
+      "start_unix": 1751328000,
+      "start_utc": "2025-07-01T00:00:00+00:00",
+      "C0": "11756.5595703125",
+      "C6": "11757.2099609375",
+      "E": 0.650390625,
+      "W0": 0.03618316498813338,
+      "c": [
+        -0.005533854166666667,
+        -0.0401854934870172,
+        0.015447480909151835,
+        0.002808769728107933,
+        0.0012202921997645666,
+        -0.0035807291666666665
+      ],
+      "d": 0.016470959429053116,
+      "models": [
+        "daily",
+        "mlp"
+      ]
+    },
+    {
+      "id": "hpm_7/2025-07-01T00:00:00+00:00/daily/mlp",
+      "system_id": 7,
+      "start_unix": 1751328000,
+      "start_utc": "2025-07-01T00:00:00+00:00",
+      "C0": "13286.091796875",
+      "C6": "13286.2177734375",
+      "E": 0.1259765625,
+      "W0": 0.00036907196044921875,
+      "c": [
+        -0.005859375,
+        -0.007486979166666667,
+        -0.0087890625,
+        -0.0078125,
+        -0.0078125,
+        -0.007486979166666667
+      ],
+      "d": 0.000518639882405599,
+      "models": [
+        "daily",
+        "mlp"
+      ]
+    }
+  ],
+  "skipped": [],
+  "orders": [
+    {
+      "case": "hpm_1/2025-07-01T00:00:00+00:00/daily/mlp",
+      "repetition": 0,
+      "order": [
+        "det_batch",
+        "adaptive",
+        "greedy_adaptive",
+        "mean_batch",
+        "full_hourly_range"
+      ]
+    },
+    {
+      "case": "hpm_1/2025-07-01T00:00:00+00:00/daily/mlp",
+      "repetition": 1,
+      "order": [
+        "full_hourly_range",
+        "mean_batch",
+        "greedy_adaptive",
+        "adaptive",
+        "det_batch"
+      ]
+    },
+    {
+      "case": "hpm_2/2025-07-01T00:00:00+00:00/daily/mlp",
+      "repetition": 0,
+      "order": [
+        "det_batch",
+        "mean_batch",
+        "adaptive",
+        "greedy_adaptive",
+        "full_hourly_range"
+      ]
+    },
+    {
+      "case": "hpm_2/2025-07-01T00:00:00+00:00/daily/mlp",
+      "repetition": 1,
+      "order": [
+        "full_hourly_range",
+        "greedy_adaptive",
+        "adaptive",
+        "mean_batch",
+        "det_batch"
+      ]
+    },
+    {
+      "case": "hpm_7/2025-07-01T00:00:00+00:00/daily/mlp",
+      "repetition": 0,
+      "order": [
+        "mean_batch",
+        "full_hourly_range",
+        "greedy_adaptive",
+        "adaptive",
+        "det_batch"
+      ]
+    },
+    {
+      "case": "hpm_7/2025-07-01T00:00:00+00:00/daily/mlp",
+      "repetition": 1,
+      "order": [
+        "det_batch",
+        "adaptive",
+        "greedy_adaptive",
+        "full_hourly_range",
+        "mean_batch"
+      ]
+    }
+  ],
+  "point_semantics": "start=t,end=t+1,interval3600,average0,delta0,timeformatunix",
+  "full_semantics": "start=t0,end=t6,interval3600,average0,delta0,timeformatunix; seven values, including retained endpoints",
+  "random_seed": 1729,
+  "maximum_requests": 60,
+  "no_optional_internal_answer_used_for_case_selection": true
+}

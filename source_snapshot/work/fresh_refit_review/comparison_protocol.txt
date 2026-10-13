@@ -1,0 +1,75 @@
+FRESH REFIT: INDEPENDENT COMPARISON PROTOCOL
+Frozen 2026-10-11 UTC before fresh fitting outcomes are available.
+
+Scope
+Compare one fresh isolated forecasts-only rerun of all original 34 series and
+all 30 previously unused Portugal consumers against their original saved
+predictions and per-fit metadata. No new model, hyperparameter, consumer,
+train/test split, mask, or recovery policy is selected. Do not rerun the full
+mask grid merely to compare fitted forecasts. Original files remain immutable.
+
+Inputs and identity
+Reference prediction files are outputs/study_predictions.csv and
+outputs/study_holdout_consumers_predictions.csv. Reference fitting metadata
+are the corresponding study_summary.json and study_holdout_consumers.json.
+Fresh files are fresh_predictions.csv, fit_metadata.json and fresh_result.json
+under this directory. Compare exact cohort/meter/timestamp keys, uniqueness,
+row counts, all four model columns, truth, and meter/cohort membership. Preserve
+original cohort labels and timezone representations. Expected total is 64
+distinct series and 166,536 hourly rows (6,939 meter-days).
+
+Predeclared numerical criteria
+For a numeric scalar x and its frozen reference r, closeness means
+abs(x-r) <= absolute_tolerance + relative_tolerance*abs(r).
+- Truth and daily-persistence values: absolute=1e-12, relative=1e-12.
+- Ridge, histogram gradient boosting and MLP predictions: absolute=1e-8,
+  relative=1e-8, on the original kWh scale after prescribed nonnegative clipping.
+- Independently recomputed MSE, RMSE and MAE, and saved complete-reference MSE:
+  absolute=1e-8, relative=1e-8.
+- Training mean and MLP target scale: absolute=1e-12, relative=1e-12.
+- MLP final training objective loss: absolute=1e-8, relative=1e-8.
+- Model configuration, seeds, training/test calendar endpoints and day counts,
+  MLP epochs and captured warning strings: exact equality.
+Record exact numeric equality as well as maximum absolute/relative/scaled
+discrepancies; do not demand serialized byte identity. Floating reductions may
+differ even for a faithful run. Any tolerance exceedance is reported as a
+failure requiring diagnosis, never remedied by tuning or loosening this file.
+Any convergence warning, nonfinite value, negative clipped forecast, missing
+row, consumer substitution, changed split or configuration must be reported.
+Also compare complete-period model rankings using the manuscript's 1e-9
+scale-dependent tie convention; report any change even when forecast-level
+differences pass. Counts describe this rerun, not independent statistical data.
+
+Independent checks
+The checker must not call fit_forecasts or import the new refit driver to
+produce its comparison numbers. Recompute residual MSE/RMSE/MAE directly from
+fresh and frozen hourly rows, and reconcile stored per-fit MSE. Inspect the
+unchanged trainer's explicit feature/split/scaling rules and fresh driver's
+cache handling. Where feasible, independently reconstruct causal feature
+fixtures, DST exclusions, and train/test chronology from declared raw hourly
+inputs, without fitting any second model. Declare fixture scope precisely.
+
+Raw/chronology rules to preserve
+Household: all 60 valid minute values per hour; sum/60, no partial-hour filling.
+Portugal: shift quarter-hour endpoint timestamps back 15 minutes, then sum
+four readings/4; original first 30 training-eligible meters among first 80,
+additional first 30 eligible among MT_081..MT_370. Eligibility uses only 2013
+availability >=99% and positivity >95%. No replacement after test outcomes.
+BLEM: integer counter subtraction at exact UTC hour boundaries before unit
+conversion by 1e10; all 3-minute interior snapshots present and nondecreasing.
+Do not read old hourly pickle caches. Rebuild them only in isolated workspace.
+Retain original BLEM CSV round trip before original training to preserve
+declared arithmetic. Feature lags 1/2/7 days and previous-day mean must precede
+the target day's simulated issue time; calendar features are deterministic.
+Provider-local EU DST affected days and lag-dependent days are excluded for
+household/Portugal; BLEM uses UTC. The original complete-day/history eligibility
+is retained. Training periods: household 2008-2009, Portugal 2013, BLEM before
+2017-10-01; testing: household 2010, Portugal first 28 days of Jan/Apr/Jul/Oct
+2014, BLEM from 2017-10-01. Use the original fixed seeds and two-thread fit limit.
+
+Limits
+This is a fresh execution of the original trainer from pinned raw sources,
+with an independent arithmetic/comparison checker. It is not an independent
+reimplementation of Ridge/HGB/MLP training, an external-cohort validation,
+new hypothesis confirmation, or a rerun of all downstream masks and optimizers.
+Local protocol time and hashes are provenance, not external preregistration.

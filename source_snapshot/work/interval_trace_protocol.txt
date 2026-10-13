@@ -1,0 +1,54 @@
+Frozen interval-total recovery sensitivity protocol
+Created 2026-10-10 UTC before new sensitivity outcomes were evaluated.
+
+Population: all original 34 series and all 3,729 saved held-out meter-days in
+outputs/study_predictions.csv. No new training, source changes, consumer selection,
+model selection, tuning, fit retries, or outcome-dependent exclusions.
+Four original forecasts, all six unordered pairs, seeds 1103/2207/3301.
+Exactly the original six-hour contiguous masks (gap index 1) and six-hour blocks.
+Total intervals: [(1-tau)T,(1+tau)T], tau=0,0.01,0.05, with T computed before masking
+from the original complete block. These are constructed sensitivity intervals,
+not calibrated instrument error, independently measured backups, or random noise.
+
+Two evaluator regimes: restricted_record_closed and saved_forecast_archive_closed.
+The latter uses every available saved test persistence copy exactly as in
+study_archive_access.py, via its forecast-only timestamp/daily interface, with no
+truth fallback. Both regimes include all exact deductions: zero upper residual
+fixes every unknown to zero; an exact residual total fixes a lone unknown. A
+nonzero-width interval does not fix a singleton. Subtract all observed/free values
+from the lower and upper block totals; truncate the residual lower at zero.
+Roundoff convention: infeasible discrepancies within 1e-9*max(1,abs(total bounds))
+may be clipped to zero, as in the original exact-total implementation; this is
+not a physical tolerance. No positive uncertain interval is collapsed as exact.
+
+Evaluate budget zero and at most two exact target queries per day/model pair.
+Exact policy: unchanged interval_total_recovery.optimal_queries.
+Comparator: deterministic one-step minimization of the same worst remaining
+interval width; lowest target index breaks ties. Continue while a remaining
+block has positive objective width and budget remains, including zero immediate
+gain steps. Full-block recovery is allowed; no observed, freely reconstructed,
+or exactly deduced coordinate may be queried. Batch choices receive no hidden
+target values. Apply queries and only then use their actual saved target answers.
+Already certified cases remain included, matching the original fixed-budget design.
+
+Report all cohorts, both access regimes, every tolerance and policy: certification,
+wrong decisions, truth enclosure, mean paid queries, raw and training-mean-squared
+normalized initial/actual/worst widths, actual/worst fraction of initial width,
+exact-minus-greedy coverage and width changes, free and exact-deduction counts.
+Average observations within meter, then average meters equally within cohort;
+report pooled counts separately. Query/policy repeats are dependent evaluations.
+Use original decision margin 1e-9*max(1,abs(lower),abs(upper)).
+
+Validate integration with independent linear-program endpoints on deterministic
+small fixtures, explicit singleton/zero-energy cases, hidden-answer invariance,
+and all-case enclosure and actual-width<=predicted-worst checks. At tau=0 compare
+initial bounds and optimal objective against original exact-total implementation;
+record query/decision differences if ties or explicit closure alter bookkeeping.
+Also reconcile aggregate tau=0 rates and widths against the saved archive study;
+report deviations honestly rather than require identical optimizer ties.
+
+No instrument-performance, retrieval-cost, latency, field-deployment, or independent
+population generalization claim. Aggregate CSVs only: do not redistribute BLEM
+hourly targets or forecast copies. Hash all source inputs before and after; no
+existing artifacts may change. At most two parallel workers; first completed
+meter's progress provides timing without changing study design. All cases run.

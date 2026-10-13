@@ -1,0 +1,23 @@
+ROOT INDEPENDENT RANDOMIZED-RECOVERY VERIFICATION
+Fixed 10 October 2026, before this implementation's numerical outcomes.
+No manuscript edits until mathematical and practical evidence is assessed.
+
+Objective: minimize max_y E_Q[remaining paired-comparison width], with y fixed
+before randomization, disjoint exact nonnegative totals, and hard batch budget.
+This is not a bound on each draw or a guarantee of certification probability.
+
+Implement an endpoint/hypersimplex LP with a budget-layered flow for multiple
+blocks. Independently enumerate feasible batches on small instances and solve
+the finite mixed-strategy LP. Compare optimal objectives and feasibility.
+Use seed 20261010: 24 one-block instances (m=3..8, four repetitions each),
+12 two-block instances with each m=3..5, and 6 three-block instances with m=3.
+Budgets chosen deterministically from the instance index, coefficients integer
+draws from -5..8, energies integer draws from 1..5. Include coefficient ties.
+Include analytic equal-span separated-cluster cases (m,r)=(4,2),(6,2),(9,3),
+(12,2), each total one, budget m-r. Check sharp ratio m/r.
+Scalability cases are one block m=60,B=4 and m=120,B=6 with deterministic
+linspace coefficients. Do not compare an enumeration that cannot finish.
+Report actual runtime, LP dimensions, primal feasibility and objective
+agreement. These are algorithm-validation examples, not operational datasets.
+No selective removal of failed cases or tolerance adjustment to obtain passes.
+Numerical tolerance 1e-7 absolute plus 1e-7 relative objective magnitude.

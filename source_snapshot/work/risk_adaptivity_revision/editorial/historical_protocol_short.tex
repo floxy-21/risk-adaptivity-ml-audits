@@ -1,0 +1,50 @@
+\section{Frozen forecasts and reproducibility scope}
+\label{app:historical-design}
+The historical sources are UCI ElectricityLoadDiagrams20112014,
+UCI Individual Household Electric Power Consumption, and the BLEM
+cumulative consumption records \citep{portugal,uci,blem}.
+The original study contains 30 Portugal series (357 training and 107 test
+days each), one French household (587 and 246), and three BLEM meters
+(266 and 91 each), for 3,729 test meter-days. The separate additional-consumer
+cohort contains 30 Portugal series and 3,210 test meter-days. It does not
+expand the three-meter counter study or provide another calendar.
+
+The counter study reuses the four models' frozen predictions on every
+eligible day from 1 October through 30 December 2017. Models are persistence,
+standardized ridge regression, histogram gradient boosting, and a multilayer
+perceptron. Learned features and fitting use earlier observations and
+chronological training data; their saved specifications, training allowances,
+selection records and forecasts are unchanged. The counter policy receives
+the resulting fixed contrast coefficients, not a new fit or a surrogate
+distribution for unobserved test targets. The full feature equations,
+hyperparameters, eligibility rules and historical fitting verification are
+provided in Online Resource~1's current extended-methods source.
+
+For BLEM, an hourly target is the integer counter difference between exact
+UTC hour endpoints, converted to kWh. Both endpoints must exist, and resets,
+negative increments and incomplete days are excluded, with no interpolation.
+The counter replay uses the three pinned original files at repository commit
+\texttt{756b2c1265f964b70f72625a95d98413cdfb78bd}; source hashes and
+integer telescoping checks cover all 819 six-hour blocks. This complete-day
+screen is part of the benchmark and limits conclusions about natural outages.
+
+The historical certification grid varies three gap lengths, three mask
+rules, three seed labels, two aggregate resolutions and six model pairs.
+Masked readings and constructed totals are benchmark inputs; actual BLEM
+outer-register differences are distinguished from manufactured totals.
+All 324 original source/access/tolerance cells and the extended-consumer
+results remain available, including unresolved cases and dependent repeated
+seed labels. The precise archive closure is performed before interval
+evaluation. Hidden references check outcomes only after the permitted
+information and decisions have been fixed.
+
+The supplement separates four execution levels: current mathematical and
+bundled-output replay; reconstruction of original raw inputs; the full
+counter replay from its pinned sources; and historical forecast refitting.
+The current main command performs the first level and reconstructs the
+editable manuscript. A separate documented counter command performs the
+third without refitting. Its derived counter traces are generated locally
+because raw BLEM files are not redistributed. Complete commands, input
+hashes, output fields, tolerances and executed reports are indexed by claim
+in \texttt{CURRENT\_RESULTS\_MAP.txt}.
+

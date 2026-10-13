@@ -1,0 +1,116 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-10T04:21:24.955354+00:00",
+  "script_sha256": "09284e22ca86bf527eada2b9b347efd5431610d90646438de8817b40c3d6397b",
+  "full_analysis_sha256": "acf73343b06dfc1ad00ca30f500cb86bca2d793831e1cf523a0a408ace30c69c",
+  "public_to_full": {
+    "study_period_archive_public_cases.csv": "study_period_archive_cases.csv",
+    "study_period_archive_public_sources.csv": "study_period_archive_sources.csv",
+    "study_period_archive_public_states.csv.gz": "study_period_archive_states.csv.gz",
+    "study_period_archive_public_links.csv.gz": "study_period_archive_links.csv.gz",
+    "study_period_archive_public_aggregates.csv.gz": "study_period_archive_aggregates.csv.gz"
+  },
+  "omitted_files": {
+    "study_period_archive_cases.csv": {
+      "sha256": "6db590b075ae3fcea0c29080ec7d3468bcecf3ccd5f2a97dcf76fff69081fe8b",
+      "bytes": 53562155,
+      "full_rows": 220320,
+      "public_rows": 200880,
+      "omitted_blem_rows": 19440
+    },
+    "study_period_archive_sources.csv": {
+      "sha256": "680c81eba3f56096664437abad9a7e8851a435c4a5d0f8f19da0f1dd349ca8d8",
+      "bytes": 12110844,
+      "full_rows": 85128,
+      "public_rows": 78648,
+      "omitted_blem_rows": 6480
+    },
+    "study_period_archive_states.csv.gz": {
+      "sha256": "c8cfdb04b8ed797f92cff4c485e2d348fcdade6ee20bdbaad8aefc13a742611a",
+      "bytes": 168745044,
+      "full_rows": 456090,
+      "public_rows": 422447,
+      "omitted_blem_rows": 33643
+    },
+    "study_period_archive_links.csv.gz": {
+      "sha256": "cd11a2a4ce4cd0e172ba46a76586d55e0da2dec32df10d77f3f7bb4aa8895cf4",
+      "bytes": 8755367,
+      "full_rows": 1208196,
+      "public_rows": 1119744,
+      "omitted_blem_rows": 88452
+    },
+    "study_period_archive_aggregates.csv.gz": {
+      "sha256": "33e73a73398e187e9109392c6154cbc3ba85c055aa0456f43126793d3bea079e",
+      "bytes": 1985704,
+      "full_rows": 22374,
+      "public_rows": 20736,
+      "omitted_blem_rows": 1638
+    }
+  },
+  "public_files": {
+    "study_period_archive_public_cases.csv": {
+      "sha256": "9e6247beb22ef30878cf533c0ab16a717204ac28050a26970656ffe208af26e9",
+      "bytes": 48444314,
+      "full_file": "study_period_archive_cases.csv",
+      "rows": 200880
+    },
+    "study_period_archive_public_sources.csv": {
+      "sha256": "ba23d819601e5510a7f0c3078c6e9e4acc96425bf874dcf2adccd5f9b817f29c",
+      "bytes": 11022204,
+      "full_file": "study_period_archive_sources.csv",
+      "rows": 78648
+    },
+    "study_period_archive_public_states.csv.gz": {
+      "sha256": "4a8ee161c7c9db8dbecf388b1a48ba2ae9de332139c612264dc4f8a07d446d2c",
+      "bytes": 157174972,
+      "full_file": "study_period_archive_states.csv.gz",
+      "rows": 422447
+    },
+    "study_period_archive_public_links.csv.gz": {
+      "sha256": "e86e579ddc1adcd00b6a34caa6f709152d70eb617010618c9f35762dc6507ab8",
+      "bytes": 8136992,
+      "full_file": "study_period_archive_links.csv.gz",
+      "rows": 1119744
+    },
+    "study_period_archive_public_aggregates.csv.gz": {
+      "sha256": "99bd858436886ac690821d383f7bb3a89ccae27afa65538e244ff76cde24b790",
+      "bytes": 1886705,
+      "full_file": "study_period_archive_aggregates.csv.gz",
+      "rows": 20736
+    }
+  },
+  "row_counts": {
+    "study_period_archive_cases.csv": {
+      "full_rows": 220320,
+      "public_rows": 200880,
+      "omitted_blem_rows": 19440
+    },
+    "study_period_archive_sources.csv": {
+      "full_rows": 85128,
+      "public_rows": 78648,
+      "omitted_blem_rows": 6480
+    },
+    "study_period_archive_states.csv.gz": {
+      "full_rows": 456090,
+      "public_rows": 422447,
+      "omitted_blem_rows": 33643
+    },
+    "study_period_archive_links.csv.gz": {
+      "full_rows": 1208196,
+      "public_rows": 1119744,
+      "omitted_blem_rows": 88452
+    },
+    "study_period_archive_aggregates.csv.gz": {
+      "full_rows": 22374,
+      "public_rows": 20736,
+      "omitted_blem_rows": 1638
+    }
+  },
+  "omitted_cohort": "blem_counters",
+  "reason": "Detailed loss traces plus saved forecasts can reveal individual targets; archive period endpoints can isolate the final day without future copies. Omitting explicit observation columns alone is insufficient.",
+  "public_scope": "UCI-only daily scalar traces and method-specific period cases. BLEM cohort/scenario/pair/matched aggregates remain, without public daily-state or per-case reproduction.",
+  "full_scope": "Full34-meter local analysis and independent scalar-trace verification are preserved. The optional raw-data reproduction path recreates the omitted BLEM detailed artifacts for all34 checks.",
+  "source_hashes": {
+    "study_period_archive.json": "acf73343b06dfc1ad00ca30f500cb86bca2d793831e1cf523a0a408ace30c69c"
+  }
+}

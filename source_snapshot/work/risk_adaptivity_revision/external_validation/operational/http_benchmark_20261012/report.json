@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "trials": 30,
+  "requests": 60,
+  "systems": 3,
+  "repetitions_per_case": 2,
+  "scope": "Actual public-interface microbenchmark; only three selected tasks, not a population latency estimate or deployment cost saving.",
+  "full_baseline": "Seven hourly API-grid samples in one range request. In the retained-endpoint scenario a five-interior-point response could be smaller; no gain is attributed to its two redundant endpoint bytes.",
+  "end_to_end_setup": "For selective end-to-end acquisition add the two common endpoint requests. Full-range recovery includes the endpoints in its one request.",
+  "limitations": [
+    "Provider caches uncontrolled; connections reset consistently per policy trial.",
+    "API I/O excludes logged client 1/sec throttle waits; full completion includes them.",
+    "Response-body bytes are not TLS wire bytes.",
+    "Stored API-grid targets, not verified native physical hourly energy."
+  ]
+}

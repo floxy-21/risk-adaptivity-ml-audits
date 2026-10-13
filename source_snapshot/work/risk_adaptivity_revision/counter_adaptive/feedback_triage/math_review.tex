@@ -1,0 +1,54 @@
+% Independently reviewed operational corollary; no new historical-priority claim.
+\begin{corollary}[Deciding whether feedback is necessary]
+\label{cor:counter-feedback-triage}
+In the cumulative-counter model, let $\mathcal B$ contain the ten
+two-register batches, and define
+\[
+ D=\min_{Q\in\mathcal B}\max_{z\in F_E}W_Q(z)
+   =\min_{Q\in\mathcal B}\max_{1\leq h\leq6}W_Q(Ee_h).
+\]
+Let $A$ be the exact deterministic adaptive value in
+\eqref{eq:counter-adaptive-value}, and let $U(\tau)$ be the
+finite-profile upper certificate in \eqref{eq:counter-precision-upper}.
+For every $\tau\geq0$,
+\[
+ D\leq\tau
+ \quad\Longleftrightarrow\quad U(\tau)=1
+ \quad\Longleftrightarrow\quad S_B^\star=1.
+\]
+Consequently, the available forecasts and outer registers determine
+three mutually exclusive decisions before any optional retrieval:
+\begin{enumerate}
+\item If $D\leq\tau$, a fixed batch guarantees the requested precision.
+\item If $A\leq\tau<D$, feedback enables a deterministic guarantee that
+      every randomized batch fails to match.
+\item If $\tau<A$, no deterministic adaptive policy with two register
+      queries guarantees the requested precision.
+\end{enumerate}
+In the second case,
+$1/2\leq S_B^\star\leq U(\tau)\leq5/6$.
+The lower bound uses Corollary~\ref{prop:counter-half-floor}; when
+$U(\tau)=1/2$, the randomized-batch optimum is exactly $1/2$.
+\end{corollary}
+\begin{proof}
+For a fixed batch, \eqref{eq:counter-width} is a linear function of
+$z$. It therefore attains its maximum over the energy simplex at a
+concentration profile $Ee_h$, which proves the expression for $D$.
+If $D\leq\tau$, one batch succeeds at all six profiles and, by
+linearity, at every completion. Thus $S_B^\star=1$ and $U(\tau)=1$.
+If $D>\tau$, every batch fails at at least one profile. The uniform
+distribution on the six profiles consequently assigns every batch
+success probability at most $5/6$. It is a feasible adverse distribution
+in \eqref{eq:counter-precision-upper}, so
+$S_B^\star\leq U(\tau)\leq5/6<1$. This proves both equivalences.
+Adaptation includes fixed batches, hence $A\leq D$. The three cases
+then follow from the defining optimality of $A$ and $D$.
+\end{proof}
+
+This decision rule uses only the forecast coefficients, retained total,
+query dictionary and requested precision. It identifies when a sequential
+query response is necessary for a guarantee, without measuring retrieval
+latency, financial cost or the frequency of adverse energy profiles.
+The finite-profile program is decisive for whether batch success equals
+one; it remains only an upper bound on intermediate success values unless
+a matching guarantee is supplied.

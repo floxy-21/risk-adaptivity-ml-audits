@@ -1,0 +1,81 @@
+\begin{proposition}[Two best-side splits for an arbitrary block]
+Let $n\geq3$, $E>0$, $x\geq0$, $\sum_{h=1}^n x_h=E$, and let the target be
+$d+\sum_hc_hx_h$. Each query returns one internal prefix sum. Write
+$r(p,q)=\max_{p<h\leq q}c_h-\min_{p<h\leq q}c_h$.
+For first boundary $k$, put $\ell_k=r(0,k)$ and $r_k=r(k,n)$.
+Define each of the following quantities whenever its corresponding
+side has an eligible second boundary:
+\[
+ \alpha_k=\min_{1\leq j<k}\max\{r(0,j),r(j,k)\},\qquad
+ \beta_k=\min_{k<j<n}\max\{r(k,j),r(j,n)\}.
+\]
+Choose a minimizing boundary on each side, breaking ties by smallest index.
+When both sides are nonempty, for normalized first answer $t=s_k/E$,
+the optimal conditional worst width is
+\[
+ E\min\{\alpha_k t+r_k(1-t),\ \ell_k t+\beta_k(1-t)\}.
+\]
+Thus only one best boundary on each side is needed, independently of $t$.
+If $\Delta_k=\ell_k+r_k-\alpha_k-\beta_k>0$, the switch is
+\[
+ t_k^\star=\frac{r_k-\beta_k}{\Delta_k}\in[0,1],
+\]
+and the worst width for this first boundary is
+\[
+ A_k=E\max\left\{\alpha_k,\beta_k,
+          \frac{\ell_kr_k-\alpha_k\beta_k}{\Delta_k}\right\}.
+\]
+Use the best right split below the switch and the best left split above
+it; either is valid at equality. If $\Delta_k=0$, the two lines coincide
+and $A_k=E\max\{\ell_k,r_k\}$. At $k=1$ only the right split exists and
+$A_1=E\beta_1$; at $k=n-1$ only the left split exists and
+$A_{n-1}=E\alpha_{n-1}$. The optimal deterministic two-query guarantee is
+$\min_k A_k$.
+\end{proposition}
+\begin{proof}
+All second queries left of $k$ have the common right-side contribution
+$r_k(1-t)$; minimizing their remaining term $t$ times a split range
+selects the same minimizing boundary for every $t\geq0$. The right-side
+argument is identical. Moreover $\alpha_k\leq\ell_k$ and
+$\beta_k\leq r_k$. Hence $\Delta_k\geq0$, and when it is positive the
+displayed intersection belongs to $[0,1]$. The maximum of the lower
+envelope occurs at an endpoint or that intersection. Its endpoint
+values are $\beta_k,\alpha_k$, and its intersection value is the displayed
+quotient. If $\Delta_k=0$, both nonnegative differences vanish, so the
+lines coincide. At an outer eligible boundary the single-hour side has
+zero coefficient range, giving the stated one-line values.
+\end{proof}
+
+All contiguous ranges can be built in $O(n^2)$ arithmetic operations
+and stored in $O(n^2)$ space. Scanning the candidates for every
+$\alpha_k,\beta_k$ costs another $O(n^2)$ operations; the closed forms
+then cost $O(n)$. This is an arithmetic-operation bound for the exact-total,
+uncapped two-prefix problem, not a bit-complexity or noisy-polytope claim.
+For $n=2$, the single internal register determines both increments;
+for $n=1$ the total already determines the only increment.
+
+\paragraph{Uniform-cap verification oracle.}
+For the separate sensitivity scenarios $0\leq x_h\leq u$, a segment
+containing sorted coefficients $a_1\leq\cdots\leq a_m$ has a sharp-width
+function of its retained mass $s$ with slopes
+\[
+ a_m-a_1,\ a_{m-1}-a_2,\ldots,\ a_1-a_m,
+\]
+each over a mass interval of length $u$. These slopes are nonincreasing.
+For a collection of segments with an unknown allocation of a fixed total
+mass, merge their slope lists in decreasing order and integrate to that
+mass. This computes the largest sum of their sharp widths: allocating
+mass to the greatest available marginal slope respects each segment's
+precedence because its slopes are already decreasing.
+
+For a first prefix of mass $s$, the conditional worst width of a second
+query is the merged-left value at $s$ plus the merged-right value at
+$E-s$. It is concave and piecewise affine, with breakpoints at multiples
+of $u$ and at $E$ minus those multiples, restricted to the feasible
+first-answer interval
+$[\max(0,E-(n-k)u),\min(E,ku)]$.
+On each common breakpoint interval, compute the lower affine envelope
+over second queries, including intersections, and maximize it. This gives
+an exact rational oracle when the inputs are rational. It independently
+checks the generic endpoint LP; it does not reuse the uncapped two-line
+formula under caps.

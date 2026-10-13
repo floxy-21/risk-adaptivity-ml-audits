@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "complete; all frozen runs and skips retained",
+  "file_sha256": {
+    "protocol.txt": "3040642135f8c3e05e529766d17200230aa1d175b1d09a456a74aa0ec48e2211",
+    "instances.json": "b296dfb87fb2c2c52cb5a54aa967a3a01f517b5ca7e4bb598fd258b542830a16",
+    "benchmark.py": "1ec3ea06693ff022dabbd2087a6daa100d2e7a81d86e9262dce00dbbc081c62e",
+    "results.json": "80a936abea60d54df0d6e9d49f5e17c13baa5567d6d8217abc5ff55e8a1a29f1",
+    "results.csv": "5380b8ea2990a9aa54ec46497ac73496672cbca1066d3e8f7ca39e120c18a5b5",
+    "summary.json": "d6ec6d5f476dc0f623d0986739bbe09e1a2702f6540bd36e00115e25571f777f",
+    "scaling_fragment.tex": "1a56c76047ad5f8301b48a356c217a42c3e15112b10b65c3eda3f3c18b557a1f",
+    "verify_scaling.py": "fc93c8cde4fa02ec3e406b2ad077b4615c604826c87e2efc2deaf839fd50fade"
+  },
+  "api_sha256_before": {
+    "compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d",
+    "compact_policy.py": "608af8ac008d91a5cbfc16560b532e42e5c208f1edd384091e8e5eba5503d781"
+  },
+  "api_sha256_after": {
+    "compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d",
+    "compact_policy.py": "608af8ac008d91a5cbfc16560b532e42e5c208f1edd384091e8e5eba5503d781"
+  },
+  "host": {
+    "cpu": "Intel Core i7-8565U @ 1.80GHz",
+    "physical_cores": 4,
+    "logical_processors": 8,
+    "installed_ram_bytes": 16915927040,
+    "platform": "Windows-11-10.0.26100-SP0"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "status_counts": {
+    "success": 40,
+    "not_attempted_by_frozen_size_rule": 16
+  },
+  "timing": "One fresh subprocess per case and method, after-import method time minus diagnostic instrumentation time; shared host; no repeated timing.",
+  "memory": "Worker self-reported Windows PeakWorkingSetSize includes interpreter/import baseline. Parent PID watchdog may observe the venv redirector, so worker memory-cap enforcement is not verified. All measured worker peaks below 169 MiB.",
+  "limits": {
+    "wall_seconds": 20,
+    "parent_watchdog_bytes": 1073741824,
+    "poll_seconds": 0.05
+  },
+  "claim_limits": [
+    "No runtime dominance claim",
+    "No empirical asymptotic claim",
+    "No causal separation of ties and heterogeneity",
+    "Numerical residuals, not exact arithmetic certificates"
+  ]
+}

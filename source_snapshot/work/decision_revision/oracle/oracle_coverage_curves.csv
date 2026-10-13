@@ -1,0 +1,15 @@
+population,budget,coverage
+all,0,0.58113859467815987
+all,1,0.80112499550311667
+all,2,0.9258302018659551
+all,3,0.98059793326367006
+all,4,0.99824460412296445
+all,5,1
+all,6,1
+initially_uncertified,0,0
+initially_uncertified,1,0.53689575140937129
+initially_uncertified,2,0.83023150850880256
+initially_uncertified,3,0.95629012708658701
+initially_uncertified,4,0.99605717542484962
+initially_uncertified,5,1
+initially_uncertified,6,1

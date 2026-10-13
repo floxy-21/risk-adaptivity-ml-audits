@@ -1,0 +1,1184 @@
+{
+  "status": "PASS",
+  "cases": 290,
+  "quantity": "Exact optimum of randomized-batch worst-case precision success over the full feasible continuum, for the 290 specified cases",
+  "min": "1/2",
+  "q25": 0.5,
+  "median": 0.5,
+  "q75": 0.5,
+  "max": "1/2",
+  "exactly_half": 290,
+  "below_half": 0,
+  "below_40pct": 0,
+  "below_30pct": 0,
+  "below_20pct": 0,
+  "histogram_exact": {
+    "1/2": 290
+  },
+  "case_values": [
+    {
+      "id": "consumer_00000001/2017-10-01/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-02/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-03/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-03/12/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-04/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-05/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-06/12/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-07/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-07/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-07/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-09/00/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-11/12/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-12/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-13/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-13/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-15/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-15/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-17/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-17/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-17/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-19/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-19/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-20/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-20/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-01/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-02/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-03/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-04/12/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-05/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-06/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-06/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-07/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-07/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-09/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-09/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-10/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-11/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-12/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-12/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-13/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-14/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-15/00/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-15/12/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-17/00/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-19/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-19/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-01/00/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-01/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-02/00/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-02/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-04/00/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-04/00/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-04/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-07/00/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-07/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-08/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-08/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-08/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-08/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-09/00/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-09/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-09/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-15/00/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-15/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-15/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-16/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-16/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-17/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-21/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-22/00/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-22/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-25/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-25/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-26/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-26/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-27/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-28/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-30/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-10-31/12/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-03/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-03/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-06/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-07/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-07/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-08/00/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-08/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-08/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-09/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-10/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-10/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-10/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-11/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-12/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-12/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-12/12/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-13/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-15/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-17/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-17/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-18/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-18/12/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-18/12/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-18/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-18/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-19/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-20/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-21/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-22/00/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-23/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-23/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-23/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-24/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-24/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-24/12/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-28/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-11-28/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-01/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-06/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-06/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-07/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-08/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-09/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-10/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-11/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-12/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-12/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-12/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-13/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-13/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-14/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-16/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-18/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-18/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-23/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-23/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-27/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-28/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-28/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-29/00/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-30/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000001/2017-12-30/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-21/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-21/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-21/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-22/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-23/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-23/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-25/00/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-26/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-26/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-28/00/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-29/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-10-29/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-01/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-01/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-01/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-01/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-01/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-02/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-03/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-03/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-06/00/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-08/12/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-09/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-09/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-09/12/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-10/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-11/00/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-11/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-12/00/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-13/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-14/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-14/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-15/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-15/12/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-16/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-16/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-17/00/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-17/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-19/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-21/00/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-22/00/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-22/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-23/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-23/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-24/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-25/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-25/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-26/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-26/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-27/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-29/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-30/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-30/12/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-11-30/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-01/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-03/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-06/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-09/00/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-10/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-10/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-10/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-11/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-12/00/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-14/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-15/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-16/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-16/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-16/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-17/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-17/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-19/00/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-22/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-22/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-22/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-23/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-23/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-23/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-23/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-23/12/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-24/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000002/2017-12-25/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-21/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-21/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-22/00/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-22/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-23/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-24/00/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-24/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-24/12/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-30/00/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-30/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-10-31/00/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-01/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-04/00/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-04/12/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-05/00/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-05/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-06/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-09/00/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-09/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-10/00/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-12/00/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-12/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-12/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-12/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-15/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-16/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-18/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-19/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-23/12/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-25/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-26/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-28/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-29/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-30/06/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-11-30/06/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-02/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-04/12/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-05/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-06/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-07/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-08/06/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-09/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-10/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-10/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-11/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-12/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-13/12/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-14/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-15/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-18/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-18/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-19/00/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-21/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-21/12/daily/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-23/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-23/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-24/06/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-24/12/daily/ridge",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-25/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-26/06/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-27/00/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-27/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-27/12/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-29/06/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-30/00/daily/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-30/12/ridge/hist_gradient_boosting",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-30/12/ridge/mlp",
+      "upper_exact": "1/2"
+    },
+    {
+      "id": "consumer_00000003/2017-12-30/12/hist_gradient_boosting/mlp",
+      "upper_exact": "1/2"
+    }
+  ],
+  "upper_certificate": "Finite feasible adverse profiles; exact rational weights checked on all ten batches",
+  "lower_certificate": "Two-batch cover of every possible first prefix answer; Proposition counter-half-floor; every feasible completion belongs to a covered answer fiber",
+  "equality": "Both inequalities hold casewise at1/2, hence the full optimum equals1/2",
+  "witnesses": "math_review/half_cover_verification.json"
+}

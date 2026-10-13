@@ -1,0 +1,47 @@
+Fresh model-refit verification protocol, 10 October 2026 local time
+
+Recompute all four declared forecasts for the original 34 series and the
+existing additional 30 Portugal consumers. Ridge, histogram gradient
+boosting and the MLP are freshly fitted (192 estimators); daily persistence
+is reconstructed. No estimator state, fitted-model artifact, saved
+prediction or old hourly pickle cache is used to create these forecasts.
+No hyperparameters, seed, split, consumer identity or stopping rule is
+retuned, replaced or chosen based on the fresh comparison outcomes.
+
+All raw files must match the SHA256 values already retained by the raw
+reconstruction report. UCI minute/quarter-hour series are reread and
+reaggregated from text. Portugal selection is recomputed from 2013 only:
+first30 eligible among MT001--080, plus first30 eligible MT081--370,
+requiring >=99% nonmissing and >95% positive training-hour fractions.
+These lists must equal the original frozen lists. Household requires all
+60 minute values in each hourly mean. Portugal shifts end timestamps back
+15 minutes and averages each four quarter-hours. BLEM is rederived from
+pinned integer counters using the existing documented endpoint reader,
+then its fresh hourly CSV is parsed as in the original trainer.
+
+Reuse the unchanged outputs/run_energy_rank_study.py fit_forecasts function
+in a fresh process. Preserve its causal lag1/2/7 and previous-day mean
+features, calendar features, local DST eligibility exclusions, chronological
+train/test rules, StandardScaler pipelines, two numerical threads,
+nonnegative forecast clipping, fixed random_state1729, Ridge alpha1,
+declared HGB settings and MLP(32,16), max_iter1000 with the declared
+training stopping criterion. Holdout consumers use the Portugal split and
+carry the distinct portugal_new_consumers label in outputs.
+
+The driver writes a completed preparation checkpoint and freezes its source
+and comparison-protocol hashes before any fit. Fits are sequential in a
+fresh worker process, with the originally declared two numerical threads.
+Record environment versions, train/test counts/dates, training means,
+per-model times, MLP epochs/loss/warnings, all predictions, and all failures.
+Any failure is retained; continue other predeclared series without retries.
+The prediction writer uses roundtrip float strings and preserves the
+original UTC/local timestamp convention.
+
+The independent comparison protocol is owned by a separate reviewer and
+must exist before fitting. It fixes numerical tolerances, checks all keyed
+targets/persistence/trained forecasts and complete-reference metrics, and
+reports exact equality in addition to tolerance agreement. Do not rerun
+training to improve agreement. No full mask grid is rerun by this driver:
+this closes the fresh training-replay gap and checks its forecast outputs,
+not an independent implementation of the learning algorithms or new
+external validation. Existing manuscript/package/data remain unchanged.

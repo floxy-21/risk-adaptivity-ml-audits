@@ -1,0 +1,878 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-11T01:33:18.911175+00:00",
+  "validation_kind": "full passed baseline plus explicitly bounded fresh delta",
+  "archive_sha256": "81b0ea77c4124fc3a71b9695a99483fe440886d9403e1383d549d44683422be7",
+  "archive_bytes": 214538680,
+  "archive_files": 274,
+  "baseline_archive_sha256": "6d9a25d921c21c252ed41f6237131cdd23b44f06cd6055b32038e335770a41c4",
+  "baseline_full_report_sha256": "0a233c42aa4610c873c7a8cf9ad11750f467ffaa767bebf2ab38348d87289faf",
+  "baseline_zip_bytes_independently_checked": true,
+  "unchanged_members": 242,
+  "changed_members": {
+    "MANIFEST.sha256": {
+      "before": "7ac818dec70f071ffeafa649d52dd024167d5c3e5be6c678c7346975b6fe04e3",
+      "after": "5806c103e4c1b79816b8e51e2f23237e65289c303bc2d54eae00a28335b42830"
+    },
+    "README.txt": {
+      "before": "74936ba6a28fb730e7ac520e15b8be985b2dcd6deb5f4683987405c8c00b2f74",
+      "after": "748f49951eb0be4ed0165c93651cdd3ab97586154999952ed0e34559a7775f7a"
+    },
+    "outputs/REPRODUCE.txt": {
+      "before": "4bcd3ba40fa15701b9a619b1788c56aeed84cef58469822eeafda9b26b3a4cb9",
+      "after": "4e9ddd763a550a2c10e3d350ba4e9d1ed483af72e6eee11236f9cce5edbc6e76"
+    },
+    "outputs/manuscript_reconstruction_check.json": {
+      "before": "d9a7b4da80df1f6a18b04ebf6b682ed592be2f48557497ca5d6c225b68c647ac",
+      "after": "afacea85937563f7aa3147aad1cb31006354aeec65dd40cd20a5a7be00bce595"
+    },
+    "work/build_research_supplement.py": {
+      "before": "244a80126d3fb545cea672d1236bdac3461b07795ad0118c66c0f0271f2831e9",
+      "after": "3a6e8181d6a859177e029337cd975280131a16c1d9e15057d401be60a3f0c301"
+    },
+    "work/check_manuscript_reconstruction.py": {
+      "before": "dd67072976037d39e89b640abe1a84b765c69ed9fd0458d59b79ce258944d999",
+      "after": "18daf4b2bc2760a20b9a2ce0c41490d1bd218274aad6f7c29a20759a0d905017"
+    },
+    "work/integrate_randomized_revision.py": {
+      "before": "972e9a599127d6b83e832acbcaa4915918aece77d7b0f8e245a004101c8fe3fa",
+      "after": "db15d24b3fe757740cb16a39264c28d36e4df0b27bbf36b0af98cb0151864673"
+    },
+    "work/revision_extension_inputs.py": {
+      "before": "80bfe57bfff00d1e35bfdc921293ff617c5aaca34d6fcfd94ba0a1d816ba8add",
+      "after": "9f7b93505bab1032fc25db5ac8eab7842fc574450054dd09cfdb61073a4f131f"
+    },
+    "work/validate_submission_archive.py": {
+      "before": "dba22d84a7046c28413b064ea438f6e37330ab04c4ae68708a5e13ee01aceeb1",
+      "after": "3cf671b70459c02c93bdd88683f6fa8c9d4456668ac8b0a011c25bafef344f2c"
+    }
+  },
+  "added_members": {
+    "work/final_peer_review/editorial_trim.py": "cc12ac556381754564bea82d002cb3f5eaeaaff22750fa537b50111e31b097ca",
+    "work/fresh_refit_review/README.txt": "53eee2ec0e777ea436c665e15c12475ab02bc7138a318d81450791065a6f4186",
+    "work/fresh_refit_review/comparison_protocol.txt": "d26bdc2fa28be2e3f6b0a4fd63d6767b3e9bdefbac1dc23fde85f4fea449618e",
+    "work/fresh_refit_review/export_public.py": "9b1e018b7b8de8aba86093391bac991d03298dedf1bade61f6827641318d3a69",
+    "work/fresh_refit_review/fit_metadata.json": "649e20aa82698757773f623251ca6782139d4b2a526451c68d1892736b414eb5",
+    "work/fresh_refit_review/fresh_predictions_public.csv": "6e58675c08df1720d124aad3f1343774c9f4df9d7f9981faf30fcbb14d56c9a7",
+    "work/fresh_refit_review/fresh_result.json": "07cf3bb205eeab3e6bc0016fefeaf7e02bba2fba68b15503e8bc71aff7ab73eb",
+    "work/fresh_refit_review/independent_metrics_full.csv": "402aa6981cb471064dcdabcf9cbebd5427ea373f1517c0d5e95659e94f054042",
+    "work/fresh_refit_review/independent_metrics_public.csv": "d624de55a7123757bef9066c8168d4b3464c7497ac13eface0cd993820b95e98",
+    "work/fresh_refit_review/independent_verification.json": "fded2d7e1de498cc17cb8fc4e797be523c480bcc01d0c7b61698c26bc23086c9",
+    "work/fresh_refit_review/independent_verification_public.json": "517b2a77f48a5e19cdd241122f73f4d9873d9c8e4fedbc4599040a3769d6ab27",
+    "work/fresh_refit_review/omission_manifest.json": "0bbc432e3ff22d12dd7fbdd0507dd4e13abc2cf1d9b5cca527c49b7f1270c332",
+    "work/fresh_refit_review/prepared.json": "ae712968860a807eef526a9dccd8c4d3f10e77cb21164fc0980a0a0f1e318754",
+    "work/fresh_refit_review/protocol.txt": "18cc6c2ce47acc32fa69f92248af03486d5367884d7d051e6be8eb5e14acc252",
+    "work/fresh_refit_review/provenance.json": "f7275a8c6f6684f98657bd54aa98c6460e033c97b250ba4995192838f7123bdc",
+    "work/fresh_refit_review/refit.py": "d290c07cb6684da309f0a8b974dfe1c376fd68c811acc91777175950a37582db",
+    "work/fresh_refit_review/refit_fragment.tex": "23d39d8612258f107e32c4defe13e50a665e819d29836f36abe6e08ef12d0df1",
+    "work/fresh_refit_review/selection.json": "6a280a6eb2e477d8a64cdbbdb9ff8799604f9e9799f5d7d306970881a7ec54a7",
+    "work/fresh_refit_review/verify_refit.py": "113894d3fe2d7c90374655870564277d40761e58957e15bcf1d83a8b9b4da86b",
+    "work/packaging_baseline_manifest.json": "c23ae32fc6e3dc85f2223074aa13df93e9142c8885e644caf793c2363ddcbdac",
+    "work/packaging_baseline_verification.json": "0a233c42aa4610c873c7a8cf9ad11750f467ffaa767bebf2ab38348d87289faf",
+    "work/reproduce_final_revision.py": "fac478991b800480d457585ef647964617373c947baf1065cd041f87f871cbc8",
+    "work/validate_supplement_delta.py": "0276103fee202ca92d6c6043aadd27f3585fa9c93fefb67d044733be538d0e67"
+  },
+  "removed_members": [],
+  "all_prior_scientific_inputs_and_results_byte_identical": true,
+  "fresh_public_refit_check": {
+    "status": "passed",
+    "completed_utc": "2026-10-11T01:30:28.314563+00:00",
+    "mode": "public",
+    "fresh_trainer_reused": true,
+    "independent_training_reimplementation": false,
+    "rows_compared": 159984,
+    "series_compared": 61,
+    "forecast_values_compared": 639936,
+    "per_model_discrepancies": {
+      "truth_kwh": {
+        "values": 159984,
+        "exact_numeric_matches": 159984,
+        "max_absolute_error": 0.0,
+        "max_error_over_declared_tolerance": 0.0,
+        "outside_tolerance": 0
+      },
+      "daily": {
+        "values": 159984,
+        "exact_numeric_matches": 159984,
+        "max_absolute_error": 0.0,
+        "max_error_over_declared_tolerance": 0.0,
+        "outside_tolerance": 0
+      },
+      "ridge": {
+        "values": 159984,
+        "exact_numeric_matches": 159984,
+        "max_absolute_error": 0.0,
+        "max_error_over_declared_tolerance": 0.0,
+        "outside_tolerance": 0
+      },
+      "hist_gradient_boosting": {
+        "values": 159984,
+        "exact_numeric_matches": 159984,
+        "max_absolute_error": 0.0,
+        "max_error_over_declared_tolerance": 0.0,
+        "outside_tolerance": 0
+      },
+      "mlp": {
+        "values": 159984,
+        "exact_numeric_matches": 159984,
+        "max_absolute_error": 0.0,
+        "max_error_over_declared_tolerance": 0.0,
+        "outside_tolerance": 0
+      }
+    },
+    "fit_metadata_checked": 64,
+    "complete_reference_metrics_checked": 732,
+    "complete_period_pair_rankings_checked": 366,
+    "normalized_mse_checks": 244,
+    "cohort_macro_metrics": [
+      {
+        "cohort": "household",
+        "model": "daily",
+        "meters": 1,
+        "fresh_mse": 0.6287579790458446,
+        "frozen_mse": 0.6287579790458446,
+        "fresh_rmse": 0.7929426076620203,
+        "frozen_rmse": 0.7929426076620203,
+        "fresh_mae": 0.5351447944896115,
+        "frozen_mae": 0.5351447944896115,
+        "fresh_normalized_mse": 0.5548241861007123,
+        "frozen_normalized_mse": 0.5548241861007123
+      },
+      {
+        "cohort": "household",
+        "model": "hist_gradient_boosting",
+        "meters": 1,
+        "fresh_mse": 0.34771852765552813,
+        "frozen_mse": 0.34771852765552813,
+        "fresh_rmse": 0.5896766297349151,
+        "frozen_rmse": 0.5896766297349151,
+        "fresh_mae": 0.42988924670552286,
+        "frozen_mae": 0.42988924670552286,
+        "fresh_normalized_mse": 0.306831333403325,
+        "frozen_normalized_mse": 0.306831333403325
+      },
+      {
+        "cohort": "household",
+        "model": "mlp",
+        "meters": 1,
+        "fresh_mse": 0.38134242634911747,
+        "frozen_mse": 0.38134242634911747,
+        "fresh_rmse": 0.6175292918956294,
+        "frozen_rmse": 0.6175292918956294,
+        "fresh_mae": 0.44770026972802096,
+        "frozen_mae": 0.44770026972802096,
+        "fresh_normalized_mse": 0.3365014971991204,
+        "frozen_normalized_mse": 0.3365014971991204
+      },
+      {
+        "cohort": "household",
+        "model": "ridge",
+        "meters": 1,
+        "fresh_mse": 0.38877079083910204,
+        "frozen_mse": 0.38877079083910204,
+        "fresh_rmse": 0.6235148681780588,
+        "frozen_rmse": 0.6235148681780588,
+        "fresh_mae": 0.46602374487434917,
+        "frozen_mae": 0.46602374487434917,
+        "fresh_normalized_mse": 0.34305638225754864,
+        "frozen_normalized_mse": 0.34305638225754864
+      },
+      {
+        "cohort": "portugal",
+        "model": "daily",
+        "meters": 30,
+        "fresh_mse": 373.52339835883845,
+        "frozen_mse": 373.52339835883845,
+        "fresh_rmse": 14.199692382106877,
+        "frozen_rmse": 14.199692382106877,
+        "fresh_mae": 9.25339194958899,
+        "frozen_mae": 9.25339194958899,
+        "fresh_normalized_mse": 0.07187829662816718,
+        "frozen_normalized_mse": 0.07187829662816718
+      },
+      {
+        "cohort": "portugal",
+        "model": "hist_gradient_boosting",
+        "meters": 30,
+        "fresh_mse": 151.4261456588483,
+        "frozen_mse": 151.4261456588483,
+        "fresh_rmse": 9.121681409942335,
+        "frozen_rmse": 9.121681409942335,
+        "fresh_mae": 6.25652443570783,
+        "frozen_mae": 6.25652443570783,
+        "fresh_normalized_mse": 0.03295212975006923,
+        "frozen_normalized_mse": 0.03295212975006923
+      },
+      {
+        "cohort": "portugal",
+        "model": "mlp",
+        "meters": 30,
+        "fresh_mse": 170.77367790983695,
+        "frozen_mse": 170.77367790983695,
+        "fresh_rmse": 9.639432157257314,
+        "frozen_rmse": 9.639432157257314,
+        "fresh_mae": 6.832052444424118,
+        "frozen_mae": 6.832052444424118,
+        "fresh_normalized_mse": 0.03725992552340807,
+        "frozen_normalized_mse": 0.03725992552340807
+      },
+      {
+        "cohort": "portugal",
+        "model": "ridge",
+        "meters": 30,
+        "fresh_mse": 187.64506588404578,
+        "frozen_mse": 187.64506588404578,
+        "fresh_rmse": 10.110124842276722,
+        "frozen_rmse": 10.110124842276722,
+        "fresh_mae": 7.014579693113861,
+        "frozen_mae": 7.014579693113861,
+        "fresh_normalized_mse": 0.036688910894516584,
+        "frozen_normalized_mse": 0.036688910894516584
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "model": "daily",
+        "meters": 30,
+        "fresh_mse": 5820.470283594668,
+        "frozen_mse": 5820.470283594668,
+        "fresh_rmse": 53.27125428590053,
+        "frozen_rmse": 53.27125428590053,
+        "fresh_mae": 30.01971211393199,
+        "frozen_mae": 30.01971211393199,
+        "fresh_normalized_mse": 0.3238935893066353,
+        "frozen_normalized_mse": 0.3238935893066353
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "model": "hist_gradient_boosting",
+        "meters": 30,
+        "fresh_mse": 3046.350121277496,
+        "frozen_mse": 3046.350121277496,
+        "fresh_rmse": 37.04545666789513,
+        "frozen_rmse": 37.04545666789513,
+        "fresh_mae": 22.917902867945422,
+        "frozen_mae": 22.917902867945422,
+        "fresh_normalized_mse": 0.13748971858212294,
+        "frozen_normalized_mse": 0.13748971858212294
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "model": "mlp",
+        "meters": 30,
+        "fresh_mse": 3330.578053532021,
+        "frozen_mse": 3330.578053532021,
+        "fresh_rmse": 39.41177469811843,
+        "frozen_rmse": 39.41177469811843,
+        "fresh_mae": 25.985793414542318,
+        "frozen_mae": 25.985793414542318,
+        "fresh_normalized_mse": 0.17968095909476473,
+        "frozen_normalized_mse": 0.17968095909476473
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "model": "ridge",
+        "meters": 30,
+        "fresh_mse": 3597.7406350014276,
+        "frozen_mse": 3597.7406350014276,
+        "fresh_rmse": 40.426886284042936,
+        "frozen_rmse": 40.426886284042936,
+        "fresh_mae": 25.137164441385142,
+        "frozen_mae": 25.137164441385142,
+        "fresh_normalized_mse": 0.17289507688102546,
+        "frozen_normalized_mse": 0.17289507688102546
+      }
+    ],
+    "ranking_changes": [],
+    "all_fresh_training_warnings": [],
+    "synthetic_feature_fixtures": {
+      "synthetic_series": 3,
+      "feature_scalar_checks": 43200,
+      "same_day_target_perturbation_checks": 3,
+      "dst_definition_checks": 3,
+      "scope": "Independent timestamp lookup and scalar trigonometry compared with two AST-extracted frozen design helpers; no fitter executed."
+    },
+    "actual_rebuilt_hourly_designs_checked": 0,
+    "actual_design_checks": [],
+    "metadata_checks": [
+      {
+        "cohort": "household",
+        "meter": "household_1",
+        "epochs": 172,
+        "train_days": 587,
+        "test_days": 246,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_001",
+        "epochs": 238,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_002",
+        "epochs": 30,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_003",
+        "epochs": 59,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_004",
+        "epochs": 33,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_005",
+        "epochs": 36,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_006",
+        "epochs": 30,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_007",
+        "epochs": 205,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_008",
+        "epochs": 30,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_009",
+        "epochs": 87,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_010",
+        "epochs": 99,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_011",
+        "epochs": 31,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_013",
+        "epochs": 68,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_014",
+        "epochs": 39,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_016",
+        "epochs": 43,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_017",
+        "epochs": 29,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_018",
+        "epochs": 42,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_019",
+        "epochs": 33,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_020",
+        "epochs": 43,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_021",
+        "epochs": 30,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_022",
+        "epochs": 50,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_023",
+        "epochs": 36,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_024",
+        "epochs": 36,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_025",
+        "epochs": 39,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_026",
+        "epochs": 34,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_027",
+        "epochs": 36,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_028",
+        "epochs": 35,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_029",
+        "epochs": 52,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_031",
+        "epochs": 34,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_032",
+        "epochs": 32,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal",
+        "meter": "MT_033",
+        "epochs": 29,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "blem_counters",
+        "meter": "consumer_00000001",
+        "epochs": 255,
+        "train_days": 266,
+        "test_days": 91,
+        "warnings": []
+      },
+      {
+        "cohort": "blem_counters",
+        "meter": "consumer_00000002",
+        "epochs": 205,
+        "train_days": 266,
+        "test_days": 91,
+        "warnings": []
+      },
+      {
+        "cohort": "blem_counters",
+        "meter": "consumer_00000003",
+        "epochs": 443,
+        "train_days": 266,
+        "test_days": 91,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_081",
+        "epochs": 33,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_082",
+        "epochs": 34,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_083",
+        "epochs": 28,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_084",
+        "epochs": 47,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_085",
+        "epochs": 31,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_086",
+        "epochs": 47,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_087",
+        "epochs": 60,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_088",
+        "epochs": 90,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_089",
+        "epochs": 57,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_090",
+        "epochs": 239,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_091",
+        "epochs": 32,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_093",
+        "epochs": 383,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_094",
+        "epochs": 175,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_095",
+        "epochs": 138,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_096",
+        "epochs": 115,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_097",
+        "epochs": 87,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_098",
+        "epochs": 42,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_099",
+        "epochs": 41,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_100",
+        "epochs": 98,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_101",
+        "epochs": 40,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_102",
+        "epochs": 47,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_103",
+        "epochs": 29,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_104",
+        "epochs": 30,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_105",
+        "epochs": 76,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_114",
+        "epochs": 53,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_118",
+        "epochs": 35,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_119",
+        "epochs": 45,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_123",
+        "epochs": 69,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_124",
+        "epochs": 39,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      },
+      {
+        "cohort": "portugal_new_consumers",
+        "meter": "MT_125",
+        "epochs": 47,
+        "train_days": 357,
+        "test_days": 107,
+        "warnings": []
+      }
+    ],
+    "source_hashes": {
+      "outputs/study_summary.json": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196",
+      "outputs/study_holdout_consumers.json": "3a31fdc8e41cad926ab1c43d6802d0f4772e948e61fd71b36f6aa357ac686f1e",
+      "work/fresh_refit_review/fresh_result.json": "07cf3bb205eeab3e6bc0016fefeaf7e02bba2fba68b15503e8bc71aff7ab73eb",
+      "work/fresh_refit_review/prepared.json": "ae712968860a807eef526a9dccd8c4d3f10e77cb21164fc0980a0a0f1e318754",
+      "work/fresh_refit_review/selection.json": "6a280a6eb2e477d8a64cdbbdb9ff8799604f9e9799f5d7d306970881a7ec54a7",
+      "work/fresh_refit_review/fit_metadata.json": "649e20aa82698757773f623251ca6782139d4b2a526451c68d1892736b414eb5",
+      "work/fresh_refit_review/comparison_protocol.txt": "d26bdc2fa28be2e3f6b0a4fd63d6767b3e9bdefbac1dc23fde85f4fea449618e",
+      "work/fresh_refit_review/protocol.txt": "18cc6c2ce47acc32fa69f92248af03486d5367884d7d051e6be8eb5e14acc252",
+      "work/fresh_refit_review/refit.py": "d290c07cb6684da309f0a8b974dfe1c376fd68c811acc91777175950a37582db",
+      "work/fresh_refit_review/verify_refit.py": "113894d3fe2d7c90374655870564277d40761e58957e15bcf1d83a8b9b4da86b",
+      "outputs/run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+      "outputs/energy_rank_bounds.py": "2b555e7fbb676f311b87c38a1cfc8bf81b34743e35a7c43b5ff08d759596f467",
+      "outputs/study_holdout_consumers.py": "444e8ef7d3a7ca79bfd4f20769e99c9925488651d55eae44984b8e3a2fced266",
+      "work/data_prepare_blem.py": "75383782c6565f328a9e6d0fa48eaa90bcdbb6c0106fe3bdee484326bd9115b7",
+      "outputs/study_holdout_consumers_predictions.csv": "6af5c1101850724b2067c14f3bc8abf891b1d12bd04fa3d4a5c24dbbbeb4c9d8",
+      "outputs/review_raw_reconstruction.json": "ad68a29f1012f76e556ca36f7239b9711f7956c712fb0144e2c76d55f0b63fa3",
+      "work/fresh_refit_review/omission_manifest.json": "0bbc432e3ff22d12dd7fbdd0507dd4e13abc2cf1d9b5cca527c49b7f1270c332",
+      "outputs/review_frozen_forecasts.json": "63e77829196157cd07207da196a433210d2ba027ecdb3797bd91c30b5712d503",
+      "work/fresh_refit_review/fresh_predictions_public.csv": "6e58675c08df1720d124aad3f1343774c9f4df9d7f9981faf30fcbb14d56c9a7",
+      "outputs/review_frozen_forecasts.csv": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0"
+    },
+    "raw_source_hashes_verified": {},
+    "hourly_source_hashes_verified": {},
+    "metrics_file": "independent_metrics_public.csv",
+    "metrics_sha256": "d624de55a7123757bef9066c8168d4b3464c7497ac13eface0cd993820b95e98",
+    "script_sha256": "113894d3fe2d7c90374655870564277d40761e58957e15bcf1d83a8b9b4da86b",
+    "comparison_protocol_sha256": "d26bdc2fa28be2e3f6b0a4fd63d6767b3e9bdefbac1dc23fde85f4fea449618e",
+    "seconds": 11.838999,
+    "scope": "Fresh same-trainer execution compared by independent row arithmetic, metadata/configuration checks and feature/chronology fixtures. No optimizer fit or full mask grid is run by this checker. Public replay checks 61 UCI series; the archived all-64 check requires local BLEM raw/forecast values and newly rebuilt hourly inputs."
+  },
+  "exact_current_manuscript_reconstruction": true,
+  "optional_refit_prerequisite_tested": true,
+  "raw_reference_restoration": {
+    "status": "passed",
+    "rows": 89496,
+    "reconstructed_blem_rows": 6552,
+    "uci_raw_target_checks": 82944,
+    "uci_raw_persistence_checks": 82944,
+    "original_predictions_sha256": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+    "reconstructed_predictions_sha256": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+    "exact_original_bytes": true,
+    "raw_source_hashes": {
+      "data_uci_household_power.txt": "4259c9d7ece5dbee9ab8d53682baac68d791c864f0f64a52b4043cb3b90894b7",
+      "data_electricity.txt": "d51565f2cb5a6b768d06ba1bbd3c084c6e2f3aab07f00c6f2dcb80e90175124b",
+      "data_blem_consumer-00000001.csv": "9228795c6369ce144fbb929f9d413397545f86e3a95d2f9a0f27c92f1d55ad8d",
+      "data_blem_consumer-00000002.csv": "93d142217c74ab2c12a98035b3ea178ead234fec0b71942e8e90db5b7e6a2ef3",
+      "data_blem_consumer-00000003.csv": "db69719d2262ebeb6df39abafffca2805c8a03b1b4777f86eb8aa78acf578b6c"
+    },
+    "lossless_export_sha256": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0",
+    "model_refitting": false,
+    "older_lossy_export_used": false,
+    "scope": "The new export preserves original fitted-forecast strings. All UCI targets/persistence are checked against pinned raw loaders; BLEM targets/persistence are rebuilt from original counters and original hourly CSV parsing. This restores the exact original evaluation archive, not independently trained models."
+  },
+  "fresh_preparation_series": 64,
+  "fresh_preparation_old_cache_reads": false,
+  "models_refitted_during_delta_validation": 0,
+  "new_reports": {
+    "public_replay": "work\\final_revision_reproduction_20261011T013010914817Z\\outputs\\final_revision_reproduction.json",
+    "preparation": "work\\final_revision_reproduction_20261011T013045479423Z\\outputs\\final_revision_reproduction.json"
+  },
+  "logs": [
+    "work\\delta_public_refit.log",
+    "work\\delta_refit_preparation.log"
+  ],
+  "fresh_extract_directory": "work\\supplement_delta_verify_20261011T012958825172Z",
+  "script_sha256": "0276103fee202ca92d6c6043aadd27f3585fa9c93fefb67d044733be538d0e67",
+  "scope": "The earlier complete fresh validation applies to byte-identical scientific inputs/results. This fresh delta runs the new public-refit checker, reconstructs the exact revised source, and tests raw restoration plus clean64-series preparation. It does not repeat unchanged full-period analyses or another model fit; completed fresh64-series fitting and independent full/public audit remain separately archived."
+}

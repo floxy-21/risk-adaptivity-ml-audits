@@ -1,0 +1,60 @@
+{
+  "case": "C28",
+  "method": "compact",
+  "status": "success",
+  "baseline_working_set_bytes": 72835072,
+  "import_seconds": 1.298426000008476,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "value": 0.4666666666666667,
+  "lp_value": 0.4666666666666667,
+  "policy_diagnostics": {
+    "preprocessed_blocks": 0,
+    "active_blocks": 1,
+    "maximum_conditional_projection": 0.0,
+    "maximum_unconditional_marginal_change": 0.0,
+    "maximum_flow_change": 0.0,
+    "maximum_coefficient_change": 0.0,
+    "maximum_systematic_cdf_correction": 0.0,
+    "hypersimplex_sum_error": 0.0,
+    "positive_flow_edges": 2,
+    "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+    "lp_primal_feasibility": 0.0,
+    "objective_change": 0.0,
+    "lp_dimensions": {
+      "variables": 10076,
+      "equalities": 327,
+      "inequalities": 9798
+    }
+  },
+  "sample_checks": 20,
+  "instrumented_method_seconds": 0.608288999996148,
+  "method_seconds": 0.6064107999845874,
+  "lp_checks": [
+    {
+      "solver_seconds": 0.5208704999968177,
+      "solver_success": true,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "variables": 10076,
+      "equalities": 327,
+      "inequalities": 9798,
+      "nonzeros": 40673,
+      "primal_absolute": 0.0,
+      "primal_normalized": 0.0,
+      "dual_absolute": -0.0,
+      "dual_normalized": -0.0,
+      "stationarity_absolute": 6.661338147750939e-16,
+      "stationarity_normalized": 6.661338147750939e-16,
+      "duality_gap_absolute": 0.0,
+      "duality_gap_normalized": 0.0,
+      "dual_objective": 0.4666666666666667,
+      "diagnostic_seconds": 0.0018782000115606934
+    }
+  ],
+  "peak_working_set_bytes": 102014976,
+  "total_worker_seconds": 1.9146805000054883
+}

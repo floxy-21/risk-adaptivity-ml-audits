@@ -1,0 +1,46 @@
+Frozen randomized holdout audit, 10 October 2026 (local date)
+
+Before outcomes: evaluate all 30 consumers and all 3,210 meter-days in
+outputs/study_holdout_consumers_predictions.csv, all six existing model
+pairs (19,260 day-pair cases), no exclusions or refits. Input schema and its
+first row were inspected to confirm the explicit portugal_new_consumers
+cohort label; no randomized holdout summaries were computed before this
+protocol. This is a post-review audit of a pre-existing held-out-consumer
+forecast archive, not a newly collected prospective validation study.
+
+Reuse the original screen's contiguous six-hour mask with seed 1103,
+four exact six-hour totals, budget B=2, saved daily-persistence forecast
+copies, then zero/singleton exact-total closure. Forecast archive lookup
+accepts only timestamp and daily forecast; no hidden target argument.
+
+Phase 1 constructs a selection-only input archive: public predictions,
+timestamps, masked observations, exact totals, copied/deduced indices.
+The builder uses the complete target solely to form the simulated mask
+and measurement totals; it never computes comparative performance.
+Phase 2 is a separate process that reads only these selection inputs.
+For each positive-width case, run the existing finite-game solve_game
+then audit_ties.refine(kind='reference'): minimize uniform-within-block
+barycenter width on the primary minimax-optimal face. This secondary
+objective is fixed here for every case before outcomes. No hidden values
+are available to the selection function or used to select among policies.
+Also solve the unchanged compact formulation for every positive-width
+case and compare normalized primary objectives (tolerance 2e-7).
+The solver's original primary optimizer is retained solely for context.
+No policy sweep, alternative rule, or tuning based on holdout outcomes.
+
+Freeze and hash selected policies before phase 3 reads reference targets
+for evaluation. Exhaustively evaluate every positive-probability batch,
+not Monte Carlo: realized width, valid strict-sign certification and query
+count. Reuse posterior for independent interval containment and sign
+checks; verify the direct residual-width identity. Retain all zero-width
+cases with zero paid queries. Main randomized columns use the fixed
+barycenter secondary policy; original-primary columns are labeled.
+
+Report deterministic vs secondary randomized worst width, realized width,
+certification and queries, plus original-primary context, all cases and
+positive-width strata, meter macro aggregates and pair summaries. Record
+LP/pricing/compact/secondary residuals, containment and any failures.
+No unsupported operational-cost, out-of-source, runtime-dominance,
+prospective-preregistration, or guaranteed practical improvement claim.
+Source hashes, protocol hash and selection-before-evaluation checkpoint
+are archived; do not modify any original scripts or data.

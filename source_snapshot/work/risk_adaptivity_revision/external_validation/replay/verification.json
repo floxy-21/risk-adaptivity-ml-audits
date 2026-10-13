@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "containment": "exact rational containment in all replayed terminal intervals",
+  "sum": "exact rational hourly increments sum to retained total",
+  "max_affine_loss_rounding_discrepancy": 1.3241019734787313e-16,
+  "geometry_cases": 1674,
+  "replay_cases": 1674,
+  "policy_rows": 10073,
+  "all_31_days_per_meter": true,
+  "no_bootstrap": "three systems and dependent pair/block cases: report meter and paired counts, no IID intervals",
+  "independence": "new source and frozen pipeline; same-study implementation, not external human validation"
+}

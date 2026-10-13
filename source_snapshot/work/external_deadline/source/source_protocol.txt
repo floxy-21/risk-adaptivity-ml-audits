@@ -1,0 +1,38 @@
+REFIT EXTERNAL DEADLINE AUDIT: SOURCE-ONLY PROTOCOL
+Frozen 2026-10-11 before raw source contents, model fits, comparisons, or acquisition outcomes were inspected.
+
+SOURCE
+Primary source: Murray, Stankovic and Stankovic, REFIT Electrical Load Measurements, raw 081116 release.
+Dataset DOI: 10.15129/31da3ece-f902-4e95-a093-e0a9536983c4.
+Archive: https://pureportal.strath.ac.uk/files/62090177/REFIT_RAW_081116.7z
+Readme: https://pureportal.strath.ac.uk/files/62090176/RAW_READ_ME_081116.txt
+Source paper: doi:10.1038/sdata.2016.122.
+Official record lists CC BY 4.0 for the raw archive and readme.
+All 20 houses represented by this release are candidates; there is no outcome-based household selection.
+Only the aggregate whole-house power channel is used. It is NOT an independently surviving temporal energy register.
+The cleaned release is not a substitute: its official description says timestamp duplicates are merged and missing values are forward-filled for gaps <2 minutes or zeroed for larger gaps.
+
+TIME AND REFERENCE DEFINITION
+Use source Unix timestamps in UTC when present. UTC 24-hour days avoid local DST ambiguity.
+Training: 2014-01-01 inclusive to 2014-10-01 exclusive.
+Validation: 2014-10-01 inclusive to 2015-01-01 exclusive.
+Test: 2015-01-01 inclusive to 2015-04-01 exclusive.
+Preserve at least eight earlier days to construct causal lag features, where source data permit.
+Between successive raw observations at times t_i < t_(i+1), define power by zero-order hold at the value p_i.
+The hourly reference is the resulting integral divided by 3,600,000, in kWh. It is a reference based on sampled power, not exact physical energy.
+An interval is admissible only if its duration is positive and <=16 seconds and its power is finite and nonnegative. Do not interpolate across longer gaps, fill missing power, clip high power, or replace invalid entries.
+Any nonfinite or negative reading invalidates its supported interval. Any duplicate-timestamp group is quarantined (even equal readings) and both its adjacent integration intervals are invalidated. Backward timestamps are recorded; any sorting needed is explicitly recorded and all directly implicated timestamps and adjacent intervals are quarantined. Unknown source parsing or provenance issues stop preparation rather than silently changing this rule.
+An hour is eligible only if all 3,600 seconds have admissible support with no quarantined intervals. No partial-hour scaling or imputation.
+A day is source-complete only if all 24 hours are eligible.
+Constructed temporal totals are sums of these reference hours and must be described as benchmark inputs.
+
+HOUSEHOLD ELIGIBILITY
+Require >=90 source-complete training days, >=20 validation days and >=20 test days, before lag-feature availability is considered.
+Root forecasting protocol additionally requires >=30 eligible training days after causal lag features are available and reports those additional exclusions.
+Every household satisfying these fixed conditions is retained.
+Publish per-household/date coverage and exclusions. Exclusion reasons and source row counts are retained even when a household is ineligible.
+No forecasting errors, model rankings, recovery benefits, or acquisition decisions are computed during source preparation.
+
+PROVENANCE
+Record original URLs, retrieval status, bytes and SHA-256 for retrieved inputs; archive member inventory; exact parser source hash; UTC run timestamp; output hashes; schema; and license attribution.
+If the raw source is inaccessible or the rule leaves insufficient reference records, report that concrete feasibility problem before changing source or protocol.

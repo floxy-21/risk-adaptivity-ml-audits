@@ -1,0 +1,577 @@
+{
+  "status": "prepared",
+  "prepared_utc": "2026-10-11T19:58:13.996302+00:00",
+  "households": [
+    {
+      "household_id": "MAC000002",
+      "array_file": "household_000.npz",
+      "training_days": 234,
+      "training_mean_kwh": 0.4655742522257835,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "4cb3ce6ad288a7acb4aa003820eaa8175dcf6e700ccd8efbb62775991c807b0f",
+      "train_y_sha256": "6d3524e7bb39a83fdabe15a00194ecdcc910cf49bee59ef99981adff8e1d043d",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 244,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 56,
+          "feature_complete_days": 52,
+          "candidate_days": 49
+        }
+      }
+    },
+    {
+      "household_id": "MAC000003",
+      "array_file": "household_001.npz",
+      "training_days": 228,
+      "training_mean_kwh": 0.8376039843567252,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "98eb37d91d2dd764092a55eb1380382e3cf71013c766a3387c1be6e477bc8273",
+      "train_y_sha256": "79d5baea544134cb10a59a2eb2935cfcb2745af696a74749b606a2c3fc441585",
+      "counts": {
+        "train": {
+          "complete_reference_days": 261,
+          "feature_complete_days": 239,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      }
+    },
+    {
+      "household_id": "MAC000004",
+      "array_file": "household_002.npz",
+      "training_days": 230,
+      "training_mean_kwh": 0.0704480072463768,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "08a6c8ae8f9d04b63bf57d3f4ad989c50e9a706ab974ebf0362332919d6fb546",
+      "train_y_sha256": "783c2807ddf5e7ca6d050f6941c1acc7d3c42362c13f1a56e217fa7f6544c2a5",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 241,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      }
+    },
+    {
+      "household_id": "MAC000005",
+      "array_file": "household_003.npz",
+      "training_days": 231,
+      "training_mean_kwh": 0.17863167386363635,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "17cd4be1b5520ec81bc41145a1b7aaf8acac6dc54d99d067bb917a72833ebd7c",
+      "train_y_sha256": "70912b65274071e47151d76224084884080b6204d8c0469cb0f97aac62dee9dd",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 242,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      }
+    },
+    {
+      "household_id": "MAC000006",
+      "array_file": "household_004.npz",
+      "training_days": 234,
+      "training_mean_kwh": 0.1154668803418803,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "644d299ca4f3acb87382ec01bbf4a4dcf463e8d1cea1c2396684f02f482a0148",
+      "train_y_sha256": "9066e31085e15125eb99e08918a9db9156d22e594526a4a1a5c52cdbdbae4844",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 244,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      }
+    },
+    {
+      "household_id": "MAC000007",
+      "array_file": "household_005.npz",
+      "training_days": 231,
+      "training_mean_kwh": 0.3767339464105339,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "b2a041cf99035e73f35d426c1694c3e686cab385e877896ca39c370b1508191b",
+      "train_y_sha256": "efa70ec8f28054c3cfea82b608a0448c05e4b6cecf457bbdaad12fd776b6da8d",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 242,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 87,
+          "feature_complete_days": 81,
+          "candidate_days": 77
+        },
+        "test": {
+          "complete_reference_days": 55,
+          "feature_complete_days": 45,
+          "candidate_days": 42
+        }
+      }
+    },
+    {
+      "household_id": "MAC000008",
+      "array_file": "household_006.npz",
+      "training_days": 234,
+      "training_mean_kwh": 0.7348584401531338,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "3bdf31de00cc75fc2249d7615be76ca5fd9f2107fef3b6525e703e4c74e381bf",
+      "train_y_sha256": "82bca1f613f4245d1d55998b6cd6a5fe74f98833cd0173ff4b5b8fc29c220dc8",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 244,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 26,
+          "feature_complete_days": 24,
+          "candidate_days": 19
+        },
+        "test": {
+          "complete_reference_days": 0,
+          "feature_complete_days": 0,
+          "candidate_days": 0
+        }
+      }
+    },
+    {
+      "household_id": "MAC000009",
+      "array_file": "household_007.npz",
+      "training_days": 230,
+      "training_mean_kwh": 0.3310606884420289,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "8053fac1381895a068f524c6c88a44143f0332b61d4884a87eec4b78992046f5",
+      "train_y_sha256": "9212ae54cfbfb448b715a78936eaebada9834d297a3f23a428714e1b752f78fe",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 241,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      }
+    },
+    {
+      "household_id": "MAC000010",
+      "array_file": "household_008.npz",
+      "training_days": 234,
+      "training_mean_kwh": 1.0340886748931624,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "548cab3d4aaf520a7dd69052cc6822b0855abafe36fb939e6c0c30b57c61e6c6",
+      "train_y_sha256": "13636973628fa122e110191662d93365fbe6aa9611ba793fc97988b4a16b4e41",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 244,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      }
+    },
+    {
+      "household_id": "MAC000011",
+      "array_file": "household_009.npz",
+      "training_days": 232,
+      "training_mean_kwh": 0.6127180316630747,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "0bf1bb1188326f2e4e81654576f175d8fbba6e5baa8254bc8968ecc702cf90a9",
+      "train_y_sha256": "f915529598e6f631e61b4bad294d050a1ab3f38afb6184746e2f51024c9581b0",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 242,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 88,
+          "feature_complete_days": 80,
+          "candidate_days": 75
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      }
+    },
+    {
+      "household_id": "MAC000012",
+      "array_file": "household_010.npz",
+      "training_days": 232,
+      "training_mean_kwh": 0.07083800287356319,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "7354fcdef5176db0cf72c6b2d252fe98688c115adf424e12ce1959612005b373",
+      "train_y_sha256": "b8a0194896196da21e16d0a48d74b1cac85b00c7e63a68ad3a0a3050c1079c31",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 242,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      }
+    },
+    {
+      "household_id": "MAC000013",
+      "array_file": "household_011.npz",
+      "training_days": 230,
+      "training_mean_kwh": 0.20597826086956522,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "17acb7c2a8a132dfe99bb623c9ec777dc06a7b20f008d2bce327621f44e6c15a",
+      "train_y_sha256": "3bb5a196fc0f76b6a75faf59222797ce23ec3f9533f6b530622620494c62d49a",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 241,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      }
+    },
+    {
+      "household_id": "MAC000014",
+      "array_file": "household_012.npz",
+      "training_days": 228,
+      "training_mean_kwh": 0.23322094298245608,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "861bd2b972023f6f3376bca6e130e515b1eba5ecad7c8266dc2436ff940322d0",
+      "train_y_sha256": "28184d62ad1e11a1244630cfc31add831a6aad39e8bd48bde38da77926f5f018",
+      "counts": {
+        "train": {
+          "complete_reference_days": 261,
+          "feature_complete_days": 238,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 87,
+          "feature_complete_days": 79,
+          "candidate_days": 74
+        },
+        "test": {
+          "complete_reference_days": 55,
+          "feature_complete_days": 50,
+          "candidate_days": 46
+        }
+      }
+    },
+    {
+      "household_id": "MAC000015",
+      "array_file": "household_013.npz",
+      "training_days": 211,
+      "training_mean_kwh": 0.3835227093404423,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "21bbaa25b52be55eb0b7d491c7b67397a18bd2191a5350becea8f411669aa32b",
+      "train_y_sha256": "8625f1ad773770d12f6b12fa0847291bfd62b54547b6583e31decd3611dc8f89",
+      "counts": {
+        "train": {
+          "complete_reference_days": 256,
+          "feature_complete_days": 225,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 87,
+          "feature_complete_days": 77,
+          "candidate_days": 71
+        },
+        "test": {
+          "complete_reference_days": 55,
+          "feature_complete_days": 50,
+          "candidate_days": 46
+        }
+      }
+    },
+    {
+      "household_id": "MAC000017",
+      "array_file": "household_014.npz",
+      "training_days": 231,
+      "training_mean_kwh": 0.2591360028318903,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "cd50e31cb942017f49579d09141a114883a83d88c2a4fb983d883dd925918f2b",
+      "train_y_sha256": "736b7370ff68160116e0827aa78dc28fddc56a8b2418c06d279afbbf17162718",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 242,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 88,
+          "feature_complete_days": 80,
+          "candidate_days": 76
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      }
+    },
+    {
+      "household_id": "MAC000018",
+      "array_file": "household_015.npz",
+      "training_days": 234,
+      "training_mean_kwh": 0.4368228276175214,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "f4f83290bee7bc63296522b59c3c6d29db62bef1e75f760ea0c22326feaa1676",
+      "train_y_sha256": "73947e363a680092b018821f8331f0f4822e042d748cbe9812cf87b354ed2072",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 244,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      }
+    },
+    {
+      "household_id": "MAC000019",
+      "array_file": "household_016.npz",
+      "training_days": 234,
+      "training_mean_kwh": 0.26276086182336184,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "1c294a8efbd6468be467e1c061112837f08daff72aa6f916a5fef0758182cea3",
+      "train_y_sha256": "2f6ad8bfb407902320f3d1d23d4eb9562604624974b4058da0dcc5c661c30e4c",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 244,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      }
+    },
+    {
+      "household_id": "MAC000020",
+      "array_file": "household_017.npz",
+      "training_days": 228,
+      "training_mean_kwh": 0.2380144371710526,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "241e72582320ed7ff5acd87fdc70d18006a197a36f0a720e7d7e8c505d44ef17",
+      "train_y_sha256": "080900eb214c39bb70d5939327c774fb27320d474d90621762f916d3589837d4",
+      "counts": {
+        "train": {
+          "complete_reference_days": 261,
+          "feature_complete_days": 239,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      }
+    },
+    {
+      "household_id": "MAC000021",
+      "array_file": "household_018.npz",
+      "training_days": 234,
+      "training_mean_kwh": 0.8921704059294872,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "c4f4fd0099ba1d4c4f51c6e3121d52c9c033d9dc9d6ffb355a70872d54f42976",
+      "train_y_sha256": "e552d38485e198497b0c56cd50fe5769cc44f3feb7edc516b633f2fe176453ce",
+      "counts": {
+        "train": {
+          "complete_reference_days": 263,
+          "feature_complete_days": 244,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 88,
+          "feature_complete_days": 80,
+          "candidate_days": 76
+        },
+        "test": {
+          "complete_reference_days": 57,
+          "feature_complete_days": 55,
+          "candidate_days": 53
+        }
+      }
+    },
+    {
+      "household_id": "MAC000022",
+      "array_file": "household_019.npz",
+      "training_days": 230,
+      "training_mean_kwh": 0.4604721015036232,
+      "training_data_end_utc": "2013-10-01T00:00:00Z",
+      "train_X_sha256": "8e2e142040a50bfeab2fb944ff831342403ce4fade49c934ca154f5bc57a904e",
+      "train_y_sha256": "cb9d87af071d70b3b8c509385f17e26c26722c55deebae3dc975366ec08e842a",
+      "counts": {
+        "train": {
+          "complete_reference_days": 262,
+          "feature_complete_days": 241,
+          "candidate_days": 0
+        },
+        "validation": {
+          "complete_reference_days": 89,
+          "feature_complete_days": 83,
+          "candidate_days": 79
+        },
+        "test": {
+          "complete_reference_days": 56,
+          "feature_complete_days": 52,
+          "candidate_days": 49
+        }
+      }
+    }
+  ],
+  "hourly_path": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\external_deadline\\data\\lcl\\hourly.csv",
+  "hourly_sha256": "36e933087d45d08e8b4238c62b64f2ab090c0e6b78ec0b96e11ed0e818b4e0b5",
+  "config_path": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\external_deadline\\config.json",
+  "config_sha256": "7965a6c2e5b55aa3aa7827da8d391363a86f01ee2da125fc0d483a747b42acaf",
+  "protocol_path": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\external_deadline\\source_amendment.txt",
+  "protocol_sha256": "11fff4bcb3aa6ab944901d05ff9cfdbb230b2a8209d444d62abb664da69baa81",
+  "script_sha256": "d03ed8eac3d2d749076eac6749210ad38513b56ce6a664effac33bcb3686e5c4",
+  "archive_start_utc": "2013-10-01T00:00:00Z",
+  "archive_end_day_utc": "2014-03-02",
+  "feature_names": [
+    "lag2_same_hour",
+    "lag3_same_hour",
+    "lag8_same_hour",
+    "mean_day_minus2",
+    "hour_sin",
+    "hour_cos",
+    "weekday_sin",
+    "weekday_cos",
+    "month_sin",
+    "month_cos"
+  ],
+  "chronology": "Declared benchmark clock stored with UTC-shaped labels: forecast for day D issued noon D-1; latest feature record is assigned available at start of D-1. Persistence copies D-2. Learned archive excludes issues before final training-target availability. Source physical timezone and interval-endpoint semantics require separate provenance and are not inferred here.",
+  "clock_basis": "Declared benchmark grid; UTC-shaped labels do not establish provider UTC or physical interval-start convention",
+  "day_timestamp_serialization": "int64 nanoseconds since Unix epoch, explicitly normalized before saving",
+  "source_only_preparation": true,
+  "fits_performed": 0,
+  "prepared_hashes": {
+    "household_000.npz": "166f017df1d27f457f50d944db2c9897d8da5a0fa1732c36c230b051fac8b16f",
+    "household_001.npz": "8413d3be733d7da9b90f6e5b216b1ab2b610b4f9f5451e682c5bdea494f8efc1",
+    "household_002.npz": "2150021d47484567a16e9029b07eb23bc446af7e371030c46ea174bb93b4cbef",
+    "household_003.npz": "eb5c320ecac96ee69835926b1792d3e6c897cdfea4660ce13f07fcbd80c27a12",
+    "household_004.npz": "51fcb2a5eae218d2cd2e1be6ba405822f90b68b927aa01129483ecf1d1c00c54",
+    "household_005.npz": "323252098f6d4a7618574df25130a9bbeb47747593eb1e5e568d3b731edaabd2",
+    "household_006.npz": "c64d0615d409381bbd22b3ec53e2db96e28aae2f3d05e2fa6c89638675d47f78",
+    "household_007.npz": "395b2d2e75553542b196b94155179574c7040ca00b9bc7a4fe6c683bd1db546f",
+    "household_008.npz": "9e0a8ed6dadc824a74c3995c0a00198ae649aaa1046a5f40ac9e6f85b9d0be35",
+    "household_009.npz": "1b886992eab7bf69ba494c2a5f788b83a342feb930f15906250bc12b547f6870",
+    "household_010.npz": "a693773514c21e5420fec4e247b8e138a183233f22265fa69dd1a27255d3a8cd",
+    "household_011.npz": "0b8e77d6d00542880799711130e773d8ddf16c5c8d6cb7be58856012b5ec84e8",
+    "household_012.npz": "e5c4513f89608eb68fa9c475ba71c5e6f27e4d1758f3ff7ffc9309805330f11b",
+    "household_013.npz": "5a87742ffed57ccb5b6dcf670f3a571e123b322137ec71f5727c8068369ed244",
+    "household_014.npz": "f67142ee35744d31239ea1738fca0a25af3d81e4815c8b3377bbb9fa41f16053",
+    "household_015.npz": "ce253014c258c7833b8692e18700fd94b93a165adb37dabec8b303fc17124bd9",
+    "household_016.npz": "7f659fbf0f55203cdc445c3cc326fb3e8b6721f946ffeea3789a41230ab0a666",
+    "household_017.npz": "5943b9ad466ff7e374bbb34fe2fd91bb985ad1f64a4aa330bb84e9c06c0d29fc",
+    "household_018.npz": "720b488965c70edd51ff2bc4b7183e5340e42af54f1039e050349a9fed7af9a0",
+    "household_019.npz": "7390284b16b468e4bac9ba7d7868362c194c4f2bb6da63994476fda0fe822cb3",
+    "candidate_days.csv": "9d4ac9e5c08f9de17cfa07d6f0bd86f2a0f98a71a03fb73428acb6b4ebdc2013",
+    "reference_targets.csv": "6ead862b89ad64b798faebd4b7770c8f693aa8b0579dc06c81bf12a674128ecc",
+    "frozen_config.json": "302729ba4e350a02508708a4f6a10d800b9236ebf855bd21ee9738d5550e9bd0"
+  }
+}

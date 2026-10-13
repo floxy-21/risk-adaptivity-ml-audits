@@ -1,0 +1,33 @@
+\paragraph{Bounded synthetic scaling audit.}
+
+We froze 28 synthetic cases before optimization: the full factorial $G\in\{1,2,4\}$, $m\in\{6,12\}$, $B=\lfloor Gmf\rfloor$, $f\in\{1/4,1/2\}$, and two coefficient/total profiles, plus four single-block cases with $m\in\{24,48\}$ and $f=1/2$. The profiles were distinct coefficients with homogeneous totals, and threefold coefficient ties with geometric coefficient scales and heterogeneous totals. Thus ties and heterogeneity vary jointly; the comparison does not isolate either effect. The manifest fixes every coefficient, total, seed, budget, and exhaustive-solver eligibility decision.
+
+Each method/case ran once in a fresh subprocess on an Intel Core i7-8565U (four physical cores, 16.9 GB RAM), Windows 11, Python 3.12.14, NumPy 2.5.3, and SciPy 1.18.1. HiGHS and numerical-library thread limits were one. Method time includes LP construction, solution, and policy compilation after imports; separately measured diagnostic overhead is removed. Peak working set is the worker-reported whole-process peak, including interpreter and imports. The wall limit was 20 s. A parent memory watchdog used a 1 GiB threshold, but the Windows environment launcher can make that watchdog observe the redirector; therefore it is not a verified worker allocation cap. Every worker-reported peak was below 169 MiB. Runs were sequential on a shared host, without timing repetitions.
+
+All 28 compact runs returned an optimal LP and passed 560 seeded exact-budget/sample-identity checks. Maximum normalized primal violation, stationarity residual, and primal--dual gap were $3.78\times10^{-15}$, $5.22\times10^{-15}$, and $5.78\times10^{-16}$, respectively; the recorded dual sign violation was zero. Exhaustive finite-game comparison was prescribed only for at most 25,000 admissible batches and at most 100,000 prefilter Cartesian-product candidates. All 12 eligible comparisons ran, with maximum objective discrepancy $1.27\times10^{-15}$ after division by $\max(1,W_0)$; the other 16 were retained as predetermined skips. There were no timeouts, solver errors, or memory terminations.
+Table~\ref{tab:compact-scaling-audit} reports both profiles at every dimension/budget setting. Its ranges span two different instances, not repeated-run uncertainty. Full per-case objectives, sparse dimensions/nonzeros, timings, memory, and numerical diagnostics are archived. These bounded measurements establish operability at the sampled sizes; they do not establish runtime dominance or empirical asymptotic complexity, and the residual checks are floating-point evidence rather than exact certificates.
+\begin{table}[htbp]
+\centering\small
+\caption{Frozen compact-policy scaling audit. Each row contains two coefficient/total profiles; all runs succeeded. Time and peak-memory ranges span those profiles. Vars. is the LP variable count; Finite is the number of prescribed exhaustive comparisons completed.}
+\label{tab:compact-scaling-audit}
+\begin{tabular}{rrrrrrr}
+\hline
+$G$ & $m$ & $B$ & Vars. & Method time (s) & Peak (MiB) & Finite \\
+\hline
+1 & 6 & 1 & 14 & 0.010--0.015 & 71.4--71.7 & 2/2 \\
+1 & 6 & 3 & 31 & 0.011--0.019 & 71.5--71.5 & 2/2 \\
+1 & 12 & 3 & 91 & 0.012--0.014 & 71.8--71.8 & 2/2 \\
+1 & 12 & 6 & 197 & 0.014--0.023 & 72.0--72.1 & 2/2 \\
+2 & 6 & 3 & 142 & 0.013--0.024 & 71.9--71.9 & 2/2 \\
+2 & 6 & 6 & 164 & 0.020--0.022 & 72.1--72.1 & 2/2 \\
+2 & 12 & 6 & 1,346 & 0.091--0.127 & 75.7--76.1 & 0/2 \\
+2 & 12 & 12 & 2,974 & 0.246--0.594 & 80.2--80.4 & 0/2 \\
+4 & 6 & 6 & 946 & 0.042--0.053 & 74.2--74.2 & 0/2 \\
+4 & 6 & 12 & 1,162 & 0.047--0.069 & 74.8--74.8 & 0/2 \\
+4 & 12 & 12 & 22,538 & 3.356--4.056 & 126.3--126.8 & 0/2 \\
+4 & 12 & 24 & 38,820 & 9.933--10.012 & 160.5--168.6 & 0/2 \\
+1 & 24 & 12 & 1,366 & 0.091--0.105 & 75.6--75.7 & 0/2 \\
+1 & 48 & 24 & 10,076 & 0.606--1.631 & 97.3--97.3 & 0/2 \\
+\hline
+\end{tabular}
+\end{table}

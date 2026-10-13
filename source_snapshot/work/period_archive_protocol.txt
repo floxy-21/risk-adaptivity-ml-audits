@@ -1,0 +1,109 @@
+FROZEN WHOLE-PERIOD INFORMATION-ACCESS REANALYSIS
+2026-10-10 03:33:11 UTC, before new numerical outcome calculation.
+
+This post-review analysis addresses evaluator-information consistency on the
+original frozen 34-series study. It does not refit models, select consumers,
+claim new data, or assume observation/forecast arrival times or retrieval cost.
+All original source scripts, forecasts, summaries and results remain unchanged.
+
+REGIMES AND THEIR INFORMATION
+restricted_daily_product_closed: isolated daily evaluators each receive only
+that day's fixed forecasts, surviving targets and retained aggregate bands.
+They perform direct exact-aggregate deductions. A summary-only period aggregator
+receives their scalar comparison bounds and point contrasts, not the cross-day
+raw forecast arrays. This is an explicitly restricted historical reference;
+it is NOT a closed information model for an analyst holding all period vectors.
+saved_forecast_archive_closed: the evaluator receives every saved TEST forecast
+row for the same meter, for all four candidates, including later rows lying
+inside the evaluated period. A documented daily-persistence forecast at t+24
+is the true target at t in this fixed causal pipeline. Incorporate EVERY such
+available direct copy, then exact-aggregate deductions, before any comparison.
+Within-period raw-vector access and complete saved-test-archive access coincide
+here; no outside-period forecast or arrival-time assumption is introduced.
+Both regimes use a declared product feasible set after these deductions, not
+an assertion of nonlinear inversion/full informational closure. Nonlinear
+inversion, retained feature caches, unsaved forecasts and raw-target fallback
+are excluded. Training targets used for shape/donor baselines are the original
+chronological training data, not additional held-out observations.
+
+ORIGINAL GRID AND SHARED INFORMATION
+Retain every original meter, day, pair, gap2/6/12, contiguous/scattered/high-demand
+mask, seed1103/2207/3301, block6/24 and relative total tolerance0/.01/.05.
+High-demand masks remain the original oracle stress with repeated seeds, not
+an empirical missingness process. Aggregate central values are derived from
+complete targets BEFORE masking as in the original fixed snapshot. Bounds use
+the original symmetric declared bands. Snapshot metadata records this source.
+Timestamp+daily-forecast columns alone reconstruct copied values; validate
+against hidden targets only after lookup. Deduce a singleton from an exact
+residual total; deduce all residual zeros when the upper residual is zero.
+Uncertain positive-total singleton blocks remain uncertain. Every comparator
+receives the SAME enlarged observations and aggregate snapshot for its regime.
+
+WHOLE-PERIOD EVALUATION
+Sum the per-day sharp paired and separate individual-loss bounds, then divide
+by the number of eligible days: every day has24 targets, so this is the fixed
+full-period mean with denominator24*days. No extra period-wide query budget is
+introduced. Four point evaluators are reported and matched in coverage for
+EXACT totals only: pooled complete-case contrast, uniform completion,
+weekday/hour profile, and historical training-day donor. BEFORE execution,
+the denominator convention was clarified: new complete-case scores pool the
+observed squared-loss sums over all days and divide by the total observed count,
+which can change after reconstruction. Traces retain both numerator and count.
+The legacy equal-day mean of observed-only scores remains a compatibility
+diagnostic, not the newly reported whole-period complete-case score. Other point
+scores use all24 hourly targets per day.
+Profiles and donor candidates come only from the original eligible training
+days, with original DST/history filtering and no model fits. Donor selection
+uses the enlarged observed targets, never hidden truth or candidate forecasts.
+
+MATCHED COVERAGE AND SUMMARIES
+Within each regime/cohort/gap/pattern/block exact-total scenario, retain exactly
+the paired-certificate number of nonzero point decisions if available. Rank
+by absolute estimated period contrast divided by squared training-mean hourly
+kWh; break ties by meter/model_a/model_b/integer seed. Hidden reference loss
+only measures errors after selection. Report shortfalls and all unfavorable
+results. Provide all period cases, scenario/cohort/named-pair summaries,
+coverage, abstention, wrong decisions and training-scale-normalized widths.
+No independent-trial inference or calibrated predictive risk is claimed.
+
+HISTORICAL RECONCILIATION
+Preserve study_period_comparisons.csv as the raw restricted compatibility panel.
+Reconcile new restricted paired/separate intervals with all frozen counterpart
+rows. Uniform/profile exact-total outputs should also match numerically;
+complete-case and donor may change because determined targets now enter their
+shared observations. Complete-case additionally changes its explicit weighting
+to pooled observed coordinates. Report closure and normalization separately
+rather than forcing equality or calling either a new-data effect.
+Recompute selected raw daily cases independently through original helpers and
+validate training metadata. Compare archive intervals to restricted intervals;
+verified extra information must never widen them. Every certified difference
+must enclose its complete reference, with numerical tolerances disclosed.
+
+TRACE, WITNESSES AND REPRODUCTION
+Publish a manifest defining allowed rows/columns, source hashes and masks;
+source trace maps EVERY copied target coordinate to its saved future forecast
+row, timestamp, column and value hash. Snapshot traces identify retained
+aggregate blocks, initial/updated observed indices, free-copy and exact-deduction
+indices, residual lower/upper bounds or their hashes, and remaining query-eligible
+indices. Deduplicated daily scalar bounds/point contributions and their state
+links permit every whole-period row to be reconstructed. BLEM raw targets and
+raw persistence copies are not redistributed; use row references and hashes
+for observations/residual values that could reveal an hourly target. Numeric
+aggregate loss contributions may be distributed. Raw-dependent reproduction
+reconstructs values from the documented original sources. UCI values remain
+subject to their source attribution. Full-known states are reused without
+redundant optimization; no mathematical case is dropped.
+
+REQUIRED CHECKS
+Verify source identity, same masked/observed/total snapshot for all comparators,
+all direct copies included (including within-period), no hidden target lookup,
+invariance of analytic outputs to hidden completions at fixed supplied inputs,
+aggregate deductions and query eligibility, constant24-target day weighting,
+all period counts, reference enclosure, non-widening, source hashes unchanged,
+and matched-coverage reconciliation. Synthetic tests check singleton/zero-band
+deduction and positive-band non-deduction. Separate independent audit verifies
+scalar aggregation and selected attaining completions. Any failure is recorded
+and investigated rather than silently suppressed. Recovery attribution is only
+the existing budget-two PER DAY PER PAIR results, with free reconstruction and
+exact-minus-greedy gains separate; it is not an unrestricted two-query period
+optimization. One command rebuilds new traces, case tables and summaries.

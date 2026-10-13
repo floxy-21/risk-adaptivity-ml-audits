@@ -1,0 +1,43 @@
+AI revision frozen 2026-10-10 00:28 UTC, before the revised model fits.
+
+This amendment was requested by the user after inspecting results from the
+initial daily/weekly/ridge/histogram-gradient-boosting study and the initial
+recovery extension. It is a transparent post-results revision, not an
+independently held-out confirmatory study. Previously reported outcomes are
+preserved under work/before_ai_revision. No further model or hyperparameter
+choices will depend on the revised test outcomes.
+
+Replace weekly persistence with a genuine fitted neural regressor. Final
+candidate order: daily persistence, ridge, histogram gradient boosting, MLP.
+All four candidates use the same unchanged chronological train/test splits,
+training-eligible meters, ten day-origin-available features and nonnegative
+prediction clipping. Ridge and histogram boosting retain their original fixed
+parameters. The MLP uses training-only StandardScaler features and divides
+training targets by the strictly positive training mean hourly kWh; predictions
+are multiplied by that same training mean before nonnegative clipping.
+MLPRegressor configuration: hidden_layer_sizes=(32,16), activation='relu',
+solver='adam', alpha=0.001, learning_rate_init=0.001, batch_size=256,
+max_iter=200, early_stopping=False, random_state=1729, tol=0.0001,
+n_iter_no_change=10, shuffle=True, validation_fraction=0.1 (unused because
+early_stopping=False). Other parameters retain scikit-learn 1.9.1 defaults.
+No validation split, hyperparameter search, warm start, or test-time refitting
+is used. Training-loss convergence or the 200-epoch cap ends training. Record
+epochs, training loss, convergence warning and fit time separately by meter.
+
+Keep all masks, seeds, aggregate block sizes, total-error tolerances, comparator
+and selector definitions, eligibility rules and bootstrap units unchanged.
+Evaluate all six model pairs; an explicitly labelled MLP-involving descriptive
+subset is allowed without selecting favorable cases. Refitting is fresh;
+existing cached source preprocessing contains no fitted model.
+
+Before rerunning, fix numerical cancellation in exact bound evaluation by
+constructing attaining feasible endpoint completions and evaluating squared
+error differences as (a-b)*((a-y)+(b-y)). Evaluate individual maximum squared
+errors directly at endpoint vertices. These are algebraically identical
+objectives; no statistical or optimization objective changes. Independent
+numerical regression and LP checks precede the new main execution.
+
+The revised main output supersedes the original numerical tables. All derived
+matched-coverage, recovery, timing, integrity and independent-audit outputs must
+be regenerated against the revised main-script and result hashes. The recovery
+policy amendment is separately documented before its new run.

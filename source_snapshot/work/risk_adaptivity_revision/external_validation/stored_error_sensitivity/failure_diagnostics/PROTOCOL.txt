@@ -1,0 +1,22 @@
+Post-analysis diagnosis of the unchanged failed precision classifications.
+
+Include every positive-error row in the frozen sensitivity ledger whose
+adaptive_guarantee is False: two at delta/E=1/1000 and seven at 1/100.
+Do not alter the original ledger, protocol, solver, threshold, or case list.
+
+For each such row and every legal first query k=1,...,5, seek one rational
+first answer t and, for each of the other four second queries j, a pair of
+feasible latent records sharing both those readouts and having target
+contrast greater than 1/2 of original width. Coefficients are exact fractions
+of the original serialized binary64 predictions; divide only by their exact
+positive range. Normalize the exact retained total to one. Internal errors
+remain fixed hidden coordinates in [-delta,delta]. The threshold stays 1/2.
+
+Numerical LPs may propose first answers and active endpoint constraints.
+Only independently checkable exact rational feasibility and strict-width
+inequalities constitute lower-bound evidence. Export every witness; report
+failure to find one honestly. The proof concerns deterministic policies under
+the same two-query hard budget and dictionary, including early stopping.
+Do not extend it to randomized adaptive policies, physical error calibration,
+or altered query/cost/measurement models. This is diagnosis after the existing
+result, not a new preregistered empirical experiment.

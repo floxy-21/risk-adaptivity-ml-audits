@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "scope": "full",
+  "source_sha256": {
+    "outputs/study_period_archive_cases.csv": "6db590b075ae3fcea0c29080ec7d3468bcecf3ccd5f2a97dcf76fff69081fe8b",
+    "outputs/study_period_archive.py": "258e29c41b18c11bf9f9a15aa9e7c9344d27f0aaa564d6f0d4723d91ce7abdf9",
+    "work/period_archive_protocol.txt": "3a95fb9309a41264097b125dfedb2b7ce51c899433f5427775331ee6e07184a1",
+    "outputs/study_period_archive_manifest.json": "d565d3030fed01f8295b481a3cc2e129f5222d1b9a0fbf889c78d984a89426d5",
+    "outputs/study_period_archive_public_manifest.json": "49968ee72702320b3d9413e45e98fa358b29bbe5d988fd0609fdd0d60d7c702e"
+  },
+  "script_sha256": "6729c48e5b64d7766fefd84a3de778760cdbc0a29b8cd382d9eef5da12d2565b",
+  "input_method_rows": 220320,
+  "paired_comparisons": 66096,
+  "matching_separate_comparisons": 66096,
+  "scenario_cells": 324,
+  "seed_scenario_cells": 972,
+  "cohort_meters": {
+    "household": 1,
+    "portugal": 30,
+    "blem_counters": 3
+  },
+  "cross_tab": {
+    "both": 10404,
+    "paired_only": 23906,
+    "neither": 31786,
+    "separate_only": 0
+  },
+  "checks": {
+    "unique_one_to_one_scenario_keys": true,
+    "matched_observation_and_aggregate_metadata": true,
+    "saved_decisions_reproduced": true,
+    "paired_interval_within_separate_interval": true,
+    "reference_inside_every_paired_and_separate_interval": true,
+    "zero_wrong_certificates": true,
+    "zero_separate_only_certificates": true,
+    "complete_declared_grid": true,
+    "original_portugal_540_example_reproduced": true
+  },
+  "tolerances": {
+    "decision": "1e-9 * max(1,abs(lower),abs(upper)); original method-specific rule",
+    "reference_enclosure": "1e-8 * max(1,abs(reference))",
+    "interval_nesting": "1e-8 * max(1,abs(all four endpoints))"
+  },
+  "portugal_example": {
+    "cohort": "portugal",
+    "regime": "saved_forecast_archive_closed",
+    "gap_hours": 6,
+    "pattern": "contiguous",
+    "block_hours": 6,
+    "total_tolerance": 0.0,
+    "comparisons": 540,
+    "both": 64,
+    "paired_only": 414,
+    "neither": 62,
+    "separate_only": 0,
+    "paired_wrong": 0,
+    "separate_wrong": 0,
+    "paired_mean_normalized_width": 0.0032490147,
+    "separate_mean_normalized_width": 0.0849998997,
+    "paired_certified": 478,
+    "separate_certified": 64,
+    "paired_coverage_percent": 88.5185185185,
+    "separate_coverage_percent": 11.8518518519,
+    "paired_only_percentage_points": 76.6666666667
+  },
+  "interpretation": "Post-review descriptive cross-tab over the entire existing retrospective scenario grid. Repeated masks/seeds, model pairs and total tolerances are not independent trials. No new forecasts, missingness scenarios, tuning or acquisition. Separate bounds are a matched-information certificate comparator, not the strongest point-imputation or acquisition baseline. Full scope includes three BLEM series whose endpoints require raw-source regeneration; public scope replays Portugal and household only.",
+  "output_sha256": {
+    "grid_counts.csv": "efca6c7fb9ed15c109c08bd12c8d885a13af399c0b5224232189c4b90638f75e",
+    "grid_seed_counts.csv": "f604a59a160df42da50d30f87f5f9fbfe9b75fe5c494bb97b37dd92ef13bc710",
+    "cohort_counts.csv": "1ba6803fc0d4f3450654bb252de75e49c02a4ee01158599230178777588e24fd",
+    "table_rows.tex": "dc0a0134caa240d022c7a0901758d7775695ffe5c57feed0a10dd0166b5a889a"
+  }
+}

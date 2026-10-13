@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-11T20:35:47.093823+00:00",
+  "period": "validation",
+  "household_count": 20,
+  "eligible_days": 1495,
+  "base_cases": 26910,
+  "policy_rows": 161460,
+  "fully_replayed_batches": 76723,
+  "feature_scalars_reconstructed": 2083200,
+  "bound_enclosure_failures": 0,
+  "incorrect_certificates": 0,
+  "timestamp_violations": 0,
+  "duplicate_paid_queries": 0,
+  "cap_violations": 0,
+  "early_missing_direct_copies": 0,
+  "strict_grid_checks": "passed",
+  "B80_household_macro": {
+    "all": {
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4
+    },
+    "learned": {
+      "exact": 4,
+      "greedy": 4,
+      "hara": 4,
+      "uniform": 4,
+      "randomized": 4
+    }
+  },
+  "headline_tables_checked": {
+    "coverage_curves": 168,
+    "household_curves": 1540,
+    "cost_summary": 24,
+    "pair_curves": 210,
+    "month_curves": 105
+  },
+  "headline_practical_criterion_met": false,
+  "logging_repair_verification": {
+    "status": "passed",
+    "rows": 26910,
+    "stages": 76723,
+    "changed_after_snapshots": 20493,
+    "repair_report_sha256": "2175048d616912d61abfbfec33c77a889ac3be63115c4fa8bab3d7309b07362c",
+    "executed_evaluator_path": "work/external_deadline/evaluate_before_trace_alias_fix.py.txt",
+    "executed_evaluator_sha256": "c32e6be473d6613315cce78e65687a8a51cd588d790d21bb6aa75fa6b98e9aed",
+    "scope": "Every original/revised record compared; only after snapshots changed and the exact next-batch alias mechanism explains each change. Policy batches, forecasts, costs, bounds, decisions and headline outcomes are unchanged."
+  },
+  "fixture_result": {
+    "status": "passed",
+    "arithmetic_fixtures": 4,
+    "rejected_corruptions": [
+      "future feature",
+      "future fitted state",
+      "query cap",
+      "duplicate query",
+      "known query",
+      "hidden initial target",
+      "uncharged requested batch",
+      "wrong certificate"
+    ],
+    "imports_experiment_or_acquisition": false,
+    "external_outcomes_opened": false
+  },
+  "imported_evaluator_or_acquisition": false,
+  "scope": "Independent arithmetic/chronology/trace/coverage replay; not a second training algorithm or acquisition optimality proof. Validation uses retrospectively calibrated full-validation surrogate, while test freezes it before test outcomes.",
+  "wall_seconds": 512.5806718000094,
+  "hashes": {
+    "work/external_deadline/review/verify_external.py": "192e24e71b44c62ecfd2959ec977496eb4991f380e3d61535965f519c8d84cf9",
+    "work/external_deadline/fitted/forecast_archive.csv": "8ddeca53234ee9d4014fa07febc41ad93a00de21c5ac32daeda7d81c15c6056c",
+    "work/external_deadline/fitted/reference_targets.csv": "6ead862b89ad64b798faebd4b7770c8f693aa8b0579dc06c81bf12a674128ecc",
+    "work/external_deadline/fitted/candidate_days.csv": "9d4ac9e5c08f9de17cfa07d6f0bd86f2a0f98a71a03fb73428acb6b4ebdc2013",
+    "work/external_deadline/validation/trajectories.jsonl": "2e50b82a7ebc67af414bb6541d4e000dd435a085bdd7d4e93a2880ceb427ec27",
+    "work/external_deadline/validation/cases.csv": "a5ecda975332dc2d7a464899ddecfa3b3648b8605fd56cb1a466a6ef6e2988b1",
+    "work/external_deadline/validation/archive_snapshots.json": "f4a260b18cc5e1268c094d6dae2bc0d177b1b5e63cb1a5cc1d30446973d8fe40",
+    "work/external_deadline/validation/independent_curves.csv": "cba3b2ba6d1efd04b0e65f8a6771aa4ab494b99c136c730e9e597535963ae355",
+    "work/external_deadline/validation/headline_summary.json": "e4915b1fd88c4e15b08dd140cfc862b91cce8ef2064d12fcdef625e656ac8f37",
+    "work/external_deadline/validation/coverage_curves.csv": "cba3b2ba6d1efd04b0e65f8a6771aa4ab494b99c136c730e9e597535963ae355",
+    "work/external_deadline/validation/cost_summary.csv": "f6840fa2b87846a847efd334c64a058108e7e6964e24acf53843e882615826b8",
+    "work/external_deadline/validation/household_curves.csv": "024215c3964f88b2dd65a679bcd244ac8ac73b0ee5fa1705a8e1ad5375fc84a6",
+    "work/external_deadline/validation/pair_curves.csv": "54dcdd1a391288cd4543b6968a187e34900ca3fb94b1c52d163d7bee677f8016",
+    "work/external_deadline/validation/month_curves.csv": "9d7ffaf646d706a88baa1e2fe249e0f5a6b6223c0e38c85d4b3c0b2a49c2946f"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "frozen_utc": "2026-10-11T20:12:23.006220+00:00",
+  "period": "test",
+  "inputs": {
+    "work/external_deadline/fitted/forecast_archive.csv": "8ddeca53234ee9d4014fa07febc41ad93a00de21c5ac32daeda7d81c15c6056c",
+    "work/external_deadline/fitted/reference_targets.csv": "6ead862b89ad64b798faebd4b7770c8f693aa8b0579dc06c81bf12a674128ecc",
+    "work/external_deadline/fitted/candidate_days.csv": "9d4ac9e5c08f9de17cfa07d6f0bd86f2a0f98a71a03fb73428acb6b4ebdc2013",
+    "work/external_deadline/fitted/surrogate_parameters.json": "84c18bdca2f29707c4a64b03e3a7a0ae477d7f53fdcd05ab251132b11a7b69c4",
+    "work/external_deadline/experiment_protocol.txt": "2a8a30218a42b1b9419e8927895e9a54d394815a8f55e5c570da60d90bf70a30",
+    "work/external_deadline/period_amendment.txt": "a7002ebb615e28e3ab9ed00b1b76a8d65487329a2fb51c0daae4ab59973c76ae",
+    "work/external_deadline/source_amendment.txt": "11fff4bcb3aa6ab944901d05ff9cfdbb230b2a8209d444d62abb664da69baa81",
+    "work/external_deadline/summarize.py": "d5778af722470fd8e2dac1a5d63071660f6b574036f831cb7ba1ce7c143004c6",
+    "work/external_deadline/evaluate.py": "c32e6be473d6613315cce78e65687a8a51cd588d790d21bb6aa75fa6b98e9aed",
+    "work/external_deadline/acquisition/acquisition.py": "9f2963ee9d1dd00fb194e62a962469b91a445bda8078e3000c8d055db51e934c",
+    "work/external_deadline/acquisition/check_acquisition.py": "66f4f134bb453401d22ca488eb5e05e859ad6950dbf26d868ebade16f606c691",
+    "work/external_deadline/acquisition/compact_secondary.py": "84b245d7407651ab9d1d4b6f751829fa28f54677b0343542e98f83ab87003121"
+  },
+  "code_uses_all_prescribed_cases": true
+}

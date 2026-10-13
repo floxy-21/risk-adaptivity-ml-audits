@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "fixtures": 600,
+  "candidate_scores": 6153,
+  "maximum_absolute_probability_difference": 4.6629367034256575e-15,
+  "allowed_absolute_difference": 2e-08,
+  "fixed_alpha_conditioning_checks": 6153,
+  "invalid_total_rejections": 3,
+  "alpha_range_tested": "Including arbitrary log-uniform shapes 1e-8 to1e2 and zero-valued Ridge forecasts",
+  "make_alpha_floor": "1e-8 * max(mean(max(Ridge,0)) within original block, 1e-12)",
+  "inputs": {
+    "ridge_policy.py": "9307c062d42679ecad6c37b5f87ede7d925126a28d5433ca30a4b2dc954bee9f",
+    "policy.py": "17b53e572f01f24d09fc1026e5fd5228ac49c48ad04a7c1037c2c84dcea4e257",
+    "check_decision_probability.py": "4af3188e5d1c655732cdc66c8c11648eddffdcc9ed95afde00248a2b78fa9cde"
+  }
+}

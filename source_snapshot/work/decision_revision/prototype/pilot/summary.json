@@ -1,0 +1,211 @@
+{
+  "status": "passed",
+  "scope": "Exploratory development-only; not independent confirmation, not replacement of frozen test criterion",
+  "cases": 300,
+  "households": 3,
+  "seconds": 16.975567200017394,
+  "summaries": [
+    {
+      "subgroup": "all",
+      "policy": "decision_probability",
+      "initially_unresolved": 121,
+      "households": 3,
+      "macro_mean_requests": 1.342851623553378,
+      "pooled_mean_requests": 1.421487603305785,
+      "B80": 2,
+      "coverage": [
+        0.0,
+        0.7304848708357481,
+        0.9383594120436225,
+        0.9883040935672515,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0,
+      "planning_milliseconds_per_unresolved_case": 1.0063933874364974
+    },
+    {
+      "subgroup": "all",
+      "policy": "exact_width_one",
+      "initially_unresolved": 121,
+      "households": 3,
+      "macro_mean_requests": 1.463779569042727,
+      "pooled_mean_requests": 1.5206611570247934,
+      "B80": 2,
+      "coverage": [
+        0.0,
+        0.6370581107423212,
+        0.905010273431326,
+        0.9941520467836257,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0,
+      "planning_milliseconds_per_unresolved_case": 1.004671074704013
+    },
+    {
+      "subgroup": "all",
+      "policy": "greedy_width_one",
+      "initially_unresolved": 121,
+      "households": 3,
+      "macro_mean_requests": 1.463779569042727,
+      "pooled_mean_requests": 1.5206611570247934,
+      "B80": 2,
+      "coverage": [
+        0.0,
+        0.6370581107423212,
+        0.905010273431326,
+        0.9941520467836257,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0,
+      "planning_milliseconds_per_unresolved_case": 1.0184421485928772
+    },
+    {
+      "subgroup": "all",
+      "policy": "hara_one",
+      "initially_unresolved": 121,
+      "households": 3,
+      "macro_mean_requests": 2.0236903570236904,
+      "pooled_mean_requests": 2.1074380165289255,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.40106773440106774,
+        0.6996470154364891,
+        0.8814428463551272,
+        0.9941520467836257,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0,
+      "planning_milliseconds_per_unresolved_case": 3.4827305764548697
+    },
+    {
+      "subgroup": "all",
+      "policy": "uniform_one",
+      "initially_unresolved": 121,
+      "households": 3,
+      "macro_mean_requests": 2.324570184219307,
+      "pooled_mean_requests": 2.3636363636363638,
+      "B80": 4,
+      "coverage": [
+        0.0,
+        0.3197583548460741,
+        0.6134028765607713,
+        0.7753191788279508,
+        0.9669494055458968,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0,
+      "planning_milliseconds_per_unresolved_case": 1.8367239650269618
+    },
+    {
+      "subgroup": "learned",
+      "policy": "decision_probability",
+      "initially_unresolved": 59,
+      "households": 3,
+      "macro_mean_requests": 1.2040133779264213,
+      "pooled_mean_requests": 1.2542372881355932,
+      "B80": 1,
+      "coverage": [
+        0.0,
+        0.8361204013377925,
+        0.959866220735786,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0,
+      "planning_milliseconds_per_unresolved_case": 0.8800254219164282
+    },
+    {
+      "subgroup": "learned",
+      "policy": "exact_width_one",
+      "initially_unresolved": 59,
+      "households": 3,
+      "macro_mean_requests": 1.3243032329988853,
+      "pooled_mean_requests": 1.3728813559322033,
+      "B80": 2,
+      "coverage": [
+        0.0,
+        0.7448160535117058,
+        0.9308807134894092,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0,
+      "planning_milliseconds_per_unresolved_case": 0.91277627161925
+    },
+    {
+      "subgroup": "learned",
+      "policy": "greedy_width_one",
+      "initially_unresolved": 59,
+      "households": 3,
+      "macro_mean_requests": 1.3243032329988853,
+      "pooled_mean_requests": 1.3728813559322033,
+      "B80": 2,
+      "coverage": [
+        0.0,
+        0.7448160535117058,
+        0.9308807134894092,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0,
+      "planning_milliseconds_per_unresolved_case": 0.9219779645811009
+    },
+    {
+      "subgroup": "learned",
+      "policy": "hara_one",
+      "initially_unresolved": 59,
+      "households": 3,
+      "macro_mean_requests": 1.7316610925306577,
+      "pooled_mean_requests": 1.8644067796610169,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.5492753623188406,
+        0.7976588628762542,
+        0.9214046822742475,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0,
+      "planning_milliseconds_per_unresolved_case": 2.986749155166701
+    },
+    {
+      "subgroup": "learned",
+      "policy": "uniform_one",
+      "initially_unresolved": 59,
+      "households": 3,
+      "macro_mean_requests": 2.1022296544035677,
+      "pooled_mean_requests": 2.169491525423729,
+      "B80": 3,
+      "coverage": [
+        0.0,
+        0.445819397993311,
+        0.6636566332218506,
+        0.8139353400222965,
+        0.9743589743589745,
+        1.0,
+        1.0
+      ],
+      "unresolved_at_stop": 0,
+      "planning_milliseconds_per_unresolved_case": 1.6739322050174668
+    }
+  ],
+  "reference_enclosure_and_sign_checks": "every stage passed",
+  "singleton_exact_and_greedy": "identical query traces for every case"
+}

@@ -1,0 +1,46 @@
+INDEPENDENT-SOURCE FEASIBILITY AMENDMENT — 11 October 2026
+Made before ANY forecasting or acquisition outcomes in the new experiment.
+
+The preserved REFIT raw Part2 inventory evaluated all20households under the
+source-only complete-support rule. It found zero complete reference days
+in allthree declared splits and hence zero eligible households. No model
+was fitted and no acquisition gain was evaluated on REFIT. We did not fill
+its intermittent unavailable power records to create supposed ground truth.
+Its original protocols, downloaded-source hashes, quality counts and failed
+cohort eligibility are retained for review.
+
+Replace this infeasible proposed source with UK Power Networks' official
+Low Carbon London half-hour energy release from the London Datastore.
+It is external to every source used in the existing manuscript. The source
+contains direct intervalkWh values and explicit Null values. Use the official
+full ZIP, no third-party cleaned or model-imputed derivative.
+The source/lcl_protocol.txt is frozen before its source inventory: consider
+the100lowest observed household IDs, then select the20lowest with>=90
+complete trainingdays, using sourcequality alone. No replacement basedon
+model performance, calibration quality or acquisition benefit. If a selected
+household lacks usable validation/test days, disclose it without replacing
+it on an outcome-dependent rule. All eligible available evaluationdays used.
+
+Periods superseding period_amendment.txt:
+  train2013-01-01–2013-09-30;
+  validation2013-10-01–2013-12-31;
+  test2014-01-01–2014-02-28.
+Source timestamps label half-hour records; pair labels00and30 within each
+hour and sum their kWh. Both mustbe finite,nonnegative,unique and present.
+No interpolation,zero filling,partial-hour scaling oroutlierclipping.
+We map the provider's recorded clock onto a UTC-shaped benchmark clock
+without claiming independentlyverified physical clock/arrival metadata.
+Conservatively exclude2013UKDSTtransitiondays andtargetdaysusingthem via
+lags2,3,8. The test lies inUKwinter. Generated forecastissue/cutofftimes
+are experimental availabilityrules, not recovered productioneventtimes.
+
+All five policies, six pairs, three seeds, six-hour masks/totals, sequential
+two-querybatches, cap6 and fixed household-macro B80/15%criterion stay as
+specified in experiment_protocol.txt. The same original four model
+specifications generate a NEW causal archive on this external source.
+
+The validation replay is a retrospective calibration/feasibility diagnostic:
+Hara's SD uses the complete validationwindow and is not claimed available at
+each earlier validationday cutoff. Test acquisitions occur after all
+calibration targets are available. The80%criterion remainsfixed regardless
+of validation feasibility andtestoutcomes. No productioncostclaim is added.

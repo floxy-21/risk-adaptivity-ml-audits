@@ -1,0 +1,45 @@
+\subsection{Executable audit decisions and independent reconstruction}
+\label{sec:executable-gate}
+The supplement includes a working audit interface, beyond a table of saved
+endpoints. It accepts surviving readings, fixed predictions, declared
+totals and permitted persistence-copy records. It reconstructs targets
+from the archive, computes all six paired intervals, and returns attaining
+endpoint completions. A ranking is allowed only when its entire interval
+has the required sign; otherwise the interface withholds the certificate.
+A best model is reported only if it is certified against every alternative.
+The input schema rejects a hidden-reference-target field. Source-row traces
+and residual-total deductions accompany the output.
+
+Two actual frozen-forecast examples exercise this interface. Selection
+uses the first six-hour contiguous-mask record with permitted copies and
+the first without in the existing source ordering, rather than favorable
+model errors. For consumer MT\_001 on 1 January 2014, all six missing
+readings are reconstructed and all six pair rankings are certified; on
+28 January, six readings remain unknown, one comparison is certified and
+five are withheld. The latter persistence-minus-ridge MSE interval is
+$[0.85544,2.93641]$, certifying ridge for that comparison but not a best
+model overall. Both examples use zero paid readings. Held reference targets
+enter the subsequent checker only. The totals and missingness remain
+constructed benchmark inputs, not newly observed production failures.
+
+Twenty-four independently assembled endpoint LPs verify these outputs.
+The maximum absolute endpoint disagreement is $1.78\times10^{-15}$,
+with zero recorded known-coordinate and original-total witness residuals.
+The acceptance threshold is $2\times10^{-8}$ times the maximum of one,
+the absolute interval endpoints and the aggregate totals; HiGHS feasibility
+tolerances are $10^{-9}$. Small residual arithmetic corrections are recorded.
+This is floating-point verification,
+not formal interval arithmetic. These examples demonstrate usable
+decision and witness outputs, not an additional performance estimate.
+
+A second checker independently reconstructs two fixed scenarios for all
+30 additional consumers: 6,420 daily snapshots and 360 period comparisons.
+It uses 1,800 calls to a separately written reference bound implementation
+and 1,200 water-filling/vertex individual-loss optimizations, without
+importing production closure or bound routines. Maximum normalized
+endpoint differences are $1.07\times10^{-14}$ for paired bounds and
+$1.10\times10^{-14}$ for separate-loss bounds, within a $2\times10^{-8}$
+checking tolerance. It also checks all 19,440 ledger counts and issued
+sign decisions. Together with the whole-period LP checks, this validates
+both sides of the new comparison rather than its summary arithmetic alone.
+\FloatBarrier

@@ -1,0 +1,23 @@
+\bibitem{noaa_hpd_v2}
+D.~Wuertz, J.~Lawrimore, and B.~Korzeniewski,
+``NOAA Cooperative Observer Program (COOP) Precipitation Data---Hourly,
+Version 2,'' NOAA National Centers for Environmental Information, 2018.
+Station USC00010140, December 2008 and June 2009; accessed 10 October 2026.
+\url{https://doi.org/10.25921/p7j8-2170}.
+
+\bibitem{noaa_hpd_format}
+NOAA National Centers for Environmental Information,
+``README file for COOP Hourly Precipitation Data, CSV format,''
+and parallel 15-minute archive format documentation, accessed 10 October 2026.
+\url{https://www.ncei.noaa.gov/data/coop-hourly-precipitation/v2/doc/readme.csv.txt};
+\url{https://www.ncei.noaa.gov/pub/data/hpd/auto/v2/beta/15min/readme.15min.txt}.
+
+\bibitem{guan2022gefs}
+H.~Guan et al., ``GEFSv12 Reforecast Dataset for Supporting Subseasonal
+and Hydrometeorological Applications,'' \emph{Monthly Weather Review},
+vol.~150, pp.~647--665, 2022.
+\url{https://doi.org/10.1175/MWR-D-21-0245.1}.
+
+\bibitem{noaa_gefs_archive}
+NOAA, ``GEFSv12 reforecast data: archive description,'' accessed 10 October 2026.
+\url{https://noaa-gefs-retrospective.s3.amazonaws.com/Description_of_reforecast_data.pdf}.

@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "development_cases": 120,
+  "oracle_minima_match_previous_independent_enumeration": true,
+  "new_confirmation_cases_read": 0
+}

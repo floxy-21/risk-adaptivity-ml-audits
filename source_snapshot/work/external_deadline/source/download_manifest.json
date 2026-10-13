@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-11T19:38:42.899176+00:00",
+  "records": [
+    {
+      "url": "https://pure.strath.ac.uk/ws/portalfiles/portal/62090176/RAW_READ_ME_081116.txt",
+      "final_url": "https://pure.strath.ac.uk/ws/portalfiles/portal/62090176/RAW_READ_ME_081116.txt",
+      "status": 200,
+      "content_length": null,
+      "bytes": 11098,
+      "sha256": "6b20b821a36af681e460bde5d24b933aa58e191c4c3f8de05218941e6d34937d",
+      "seconds": 0.1857797999982722
+    },
+    {
+      "url": "https://pure.strath.ac.uk/ws/portalfiles/portal/62090177/REFIT_RAW_081116.7z",
+      "final_url": "https://pure.strath.ac.uk/ws/portalfiles/portal/62090177/REFIT_RAW_081116.7z",
+      "status": 200,
+      "content_length": null,
+      "bytes": 698108465,
+      "sha256": "f294fe673532220dc527b5e7d7a25e99568bd24acf9fb5be0a0def14af64b2cf",
+      "seconds": 10.027764300000854
+    }
+  ]
+}

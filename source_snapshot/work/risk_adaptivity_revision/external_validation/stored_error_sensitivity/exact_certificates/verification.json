@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "certificates": 49,
+  "by_delta": {
+    "1/1000": 27,
+    "1/100": 22
+  },
+  "matrix_reconstruction": "Independent sparse semantic construction; all exported coefficients/boxes/multipliers checked",
+  "arithmetic": "Python Fraction only for certificates; no LP solver imported or run",
+  "minimum_margin_exact": "62690716363030944789827837795111/16676489784621688173380802655027200",
+  "minimum_margin": 0.0037592273417659822,
+  "maximum_absolute_box_correction": 0.02789414532409223,
+  "checked_numerical_diagnostics_tolerance": 2e-08,
+  "scope": "Rigorous support-defined adaptive-policy guarantee at the unchanged threshold; no exact optimum or floating online-branch implementation claim",
+  "certificate_sha256": "935e6c7e75900a012ca44b41955fbd3e28ce094a1479ea925e5300bbc9d235dd",
+  "source_sha256": "9891af2d0ca91dbd067ccf838e133b6792b40bafce9940459dca81d56849a2a2",
+  "seconds": 1.2673700000159442
+}

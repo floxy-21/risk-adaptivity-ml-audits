@@ -1,0 +1,33 @@
+\subsection{Stopping when a model choice is justified}\label{sec:decision-stopping}
+The intervals also support a decision among a fixed finite set of candidate
+forecasts. For a common nonempty compact feasible set $\F_t$ on the same
+evaluation coordinates, write
+\[
+ U_{jk}(\F_t)=\max_{y\in\F_t}\{L_j(y)-L_k(y)\},\qquad
+ \rho(\F_t)=\min_j\max_k U_{jk}(\F_t),\qquad U_{jj}=0.
+\]
+Here $L_j$ is the candidate's fixed-record MSE; the comparator is the best
+candidate on that completed record. Appendix~\ref{app:regret} proves the
+identity $\max_{y\in\F_t}\{L_j(y)-\min_kL_k(y)\}=\max_kU_{jk}(\F_t)$.
+\begin{corollary}[Certified decision stopping]\label{cor:decision-stopping}
+For $\varepsilon\geq0$, if $\rho(\F_t)\leq\varepsilon$, any minimizing
+candidate $j_t$ satisfies
+\[
+ L_{j_t}(y)\leq\min_k L_k(y)+\varepsilon\qquad\text{for every }y\in\F_t.
+\]
+If a true additional reading gives a nonempty feasible subset
+$\F_{t+1}\subseteq\F_t$, then $\rho(\F_{t+1})\leq\rho(\F_t)$.
+\end{corollary}
+\begin{proof}
+The first statement follows from the displayed regret identity. Restricting
+the feasible set cannot increase any $U_{jk}$, hence cannot increase either
+its maximum over $k$ or the subsequent minimum over $j$.
+\end{proof}
+Thus an auditor may stop when the information justifies its predeclared
+MSE-regret tolerance. At zero tolerance this certifies a best-or-tied-best
+candidate; a strict winner requires strictly negative upper bounds against
+every distinct competitor. A positive tolerance and any training-based
+normalization must be fixed before test outcomes are examined. The result
+does not make a repeated width-optimal batch policy optimal for the total
+requests needed to stop. Pairwise experiments below retain separate query
+budgets; shared multi-model requests would require their own cost accounting.

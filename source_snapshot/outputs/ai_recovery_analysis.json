@@ -1,0 +1,1299 @@
+{
+  "completed_utc": "2026-10-10T01:19:16.931705+00:00",
+  "scenario": {
+    "gap_hours": 6,
+    "total_block_hours": 6,
+    "total_tolerance": 0,
+    "mask": "contiguous",
+    "budget": 2
+  },
+  "bootstrap": {
+    "seed": 280109,
+    "replicates": 2000,
+    "unit": "meter",
+    "method": "paired percentile bootstrap of macro-mean meter summaries",
+    "scope_alignment": "same resampled meter positions for both pair scopes and all policies",
+    "scope_warning": "Descriptive for this convenience panel; within-meter dependence retained; cross-meter dependence not modeled; no population-wide confidence claim"
+  },
+  "width_aggregation": "For each meter, total remaining width / total initial width across its dependent trials, then equal-weight mean over meters with positive initial width",
+  "resolution_aggregation": "Equal-weight mean over meter-level resolved fractions",
+  "pair_scopes": {
+    "all_pairs": "all six pairs among four models",
+    "neural_pairs": "the three pairs containing the fixed MLP"
+  },
+  "portugal": {
+    "all_pairs": {
+      "meters": 30,
+      "dependent_pair_trials": 57780,
+      "resolution_at_zero_budget": {
+        "mean": 0.18791969539633083,
+        "percentile95": [
+          0.14388369678089297,
+          0.24056031498788502
+        ],
+        "mean_percent_or_percentage_points": 18.791969539633083,
+        "percentile95_percent_or_percentage_points": [
+          14.388369678089298,
+          24.056031498788503
+        ]
+      },
+      "optimal_resolution_at_budget2": {
+        "mean": 0.6008653513326411,
+        "percentile95": [
+          0.562657926618207,
+          0.6437551921079959
+        ],
+        "mean_percent_or_percentage_points": 60.08653513326411,
+        "percentile95_percent_or_percentage_points": [
+          56.265792661820704,
+          64.3755192107996
+        ]
+      },
+      "resolution_differences": {
+        "optimal_minus_no_recovery": {
+          "mean": 0.4129456559363102,
+          "percentile95": [
+            0.3884890965732087,
+            0.4351696088611977
+          ],
+          "mean_percent_or_percentage_points": 41.29456559363102,
+          "percentile95_percent_or_percentage_points": [
+            38.84890965732087,
+            43.51696088611977
+          ]
+        },
+        "optimal_minus_greedy": {
+          "mean": 0.011526479750778827,
+          "percentile95": [
+            0.01005494980962271,
+            0.013066805122879888
+          ],
+          "mean_percent_or_percentage_points": 1.1526479750778826,
+          "percentile95_percent_or_percentage_points": [
+            1.005494980962271,
+            1.3066805122879888
+          ]
+        },
+        "optimal_minus_absolute_weighted": {
+          "mean": 0.1982519903080651,
+          "percentile95": [
+            0.18584241952232608,
+            0.20865394600207687
+          ],
+          "mean_percent_or_percentage_points": 19.82519903080651,
+          "percentile95_percent_or_percentage_points": [
+            18.58424195223261,
+            20.865394600207686
+          ]
+        },
+        "optimal_minus_squared_weighted": {
+          "mean": 0.1697819314641745,
+          "percentile95": [
+            0.15901349948078922,
+            0.17905849775008656
+          ],
+          "mean_percent_or_percentage_points": 16.97819314641745,
+          "percentile95_percent_or_percentage_points": [
+            15.901349948078922,
+            17.905849775008654
+          ]
+        }
+      },
+      "actual_remaining_width_fraction": {
+        "mean": 0.1909085047738153,
+        "percentile95": [
+          0.1845248638623161,
+          0.19617348941613838
+        ],
+        "mean_percent_or_percentage_points": 19.09085047738153,
+        "percentile95_percent_or_percentage_points": [
+          18.45248638623161,
+          19.617348941613837
+        ]
+      },
+      "worst_case_remaining_width_fraction": {
+        "mean": 0.28629835215064375,
+        "percentile95": [
+          0.27772301825741524,
+          0.2938182100159869
+        ],
+        "mean_percent_or_percentage_points": 28.629835215064375,
+        "percentile95_percent_or_percentage_points": [
+          27.772301825741526,
+          29.38182100159869
+        ]
+      },
+      "actual_width_reduction_fraction": {
+        "mean": 0.8090914952261845,
+        "percentile95": [
+          0.8038265105838616,
+          0.815475136137684
+        ],
+        "mean_percent_or_percentage_points": 80.90914952261845,
+        "percentile95_percent_or_percentage_points": [
+          80.38265105838616,
+          81.5475136137684
+        ]
+      },
+      "worst_case_width_reduction_fraction": {
+        "mean": 0.7137016478493564,
+        "percentile95": [
+          0.7061817899840134,
+          0.7222769817425849
+        ],
+        "mean_percent_or_percentage_points": 71.37016478493564,
+        "percentile95_percent_or_percentage_points": [
+          70.61817899840133,
+          72.22769817425849
+        ]
+      },
+      "per_meter_paired_differences": [
+        {
+          "meter": "MT_001",
+          "no_recovery": 0.25129802699896164,
+          "greedy": 0.004153686396677125,
+          "absolute_weighted": 0.07684319833852549,
+          "squared_weighted": 0.06022845275181732
+        },
+        {
+          "meter": "MT_002",
+          "no_recovery": 0.3707165109034268,
+          "greedy": 0.01609553478712361,
+          "absolute_weighted": 0.2082035306334372,
+          "squared_weighted": 0.1812045690550364
+        },
+        {
+          "meter": "MT_003",
+          "no_recovery": 0.54932502596054,
+          "greedy": 0.014537902388369717,
+          "absolute_weighted": 0.20145379023883703,
+          "squared_weighted": 0.1552440290758048
+        },
+        {
+          "meter": "MT_004",
+          "no_recovery": 0.4252336448598132,
+          "greedy": 0.014018691588785104,
+          "absolute_weighted": 0.19730010384215996,
+          "squared_weighted": 0.1687435098650052
+        },
+        {
+          "meter": "MT_005",
+          "no_recovery": 0.45067497403946,
+          "greedy": 0.014018691588784993,
+          "absolute_weighted": 0.2222222222222222,
+          "squared_weighted": 0.1967808930425753
+        },
+        {
+          "meter": "MT_006",
+          "no_recovery": 0.4319833852544133,
+          "greedy": 0.009865005192107978,
+          "absolute_weighted": 0.2082035306334371,
+          "squared_weighted": 0.17860851505711312
+        },
+        {
+          "meter": "MT_007",
+          "no_recovery": 0.4392523364485981,
+          "greedy": 0.012461059190031154,
+          "absolute_weighted": 0.18380062305295952,
+          "squared_weighted": 0.16251298026998962
+        },
+        {
+          "meter": "MT_008",
+          "no_recovery": 0.38161993769470415,
+          "greedy": 0.0062305295950156325,
+          "absolute_weighted": 0.2087227414330218,
+          "squared_weighted": 0.18016614745586712
+        },
+        {
+          "meter": "MT_009",
+          "no_recovery": 0.4683281412253376,
+          "greedy": 0.006749740394600301,
+          "absolute_weighted": 0.20456905503634482,
+          "squared_weighted": 0.18172377985462107
+        },
+        {
+          "meter": "MT_010",
+          "no_recovery": 0.42263759086188996,
+          "greedy": 0.01661474558670817,
+          "absolute_weighted": 0.17601246105919,
+          "squared_weighted": 0.14537902388369672
+        },
+        {
+          "meter": "MT_011",
+          "no_recovery": 0.4044652128764279,
+          "greedy": 0.010384215991692702,
+          "absolute_weighted": 0.2144340602284528,
+          "squared_weighted": 0.18224299065420568
+        },
+        {
+          "meter": "MT_013",
+          "no_recovery": 0.3006230529595016,
+          "greedy": 0.011422637590861928,
+          "absolute_weighted": 0.16407061266874357,
+          "squared_weighted": 0.1355140186915888
+        },
+        {
+          "meter": "MT_014",
+          "no_recovery": 0.4112149532710281,
+          "greedy": 0.012980269989615767,
+          "absolute_weighted": 0.19055036344755977,
+          "squared_weighted": 0.17133956386292837
+        },
+        {
+          "meter": "MT_016",
+          "no_recovery": 0.436656282450675,
+          "greedy": 0.012980269989615767,
+          "absolute_weighted": 0.22637590861889934,
+          "squared_weighted": 0.19003115264797504
+        },
+        {
+          "meter": "MT_017",
+          "no_recovery": 0.40238836967808933,
+          "greedy": 0.01713395638629278,
+          "absolute_weighted": 0.20872274143302172,
+          "squared_weighted": 0.1723779854620976
+        },
+        {
+          "meter": "MT_018",
+          "no_recovery": 0.418483904465213,
+          "greedy": 0.010903426791277315,
+          "absolute_weighted": 0.19418483904465217,
+          "squared_weighted": 0.17964693665628256
+        },
+        {
+          "meter": "MT_019",
+          "no_recovery": 0.5109034267912773,
+          "greedy": 0.016095534787123555,
+          "absolute_weighted": 0.23935617860851516,
+          "squared_weighted": 0.19522326064382145
+        },
+        {
+          "meter": "MT_020",
+          "no_recovery": 0.46573208722741444,
+          "greedy": 0.00830737279335414,
+          "absolute_weighted": 0.2284527518172378,
+          "squared_weighted": 0.18380062305295952
+        },
+        {
+          "meter": "MT_021",
+          "no_recovery": 0.3582554517133957,
+          "greedy": 0.00519210799584624,
+          "absolute_weighted": 0.17964693665628245,
+          "squared_weighted": 0.16043613707165105
+        },
+        {
+          "meter": "MT_022",
+          "no_recovery": 0.3790238836967809,
+          "greedy": 0.01349948078920038,
+          "absolute_weighted": 0.1765316718587746,
+          "squared_weighted": 0.15628245067497404
+        },
+        {
+          "meter": "MT_023",
+          "no_recovery": 0.48753894080996885,
+          "greedy": 0.024922118380062308,
+          "absolute_weighted": 0.2424714434060229,
+          "squared_weighted": 0.20093457943925236
+        },
+        {
+          "meter": "MT_024",
+          "no_recovery": 0.39304257528556596,
+          "greedy": 0.009345794392523366,
+          "absolute_weighted": 0.18380062305295952,
+          "squared_weighted": 0.15991692627206644
+        },
+        {
+          "meter": "MT_025",
+          "no_recovery": 0.4283489096573209,
+          "greedy": 0.008826583592938753,
+          "absolute_weighted": 0.20664589823468332,
+          "squared_weighted": 0.18380062305295952
+        },
+        {
+          "meter": "MT_026",
+          "no_recovery": 0.43509865005192117,
+          "greedy": 0.010384215991692702,
+          "absolute_weighted": 0.20093457943925236,
+          "squared_weighted": 0.16407061266874357
+        },
+        {
+          "meter": "MT_027",
+          "no_recovery": 0.4709241952232607,
+          "greedy": 0.011941848390446541,
+          "absolute_weighted": 0.2393561786085151,
+          "squared_weighted": 0.2159916926272067
+        },
+        {
+          "meter": "MT_028",
+          "no_recovery": 0.4075804776739357,
+          "greedy": 0.007268951194184914,
+          "absolute_weighted": 0.177570093457944,
+          "squared_weighted": 0.1599169262720665
+        },
+        {
+          "meter": "MT_029",
+          "no_recovery": 0.23208722741433024,
+          "greedy": 0.0020768431983384517,
+          "absolute_weighted": 0.13862928348909653,
+          "squared_weighted": 0.11838006230529596
+        },
+        {
+          "meter": "MT_031",
+          "no_recovery": 0.40758047767393557,
+          "greedy": 0.011941848390446486,
+          "absolute_weighted": 0.2045690550363447,
+          "squared_weighted": 0.18068535825545168
+        },
+        {
+          "meter": "MT_032",
+          "no_recovery": 0.45534787123572174,
+          "greedy": 0.012461059190031154,
+          "absolute_weighted": 0.23052959501557635,
+          "squared_weighted": 0.19418483904465217
+        },
+        {
+          "meter": "MT_033",
+          "no_recovery": 0.39200415368639663,
+          "greedy": 0.012980269989615767,
+          "absolute_weighted": 0.21339563862928346,
+          "squared_weighted": 0.17808930425752856
+        }
+      ]
+    },
+    "neural_pairs": {
+      "meters": 30,
+      "dependent_pair_trials": 28890,
+      "resolution_at_zero_budget": {
+        "mean": 0.15299411561093795,
+        "percentile95": [
+          0.11124870197300099,
+          0.20484683281412255
+        ],
+        "mean_percent_or_percentage_points": 15.299411561093795,
+        "percentile95_percent_or_percentage_points": [
+          11.1248701973001,
+          20.484683281412256
+        ]
+      },
+      "optimal_resolution_at_budget2": {
+        "mean": 0.5593631014191762,
+        "percentile95": [
+          0.5169600207684321,
+          0.6056187262028382
+        ],
+        "mean_percent_or_percentage_points": 55.93631014191762,
+        "percentile95_percent_or_percentage_points": [
+          51.69600207684321,
+          60.56187262028382
+        ]
+      },
+      "resolution_differences": {
+        "optimal_minus_no_recovery": {
+          "mean": 0.40636898580823827,
+          "percentile95": [
+            0.38670560747663557,
+            0.42692973347178953
+          ],
+          "mean_percent_or_percentage_points": 40.636898580823825,
+          "percentile95_percent_or_percentage_points": [
+            38.67056074766356,
+            42.692973347178956
+          ]
+        },
+        "optimal_minus_greedy": {
+          "mean": 0.011768778123918303,
+          "percentile95": [
+            0.009934233298719267,
+            0.013603322949117334
+          ],
+          "mean_percent_or_percentage_points": 1.1768778123918304,
+          "percentile95_percent_or_percentage_points": [
+            0.9934233298719267,
+            1.3603322949117334
+          ]
+        },
+        "optimal_minus_absolute_weighted": {
+          "mean": 0.2055728625822084,
+          "percentile95": [
+            0.19400917272412602,
+            0.21564641744548294
+          ],
+          "mean_percent_or_percentage_points": 20.557286258220838,
+          "percentile95_percent_or_percentage_points": [
+            19.400917272412602,
+            21.564641744548293
+          ]
+        },
+        "optimal_minus_squared_weighted": {
+          "mean": 0.17888542748355835,
+          "percentile95": [
+            0.168153340256144,
+            0.18767826237452412
+          ],
+          "mean_percent_or_percentage_points": 17.888542748355835,
+          "percentile95_percent_or_percentage_points": [
+            16.8153340256144,
+            18.76782623745241
+          ]
+        }
+      },
+      "actual_remaining_width_fraction": {
+        "mean": 0.19468854782064002,
+        "percentile95": [
+          0.18971723403201618,
+          0.19892303584394652
+        ],
+        "mean_percent_or_percentage_points": 19.468854782064003,
+        "percentile95_percent_or_percentage_points": [
+          18.97172340320162,
+          19.892303584394654
+        ]
+      },
+      "worst_case_remaining_width_fraction": {
+        "mean": 0.2915768839528241,
+        "percentile95": [
+          0.28495445553976906,
+          0.29763072879000996
+        ],
+        "mean_percent_or_percentage_points": 29.15768839528241,
+        "percentile95_percent_or_percentage_points": [
+          28.495445553976907,
+          29.763072879000994
+        ]
+      },
+      "actual_width_reduction_fraction": {
+        "mean": 0.80531145217936,
+        "percentile95": [
+          0.8010769641560536,
+          0.8102827659679839
+        ],
+        "mean_percent_or_percentage_points": 80.531145217936,
+        "percentile95_percent_or_percentage_points": [
+          80.10769641560536,
+          81.02827659679839
+        ]
+      },
+      "worst_case_width_reduction_fraction": {
+        "mean": 0.7084231160471758,
+        "percentile95": [
+          0.70236927120999,
+          0.7150455444602307
+        ],
+        "mean_percent_or_percentage_points": 70.84231160471758,
+        "percentile95_percent_or_percentage_points": [
+          70.236927120999,
+          71.50455444602308
+        ]
+      },
+      "per_meter_paired_differences": [
+        {
+          "meter": "MT_001",
+          "no_recovery": 0.2710280373831776,
+          "greedy": 0.0031152647975077885,
+          "absolute_weighted": 0.07995846313603328,
+          "squared_weighted": 0.06022845275181732
+        },
+        {
+          "meter": "MT_002",
+          "no_recovery": 0.3790238836967809,
+          "greedy": 0.015576323987538943,
+          "absolute_weighted": 0.21806853582554522,
+          "squared_weighted": 0.19937694704049852
+        },
+        {
+          "meter": "MT_003",
+          "no_recovery": 0.5628245067497404,
+          "greedy": 0.01869158878504673,
+          "absolute_weighted": 0.2429906542056075,
+          "squared_weighted": 0.19210799584631366
+        },
+        {
+          "meter": "MT_004",
+          "no_recovery": 0.3883696780893043,
+          "greedy": 0.017653167185877394,
+          "absolute_weighted": 0.1869158878504672,
+          "squared_weighted": 0.17445482866043605
+        },
+        {
+          "meter": "MT_005",
+          "no_recovery": 0.4205607476635514,
+          "greedy": 0.011422637590861928,
+          "absolute_weighted": 0.20560747663551399,
+          "squared_weighted": 0.18899273104880587
+        },
+        {
+          "meter": "MT_006",
+          "no_recovery": 0.3977154724818276,
+          "greedy": 0.012461059190031099,
+          "absolute_weighted": 0.2128764278296988,
+          "squared_weighted": 0.18587746625129797
+        },
+        {
+          "meter": "MT_007",
+          "no_recovery": 0.45275181723779856,
+          "greedy": 0.012461059190031154,
+          "absolute_weighted": 0.1941848390446521,
+          "squared_weighted": 0.17030114226375914
+        },
+        {
+          "meter": "MT_008",
+          "no_recovery": 0.33956386292834895,
+          "greedy": 0.00830737279335414,
+          "absolute_weighted": 0.19730010384215993,
+          "squared_weighted": 0.17964693665628242
+        },
+        {
+          "meter": "MT_009",
+          "no_recovery": 0.4693665628245068,
+          "greedy": 0.006230529595015577,
+          "absolute_weighted": 0.21495327102803746,
+          "squared_weighted": 0.1703011422637591
+        },
+        {
+          "meter": "MT_010",
+          "no_recovery": 0.4371754932502596,
+          "greedy": 0.019730010384215957,
+          "absolute_weighted": 0.1941848390446521,
+          "squared_weighted": 0.16614745586708202
+        },
+        {
+          "meter": "MT_011",
+          "no_recovery": 0.3904465212876429,
+          "greedy": 0.009345794392523366,
+          "absolute_weighted": 0.21183800623052967,
+          "squared_weighted": 0.18899273104880587
+        },
+        {
+          "meter": "MT_013",
+          "no_recovery": 0.3426791277258566,
+          "greedy": 0.014537902388369606,
+          "absolute_weighted": 0.19522326064382134,
+          "squared_weighted": 0.16510903426791274
+        },
+        {
+          "meter": "MT_014",
+          "no_recovery": 0.4184839044652129,
+          "greedy": 0.015576323987538943,
+          "absolute_weighted": 0.2004153686396677,
+          "squared_weighted": 0.1879543094496366
+        },
+        {
+          "meter": "MT_016",
+          "no_recovery": 0.4361370716510904,
+          "greedy": 0.006230529595015577,
+          "absolute_weighted": 0.2284527518172378,
+          "squared_weighted": 0.19210799584631366
+        },
+        {
+          "meter": "MT_017",
+          "no_recovery": 0.3624091381100727,
+          "greedy": 0.020768431983385183,
+          "absolute_weighted": 0.1931464174454828,
+          "squared_weighted": 0.1651090342679127
+        },
+        {
+          "meter": "MT_018",
+          "no_recovery": 0.4195223260643821,
+          "greedy": 0.007268951194184803,
+          "absolute_weighted": 0.1973001038421599,
+          "squared_weighted": 0.18172377985462096
+        },
+        {
+          "meter": "MT_019",
+          "no_recovery": 0.47144340602284524,
+          "greedy": 0.009345794392523366,
+          "absolute_weighted": 0.25025960539979225,
+          "squared_weighted": 0.19833852544132913
+        },
+        {
+          "meter": "MT_020",
+          "no_recovery": 0.47663551401869164,
+          "greedy": 0.009345794392523366,
+          "absolute_weighted": 0.22741433021806862,
+          "squared_weighted": 0.1983385254413293
+        },
+        {
+          "meter": "MT_021",
+          "no_recovery": 0.32398753894081,
+          "greedy": 0.006230529595015577,
+          "absolute_weighted": 0.1775700934579439,
+          "squared_weighted": 0.15784008307372788
+        },
+        {
+          "meter": "MT_022",
+          "no_recovery": 0.4101765316718588,
+          "greedy": 0.015576323987538943,
+          "absolute_weighted": 0.2107995846313604,
+          "squared_weighted": 0.18899273104880587
+        },
+        {
+          "meter": "MT_023",
+          "no_recovery": 0.46313603322949115,
+          "greedy": 0.02388369678089297,
+          "absolute_weighted": 0.24091381100726894,
+          "squared_weighted": 0.21703011422637591
+        },
+        {
+          "meter": "MT_024",
+          "no_recovery": 0.3665628245067498,
+          "greedy": 0.008307372793354084,
+          "absolute_weighted": 0.17860851505711317,
+          "squared_weighted": 0.15368639667705086
+        },
+        {
+          "meter": "MT_025",
+          "no_recovery": 0.4434060228452752,
+          "greedy": 0.012461059190031154,
+          "absolute_weighted": 0.2107995846313604,
+          "squared_weighted": 0.19210799584631366
+        },
+        {
+          "meter": "MT_026",
+          "no_recovery": 0.4008307372793355,
+          "greedy": 0.010384215991692702,
+          "absolute_weighted": 0.2076843198338526,
+          "squared_weighted": 0.1671858774662513
+        },
+        {
+          "meter": "MT_027",
+          "no_recovery": 0.4371754932502596,
+          "greedy": 0.00830737279335414,
+          "absolute_weighted": 0.23364485981308414,
+          "squared_weighted": 0.20560747663551404
+        },
+        {
+          "meter": "MT_028",
+          "no_recovery": 0.3800623052959501,
+          "greedy": 0.007268951194184803,
+          "absolute_weighted": 0.1869158878504673,
+          "squared_weighted": 0.1723779854620976
+        },
+        {
+          "meter": "MT_029",
+          "no_recovery": 0.2990654205607477,
+          "greedy": 0.0,
+          "absolute_weighted": 0.177570093457944,
+          "squared_weighted": 0.15368639667705092
+        },
+        {
+          "meter": "MT_031",
+          "no_recovery": 0.3790238836967809,
+          "greedy": 0.012461059190031154,
+          "absolute_weighted": 0.21495327102803743,
+          "squared_weighted": 0.19106957424714432
+        },
+        {
+          "meter": "MT_032",
+          "no_recovery": 0.4371754932502596,
+          "greedy": 0.012461059190031154,
+          "absolute_weighted": 0.2305295950155763,
+          "squared_weighted": 0.19626168224299062
+        },
+        {
+          "meter": "MT_033",
+          "no_recovery": 0.41433021806853587,
+          "greedy": 0.017653167185877505,
+          "absolute_weighted": 0.2461059190031153,
+          "squared_weighted": 0.2056074766355141
+        }
+      ]
+    }
+  },
+  "cohort_descriptions": [
+    {
+      "scope": "all_pairs",
+      "cohort": "blem_counters",
+      "policy": "optimal_minimax_width",
+      "budget": 0,
+      "meters": 3,
+      "dependent_pair_trials": 4914,
+      "macro_resolution_fraction": 0.4385429385429385,
+      "macro_actual_remaining_width_fraction": 1.0,
+      "macro_worst_case_remaining_width_fraction": 1.0,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 0.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "blem_counters",
+      "policy": "optimal_minimax_width",
+      "budget": 2,
+      "meters": 3,
+      "dependent_pair_trials": 4914,
+      "macro_resolution_fraction": 0.8685388685388685,
+      "macro_actual_remaining_width_fraction": 0.15558654738157493,
+      "macro_worst_case_remaining_width_fraction": 0.23504721313249155,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "blem_counters",
+      "policy": "random",
+      "budget": 2,
+      "meters": 3,
+      "dependent_pair_trials": 4914,
+      "macro_resolution_fraction": 0.6733821733821733,
+      "macro_actual_remaining_width_fraction": 0.46519128688947653,
+      "macro_worst_case_remaining_width_fraction": 0.6919682173574301,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "blem_counters",
+      "policy": "largest_absolute_contrast",
+      "budget": 2,
+      "meters": 3,
+      "dependent_pair_trials": 4914,
+      "macro_resolution_fraction": 0.8048433048433048,
+      "macro_actual_remaining_width_fraction": 0.24832395529380236,
+      "macro_worst_case_remaining_width_fraction": 0.3815894370029616,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "blem_counters",
+      "policy": "greedy_width_reduction",
+      "budget": 2,
+      "meters": 3,
+      "dependent_pair_trials": 4914,
+      "macro_resolution_fraction": 0.8624338624338624,
+      "macro_actual_remaining_width_fraction": 0.16721657411987279,
+      "macro_worst_case_remaining_width_fraction": 0.2534533916790295,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "blem_counters",
+      "policy": "contrast_weighted_sampling",
+      "budget": 2,
+      "meters": 3,
+      "dependent_pair_trials": 4914,
+      "macro_resolution_fraction": 0.7382987382987384,
+      "macro_actual_remaining_width_fraction": 0.35939168818844064,
+      "macro_worst_case_remaining_width_fraction": 0.5389035138522641,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "blem_counters",
+      "policy": "squared_contrast_weighted_sampling",
+      "budget": 2,
+      "meters": 3,
+      "dependent_pair_trials": 4914,
+      "macro_resolution_fraction": 0.7747252747252747,
+      "macro_actual_remaining_width_fraction": 0.3050927661013521,
+      "macro_worst_case_remaining_width_fraction": 0.46458528181563014,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "household",
+      "policy": "optimal_minimax_width",
+      "budget": 0,
+      "meters": 1,
+      "dependent_pair_trials": 4428,
+      "macro_resolution_fraction": 0.489159891598916,
+      "macro_actual_remaining_width_fraction": 1.0,
+      "macro_worst_case_remaining_width_fraction": 1.0,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 0.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "household",
+      "policy": "optimal_minimax_width",
+      "budget": 2,
+      "meters": 1,
+      "dependent_pair_trials": 4428,
+      "macro_resolution_fraction": 0.8922764227642277,
+      "macro_actual_remaining_width_fraction": 0.1717646918796868,
+      "macro_worst_case_remaining_width_fraction": 0.2567917139580194,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "household",
+      "policy": "random",
+      "budget": 2,
+      "meters": 1,
+      "dependent_pair_trials": 4428,
+      "macro_resolution_fraction": 0.7113821138211383,
+      "macro_actual_remaining_width_fraction": 0.4839387004511482,
+      "macro_worst_case_remaining_width_fraction": 0.7144446282938453,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "household",
+      "policy": "largest_absolute_contrast",
+      "budget": 2,
+      "meters": 1,
+      "dependent_pair_trials": 4428,
+      "macro_resolution_fraction": 0.8172990063233966,
+      "macro_actual_remaining_width_fraction": 0.2938415399895488,
+      "macro_worst_case_remaining_width_fraction": 0.4449978134680271,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "household",
+      "policy": "greedy_width_reduction",
+      "budget": 2,
+      "meters": 1,
+      "dependent_pair_trials": 4428,
+      "macro_resolution_fraction": 0.8825654923215899,
+      "macro_actual_remaining_width_fraction": 0.186779062471613,
+      "macro_worst_case_remaining_width_fraction": 0.2807499546797196,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "household",
+      "policy": "contrast_weighted_sampling",
+      "budget": 2,
+      "meters": 1,
+      "dependent_pair_trials": 4428,
+      "macro_resolution_fraction": 0.7579042457091237,
+      "macro_actual_remaining_width_fraction": 0.4032049123339659,
+      "macro_worst_case_remaining_width_fraction": 0.6076192930393393,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "household",
+      "policy": "squared_contrast_weighted_sampling",
+      "budget": 2,
+      "meters": 1,
+      "dependent_pair_trials": 4428,
+      "macro_resolution_fraction": 0.7822944896115628,
+      "macro_actual_remaining_width_fraction": 0.3541091225533189,
+      "macro_worst_case_remaining_width_fraction": 0.5369104243275543,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "portugal",
+      "policy": "optimal_minimax_width",
+      "budget": 0,
+      "meters": 30,
+      "dependent_pair_trials": 57780,
+      "macro_resolution_fraction": 0.18791969539633083,
+      "macro_actual_remaining_width_fraction": 1.0,
+      "macro_worst_case_remaining_width_fraction": 1.0,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 0.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "portugal",
+      "policy": "optimal_minimax_width",
+      "budget": 2,
+      "meters": 30,
+      "dependent_pair_trials": 57780,
+      "macro_resolution_fraction": 0.6008653513326411,
+      "macro_actual_remaining_width_fraction": 0.1909085047738153,
+      "macro_worst_case_remaining_width_fraction": 0.28629835215064375,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 1.99932502596054,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "portugal",
+      "policy": "random",
+      "budget": 2,
+      "meters": 30,
+      "dependent_pair_trials": 57780,
+      "macro_resolution_fraction": 0.36841467635860164,
+      "macro_actual_remaining_width_fraction": 0.47784174261663126,
+      "macro_worst_case_remaining_width_fraction": 0.726995782463392,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 1.9993596400138458,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "portugal",
+      "policy": "largest_absolute_contrast",
+      "budget": 2,
+      "meters": 30,
+      "dependent_pair_trials": 57780,
+      "macro_resolution_fraction": 0.47962962962962963,
+      "macro_actual_remaining_width_fraction": 0.3048372383245526,
+      "macro_worst_case_remaining_width_fraction": 0.4679458179396564,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 1.9993596400138458,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "portugal",
+      "policy": "greedy_width_reduction",
+      "budget": 2,
+      "meters": 30,
+      "dependent_pair_trials": 57780,
+      "macro_resolution_fraction": 0.5893388715818623,
+      "macro_actual_remaining_width_fraction": 0.2052585718390486,
+      "macro_worst_case_remaining_width_fraction": 0.3097520219191772,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 1.9993596400138458,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "portugal",
+      "policy": "contrast_weighted_sampling",
+      "budget": 2,
+      "meters": 30,
+      "dependent_pair_trials": 57780,
+      "macro_resolution_fraction": 0.40261336102457596,
+      "macro_actual_remaining_width_fraction": 0.41325231246715977,
+      "macro_worst_case_remaining_width_fraction": 0.6310483351702743,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 1.9993596400138458,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "all_pairs",
+      "cohort": "portugal",
+      "policy": "squared_contrast_weighted_sampling",
+      "budget": 2,
+      "meters": 30,
+      "dependent_pair_trials": 57780,
+      "macro_resolution_fraction": 0.4310834198684666,
+      "macro_actual_remaining_width_fraction": 0.3727148367313843,
+      "macro_worst_case_remaining_width_fraction": 0.5721900498760065,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 1.9993596400138458,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "blem_counters",
+      "policy": "optimal_minimax_width",
+      "budget": 0,
+      "meters": 3,
+      "dependent_pair_trials": 2457,
+      "macro_resolution_fraction": 0.39763939763939765,
+      "macro_actual_remaining_width_fraction": 1.0,
+      "macro_worst_case_remaining_width_fraction": 1.0,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 0.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "blem_counters",
+      "policy": "optimal_minimax_width",
+      "budget": 2,
+      "meters": 3,
+      "dependent_pair_trials": 2457,
+      "macro_resolution_fraction": 0.8616198616198617,
+      "macro_actual_remaining_width_fraction": 0.1634738568594466,
+      "macro_worst_case_remaining_width_fraction": 0.245441570980491,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "blem_counters",
+      "policy": "random",
+      "budget": 2,
+      "meters": 3,
+      "dependent_pair_trials": 2457,
+      "macro_resolution_fraction": 0.6475376475376476,
+      "macro_actual_remaining_width_fraction": 0.4629225926857454,
+      "macro_worst_case_remaining_width_fraction": 0.68776653301021,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "blem_counters",
+      "policy": "largest_absolute_contrast",
+      "budget": 2,
+      "meters": 3,
+      "dependent_pair_trials": 2457,
+      "macro_resolution_fraction": 0.7806267806267805,
+      "macro_actual_remaining_width_fraction": 0.26264459805324775,
+      "macro_worst_case_remaining_width_fraction": 0.40373370128361047,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "blem_counters",
+      "policy": "greedy_width_reduction",
+      "budget": 2,
+      "meters": 3,
+      "dependent_pair_trials": 2457,
+      "macro_resolution_fraction": 0.8547008547008547,
+      "macro_actual_remaining_width_fraction": 0.1746314175552551,
+      "macro_worst_case_remaining_width_fraction": 0.263222033810588,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "blem_counters",
+      "policy": "contrast_weighted_sampling",
+      "budget": 2,
+      "meters": 3,
+      "dependent_pair_trials": 2457,
+      "macro_resolution_fraction": 0.706959706959707,
+      "macro_actual_remaining_width_fraction": 0.3742180203749473,
+      "macro_worst_case_remaining_width_fraction": 0.5602186309571047,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "blem_counters",
+      "policy": "squared_contrast_weighted_sampling",
+      "budget": 2,
+      "meters": 3,
+      "dependent_pair_trials": 2457,
+      "macro_resolution_fraction": 0.7431827431827432,
+      "macro_actual_remaining_width_fraction": 0.32407618975664193,
+      "macro_worst_case_remaining_width_fraction": 0.49300100125192353,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "household",
+      "policy": "optimal_minimax_width",
+      "budget": 0,
+      "meters": 1,
+      "dependent_pair_trials": 2214,
+      "macro_resolution_fraction": 0.4439927732610659,
+      "macro_actual_remaining_width_fraction": 1.0,
+      "macro_worst_case_remaining_width_fraction": 1.0,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 0.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "household",
+      "policy": "optimal_minimax_width",
+      "budget": 2,
+      "meters": 1,
+      "dependent_pair_trials": 2214,
+      "macro_resolution_fraction": 0.8775971093044264,
+      "macro_actual_remaining_width_fraction": 0.1722053836133067,
+      "macro_worst_case_remaining_width_fraction": 0.2582870634684921,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "household",
+      "policy": "random",
+      "budget": 2,
+      "meters": 1,
+      "dependent_pair_trials": 2214,
+      "macro_resolution_fraction": 0.6815718157181572,
+      "macro_actual_remaining_width_fraction": 0.4816827024249786,
+      "macro_worst_case_remaining_width_fraction": 0.7099369656860991,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "household",
+      "policy": "largest_absolute_contrast",
+      "budget": 2,
+      "meters": 1,
+      "dependent_pair_trials": 2214,
+      "macro_resolution_fraction": 0.7854561878952123,
+      "macro_actual_remaining_width_fraction": 0.2976949447463532,
+      "macro_worst_case_remaining_width_fraction": 0.4503788000494108,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "household",
+      "policy": "greedy_width_reduction",
+      "budget": 2,
+      "meters": 1,
+      "dependent_pair_trials": 2214,
+      "macro_resolution_fraction": 0.8649503161698283,
+      "macro_actual_remaining_width_fraction": 0.1873009968812068,
+      "macro_worst_case_remaining_width_fraction": 0.2822358059583756,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "household",
+      "policy": "contrast_weighted_sampling",
+      "budget": 2,
+      "meters": 1,
+      "dependent_pair_trials": 2214,
+      "macro_resolution_fraction": 0.7249322493224932,
+      "macro_actual_remaining_width_fraction": 0.4006244873576949,
+      "macro_worst_case_remaining_width_fraction": 0.6042474619599849,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "household",
+      "policy": "squared_contrast_weighted_sampling",
+      "budget": 2,
+      "meters": 1,
+      "dependent_pair_trials": 2214,
+      "macro_resolution_fraction": 0.7542908762420958,
+      "macro_actual_remaining_width_fraction": 0.3522402239094003,
+      "macro_worst_case_remaining_width_fraction": 0.5371132687503624,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 2.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "portugal",
+      "policy": "optimal_minimax_width",
+      "budget": 0,
+      "meters": 30,
+      "dependent_pair_trials": 28890,
+      "macro_resolution_fraction": 0.15299411561093795,
+      "macro_actual_remaining_width_fraction": 1.0,
+      "macro_worst_case_remaining_width_fraction": 1.0,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 0.0,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "portugal",
+      "policy": "optimal_minimax_width",
+      "budget": 2,
+      "meters": 30,
+      "dependent_pair_trials": 28890,
+      "macro_resolution_fraction": 0.5593631014191762,
+      "macro_actual_remaining_width_fraction": 0.19468854782064002,
+      "macro_worst_case_remaining_width_fraction": 0.2915768839528241,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 1.9993769470404985,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "portugal",
+      "policy": "random",
+      "budget": 2,
+      "meters": 30,
+      "dependent_pair_trials": 28890,
+      "macro_resolution_fraction": 0.32540671512634123,
+      "macro_actual_remaining_width_fraction": 0.4814301645413635,
+      "macro_worst_case_remaining_width_fraction": 0.7321504683875903,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 1.9993769470404985,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "portugal",
+      "policy": "largest_absolute_contrast",
+      "budget": 2,
+      "meters": 30,
+      "dependent_pair_trials": 28890,
+      "macro_resolution_fraction": 0.4295257874697126,
+      "macro_actual_remaining_width_fraction": 0.3122916912416642,
+      "macro_worst_case_remaining_width_fraction": 0.4769536301778523,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 1.9993769470404985,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "portugal",
+      "policy": "greedy_width_reduction",
+      "budget": 2,
+      "meters": 30,
+      "dependent_pair_trials": 28890,
+      "macro_resolution_fraction": 0.5475943232952578,
+      "macro_actual_remaining_width_fraction": 0.2094430616722315,
+      "macro_worst_case_remaining_width_fraction": 0.315743800271612,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 1.9993769470404985,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "portugal",
+      "policy": "contrast_weighted_sampling",
+      "budget": 2,
+      "meters": 30,
+      "dependent_pair_trials": 28890,
+      "macro_resolution_fraction": 0.3537902388369678,
+      "macro_actual_remaining_width_fraction": 0.41989813262073145,
+      "macro_worst_case_remaining_width_fraction": 0.6392151028845531,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 1.9993769470404985,
+      "wrong_decisions": 0
+    },
+    {
+      "scope": "neural_pairs",
+      "cohort": "portugal",
+      "policy": "squared_contrast_weighted_sampling",
+      "budget": 2,
+      "meters": 30,
+      "dependent_pair_trials": 28890,
+      "macro_resolution_fraction": 0.38047767393561777,
+      "macro_actual_remaining_width_fraction": 0.38092517533649956,
+      "macro_worst_case_remaining_width_fraction": 0.5828033654999012,
+      "meters_with_zero_initial_width": 0,
+      "mean_queries": 1.9993769470404985,
+      "wrong_decisions": 0
+    }
+  ],
+  "source_hashes": {
+    "study_recovery.csv": "abd026c12bcd6df64256544d55b4952b5249f0a0368969d3337bc11fa77a4911",
+    "study_recovery_neural.csv": "3c55a7f782b77bb360041c3d3c96bccb270b026dad951fc25933767d4af2621f",
+    "study_recovery.json": "b226fb75ca101bd8aef6c8159157c04a28e7ce6e2851bde23881438cdb96228b",
+    "study_summary.json": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196"
+  },
+  "analysis_script_sha256": "82be8d6656a579ed84f6c9f6a14c90e6c90f120e5493b058c4319d5ca1259c71"
+}

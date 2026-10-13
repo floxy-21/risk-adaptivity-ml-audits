@@ -1,0 +1,35 @@
+FULL DEVELOPMENT RESULT -- uniform-simplex certificate probability
+
+All 26,910 validation cases, 20 households; 11,246 initially uncertified.
+Every policy gets one reading per step and identical free aggregate closure.
+All trajectories passed reference enclosure, strict sign, query eligibility,
+monotone-information and stopping checks. This is development evidence.
+
+Household-macro mean requests / B80 among initially uncertified cases:
+Decision probability: 1.7938629079097694 / 3
+Exact one-query width: 1.8065184563617875 / 3
+Greedy one-query width: 1.8065184563617875 / 3
+Hara one-query: 2.39734558712677 / 4
+Uniform one-query: 2.7146504039217825 / 4
+
+The decision score lowers mean requests by about 0.70% relative to a fair
+one-query width policy. At budget one it raises coverage from 48.1901% to
+50.4833%; at budget two its coverage is 77.6422% versus 77.7613%, and at
+budget three 93.1768% versus 93.8624%. The curves cross. No general empirical
+dominance or material saving over the strongest baseline is established.
+
+Do not compare this policy only against the old two-query batch policy and
+attribute that much larger change to the new acquisition score. Most of that
+change is available to an ordinary width policy simply by stopping after each
+individual reading. The exact and greedy width policies have identical query
+traces at budget one, as expected mathematically and asserted by the code.
+
+The independent hindsight oracle (../oracle/summary.json, if present) computes
+the smallest certificate-producing subset using the hidden completed record.
+Its role is only a lower bound on possible requests, never an executable
+baseline. Combining its mean with these fair one-query baseline means places
+an empirical ceiling on possible further savings on this exact panel. It must
+not be described as a deployable policy or an independent confirmation result.
+
+Ridge-guided Dirichlet development is a separate predeclared finite grid whose
+results must also be reported in full; this adverse uniform result remains.

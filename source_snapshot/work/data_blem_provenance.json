@@ -1,0 +1,47 @@
+[
+  {
+    "repo": "https://github.com/QuantLet/BLEM",
+    "commit": "756b2c1265f964b70f72625a95d98413cdfb78bd",
+    "source": "https://raw.githubusercontent.com/QuantLet/BLEM/756b2c1265f964b70f72625a95d98413cdfb78bd/data/consumer/consumer-00000001.csv",
+    "file": "work/data_blem_consumer-00000001.csv",
+    "sha256": "9228795c6369ce144fbb929f9d413397545f86e3a95d2f9a0f27c92f1d55ad8d",
+    "bytes": 10400357,
+    "article": "https://doi.org/10.3390/en12142718"
+  },
+  {
+    "repo": "https://github.com/QuantLet/BLEM",
+    "commit": "756b2c1265f964b70f72625a95d98413cdfb78bd",
+    "source": "https://raw.githubusercontent.com/QuantLet/BLEM/756b2c1265f964b70f72625a95d98413cdfb78bd/data/consumer/consumer-00000002.csv",
+    "file": "work/data_blem_consumer-00000002.csv",
+    "sha256": "93d142217c74ab2c12a98035b3ea178ead234fec0b71942e8e90db5b7e6a2ef3",
+    "bytes": 10494589,
+    "article": "https://doi.org/10.3390/en12142718"
+  },
+  {
+    "repo": "https://github.com/QuantLet/BLEM",
+    "commit": "756b2c1265f964b70f72625a95d98413cdfb78bd",
+    "source": "https://raw.githubusercontent.com/QuantLet/BLEM/756b2c1265f964b70f72625a95d98413cdfb78bd/data/consumer/consumer-00000003.csv",
+    "file": "work/data_blem_consumer-00000003.csv",
+    "sha256": "db69719d2262ebeb6df39abafffca2805c8a03b1b4777f86eb8aa78acf578b6c",
+    "bytes": 10303870,
+    "article": "https://doi.org/10.3390/en12142718"
+  },
+  {
+    "repo": "https://github.com/QuantLet/BLEM",
+    "commit": "756b2c1265f964b70f72625a95d98413cdfb78bd",
+    "source": "https://raw.githubusercontent.com/QuantLet/BLEM/756b2c1265f964b70f72625a95d98413cdfb78bd/BLEMdataGlimpse/README.md",
+    "file": "work/data_blem_README.md",
+    "sha256": "50a34961280742fb0e127224541f5f1a5288d5e981903222aea3eddf4c9922d9",
+    "bytes": 1337,
+    "article": "https://doi.org/10.3390/en12142718"
+  },
+  {
+    "repo": "https://github.com/QuantLet/BLEM",
+    "commit": "756b2c1265f964b70f72625a95d98413cdfb78bd",
+    "source": "https://raw.githubusercontent.com/QuantLet/BLEM/756b2c1265f964b70f72625a95d98413cdfb78bd/BLEMdescStatEnergyData/FUN_getData.R",
+    "file": "work/data_blem_FUN_getData.R",
+    "sha256": "906f558b1e2cfe9fb2ffc50390d16af60891d933def343a18826cfb50b19812c",
+    "bytes": 7632,
+    "article": "https://doi.org/10.3390/en12142718"
+  }
+]

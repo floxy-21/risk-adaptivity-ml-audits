@@ -1,0 +1,52 @@
+POST-REVIEW SECONDARY-OPTIMIZATION PROTOCOL
+Frozen before computing secondary outcomes, 11 October 2026 UTC.
+
+Reason: the primary minimax LP need not identify a unique policy. An arbitrary
+optimal policy may be dominated in expected width on every feasible record.
+This is a post-review sensitivity analysis of all 1,074 archived positive-width
+cases, not a new cohort or a replacement of the original frozen experiment.
+All 20,736 original public cases remain in aggregate summaries. No refitting,
+model selection, source change, masking change, or case exclusion is allowed.
+
+Policy selection uses only the saved blocks, forecast-contrast coefficients,
+aggregate residual totals, legal batches and original LP distribution. The
+held-out target CSV is not read until ALL secondary policies are saved.
+
+Use normalized finite-game matrix M whose row (g,i), column Q equals
+E_g/initial_width times remaining coefficient range if i is retained, else0.
+Let z0=M*pi0 and V0=sum_g max_i z0_gi for the archived policy.
+Use positive secondary objective s(pi)=sum_g mean_i (M*pi)_gi, equal to the
+expected width at the feasible record spreading each block total uniformly.
+This is a specified reference criterion, NOT an estimated target distribution.
+
+Method A: exact uniform-dominance refinement. Minimize s(pi) with pi simplex,
+(M*pi)_gi-z0_gi <= d_g, d_g free, and sum_g d_g <=0. These constraints are
+equivalent to no greater expected width on ANY feasible record. Since pi0 is
+primary optimal, this refinement is also primary optimal in exact arithmetic.
+The positive secondary weights yield an undominated expected-width function
+within this primary face. Certification need not improve.
+
+Method B: a target-independent reference tie-break. Minimize s(pi) on the
+original optimal face: (M*pi)_gi <= t_g, sum_g t_g <= V0, t_g>=0, pi simplex.
+It is primary optimal in exact arithmetic but need not dominate pi0 pointwise.
+Report BOTH methods regardless of observed effects; do not choose by outcomes.
+
+Use scipy.optimize.linprog highs-ds, primal/dual feasibility1e-9, no deliberate
+relaxation of the primary-optimal or dominance constraints. Record numerical
+residuals, secondary primal/dual gaps, expected coefficients, distributions,
+primary values, and the original lower-bound certificate. Verify actual
+dominance through sum_g max_i[(M*pi)_gi-z0_gi], tolerance2e-7. These checks use
+floating point and are not outward-rounded formal machine certificates.
+
+After selection, use bundled review_frozen_forecasts.csv solely to evaluate
+all positive support batches, expected actual widths, certification and
+record counts. Verify intervals contain reference paired losses and preserve
+archived targets/forecasts/results unchanged. Macro-average per-meter ratios
+exactly as the original experiment; keep all zero-width cases unchanged.
+Report original, both refinements and deterministic comparator together.
+
+Regression example: E=1, c=(0,0,2,3), B=1. Retain{0,1,2} with probability1/3
+and each other size3 subset with probability2/9: expected vector(2,2,2,2).
+Always retain{0,1,2}: vector(2,2,2,0). Both minimax value2; uniform mass on
+the first3 coordinates gives a matching lower bound for every legal batch.
+The latter dominates strictly whenever y3>0. Use exact fractions to check.

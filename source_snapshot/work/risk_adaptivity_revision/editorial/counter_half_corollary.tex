@@ -1,0 +1,15 @@
+
+\begin{corollary}[The two-register half-success floor]
+\label{prop:counter-half-floor}
+If a deterministic two-register policy guarantees width at most $\tau$,
+a randomized batch supported on at most two batches has worst-case
+precision success at least $1/2$. Thus an adverse-profile upper bound
+$U(\tau)=1/2$ proves the exact batch optimum for such an instance.
+\end{corollary}
+\begin{proof}
+Apply Theorem~\ref{thm:helly-precision} with scalar first answer.
+For the exact-total prefix model the conditional functions are affine:
+their good sets are prefixes or suffixes of $[0,1]$. The longest good
+prefix and earliest good suffix cover all answers; mix their batches
+equally, breaking geometric ties by smallest second-query index.
+\end{proof}

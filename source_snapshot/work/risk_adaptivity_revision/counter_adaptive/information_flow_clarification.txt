@@ -1,0 +1,24 @@
+INFORMATION-FLOW CLARIFICATION -- FINAL REVIEW, 11 OCTOBER 2026
+
+The frozen protocol and measured outputs are retained unchanged. This note
+clarifies what its separation of geometry and answer replay means in code.
+
+Separation is per audit and concerns decision dependencies. It is not an
+operating-system restriction preventing the shared loader from reading a
+whole endpoint table. Preparation restores day-start persistence from permitted
+prior-day endpoints. Thus a register unavailable within one audit may already
+be in preparation memory as permitted lag information for a later audit.
+
+study.py:load_initial reads only the forecast columns needed for the four
+models, restores persistence, and creates each case from its forecasts and
+outer counters. make_geometry passes only the normalized coefficient vector
+to geometry(); neither batch selection nor the first query can inspect an
+endpoint dictionary. During replay, the second adaptive query uses the original
+coefficients, outer total and the first queried answer. Unqueried within-block
+answers enter that audit's outcome evaluation afterwards, not its decisions.
+
+The existing independent data_audit/check_policy_inputs.py verification checks
+the permitted inputs for all 4,914 cases against their pinned source records.
+The final review inspected these direct data dependencies. This clarification
+does not change thresholds, policies, cases, results, protocol hashes, or the
+separate post-analysis covering-witness calculation.

@@ -1,0 +1,27 @@
+{
+  "status": "repaired_logging_only",
+  "original_trajectories_gzip": "work/external_deadline/validation/trajectories_before_trace_repair.jsonl.gz",
+  "original_trajectories_sha256": "8bdcfe33bb5d43b9ef04a622e53bc5c5c1502e2ab5484402dcdb30dc57d81d72",
+  "original_run_result": "work/external_deadline/validation/run_result_before_trace_repair.json",
+  "original_run_result_sha256": "6cc6cafca6de7d731fc4e4544df7b4376ea0e0170c9975c8760499188e31c45e",
+  "executed_evaluator_path": "work/external_deadline/evaluate_before_trace_alias_fix.py.txt",
+  "executed_evaluator_sha256": "c32e6be473d6613315cce78e65687a8a51cd588d790d21bb6aa75fa6b98e9aed",
+  "corrected_evaluator_sha256": "a5c91d25cf16d123673284744a0ed79aa572fb968704e047363de0bd7f829e85",
+  "repaired_trace_sha256": "2e50b82a7ebc67af414bb6541d4e000dd435a085bdd7d4e93a2880ceb427ec27",
+  "rows": 26910,
+  "stages": 76723,
+  "changed_after_snapshots": 20493,
+  "repair_script_sha256": "2b78911d85736a367be1d86c7dc74eed0ae1494b2628949cc091b4e1b492f413",
+  "unchanged_outcome_files": {
+    "archive_snapshots.json": "f4a260b18cc5e1268c094d6dae2bc0d177b1b5e63cb1a5cc1d30446973d8fe40",
+    "cases.csv": "a5ecda975332dc2d7a464899ddecfa3b3648b8605fd56cb1a466a6ef6e2988b1",
+    "cost_summary.csv": "f6840fa2b87846a847efd334c64a058108e7e6964e24acf53843e882615826b8",
+    "coverage_curves.csv": "cba3b2ba6d1efd04b0e65f8a6771aa4ab494b99c136c730e9e597535963ae355",
+    "headline_summary.json": "e4915b1fd88c4e15b08dd140cfc862b91cce8ef2064d12fcdef625e656ac8f37",
+    "household_curves.csv": "024215c3964f88b2dd65a679bcd244ac8ac73b0ee5fa1705a8e1ad5375fc84a6",
+    "month_curves.csv": "9d7ffaf646d706a88baa1e2fe249e0f5a6b6223c0e38c85d4b3c0b2a49c2946f",
+    "pair_curves.csv": "54dcdd1a391288cd4543b6968a187e34900ca3fb94b1c52d163d7bee677f8016",
+    "pre_outcome_manifest.json": "3781ceabd06151f6ee52d4a585ba7f8e0ee8696bff5c9e9405751d2fd305fb89"
+  },
+  "scope": "Only saved after arrays reconstructed from before, recorded batch answers, and totals. No fits, selections, costs, bounds, decisions, or numerical summaries changed."
+}

@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-10-12T03:27:18.649018+00:00",
+  "status": "fixed_before_fallback_budget_LP_outcomes",
+  "cases": 29,
+  "delta_exact": "1/100",
+  "threshold_over_W0_exact": "1/2",
+  "budgets": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "inputs": {
+    "protocol": {
+      "path": "stored_error_fallback\\PROTOCOL.txt",
+      "sha256": "2927a0dc1d2cc36330d9114947aa09cbacc4bcc80949fe6e38051a43971c8da8"
+    },
+    "half_witnesses": {
+      "path": "replay\\half_witnesses.json",
+      "sha256": "0fa3f9c32a1a008edb90f2b39a721d2adfc23dbe6dfdce040cd77d435051232a"
+    },
+    "geometry": {
+      "path": "replay\\geometry.json",
+      "sha256": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0"
+    },
+    "sensitivity_ledger": {
+      "path": "stored_error_sensitivity\\case_ledger.csv",
+      "sha256": "b737483dc76c0c8dcdc2c75be612c9230ac6cb99cf8e735cca7a130aeb0c06f5"
+    },
+    "existing_positive_certificates": {
+      "path": "stored_error_sensitivity\\exact_certificates\\certificates.json",
+      "sha256": "935e6c7e75900a012ca44b41955fbd3e28ce094a1479ea925e5300bbc9d235dd"
+    },
+    "robust_solver": {
+      "path": "math\\robust_two_query.py",
+      "sha256": "6abe03124d94e8ca9a8b672eddbbe5b85accdf4b95a350fbabeb39f287026193"
+    }
+  },
+  "clarified_before_outcomes_utc": "2026-10-12T03:29:26.595142+00:00"
+}

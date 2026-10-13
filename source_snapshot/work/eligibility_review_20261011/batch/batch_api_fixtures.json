@@ -1,0 +1,1385 @@
+{
+  "status": "passed",
+  "fixture_calls": 120,
+  "results": [
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "exact",
+      "seed": 0,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "exact",
+      "seed": 1,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "exact",
+      "seed": 2,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "exact",
+      "seed": 3,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "exact",
+      "seed": 4,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "exact",
+      "seed": 5,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "exact",
+      "seed": 6,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "exact",
+      "seed": 7,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "greedy",
+      "seed": 0,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "greedy",
+      "seed": 1,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "greedy",
+      "seed": 2,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "greedy",
+      "seed": 3,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "greedy",
+      "seed": 4,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "greedy",
+      "seed": 5,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "greedy",
+      "seed": 6,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "greedy",
+      "seed": 7,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "hara",
+      "seed": 0,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "hara",
+      "seed": 1,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "hara",
+      "seed": 2,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "hara",
+      "seed": 3,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "hara",
+      "seed": 4,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "hara",
+      "seed": 5,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "hara",
+      "seed": 6,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "hara",
+      "seed": 7,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "uniform",
+      "seed": 0,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "uniform",
+      "seed": 1,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "uniform",
+      "seed": 2,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "uniform",
+      "seed": 3,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "uniform",
+      "seed": 4,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "uniform",
+      "seed": 5,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "uniform",
+      "seed": 6,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "uniform",
+      "seed": 7,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "randomized",
+      "seed": 0,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "randomized",
+      "seed": 1,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "randomized",
+      "seed": 2,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "randomized",
+      "seed": 3,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "randomized",
+      "seed": 4,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "randomized",
+      "seed": 5,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "randomized",
+      "seed": 6,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "one_block_two_unknown",
+      "policy": "randomized",
+      "seed": 7,
+      "batch": [
+        1
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "exact",
+      "seed": 0,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "exact",
+      "seed": 1,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "exact",
+      "seed": 2,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "exact",
+      "seed": 3,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "exact",
+      "seed": 4,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "exact",
+      "seed": 5,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "exact",
+      "seed": 6,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "exact",
+      "seed": 7,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "greedy",
+      "seed": 0,
+      "batch": [
+        0,
+        6
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "greedy",
+      "seed": 1,
+      "batch": [
+        0,
+        6
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "greedy",
+      "seed": 2,
+      "batch": [
+        0,
+        6
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "greedy",
+      "seed": 3,
+      "batch": [
+        0,
+        6
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "greedy",
+      "seed": 4,
+      "batch": [
+        0,
+        6
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "greedy",
+      "seed": 5,
+      "batch": [
+        0,
+        6
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "greedy",
+      "seed": 6,
+      "batch": [
+        0,
+        6
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "greedy",
+      "seed": 7,
+      "batch": [
+        0,
+        6
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "hara",
+      "seed": 0,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "hara",
+      "seed": 1,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "hara",
+      "seed": 2,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "hara",
+      "seed": 3,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "hara",
+      "seed": 4,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "hara",
+      "seed": 5,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "hara",
+      "seed": 6,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "hara",
+      "seed": 7,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "uniform",
+      "seed": 0,
+      "batch": [
+        0,
+        6
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "uniform",
+      "seed": 1,
+      "batch": [
+        1,
+        6
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "uniform",
+      "seed": 2,
+      "batch": [
+        1,
+        6
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "uniform",
+      "seed": 3,
+      "batch": [
+        0,
+        6
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "uniform",
+      "seed": 4,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "uniform",
+      "seed": 5,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "uniform",
+      "seed": 6,
+      "batch": [
+        0,
+        6
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "uniform",
+      "seed": 7,
+      "batch": [
+        1,
+        6
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "randomized",
+      "seed": 0,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "randomized",
+      "seed": 1,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "randomized",
+      "seed": 2,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "randomized",
+      "seed": 3,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "randomized",
+      "seed": 4,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "randomized",
+      "seed": 5,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "randomized",
+      "seed": 6,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "two_blocks_two_unknown_each",
+      "policy": "randomized",
+      "seed": 7,
+      "batch": [
+        1,
+        7
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "exact",
+      "seed": 0,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "exact",
+      "seed": 1,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "exact",
+      "seed": 2,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "exact",
+      "seed": 3,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "exact",
+      "seed": 4,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "exact",
+      "seed": 5,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "exact",
+      "seed": 6,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "exact",
+      "seed": 7,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "greedy",
+      "seed": 0,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "greedy",
+      "seed": 1,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "greedy",
+      "seed": 2,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "greedy",
+      "seed": 3,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "greedy",
+      "seed": 4,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "greedy",
+      "seed": 5,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "greedy",
+      "seed": 6,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "greedy",
+      "seed": 7,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "hara",
+      "seed": 0,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "hara",
+      "seed": 1,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "hara",
+      "seed": 2,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "hara",
+      "seed": 3,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "hara",
+      "seed": 4,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "hara",
+      "seed": 5,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "hara",
+      "seed": 6,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "hara",
+      "seed": 7,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "uniform",
+      "seed": 0,
+      "batch": [
+        0,
+        1
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "uniform",
+      "seed": 1,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "uniform",
+      "seed": 2,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "uniform",
+      "seed": 3,
+      "batch": [
+        0
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "uniform",
+      "seed": 4,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "uniform",
+      "seed": 5,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "uniform",
+      "seed": 6,
+      "batch": [
+        0,
+        1
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "uniform",
+      "seed": 7,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "randomized",
+      "seed": 0,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "randomized",
+      "seed": 1,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "randomized",
+      "seed": 2,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "randomized",
+      "seed": 3,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "randomized",
+      "seed": 4,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "randomized",
+      "seed": 5,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "randomized",
+      "seed": 6,
+      "batch": [
+        1,
+        2
+      ]
+    },
+    {
+      "fixture": "three_unknown_equal_remainder",
+      "policy": "randomized",
+      "seed": 7,
+      "batch": [
+        1,
+        2
+      ]
+    }
+  ],
+  "near_zero_diagnostic": [
+    {
+      "period": "validation",
+      "case": "MAC000004|2013-12-11|1103|0-3",
+      "policy": "hara",
+      "query": [
+        12,
+        14
+      ],
+      "blocks": [
+        {
+          "indices": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "coefficients": [
+            -0.012666666666666666,
+            0.0,
+            -0.003527751808440241,
+            0.0,
+            0.0,
+            -0.006850833615039875
+          ],
+          "energy_production": 0.509,
+          "energy_fsum": 0.509
+        }
+      ],
+      "diagnostics": {
+        "initial_width": 0.0064473333333333336,
+        "target_blind_api": true,
+        "surrogate_conditional_mean": [
+          0.0,
+          0.162,
+          0.0,
+          0.159,
+          0.0,
+          0.247,
+          0.0,
+          0.0,
+          0.003,
+          0.218,
+          0.0,
+          0.0,
+          0.08400874679109564,
+          0.08966685847097804,
+          0.08286997606374275,
+          0.08312056074392433,
+          0.08806555903531504,
+          0.08126829889494414,
+          0.0,
+          0.169,
+          0.0,
+          0.167,
+          0.0,
+          0.0
+        ],
+        "surrogate_conditional_sd": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.08000633665014854,
+          0.08000633665014854,
+          0.08000633665014854,
+          0.08000633665014854,
+          0.08000633665014854,
+          0.08000633665014854,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "acquisition_weights": [
+          0.02876342418652014,
+          0.006736319769962095,
+          0.03093094145302359,
+          0.011909026264465992,
+          0.0,
+          0.013631674063578758,
+          0.005032737789519773,
+          0.0284667089935077,
+          0.023262037892578052,
+          0.02975783239492991,
+          0.0019393346772110921,
+          0.013310398753446518,
+          0.019503235747913916,
+          0.0,
+          0.007842551795841174,
+          0.0,
+          0.0,
+          0.013464315710816289,
+          0.006175033555039287,
+          0.019632519423664858,
+          0.0,
+          0.015682813760498474,
+          0.023409,
+          0.000529
+        ],
+        "zero_weight_fallbacks": 0,
+        "draws": [
+          {
+            "eligible": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ],
+            "probabilities": [
+              0.47790214168912315,
+              0.0,
+              0.1921718194859672,
+              0.0,
+              0.0,
+              0.3299260388249097
+            ],
+            "chosen": 12
+          },
+          {
+            "eligible": [
+              13,
+              14,
+              15,
+              16,
+              17
+            ],
+            "probabilities": [
+              0.0,
+              0.3680762455293215,
+              0.0,
+              0.0,
+              0.6319237544706785
+            ],
+            "chosen": 14
+          }
+        ],
+        "selected_batch_worst_width": 0.0034870743100552963
+      }
+    },
+    {
+      "period": "validation",
+      "case": "MAC000004|2013-12-11|1103|0-3",
+      "policy": "hara",
+      "query": [
+        17
+      ],
+      "blocks": [
+        {
+          "indices": [
+            13,
+            15,
+            16,
+            17
+          ],
+          "coefficients": [
+            0.0,
+            0.0,
+            0.0,
+            -0.006850833615039875
+          ],
+          "energy_production": 0.16800000000000004,
+          "energy_fsum": 0.16800000000000004
+        }
+      ],
+      "diagnostics": {
+        "initial_width": 0.0011509400473266992,
+        "target_blind_api": true,
+        "surrogate_conditional_mean": [
+          0.0,
+          0.162,
+          0.0,
+          0.159,
+          0.0,
+          0.247,
+          0.0,
+          0.0,
+          0.003,
+          0.218,
+          0.0,
+          0.0,
+          0.186,
+          0.04613653918468766,
+          0.155,
+          0.03959024145763396,
+          0.044535239749024666,
+          0.03773797960865376,
+          0.0,
+          0.169,
+          0.0,
+          0.167,
+          0.0,
+          0.0
+        ],
+        "surrogate_conditional_sd": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.07590067531820262,
+          0.0,
+          0.07590067531820262,
+          0.07590067531820262,
+          0.07590067531820262,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "acquisition_weights": [
+          0.02876342418652014,
+          0.006736319769962095,
+          0.03093094145302359,
+          0.011909026264465992,
+          0.0,
+          0.013631674063578758,
+          0.005032737789519773,
+          0.0284667089935077,
+          0.023262037892578052,
+          0.02975783239492991,
+          0.0019393346772110921,
+          0.013310398753446518,
+          0.03344,
+          0.0,
+          0.0005785644889105535,
+          0.0,
+          0.0,
+          0.018234838325452033,
+          0.006175033555039287,
+          0.019632519423664858,
+          0.0,
+          0.015682813760498474,
+          0.023409,
+          0.000529
+        ],
+        "zero_weight_fallbacks": 0,
+        "draws": [
+          {
+            "eligible": [
+              13,
+              15,
+              16,
+              17
+            ],
+            "probabilities": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "chosen": 17
+          }
+        ],
+        "selected_batch_worst_width": 0.0
+      }
+    },
+    {
+      "period": "test",
+      "case": "MAC000022|2014-02-26|2207|0-2",
+      "policy": "greedy",
+      "query": [
+        4,
+        8
+      ],
+      "blocks": [
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "coefficients": [
+            -0.0029523871120471132,
+            -0.0001828670983099745
+          ],
+          "energy_production": 1.3709999999999996,
+          "energy_fsum": 1.3709999999999996
+        },
+        {
+          "indices": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "coefficients": [
+            0.0019004662350233514,
+            0.0019004662350233514,
+            0.006424844053201345,
+            0.0057637556867093
+          ],
+          "energy_production": 2.659,
+          "energy_fsum": 2.659
+        }
+      ],
+      "diagnostics": {
+        "initial_width": 0.0158273325573689,
+        "target_blind_api": true,
+        "selected_batch_worst_width": 0.010272486652032937
+      }
+    },
+    {
+      "period": "test",
+      "case": "MAC000022|2014-02-26|2207|0-2",
+      "policy": "greedy",
+      "query": [
+        9
+      ],
+      "blocks": [
+        {
+          "indices": [
+            6,
+            7,
+            9
+          ],
+          "coefficients": [
+            0.0019004662350233514,
+            0.0019004662350233514,
+            0.0057637556867093
+          ],
+          "energy_production": 2.019,
+          "energy_fsum": 2.0189999999999997
+        }
+      ],
+      "diagnostics": {
+        "initial_width": 0.007799981402953932,
+        "target_blind_api": true,
+        "selected_batch_worst_width": 0.0
+      }
+    }
+  ],
+  "source_sha256": "21d2c99d47eb87138da97ba5a2a9e2f4b124a69b3557923c343ed4ae45cfed33",
+  "interpretation": "Counts smaller than mathematical count-only capacity may be valid at-most choices; active-energy diagnostics distinguish summation ulps."
+}

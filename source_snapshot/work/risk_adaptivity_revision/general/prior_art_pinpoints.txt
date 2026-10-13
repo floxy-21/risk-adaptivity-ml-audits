@@ -1,0 +1,62 @@
+Verified prior-art locators, 12 October 2026 UTC
+================================================
+
+Krieg and Ullrich (2026), Approximation of functions: Optimal sampling and
+complexity. Published record: Acta Numerica 35, 273-457,
+https://doi.org/10.1017/S0962492925100287
+https://www.cambridge.org/core/journals/acta-numerica/article/approximation-of-functions-optimal-sampling-and-complexity/9DE3C9486CD40D814B0F920A919F7B86
+
+The pinpoint text was checked in the publicly accessible AUTHOR MANUSCRIPT:
+https://arxiv.org/pdf/2602.02066
+https://arxiv.org/abs/2602.02066v2
+The arXiv landing page verifies that the inspected current PDF is v2,
+revised 6 April 2026 (v1 was submitted 2 February 2026).
+
+Section 9.1, Eq. (9.15): minimal randomized error is inf_A sup_f E||S(f)-A(f)||,
+with adaptive randomized algorithms admitted. It is actual reconstruction
+error, not the radius or diameter of the whole compatible solution fiber.
+Author manuscript printed p144 (PDF zero-based143). Do not present this
+page number as journal pagination.
+
+Eq. (2.4) defines global radius for a fixed measurement map as inf over
+reconstruction maps, then sup over inputs. Section 6, Remark 6.1 explicitly
+contrasts random information drawn once for all inputs with randomized
+algorithms assessed per input. Section 6.1 studies expected global radius;
+Proposition 6.2 computes particular moments for the Lipschitz example.
+
+Author manuscript Proposition 9.3 gives the factor-two deterministic
+adaptivity bound on convex symmetric classes under linear information;
+following text notes equality for scalar targets. The fragment instead
+cites the precise book theorems directly to avoid version ambiguity.
+
+The official publication metadata were checked. Its 185-page PDF failed
+to download during this check; equation/section numbering has not been
+silently inferred from the published pagination. The manuscript citation
+explicitly labels the author-manuscript locator.
+
+Novak and Wozniakowski (2008), Tractability of Multivariate Problems,
+Volume I: Linear Information. https://doi.org/10.4171/026
+Primary author PDF:
+https://web.maths.unsw.edu.au/~josefdick/preprints/Novak_Wozniakowski_book_1.pdf
+Section 4.1, printed p99: local diameter d(N,y) and global diameter d(N).
+Section 4.2.1, Theorem 4.4, printed p118: for linear problems,
+d(N_non)<=d(N_ada), r(N_non)<=2r(N_ada), using zero-answer-path information.
+Theorem 4.5, printed p119: r(N_non)<=r(N_ada) for listed settings including
+scalar target G=R. The term 'linear problem' includes convex symmetric input
+class and linear solution and information maps; Remark4.6(b) reiterates
+the symmetry requirement. These are deterministic worst-case statements.
+
+Krieg, Novak and Ullrich (2025), On the power of adaption and randomization,
+Forum of Mathematics, Sigma13,e152. https://doi.org/10.1017/fms.2025.10101
+Primary full publisher HTML:
+https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/on-the-power-of-adaption-and-randomization/3633856556AFDE5A9942452F04CC5D39
+Section2: randomized worst-case error sup_f E||S(f)-A_n(f)||.
+Proposition4.1: Gelfand number comparisons; in convex symmetric case,
+c_n<=e_det<=e_det-non<=2c_n. Section6.3 treats restricted information,
+so a restricted query dictionary alone is not a distinction.
+
+Sion (1958), On general minimax theorems, Pacific Journal of Mathematics
+8(1),171-176. https://doi.org/10.2140/pjm.1958.8.171
+Primary PDF: https://msp.org/pjm/1958/8-1/pjm-v8-n1-p14-s.pdf
+Theorem3.4, printedp174, is the compact-convex semicontinuous minimax result
+used after establishing concavity/upper semicontinuity of local scalar width.

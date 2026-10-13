@@ -1,0 +1,49 @@
+\subsection{Retrieval interface and measured operational consequences}
+\label{sec:actual-api}
+The public source permits both single-time and full-range queries
+\citep{hpmapi,hpmcode}. We therefore tested the latter as an operational
+comparator instead of treating a two-reading budget as a measured tariff.
+The first eligible daily-persistence--MLP task from each external system
+was fixed before retrieving optional answers. Two repetitions of five
+policies produced 30 trials and 60 actual HTTP requests, including six
+common endpoint reads. The protocol limited request starts to one per
+second, with no retries or cache-busting. All trials succeeded; timings
+include the recorded persistent-connection behavior and uncontrolled
+public cache/server state.
+
+\begin{table}[htbp]\centering\small
+\caption{Actual public-API measurements on three fixed tasks, two
+repetitions per policy. Incremental I/O excludes the separately logged
+client throttle wait. Bytes are response-body bytes, not wire traffic.
+The full-range interface returns seven hourly samples in one request,
+including retained endpoints; it is an operational alternative outside
+the two-optional-sample benchmark budget.}\label{tab:actual-api}
+\begin{tabular}{lrrr}\toprule
+Policy & Requests & Mean I/O (s) & Mean body bytes\\\midrule
+Exact adaptive & 2 & 0.497 & 104.3\\
+Best deterministic worst-width batch & 2 & 0.539 & 104.7\\
+Mean-width-optimal batch & 2 & 0.582 & 104.3\\
+Greedy adaptive & 2 & 0.551 & 104.3\\
+Full hourly range & 1 & 0.331 & 226.7\\\bottomrule
+\end{tabular}\end{table}
+
+All five policies attained the precision target on these three traces.
+Bulk retrieval used fewer requests and less observed I/O time, while
+also reducing terminal width to zero. Selective retrieval reduced body
+size by about 122 bytes; this small difference excludes HTTP/TLS overhead
+and does not establish an operational saving. A range returning only the
+five internal samples could reduce the bulk response further. Including
+the imposed client throttle, mean completion times were 1.984 seconds
+for exact adaptation and 1.040 seconds for bulk retrieval; these are not
+intrinsic provider latencies. The small workload does not support a
+population speedup or monetary-cost claim.
+
+An offline checker matches all 60 received payload hashes to separately
+cached source responses, checks all 12 adaptive second-query decisions
+and all 30 interval containments (maximum discrepancy
+$1.74\times10^{-18}$). Each result can be verified without repeating
+provider traffic. The appropriate decision for this observed interface
+is bulk retrieval when its unrestricted response is admissible. The
+two-query separation instead answers the distinct question posed by a
+fixed sample budget; it does not override an available cheaper interface.
+\FloatBarrier

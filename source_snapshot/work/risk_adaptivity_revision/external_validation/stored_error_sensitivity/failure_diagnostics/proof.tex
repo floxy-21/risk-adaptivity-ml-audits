@@ -1,0 +1,41 @@
+\paragraph{Exact diagnosis of the failed deterministic guarantees.}
+Normalize the retained total to one and let
+\[
+ F_\delta=\{(x,e):x\in\mathbb R_+^6,\ \mathbf1^Tx=1,
+                         \ e\in[-\delta,\delta]^5\}.
+\]
+The permitted query $k$ returns $q_k(x,e)=\sum_{h\le k}x_h+e_k$;
+the error vector is a fixed part of the hidden record.
+Write $\widetilde c=c/(\max c-\min c)$, so the precision threshold,
+in units of the original width, is $1/2$.
+For each first query $k$, the supplied witness specifies a rational answer $t_k$.
+For every $j\ne k$, it supplies two records $z_{kj}^+,z_{kj}^-\in F_\delta$
+such that
+\[
+ q_k(z_{kj}^+)=q_k(z_{kj}^-)=t_k,\qquad
+ q_j(z_{kj}^+)=q_j(z_{kj}^-),\qquad
+ \widetilde c^T(x_{kj}^+-x_{kj}^-)>\tfrac12.
+\]
+Fix any deterministic policy with at most two queries. Its first query is some
+$k$; after answer $t_k$, its second query and stopping decision are determined.
+If it chooses $j$, the two corresponding records produce the same complete
+transcript, and the sharp terminal interval contains both contrast values.
+Its width therefore exceeds $1/2$. If the policy stops after the first query,
+or repeats that query, its information is weaker and the same obstruction
+remains. Checking all five first choices proves that no such deterministic
+policy guarantees the threshold. Different policies may have different
+adverse records: this argument does not establish a lower bound against
+randomized adaptive policies whose hidden record must precede their random seed.
+
+All nine previously failed case--allowance combinations admit these witnesses:
+two at $\delta=10^{-3}$ and seven at $\delta=10^{-2}$.
+Their certified optimal deterministic widths exceed $1/2$ by at least
+$5.9060297954\times10^{-6}$; the smallest exact excess is
+$231625733590097946267/39218517618895276000000000$.
+There are 45 first-query witnesses and 180 indistinguishable endpoint pairs.
+All feasibility, transcript and strict-width inequalities are checked with
+rational arithmetic using the exact fractions represented by the frozen
+binary64 forecast coefficients. This certifies failure of the deterministic
+precision requirement under the declared illustrative model, rather than
+merely failure of a floating-point solver to find a certificate. It does not
+validate the chosen allowances as physical meter errors.

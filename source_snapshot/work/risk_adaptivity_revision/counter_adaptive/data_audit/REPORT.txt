@@ -1,0 +1,247 @@
+COUNTER-ADAPTIVE STUDY: DATA INTERFACE AND PROVENANCE AUDIT
+
+This audit checks source identity, clocks, calendar eligibility, exact counter
+relations, forecast inputs and packaging. It does not inspect acquisition
+outcomes, evaluate an advantage, or select cases by any performance criterion.
+All work stays in counter_adaptive/data_audit/; study.py and manuscript untouched.
+
+READ-ONLY AUDIT COMMAND
+  python work/risk_adaptivity_revision/counter_adaptive/data_audit/audit_counter_interface.py
+Output: interface_verification.json in this directory. The standard-library
+script requires the three pinned raw files locally; --data-dir selects their
+directory, --forecast-file selects the lossless export, and --output redirects
+the metadata report. No target/counter rows are exported. It also supplies a
+block_snapshot() helper returning only the declared evaluator-visible payload;
+the caller must keep the raw counters used to prepare it on the reference side.
+
+ACTUAL CHECK RESULT
+Passed: all three pinned raw checksums, 175201 rows per meter, no duplicate
+timestamps, no missing three-minute steps, no counter decreases, 8760 valid
+hourly intervals and364 complete UTC days per meter. Rebuilding complete-day
+and lag eligibility gives266 training days (2017-01-08 through2017-09-30) and
+91 test days (2017-10-01 through2017-12-30), independently of model outcomes.
+The frozen forecast export has2184 rows per meter, exactly those91x24 hours.
+The audit checks819 six-hour snapshots =3meters x91days x3cutoffs; every snapshot
+has five strictly interior hourly cumulative-query times. All integer block
+totals telescope exactly. Maximum sum-of-floats versus endpoint-total discrepancy
+is1.7763568394002505e-15kWh. Independently recomputed training means differ from
+archived values by at most5.551115123125783e-17kWh. Nothing was refitted.
+
+IDENTITIES AND RAW SCHEMA
+Study meter IDs: consumer_00000001, consumer_00000002, consumer_00000003.
+Raw repository IDs use a hyphen instead of the first underscore.
+Local paths: work/data_blem_consumer-00000001.csv (and02,03).
+Pinned repository: https://github.com/QuantLet/BLEM
+Commit:756b2c1265f964b70f72625a95d98413cdfb78bd
+Raw URL pattern:
+https://raw.githubusercontent.com/QuantLet/BLEM/756b2c1265f964b70f72625a95d98413cdfb78bd/data/consumer/consumer-00000001.csv
+Checksums:
+01:9228795c6369ce144fbb929f9d413397545f86e3a95d2f9a0f27c92f1d55ad8d
+02:93d142217c74ab2c12a98035b3ea178ead234fec0b71942e8e90db5b7e6a2ef3
+03:db69719d2262ebeb6df39abafffca2805c8a03b1b4777f86eb8aa78acf578b6c
+
+CSV columns:time,energy,power,power1,power2,power3,energyOut,and an empty final
+column caused by the trailing comma. Only time and energy define this interface.
+time is integer Unix milliseconds; energy is an integer cumulative counter.
+Other instantaneous-power channels are excluded from the declared evaluator
+and must not accidentally become additional observations through a raw-row API.
+All three files span2016-12-31T23:00:00+00:00 through2017-12-31T23:00:00+00:00
+on an exact180000ms grid. The study uses UTC day boundaries, not source-local
+day boundaries. The authors' R helper displays CET, but epoch timestamps denote
+the same instants; no DST filtering is needed for the declared UTC grid.
+
+HOURLY TARGETS AND RETAINED TOTALS
+For exact UTC endpoints, y_h=[C(h+1)-C(h)]/10^10 kWh. Subtract Python integers
+before floating conversion; never subtract two rounded large binary64 counters.
+Existing preparation: work/data_prepare_blem.py. It additionally requires all
+21 fine-grid snapshots from h through h+1 and no decrease among the20 increments.
+No interpolation, nearest-neighbor matching, rescaling or reset correction is
+used. A decrease or missing interior reading excludes the hour; no such exclusion
+occurs in these three source files. Day/lag completeness then excludes the first
+partial day, final partial day, and the first seven complete days needed for
+lagged features. No empirical observed maximum is a justified physical cap.
+
+An exact retained six-hour total is [C(end)-C(start)]/10^10. It is genuinely
+obtainable from recorded cumulative endpoints; the assertion that those
+endpoints survive while interior records require retrieval is imposed. The raw
+data do not establish separate-channel survival rates, retrieval prices, actual
+arrival timestamps or repair latency. Exact counter units are a storage
+precision, not proof that the physical meter has zero measurement error.
+
+FIXED BLOCKS AND CUTOFFS (CONFIRMED AGAINST study.py/protocol.txt)
+Audit block       Clock cutoff    Initially visible counter endpoints
+[00:00,06:00)     06:00UTC        C00,C06
+[06:00,12:00)     12:00UTC        C06,C12
+[12:00,18:00)     18:00UTC        C12,C18
+All horizons have six hourly targets and use that six-hour MSE denominator.
+The whole day's24 forecasts were issued at00:00 under the existing simulated
+day-start schedule. The source contains measurements, not original vendor
+forecast issue/arrival logs. No C24 total is used at any earlier cutoff.
+
+For each block starting s, one request returns a single stored cumulative value
+C(s+j), j in{1,...,5}. With C(s) already known this is the linear observation
+sum_{h=0}^{j-1}y_{s+h}=[C(s+j)-C(s)]/10^10. It is not a free individual-hour
+energy oracle. Two requested boundaries split the block into three disjoint
+intervals whose totals are known. A per-pair/block hard budget of two distinct
+registers corresponds to10 possible two-query batches. Sharing queries across
+six model comparisons or returning an entire gap in one operation is outside
+this budget model. Such a restriction must remain a declared interface, not be
+described as a measured production price model.
+
+FORECASTS, ELIGIBILITY AND TRAINING SCALE
+The reusable redistribution-conscious input is outputs/review_frozen_forecasts.csv,
+manifest outputs/review_frozen_forecasts.json. It preserves the ORIGINAL STRINGS
+for the fitted forecasts, with BLEM truth_kwh and daily blank. Columns:
+cohort,meter,timestamp,truth_kwh,daily,ridge,hist_gradient_boosting,mlp.
+The complete local original is outputs/study_predictions.csv; its original
+SHA256 is c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6.
+
+study.py load_initial reads explicit forecast columns excluding truth_kwh.
+It fills omitted daily persistence from the prior day's exact hour endpoints,
+then retains only the current block's forecasts and outer total for each case.
+The use of all dates in preprocessing does not itself supply future copies to
+a case: the current-day persistence copies yesterday, while today's targets
+are copied by tomorrow's persistence, excluded by the current audit cutoff.
+The loader should continue passing only each case payload to policy construction,
+not the all-dates raw map or all future forecasts. Its five internal query
+times are all earlier than the stated cutoff. Initial geometry cannot depend on
+their observed cumulative answers; those enter only during query-answer replay.
+
+Original causal features (outputs/run_energy_rank_study.py): same-hour lags at
+24/48/168h; previous-day mean; sine/cosine of hour, weekday and month (10 features).
+All target-day feature inputs are available by00:00. Fixed configurations and
+random seeds are reused; no new fitting or model selection is needed here.
+
+Normalization constants from outputs/study_summary.json meters[] or
+outputs/study_meter_results.json meta.training_mean_kwh:
+ID01 mean0.5207673878680451; square0.2711986722669069
+ID02 mean0.5984033920426065; square0.3580866196080974
+ID03 mean0.38955500308107766; square0.15175310042549842
+These are means over the266 eligible training days only, not held-out means.
+
+Floating-detail boundary: directly dividing integer prior-day differences by
+10^10 is the declared physical conversion, but a final binary64 value can differ
+by an ulp from the old pipeline's CSV-parsed hourly value. If the paper claims
+byte-identical original daily predictions, use the exact reconstruction route
+below, which deliberately reproduces that parsing. Otherwise describe daily
+persistence as regenerated from the same counters/formula; do not silently claim
+that allfour original columns were reused bit-for-bit. The three fitted forecast
+columns in the lossless export do preserve original strings.
+
+INITIAL LOADER REVIEW: RECOMMENDED CHECKS BEFORE PUBLICATION
+1.Verify review_frozen_forecasts.csv against its manifest, not just a new hash
+  recorded in a run manifest. Our auditor performs this check.
+2.Verify each raw replay file against the pinned checksums above; verify that
+  the endpoint CSV was generated from those same files. A timestamped manifest
+  alone records identity but does not prove it is the intended source version.
+3.Assert the exact three IDs and91 dates/24forecasts per day. len(cases)==4914
+  alone could accept a different selection with the same total number of rows.
+4.Preserve exact integer endpoint subtraction. Record any floating threshold
+  convention separately from physical measurement accuracy.
+5.Keep all4914 tasks (819blocks x6pairs); pilot/continuation is a dated analysis
+  split of reused data, not a newly untouched source. The present audit looked
+  only at input identities and did not inspect any geometry/replay results.
+
+REGENERATION WITHOUT REFITTING
+Counter-only path, adequate for the new study's default load_initial:
+  python work/data_prepare_blem.py --download --data-dir <RAW_CACHE> --output-dir <PREPARED>
+This downloads only the pinned counter sources if absent, checks each hash and
+writes data_blem_hourly.csv, data_blem_hourly_endpoints.csv and
+data_blem_preparation_audit.json into PREPARED. The endpoint schema includes:
+meter,interval_start_utc,interval_end_utc,actual_start_snapshot_utc,
+actual_end_snapshot_utc,start_lag_seconds,end_lag_seconds,start_counter_integer,
+end_counter_integer,energy_kwh. All lags are zero. study.py takes this file via
+--endpoints and the raw cache via --data-dir, with the bundled lossless forecast
+export and original training metadata. There is no reason to retrain the three
+learned models or download the larger UCI datasets merely for this counter study.
+
+Existing exact ORIGINAL FULL FORECAST archive reconstruction:
+  python work/reproduce_review_revision.py --raw --reconstruct-only --data-dir <RAW_CACHE>
+This creates an isolated stage, downloads missing pinned raw sources, rebuilds
+the original hourly paths, fills BLEM truth/daily omissions, and verifies the
+original full forecast CSV hash. It also independently checks UCI retained
+target/daily fields, so may need larger UCI downloads. No estimator is fitted.
+Output:<printed-stage>/outputs/study_predictions.csv and
+<printed-stage>/outputs/review_raw_reconstruction.json. The relevant implementation
+is reconstruct_raw() in work/reproduce_review_revision.py. --reconstruct-only
+avoids an obsolete old-manuscript-reconstruction step. Use the original pinned
+runtime for byte-identical numeric serialization and Windows CRLF line endings.
+
+SOURCE RIGHTS AND PACKAGE OPTIONS
+Article:https://doi.org/10.3390/en12142718
+Author conversion helper:
+https://raw.githubusercontent.com/QuantLet/BLEM/756b2c1265f964b70f72625a95d98413cdfb78bd/BLEMdescStatEnergyData/FUN_getData.R
+Existing source notes:work/data_blem_source_notes.json. They distinguish the
+article's CC BY4.0 license from the dataset: the article releases data/code
+freely on QuantLet but a separate repository license has not been identified.
+An API tree inspection at this audit's pinned commit returned an untruncated
+tree and no paths matching LICENSE,LICENCE,COPYING or COPYRIGHT:
+https://api.github.com/repos/QuantLet/BLEM/git/trees/756b2c1265f964b70f72625a95d98413cdfb78bd?recursive=1
+This is a bounded source inspection, not a legal opinion or a claim that no
+rights statement exists anywhere. Do not relabel raw data CC BY solely from
+the article license. Retain citations and original download URLs/hashes.
+
+The existing supplement omits raw BLEM traces, targets and exact persistence
+copies, while supplying code, frozen fitted predictions and aggregate reports.
+Continue that clear boundary if permission to redistribute raw information is
+not established. Aggregate numerical summaries and generic synthetic examples
+can accompany executable original-source download/reconstruction instructions.
+
+Current geometry.json includes E,c,d,W0 and source IDs. E directly reveals
+held-out block totals. With the already distributed learned forecast, a full
+pair coefficient involving persistence reveals the omitted persistence values.
+Normalized c can still reveal shape and joint constraints across pairs; removing
+E alone does not establish that the export is non-reconstructive or licensed.
+Thus do not describe arbitrary per-case geometry as automatically redistribution-
+safe. Strongest transparent option: distribute source code and aggregate result
+summaries; recreate counter-dependent per-case geometry, LP witnesses and replay
+traces from the original pinned downloads. A separate rights determination or
+permission would be needed for a more permissive redistribution claim.
+
+STATUS
+The source interface is coherent for the specified six-hour cumulative-register
+benchmark. Raw counter observations are genuine; missingness, timestamp access,
+retrieval unit/cost, and survival of the two endpoints remain imposed assumptions.
+No forecast advantage, precision advantage or acceptance probability is evaluated
+or asserted in this audit.
+
+ADDITIONAL FROZEN POLICY-INPUT CHECK
+  python work/risk_adaptivity_revision/counter_adaptive/data_audit/check_policy_inputs.py --geometry work/risk_adaptivity_revision/counter_adaptive/pilot/geometry.json work/risk_adaptivity_revision/counter_adaptive/continuation/geometry.json
+The checker verifies exactly3meters x91dates and compares each case's E,c,d,W0,
+normalized c and training scale with independently assembled permitted inputs.
+It reads no optimized geometry objective, policy choice or success result.
+The original local full archive is SHA-checked before use; --original-archive
+can supply the exact archive rebuilt by the older reconstruction command above.
+The check of all6552 persistence forecasts found ZERO numerical differences
+between direct counter regeneration and the original archive under the same
+pandas parsing. All learned forecast values likewise agreed exactly. Thus the
+possible last-bit difference noted above did not occur in this actual input
+check; this is numeric equality after parsing, not a claim of byte-identical
+new forecast-file serialization. Detailed phase counts/discrepancies are in
+policy_input_verification.json (and pilot_policy_input_verification.json).
+
+NEW COUNTER-ONLY ONE-COMMAND REPRODUCTION DRIVER
+  python work/risk_adaptivity_revision/counter_adaptive/reproduce_counter.py
+Optional --data-dir points to the pinned raw cache; --output-dir must be a new
+directory; --panel defaults to all. It validates the bundled lossless export,
+downloads/verifies the three counter files if needed, prepares endpoints, runs
+the interface audit, runs geometry then raw replay, and checks that geometry
+was unchanged after answers were supplied. Logs and reproduction_report.json
+are retained in a new output tree. No estimator is fitted and no old manuscript
+is rebuilt. Raw/counter-dependent artifacts remain local to that new tree.
+The driver was then executed end-to-end on the pinned local raw cache:
+  python work/risk_adaptivity_revision/counter_adaptive/reproduce_counter.py --data-dir work --output-dir work/counter_reproduction_check_20261012T0250
+It PASSED in428.3711s. This rebuilt4914cases, replayed raw answers, reconstructed
+all summaries and checked all geometry independently. The independent checker
+verified49140 exact batch columns,24570 finite games and720 conditional LPs.
+Comparison against the archived aggregate reference passed81 exact fields and
+64 numeric fields with maximum numeric difference0 (absolute tolerance1e-8).
+Its720 conditional LPs concern12 sampled cases in this combined full-panel run;
+the rational envelope/adverse-distribution checks cover all4914cases. This is
+a fresh raw reconstruction from cached source files, not a fresh network download.
+The compact completed report is counter_adaptive/executed/raw_reproduction_report.json.
+Raw, prepared endpoints, per-case geometry, replay traces and full rational
+witnesses remain in work/counter_reproduction_check_20261012T0250 outside the
+revision subtree intended for redistribution. Runtime is one shared-host run,
+not a stable benchmark. This successful command does not independently refit
+forecast models or establish a real-world outage/retrieval cost model.

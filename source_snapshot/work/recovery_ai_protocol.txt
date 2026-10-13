@@ -1,0 +1,49 @@
+AI recovery revision protocol, fixed 2026-10-10 00:33 UTC before inspecting
+new AI-recovery outcomes. This follows the explicitly documented earlier
+non-neural main/recovery studies; it is a revision, not external validation.
+
+Use only the newly completed main-study prediction archive and model names
+recorded in its summary: daily persistence, ridge, histogram gradient boosting,
+and a fixed multilayer perceptron. Do not refit or select models here. Preserve
+all34 meters, held-out days, contiguous6/12-hour gaps, exact six-hour totals,
+mask seeds1103/2207/3301 and at-most budgets0/1/2/3 from the earlier recovery
+protocol. Use the same masks and pair-specific nonadaptive queries. Retain
+all four earlier query policies without tuning.
+
+Add two explicitly Sawade-inspired adaptations: contrast_weighted_sampling
+uses weights proportional to |a-b|; squared_contrast_weighted_sampling uses
+weights proportional to (a-b)^2. Draw sequentially without replacement,
+updating eligibility only from pre-query block geometry, never recovered
+values. Exclude redundant final-in-block targets and zero-width/zero-energy
+blocks. Normalize absolute contrasts by their maximum before squaring to
+avoid overflow. If all eligible weights are zero, use a uniform fallback.
+Stable target-index ordering and seed components [270011,mask_seed,epoch_day,
+gap_index,pair_index,1or2] make draws reproducible across budgets. These are
+adaptations, not reproductions of Sawade et al.'s with-replacement importance
+sampler, risk estimator, or Wald test (NeurIPS25,2012,section3.2).
+
+Keep all-pair cohort summaries and add identical metrics for the three pairs
+involving the MLP. Prespecified focus for that neural subset: six-hour gaps,
+budget2. Store every gap/budget/policy result, including weak outcomes, in
+study_recovery_neural.csv and neural_pairs_cohorts. Rates macro-average meters;
+width fractions divide summed remaining widths by summed original widths
+within each meter before macro averaging. Report deterministic optimality of
+worst-case width separately from measured resolution or realized width.
+
+For one operator illustration, use Portugal, MLP versus histogram gradient
+boosting, seed1103, six-hour missing run and six-hour exact totals. Select the
+first chronologically unresolved pre-recovery case, breaking date ties by
+meter ID. Selection must not depend on after-query success. Request the
+optimal at-most-two interval readings and report all supplied totals, missing
+locations, chosen locations and values, before/after bounds, and actual query
+count. The complete-data gap is an audit reference only. If still unresolved,
+report that outcome. This is an illustrative same-panel case, not new data.
+
+Validated APIs reject nonfinite/negative energies, invalid dimensions,
+overlapping indices and inconsistent fully observed blocks. A1e-9 relative
+roundoff convention applies to total-minus-observed residual calculations;
+it is not a statistical or measurement-error guarantee. Reevaluate attaining
+witnesses with stable original forecast contrasts times residual sums.
+Preserve the real-arithmetic theorem and explicit floating-point limitations.
+Snapshot prior sources/results and verify normal-input regression fixtures
+before the new run. No further tuning after observing this revision's results.

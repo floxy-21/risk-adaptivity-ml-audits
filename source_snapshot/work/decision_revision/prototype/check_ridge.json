@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "uniform_equivalence_cases": 100,
+  "candidates": 848,
+  "max_probability_difference": 2.220446049250313e-16,
+  "invalid_input_rejections": 4,
+  "zero_forecast_uniform_fallback": "passed for six concentrations",
+  "note": "Independent full generalized beta probability checker is in ../math."
+}

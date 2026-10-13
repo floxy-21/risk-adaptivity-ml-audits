@@ -1,0 +1,1657 @@
+{
+  "status": "passed",
+  "protocol_sha256": "793e81710cb05ef78fad78c49c3f381d2efda16af6ddb7d8be9875d9360a0ea1",
+  "script_sha256": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d",
+  "random_cases": 42,
+  "max_objective_discrepancy": 1.7763568394002505e-13,
+  "cases": [
+    {
+      "case": 0,
+      "coefficients": [
+        [
+          -2,
+          7,
+          -1
+        ]
+      ],
+      "energies": [
+        1
+      ],
+      "budget": 1,
+      "compact": {
+        "value": 1.0,
+        "variables": 4,
+        "equalities": 2,
+        "inequalities": 3,
+        "feasibility_max": 0.0,
+        "seconds": 0.011646799997834023,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 1.0,
+        "deterministic": 1.0,
+        "batches": 3,
+        "support": 1,
+        "seconds": 0.005531200000405079
+      },
+      "error": 0.0
+    },
+    {
+      "case": 1,
+      "coefficients": [
+        [
+          -4,
+          -5,
+          1
+        ]
+      ],
+      "energies": [
+        2
+      ],
+      "budget": 0,
+      "compact": {
+        "value": 12.0,
+        "variables": 3,
+        "equalities": 3,
+        "inequalities": 4,
+        "feasibility_max": 0.0,
+        "seconds": 0.00626399999964633,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 12.0,
+        "deterministic": 12.0,
+        "batches": 1,
+        "support": 1,
+        "seconds": 0.004485299999942072
+      },
+      "error": 0.0
+    },
+    {
+      "case": 2,
+      "coefficients": [
+        [
+          -1,
+          5,
+          4
+        ]
+      ],
+      "energies": [
+        1
+      ],
+      "budget": 1,
+      "compact": {
+        "value": 1.0,
+        "variables": 4,
+        "equalities": 2,
+        "inequalities": 3,
+        "feasibility_max": 0.0,
+        "seconds": 0.006486300000688061,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 1.0,
+        "deterministic": 1.0,
+        "batches": 3,
+        "support": 1,
+        "seconds": 0.004591700002492871
+      },
+      "error": 0.0
+    },
+    {
+      "case": 3,
+      "coefficients": [
+        [
+          1,
+          -1,
+          -2
+        ]
+      ],
+      "energies": [
+        2
+      ],
+      "budget": 0,
+      "compact": {
+        "value": 6.0,
+        "variables": 3,
+        "equalities": 3,
+        "inequalities": 4,
+        "feasibility_max": 0.0,
+        "seconds": 0.006180700002005324,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 6.0,
+        "deterministic": 6.0,
+        "batches": 1,
+        "support": 1,
+        "seconds": 0.004657100002077641
+      },
+      "error": 0.0
+    },
+    {
+      "case": 4,
+      "coefficients": [
+        [
+          -3,
+          -1,
+          1,
+          1
+        ]
+      ],
+      "energies": [
+        1
+      ],
+      "budget": 1,
+      "compact": {
+        "value": 2.0,
+        "variables": 8,
+        "equalities": 5,
+        "inequalities": 8,
+        "feasibility_max": 0.0,
+        "seconds": 0.0067220000019005965,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 2.0000000000000004,
+        "deterministic": 2.0,
+        "batches": 4,
+        "support": 1,
+        "seconds": 0.004603099998348625
+      },
+      "error": 4.440892098500626e-16
+    },
+    {
+      "case": 5,
+      "coefficients": [
+        [
+          0,
+          -1,
+          0,
+          -4
+        ]
+      ],
+      "energies": [
+        1
+      ],
+      "budget": 2,
+      "compact": {
+        "value": 0.0,
+        "variables": 7,
+        "equalities": 2,
+        "inequalities": 4,
+        "feasibility_max": 0.0,
+        "seconds": 0.0060248000008868985,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 0.0,
+        "deterministic": 0.0,
+        "batches": 6,
+        "support": 1,
+        "seconds": 0.0047272000010707416
+      },
+      "error": 0.0
+    },
+    {
+      "case": 6,
+      "coefficients": [
+        [
+          -1,
+          2,
+          1,
+          4
+        ]
+      ],
+      "energies": [
+        5
+      ],
+      "budget": 0,
+      "compact": {
+        "value": 25.0,
+        "variables": 4,
+        "equalities": 3,
+        "inequalities": 6,
+        "feasibility_max": 0.0,
+        "seconds": 0.005897199996979907,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 25.0,
+        "deterministic": 25.0,
+        "batches": 1,
+        "support": 1,
+        "seconds": 0.0047235000020009466
+      },
+      "error": 0.0
+    },
+    {
+      "case": 7,
+      "coefficients": [
+        [
+          3,
+          -1,
+          -3,
+          0
+        ]
+      ],
+      "energies": [
+        2
+      ],
+      "budget": 1,
+      "compact": {
+        "value": 6.0,
+        "variables": 8,
+        "equalities": 5,
+        "inequalities": 8,
+        "feasibility_max": 0.0,
+        "seconds": 0.006386000000929926,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 6.0,
+        "deterministic": 6.0,
+        "batches": 4,
+        "support": 1,
+        "seconds": 0.003724400001374306
+      },
+      "error": 0.0
+    },
+    {
+      "case": 8,
+      "coefficients": [
+        [
+          8,
+          8,
+          1,
+          -4,
+          6
+        ]
+      ],
+      "energies": [
+        5
+      ],
+      "budget": 1,
+      "compact": {
+        "value": 35.0,
+        "variables": 11,
+        "equalities": 5,
+        "inequalities": 12,
+        "feasibility_max": 0.0,
+        "seconds": 0.005057400001533097,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 34.99999999999999,
+        "deterministic": 35.0,
+        "batches": 5,
+        "support": 1,
+        "seconds": 0.0031113000004552305
+      },
+      "error": 7.105427357601002e-15
+    },
+    {
+      "case": 9,
+      "coefficients": [
+        [
+          7,
+          -2,
+          3,
+          0,
+          -1
+        ]
+      ],
+      "energies": [
+        5
+      ],
+      "budget": 2,
+      "compact": {
+        "value": 10.0,
+        "variables": 17,
+        "equalities": 8,
+        "inequalities": 15,
+        "feasibility_max": 0.0,
+        "seconds": 0.004369800000858959,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 9.999999999999998,
+        "deterministic": 10.0,
+        "batches": 10,
+        "support": 1,
+        "seconds": 0.003113300001132302
+      },
+      "error": 1.7763568394002505e-15
+    },
+    {
+      "case": 10,
+      "coefficients": [
+        [
+          -5,
+          3,
+          3,
+          8,
+          2
+        ]
+      ],
+      "energies": [
+        3
+      ],
+      "budget": 3,
+      "compact": {
+        "value": 0.0,
+        "variables": 11,
+        "equalities": 2,
+        "inequalities": 5,
+        "feasibility_max": 0.0,
+        "seconds": 0.0038981999969109893,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 0.0,
+        "deterministic": 0.0,
+        "batches": 10,
+        "support": 1,
+        "seconds": 0.004283499998564366
+      },
+      "error": 0.0
+    },
+    {
+      "case": 11,
+      "coefficients": [
+        [
+          6,
+          -4,
+          -2,
+          0,
+          4
+        ]
+      ],
+      "energies": [
+        5
+      ],
+      "budget": 0,
+      "compact": {
+        "value": 50.0,
+        "variables": 5,
+        "equalities": 3,
+        "inequalities": 8,
+        "feasibility_max": 0.0,
+        "seconds": 0.0038768000013078563,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 50.0,
+        "deterministic": 50.0,
+        "batches": 1,
+        "support": 1,
+        "seconds": 0.0019868999988830183
+      },
+      "error": 0.0
+    },
+    {
+      "case": 12,
+      "coefficients": [
+        [
+          -5,
+          5,
+          3,
+          0,
+          -5,
+          1
+        ]
+      ],
+      "energies": [
+        2
+      ],
+      "budget": 1,
+      "compact": {
+        "value": 16.0,
+        "variables": 14,
+        "equalities": 5,
+        "inequalities": 16,
+        "feasibility_max": 0.0,
+        "seconds": 0.0028965999990759883,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 16.0,
+        "deterministic": 16.0,
+        "batches": 6,
+        "support": 1,
+        "seconds": 0.0015516000021307264
+      },
+      "error": 0.0
+    },
+    {
+      "case": 13,
+      "coefficients": [
+        [
+          8,
+          7,
+          1,
+          -5,
+          8,
+          -4
+        ]
+      ],
+      "energies": [
+        4
+      ],
+      "budget": 2,
+      "compact": {
+        "value": 26.392749244712984,
+        "variables": 23,
+        "equalities": 8,
+        "inequalities": 22,
+        "feasibility_max": 4.440892098500626e-15,
+        "seconds": 0.002323599997907877,
+        "positive_edge_options": 3
+      },
+      "enumerated": {
+        "value": 26.392749244713,
+        "deterministic": 28.0,
+        "batches": 15,
+        "support": 3,
+        "seconds": 0.0016289000013784971
+      },
+      "error": 1.4210854715202004e-14
+    },
+    {
+      "case": 14,
+      "coefficients": [
+        [
+          -3,
+          -2,
+          -4,
+          -2,
+          -3,
+          8
+        ]
+      ],
+      "energies": [
+        3
+      ],
+      "budget": 3,
+      "compact": {
+        "value": 2.0,
+        "variables": 31,
+        "equalities": 12,
+        "inequalities": 26,
+        "feasibility_max": 2.7755575615628914e-17,
+        "seconds": 0.002490300001227297,
+        "positive_edge_options": 4
+      },
+      "enumerated": {
+        "value": 2.0,
+        "deterministic": 3.0,
+        "batches": 20,
+        "support": 3,
+        "seconds": 0.00206610000168439
+      },
+      "error": 0.0
+    },
+    {
+      "case": 15,
+      "coefficients": [
+        [
+          7,
+          1,
+          -2,
+          0,
+          3,
+          5
+        ]
+      ],
+      "energies": [
+        4
+      ],
+      "budget": 4,
+      "compact": {
+        "value": 2.3529411764705883,
+        "variables": 16,
+        "equalities": 2,
+        "inequalities": 6,
+        "feasibility_max": 0.0,
+        "seconds": 0.0021582000008493196,
+        "positive_edge_options": 3
+      },
+      "enumerated": {
+        "value": 2.3529411764705888,
+        "deterministic": 4.0,
+        "batches": 15,
+        "support": 3,
+        "seconds": 0.0018402000023343135
+      },
+      "error": 4.440892098500626e-16
+    },
+    {
+      "case": 16,
+      "coefficients": [
+        [
+          -3,
+          1,
+          -5,
+          2,
+          -1,
+          7,
+          -2
+        ]
+      ],
+      "energies": [
+        5
+      ],
+      "budget": 1,
+      "compact": {
+        "value": 35.0,
+        "variables": 17,
+        "equalities": 5,
+        "inequalities": 20,
+        "feasibility_max": 0.0,
+        "seconds": 0.0023123999999370426,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 35.0,
+        "deterministic": 35.0,
+        "batches": 7,
+        "support": 1,
+        "seconds": 0.0014986999995016959
+      },
+      "error": 0.0
+    },
+    {
+      "case": 17,
+      "coefficients": [
+        [
+          1,
+          5,
+          1,
+          -4,
+          8,
+          1,
+          4
+        ]
+      ],
+      "energies": [
+        3
+      ],
+      "budget": 2,
+      "compact": {
+        "value": 12.0,
+        "variables": 29,
+        "equalities": 8,
+        "inequalities": 29,
+        "feasibility_max": 0.0,
+        "seconds": 0.0025057999991986435,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 12.0,
+        "deterministic": 12.0,
+        "batches": 21,
+        "support": 1,
+        "seconds": 0.0017430000007152557
+      },
+      "error": 0.0
+    },
+    {
+      "case": 18,
+      "coefficients": [
+        [
+          0,
+          -5,
+          0,
+          2,
+          -5,
+          -2,
+          1
+        ]
+      ],
+      "energies": [
+        4
+      ],
+      "budget": 3,
+      "compact": {
+        "value": 7.241379310344827,
+        "variables": 41,
+        "equalities": 12,
+        "inequalities": 37,
+        "feasibility_max": 1.3877787807814457e-17,
+        "seconds": 0.0026891999987128656,
+        "positive_edge_options": 5
+      },
+      "enumerated": {
+        "value": 7.241379310344827,
+        "deterministic": 8.0,
+        "batches": 35,
+        "support": 5,
+        "seconds": 0.0020626999976229854
+      },
+      "error": 0.0
+    },
+    {
+      "case": 19,
+      "coefficients": [
+        [
+          1,
+          -5,
+          1,
+          -2,
+          -5,
+          1,
+          0
+        ]
+      ],
+      "energies": [
+        3
+      ],
+      "budget": 4,
+      "compact": {
+        "value": 0.0,
+        "variables": 51,
+        "equalities": 17,
+        "inequalities": 42,
+        "feasibility_max": 0.0,
+        "seconds": 0.0026182000001426786,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 0.0,
+        "deterministic": 0.0,
+        "batches": 35,
+        "support": 1,
+        "seconds": 0.002332100000785431
+      },
+      "error": 0.0
+    },
+    {
+      "case": 20,
+      "coefficients": [
+        [
+          2,
+          -3,
+          -1,
+          -2,
+          -3,
+          -4,
+          4,
+          -4
+        ]
+      ],
+      "energies": [
+        5
+      ],
+      "budget": 1,
+      "compact": {
+        "value": 30.0,
+        "variables": 20,
+        "equalities": 5,
+        "inequalities": 24,
+        "feasibility_max": 0.0,
+        "seconds": 0.0022408000004361384,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 30.0,
+        "deterministic": 30.0,
+        "batches": 8,
+        "support": 1,
+        "seconds": 0.0015299000006052665
+      },
+      "error": 0.0
+    },
+    {
+      "case": 21,
+      "coefficients": [
+        [
+          8,
+          -2,
+          -2,
+          -4,
+          6,
+          -3,
+          0,
+          -5
+        ]
+      ],
+      "energies": [
+        3
+      ],
+      "budget": 2,
+      "compact": {
+        "value": 15.0,
+        "variables": 35,
+        "equalities": 8,
+        "inequalities": 36,
+        "feasibility_max": 0.0,
+        "seconds": 0.0029359000000113156,
+        "positive_edge_options": 1
+      },
+      "enumerated": {
+        "value": 14.999999999999996,
+        "deterministic": 15.0,
+        "batches": 28,
+        "support": 1,
+        "seconds": 0.002549200002249563
+      },
+      "error": 3.552713678800501e-15
+    },
+    {
+      "case": 22,
+      "coefficients": [
+        [
+          3,
+          5,
+          8,
+          8,
+          0,
+          4,
+          -5,
+          2
+        ]
+      ],
+      "energies": [
+        5
+      ],
+      "budget": 3,
+      "compact": {
+        "value": 20.967741935483865,
+        "variables": 51,
+        "equalities": 12,
+        "inequalities": 48,
+        "feasibility_max": 5.551115123125783e-16,
+        "seconds": 0.00313079999978072,
+        "positive_edge_options": 3
+      },
+      "enumerated": {
+        "value": 20.967741935483815,
+        "deterministic": 25.0,
+        "batches": 56,
+        "support": 3,
+        "seconds": 0.0031115999991015997
+      },
+      "error": 4.973799150320701e-14
+    },
+    {
+      "case": 23,
+      "coefficients": [
+        [
+          5,
+          7,
+          4,
+          3,
+          7,
+          -4,
+          5,
+          6
+        ]
+      ],
+      "energies": [
+        4
+      ],
+      "budget": 4,
+      "compact": {
+        "value": 5.119999999999999,
+        "variables": 66,
+        "equalities": 17,
+        "inequalities": 58,
+        "feasibility_max": 1.1102230246251565e-16,
+        "seconds": 0.004073399999469984,
+        "positive_edge_options": 5
+      },
+      "enumerated": {
+        "value": 5.120000000000002,
+        "deterministic": 8.0,
+        "batches": 70,
+        "support": 6,
+        "seconds": 0.004764199999044649
+      },
+      "error": 2.6645352591003757e-15
+    },
+    {
+      "case": 24,
+      "coefficients": [
+        [
+          6,
+          -2,
+          1
+        ],
+        [
+          1,
+          -2,
+          1
+        ]
+      ],
+      "energies": [
+        4,
+        4
+      ],
+      "budget": 0,
+      "compact": {
+        "value": 44.0,
+        "variables": 6,
+        "equalities": 5,
+        "inequalities": 8,
+        "feasibility_max": 0.0,
+        "seconds": 0.004033799999888288,
+        "positive_edge_options": 2
+      },
+      "enumerated": {
+        "value": 44.0,
+        "deterministic": 44.0,
+        "batches": 1,
+        "support": 1,
+        "seconds": 0.002888300001359312
+      },
+      "error": 0.0
+    },
+    {
+      "case": 25,
+      "coefficients": [
+        [
+          4,
+          6,
+          1,
+          5
+        ],
+        [
+          1,
+          3,
+          3
+        ]
+      ],
+      "energies": [
+        2,
+        2
+      ],
+      "budget": 1,
+      "compact": {
+        "value": 8.0,
+        "variables": 17,
+        "equalities": 9,
+        "inequalities": 14,
+        "feasibility_max": 0.0,
+        "seconds": 0.004175699999905191,
+        "positive_edge_options": 2
+      },
+      "enumerated": {
+        "value": 7.999999999999995,
+        "deterministic": 8.0,
+        "batches": 7,
+        "support": 1,
+        "seconds": 0.00298079999993206
+      },
+      "error": 5.329070518200751e-15
+    },
+    {
+      "case": 26,
+      "coefficients": [
+        [
+          1,
+          0,
+          4,
+          -5,
+          -3
+        ],
+        [
+          -4,
+          -3,
+          3
+        ]
+      ],
+      "energies": [
+        3,
+        2
+      ],
+      "budget": 2,
+      "compact": {
+        "value": 20.000000000000004,
+        "variables": 38,
+        "equalities": 16,
+        "inequalities": 29,
+        "feasibility_max": 8.881784197001252e-16,
+        "seconds": 0.004815100000996608,
+        "positive_edge_options": 2
+      },
+      "enumerated": {
+        "value": 20.0,
+        "deterministic": 20.0,
+        "batches": 28,
+        "support": 1,
+        "seconds": 0.003864800000883406
+      },
+      "error": 3.552713678800501e-15
+    },
+    {
+      "case": 27,
+      "coefficients": [
+        [
+          4,
+          -5,
+          4
+        ],
+        [
+          3,
+          4,
+          2,
+          3
+        ]
+      ],
+      "energies": [
+        5,
+        5
+      ],
+      "budget": 3,
+      "compact": {
+        "value": 0.0,
+        "variables": 22,
+        "equalities": 9,
+        "inequalities": 12,
+        "feasibility_max": 0.0,
+        "seconds": 0.004392899998492794,
+        "positive_edge_options": 2
+      },
+      "enumerated": {
+        "value": 0.0,
+        "deterministic": 0.0,
+        "batches": 34,
+        "support": 1,
+        "seconds": 0.003761200001463294
+      },
+      "error": 0.0
+    },
+    {
+      "case": 28,
+      "coefficients": [
+        [
+          7,
+          5,
+          2,
+          0
+        ],
+        [
+          2,
+          -2,
+          -1,
+          4
+        ]
+      ],
+      "energies": [
+        3,
+        4
+      ],
+      "budget": 4,
+      "compact": {
+        "value": 5.666666666666666,
+        "variables": 30,
+        "equalities": 11,
+        "inequalities": 16,
+        "feasibility_max": 5.551115123125783e-17,
+        "seconds": 0.005194599998503691,
+        "positive_edge_options": 4
+      },
+      "enumerated": {
+        "value": 5.666666666666666,
+        "deterministic": 10.0,
+        "batches": 68,
+        "support": 3,
+        "seconds": 0.004974399998900481
+      },
+      "error": 0.0
+    },
+    {
+      "case": 29,
+      "coefficients": [
+        [
+          1,
+          -4,
+          8,
+          -5,
+          -1
+        ],
+        [
+          1,
+          8,
+          5,
+          8
+        ]
+      ],
+      "energies": [
+        4,
+        4
+      ],
+      "budget": 0,
+      "compact": {
+        "value": 80.0,
+        "variables": 9,
+        "equalities": 5,
+        "inequalities": 14,
+        "feasibility_max": 0.0,
+        "seconds": 0.004144899998209439,
+        "positive_edge_options": 2
+      },
+      "enumerated": {
+        "value": 80.0,
+        "deterministic": 80.0,
+        "batches": 1,
+        "support": 1,
+        "seconds": 0.0028745999989041593
+      },
+      "error": 0.0
+    },
+    {
+      "case": 30,
+      "coefficients": [
+        [
+          -2,
+          1,
+          -4
+        ],
+        [
+          2,
+          4,
+          -5,
+          1,
+          2
+        ]
+      ],
+      "energies": [
+        3,
+        4
+      ],
+      "budget": 1,
+      "compact": {
+        "value": 27.0,
+        "variables": 21,
+        "equalities": 9,
+        "inequalities": 19,
+        "feasibility_max": 4.440892098500626e-16,
+        "seconds": 0.004650999999284977,
+        "positive_edge_options": 2
+      },
+      "enumerated": {
+        "value": 27.0,
+        "deterministic": 27.0,
+        "batches": 8,
+        "support": 1,
+        "seconds": 0.0033414999998058192
+      },
+      "error": 0.0
+    },
+    {
+      "case": 31,
+      "coefficients": [
+        [
+          -4,
+          -5,
+          5,
+          4
+        ],
+        [
+          0,
+          8,
+          -4,
+          -3,
+          4
+        ]
+      ],
+      "energies": [
+        3,
+        4
+      ],
+      "budget": 2,
+      "compact": {
+        "value": 45.014218009478675,
+        "variables": 48,
+        "equalities": 19,
+        "inequalities": 35,
+        "feasibility_max": 5.551115123125783e-17,
+        "seconds": 0.005526299999473849,
+        "positive_edge_options": 5
+      },
+      "enumerated": {
+        "value": 45.01421800947885,
+        "deterministic": 46.0,
+        "batches": 36,
+        "support": 4,
+        "seconds": 0.004412299997056834
+      },
+      "error": 1.7763568394002505e-13
+    },
+    {
+      "case": 32,
+      "coefficients": [
+        [
+          -1,
+          4,
+          8,
+          0,
+          -1
+        ],
+        [
+          -5,
+          0,
+          -1,
+          3,
+          -1
+        ]
+      ],
+      "energies": [
+        1,
+        1
+      ],
+      "budget": 3,
+      "compact": {
+        "value": 5.0,
+        "variables": 82,
+        "equalities": 26,
+        "inequalities": 50,
+        "feasibility_max": 0.0,
+        "seconds": 0.006305599999905098,
+        "positive_edge_options": 2
+      },
+      "enumerated": {
+        "value": 5.000000000000002,
+        "deterministic": 5.0,
+        "batches": 120,
+        "support": 1,
+        "seconds": 0.0070780999994894955
+      },
+      "error": 1.7763568394002505e-15
+    },
+    {
+      "case": 33,
+      "coefficients": [
+        [
+          3,
+          -2,
+          -5
+        ],
+        [
+          7,
+          4,
+          8
+        ]
+      ],
+      "energies": [
+        1,
+        4
+      ],
+      "budget": 4,
+      "compact": {
+        "value": 0.0,
+        "variables": 4,
+        "equalities": 3,
+        "inequalities": 6,
+        "feasibility_max": 0.0,
+        "seconds": 0.004184000001259847,
+        "positive_edge_options": 2
+      },
+      "enumerated": {
+        "value": 0.0,
+        "deterministic": 0.0,
+        "batches": 9,
+        "support": 1,
+        "seconds": 0.003290600001491839
+      },
+      "error": 0.0
+    },
+    {
+      "case": 34,
+      "coefficients": [
+        [
+          7,
+          8,
+          -3,
+          -1
+        ],
+        [
+          4,
+          -5,
+          -1
+        ]
+      ],
+      "energies": [
+        3,
+        5
+      ],
+      "budget": 0,
+      "compact": {
+        "value": 78.0,
+        "variables": 7,
+        "equalities": 5,
+        "inequalities": 10,
+        "feasibility_max": 0.0,
+        "seconds": 0.003910600000381237,
+        "positive_edge_options": 2
+      },
+      "enumerated": {
+        "value": 78.0,
+        "deterministic": 78.0,
+        "batches": 1,
+        "support": 1,
+        "seconds": 0.002824200000759447
+      },
+      "error": 0.0
+    },
+    {
+      "case": 35,
+      "coefficients": [
+        [
+          8,
+          -2,
+          6,
+          1,
+          2
+        ],
+        [
+          1,
+          3,
+          7
+        ]
+      ],
+      "energies": [
+        3,
+        3
+      ],
+      "budget": 1,
+      "compact": {
+        "value": 35.99999999999999,
+        "variables": 21,
+        "equalities": 9,
+        "inequalities": 19,
+        "feasibility_max": 2.220446049250313e-16,
+        "seconds": 0.00457299999834504,
+        "positive_edge_options": 2
+      },
+      "enumerated": {
+        "value": 36.00000000000001,
+        "deterministic": 36.0,
+        "batches": 8,
+        "support": 1,
+        "seconds": 0.003082800001720898
+      },
+      "error": 1.4210854715202004e-14
+    },
+    {
+      "case": 36,
+      "coefficients": [
+        [
+          0,
+          3,
+          -4
+        ],
+        [
+          5,
+          5,
+          -1
+        ],
+        [
+          3,
+          -5,
+          7
+        ]
+      ],
+      "energies": [
+        1,
+        3,
+        5
+      ],
+      "budget": 0,
+      "compact": {
+        "value": 85.0,
+        "variables": 9,
+        "equalities": 7,
+        "inequalities": 12,
+        "feasibility_max": 0.0,
+        "seconds": 0.004014100002677878,
+        "positive_edge_options": 3
+      },
+      "enumerated": {
+        "value": 85.0,
+        "deterministic": 85.0,
+        "batches": 1,
+        "support": 1,
+        "seconds": 0.002975300001708092
+      },
+      "error": 0.0
+    },
+    {
+      "case": 37,
+      "coefficients": [
+        [
+          7,
+          6,
+          -3
+        ],
+        [
+          -4,
+          1,
+          0
+        ],
+        [
+          -1,
+          8,
+          4
+        ]
+      ],
+      "energies": [
+        3,
+        3,
+        4
+      ],
+      "budget": 1,
+      "compact": {
+        "value": 54.0,
+        "variables": 20,
+        "equalities": 10,
+        "inequalities": 13,
+        "feasibility_max": 0.0,
+        "seconds": 0.004784800003108103,
+        "positive_edge_options": 3
+      },
+      "enumerated": {
+        "value": 54.0,
+        "deterministic": 54.0,
+        "batches": 9,
+        "support": 1,
+        "seconds": 0.003267000000050757
+      },
+      "error": 0.0
+    },
+    {
+      "case": 38,
+      "coefficients": [
+        [
+          7,
+          0,
+          -2
+        ],
+        [
+          6,
+          -1,
+          4
+        ],
+        [
+          -3,
+          0,
+          -2
+        ]
+      ],
+      "energies": [
+        4,
+        1,
+        2
+      ],
+      "budget": 2,
+      "compact": {
+        "value": 13.0,
+        "variables": 28,
+        "equalities": 13,
+        "inequalities": 14,
+        "feasibility_max": 0.0,
+        "seconds": 0.004586000002746005,
+        "positive_edge_options": 3
+      },
+      "enumerated": {
+        "value": 13.0,
+        "deterministic": 13.0,
+        "batches": 36,
+        "support": 1,
+        "seconds": 0.004475100002309773
+      },
+      "error": 0.0
+    },
+    {
+      "case": 39,
+      "coefficients": [
+        [
+          -1,
+          -1,
+          -2
+        ],
+        [
+          8,
+          -3,
+          -4
+        ],
+        [
+          4,
+          -3,
+          0
+        ]
+      ],
+      "energies": [
+        3,
+        1,
+        4
+      ],
+      "budget": 3,
+      "compact": {
+        "value": 4.0,
+        "variables": 30,
+        "equalities": 12,
+        "inequalities": 13,
+        "feasibility_max": 0.0,
+        "seconds": 0.004673399998864625,
+        "positive_edge_options": 3
+      },
+      "enumerated": {
+        "value": 4.0,
+        "deterministic": 4.0,
+        "batches": 81,
+        "support": 1,
+        "seconds": 0.005141099998581922
+      },
+      "error": 0.0
+    },
+    {
+      "case": 40,
+      "coefficients": [
+        [
+          7,
+          1,
+          -5
+        ],
+        [
+          3,
+          1,
+          -4
+        ],
+        [
+          5,
+          1,
+          7
+        ]
+      ],
+      "energies": [
+        3,
+        2,
+        3
+      ],
+      "budget": 4,
+      "compact": {
+        "value": 10.0,
+        "variables": 26,
+        "equalities": 11,
+        "inequalities": 12,
+        "feasibility_max": 0.0,
+        "seconds": 0.00452919999952428,
+        "positive_edge_options": 3
+      },
+      "enumerated": {
+        "value": 10.0,
+        "deterministic": 10.0,
+        "batches": 108,
+        "support": 1,
+        "seconds": 0.005615999998553889
+      },
+      "error": 0.0
+    },
+    {
+      "case": 41,
+      "coefficients": [
+        [
+          -4,
+          -2,
+          0
+        ],
+        [
+          6,
+          0,
+          1
+        ],
+        [
+          -4,
+          1,
+          7
+        ]
+      ],
+      "energies": [
+        2,
+        5,
+        1
+      ],
+      "budget": 0,
+      "compact": {
+        "value": 49.0,
+        "variables": 9,
+        "equalities": 7,
+        "inequalities": 12,
+        "feasibility_max": 0.0,
+        "seconds": 0.0042591999990690965,
+        "positive_edge_options": 3
+      },
+      "enumerated": {
+        "value": 49.0,
+        "deterministic": 49.0,
+        "batches": 1,
+        "support": 1,
+        "seconds": 0.0030220000007830095
+      },
+      "error": 0.0
+    }
+  ],
+  "sharp_examples": [
+    {
+      "m": 4,
+      "retained": 2,
+      "budget": 2,
+      "compact": {
+        "value": 0.5,
+        "variables": 7,
+        "equalities": 2,
+        "inequalities": 4,
+        "feasibility_max": 0.0,
+        "seconds": 0.004059499999129912,
+        "positive_edge_options": 2
+      },
+      "enumerated": {
+        "value": 0.5,
+        "deterministic": 1.0,
+        "batches": 6,
+        "support": 2,
+        "seconds": 0.002898700000514509
+      },
+      "sharp_ratio": 2.0
+    },
+    {
+      "m": 6,
+      "retained": 2,
+      "budget": 4,
+      "compact": {
+        "value": 0.33333333333333337,
+        "variables": 16,
+        "equalities": 2,
+        "inequalities": 6,
+        "feasibility_max": 0.0,
+        "seconds": 0.004298300002119504,
+        "positive_edge_options": 3
+      },
+      "enumerated": {
+        "value": 0.3333333333333333,
+        "deterministic": 1.0,
+        "batches": 15,
+        "support": 3,
+        "seconds": 0.0036419999996724073
+      },
+      "sharp_ratio": 3.0
+    },
+    {
+      "m": 9,
+      "retained": 3,
+      "budget": 6,
+      "compact": {
+        "value": 0.33333333333333337,
+        "variables": 113,
+        "equalities": 30,
+        "inequalities": 93,
+        "feasibility_max": 0.0,
+        "seconds": 0.00609440000334871,
+        "positive_edge_options": 3
+      },
+      "enumerated": {
+        "value": 0.3333333333333333,
+        "deterministic": 1.0,
+        "batches": 84,
+        "support": 3,
+        "seconds": 0.009945500001776963
+      },
+      "sharp_ratio": 3.0
+    },
+    {
+      "m": 12,
+      "retained": 2,
+      "budget": 10,
+      "compact": {
+        "value": 0.16666666666666666,
+        "variables": 67,
+        "equalities": 2,
+        "inequalities": 12,
+        "feasibility_max": 1.1102230246251565e-16,
+        "seconds": 0.00489489999745274,
+        "positive_edge_options": 6
+      },
+      "enumerated": {
+        "value": 0.16666666666666666,
+        "deterministic": 1.0,
+        "batches": 66,
+        "support": 6,
+        "seconds": 0.05806510000184062
+      },
+      "sharp_ratio": 6.0
+    }
+  ],
+  "scalability": [
+    {
+      "m": 60,
+      "budget": 4,
+      "number_of_fixed_size_batches": 487635,
+      "compact": {
+        "value": 6.470588235294111,
+        "variables": 846,
+        "equalities": 17,
+        "inequalities": 890,
+        "feasibility_max": 8.37108160567368e-14,
+        "seconds": 0.039683399998466484,
+        "positive_edge_options": 3
+      }
+    },
+    {
+      "m": 120,
+      "budget": 6,
+      "number_of_fixed_size_batches": 3652745460,
+      "compact": {
+        "value": 6.614876760563386,
+        "variables": 3221,
+        "equalities": 30,
+        "inequalities": 3312,
+        "feasibility_max": 3.497202527569243e-13,
+        "seconds": 0.3671455000003334,
+        "positive_edge_options": 3
+      }
+    }
+  ],
+  "scope": "Ordinary floating-point solver checks. Synthetic algorithm validation, not measured field impact or a novelty claim."
+}

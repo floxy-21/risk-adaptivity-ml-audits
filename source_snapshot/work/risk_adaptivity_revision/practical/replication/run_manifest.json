@@ -1,0 +1,40 @@
+{
+  "started_utc": "2026-10-11T23:51:41.576566+00:00",
+  "input_sha256": {
+    "outputs/study_holdout_consumers_predictions.csv": "6af5c1101850724b2067c14f3bc8abf891b1d12bd04fa3d4a5c24dbbbeb4c9d8",
+    "outputs/study_holdout_consumers_selection.json": "2b3e9842be2258856cf090713502cfdf2dab1e0565f4bbfb1134463567d40cd4",
+    "outputs/study_holdout_consumers.json": "3a31fdc8e41cad926ab1c43d6802d0f4772e948e61fd71b36f6aa357ac686f1e",
+    "outputs/run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+    "outputs/study_period_archive.py": "258e29c41b18c11bf9f9a15aa9e7c9344d27f0aaa564d6f0d4723d91ce7abdf9",
+    "outputs/study_archive_access.py": "de88aaf109b9534402c913789b81f992cd312dc2d17902e953b715198e2ae28b",
+    "work/risk_adaptivity_revision/practical/replication_protocol.txt": "73c11c3612decd63d789ec642bbb49d2dccf52c0b7dbc9f77e217a339330d06b",
+    "work/risk_adaptivity_revision/practical/replicate_archive_grid.py": "c56f152f00c0be40e2a2236d2e11b2b72cee339ccd3470a1d06c5f2a4d66ec50"
+  },
+  "protocol_mtime_utc": "2026-10-11T23:51:34.693500+00:00",
+  "grid": {
+    "gaps": [
+      2,
+      6,
+      12
+    ],
+    "patterns": [
+      "contiguous",
+      "scattered",
+      "high_demand"
+    ],
+    "seeds": [
+      1103,
+      2207,
+      3301
+    ],
+    "blocks": [
+      6,
+      24
+    ],
+    "tolerances": [
+      0.0,
+      0.05
+    ]
+  },
+  "status": "running"
+}

@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-10T04:00:03.023717+00:00",
+  "omitted_files": {
+    "study_recovery_cases.csv": {
+      "sha256": "08ffdaaeee6ca19728a9fc4614b10d33cacadaeb5dcdb2d806dbd3f52ab1f754",
+      "bytes": 43774853,
+      "rows": 134244,
+      "full_rows": 134244,
+      "public_rows": 124416,
+      "omitted_blem_rows": 9828,
+      "reason": "BLEM daily bound endpoints and query indices can disclose source readings algebraically; the mixed full case file is omitted from redistribution only."
+    }
+  },
+  "public_files": {
+    "study_recovery_cases_public.csv": {
+      "sha256": "e7357a01fd032d5e2d5ca71c33e896a82e5e47d3d8b802eaee39b0b2806ec349",
+      "bytes": 40248075,
+      "rows": 124416,
+      "included_cohorts": [
+        "household",
+        "portugal"
+      ],
+      "source_file": "study_recovery_cases.csv",
+      "full_file": "study_recovery_cases.csv",
+      "transformation": "Omit blem_counters rows only; retain every remaining original CSV field string, header and row ordering."
+    }
+  },
+  "public_to_full": {
+    "study_recovery_cases_public.csv": "study_recovery_cases.csv"
+  },
+  "cohort_source_rows": {
+    "blem_counters": 9828,
+    "household": 8856,
+    "portugal": 115560
+  },
+  "omitted_blem_rows": 9828,
+  "script_sha256": "3835a057fc1ca6caf9ad66ffb3bb3500e715e8614cac4a0a1a151140cd27872a",
+  "original_source_unchanged": true,
+  "scope": "Public UCI-only detailed diagnostic rows plus unchanged full-cohort summary reports. This is a packaging restriction, not a scientific exclusion or a reanalysis.",
+  "regeneration": "After exact raw input reconstruction, run outputs/study_recovery.py to regenerate full old recovery cases. The default review-revision command uses cached full-cohort diagnostics and does not rerun this historical extension.",
+  "uci_attribution": [
+    {
+      "dataset": "Individual Household Electric Power Consumption",
+      "doi": "https://doi.org/10.24432/C58K54",
+      "license": "CC BY 4.0"
+    },
+    {
+      "dataset": "ElectricityLoadDiagrams20112014",
+      "doi": "https://doi.org/10.24432/C58C86",
+      "license": "CC BY 4.0"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Kapoor, Jishan (2026).
+Risk and Adaptivity in Certifying Machine-Learning Model Comparisons.
+Unpublished research manuscript and accompanying software, 13 October 2026.
+Independent Researcher, Toronto, Canada.
+Prepared for PeerJ Computer Science; not submitted or accepted.
+Use the release tag and checksums to identify the exact revision.

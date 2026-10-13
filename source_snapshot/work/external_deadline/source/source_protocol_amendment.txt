@@ -1,0 +1,13 @@
+SOURCE-DOCUMENTATION AMENDMENT, 2026-10-11
+Made after reading RAW_READ_ME_081116.txt and before reading raw numeric samples, source-quality results, fits or acquisition outcomes. The original source protocol remains preserved.
+
+The official raw readme states that load-change records were expanded with intermediate values. It further distinguishes Part1 (unavailable sensors encoded as 0) from Part2 (unavailable sensors encoded as NaN). Therefore even the raw release must not be described as unfilled, wholly measured, or exact physical ground truth.
+
+If source files are partitioned, only Part2 will supply reference values. Part1 is inventoried and excluded because unavailable-sensor zeros cannot be separated from physical zeros. The original date split and all-household eligibility thresholds are retained. If only unpartitioned files are present, their provenance must be investigated before their contents are adopted as an eligible reference.
+
+The reference is explicitly a quality-filtered zero-order-hold integral of raw-release aggregate power values, which include the source's event-change expansion. Our processing adds no replacement of missing observations. Raw timestamp gaps, NaNs, negative values, duplicates, and backward timestamps remain grounds for exclusion as specified in the original protocol. Eligibility does not establish the absence of every source-level filling operation.
+
+The published source paper identifies solar-generation effects in House3,11,21 aggregate channels. Those are inventoried and retained under the same nonnegative validity rule, with no outcome-based exclusion.
+
+Official readme URL observed via normal browser redirect:
+https://pure.strath.ac.uk/ws/portalfiles/portal/62090176/RAW_READ_ME_081116.txt

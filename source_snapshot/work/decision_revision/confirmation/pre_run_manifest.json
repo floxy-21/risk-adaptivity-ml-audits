@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-10-11T21:20:36.732848+00:00",
+  "protocol_sha256": "5c216380943e792cc1215b5b809be6ac7d5bed429fdae191eab7c4873bcf9e54",
+  "selected_kappa": 4.0,
+  "policies": [
+    "ml_decision",
+    "uniform_decision",
+    "width_one",
+    "hara_one",
+    "uniform_one",
+    "randomized_one"
+  ],
+  "require_all_source_cases": true,
+  "rng_salt": "decision-confirmation",
+  "fit_inputs": {
+    "work/decision_revision/confirmation_fitted/forecast_archive.csv": "5d5b450b2a85cb7b1ee7986c3a1f6a6298afbb7121b9c5e7bb33394a938a33e7",
+    "work/decision_revision/confirmation_fitted/reference_targets.csv": "1a59d52260fed1a94929406b076ad647512454ce7f08ac70d7ab1bc8c936178c",
+    "work/decision_revision/confirmation_fitted/candidate_days.csv": "531d35a021b363d303ca9d711d5731ea90ac610bd39a74696e550f364a37787f",
+    "work/decision_revision/confirmation_fitted/surrogate_parameters.json": "9e67e5d2d7e40bd72a9e9d93affbbb67e829009741144e94f2047650ff8e3a43",
+    "work/decision_revision/confirmation_fitted/fit_metadata.json": "695ec3fda5be05fd5a63a237774fbf89f243a716d6c12dc7e3704b5319bc7b9c"
+  },
+  "policy_inputs": {
+    "work/decision_revision/confirmation.py": "28335b354bbdb033c8ccf30fd3d61dd6205f760aea94005fb3727d6a24f1ed6c",
+    "work/decision_revision/prototype/policy.py": "17b53e572f01f24d09fc1026e5fd5228ac49c48ad04a7c1037c2c84dcea4e257",
+    "work/decision_revision/prototype/ridge_policy.py": "9307c062d42679ecad6c37b5f87ede7d925126a28d5433ca30a4b2dc954bee9f",
+    "work/decision_revision/prototype/ridge_grid/summary.json": "ba944098b8c2ee9f5799244fd8e785961ecadef6f3777dd36ecb789cff06bc36",
+    "work/decision_revision/prototype/ridge_grid/pre_run_manifest.json": "e02dbbea1eca60fc74cc023ac07111f3f3e7bb5a4151227ad8f65ee70945e447",
+    "work/decision_revision/confirmation_source/manifest.json": "d135695c489df9a3eca08ebae1e84aacd33e39bc877c6b7326fffb36fe08b85f",
+    "work/decision_revision/confirmation_source/hourly.csv": "744afad90f7dfdbc0fb363cd29a67a218857280b436dcae28f01fab96b12b3ec",
+    "work/decision_revision/confirmation_source/forecast_config.json": "708400a1a046e461681dcaa222c02ae4c2957f2b2ede594855c6e66d63ad8ac9",
+    "work/external_deadline/forecast/forecast.py": "d03ed8eac3d2d749076eac6749210ad38513b56ce6a664effac33bcb3686e5c4",
+    "work/decision_revision/math/confirmation_source_check.json": "635724cfcd3db22ad143ecd8c109ec51699b5e573b837d63897f609bd1b44f8a",
+    "work/decision_revision/math/ridge_independent_check.json": "917b64be73c480b4c004c22356e70714dd3866f4d6c070fba190c38fde418a9a",
+    "work/external_deadline/evaluate.py": "a5c91d25cf16d123673284744a0ed79aa572fb968704e047363de0bd7f829e85",
+    "work/external_deadline/acquisition/acquisition.py": "9f2963ee9d1dd00fb194e62a962469b91a445bda8078e3000c8d055db51e934c",
+    "work/external_deadline/acquisition/compact_secondary.py": "84b245d7407651ab9d1d4b6f751829fa28f54677b0343542e98f83ab87003121",
+    "outputs/study_recovery.py": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241",
+    "work/randomized_recovery_root/compact_policy.py": "608af8ac008d91a5cbfc16560b532e42e5c208f1edd384091e8e5eba5503d781",
+    "work/randomized_recovery_root/compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d"
+  }
+}

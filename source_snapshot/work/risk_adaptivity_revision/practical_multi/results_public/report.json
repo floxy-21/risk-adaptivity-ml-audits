@@ -1,0 +1,201 @@
+{
+  "status": "passed",
+  "source_mode": "public",
+  "source_path": "outputs\\study_period_archive_public_cases.csv",
+  "source_sha256": "9e6247beb22ef30878cf533c0ab16a717204ac28050a26970656ffe208af26e9",
+  "script_sha256": "58505636d147ad702bd39a24c6d9c638d55ce3f4edbd981f9d8d4efc8ef8198a",
+  "elapsed_seconds": 8.144402000005357,
+  "input_rows_used": 70308,
+  "scenarios": 5022,
+  "policy_sign_margin": 1e-09,
+  "checking_tolerance": 1e-08,
+  "maximum_absolute_donor_score_additivity_error": 7.531752999057062e-13,
+  "maximum_scaled_donor_score_additivity_error": 1.2585336552137005e-15,
+  "maximum_scaled_interval_nesting_violation": 0.0,
+  "fixed_candidate_sensitivity_groups_checked": 1674,
+  "summary": [
+    {
+      "cohort": "household",
+      "total_tolerance": 0.0,
+      "consumers": 1,
+      "scenarios": 54,
+      "unique_donor_winners": 54,
+      "paired_certified": 42,
+      "separate_certified": 12,
+      "paired_unresolved": 12,
+      "separate_unresolved": 42,
+      "additional_certified": 30,
+      "paired_certification_percent": 77.77777777777777,
+      "separate_certification_percent": 22.22222222222222,
+      "coverage_difference_percentage_points": 55.55555555555556,
+      "unresolved_case_reduction_percent": 71.42857142857143,
+      "paired_consumer_bootstrap_95_difference_pp": null,
+      "opposite_pair_certificates": 0,
+      "selected_model_reference_errors": 0,
+      "selected_models": {
+        "hist_gradient_boosting": 54
+      },
+      "paired_certified_minimum_advantage_scaled_p10_median_p90": [
+        0.003186147826066255,
+        0.021467155092725135,
+        0.02850633396463137
+      ]
+    },
+    {
+      "cohort": "household",
+      "total_tolerance": 0.01,
+      "consumers": 1,
+      "scenarios": 54,
+      "unique_donor_winners": 54,
+      "paired_certified": 42,
+      "separate_certified": 12,
+      "paired_unresolved": 12,
+      "separate_unresolved": 42,
+      "additional_certified": 30,
+      "paired_certification_percent": 77.77777777777777,
+      "separate_certification_percent": 22.22222222222222,
+      "coverage_difference_percentage_points": 55.55555555555556,
+      "unresolved_case_reduction_percent": 71.42857142857143,
+      "paired_consumer_bootstrap_95_difference_pp": null,
+      "opposite_pair_certificates": 0,
+      "selected_model_reference_errors": 0,
+      "selected_models": {
+        "hist_gradient_boosting": 54
+      },
+      "paired_certified_minimum_advantage_scaled_p10_median_p90": [
+        0.002704085119672069,
+        0.021107368405804343,
+        0.02824758945037141
+      ]
+    },
+    {
+      "cohort": "household",
+      "total_tolerance": 0.05,
+      "consumers": 1,
+      "scenarios": 54,
+      "unique_donor_winners": 54,
+      "paired_certified": 38,
+      "separate_certified": 6,
+      "paired_unresolved": 16,
+      "separate_unresolved": 48,
+      "additional_certified": 32,
+      "paired_certification_percent": 70.37037037037037,
+      "separate_certification_percent": 11.11111111111111,
+      "coverage_difference_percentage_points": 59.25925925925926,
+      "unresolved_case_reduction_percent": 66.66666666666667,
+      "paired_consumer_bootstrap_95_difference_pp": null,
+      "opposite_pair_certificates": 0,
+      "selected_model_reference_errors": 0,
+      "selected_models": {
+        "hist_gradient_boosting": 54
+      },
+      "paired_certified_minimum_advantage_scaled_p10_median_p90": [
+        0.0078005306814489745,
+        0.021562312315696046,
+        0.027843445182109933
+      ]
+    },
+    {
+      "cohort": "portugal",
+      "total_tolerance": 0.0,
+      "consumers": 30,
+      "scenarios": 1620,
+      "unique_donor_winners": 1620,
+      "paired_certified": 933,
+      "separate_certified": 167,
+      "paired_unresolved": 687,
+      "separate_unresolved": 1453,
+      "additional_certified": 766,
+      "paired_certification_percent": 57.592592592592595,
+      "separate_certification_percent": 10.308641975308642,
+      "coverage_difference_percentage_points": 47.28395061728395,
+      "unresolved_case_reduction_percent": 52.71851342050929,
+      "paired_consumer_bootstrap_95_difference_pp": [
+        40.80246913580246,
+        53.766975308641975
+      ],
+      "opposite_pair_certificates": 0,
+      "selected_model_reference_errors": 0,
+      "selected_models": {
+        "ridge": 162,
+        "hist_gradient_boosting": 1242,
+        "mlp": 216
+      },
+      "paired_certified_minimum_advantage_scaled_p10_median_p90": [
+        0.0002380651862967738,
+        0.001382145439576585,
+        0.041507615089959295
+      ]
+    },
+    {
+      "cohort": "portugal",
+      "total_tolerance": 0.01,
+      "consumers": 30,
+      "scenarios": 1620,
+      "unique_donor_winners": 1620,
+      "paired_certified": 919,
+      "separate_certified": 156,
+      "paired_unresolved": 701,
+      "separate_unresolved": 1464,
+      "additional_certified": 763,
+      "paired_certification_percent": 56.72839506172839,
+      "separate_certification_percent": 9.62962962962963,
+      "coverage_difference_percentage_points": 47.098765432098766,
+      "unresolved_case_reduction_percent": 52.11748633879781,
+      "paired_consumer_bootstrap_95_difference_pp": [
+        40.36882716049382,
+        53.950617283950606
+      ],
+      "opposite_pair_certificates": 0,
+      "selected_model_reference_errors": 0,
+      "selected_models": {
+        "ridge": 162,
+        "hist_gradient_boosting": 1242,
+        "mlp": 216
+      },
+      "paired_certified_minimum_advantage_scaled_p10_median_p90": [
+        0.0002410911981394504,
+        0.001365688814102059,
+        0.04155915751712436
+      ]
+    },
+    {
+      "cohort": "portugal",
+      "total_tolerance": 0.05,
+      "consumers": 30,
+      "scenarios": 1620,
+      "unique_donor_winners": 1620,
+      "paired_certified": 850,
+      "separate_certified": 127,
+      "paired_unresolved": 770,
+      "separate_unresolved": 1493,
+      "additional_certified": 723,
+      "paired_certification_percent": 52.46913580246913,
+      "separate_certification_percent": 7.839506172839506,
+      "coverage_difference_percentage_points": 44.629629629629626,
+      "unresolved_case_reduction_percent": 48.42598794373744,
+      "paired_consumer_bootstrap_95_difference_pp": [
+        37.651234567901234,
+        51.9753086419753
+      ],
+      "opposite_pair_certificates": 0,
+      "selected_model_reference_errors": 0,
+      "selected_models": {
+        "ridge": 162,
+        "hist_gradient_boosting": 1242,
+        "mlp": 216
+      },
+      "paired_certified_minimum_advantage_scaled_p10_median_p90": [
+        0.00028621072183078786,
+        0.001321977614688928,
+        0.04171931891955258
+      ]
+    }
+  ],
+  "scope": "Secondary analysis of the same frozen retrospective archive; not an independent replication, production replacement, forecast-accuracy gain, measured labor saving, or recovery-cost reduction.",
+  "candidate_selection": "A unique historical-donor-completed MSE winner must have favorable saved donor point comparisons against all three peers. Truth is not used until validation. Nonunique preferences remain in the scenario denominator.",
+  "total_tolerance_sensitivity": "The source exports donor point rows only at zero total tolerance. The 1% and 5% analyses hold that original proposed model fixed and test its certificate under widened total constraints; they do not recompute or claim a donor imputation at those tolerances.",
+  "certificate_rule": "Authenticate that candidate against all three alternatives using the same-method sharp interval decisions with the existing 1e-9 scaled sign margin.",
+  "margin_scale": "Minimum certified MSE advantage over the three competitors divided by the squared training-period mean kWh, already saved as normalization_scale; this is not a percentage relative to unknown test MSE.",
+  "uncertainty": "2000 whole-consumer resamples of paired scenario-coverage differences, seed20261012, when at least10 consumers exist. Descriptive convenience-panel stability only; shared calendar shocks and population uncertainty are not captured."
+}

@@ -1,0 +1,13 @@
+Implementation-only recovery optimization, 2026-10-10 00:59 UTC.
+
+The first final AI-recovery sweep was stopped after initial meters because
+the strengthened input validation repeats identical bound calculations.
+Its source, partial case CSV and log are preserved in work/recovery_pre_cache.
+Restart once with memoization keyed by the selected query tuple within each
+fixed meter-day, pair and mask. A cached interval is reused only when the
+predictions, original observations, supplied totals and recovered indices
+are identical. Query policies, random seeds, constraint inputs, budgets,
+and reporting remain unchanged. No result is used to tune any policy.
+
+Validate cached versus direct intervals on synthetic cases before restart;
+compare every preserved complete partial case with its final counterpart.

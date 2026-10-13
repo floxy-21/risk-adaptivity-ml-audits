@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "response_rows": 4345,
+    "expected_endpoint_count": 4345,
+    "timestamps_match_expected_exactly": true,
+    "valid_hourly_intervals": 4344,
+    "total_training_intervals": 4344,
+    "valid_fraction": 1.0,
+    "complete_days": 181,
+    "negative_differences": 0,
+    "training_eligible": true,
+    "criteria": "Frozen operational protocol: >=95% valid hourly intervals and >=90 complete days. No interpolation, clipping, or replacement.",
+    "path": "hourly\\system_1_train_2025H1.json",
+    "sha256": "f9f6e91779b2d4045a65f9a4f3017581f6563cf330357ec5bf79da91edac5293"
+  },
+  {
+    "id": 2,
+    "response_rows": 4345,
+    "expected_endpoint_count": 4345,
+    "timestamps_match_expected_exactly": true,
+    "valid_hourly_intervals": 4344,
+    "total_training_intervals": 4344,
+    "valid_fraction": 1.0,
+    "complete_days": 181,
+    "negative_differences": 0,
+    "training_eligible": true,
+    "criteria": "Frozen operational protocol: >=95% valid hourly intervals and >=90 complete days. No interpolation, clipping, or replacement.",
+    "path": "hourly\\system_2_train_2025H1.json",
+    "sha256": "a1b963786c704a90cae4f2df6979bf60624bc6511acb232b6bf9771b1d82a370"
+  },
+  {
+    "id": 7,
+    "response_rows": 4345,
+    "expected_endpoint_count": 4345,
+    "timestamps_match_expected_exactly": true,
+    "valid_hourly_intervals": 4338,
+    "total_training_intervals": 4344,
+    "valid_fraction": 0.9986187845303868,
+    "complete_days": 178,
+    "negative_differences": 0,
+    "training_eligible": true,
+    "criteria": "Frozen operational protocol: >=95% valid hourly intervals and >=90 complete days. No interpolation, clipping, or replacement.",
+    "path": "hourly\\system_7_train_2025H1.json",
+    "sha256": "67084479d4f75cde086ebdb60f72fbc9cdf61eecfb5db539f77d3ed72526370f"
+  }
+]

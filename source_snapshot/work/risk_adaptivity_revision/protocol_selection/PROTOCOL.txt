@@ -1,0 +1,51 @@
+Protocol-aware deployment gate: fixed offline integration study
+=============================================================
+
+Retain all 29 external HPM cases used in the preceding stored-error sensitivity
+and budget-fallback analysis. Reuse their exact certificates without changing
+data, forecasts, query dictionary, precision threshold or measurement model.
+The true normalized six-increment profile is nonnegative and has exact total
+one. An optional reading returns an internal prefix plus a fixed hidden error
+bounded by 1/100; precision requires width <=1/2 of the initial width.
+These error bounds are declared modeling assumptions, not physical calibration.
+
+Choose only among existing certified protocols: the certified three-query
+fixed batch in every case, the certified two-query adaptive support in 22
+cases, and a full-range response containing all five optional prefixes when
+the interface admits it. The last protocol inherits a fixed-batch guarantee
+because its observations include that batch. It does not imply zero width for
+the uncertain true increments. No new optimization theorem is claimed.
+
+Before producing the ledger, fix four interface scenarios:
+1. Public range-capable interface: all five optional prefixes may be retrieved
+   in one range request, with no scalar-reading cap; prefer fewest HTTP
+   requests, then information rounds, then optional scalar readings.
+2. Declared restricted interface: no bulk retrieval, at most three scalar
+   readings and two information rounds; prefer fewest scalar readings, then
+   rounds. Its transport grouping is unspecified, so HTTP request counts are
+   unknown and cannot be equated to reading counts.
+3. The same restricted interface with at most two scalar readings.
+4. The restricted three-reading interface with one information round.
+
+For every case/scenario record all candidate exclusions, budget units,
+preference, certificate identity/hash, chosen protocol, guaranteed width bound,
+scalar-reading allowance, information rounds and known/unknown request count.
+If no admissible certified candidate exists, report escalation required rather
+than weaken the threshold or silently exceed a budget. Selection uses no
+withheld values. Permitted model/semantic assumptions are checked explicitly.
+
+An offline callback dispatcher will exercise each admissible selection using
+the fixed uniform increment profile and zero stored-readout errors. This is an
+implementation test, not empirical evidence. A fixed logical test will show
+that a hypothetical native multipoint interface prioritizing requests may
+choose fixed-three rather than adaptive-two, while a reading-priority
+interface chooses adaptive-two. This does not assert that HPM implements a
+native arbitrary multipoint endpoint. Invalid model/budget inputs must be
+rejected. No requests are sent and no network transport is invented.
+
+Independently verify the gating/ledger and the source certificate linkage.
+The existing exact independent checkers retain responsibility for mathematical
+certificate verification. This integration makes no population timing or cost
+prediction. Recompute the already recorded public-interface summary only:
+three fixed tasks, five policies, two repetitions, 30 trials and 60 total HTTP
+requests including initial endpoints. No prior files are edited or rerun.

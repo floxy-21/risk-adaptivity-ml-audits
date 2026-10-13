@@ -1,0 +1,210 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-10T04:17:25.507735+00:00",
+  "wall_seconds": 452.90913960000034,
+  "script_sha256": "3328f5c8a7bc24f7da722ec59d1e0662affda8325d75897eeae422e6c37648e0",
+  "source_hashes": {
+    "frozen_forecasts.csv": "ac6e2ce45745d92c5c51060fd58b768ac5711c633ae37a6576afae3797d5a2c0",
+    "frozen_forecasts.json": "5a2a2ca09b21eeece898a6f9bdf4e420ef19cc3626e3513c2606790e7b3e7a61",
+    "study_period_archive.json": "acf73343b06dfc1ad00ca30f500cb86bca2d793831e1cf523a0a408ace30c69c",
+    "study_period_archive.py": "258e29c41b18c11bf9f9a15aa9e7c9344d27f0aaa564d6f0d4723d91ce7abdf9",
+    "study_period_archive_aggregates.csv.gz": "33e73a73398e187e9109392c6154cbc3ba85c055aa0456f43126793d3bea079e",
+    "study_period_archive_cases.csv": "6db590b075ae3fcea0c29080ec7d3468bcecf3ccd5f2a97dcf76fff69081fe8b",
+    "study_period_archive_cohorts.csv": "fba5874323fb4e1d7457bb6dca291735878d62358ffd01f129e99383cd6d89cf",
+    "study_period_archive_links.csv.gz": "cd11a2a4ce4cd0e172ba46a76586d55e0da2dec32df10d77f3f7bb4aa8895cf4",
+    "study_period_archive_manifest.json": "d565d3030fed01f8295b481a3cc2e129f5222d1b9a0fbf889c78d984a89426d5",
+    "study_period_archive_mask_audit.json": "1c47b02dd3e75edc436316f6a7ef48a8ce25adf034b624cbd82734184cd3bf2c",
+    "study_period_archive_matched.csv": "e19156072bc7d648d0727d46fc82c3b0a334590bb1c98b323a162f81433eb65b",
+    "study_period_archive_pairs.csv": "b7f5044f07c9538cb9d2a4352d2365ca40846a06e5502da29d1de943b0f564b3",
+    "study_period_archive_scenarios.csv": "9d5bfa55fb9f7870dc32cdd2fd6b9391c8e35c48041c0a1a42720fd8b737f2fd",
+    "study_period_archive_sources.csv": "680c81eba3f56096664437abad9a7e8851a435c4a5d0f8f19da0f1dd349ca8d8",
+    "study_period_archive_states.csv.gz": "c8cfdb04b8ed797f92cff4c485e2d348fcdade6ee20bdbaad8aefc13a742611a",
+    "study_period_comparisons.csv": "c58640d34b1ca5fad39604b18c3b18f2990182afb11d3268013c896509381854",
+    "study_summary.json": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196"
+  },
+  "verification_mode": "full34_local_scalar_trace_reconstruction",
+  "counts": {
+    "source_copy_pointers": 85128,
+    "uci_source_copy_value_hashes": 78648,
+    "daily_states": 456090,
+    "aggregate_snapshots": 22374,
+    "meter_days": 3729,
+    "distinct_daily_masks": 100683,
+    "independent_RNG_masks": 67122,
+    "daily_state_links": 1208196,
+    "daily_pair_interval_nonwidening": 7249176,
+    "fully_reconstructed_pair_intervals": 2016,
+    "sample_truth_enclosures": 3888,
+    "numerical_sample_links": 648,
+    "independent_LP_endpoint_witnesses": 3744,
+    "copy_reconstructed_oracle_masks_with_frozen_corrections": 29493,
+    "whole_period_truth_enclosures": 132192,
+    "whole_period_rows_reconstructed": 220320,
+    "scenarios_summary_rows": 1080,
+    "cohorts_summary_rows": 60,
+    "pairs_summary_rows": 360,
+    "matched_coverage_rows": 432,
+    "all_cohort_cross_summary_rows": 120,
+    "all_cohort_matched_count_consistency_rows": 432,
+    "legacy_interval_rows_reconciled": 66096
+  },
+  "maximum_absolute_discrepancies": {
+    "fully_observed_width": 0.0,
+    "fully_observed_individual_lower": 0.0,
+    "fully_observed_individual_upper": 0.0,
+    "fully_observed_complete_case": 0.0,
+    "fully_observed_imputation": 0.0,
+    "declared_total_lower": 0.0,
+    "declared_total_upper": 0.0,
+    "sample_retained_totals": 0.0,
+    "sample_determined_truth": 3.552713678800501e-14,
+    "sample_complete_case_numerator": 1.3642420526593924e-12,
+    "sample_fully_reconstructed_MSE": 5.684341886080802e-14,
+    "sample_residual_lower": 0.0,
+    "sample_residual_upper": 0.0,
+    "sample_witness_direct_mse": 5.5138116294983774e-12,
+    "sample_LP_endpoint": 2.2737367544323206e-13,
+    "period_scale": 0.0,
+    "period_endpoints_and_points": 0.0,
+    "period_normalized_width": 0.0,
+    "legacy_daily_CC_mean": 0.0,
+    "summary_scenarios:comparisons": 0.0,
+    "summary_scenarios:decisions": 0.0,
+    "summary_scenarios:unresolved": 0.0,
+    "summary_scenarios:wrong_decisions": 0.0,
+    "summary_scenarios:mean_normalized_width": 3.552713678800501e-15,
+    "summary_scenarios:coverage": 1.1102230246251565e-16,
+    "summary_scenarios:error_among_decisions": 9.71445146547012e-17,
+    "summary_cohorts:comparisons": 0.0,
+    "summary_cohorts:decisions": 0.0,
+    "summary_cohorts:unresolved": 0.0,
+    "summary_cohorts:wrong_decisions": 0.0,
+    "summary_cohorts:mean_normalized_width": 8.881784197001252e-16,
+    "summary_cohorts:coverage": 9.367506770274758e-17,
+    "summary_cohorts:error_among_decisions": 9.71445146547012e-17,
+    "summary_pairs:comparisons": 0.0,
+    "summary_pairs:decisions": 0.0,
+    "summary_pairs:unresolved": 0.0,
+    "summary_pairs:wrong_decisions": 0.0,
+    "summary_pairs:mean_normalized_width": 8.881784197001252e-16,
+    "summary_pairs:coverage": 1.1102230246251565e-16,
+    "summary_pairs:error_among_decisions": 9.71445146547012e-17,
+    "matched_coverage:comparisons": 0.0,
+    "matched_coverage:paired_decisions": 0.0,
+    "matched_coverage:paired_wrong_decisions": 0.0,
+    "matched_coverage:selected_decisions": 0.0,
+    "matched_coverage:available_point_decisions": 0.0,
+    "matched_coverage:wrong_decisions": 0.0,
+    "matched_coverage:selected_with_matching_certificate": 0.0,
+    "matched_coverage:selected_paired_unresolved": 0.0,
+    "matched_coverage:selected_with_opposite_certificate": 0.0,
+    "matched_coverage:minimum_selected_normalized_margin": 9.974659986866641e-17,
+    "all_cohort_cross_summary_scenarios:comparisons": 0.0,
+    "all_cohort_cross_summary_scenarios:decisions": 0.0,
+    "all_cohort_cross_summary_scenarios:unresolved": 0.0,
+    "all_cohort_cross_summary_scenarios:wrong_decisions": 0.0,
+    "all_cohort_cross_summary_scenarios:mean_normalized_width": 8.881784197001252e-16,
+    "all_cohort_cross_summary_scenarios:coverage": 9.367506770274758e-17,
+    "all_cohort_cross_summary_scenarios:error_among_decisions": 9.71445146547012e-17,
+    "all_cohort_cross_summary_pairs:comparisons": 0.0,
+    "all_cohort_cross_summary_pairs:decisions": 0.0,
+    "all_cohort_cross_summary_pairs:unresolved": 0.0,
+    "all_cohort_cross_summary_pairs:wrong_decisions": 0.0,
+    "all_cohort_cross_summary_pairs:mean_normalized_width": 8.881784197001252e-16,
+    "all_cohort_cross_summary_pairs:coverage": 9.367506770274758e-17,
+    "all_cohort_cross_summary_pairs:error_among_decisions": 9.71445146547012e-17,
+    "legacy_reference_gap": 1.3642420526593924e-12,
+    "legacy_paired_bounds_lower": 4.547473508864641e-12,
+    "legacy_paired_bounds_upper": 5.4569682106375694e-12,
+    "legacy_individual_bounds_lower": 1.7462298274040222e-10,
+    "legacy_individual_bounds_upper": 2.3283064365386963e-10,
+    "legacy_uniform_lower": 6.821210263296962e-13,
+    "legacy_uniform_upper": 6.821210263296962e-13,
+    "legacy_seasonal_profile_lower": 9.094947017729282e-13,
+    "legacy_seasonal_profile_upper": 9.094947017729282e-13
+  },
+  "legacy_reconciliation": [
+    {
+      "method": "paired_bounds",
+      "rows": 33048,
+      "changed_decisions": 0
+    },
+    {
+      "method": "individual_bounds",
+      "rows": 33048,
+      "changed_decisions": 0
+    },
+    {
+      "method": "complete_case",
+      "rows": 11016,
+      "changed_decisions": 44
+    },
+    {
+      "method": "uniform",
+      "rows": 11016,
+      "changed_decisions": 0
+    },
+    {
+      "method": "seasonal_profile",
+      "rows": 11016,
+      "changed_decisions": 0
+    },
+    {
+      "method": "historical_donor",
+      "rows": 11016,
+      "changed_decisions": 8
+    }
+  ],
+  "numerical_sample_design": {
+    "meters": "Household and lexically first/last original Portugal meters",
+    "days": [
+      [
+        "household",
+        "household_1",
+        "2010-01-05"
+      ],
+      [
+        "household",
+        "household_1",
+        "2010-11-24"
+      ],
+      [
+        "portugal",
+        "MT_001",
+        "2014-01-01"
+      ],
+      [
+        "portugal",
+        "MT_001",
+        "2014-10-24"
+      ],
+      [
+        "portugal",
+        "MT_033",
+        "2014-01-01"
+      ],
+      [
+        "portugal",
+        "MT_033",
+        "2014-10-24"
+      ]
+    ],
+    "conditions": "First seed1103, every gap/mask/block/tolerance and both regimes, all six pairs",
+    "target_source": "Bundled UCI daily-persistence forecasts at t+24; complete target reconstruction is possible on each selected day"
+  },
+  "scope": {
+    "detailed_period_results": "Reconstructed from archived daily scalar contributions, independently recomputed denominators/signs/normalizations/counts and corresponding aggregation/matched-selection tables: all34 meters",
+    "all_cohort_aggregates": "Scenario and named-pair summaries independently reconcile to cohort summaries; matched count constraints checked for all cohorts",
+    "direct_reconstruction": "Timestamp/source-row eligibility checked for all34 meters; UCI copy values hash-checked; BLEM values remain omitted",
+    "numerical_endpoints": "Independent SciPy linear programs, feasible primal witnesses and direct paired MSE on fixed UCI samples",
+    "mask_checks": "Every contiguous/scattered mask independently regenerated; all other masks checked for cardinality and consistency across information/bound settings. High-demand ranks additionally reconstructed on fully copy-covered UCI days, using four explicit original-source rounding corrections from the separate mask audit.",
+    "not_rerun": [
+      "Model fitting and training-data eligibility",
+      "Every daily numerical bound from raw observations",
+      "Boundary-day raw-target numerical validation",
+      "Profile/donor reconstruction from raw training observations",
+      "BLEM target values and persistence-copy value hashes",
+      "Paid-query choices: this analysis is zero-query; separate daily recovery has its own verifier"
+    ]
+  }
+}

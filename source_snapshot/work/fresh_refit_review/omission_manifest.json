@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "public_rows": 159984,
+  "public_series": 61,
+  "omitted_rows": 6552,
+  "omitted_series": 3,
+  "omitted_cohort": "blem_counters",
+  "public_sha256": "6e58675c08df1720d124aad3f1343774c9f4df9d7f9981faf30fcbb14d56c9a7",
+  "local_full_sha256": "dcee9ff4dc4947a87c7c9d2acb8d152d506bfdbcde2e2deed0f45271e70d0b21",
+  "local_full_rows": 166536,
+  "scope": "Public export contains UCI household and Portugal rows only, including additional consumers. Full fresh BLEM target/persistence rows stay local. All-series aggregate comparisons and source/configuration hashes may be distributed. Full row replay requires raw-data reconstruction and fresh fitting.",
+  "source_hashes": {
+    "outputs/run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+    "outputs/energy_rank_bounds.py": "2b555e7fbb676f311b87c38a1cfc8bf81b34743e35a7c43b5ff08d759596f467",
+    "outputs/study_holdout_consumers.py": "444e8ef7d3a7ca79bfd4f20769e99c9925488651d55eae44984b8e3a2fced266",
+    "work/data_prepare_blem.py": "75383782c6565f328a9e6d0fa48eaa90bcdbb6c0106fe3bdee484326bd9115b7",
+    "outputs/study_summary.json": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196",
+    "outputs/study_holdout_consumers.json": "3a31fdc8e41cad926ab1c43d6802d0f4772e948e61fd71b36f6aa357ac686f1e",
+    "outputs/study_predictions.csv": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+    "outputs/study_holdout_consumers_predictions.csv": "6af5c1101850724b2067c14f3bc8abf891b1d12bd04fa3d4a5c24dbbbeb4c9d8",
+    "outputs/review_raw_reconstruction.json": "ad68a29f1012f76e556ca36f7239b9711f7956c712fb0144e2c76d55f0b63fa3"
+  }
+}

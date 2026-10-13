@@ -1,0 +1,18 @@
+TECHNICAL CORRECTION: 2026-10-09 23:47UTC, before numeric outcome inspection.
+An independent code review identified source-grid DST artifacts affecting target
+days and lagged inputs. Exclude each last Sunday of March/October and targetdays
+1,2,7 days later for BOTH training and testing in Portugal and household cohorts.
+Thus no model lag24/48/168 or previousdaymean includes a transitionday. BLEMUTC
+is unaffected. No hyperparameters, missingness designs or outcome metrics change.
+An initial run was stopped before its numeric results were inspected. Entire
+study is rerun from model fitting; initial outputs are overwritten consistently.
+Refactor bounding/imputation interfaces to accept observed targets with NaN gaps
+and retained total measurements only. Hidden reference targets are unavailable
+inside these methods. Test invariance to rearrangements of hidden truth at fixed
+observations and block totals. This changes informationflow clarity, not theory.
+Before restarting, add a whole-test-period audit for each meter/modelpair/mask
+scenario/seed: sum signed bounds and point-completion contrasts across disjoint
+days, divide by number of days. These bound the period's equal-day/hour MSEgap
+sharply because feasible completions factor across days. Report identifiedperiod
+comparisons and wrongperioddecisions separately from daily comparison outcomes.
+This addresses vendor-selection use; no additional forecaster tuning is done.

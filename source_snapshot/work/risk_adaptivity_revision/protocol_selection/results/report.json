@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "scenario_cases": 116,
+  "scenarios": {
+    "public_bulk": {
+      "cases": 29,
+      "certified": 29,
+      "escalation_required": 0,
+      "protocol_counts": {
+        "bulk_range": 29
+      },
+      "reserved_scalar_readings": 145,
+      "information_rounds_total": 29,
+      "planned_http_requests_total": 29
+    },
+    "restricted_three_readings": {
+      "cases": 29,
+      "certified": 29,
+      "escalation_required": 0,
+      "protocol_counts": {
+        "adaptive": 22,
+        "fixed_batch": 7
+      },
+      "reserved_scalar_readings": 65,
+      "information_rounds_total": 51,
+      "planned_http_requests_total": null
+    },
+    "restricted_two_readings": {
+      "cases": 29,
+      "certified": 22,
+      "escalation_required": 7,
+      "protocol_counts": {
+        "adaptive": 22
+      },
+      "reserved_scalar_readings": 44,
+      "information_rounds_total": 44,
+      "planned_http_requests_total": null
+    },
+    "restricted_one_round": {
+      "cases": 29,
+      "certified": 29,
+      "escalation_required": 0,
+      "protocol_counts": {
+        "fixed_batch": 29
+      },
+      "reserved_scalar_readings": 87,
+      "information_rounds_total": 29,
+      "planned_http_requests_total": null
+    }
+  },
+  "constructed_callback_executions": 109,
+  "blocked_dispatches": 7,
+  "logical_acquisition_callbacks": 153,
+  "unsupported_input_rejections": 3,
+  "modified_plan_rejected_before_acquisition": true,
+  "logical_request_vs_reading_check": {
+    "case": "hpm_1/2025-07-06/12/ridge/mlp",
+    "hypothetical_native_multipoint": true,
+    "fewest_requests_selects": "fixed_batch",
+    "fewest_readings_selects": "adaptive"
+  },
+  "new_network_calls": 0,
+  "new_model_fits": 0,
+  "new_empirical_performance_claim": false,
+  "protocol_lock_sha256": "f0fbb2b5efbc04db58b446765a1f6c31595a6eb96e809fad1ed2d95e09d6c4a4",
+  "selector_sha256": "8aeadd981913d507bde64339b4ca4316763394112df2fe4c4b7c01e63dfde8f5",
+  "seconds": 0.10462939995341003
+}

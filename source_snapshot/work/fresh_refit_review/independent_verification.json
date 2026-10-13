@@ -1,0 +1,1341 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-11T01:17:08.971988+00:00",
+  "mode": "full",
+  "fresh_trainer_reused": true,
+  "independent_training_reimplementation": false,
+  "rows_compared": 166536,
+  "series_compared": 64,
+  "forecast_values_compared": 666144,
+  "per_model_discrepancies": {
+    "truth_kwh": {
+      "values": 166536,
+      "exact_numeric_matches": 166536,
+      "max_absolute_error": 0.0,
+      "max_error_over_declared_tolerance": 0.0,
+      "outside_tolerance": 0
+    },
+    "daily": {
+      "values": 166536,
+      "exact_numeric_matches": 166536,
+      "max_absolute_error": 0.0,
+      "max_error_over_declared_tolerance": 0.0,
+      "outside_tolerance": 0
+    },
+    "ridge": {
+      "values": 166536,
+      "exact_numeric_matches": 166536,
+      "max_absolute_error": 0.0,
+      "max_error_over_declared_tolerance": 0.0,
+      "outside_tolerance": 0
+    },
+    "hist_gradient_boosting": {
+      "values": 166536,
+      "exact_numeric_matches": 166536,
+      "max_absolute_error": 0.0,
+      "max_error_over_declared_tolerance": 0.0,
+      "outside_tolerance": 0
+    },
+    "mlp": {
+      "values": 166536,
+      "exact_numeric_matches": 166536,
+      "max_absolute_error": 0.0,
+      "max_error_over_declared_tolerance": 0.0,
+      "outside_tolerance": 0
+    }
+  },
+  "fit_metadata_checked": 64,
+  "complete_reference_metrics_checked": 768,
+  "complete_period_pair_rankings_checked": 384,
+  "normalized_mse_checks": 256,
+  "cohort_macro_metrics": [
+    {
+      "cohort": "blem_counters",
+      "model": "daily",
+      "meters": 3,
+      "fresh_mse": 0.17503202335827947,
+      "frozen_mse": 0.17503202335827947,
+      "fresh_rmse": 0.4056506048872546,
+      "frozen_rmse": 0.4056506048872546,
+      "fresh_mae": 0.2318956900172924,
+      "frozen_mae": 0.2318956900172924,
+      "fresh_normalized_mse": 0.8919892737572996,
+      "frozen_normalized_mse": 0.8919892737572996
+    },
+    {
+      "cohort": "blem_counters",
+      "model": "hist_gradient_boosting",
+      "meters": 3,
+      "fresh_mse": 0.08802954483235136,
+      "frozen_mse": 0.08802954483235136,
+      "fresh_rmse": 0.28762827304614386,
+      "frozen_rmse": 0.28762827304614386,
+      "fresh_mae": 0.1715584140020537,
+      "frozen_mae": 0.1715584140020537,
+      "fresh_normalized_mse": 0.45048683006011353,
+      "frozen_normalized_mse": 0.45048683006011353
+    },
+    {
+      "cohort": "blem_counters",
+      "model": "mlp",
+      "meters": 3,
+      "fresh_mse": 0.10606112828667476,
+      "frozen_mse": 0.10606112828667476,
+      "fresh_rmse": 0.3170698909498256,
+      "frozen_rmse": 0.3170698909498256,
+      "fresh_mae": 0.20242636922933369,
+      "frozen_mae": 0.20242636922933369,
+      "fresh_normalized_mse": 0.5374088752051327,
+      "frozen_normalized_mse": 0.5374088752051327
+    },
+    {
+      "cohort": "blem_counters",
+      "model": "ridge",
+      "meters": 3,
+      "fresh_mse": 0.0982004049815249,
+      "frozen_mse": 0.0982004049815249,
+      "fresh_rmse": 0.3037879802465093,
+      "frozen_rmse": 0.3037879802465093,
+      "fresh_mae": 0.18919936231654613,
+      "frozen_mae": 0.18919936231654613,
+      "fresh_normalized_mse": 0.5050128136549049,
+      "frozen_normalized_mse": 0.5050128136549049
+    },
+    {
+      "cohort": "household",
+      "model": "daily",
+      "meters": 1,
+      "fresh_mse": 0.6287579790458446,
+      "frozen_mse": 0.6287579790458446,
+      "fresh_rmse": 0.7929426076620203,
+      "frozen_rmse": 0.7929426076620203,
+      "fresh_mae": 0.5351447944896115,
+      "frozen_mae": 0.5351447944896115,
+      "fresh_normalized_mse": 0.5548241861007123,
+      "frozen_normalized_mse": 0.5548241861007123
+    },
+    {
+      "cohort": "household",
+      "model": "hist_gradient_boosting",
+      "meters": 1,
+      "fresh_mse": 0.34771852765552813,
+      "frozen_mse": 0.34771852765552813,
+      "fresh_rmse": 0.5896766297349151,
+      "frozen_rmse": 0.5896766297349151,
+      "fresh_mae": 0.42988924670552286,
+      "frozen_mae": 0.42988924670552286,
+      "fresh_normalized_mse": 0.306831333403325,
+      "frozen_normalized_mse": 0.306831333403325
+    },
+    {
+      "cohort": "household",
+      "model": "mlp",
+      "meters": 1,
+      "fresh_mse": 0.38134242634911747,
+      "frozen_mse": 0.38134242634911747,
+      "fresh_rmse": 0.6175292918956294,
+      "frozen_rmse": 0.6175292918956294,
+      "fresh_mae": 0.44770026972802096,
+      "frozen_mae": 0.44770026972802096,
+      "fresh_normalized_mse": 0.3365014971991204,
+      "frozen_normalized_mse": 0.3365014971991204
+    },
+    {
+      "cohort": "household",
+      "model": "ridge",
+      "meters": 1,
+      "fresh_mse": 0.38877079083910204,
+      "frozen_mse": 0.38877079083910204,
+      "fresh_rmse": 0.6235148681780588,
+      "frozen_rmse": 0.6235148681780588,
+      "fresh_mae": 0.46602374487434917,
+      "frozen_mae": 0.46602374487434917,
+      "fresh_normalized_mse": 0.34305638225754864,
+      "frozen_normalized_mse": 0.34305638225754864
+    },
+    {
+      "cohort": "portugal",
+      "model": "daily",
+      "meters": 30,
+      "fresh_mse": 373.52339835883845,
+      "frozen_mse": 373.52339835883845,
+      "fresh_rmse": 14.199692382106877,
+      "frozen_rmse": 14.199692382106877,
+      "fresh_mae": 9.25339194958899,
+      "frozen_mae": 9.25339194958899,
+      "fresh_normalized_mse": 0.07187829662816718,
+      "frozen_normalized_mse": 0.07187829662816718
+    },
+    {
+      "cohort": "portugal",
+      "model": "hist_gradient_boosting",
+      "meters": 30,
+      "fresh_mse": 151.4261456588483,
+      "frozen_mse": 151.4261456588483,
+      "fresh_rmse": 9.121681409942335,
+      "frozen_rmse": 9.121681409942335,
+      "fresh_mae": 6.25652443570783,
+      "frozen_mae": 6.25652443570783,
+      "fresh_normalized_mse": 0.03295212975006923,
+      "frozen_normalized_mse": 0.03295212975006923
+    },
+    {
+      "cohort": "portugal",
+      "model": "mlp",
+      "meters": 30,
+      "fresh_mse": 170.77367790983695,
+      "frozen_mse": 170.77367790983695,
+      "fresh_rmse": 9.639432157257314,
+      "frozen_rmse": 9.639432157257314,
+      "fresh_mae": 6.832052444424118,
+      "frozen_mae": 6.832052444424118,
+      "fresh_normalized_mse": 0.03725992552340807,
+      "frozen_normalized_mse": 0.03725992552340807
+    },
+    {
+      "cohort": "portugal",
+      "model": "ridge",
+      "meters": 30,
+      "fresh_mse": 187.64506588404578,
+      "frozen_mse": 187.64506588404578,
+      "fresh_rmse": 10.110124842276722,
+      "frozen_rmse": 10.110124842276722,
+      "fresh_mae": 7.014579693113861,
+      "frozen_mae": 7.014579693113861,
+      "fresh_normalized_mse": 0.036688910894516584,
+      "frozen_normalized_mse": 0.036688910894516584
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "model": "daily",
+      "meters": 30,
+      "fresh_mse": 5820.470283594668,
+      "frozen_mse": 5820.470283594668,
+      "fresh_rmse": 53.27125428590053,
+      "frozen_rmse": 53.27125428590053,
+      "fresh_mae": 30.01971211393199,
+      "frozen_mae": 30.01971211393199,
+      "fresh_normalized_mse": 0.3238935893066353,
+      "frozen_normalized_mse": 0.3238935893066353
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "model": "hist_gradient_boosting",
+      "meters": 30,
+      "fresh_mse": 3046.350121277496,
+      "frozen_mse": 3046.350121277496,
+      "fresh_rmse": 37.04545666789513,
+      "frozen_rmse": 37.04545666789513,
+      "fresh_mae": 22.917902867945422,
+      "frozen_mae": 22.917902867945422,
+      "fresh_normalized_mse": 0.13748971858212294,
+      "frozen_normalized_mse": 0.13748971858212294
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "model": "mlp",
+      "meters": 30,
+      "fresh_mse": 3330.578053532021,
+      "frozen_mse": 3330.578053532021,
+      "fresh_rmse": 39.41177469811843,
+      "frozen_rmse": 39.41177469811843,
+      "fresh_mae": 25.985793414542318,
+      "frozen_mae": 25.985793414542318,
+      "fresh_normalized_mse": 0.17968095909476473,
+      "frozen_normalized_mse": 0.17968095909476473
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "model": "ridge",
+      "meters": 30,
+      "fresh_mse": 3597.7406350014276,
+      "frozen_mse": 3597.7406350014276,
+      "fresh_rmse": 40.426886284042936,
+      "frozen_rmse": 40.426886284042936,
+      "fresh_mae": 25.137164441385142,
+      "frozen_mae": 25.137164441385142,
+      "fresh_normalized_mse": 0.17289507688102546,
+      "frozen_normalized_mse": 0.17289507688102546
+    }
+  ],
+  "ranking_changes": [],
+  "all_fresh_training_warnings": [],
+  "synthetic_feature_fixtures": {
+    "synthetic_series": 3,
+    "feature_scalar_checks": 43200,
+    "same_day_target_perturbation_checks": 3,
+    "dst_definition_checks": 3,
+    "scope": "Independent timestamp lookup and scalar trigonometry compared with two AST-extracted frozen design helpers; no fitter executed."
+  },
+  "actual_rebuilt_hourly_designs_checked": 64,
+  "actual_design_checks": [
+    {
+      "cohort": "household",
+      "meter": "household_1",
+      "feature_values_compared": 344160,
+      "train_days": 587,
+      "test_days": 246,
+      "target_rows": 5904
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_001",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_002",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_003",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_004",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_005",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_006",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_007",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_008",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_009",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_010",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_011",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_013",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_014",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_016",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_017",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_018",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_019",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_020",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_021",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_022",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_023",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_024",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_025",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_026",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_027",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_028",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_029",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_031",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_032",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_033",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "blem_counters",
+      "meter": "consumer_00000001",
+      "feature_values_compared": 85920,
+      "train_days": 266,
+      "test_days": 91,
+      "target_rows": 2184
+    },
+    {
+      "cohort": "blem_counters",
+      "meter": "consumer_00000002",
+      "feature_values_compared": 85920,
+      "train_days": 266,
+      "test_days": 91,
+      "target_rows": 2184
+    },
+    {
+      "cohort": "blem_counters",
+      "meter": "consumer_00000003",
+      "feature_values_compared": 85920,
+      "train_days": 266,
+      "test_days": 91,
+      "target_rows": 2184
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_081",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_082",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_083",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_084",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_085",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_086",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_087",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_088",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_089",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_090",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_091",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_093",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_094",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_095",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_096",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_097",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_098",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_099",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_100",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_101",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_102",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_103",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_104",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_105",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_114",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_118",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_119",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_123",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_124",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_125",
+      "feature_values_compared": 348960,
+      "train_days": 357,
+      "test_days": 107,
+      "target_rows": 2568
+    }
+  ],
+  "metadata_checks": [
+    {
+      "cohort": "household",
+      "meter": "household_1",
+      "epochs": 172,
+      "train_days": 587,
+      "test_days": 246,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_001",
+      "epochs": 238,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_002",
+      "epochs": 30,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_003",
+      "epochs": 59,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_004",
+      "epochs": 33,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_005",
+      "epochs": 36,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_006",
+      "epochs": 30,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_007",
+      "epochs": 205,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_008",
+      "epochs": 30,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_009",
+      "epochs": 87,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_010",
+      "epochs": 99,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_011",
+      "epochs": 31,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_013",
+      "epochs": 68,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_014",
+      "epochs": 39,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_016",
+      "epochs": 43,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_017",
+      "epochs": 29,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_018",
+      "epochs": 42,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_019",
+      "epochs": 33,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_020",
+      "epochs": 43,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_021",
+      "epochs": 30,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_022",
+      "epochs": 50,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_023",
+      "epochs": 36,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_024",
+      "epochs": 36,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_025",
+      "epochs": 39,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_026",
+      "epochs": 34,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_027",
+      "epochs": 36,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_028",
+      "epochs": 35,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_029",
+      "epochs": 52,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_031",
+      "epochs": 34,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_032",
+      "epochs": 32,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal",
+      "meter": "MT_033",
+      "epochs": 29,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "blem_counters",
+      "meter": "consumer_00000001",
+      "epochs": 255,
+      "train_days": 266,
+      "test_days": 91,
+      "warnings": []
+    },
+    {
+      "cohort": "blem_counters",
+      "meter": "consumer_00000002",
+      "epochs": 205,
+      "train_days": 266,
+      "test_days": 91,
+      "warnings": []
+    },
+    {
+      "cohort": "blem_counters",
+      "meter": "consumer_00000003",
+      "epochs": 443,
+      "train_days": 266,
+      "test_days": 91,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_081",
+      "epochs": 33,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_082",
+      "epochs": 34,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_083",
+      "epochs": 28,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_084",
+      "epochs": 47,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_085",
+      "epochs": 31,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_086",
+      "epochs": 47,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_087",
+      "epochs": 60,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_088",
+      "epochs": 90,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_089",
+      "epochs": 57,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_090",
+      "epochs": 239,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_091",
+      "epochs": 32,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_093",
+      "epochs": 383,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_094",
+      "epochs": 175,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_095",
+      "epochs": 138,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_096",
+      "epochs": 115,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_097",
+      "epochs": 87,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_098",
+      "epochs": 42,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_099",
+      "epochs": 41,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_100",
+      "epochs": 98,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_101",
+      "epochs": 40,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_102",
+      "epochs": 47,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_103",
+      "epochs": 29,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_104",
+      "epochs": 30,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_105",
+      "epochs": 76,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_114",
+      "epochs": 53,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_118",
+      "epochs": 35,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_119",
+      "epochs": 45,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_123",
+      "epochs": 69,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_124",
+      "epochs": 39,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    },
+    {
+      "cohort": "portugal_new_consumers",
+      "meter": "MT_125",
+      "epochs": 47,
+      "train_days": 357,
+      "test_days": 107,
+      "warnings": []
+    }
+  ],
+  "source_hashes": {
+    "outputs/study_summary.json": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196",
+    "outputs/study_holdout_consumers.json": "3a31fdc8e41cad926ab1c43d6802d0f4772e948e61fd71b36f6aa357ac686f1e",
+    "work/fresh_refit_review/fresh_result.json": "07cf3bb205eeab3e6bc0016fefeaf7e02bba2fba68b15503e8bc71aff7ab73eb",
+    "work/fresh_refit_review/prepared.json": "ae712968860a807eef526a9dccd8c4d3f10e77cb21164fc0980a0a0f1e318754",
+    "work/fresh_refit_review/selection.json": "6a280a6eb2e477d8a64cdbbdb9ff8799604f9e9799f5d7d306970881a7ec54a7",
+    "work/fresh_refit_review/fit_metadata.json": "649e20aa82698757773f623251ca6782139d4b2a526451c68d1892736b414eb5",
+    "work/fresh_refit_review/comparison_protocol.txt": "d26bdc2fa28be2e3f6b0a4fd63d6767b3e9bdefbac1dc23fde85f4fea449618e",
+    "work/fresh_refit_review/protocol.txt": "18cc6c2ce47acc32fa69f92248af03486d5367884d7d051e6be8eb5e14acc252",
+    "work/fresh_refit_review/refit.py": "d290c07cb6684da309f0a8b974dfe1c376fd68c811acc91777175950a37582db",
+    "work/fresh_refit_review/verify_refit.py": "113894d3fe2d7c90374655870564277d40761e58957e15bcf1d83a8b9b4da86b",
+    "outputs/run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+    "outputs/energy_rank_bounds.py": "2b555e7fbb676f311b87c38a1cfc8bf81b34743e35a7c43b5ff08d759596f467",
+    "outputs/study_holdout_consumers.py": "444e8ef7d3a7ca79bfd4f20769e99c9925488651d55eae44984b8e3a2fced266",
+    "work/data_prepare_blem.py": "75383782c6565f328a9e6d0fa48eaa90bcdbb6c0106fe3bdee484326bd9115b7",
+    "outputs/study_predictions.csv": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+    "outputs/study_holdout_consumers_predictions.csv": "6af5c1101850724b2067c14f3bc8abf891b1d12bd04fa3d4a5c24dbbbeb4c9d8",
+    "outputs/review_raw_reconstruction.json": "ad68a29f1012f76e556ca36f7239b9711f7956c712fb0144e2c76d55f0b63fa3",
+    "work/fresh_refit_review/fresh_predictions.csv": "dcee9ff4dc4947a87c7c9d2acb8d152d506bfdbcde2e2deed0f45271e70d0b21"
+  },
+  "raw_source_hashes_verified": {
+    "work/data_uci_household_power.txt": "4259c9d7ece5dbee9ab8d53682baac68d791c864f0f64a52b4043cb3b90894b7",
+    "work/data_electricity.txt": "d51565f2cb5a6b768d06ba1bbd3c084c6e2f3aab07f00c6f2dcb80e90175124b",
+    "work/data_blem_consumer-00000001.csv": "9228795c6369ce144fbb929f9d413397545f86e3a95d2f9a0f27c92f1d55ad8d",
+    "work/data_blem_consumer-00000002.csv": "93d142217c74ab2c12a98035b3ea178ead234fec0b71942e8e90db5b7e6a2ef3",
+    "work/data_blem_consumer-00000003.csv": "db69719d2262ebeb6df39abafffca2805c8a03b1b4777f86eb8aa78acf578b6c"
+  },
+  "hourly_source_hashes_verified": {
+    "hourly/blem.pkl": "b1f1af69e7e6900f8f9a046a9ec4fb4ade32cd8c325300bab03138c29c26f955",
+    "hourly/data_blem_hourly.csv": "527b1e3a07e2d1b688354796c41cdce5ee27d1ba3503a041461fce6121c9f56a",
+    "hourly/data_blem_hourly_endpoints.csv": "2d8a88d83123216d71329c1745a4dbf1d0c47b34ba1a22b6529f348f4e5987eb",
+    "hourly/data_blem_preparation_audit.json": "979518dbfc7b994242fa47d1f55a144af49c2486bc21ca346fb97ae5d7f0dc69",
+    "hourly/household.pkl": "27f8ff2e48a855e7f1a859578b8239e2a8d7c5e4eb3d9d4c89ea3e8f06ebcfcb",
+    "hourly/portugal_holdout.pkl": "0ca9285136493b275178bd43a459d1e4bc71b06226b52036a628361eae12e4eb",
+    "hourly/portugal_original.pkl": "d612a5d667e2f9f9d1c9f2af540b510f5567d717dc6948be051b99d64f9ca3c7"
+  },
+  "metrics_file": "independent_metrics_full.csv",
+  "metrics_sha256": "402aa6981cb471064dcdabcf9cbebd5427ea373f1517c0d5e95659e94f054042",
+  "script_sha256": "113894d3fe2d7c90374655870564277d40761e58957e15bcf1d83a8b9b4da86b",
+  "comparison_protocol_sha256": "d26bdc2fa28be2e3f6b0a4fd63d6767b3e9bdefbac1dc23fde85f4fea449618e",
+  "seconds": 59.128686,
+  "scope": "Fresh same-trainer execution compared by independent row arithmetic, metadata/configuration checks and feature/chronology fixtures. No optimizer fit or full mask grid is run by this checker. Full replay covers all 64 series and independently checks features, chronology and targets against newly rebuilt hourly inputs; raw parsing/training routines themselves are reused or separately source-reviewed, not independent estimators."
+}

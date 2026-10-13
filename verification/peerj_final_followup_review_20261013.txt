@@ -1,0 +1,77 @@
+
+FOLLOW-UP ANALYTIC REVIEW: READING--FEEDBACK COST FRONTIER
+Date: 13 October 2026 (America/New_York)
+Reviewed source SHA-256, verified from disk: 3ef03b55c18ec7efc1f83c0699c779fa5f35bb6523dd46611808772af41c1666
+Reviewed files: protocol_selection/manuscript_fragment_cost.tex, cost_frontier.py, INDEPENDENT_COST_CHECK.py, cost_frontier_results/report.json, cost_frontier_independent.json, and corresponding final manuscript paragraphs.
+
+VERDICT: No material blocker or mathematical correction found in the new cost analysis. The costs, comparator scope, threshold, provenance and reported counts agree. This is a read-only analytic/code/results review; no new experiment or execution is claimed.
+
+1. The model is explicitly a post-analysis additive charge for reserved scalar readings plus information rounds, with a strictly positive reading charge and nonnegative round charge. Normalization gives cost n+r*q. It concerns declared resource preferences, not measured latency, provider prices or monetary savings.
+2. For each of 22 cases with both certificates, adaptive costs 2+2r and fixed-three costs 3+r. Their difference is r-1, so adaptive is strictly preferable for r<1, equal at r=1 and more expensive for r>1. Choosing fewer rounds at equality is coherent with the stated tie rule. The seven remaining supplied cases use the same certified fixed-three option in both complete-coverage baselines.
+3. Summing gives fixed=87+29r and adaptive-with-fallback=65+51r. Since the same r applies to every case and all 22 comparisons have the same switch, summing individual catalogue minima equals the smaller of these two panel totals. This identity holds for all r>=0, not only the six reported points. A case-dependent ratio would require summing casewise minima instead; the manuscript does not claim that alternative formula.
+4. Every displayed table entry matches those formulas: r=0 gives 87/65; r=1/4 gives 94.25/77.75; r=1/2 gives 101.5/90.5; r=1 gives 116/116; r=2 gives 145/167; r=4 gives 203/269. Catalogue values are their minima.
+5. Both baselines have the identical existing half-width guarantee under exact endpoints and illustrative 1% internal errors. The new accounting neither changes the guarantee nor treats failed two-reading cases as solved with two readings. It does not compare to a selectively weakened baseline: fixed-three is optimal within the supplied catalogue for r>=1, while the adaptive-with-fixed-fallback baseline is optimal for r<=1. The text explicitly preserves this fact.
+6. The producer draws admissible candidates from the restricted-three-reading interface, excludes bulk, and evaluates the weighted cost with Fraction arithmetic. Its tie order prioritizes fewer rounds, then readings, then protocol name. The separate checker imports neither the producer nor selector, rebuilds candidate resource counts from the certificate files, checks certificate paths/hashes, checks saved query metadata and normalized upper bounds, and verifies the row/summary arithmetic.
+7. Counts reconcile: 29 cases times 6 ratios=174 choices; 29 fixed candidates plus 22 adaptive candidates, times 6 ratios=306 candidate evaluations. The reported values agree with the saved output and independent report.
+8. The reported 0.331s bulk and 0.497s adaptive times are consistent with the saved exact means 0.3312435333 and 0.4965091333 and remain descriptive measurements from a separate three-task API study. The text does not infer the cost ratio from those times or call the modeled benefit measured operational savings.
+9. The phrase 'catalogue selector' and the final paragraph adequately restrict optimality to supplied certified protocols. The two baseline definitions, same case subset, same target, same illustrative error bound and absence of shared-reading/stopping optimization are explicit. This remains an interpretable decision-support extension, not a new general cost-optimal acquisition theorem.
+10. The shorter presentation retains the general-theory versus structured-computation distinction and preserves the central proof claims. No new proof obligation is introduced by this elementary cost frontier.
+
+Optional polish only: 'Thus feedback is preferable exactly when r<1' could be 'Between these certified protocols, feedback has lower declared cost exactly when r<1.' The existing surrounding catalogue limitation already supplies that scope, so this is not a submission blocker or required extra edit.
+
+This follow-up supports the correctness of the added finite-catalogue analysis. It does not establish a new field benefit, exhaustive prior-art novelty or a calibrated acceptance probability.
+Final read-only PeerJ readability and application review
+Date: 13 October 2026 (America/New_York)
+Source SHA-256: 90d01a9893458291d2d22a3bed8cf39938b07497a90680038533dbb0228575ff
+PDF SHA-256: 465cca6212e67f5539b4b4ce96112dce97451c85fa2ae601e868ffe8d499fb63
+Both hashes independently read from current files. PDF has28 current pages.
+
+Verdict: PASS for the requested bounded final review. No newly identified
+scientific or visual blocker requires further manuscript changes.
+
+Readability: The introduction now explains batch/adaptive choices and sharp
+intervals before the formal setting. Removing the redundant prior-art table
+preserves precise prose citations while improving the route to Methods. The
+supplement section is an entry guide rather than a historical inventory.
+The mathematical sections remain technical because the universal theorem
+needs explicit assumptions and proofs; this is appropriate for an algorithms
+and machine-learning-verification article, not an empirical predictor paper.
+
+Worked example (PDF15--16): The displayed coefficient enclosures support all
+printed branch and adverse-profile claims. For t<=1/4 the upper bound is
+t+.2891(1-t)<=.466825; for t>=1/4 it is .0939t+.5620(1-t)<=.444975.
+Both are below1/2. The e2/e5 table limits each batch's adverse average to1/2.
+The equal mixture of {3,5} and {2,3} supplies the matching all-record lower
+guarantee. This cleanly distinguishes a continuum result from finite-profile
+checking alone. The text labels it as an existing exact-total recorded case,
+not a new sample or a bounded-error claim.
+
+Practical cost frontier (PDF21--22): The resource tradeoff is correct and useful.
+The hybrid uses65 readings and51 rounds across29 cases; fixed-three uses87 and29.
+At normalized round cost r, their costs are65+51r and87+29r, meeting at r=1.
+The selector chooses the smaller within its supplied catalogue. The arithmetic
+and all six displayed rows reconcile. Catalogued scope, pairwise separability,
+unmeasured tariffs and separate actual API timings are plainly stated.
+
+Visual review: Inspected contact-01,contact-13,contact-25 and full pages15,16,
+22,25,26. No clipping, collisions, missing glyphs or unreadable table columns
+were observed. The worked-example table is on the following page but clearly
+continues its immediately preceding text. The AI declaration spans25--26
+without missing or crowded content. Older render images beyond28 are not part
+of this final PDF and were excluded.
+
+Disclosure: The revised statement accurately retains substantive AI assistance,
+author-provided topic/objectives/supervision and author responsibility. The
+absence of consistently recorded model versions is acknowledged. Do not call
+that full compliance with a publisher's request for version numbers; it is an
+honest residual metadata limitation. No external research review is claimed.
+
+Fit: A defensible PeerJ Computer Science submission as original algorithms and
+ML-verification research, supported by proofs, source data, executable methods
+and explicit limitations. The application supplies an acquisition decision
+under declared constraints. It does not establish universal deployment savings
+or a new state-of-the-art forecasting model. Nothing in this review creates a
+statistical basis for an acceptance estimate above80%.
+
+No manuscript/code/PDF/ZIP changes, new experiments or external contacts were
+performed. Review notes only were written. This is internal AI-assisted review.

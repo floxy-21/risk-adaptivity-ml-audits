@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scope": "Independent internal arithmetic/LP checker; no fresh refit or physical-timestamp validation",
+  "geometry_cases": 1674,
+  "rational_interval_checks": 16740,
+  "rational_half_witnesses": 29,
+  "independent_LP_solves": 360,
+  "LP_sample_rule": "earliest positive-width case for each meter/model pair; all10batches",
+  "max_LP_endpoint_discrepancy": 2.7755575615628914e-17,
+  "LP_feasibility_tolerance": 1e-09,
+  "comparison_tolerance": 2e-08,
+  "persistence_rows_checked": 2232,
+  "max_persistence_difference": 0.0,
+  "raw_provider_decimal_rows_checked": 15270,
+  "maximum_raw_decimal_export_error": 0,
+  "chronology_scope": "lag endpoint API-grid labels are no later than declared issue; native sample times and historical delivery are unknown",
+  "hashes": {
+    "run_external.py": "dba71826d6a33064385019aa8a3de0db367452d1181e95679a627dc10adb7aae",
+    "geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0",
+    "replay_cases.csv": "dc04379915576b6838a101c6b712e878417d6ce5007fcc3982f06f9b1f452ea4",
+    "report.json": "dd4e4f0278a4172676da5b22ec5c652694610d1c1287b7f7a8fed18d0cda8429"
+  },
+  "seconds": 11.9262052999984
+}

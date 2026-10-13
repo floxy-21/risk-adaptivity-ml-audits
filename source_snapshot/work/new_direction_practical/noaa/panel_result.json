@@ -1,0 +1,3382 @@
+{
+  "status": "passed",
+  "script_sha256": "434fc862a3995e0e36ee17b4a3b58186c73613d4506af6e83ca5191e5901e110",
+  "protocol_sha256": "6c02e2fd3d186c879c1be80dce771d02a32d1f39366d624b71dcd7e909c95114",
+  "elapsed_seconds": 177.59400000000096,
+  "forecast_records": 260,
+  "failures": [],
+  "cases": [
+    {
+      "date": "2008-12-01",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.01,
+        0.19,
+        0.07,
+        0.03,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.02,
+        0.002,
+        0.25800000000000006,
+        0.26000000000000006,
+        0.06000000000000001,
+        0.0,
+        0.0
+      ],
+      "lower": -0.012021000000000009,
+      "upper": -0.012021000000000009,
+      "width": 0.0,
+      "uniform_point": -0.012021000000000009,
+      "individual_a": [
+        0.00525,
+        0.00525
+      ],
+      "individual_b": [
+        0.01727100000000001,
+        0.01727100000000001
+      ],
+      "independent_contrast": [
+        -0.012021000000000007,
+        -0.012021000000000007
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.012021000000000009,
+        "upper": -0.012021000000000009,
+        "width": 0.0,
+        "uniform_point": -0.012021000000000009,
+        "individual_a": [
+          0.00525,
+          0.00525
+        ],
+        "individual_b": [
+          0.01727100000000001,
+          0.01727100000000001
+        ],
+        "independent_contrast": [
+          -0.012021000000000007,
+          -0.012021000000000007
+        ]
+      },
+      "strict_decision": "control",
+      "record_total_bias_control": 0.30000000000000004,
+      "record_total_bias_ensemble": 0.6000000000000002,
+      "observed_mse_control": 0.00525,
+      "observed_mse_ensemble": 0.01727100000000001,
+      "observed_gap": -0.012021000000000007
+    },
+    {
+      "date": "2008-12-02",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2008-12-03",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2008-12-04",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        2.15,
+        9.35,
+        0.38,
+        0.020000000000000018,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        1.9899999999999998,
+        6.250000000000001,
+        0.42800000000000005,
+        0.01200000000000001,
+        0.0,
+        0.0
+      ],
+      "lower": 6.122983999999998,
+      "upper": 6.122983999999998,
+      "width": 0.0,
+      "uniform_point": 6.122983999999998,
+      "individual_a": [
+        11.523725,
+        11.523725
+      ],
+      "individual_b": [
+        5.400741000000002,
+        5.400741000000002
+      ],
+      "independent_contrast": [
+        6.122983999999999,
+        6.122983999999999
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 6.122349999999998,
+        "upper": 6.122349999999998,
+        "width": 0.0,
+        "uniform_point": 6.122349999999998,
+        "individual_a": [
+          11.523725,
+          11.523725
+        ],
+        "individual_b": [
+          5.401375000000002,
+          5.401375000000002
+        ],
+        "independent_contrast": [
+          6.122349999999999,
+          6.122349999999999
+        ]
+      },
+      "strict_decision": "ensemble",
+      "record_total_bias_control": 11.9,
+      "record_total_bias_ensemble": 8.680000000000001,
+      "observed_mse_control": 11.523725,
+      "observed_mse_ensemble": 5.400741000000002,
+      "observed_gap": 6.122983999999999
+    },
+    {
+      "date": "2008-12-05",
+      "kind": "natural_accumulation",
+      "total_mm": 12.7,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        2.52015625,
+        20.16125
+      ],
+      "individual_b": [
+        2.52015625,
+        20.16125
+      ],
+      "independent_contrast": [
+        -17.64109375,
+        17.64109375
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          2.52015625,
+          20.16125
+        ],
+        "individual_b": [
+          2.52015625,
+          20.16125
+        ],
+        "independent_contrast": [
+          -17.64109375,
+          17.64109375
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": -12.7,
+      "record_total_bias_ensemble": -12.7
+    },
+    {
+      "date": "2008-12-06",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2008-12-07",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2008-12-08",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2008-12-09",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.01,
+        0.09000000000000001,
+        0.1,
+        0.4
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.006,
+        0.294,
+        0.04,
+        1.42
+      ],
+      "lower": -0.24078399999999997,
+      "upper": -0.24078399999999997,
+      "width": 0.0,
+      "uniform_point": -0.24078399999999997,
+      "individual_a": [
+        0.022275000000000007,
+        0.022275000000000007
+      ],
+      "individual_b": [
+        0.263059,
+        0.263059
+      ],
+      "independent_contrast": [
+        -0.24078399999999997,
+        -0.24078399999999997
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.24078399999999997,
+        "upper": -0.24078399999999997,
+        "width": 0.0,
+        "uniform_point": -0.24078399999999997,
+        "individual_a": [
+          0.022275000000000007,
+          0.022275000000000007
+        ],
+        "individual_b": [
+          0.263059,
+          0.263059
+        ],
+        "independent_contrast": [
+          -0.24078399999999997,
+          -0.24078399999999997
+        ]
+      },
+      "strict_decision": "control",
+      "record_total_bias_control": 0.6000000000000001,
+      "record_total_bias_ensemble": 1.7599999999999998,
+      "observed_mse_control": 0.022275000000000007,
+      "observed_mse_ensemble": 0.263059,
+      "observed_gap": -0.24078399999999997
+    },
+    {
+      "date": "2008-12-10",
+      "kind": "natural_accumulation",
+      "total_mm": 12.7,
+      "control_3h_mm": [
+        8.56,
+        3.01,
+        0.14,
+        1.96,
+        4.84,
+        3.91,
+        11.0,
+        7.100000000000001
+      ],
+      "ensemble_3h_mm": [
+        4.852,
+        2.662,
+        0.308,
+        0.992,
+        2.976,
+        3.934,
+        5.438000000000001,
+        3.4620000000000006
+      ],
+      "lower": 7.180813000000001,
+      "upper": 25.373562999999997,
+      "width": 18.192749999999997,
+      "uniform_point": 18.531437999999998,
+      "individual_a": [
+        14.571175000000004,
+        56.756575
+      ],
+      "individual_b": [
+        2.486311333333332,
+        31.383012
+      ],
+      "independent_contrast": [
+        -16.811836999999997,
+        54.270263666666665
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 7.180813000000001,
+        "upper": 25.373562999999997,
+        "width": 18.192749999999997,
+        "uniform_point": 18.531437999999998,
+        "individual_a": [
+          14.571175000000004,
+          56.756575
+        ],
+        "individual_b": [
+          2.486311333333332,
+          31.383012
+        ],
+        "independent_contrast": [
+          -16.811836999999997,
+          54.270263666666665
+        ]
+      },
+      "strict_decision": "ensemble",
+      "record_total_bias_control": 27.820000000000004,
+      "record_total_bias_ensemble": 11.924
+    },
+    {
+      "date": "2008-12-11",
+      "kind": "natural_accumulation",
+      "total_mm": 33.02,
+      "control_3h_mm": [
+        4.89,
+        13.91,
+        2.47,
+        0.5299999999999998,
+        0.53,
+        0.17000000000000004,
+        0.04,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        3.9479999999999995,
+        9.352,
+        4.106,
+        0.33400000000000024,
+        0.40199999999999997,
+        0.398,
+        0.008,
+        0.0
+      ],
+      "lower": -24.656799000000007,
+      "upper": 26.474670999999997,
+      "width": 51.13147000000001,
+      "uniform_point": 8.850245999999999,
+      "individual_a": [
+        1.7161000000000002,
+        164.30172500000003
+      ],
+      "individual_b": [
+        3.2724810000000026,
+        151.33223400000003
+      ],
+      "independent_contrast": [
+        -149.61613400000002,
+        161.02924400000003
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -24.656876000000004,
+        "upper": 26.474593999999996,
+        "width": 51.13147,
+        "uniform_point": 8.850168999999998,
+        "individual_a": [
+          1.7161000000000002,
+          164.30172500000003
+        ],
+        "individual_b": [
+          3.2724810000000026,
+          151.44788100000002
+        ],
+        "independent_contrast": [
+          -149.731781,
+          161.02924400000003
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": -10.48,
+      "record_total_bias_ensemble": -14.472000000000005
+    },
+    {
+      "date": "2008-12-12",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2008-12-13",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2008-12-14",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -3.9999999999999996e-05,
+        "upper": -3.9999999999999996e-05,
+        "width": 0.0,
+        "uniform_point": -3.9999999999999996e-05,
+        "individual_a": [
+          2.5e-05,
+          2.5e-05
+        ],
+        "individual_b": [
+          6.5e-05,
+          6.5e-05
+        ],
+        "independent_contrast": [
+          -3.9999999999999996e-05,
+          -3.9999999999999996e-05
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2008-12-17",
+      "kind": "natural_accumulation",
+      "total_mm": 5.08,
+      "control_3h_mm": [
+        0.54,
+        0.76,
+        0.06,
+        0.04000000000000001,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.388,
+        0.332,
+        0.13200000000000003,
+        0.027999999999999997,
+        0.02,
+        0.22000000000000003,
+        0.30200000000000005,
+        0.07799999999999997
+      ],
+      "lower": -0.487393,
+      "upper": 0.43970700000000007,
+      "width": 0.9271,
+      "uniform_point": 0.07204200000000001,
+      "individual_a": [
+        0.21159999999999995,
+        3.3351
+      ],
+      "individual_b": [
+        0.20025625,
+        3.2535330000000005
+      ],
+      "independent_contrast": [
+        -3.0419330000000007,
+        3.1348437500000004
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.48931500000000006,
+        "upper": 0.4403250000000001,
+        "width": 0.9296400000000001,
+        "uniform_point": 0.07266,
+        "individual_a": [
+          0.21159999999999995,
+          3.3734250000000006
+        ],
+        "individual_b": [
+          0.20025625,
+          3.2455200000000004
+        ],
+        "independent_contrast": [
+          -3.0339200000000006,
+          3.1731687500000008
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": -3.6799999999999997,
+      "record_total_bias_ensemble": -3.58
+    },
+    {
+      "date": "2008-12-18",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.24,
+        0.3600000000000001,
+        0.1,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.012,
+        0.008000000000000002,
+        0.0,
+        0.0,
+        0.122,
+        0.21600000000000003,
+        0.06000000000000001,
+        0.04
+      ],
+      "lower": 0.016281500000000008,
+      "upper": 0.016281500000000008,
+      "width": 0.0,
+      "uniform_point": 0.016281500000000008,
+      "individual_a": [
+        0.024650000000000012,
+        0.024650000000000012
+      ],
+      "individual_b": [
+        0.008368500000000001,
+        0.008368500000000001
+      ],
+      "independent_contrast": [
+        0.01628150000000001,
+        0.01628150000000001
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.016545500000000008,
+        "upper": 0.016545500000000008,
+        "width": 0.0,
+        "uniform_point": 0.016545500000000008,
+        "individual_a": [
+          0.02492500000000001,
+          0.02492500000000001
+        ],
+        "individual_b": [
+          0.008379500000000002,
+          0.008379500000000002
+        ],
+        "independent_contrast": [
+          0.016545500000000008,
+          0.016545500000000008
+        ]
+      },
+      "strict_decision": "ensemble",
+      "record_total_bias_control": 0.7000000000000001,
+      "record_total_bias_ensemble": 0.458,
+      "observed_mse_control": 0.024650000000000012,
+      "observed_mse_ensemble": 0.008368500000000001,
+      "observed_gap": 0.01628150000000001
+    },
+    {
+      "date": "2008-12-19",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.08,
+        0.032,
+        0.028000000000000004,
+        0.0,
+        0.0
+      ],
+      "lower": -0.001026,
+      "upper": -0.001026,
+      "width": 0.0,
+      "uniform_point": -0.001026,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.001026,
+        0.001026
+      ],
+      "independent_contrast": [
+        -0.001026,
+        -0.001026
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.000934,
+        "upper": -0.000934,
+        "width": 0.0,
+        "uniform_point": -0.000934,
+        "individual_a": [
+          0.0001,
+          0.0001
+        ],
+        "individual_b": [
+          0.001034,
+          0.001034
+        ],
+        "independent_contrast": [
+          -0.0009339999999999999,
+          -0.0009339999999999999
+        ]
+      },
+      "strict_decision": "control",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.14,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.001026,
+      "observed_gap": -0.001026
+    },
+    {
+      "date": "2008-12-20",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.27,
+        0.13,
+        0.0,
+        0.0,
+        0.2,
+        0.0,
+        0.0,
+        0.1
+      ],
+      "ensemble_3h_mm": [
+        0.21400000000000002,
+        0.166,
+        0.0,
+        0.0,
+        0.12,
+        0.16,
+        0.04,
+        0.14
+      ],
+      "lower": 0.0006559999999999999,
+      "upper": 0.0006559999999999999,
+      "width": 0.0,
+      "uniform_point": 0.0006559999999999999,
+      "individual_a": [
+        0.017475,
+        0.017475
+      ],
+      "individual_b": [
+        0.016819,
+        0.016819
+      ],
+      "independent_contrast": [
+        0.0006560000000000003,
+        0.0006560000000000003
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0006549999999999998,
+        "upper": 0.0006549999999999998,
+        "width": 0.0,
+        "uniform_point": 0.0006549999999999998,
+        "individual_a": [
+          0.017475,
+          0.017475
+        ],
+        "individual_b": [
+          0.01682,
+          0.01682
+        ],
+        "independent_contrast": [
+          0.0006549999999999993,
+          0.0006549999999999993
+        ]
+      },
+      "strict_decision": "ensemble",
+      "record_total_bias_control": 0.7000000000000001,
+      "record_total_bias_ensemble": 0.8400000000000001,
+      "observed_mse_control": 0.017475,
+      "observed_mse_ensemble": 0.016819,
+      "observed_gap": 0.0006560000000000003
+    },
+    {
+      "date": "2008-12-28",
+      "kind": "natural_accumulation",
+      "total_mm": 5.08,
+      "control_3h_mm": [
+        2.41,
+        0.29000000000000004,
+        0.0,
+        0.0,
+        0.07,
+        0.53,
+        1.41,
+        0.09000000000000008
+      ],
+      "ensemble_3h_mm": [
+        2.462,
+        0.27800000000000014,
+        0.0,
+        0.12000000000000002,
+        0.10200000000000001,
+        0.17800000000000002,
+        0.434,
+        0.14600000000000005
+      ],
+      "lower": -1.018356,
+      "upper": 0.373564,
+      "width": 1.39192,
+      "uniform_point": 0.04971399999999998,
+      "individual_a": [
+        0.0012249999999999963,
+        4.247574999999999
+      ],
+      "individual_b": [
+        0.028899999999999995,
+        4.0264109999999995
+      ],
+      "independent_contrast": [
+        -4.025186,
+        4.218674999999999
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -1.018356,
+        "upper": 0.373564,
+        "width": 1.39192,
+        "uniform_point": 0.04971399999999998,
+        "individual_a": [
+          0.0012249999999999963,
+          4.247574999999999
+        ],
+        "individual_b": [
+          0.028899999999999995,
+          4.0264109999999995
+        ],
+        "independent_contrast": [
+          -4.025186,
+          4.218674999999999
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": -0.28000000000000025,
+      "record_total_bias_ensemble": -1.3599999999999999
+    },
+    {
+      "date": "2008-12-29",
+      "kind": "natural_accumulation",
+      "total_mm": 5.08,
+      "control_3h_mm": [
+        0.16,
+        0.04000000000000001,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.192,
+        0.008000000000000002,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": -0.04185600000000001,
+      "upper": 0.039424,
+      "width": 0.08128000000000002,
+      "uniform_point": -0.001216000000000001,
+      "individual_a": [
+        0.3721,
+        3.2292
+      ],
+      "individual_b": [
+        0.3721,
+        3.230416
+      ],
+      "independent_contrast": [
+        -2.858316,
+        2.8571
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.049761,
+        "upper": 0.04675900000000001,
+        "width": 0.09652000000000001,
+        "uniform_point": -0.001500999999999999,
+        "individual_a": [
+          0.3721,
+          3.2292
+        ],
+        "individual_b": [
+          0.3721,
+          3.230701
+        ],
+        "independent_contrast": [
+          -2.8586009999999997,
+          2.8571
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": -4.88,
+      "record_total_bias_ensemble": -4.88
+    },
+    {
+      "date": "2008-12-30",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2008-12-31",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2009-06-01",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.06000000000000001,
+        0.0,
+        0.0,
+        0.0,
+        0.02
+      ],
+      "lower": -0.0005000000000000001,
+      "upper": -0.0005000000000000001,
+      "width": 0.0,
+      "uniform_point": -0.0005000000000000001,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0005000000000000001,
+        0.0005000000000000001
+      ],
+      "independent_contrast": [
+        -0.0005000000000000001,
+        -0.0005000000000000001
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.0005000000000000001,
+        "upper": -0.0005000000000000001,
+        "width": 0.0,
+        "uniform_point": -0.0005000000000000001,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0005000000000000001,
+          0.0005000000000000001
+        ],
+        "independent_contrast": [
+          -0.0005000000000000001,
+          -0.0005000000000000001
+        ]
+      },
+      "strict_decision": "control",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.08000000000000002,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0005000000000000001,
+      "observed_gap": -0.0005000000000000001
+    },
+    {
+      "date": "2009-06-02",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.52,
+        0.5800000000000002
+      ],
+      "lower": -0.07585000000000003,
+      "upper": -0.07585000000000003,
+      "width": 0.0,
+      "uniform_point": -0.07585000000000003,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.07585000000000003,
+        0.07585000000000003
+      ],
+      "independent_contrast": [
+        -0.07585000000000003,
+        -0.07585000000000003
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.07585000000000003,
+        "upper": -0.07585000000000003,
+        "width": 0.0,
+        "uniform_point": -0.07585000000000003,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.07585000000000003,
+          0.07585000000000003
+        ],
+        "independent_contrast": [
+          -0.07585000000000003,
+          -0.07585000000000003
+        ]
+      },
+      "strict_decision": "control",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 1.1,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.07585000000000003,
+      "observed_gap": -0.07585000000000003
+    },
+    {
+      "date": "2009-06-03",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.02,
+        0.0,
+        0.24,
+        0.26,
+        0.14,
+        0.4600000000000001,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.142,
+        0.002000000000000013,
+        0.20800000000000002,
+        0.772,
+        0.9000000000000001,
+        0.36000000000000004,
+        0.08,
+        0.019999999999999997
+      ],
+      "lower": -0.15612700000000004,
+      "upper": -0.15612700000000004,
+      "width": 0.0,
+      "uniform_point": -0.15612700000000004,
+      "individual_a": [
+        0.044600000000000015,
+        0.044600000000000015
+      ],
+      "individual_b": [
+        0.20072700000000004,
+        0.20072700000000004
+      ],
+      "independent_contrast": [
+        -0.15612700000000002,
+        -0.15612700000000002
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.15612700000000004,
+        "upper": -0.15612700000000004,
+        "width": 0.0,
+        "uniform_point": -0.15612700000000004,
+        "individual_a": [
+          0.044600000000000015,
+          0.044600000000000015
+        ],
+        "individual_b": [
+          0.20072700000000004,
+          0.20072700000000004
+        ],
+        "independent_contrast": [
+          -0.15612700000000002,
+          -0.15612700000000002
+        ]
+      },
+      "strict_decision": "control",
+      "record_total_bias_control": 1.12,
+      "record_total_bias_ensemble": 2.484,
+      "observed_mse_control": 0.044600000000000015,
+      "observed_mse_ensemble": 0.20072700000000004,
+      "observed_gap": -0.15612700000000002
+    },
+    {
+      "date": "2009-06-04",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        6.0,
+        1.9000000000000001,
+        4.1
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.02,
+        0.0,
+        0.02,
+        1.9800000000000004,
+        4.24,
+        4.9,
+        4.540000000000001
+      ],
+      "lower": -0.1375500000000025,
+      "upper": -0.1375500000000025,
+      "width": 0.0,
+      "uniform_point": -0.1375500000000025,
+      "individual_a": [
+        8.1775,
+        8.1775
+      ],
+      "individual_b": [
+        8.315050000000003,
+        8.315050000000003
+      ],
+      "independent_contrast": [
+        -0.13755000000000273,
+        -0.13755000000000273
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.1375500000000025,
+        "upper": -0.1375500000000025,
+        "width": 0.0,
+        "uniform_point": -0.1375500000000025,
+        "individual_a": [
+          8.1775,
+          8.1775
+        ],
+        "individual_b": [
+          8.315050000000003,
+          8.315050000000003
+        ],
+        "independent_contrast": [
+          -0.13755000000000273,
+          -0.13755000000000273
+        ]
+      },
+      "strict_decision": "control",
+      "record_total_bias_control": 15.0,
+      "record_total_bias_ensemble": 15.700000000000001,
+      "observed_mse_control": 8.1775,
+      "observed_mse_ensemble": 8.315050000000003,
+      "observed_gap": -0.13755000000000273
+    },
+    {
+      "date": "2009-06-05",
+      "kind": "natural_accumulation",
+      "total_mm": 7.8740000000000006,
+      "control_3h_mm": [
+        2.9000000000000004,
+        1.2000000000000002,
+        0.0,
+        0.1,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        2.22,
+        1.8599999999999999,
+        0.1,
+        0.12,
+        0.02,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": -1.15768,
+      "upper": 1.4801099999999998,
+      "width": 2.63779,
+      "uniform_point": 0.21042750000000016,
+      "individual_a": [
+        0.2109105625,
+        8.982484500000002
+      ],
+      "individual_b": [
+        0.19735806250000015,
+        8.8015845
+      ],
+      "independent_contrast": [
+        -8.5906739375,
+        8.785126437500002
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -1.15762,
+        "upper": 1.4801699999999998,
+        "width": 2.63779,
+        "uniform_point": 0.21048750000000016,
+        "individual_a": [
+          0.2109105625,
+          9.0219545
+        ],
+        "individual_b": [
+          0.19735806250000015,
+          8.813435500000002
+        ],
+        "independent_contrast": [
+          -8.602524937500002,
+          8.8245964375
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": -3.6740000000000004,
+      "record_total_bias_ensemble": -3.554000000000001
+    },
+    {
+      "date": "2009-06-06",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2009-06-07",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2009-06-08",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2009-06-09",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.002,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": -5e-07,
+      "upper": -5e-07,
+      "width": 0.0,
+      "uniform_point": -5e-07,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        5e-07,
+        5e-07
+      ],
+      "independent_contrast": [
+        -5e-07,
+        -5e-07
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -5e-07,
+        "upper": -5e-07,
+        "width": 0.0,
+        "uniform_point": -5e-07,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          5e-07,
+          5e-07
+        ],
+        "independent_contrast": [
+          -5e-07,
+          -5e-07
+        ]
+      },
+      "strict_decision": "control",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.002,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 5e-07,
+      "observed_gap": -5e-07
+    },
+    {
+      "date": "2009-06-10",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.002,
+        0.0,
+        0.01,
+        0.05,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": -0.00032550000000000005,
+      "upper": -0.00032550000000000005,
+      "width": 0.0,
+      "uniform_point": -0.00032550000000000005,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.00032550000000000005,
+        0.00032550000000000005
+      ],
+      "independent_contrast": [
+        -0.00032550000000000005,
+        -0.00032550000000000005
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.00032550000000000005,
+        "upper": -0.00032550000000000005,
+        "width": 0.0,
+        "uniform_point": -0.00032550000000000005,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.00032550000000000005,
+          0.00032550000000000005
+        ],
+        "independent_contrast": [
+          -0.00032550000000000005,
+          -0.00032550000000000005
+        ]
+      },
+      "strict_decision": "control",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.062,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.00032550000000000005,
+      "observed_gap": -0.00032550000000000005
+    },
+    {
+      "date": "2009-06-11",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -1e-06,
+        "upper": -1e-06,
+        "width": 0.0,
+        "uniform_point": -1e-06,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          1e-06,
+          1e-06
+        ],
+        "independent_contrast": [
+          -1e-06,
+          -1e-06
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2009-06-12",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.2000000000000002,
+        0.19999999999999996
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.04,
+        0.13999999999999999,
+        0.5800000000000001,
+        0.09999999999999995
+      ],
+      "lower": 0.13905000000000006,
+      "upper": 0.13905000000000006,
+      "width": 0.0,
+      "uniform_point": 0.13905000000000006,
+      "individual_a": [
+        0.18500000000000005,
+        0.18500000000000005
+      ],
+      "individual_b": [
+        0.04595000000000001,
+        0.04595000000000001
+      ],
+      "independent_contrast": [
+        0.13905000000000003,
+        0.13905000000000003
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.13905000000000006,
+        "upper": 0.13905000000000006,
+        "width": 0.0,
+        "uniform_point": 0.13905000000000006,
+        "individual_a": [
+          0.18500000000000005,
+          0.18500000000000005
+        ],
+        "individual_b": [
+          0.04595000000000001,
+          0.04595000000000001
+        ],
+        "independent_contrast": [
+          0.13905000000000003,
+          0.13905000000000003
+        ]
+      },
+      "strict_decision": "ensemble",
+      "record_total_bias_control": 1.4000000000000001,
+      "record_total_bias_ensemble": 0.86,
+      "observed_mse_control": 0.18500000000000005,
+      "observed_mse_ensemble": 0.04595000000000001,
+      "observed_gap": 0.13905000000000003
+    },
+    {
+      "date": "2009-06-13",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.08,
+        0.0,
+        0.12000000000000002,
+        0.14,
+        0.124,
+        0.396,
+        0.62,
+        0.13999999999999999
+      ],
+      "lower": 0.047925999999999996,
+      "upper": 0.047925999999999996,
+      "width": 0.0,
+      "uniform_point": 0.047925999999999996,
+      "individual_a": [
+        0.125,
+        0.125
+      ],
+      "individual_b": [
+        0.077074,
+        0.077074
+      ],
+      "independent_contrast": [
+        0.047925999999999996,
+        0.047925999999999996
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.052296999999999996,
+        "upper": 0.052296999999999996,
+        "width": 0.0,
+        "uniform_point": 0.052296999999999996,
+        "individual_a": [
+          0.1301,
+          0.1301
+        ],
+        "individual_b": [
+          0.077803,
+          0.077803
+        ],
+        "independent_contrast": [
+          0.052296999999999996,
+          0.052296999999999996
+        ]
+      },
+      "strict_decision": "ensemble",
+      "record_total_bias_control": 1.0,
+      "record_total_bias_ensemble": 1.6199999999999999,
+      "observed_mse_control": 0.125,
+      "observed_mse_ensemble": 0.077074,
+      "observed_gap": 0.047925999999999996
+    },
+    {
+      "date": "2009-06-14",
+      "kind": "natural_accumulation",
+      "total_mm": 1.524,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.04,
+        1.06,
+        2.19,
+        0.96,
+        0.0,
+        3.6
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.20400000000000001,
+        1.6759999999999997,
+        1.5979999999999999,
+        0.492,
+        0.16,
+        2.06
+      ],
+      "lower": 0.6491900000000002,
+      "upper": 1.470626,
+      "width": 0.8214359999999998,
+      "uniform_point": 1.1568725000000002,
+      "individual_a": [
+        1.3932722499999999,
+        2.7656845000000003
+      ],
+      "individual_b": [
+        0.6434974999999998,
+        1.5297544999999997
+      ],
+      "independent_contrast": [
+        -0.1364822499999998,
+        2.1221870000000003
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.6491900000000002,
+        "upper": 1.470626,
+        "width": 0.8214359999999998,
+        "uniform_point": 1.1568725000000002,
+        "individual_a": [
+          1.3932722499999999,
+          2.7656845000000003
+        ],
+        "individual_b": [
+          0.6434974999999998,
+          1.5297544999999997
+        ],
+        "independent_contrast": [
+          -0.1364822499999998,
+          2.1221870000000003
+        ]
+      },
+      "strict_decision": "ensemble",
+      "record_total_bias_control": 6.326,
+      "record_total_bias_ensemble": 4.6659999999999995
+    },
+    {
+      "date": "2009-06-15",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        1.03,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        1.3840000000000001,
+        0.026000000000000002,
+        0.0,
+        0.0,
+        0.014000000000000002,
+        0.032,
+        0.0,
+        0.0
+      ],
+      "lower": -0.10705650000000004,
+      "upper": -0.10705650000000004,
+      "width": 0.0,
+      "uniform_point": -0.10705650000000004,
+      "individual_a": [
+        0.1326125,
+        0.1326125
+      ],
+      "individual_b": [
+        0.23966900000000002,
+        0.23966900000000002
+      ],
+      "independent_contrast": [
+        -0.10705650000000003,
+        -0.10705650000000003
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.10705650000000004,
+        "upper": -0.10705650000000004,
+        "width": 0.0,
+        "uniform_point": -0.10705650000000004,
+        "individual_a": [
+          0.1326125,
+          0.1326125
+        ],
+        "individual_b": [
+          0.23966900000000002,
+          0.23966900000000002
+        ],
+        "independent_contrast": [
+          -0.10705650000000003,
+          -0.10705650000000003
+        ]
+      },
+      "strict_decision": "control",
+      "record_total_bias_control": 1.03,
+      "record_total_bias_ensemble": 1.4560000000000002,
+      "observed_mse_control": 0.1326125,
+      "observed_mse_ensemble": 0.23966900000000002,
+      "observed_gap": -0.10705650000000003
+    },
+    {
+      "date": "2009-06-16",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2009-06-17",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2009-06-18",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2009-06-19",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2009-06-20",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2009-06-21",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2009-06-22",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    },
+    {
+      "date": "2009-06-23",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.2,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.06000000000000001,
+        0.02
+      ],
+      "lower": 0.004500000000000001,
+      "upper": 0.004500000000000001,
+      "width": 0.0,
+      "uniform_point": 0.004500000000000001,
+      "individual_a": [
+        0.005000000000000001,
+        0.005000000000000001
+      ],
+      "individual_b": [
+        0.0005000000000000001,
+        0.0005000000000000001
+      ],
+      "independent_contrast": [
+        0.0045000000000000005,
+        0.0045000000000000005
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.004375,
+        "upper": 0.004375,
+        "width": 0.0,
+        "uniform_point": 0.004375,
+        "individual_a": [
+          0.005000000000000001,
+          0.005000000000000001
+        ],
+        "individual_b": [
+          0.0006249999999999999,
+          0.0006249999999999999
+        ],
+        "independent_contrast": [
+          0.004375000000000001,
+          0.004375000000000001
+        ]
+      },
+      "strict_decision": "ensemble",
+      "record_total_bias_control": 0.2,
+      "record_total_bias_ensemble": 0.08000000000000002,
+      "observed_mse_control": 0.005000000000000001,
+      "observed_mse_ensemble": 0.0005000000000000001,
+      "observed_gap": 0.0045000000000000005
+    },
+    {
+      "date": "2009-06-24",
+      "kind": "natural_accumulation",
+      "total_mm": 9.652000000000001,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": -5e-05,
+      "upper": 0.04821,
+      "width": 0.048260000000000004,
+      "uniform_point": 0.005982500000000001,
+      "individual_a": [
+        1.4556422500000004,
+        11.645138000000003
+      ],
+      "individual_b": [
+        1.4496160000000005,
+        11.645188000000003
+      ],
+      "independent_contrast": [
+        -10.189545750000002,
+        10.195522000000002
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -5e-05,
+        "upper": 0.04821,
+        "width": 0.048260000000000004,
+        "uniform_point": 0.005982500000000001,
+        "individual_a": [
+          1.4556422500000004,
+          11.645138000000003
+        ],
+        "individual_b": [
+          1.4496160000000005,
+          11.645188000000003
+        ],
+        "independent_contrast": [
+          -10.189545750000002,
+          10.195522000000002
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": -9.652000000000001,
+      "record_total_bias_ensemble": -9.632000000000001
+    },
+    {
+      "date": "2009-06-25",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.1,
+        0.20000000000000004,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.08,
+        0.4,
+        0.04,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": -0.014750000000000003,
+      "upper": -0.014750000000000003,
+      "width": 0.0,
+      "uniform_point": -0.014750000000000003,
+      "individual_a": [
+        0.006250000000000002,
+        0.006250000000000002
+      ],
+      "individual_b": [
+        0.021,
+        0.021
+      ],
+      "independent_contrast": [
+        -0.01475,
+        -0.01475
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.014750000000000003,
+        "upper": -0.014750000000000003,
+        "width": 0.0,
+        "uniform_point": -0.014750000000000003,
+        "individual_a": [
+          0.006250000000000002,
+          0.006250000000000002
+        ],
+        "individual_b": [
+          0.021,
+          0.021
+        ],
+        "independent_contrast": [
+          -0.01475,
+          -0.01475
+        ]
+      },
+      "strict_decision": "control",
+      "record_total_bias_control": 0.30000000000000004,
+      "record_total_bias_ensemble": 0.52,
+      "observed_mse_control": 0.006250000000000002,
+      "observed_mse_ensemble": 0.021,
+      "observed_gap": -0.01475
+    },
+    {
+      "date": "2009-06-26",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.2,
+        0.49,
+        0.1100000000000001,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.06000000000000001,
+        0.538,
+        0.04200000000000002,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": -0.00032600000000000337,
+      "upper": -0.00032600000000000337,
+      "width": 0.0,
+      "uniform_point": -0.00032600000000000337,
+      "individual_a": [
+        0.036525,
+        0.036525
+      ],
+      "individual_b": [
+        0.036851,
+        0.036851
+      ],
+      "independent_contrast": [
+        -0.0003259999999999999,
+        -0.0003259999999999999
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.000297000000000003,
+        "upper": -0.000297000000000003,
+        "width": 0.0,
+        "uniform_point": -0.000297000000000003,
+        "individual_a": [
+          0.036525,
+          0.036525
+        ],
+        "individual_b": [
+          0.036822,
+          0.036822
+        ],
+        "independent_contrast": [
+          -0.00029699999999999865,
+          -0.00029699999999999865
+        ]
+      },
+      "strict_decision": "control",
+      "record_total_bias_control": 0.8,
+      "record_total_bias_ensemble": 0.6400000000000001,
+      "observed_mse_control": 0.036525,
+      "observed_mse_ensemble": 0.036851,
+      "observed_gap": -0.0003259999999999999
+    },
+    {
+      "date": "2009-06-27",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.12000000000000002,
+        0.0,
+        0.0,
+        0.02,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": -0.0018500000000000005,
+      "upper": -0.0018500000000000005,
+      "width": 0.0,
+      "uniform_point": -0.0018500000000000005,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0018500000000000005,
+        0.0018500000000000005
+      ],
+      "independent_contrast": [
+        -0.0018500000000000005,
+        -0.0018500000000000005
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.001974,
+        "upper": -0.001974,
+        "width": 0.0,
+        "uniform_point": -0.001974,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.001974,
+          0.001974
+        ],
+        "independent_contrast": [
+          -0.001974,
+          -0.001974
+        ]
+      },
+      "strict_decision": "control",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.14,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0018500000000000005,
+      "observed_gap": -0.0018500000000000005
+    },
+    {
+      "date": "2009-06-28",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.12000000000000002,
+        0.56,
+        0.0,
+        0.0,
+        0.238,
+        1.002
+      ],
+      "lower": -0.04858099999999999,
+      "upper": -0.04858099999999999,
+      "width": 0.0,
+      "uniform_point": -0.04858099999999999,
+      "individual_a": [
+        0.125,
+        0.125
+      ],
+      "individual_b": [
+        0.17358099999999999,
+        0.17358099999999999
+      ],
+      "independent_contrast": [
+        -0.048580999999999985,
+        -0.048580999999999985
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": -0.04858099999999999,
+        "upper": -0.04858099999999999,
+        "width": 0.0,
+        "uniform_point": -0.04858099999999999,
+        "individual_a": [
+          0.125,
+          0.125
+        ],
+        "individual_b": [
+          0.17358099999999999,
+          0.17358099999999999
+        ],
+        "independent_contrast": [
+          -0.048580999999999985,
+          -0.048580999999999985
+        ]
+      },
+      "strict_decision": "control",
+      "record_total_bias_control": 1.0,
+      "record_total_bias_ensemble": 1.92,
+      "observed_mse_control": 0.125,
+      "observed_mse_ensemble": 0.17358099999999999,
+      "observed_gap": -0.048580999999999985
+    },
+    {
+      "date": "2009-06-29",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.4,
+        0.0,
+        2.44,
+        1.7600000000000002,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.22000000000000003,
+        0.0,
+        0.9719999999999999,
+        0.788,
+        0.04,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.9494340000000002,
+      "upper": 0.9494340000000002,
+      "width": 0.0,
+      "uniform_point": 0.9494340000000002,
+      "individual_a": [
+        1.1514000000000002,
+        1.1514000000000002
+      ],
+      "individual_b": [
+        0.20196599999999998,
+        0.20196599999999998
+      ],
+      "independent_contrast": [
+        0.9494340000000002,
+        0.9494340000000002
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.9532590000000002,
+        "upper": 0.9532590000000002,
+        "width": 0.0,
+        "uniform_point": 0.9532590000000002,
+        "individual_a": [
+          1.1558000000000002,
+          1.1558000000000002
+        ],
+        "individual_b": [
+          0.20254099999999997,
+          0.20254099999999997
+        ],
+        "independent_contrast": [
+          0.9532590000000002,
+          0.9532590000000002
+        ]
+      },
+      "strict_decision": "ensemble",
+      "record_total_bias_control": 4.6,
+      "record_total_bias_ensemble": 2.02,
+      "observed_mse_control": 1.1514000000000002,
+      "observed_mse_ensemble": 0.20196599999999998,
+      "observed_gap": 0.9494340000000002
+    },
+    {
+      "date": "2009-06-30",
+      "kind": "complete_control",
+      "total_mm": 0.0,
+      "control_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ensemble_3h_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "width": 0.0,
+      "uniform_point": 0.0,
+      "individual_a": [
+        0.0,
+        0.0
+      ],
+      "individual_b": [
+        0.0,
+        0.0
+      ],
+      "independent_contrast": [
+        0.0,
+        0.0
+      ],
+      "signed_unrepaired_sensitivity": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "width": 0.0,
+        "uniform_point": 0.0,
+        "individual_a": [
+          0.0,
+          0.0
+        ],
+        "individual_b": [
+          0.0,
+          0.0
+        ],
+        "independent_contrast": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_decision": "unresolved",
+      "record_total_bias_control": 0.0,
+      "record_total_bias_ensemble": 0.0,
+      "observed_mse_control": 0.0,
+      "observed_mse_ensemble": 0.0,
+      "observed_gap": 0.0
+    }
+  ],
+  "summary": {
+    "natural_accumulation": {
+      "days": 9,
+      "strict_control": 0,
+      "strict_ensemble": 2,
+      "unresolved": 7,
+      "mean_lower": -2.1702367777777787,
+      "mean_upper": 6.188874999999999
+    },
+    "complete_control": {
+      "days": 43,
+      "strict_control": 14,
+      "strict_ensemble": 7,
+      "unresolved": 22,
+      "mean_lower": 0.1507926511627906,
+      "mean_upper": 0.1507926511627906
+    }
+  },
+  "scope": "Natural recorded-total feasible sets; no natural hidden-hour ground truth or paid recovery claim. Complete-control coarsening is artificial diagnostic only. Public alternate-source audit is separately recorded."
+}

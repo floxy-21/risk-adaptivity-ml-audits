@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "script_sha256": "7c6660bfde7126a885d2fc390be49583f61531e62dba06f06fc547b226c7e225",
+  "source_hashes": {
+    "observation_panel.json": "36ee94939e45cbb3795c297bbce698936e0ef6ce28f6ae3d1565c73c09b0e532",
+    "forecast_panel.json": "067fb4ad74fbd11bb09bf49e5165f2af573cc06f42eee21062137c0a4d057a9c",
+    "panel_result.json": "f805aa803f629c0b52d7cbbf3fa2994f11e48fde7b8053d92d8b03124f20fb08"
+  },
+  "days": 52,
+  "forecast_member_days": 260,
+  "decoded_message_records": 2080,
+  "raw_and_preprocessed_direct_vertex_checks": 832,
+  "natural_cases": 9,
+  "complete_zero_controls": 43,
+  "preprocessed_natural_certificates": 2,
+  "packing_repaired_bin_pairs": 28,
+  "scope": "Distributed metadata/excerpt arithmetic only; no freshGRIBdecode, fullsource re-download or global publicarchive absence proof."
+}

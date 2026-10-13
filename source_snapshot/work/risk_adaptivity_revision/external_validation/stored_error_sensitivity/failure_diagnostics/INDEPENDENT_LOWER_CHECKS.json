@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "case_levels": 9,
+  "unique_cases": 7,
+  "counts_by_delta": {
+    "1/1000": 2,
+    "1/100": 7
+  },
+  "first_query_witnesses": 45,
+  "endpoint_pairs": 180,
+  "minimum_exact_impossibility_margin": "231625733590097946267/39218517618895276000000000",
+  "minimum_margin_float": 5.906029795437803e-06,
+  "witnesses_sha256": "098d646b8b3263802d49270afef3ebac035423c60d53051f8904327f44a00d90",
+  "seconds": 0.8597125000087544,
+  "scope": "Exact impossibility for deterministic policies with at most two declared queries; no randomized-adaptive or physical-error claim."
+}

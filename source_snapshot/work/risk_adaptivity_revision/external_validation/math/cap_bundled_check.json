@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "Bundled-coefficient rational reproduction; no raw-meter reconstruction or model refit",
+  "cases": 290,
+  "case_scenario_threshold_rows": 1740,
+  "feasible_profile_checks": 23780,
+  "finite_game_primal_dual_checks": 1740,
+  "continuum_lower_guarantees": "Exact all-answer single/pair covers, independently checked",
+  "arithmetic": "Exact fractions of bundled frozen binary64 forecast coefficients",
+  "physical_width_scope": "Absolute meter totals are not reconstructed; positive E cancels in relative-cap analysis",
+  "input_sha256": {
+    "CAP_SENSITIVITY_PROTOCOL.txt": "7d704125dac03586aa4ec42c68f3394bcafacff9093ddf2095a826c0047b7b32",
+    "cap_sensitivity_manifest.json": "975e1afbebb562fe22e553ca15c5301bee4dd239efb8628b296af878d5b1ae59",
+    "cap_sensitivity_coefficients.json": "28d5cd8b8a8f078daa0030ad28d44c556c1c85a7aae5acb634a60638bcbef70e",
+    "cap_sensitivity_bundled_cases.csv": "7c6f8a68663ef67e3a41e44ecf276edf921c19e05d9bf69d9ac9f5d78b711be8",
+    "cap_sensitivity_witnesses.json": "20a70436374533c98ec015477a6c0f871035b551f76dc24f17c9692d155272f9",
+    "cap_sensitivity_report.json": "1e9a1c04b901f1cd0b8593d38c3cd9a35774f1b8837807c04b7333aa40ab6912"
+  },
+  "source_sha256": "0cc94dea0fac9cef7d569ef1f31e6296a1a223fffd78cda931444654c0cb135c",
+  "seconds": 53.44569849999971
+}

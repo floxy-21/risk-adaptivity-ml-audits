@@ -1,0 +1,20 @@
+{
+  "seed": 21093,
+  "random_cases": 150,
+  "paired_lp_solves": 1800,
+  "individual_qp_solves": 600,
+  "max_lp_absolute_error": 1.1368683772161603e-13,
+  "generic_endpoint_comparisons": 1800,
+  "max_generic_lp_absolute_error": 5.684341886080802e-14,
+  "max_projection_absolute_error": 1.063824583980022e-09,
+  "max_vertex_absolute_error": 0.0,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "audit_script_sha256": "72eaa16c79cb2d0bd5caae20b404b47cd0f20c93563a4c3e314e0038bfc48521",
+  "study_script_sha256": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+  "generic_solver_sha256": "2b555e7fbb676f311b87c38a1cfc8bf81b34743e35a7c43b5ff08d759596f467",
+  "note": "Independent numerical validation, not formal interval arithmetic."
+}

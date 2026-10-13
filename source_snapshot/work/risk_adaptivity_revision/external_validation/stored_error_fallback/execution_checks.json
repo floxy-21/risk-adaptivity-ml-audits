@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "cases": 29,
+  "constructed_executions": 1015,
+  "callback_readings": 2275,
+  "executions_by_budget": {
+    "2": 770,
+    "3": 245
+  },
+  "out_of_model_cases_rejected": 29,
+  "observed_second_branches": {
+    "hpm_1/2025-07-06/12/ridge/mlp": {
+      "1": 10,
+      "4": 25
+    },
+    "hpm_1/2025-07-17/12/ridge/mlp": {
+      "1": 10,
+      "4": 25
+    },
+    "hpm_2/2025-07-02/00/hist_gradient_boosting/mlp": {
+      "1": 10,
+      "3": 25
+    },
+    "hpm_2/2025-07-02/06/daily/hist_gradient_boosting": {
+      "1": 10,
+      "5": 25
+    },
+    "hpm_2/2025-07-03/00/hist_gradient_boosting/mlp": {
+      "1": 10,
+      "3": 25
+    },
+    "hpm_2/2025-07-04/06/daily/mlp": {
+      "1": 15,
+      "4": 20
+    },
+    "hpm_2/2025-07-09/00/daily/hist_gradient_boosting": {
+      "1": 10,
+      "3": 25
+    },
+    "hpm_2/2025-07-14/00/daily/mlp": {
+      "1": 10,
+      "5": 25
+    },
+    "hpm_2/2025-07-17/06/ridge/hist_gradient_boosting": {
+      "2": 20,
+      "5": 15
+    },
+    "hpm_2/2025-07-19/00/ridge/hist_gradient_boosting": {
+      "1": 10,
+      "3": 25
+    },
+    "hpm_2/2025-07-21/06/daily/hist_gradient_boosting": {
+      "1": 15,
+      "4": 20
+    },
+    "hpm_2/2025-07-22/00/ridge/hist_gradient_boosting": {
+      "1": 10,
+      "3": 25
+    },
+    "hpm_2/2025-07-25/00/daily/mlp": {
+      "1": 17,
+      "4": 18
+    },
+    "hpm_2/2025-07-28/06/ridge/hist_gradient_boosting": {
+      "1": 20,
+      "5": 15
+    },
+    "hpm_7/2025-07-01/06/ridge/hist_gradient_boosting": {
+      "1": 18,
+      "5": 17
+    },
+    "hpm_7/2025-07-08/00/daily/hist_gradient_boosting": {
+      "1": 10,
+      "5": 25
+    },
+    "hpm_7/2025-07-08/00/daily/mlp": {
+      "1": 20,
+      "5": 15
+    },
+    "hpm_7/2025-07-10/06/daily/hist_gradient_boosting": {
+      "1": 20,
+      "4": 15
+    },
+    "hpm_7/2025-07-12/12/daily/hist_gradient_boosting": {
+      "1": 15,
+      "4": 20
+    },
+    "hpm_7/2025-07-14/06/daily/hist_gradient_boosting": {
+      "2": 20,
+      "4": 15
+    },
+    "hpm_7/2025-07-15/06/daily/hist_gradient_boosting": {
+      "1": 20,
+      "5": 15
+    },
+    "hpm_7/2025-07-16/06/daily/ridge": {
+      "1": 10,
+      "4": 25
+    }
+  },
+  "online_optimization_calls": 0,
+  "network_calls": 0,
+  "scope": "Implementation tests on fixed constructed feasible profiles; not new empirical performance results",
+  "seconds": 4.630275100003928
+}

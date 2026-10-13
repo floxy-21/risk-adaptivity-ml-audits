@@ -1,0 +1,77 @@
+COUNTER PRECISION STUDY -- FIXED BEFORE NEW GEOMETRY OR ANSWER REPLAY
+
+This is a new retrospective protocol on previously used BLEM data and frozen
+forecasts, not a preregistered trial, untouched source, or deployed service.
+Three existing counter meters; all 91 existing eligible test days, in order.
+Primary feasibility panel: first 20 eligible days of each meter. Remaining
+71 days are a chronological continuation with identical code and thresholds.
+No replacement, coefficient filtering, retraining or threshold tuning.
+
+Audit tasks: six-hour UTC intervals [00,06), [06,12), [12,18); all six pairs
+of daily persistence, ridge, histogram gradient boosting and MLP forecasts.
+The forecasts were fixed at day start under the existing benchmark issue
+schedule. At each cutoff, initially available within-block information is
+the start/end cumulative counter (hence exact total) and the forecasts.
+Prior-day target copies reveal prior-day values, not current-block values.
+Next-day forecast rows are excluded by the declared intraday issue schedule.
+There are no measured production arrival/retrieval times in this dataset.
+The unknown hourly values are nonnegative with that total; no empirical
+maximum is imposed as a physical bound. Eligibility was fixed by the old
+study and requires complete monotone three-minute observations at exact UTC
+endpoints. Its exclusion of natural failures limits external validity.
+
+Permitted paid query: one of the five INTERNAL hourly cumulative registers.
+Hard budget: at most two distinct registers per pair/block audit. No hourly
+energy oracle or whole-gap export is supplied at that cost. This is a
+specified access interface replay, not evidence of an actual billing model.
+Queries cannot use hidden within-block values before their answers arrive.
+The geometry phase loads only forecasts and outer endpoints/total; missing
+persistence copies in the redistribution-safe export are regenerated from
+their documented prior-day counter endpoints, available before day start. The
+replay phase subsequently opens raw internal registers. No hidden target
+enters policy construction, adversarial witnesses or threshold selection.
+
+Primary precision: terminal width <= 0.5 times initial width W0.
+Fixed sensitivity curve: 0.25, 0.4, 0.5, 0.6, 0.75 times W0.
+Report zero-width cases separately and retain them in all-task coverage.
+Normalize absolute MSE widths by squared TRAINING mean hourly consumption.
+
+Policies (same information, budget and queries): exact deterministic adaptive
+two-query minimax width; best deterministic batch for minimax width; optimal
+randomized batch for worst expected width; uniform batch; greedy adaptive.
+Greedy chooses a first cut minimizing worst width after that single cut,
+then the best second cut conditional on the observed first answer. Among
+greedy first-cut ties use the best two-query guarantee, then earliest cut;
+this gives greedy a favorable answer-independent tie rule. Deterministic
+batch ties use uniform-vertex mean width then earliest batch. Adaptive
+first/second ties use earliest cut after optimizing their stated guarantee.
+Mean-optimal randomized batches use a secondary uniform-vertex mean-width
+LP on the minimax-optimal face, removing pointwise-dominated optima. This
+does not call them precision-optimal. Numerical residuals are reported.
+
+Geometry outputs: exact adaptive guarantee A, best deterministic batch
+guarantee, optimal randomized mean width, and finite adversarial-profile
+upper bounds U on every randomized batch's worst precision success.
+The six all-energy-in-one-hour vertices satisfy every declared initial
+constraint. U is an upper bound, not asserted to be the full precision
+optimum. Export adversary weights and check all ten batches. For robust
+numerical classification, widths within 1e-9 of a threshold count as batch
+success (conservative upper bound); adaptive guarantee requires a margin
+of at least 1e-9. Exact constructed boundary cases are checked separately.
+
+Replay outputs: exact expectations over ten batches (no Monte Carlo),
+realized precision success, terminal width, intervals excluding zero,
+requested boundaries, endpoint provenance and containment of reference MSE.
+Per-meter and model-pair summaries; meter-balanced overall results. Tasks
+are dependent and only three meters exist: no iid task confidence interval.
+
+Decision criterion for a substantial empirical bridge (not a theorem):
+primary certified separation on >=10% of all tasks, with adaptive guarantee
+and batch U<=0.7; present on all three meters and >=3 model pairs; observed
+adaptive primary success exceeds each nonadaptive comparator overall and
+on every meter. Also report greedy comparison without suppressing ties or
+adverse results. Failure of any component is reported, not tuned away.
+
+The old 0.9738064% acquisition result and all previous scientific outputs
+remain unchanged. New results concern counter precision, not expected
+requests until certification, forecast accuracy, or measured cash savings.

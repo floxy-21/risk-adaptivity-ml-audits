@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cases": 4914,
+  "counts": {
+    "batch_suffices": 4371,
+    "feedback_required": 290,
+    "adaptive_not_guaranteed": 253
+  },
+  "finite_games_verified_exactly": 4914,
+  "adaptive_policy_envelopes_and_half_covers_verified_exactly": 290,
+  "hybrid_pointwise_precision_equivalence_cases_verified": 4914,
+  "scope": "Bundled triage ledger, exact rational finite-game primal/dual certificates, policy recommendations and adaptive envelope/half-cover algebra; does not reconstruct source coefficients or replay raw readings."
+}

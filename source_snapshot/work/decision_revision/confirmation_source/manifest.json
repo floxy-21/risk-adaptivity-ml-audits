@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "selected_ids": [
+    "MAC000023",
+    "MAC000024",
+    "MAC000025",
+    "MAC000026",
+    "MAC000027",
+    "MAC000028",
+    "MAC000029",
+    "MAC000030",
+    "MAC000031",
+    "MAC000032",
+    "MAC000033",
+    "MAC000034",
+    "MAC000035",
+    "MAC000036",
+    "MAC000037",
+    "MAC000038",
+    "MAC000039",
+    "MAC000040",
+    "MAC000041",
+    "MAC000042"
+  ],
+  "source_rows_scanned": 167932474,
+  "source_literal_rows": 407043,
+  "processing_seconds": 457.10705489999964,
+  "raw_sha256": "1df23797368237f41831434b9add6540df8a68001dabf36242d52ca41807511f",
+  "source_parser_sha256": "2d47f9350dc98f224f627fe9db1371a9d6c81daf7033a692e26c3dee94f23b42",
+  "files": {
+    "forecast_config.json": "708400a1a046e461681dcaa222c02ae4c2957f2b2ede594855c6e66d63ad8ac9",
+    "hourly.csv": "744afad90f7dfdbc0fb363cd29a67a218857280b436dcae28f01fab96b12b3ec",
+    "quality_counts.json": "c68c9bc649a275ab744bb9933aec6352667c9f94c2b359a003569895d4c56fed",
+    "selected_halfhour_source.csv.gz": "68b20d13642097b52ef8cc969350cd9c93811635fd885390e57c67ecdc4f5915",
+    "selection_before_extract.json": "77c575c9a2dcd28203c008106726eaf91551cd1e0ae533a2c0d19b754dd983a8"
+  },
+  "source_only_no_forecast_or_acquisition_evaluation": true
+}

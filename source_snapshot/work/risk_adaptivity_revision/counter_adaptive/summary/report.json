@@ -1,0 +1,226 @@
+{
+  "status": "PASS",
+  "tasks": 4914,
+  "meters": 3,
+  "model_pairs": 6,
+  "primary_fraction": 0.5,
+  "groups": {
+    "overall": [
+      {
+        "group": "all",
+        "tasks": 4914,
+        "adaptive_guarantees": 4661,
+        "strong_separations": 290,
+        "batch_at_most_half": 290,
+        "batch_upper_max_in_separation": 0.5
+      }
+    ],
+    "meter": [
+      {
+        "group": "('consumer_00000001',)",
+        "tasks": 1638,
+        "adaptive_guarantees": 1557,
+        "strong_separations": 97,
+        "batch_at_most_half": 97,
+        "batch_upper_max_in_separation": 0.5
+      },
+      {
+        "group": "('consumer_00000002',)",
+        "tasks": 1638,
+        "adaptive_guarantees": 1533,
+        "strong_separations": 103,
+        "batch_at_most_half": 103,
+        "batch_upper_max_in_separation": 0.5
+      },
+      {
+        "group": "('consumer_00000003',)",
+        "tasks": 1638,
+        "adaptive_guarantees": 1571,
+        "strong_separations": 90,
+        "batch_at_most_half": 90,
+        "batch_upper_max_in_separation": 0.5
+      }
+    ],
+    "pair": [
+      {
+        "group": "('daily', 'hist_gradient_boosting')",
+        "tasks": 819,
+        "adaptive_guarantees": 780,
+        "strong_separations": 43,
+        "batch_at_most_half": 43,
+        "batch_upper_max_in_separation": 0.5
+      },
+      {
+        "group": "('daily', 'mlp')",
+        "tasks": 819,
+        "adaptive_guarantees": 776,
+        "strong_separations": 47,
+        "batch_at_most_half": 47,
+        "batch_upper_max_in_separation": 0.5
+      },
+      {
+        "group": "('daily', 'ridge')",
+        "tasks": 819,
+        "adaptive_guarantees": 775,
+        "strong_separations": 45,
+        "batch_at_most_half": 45,
+        "batch_upper_max_in_separation": 0.5
+      },
+      {
+        "group": "('hist_gradient_boosting', 'mlp')",
+        "tasks": 819,
+        "adaptive_guarantees": 771,
+        "strong_separations": 72,
+        "batch_at_most_half": 72,
+        "batch_upper_max_in_separation": 0.5
+      },
+      {
+        "group": "('ridge', 'hist_gradient_boosting')",
+        "tasks": 819,
+        "adaptive_guarantees": 779,
+        "strong_separations": 35,
+        "batch_at_most_half": 35,
+        "batch_upper_max_in_separation": 0.5
+      },
+      {
+        "group": "('ridge', 'mlp')",
+        "tasks": 819,
+        "adaptive_guarantees": 780,
+        "strong_separations": 48,
+        "batch_at_most_half": 48,
+        "batch_upper_max_in_separation": 0.5
+      }
+    ],
+    "phase": [
+      {
+        "group": "('continuation',)",
+        "tasks": 3834,
+        "adaptive_guarantees": 3651,
+        "strong_separations": 222,
+        "batch_at_most_half": 222,
+        "batch_upper_max_in_separation": 0.5
+      },
+      {
+        "group": "('pilot',)",
+        "tasks": 1080,
+        "adaptive_guarantees": 1010,
+        "strong_separations": 68,
+        "batch_at_most_half": 68,
+        "batch_upper_max_in_separation": 0.5
+      }
+    ]
+  },
+  "replay": {
+    "all": [
+      {
+        "policy": "adaptive",
+        "success_0.5": 0.9863654863654864,
+        "relative_width": 0.18590242689601807,
+        "scaled_width": 0.3404920395787252,
+        "winner_probability": 0.5048840048840049,
+        "requests": 2.0
+      },
+      {
+        "policy": "det_batch",
+        "success_0.5": 0.9822954822954822,
+        "relative_width": 0.1886613786507765,
+        "scaled_width": 0.3505572499983684,
+        "winner_probability": 0.49837199837199836,
+        "requests": 2.0
+      },
+      {
+        "policy": "greedy_adaptive",
+        "success_0.5": 0.9796499796499797,
+        "relative_width": 0.18836299457715913,
+        "scaled_width": 0.3452627241671533,
+        "winner_probability": 0.5032560032560033,
+        "requests": 2.0
+      },
+      {
+        "policy": "mean_batch",
+        "success_0.5": 0.9267611787279608,
+        "relative_width": 0.228342047008394,
+        "scaled_width": 0.42273974186103813,
+        "winner_probability": 0.4542060335225225,
+        "requests": 2.0
+      },
+      {
+        "policy": "uniform_batch",
+        "success_0.5": 0.6303825803825804,
+        "relative_width": 0.42592438806324606,
+        "scaled_width": 0.8013366238627685,
+        "winner_probability": 0.24786324786324787,
+        "requests": 2.0
+      }
+    ],
+    "separation": [
+      {
+        "policy": "adaptive",
+        "success_0.5": 1.0,
+        "relative_width": 0.3372402461404021,
+        "scaled_width": 0.5410650407225,
+        "winner_probability": 0.2896551724137931,
+        "requests": 2.0
+      },
+      {
+        "policy": "det_batch",
+        "success_0.5": 0.9724137931034482,
+        "relative_width": 0.352767301119492,
+        "scaled_width": 0.5857551766819314,
+        "winner_probability": 0.25517241379310346,
+        "requests": 2.0
+      },
+      {
+        "policy": "greedy_adaptive",
+        "success_0.5": 0.9620689655172414,
+        "relative_width": 0.34674779851206466,
+        "scaled_width": 0.5691905315533364,
+        "winner_probability": 0.28620689655172415,
+        "requests": 2.0
+      },
+      {
+        "policy": "mean_batch",
+        "success_0.5": 0.8001278424772762,
+        "relative_width": 0.41206639339783785,
+        "scaled_width": 0.6789410767252149,
+        "winner_probability": 0.24425020021022129,
+        "requests": 2.0
+      },
+      {
+        "policy": "uniform_batch",
+        "success_0.5": 0.41793103448275865,
+        "relative_width": 0.5309796492963041,
+        "scaled_width": 0.8802740584041713,
+        "winner_probability": 0.18758620689655173,
+        "requests": 2.0
+      }
+    ]
+  },
+  "screening_criteria": {
+    "at_least_10_percent_strong": false,
+    "all_three_meters": true,
+    "at_least_three_pairs": true,
+    "observed_exceeds_every_nonadaptive_overall": true,
+    "observed_exceeds_every_nonadaptive_each_meter": true
+  },
+  "screening_all_met": false,
+  "zero_width_cases": 0,
+  "max_mean_optimal_face_residual": 2.1412555062383376e-10,
+  "source_phases": [
+    {
+      "path": "work/risk_adaptivity_revision/counter_adaptive/pilot",
+      "geometry_sha256": "6c94583d757db31b33b6388cd29c2d1b6999385c76b049368e58ef97f75424cb",
+      "replay_sha256": "ca32b6e9df5c94d1f27429ac78deb2aacb8b2d1e71117f694d0f17b73d586d4b",
+      "tasks": 1080,
+      "geometry_seconds": 59.06080390000716
+    },
+    {
+      "path": "work/risk_adaptivity_revision/counter_adaptive/continuation",
+      "geometry_sha256": "cb176afdd9eaae140d1830b5deb408dd2de041898a8499b93edcf59813ffb12d",
+      "replay_sha256": "34d428175b0f6b8f44ffb3dfd5bafb325e4ef1690c96fa81a01a9a66c9c14b55",
+      "tasks": 3834,
+      "geometry_seconds": 199.2533659999899
+    }
+  ],
+  "scope": "All tasks retained; strong subset chosen only by pre-answer geometry, not replay outcomes. Only three meters, no iid task inference."
+}

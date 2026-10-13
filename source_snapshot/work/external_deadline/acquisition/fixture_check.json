@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "scope": "Analytic quadrature, independent finite-game secondary LP, eligibility and reproducible draws; no external outcome data.",
+  "gaussian_quadrature_cases": 4,
+  "gaussian_max_absolute_error": 3.552713678800501e-15,
+  "finite_game_comparisons": 10,
+  "finite_game_max_absolute_error": 1.3322676295501878e-15,
+  "policy_seed_cases": 60,
+  "all_observed_cases": 5,
+  "empty_primary_optimum_progress_fixture": "passed",
+  "seconds": 0.9282517000101507,
+  "sha256": {
+    "acquisition.py": "9f2963ee9d1dd00fb194e62a962469b91a445bda8078e3000c8d055db51e934c",
+    "compact_secondary.py": "84b245d7407651ab9d1d4b6f751829fa28f54677b0343542e98f83ab87003121",
+    "check_acquisition.py": "66f4f134bb453401d22ca488eb5e05e859ad6950dbf26d868ebade16f606c691"
+  }
+}

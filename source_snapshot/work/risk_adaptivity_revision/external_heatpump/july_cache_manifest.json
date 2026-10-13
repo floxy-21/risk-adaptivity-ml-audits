@@ -1,0 +1,41 @@
+{
+  "scope": "Source caching only; no fitted models or policy outcomes inspected",
+  "protocol_lock_sha256": "abae34c65056b019ac01b443fa8ef880db50d80509f0a4827885f02b17b8da13",
+  "sources": [
+    {
+      "system_id": 1,
+      "raw_path": "hourly\\system_1_test_2025July.json",
+      "rows": 745,
+      "sha256": "5ef47a765ae8b86380b16e602814c425710c89a977b1c8600acec893a0580802"
+    },
+    {
+      "system_id": 2,
+      "raw_path": "hourly\\system_2_test_2025July.json",
+      "rows": 745,
+      "sha256": "077991d1f334095d5acb3f8d89b2d8a42598a25261c324d7226e9872986695c4"
+    },
+    {
+      "system_id": 7,
+      "raw_path": "hourly\\system_7_test_2025July.json",
+      "rows": 745,
+      "sha256": "68fb2b5a83dc382a25cfdee6cbe8c7fa7f4d66e31fea4d72950a6ece602e388a"
+    }
+  ],
+  "shared_boundary": [
+    {
+      "system_id": 1,
+      "shared_boundary_identical": true
+    },
+    {
+      "system_id": 2,
+      "shared_boundary_identical": true
+    },
+    {
+      "system_id": 7,
+      "shared_boundary_identical": true
+    }
+  ],
+  "path": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\train_test_hourly_counters.csv",
+  "rows": 15267,
+  "sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da"
+}

@@ -1,0 +1,158 @@
+BOUNDED REGISTER UNCERTAINTY: CORRECT MODEL AND SCOPE
+
+Status: AI-assisted mathematical derivation and prototype investigation.
+This document is not human-specialist validation or evidence that a meter's
+published accuracy class applies unconditionally to every recorded hour.
+
+1. Stored register error: a compact convex lifting
+
+Let x_h >= 0 be six latent target increments. Let r0,r6 be the initially
+available stored outer registers and Eobs = r6-r0. Write b for the latent
+true starting-register offset relative to r0. Let e1,...,e5 be fixed
+errors of the stored internal registers. For declared finite absolute
+bounds delta0,...,delta6 define
+
+ F = { (x,b,e): x >= 0, |b| <= delta0,
+       Eobs-delta6 <= b+sum_h x_h <= Eobs+delta6,
+       |e_k| <= delta_k, k=1,...,5 }.
+
+The endpoint error e6 has been eliminated using the retained final reading;
+the starting error is -b. Query k returns the exact stored readout
+
+ ell_k(x,b,e) = b + sum_{h<=k} x_h + e_k = r_k-r0.
+
+The audited contrast is T=d+c^T x. This 12-dimensional polytope is compact
+whenever nonempty: b and e are bounded, and the endpoint inequality bounds
+the sum of the nonnegative x. A nonempty instance requires, in particular,
+Eobs+delta0+delta6 >= 0. It is safer to check feasibility by LP than infer
+it from rounded input. All-query consistency should also be checked on the
+recorded readings before evaluating any policy.
+
+Crucial semantics: the complete latent record (true increments and all
+stored errors) is fixed before the policy's random seed. Reading a stored
+register repeatedly would return the same value. The permitted query is
+an exact linear observation of this enlarged record. Therefore the existing
+compact-convex, exact-linear-query classification applies to this declared
+enlarged model. The hardest-record witness includes the error coordinates.
+It is one common feasible truth/error completion, not a separate favorable
+error selected after each randomized query choice.
+
+This does NOT establish the same theorem for fresh stochastic noise on
+each request, adversarial noise reacting to the query seed, or a different
+risk that averages over measurement noise. Those are distinct models.
+
+2. Meter accuracy versus lifetime cumulative offset
+
+A Class 1 energy-meter statement must NOT be implemented as a one-percent
+absolute error bound on the lifetime cumulative register. Accuracy is
+normally tied to energy increments under specified operating conditions.
+Do not turn a manufacturer class into an unconditional per-hour bound
+without its specification and the operating conditions needed to apply it.
+
+A transparent conditional sensitivity model separates the meter's internal
+increment m_h from latent physical consumption x_h. For a stated relative
+increment allowance alpha < 1, impose
+
+ (1-alpha) x_h <= m_h <= (1+alpha) x_h,  x_h,m_h >= 0.
+
+Outer and retrieved registers accumulate m, not x. Use the previous
+polytope with m in the endpoint and query expressions, retain x for the
+loss target, and keep b/internal e for storage uncertainty only. The result
+has 18 variables. If alpha=0, identify m=x and reduce to 12 variables.
+It is compact because the outer constraints bound sum(m), and alpha<1
+then bounds sum(x). This independent-hour envelope includes a fixed common
+calibration bias satisfying the bound, but also allows more adversarial
+hourly variation. Treat it as a convex relaxation, not a demonstrated
+physical noise distribution. Other validated correlated error constraints
+can be added if they are linear.
+
+The error convention above is relative to true x. If the source specifies
+error relative to reported m, change the inequalities accordingly rather
+than silently interchanging conventions. A bound on an entire billing
+interval also does not automatically imply the same bound separately on
+every hour or prefix.
+
+Coefficient normalization also changes: do not subtract min(c) from the
+contrast coefficients when the true total is uncertain. That subtraction
+is harmless only if sum(x) is fixed, because otherwise it removes an
+unknown multiple of total consumption. Positive scalar rescaling is safe;
+the implementation must retain the original common coefficient offset.
+
+3. Float32 storage and exact quantization
+
+Reported resolution is not a complete measurement-accuracy specification.
+For IEEE float32 round-to-nearest, a stored value determines a rounding
+cell between the midpoints of adjacent representable values, with a tie
+convention at the endpoints. Those cells can supply conservative closed
+storage bounds. Derive an a priori delta for each optional readout from
+the initially permitted register range, including any binade crossing;
+do not inspect withheld internal readings to choose their error bounds.
+
+The exact pre-query graph r=round_float32(q) is not convex because r is
+discrete. A convex lifting with |r-q| <= delta is a conservative outer
+model, admitting some readouts that no exact quantizer produces. The
+classification and LP optimality are exact for that enlarged model, and
+the certificates remain valid for contained physical/quantized records.
+They are NOT proofs of optimality for the exact discrete quantizer.
+
+Do not tighten an individual delta using an unqueried stored value.
+After querying, using a sharper readout-dependent rounding cell changes
+the observation model unless its graph was represented consistently in
+the initial feasible set. For a clean theorem application, retain the
+declared initial uniform bounds and exact linear latent readout map.
+
+4. Exact two-query LPs remain small
+
+For any polytope F={z:Az<=b} and scalar readout rows ell_k, replace the
+coordinate equalities in the existing two-query formulation by
+
+ ell_k u^j = ell_k v^j = t,  ell_j u^j = ell_j v^j,
+ eta <= c^T(u^j-v^j),  u^j,v^j in F.
+
+The LP maximizes eta for one fixed first query k, with one independent
+endpoint pair for each of its four possible second queries j. Five such
+LPs choose the optimal first query. After an actual first answer, four
+conditional LPs choose the second query. There is no answer grid.
+
+With n=12 latent variables, a first-query LP has 2*n*4+2=98 variables.
+With n=18, it has 146. A fixed-batch worst width uses 2*n variables;
+there are ten batches. The mean-width hardest-record LP has
+n*(1+2*10)+1 variables, i.e. 253 or 379. These are formulation sizes,
+not measured runtimes. The supplement prototype reports actual timings
+separately. Polynomial bit complexity includes rational readout encoding.
+
+5. What survives and what needs replacement
+
+Survives: sharp endpoint LPs, general mean-risk classification, fixed-record
+transcript argument, general hardest-record primal/dual, exact deterministic
+two-query policy, and a half-success batch floor. The latter is justified
+by helly_precision_theorem.tex, not by assuming the old conditional lines
+remain affine. Conditional worst widths are concave piecewise linear for
+polytopes; their strict failure sets are intervals for scalar first answers.
+
+Needs replacement: the exact-total segment-range formula, the affine-line
+intersection implementation, the six concentration-profile test of whether
+a batch guarantees precision, and the compact disjoint-exact-total solver.
+They do not automatically remain valid when uncertainty couples segment
+totals and register errors.
+
+For general F, a finite adverse set still gives an upper certificate on
+randomized-batch precision. Obtain a bad completion for each batch whose
+exact worst width exceeds tau, then evaluate all batches at all those
+completions with endpoint LPs. Because there are ten batches, if every batch
+fails somewhere, uniform mass on these at most ten witnesses proves success
+at most 9/10 for every randomized batch. A stronger optimized upper bound
+can be obtained from their finite game. The half-floor plus an upper value
+1/2 still proves exact continuum success 1/2. Do not infer exactness from
+the finite game alone at other values.
+
+6. Honest replay interpretation
+
+Queries in replay can return actual stored register values. Their resulting
+sharp intervals and precision successes are observable from those answers.
+The latent physical true increments are not thereby known. Comparing the
+models' physical MSEs to a hidden calibrated reference would require that
+reference. Separate this robust measurement replay from the earlier exact
+counter-difference target, and label any unverified error allowance as a
+sensitivity assumption. All policies must receive identical bounds,
+initial endpoint observations, optional query dictionary and budget.

@@ -1,0 +1,65 @@
+\subsection{Complementary archive certification and adverse controls}
+\label{sec:historical-application}
+The historical archive study supplies a complementary use of the same
+sharp interval: authenticate a model ranking under incomplete verification
+data, without further acquisition. It reuses four frozen forecasters on
+30 Portugal consumption series, one French household and three cumulative
+counters (Appendix~\ref{app:historical-design}). Every permitted persistence
+copy $p^{\rm pers}_{t+24}=y_t$ and exact-total deduction is incorporated
+before every comparator. The complete retrospective archive admits later
+rows within its evaluation period; its information boundary differs from
+the intraday counter audit. Whole-period endpoints average equal-length
+daily endpoints after this closure, over the resulting product feasible set.
+
+On the complete Portugal archive-aware exact-total grid, direct paired
+bounds certify 7,836 of 9,720 comparisons (80.62\%), versus 2,513
+(25.85\%) from separately bounded individual losses. Both receive identical
+information and zero new readings. Separate subtraction can combine loss
+extrema attained at different target records, whereas pairing enforces a
+common completion. This is the reason for the additional certificates,
+not a newly claimed loss identity or improvement in prediction accuracy.
+For exact totals, individual-loss minima are simplex projections and maxima
+occur at simplex vertices. For a nonnegative total band, the minimum is
+projection onto that band (possibly at an interior total), and the maximum
+occurs at a band-polytope vertex.
+
+An implemented gate also authenticates the historical donor's selected
+model only when it beats each of the three alternatives for every compatible
+record. Pairing authenticates 933 of 1,620 Portugal proposals, versus 167
+using separate-loss bounds: a 47.28-percentage-point difference and
+52.72\% fewer unresolved proposals. Its descriptive 95\% interval,
+40.80--53.77 points, uses 2,000 whole-consumer percentile-bootstrap draws,
+\texttt{default\_rng(20261012)}, and linear quantile interpolation; all
+54 scenarios of a consumer remain together. It does not estimate
+shared-calendar or population uncertainty. On the existing 30 additional
+consumers, the full grid certifies 7,753 versus 2,527 comparisons with exact
+totals and 7,424 versus 2,010 with 5\% total tolerance, out of 9,720 each.
+These are repeated scenarios from previously examined consumers, not a new
+source or independent evidence for an adaptive precision advantage.
+
+The adverse controls are consequential. The donor makes no observed
+whole-period errors at full coverage on the 9,720 Portugal, 324 household
+and 972 counter exact-total comparisons; the certificate adds robustness
+to compatible completions, not demonstrated accuracy over that imputer.
+In the original Portugal six-hour archive, free copies recover 95.33\%
+of masked targets. Daily certification rises from 96.67\% to 98.71\% after
+two readings per pair, but exact selection adds only 0.042 percentage points
+over greedy. Robust randomization reduces its worst-width objective from
+29.595\% to 26.673\% of initial width while increasing realized expected
+width from 20.154\% to 23.670\% and reducing certification from 98.795\%
+to 98.688\%. Both outcome-independent optimal-face refinements in
+Section~\ref{sec:tie-selection} retain that adverse tradeoff within tolerance.
+The earlier decision-acquisition experiment's 0.9738064\% mean saving is
+unchanged, with its original denominator. None of these results establishes
+operational retrieval savings or the superiority of mean-width optimization
+for precision. They motivate the present distinction between risk objectives.
+
+Online Resource~1 retains the complete 324-cell historical grid, its 18
+aggregates, all wider-total and four-model results, raw-source instructions,
+and executable gate examples with attaining endpoint completions. Independent
+endpoint LPs and a separately written paired/separate-bound checker verify
+the reported comparisons; their tolerances and complete outputs are mapped
+in \texttt{CURRENT\_RESULTS\_MAP.txt}. The main text uses these results as
+complementary controls, keeping the counter study as the application of the
+adaptive precision theorem.
+

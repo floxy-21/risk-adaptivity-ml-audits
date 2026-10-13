@@ -1,0 +1,103 @@
+{
+  "status": "passed",
+  "scope": "Synthetic regression, not another empirical effectiveness experiment",
+  "exact_rational_bounds": {
+    "()": [
+      "-1/2",
+      "1/2"
+    ],
+    "(0,)": [
+      "-1/10",
+      "-1/10"
+    ],
+    "(1,)": [
+      "-3/10",
+      "1/2"
+    ],
+    "(2,)": [
+      "-3/10",
+      "1/2"
+    ]
+  },
+  "unrestricted_exact_hindsight": [
+    1,
+    [
+      0
+    ]
+  ],
+  "incorrectly_zero_excluded_hindsight": [
+    2,
+    [
+      1,
+      2
+    ]
+  ],
+  "production_eligible_indices": [
+    0,
+    1,
+    2
+  ],
+  "production_singleton_choices": {
+    "exact": [
+      0
+    ],
+    "greedy": [
+      0
+    ],
+    "hara": [
+      2
+    ],
+    "uniform": [
+      2
+    ],
+    "randomized": [
+      0
+    ]
+  },
+  "production_trajectories": {
+    "ml_decision": {
+      "queries": [
+        0
+      ],
+      "cost": 1
+    },
+    "uniform_decision": {
+      "queries": [
+        0
+      ],
+      "cost": 1
+    },
+    "width_one": {
+      "queries": [
+        0
+      ],
+      "cost": 1
+    },
+    "hara_one": {
+      "queries": [
+        2,
+        1
+      ],
+      "cost": 2
+    },
+    "uniform_one": {
+      "queries": [
+        1,
+        0
+      ],
+      "cost": 2
+    },
+    "randomized_one": {
+      "queries": [
+        0
+      ],
+      "cost": 1
+    }
+  },
+  "actual_hindsight_driver_cost": 1,
+  "actual_hindsight_driver_witness": [
+    0
+  ],
+  "constant_block_and_free_closure_checks": true,
+  "hara_note": "Coordinate0 is eligible but its published pointwise loss-contrast proposal weight is zero; this is a scoring limitation, not a coefficient-zero eligibility filter."
+}

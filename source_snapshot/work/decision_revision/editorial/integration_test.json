@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "scope": "Five artificial editorial fixtures only; no new empirical result or manuscript written",
+  "checks": [
+    {
+      "synthetic_branch": "success",
+      "primary_criterion_met": true,
+      "abstract_rough_words": 221,
+      "preservation": {
+        "status": "passed",
+        "baseline_text_sha256": "86a7423c0be9dc6ff14f441f6b9583b0d587ed372b13bae130d35dcc2da0c2b3",
+        "integrated_text_sha256": "15dfceb73cef58135ea097344d8c69d54521620d709173587f470af510c91173",
+        "hash_scope": "UTF-8 encoding of supplied text strings, after caller newline normalization; not necessarily original file bytes.",
+        "original_named_environments_preserved": 71,
+        "original_tables_preserved": 28,
+        "original_figures_preserved": 4,
+        "original_labels_preserved": 101,
+        "final_labels": 113,
+        "original_bibliography_entries_preserved": 37,
+        "main_text_rough_words": 14866,
+        "baseline_main_text_rough_words": 13555,
+        "page_count_not_assessed": true,
+        "numbering_notice": "Moved floats/equations and added corollary are renumbered automatically; label identities remain unchanged. Never retain old numeric section/table references in external reports."
+      }
+    },
+    {
+      "synthetic_branch": "large_ratio",
+      "primary_criterion_met": false,
+      "abstract_rough_words": 221,
+      "preservation": {
+        "status": "passed",
+        "baseline_text_sha256": "86a7423c0be9dc6ff14f441f6b9583b0d587ed372b13bae130d35dcc2da0c2b3",
+        "integrated_text_sha256": "bd425fb9b89e64c2d38c94d104c1828e645a73852f059b67b2fbcf2cac187ae9",
+        "hash_scope": "UTF-8 encoding of supplied text strings, after caller newline normalization; not necessarily original file bytes.",
+        "original_named_environments_preserved": 71,
+        "original_tables_preserved": 28,
+        "original_figures_preserved": 4,
+        "original_labels_preserved": 101,
+        "final_labels": 113,
+        "original_bibliography_entries_preserved": 37,
+        "main_text_rough_words": 14868,
+        "baseline_main_text_rough_words": 13555,
+        "page_count_not_assessed": true,
+        "numbering_notice": "Moved floats/equations and added corollary are renumbered automatically; label identities remain unchanged. Never retain old numeric section/table references in external reports."
+      }
+    },
+    {
+      "synthetic_branch": "tie_retained",
+      "primary_criterion_met": false,
+      "abstract_rough_words": 221,
+      "preservation": {
+        "status": "passed",
+        "baseline_text_sha256": "86a7423c0be9dc6ff14f441f6b9583b0d587ed372b13bae130d35dcc2da0c2b3",
+        "integrated_text_sha256": "789e007f803d2d277bc75dc6d6d1733b7cc046bcfaec4f938bdd8db9f314290a",
+        "hash_scope": "UTF-8 encoding of supplied text strings, after caller newline normalization; not necessarily original file bytes.",
+        "original_named_environments_preserved": 71,
+        "original_tables_preserved": 28,
+        "original_figures_preserved": 4,
+        "original_labels_preserved": 101,
+        "final_labels": 113,
+        "original_bibliography_entries_preserved": 37,
+        "main_text_rough_words": 14868,
+        "baseline_main_text_rough_words": 13555,
+        "page_count_not_assessed": true,
+        "numbering_notice": "Moved floats/equations and added corollary are renumbered automatically; label identities remain unchanged. Never retain old numeric section/table references in external reports."
+      }
+    },
+    {
+      "synthetic_branch": "adverse_mean",
+      "primary_criterion_met": true,
+      "abstract_rough_words": 218,
+      "preservation": {
+        "status": "passed",
+        "baseline_text_sha256": "86a7423c0be9dc6ff14f441f6b9583b0d587ed372b13bae130d35dcc2da0c2b3",
+        "integrated_text_sha256": "8a4960552f329f60aef71e8dc6d4e5399202a55d706f24bf73f4f05aa2b82f75",
+        "hash_scope": "UTF-8 encoding of supplied text strings, after caller newline normalization; not necessarily original file bytes.",
+        "original_named_environments_preserved": 71,
+        "original_tables_preserved": 28,
+        "original_figures_preserved": 4,
+        "original_labels_preserved": 101,
+        "final_labels": 113,
+        "original_bibliography_entries_preserved": 37,
+        "main_text_rough_words": 14863,
+        "baseline_main_text_rough_words": 13555,
+        "page_count_not_assessed": true,
+        "numbering_notice": "Moved floats/equations and added corollary are renumbered automatically; label identities remain unchanged. Never retain old numeric section/table references in external reports."
+      }
+    },
+    {
+      "synthetic_branch": "threshold_interval_crossing",
+      "primary_criterion_met": true,
+      "abstract_rough_words": 221,
+      "preservation": {
+        "status": "passed",
+        "baseline_text_sha256": "86a7423c0be9dc6ff14f441f6b9583b0d587ed372b13bae130d35dcc2da0c2b3",
+        "integrated_text_sha256": "3d8fdd2162e43d8367f1e2d10ccd806fafc35feedf069328966f25de80131660",
+        "hash_scope": "UTF-8 encoding of supplied text strings, after caller newline normalization; not necessarily original file bytes.",
+        "original_named_environments_preserved": 71,
+        "original_tables_preserved": 28,
+        "original_figures_preserved": 4,
+        "original_labels_preserved": 101,
+        "final_labels": 113,
+        "original_bibliography_entries_preserved": 37,
+        "main_text_rough_words": 14896,
+        "baseline_main_text_rough_words": 13555,
+        "page_count_not_assessed": true,
+        "numbering_notice": "Moved floats/equations and added corollary are renumbered automatically; label identities remain unchanged. Never retain old numeric section/table references in external reports."
+      }
+    }
+  ]
+}

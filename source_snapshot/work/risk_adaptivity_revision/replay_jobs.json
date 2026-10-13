@@ -1,0 +1,356 @@
+[
+  {
+    "name": "bound_acquisition_workflow",
+    "script": "work/risk_adaptivity_revision/protocol_selection/check_bound_workflow.py",
+    "args": [
+      "--output-dir",
+      "outputs/bound_workflow_check"
+    ],
+    "report": "outputs/bound_workflow_check/report.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "independent_task_binding",
+    "script": "work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_BINDING_CHECK.py",
+    "args": [
+      "--output-dir",
+      "outputs/independent_binding_check"
+    ],
+    "report": "outputs/independent_binding_check/report.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "pair_gate",
+    "script": "work/risk_adaptivity_revision/practical/audit_decision_gate.py",
+    "args": [
+      "--output-dir",
+      "outputs/risk_gate_replay"
+    ],
+    "report": "outputs/risk_gate_replay/verification.json"
+  },
+  {
+    "name": "model_selection",
+    "script": "work/risk_adaptivity_revision/practical_multi/evaluate_model_selection.py",
+    "args": [
+      "--source",
+      "public",
+      "--output-dir",
+      "outputs/risk_selection_replay"
+    ],
+    "report": "outputs/risk_selection_replay/report.json"
+  },
+  {
+    "name": "additional_consumers",
+    "script": "work/risk_adaptivity_revision/practical/replicate_archive_grid.py",
+    "args": [
+      "--output-dir",
+      "outputs/risk_replication_replay"
+    ],
+    "report": "outputs/risk_replication_replay/verification.json"
+  },
+  {
+    "name": "independent_period_lp",
+    "script": "work/risk_adaptivity_revision/practical/check_replication_lp.py",
+    "args": [
+      "--replication-dir",
+      "outputs/risk_replication_replay",
+      "--output-dir",
+      "outputs/risk_replication_lp_replay"
+    ],
+    "report": "outputs/risk_replication_lp_replay/independent_lp_verification.json"
+  },
+  {
+    "name": "independent_paired_separate",
+    "script": "work/risk_adaptivity_revision/practical_api/replication_independent_check.py",
+    "args": [
+      "--replication-dir",
+      "outputs/risk_replication_replay",
+      "--output",
+      "outputs/risk_replication_independent.json"
+    ],
+    "report": "outputs/risk_replication_independent.json"
+  },
+  {
+    "name": "executable_audit",
+    "script": "work/risk_adaptivity_revision/practical_api/prepare_and_verify.py",
+    "args": [
+      "--output-dir",
+      "outputs/risk_api_replay"
+    ],
+    "report": "outputs/risk_api_replay/verification.json"
+  },
+  {
+    "name": "counter_constructed",
+    "script": "work/risk_adaptivity_revision/counter_adaptive/math_review/check_counter_adaptive.py",
+    "args": [],
+    "report": "work/risk_adaptivity_revision/counter_adaptive/math_review/verification.json",
+    "mutable_reports": [
+      "work/risk_adaptivity_revision/counter_adaptive/math_review/verification.json"
+    ]
+  },
+  {
+    "name": "counter_saved_reports",
+    "script": "work/risk_adaptivity_revision/counter_adaptive/verify_packaged.py",
+    "args": [
+      "--output",
+      "outputs/counter_packaged_check.json"
+    ],
+    "report": "outputs/counter_packaged_check.json"
+  },
+  {
+    "name": "counter_feedback_triage",
+    "script": "work/risk_adaptivity_revision/counter_adaptive/feedback_triage/verify_bundled.py",
+    "args": [
+      "--output",
+      "outputs/counter_feedback_triage_check.json"
+    ],
+    "report": "outputs/counter_feedback_triage_check.json"
+  },
+  {
+    "name": "reviewer_counter_diagnostics",
+    "script": "work/risk_adaptivity_revision/counter_adaptive/reviewer_diagnostics/verify_bundled.py",
+    "args": [
+      "--output",
+      "outputs/reviewer_counter_diagnostics.json"
+    ],
+    "report": "outputs/reviewer_counter_diagnostics.json"
+  },
+  {
+    "name": "bounded_uncertainty_prototype",
+    "script": "work/risk_adaptivity_revision/external_validation/math/robust_two_query.py",
+    "args": [
+      "--output",
+      "outputs/bounded_uncertainty_prototype.json"
+    ],
+    "report": "outputs/bounded_uncertainty_prototype.json"
+  },
+  {
+    "name": "bounded_uncertainty_edges",
+    "script": "work/risk_adaptivity_revision/external_validation/math/INTERNAL_EDGE_CHECK.py",
+    "args": [
+      "--output",
+      "outputs/bounded_uncertainty_edges.json"
+    ],
+    "report": "outputs/bounded_uncertainty_edges.json"
+  },
+  {
+    "name": "cap_sensitivity_bundled",
+    "script": "work/risk_adaptivity_revision/external_validation/math/check_cap_package.py",
+    "args": [
+      "--output",
+      "outputs/cap_sensitivity_check.json"
+    ],
+    "report": "outputs/cap_sensitivity_check.json"
+  },
+  {
+    "name": "stored_error_exact_certificates",
+    "script": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/check_exact_certificates.py",
+    "args": [
+      "--output",
+      "outputs/stored_error_exact_certificates.json"
+    ],
+    "report": "outputs/stored_error_exact_certificates.json"
+  },
+  {
+    "name": "stored_error_independent_exact_certificates",
+    "script": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/INDEPENDENT_EXACT_CHECK.py",
+    "args": [],
+    "report": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/INDEPENDENT_EXACT_CHECKS.json",
+    "mutable_reports": [
+      "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/INDEPENDENT_EXACT_CHECKS.json"
+    ]
+  },
+  {
+    "name": "stored_error_failure_lower_certificates",
+    "script": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/check_lower_witnesses.py",
+    "args": [
+      "--output",
+      "outputs/stored_error_lower_certificates.json"
+    ],
+    "report": "outputs/stored_error_lower_certificates.json"
+  },
+  {
+    "name": "stored_error_independent_failure_lower_certificates",
+    "script": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/INDEPENDENT_LOWER_CHECK.py",
+    "args": [],
+    "report": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/INDEPENDENT_LOWER_CHECKS.json",
+    "mutable_reports": [
+      "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/INDEPENDENT_LOWER_CHECKS.json"
+    ]
+  },
+  {
+    "name": "stored_error_fallback_fixed_certificates",
+    "script": "work/risk_adaptivity_revision/external_validation/stored_error_fallback/INDEPENDENT_CERTIFICATE_CHECK.py",
+    "args": [
+      "--output",
+      "outputs/stored_error_fallback_fixed.json"
+    ],
+    "report": "outputs/stored_error_fallback_fixed.json"
+  },
+  {
+    "name": "stored_error_fallback_branch_certificates",
+    "script": "work/risk_adaptivity_revision/external_validation/stored_error_fallback/INDEPENDENT_BRANCH_CHECK.py",
+    "args": [
+      "--output",
+      "outputs/stored_error_fallback_branches.json"
+    ],
+    "report": "outputs/stored_error_fallback_branches.json"
+  },
+  {
+    "name": "stored_error_fallback_execution",
+    "script": "work/risk_adaptivity_revision/external_validation/stored_error_fallback/policy.py",
+    "args": [
+      "--self-test",
+      "--output",
+      "outputs/stored_error_fallback_execution.json"
+    ],
+    "report": "outputs/stored_error_fallback_execution.json"
+  },
+  {
+    "name": "external_stored_error_sensitivity",
+    "script": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/run_sensitivity.py",
+    "args": [],
+    "report": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/report.json",
+    "mutable_reports": [
+      "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/report.json",
+      "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/case_ledger.csv",
+      "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/inputs.json",
+      "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/witnesses.json"
+    ],
+    "scientific_csv": [
+      "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/case_ledger.csv"
+    ],
+    "scientific_json": {
+      "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/report.json": [
+        "cases",
+        "evaluations",
+        "LP_count"
+      ]
+    },
+    "maximum_report_values": {
+      "max_numerical_residuals.primal_residual": 2e-08,
+      "max_numerical_residuals.stationarity_residual": 2e-08,
+      "max_numerical_residuals.absolute_primal_dual_gap": 2e-08,
+      "max_zero_error_A_discrepancy": 2e-08,
+      "max_zero_error_D_discrepancy": 2e-08,
+      "max_Helly_support_discrepancy": 2e-08
+    }
+  },
+  {
+    "name": "external_source_qualification",
+    "script": "work/risk_adaptivity_revision/external_validation/operational/check_source_qualification.py",
+    "args": [
+      "--output",
+      "outputs/external_source_qualification.json"
+    ],
+    "report": "outputs/external_source_qualification.json"
+  },
+  {
+    "name": "external_counter_cached_replay",
+    "script": "work/risk_adaptivity_revision/external_validation/replay/run_external.py",
+    "args": [],
+    "report": "work/risk_adaptivity_revision/external_validation/replay/verification.json",
+    "mutable_reports": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json",
+      "work/risk_adaptivity_revision/external_validation/replay/half_witnesses.json",
+      "work/risk_adaptivity_revision/external_validation/replay/initial_intake.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/replay_cases.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/replay_attrition.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/query_trace.json",
+      "work/risk_adaptivity_revision/external_validation/replay/policy_summary.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/meter_policy_summary.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/pair_policy_summary.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/meter_pair_policy_summary.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/half_policy_summary.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/geometry_group_counts.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/report.json",
+      "work/risk_adaptivity_revision/external_validation/replay/verification.json"
+    ],
+    "scientific_csv": [
+      "work/risk_adaptivity_revision/external_validation/replay/initial_intake.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/replay_cases.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/replay_attrition.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/policy_summary.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/meter_policy_summary.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/pair_policy_summary.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/meter_pair_policy_summary.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/half_policy_summary.csv",
+      "work/risk_adaptivity_revision/external_validation/replay/geometry_group_counts.csv"
+    ],
+    "scientific_json": {
+      "work/risk_adaptivity_revision/external_validation/replay/report.json": [
+        "counts",
+        "paired"
+      ]
+    }
+  },
+  {
+    "name": "external_counter_independent_check",
+    "script": "work/risk_adaptivity_revision/external_validation/replay/check_external.py",
+    "args": [],
+    "report": "work/risk_adaptivity_revision/external_validation/replay/independent_checks.json",
+    "mutable_reports": [
+      "work/risk_adaptivity_revision/external_validation/replay/independent_checks.json"
+    ]
+  },
+  {
+    "name": "http_cached_verification",
+    "script": "work/risk_adaptivity_revision/external_validation/operational/verify_http.py",
+    "args": [
+      "--benchmark-dir",
+      "work/risk_adaptivity_revision/external_validation/operational/http_benchmark_20261012"
+    ],
+    "report": "work/risk_adaptivity_revision/external_validation/operational/http_benchmark_20261012/verification.json",
+    "mutable_reports": [
+      "work/risk_adaptivity_revision/external_validation/operational/http_benchmark_20261012/measurement_summary.csv",
+      "work/risk_adaptivity_revision/external_validation/operational/http_benchmark_20261012/per_case_measurements.csv",
+      "work/risk_adaptivity_revision/external_validation/operational/http_benchmark_20261012/verification.json"
+    ],
+    "scientific_csv": [
+      "work/risk_adaptivity_revision/external_validation/operational/http_benchmark_20261012/measurement_summary.csv",
+      "work/risk_adaptivity_revision/external_validation/operational/http_benchmark_20261012/per_case_measurements.csv"
+    ]
+  },
+  {
+    "name": "protocol_selection_replay",
+    "script": "work/risk_adaptivity_revision/protocol_selection/selector.py",
+    "args": [
+      "--output-dir",
+      "outputs/protocol_selection_replay"
+    ],
+    "report": "outputs/protocol_selection_replay/report.json"
+  },
+  {
+    "name": "protocol_selection_independent",
+    "script": "work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_CHECK.py",
+    "args": [
+      "--results-dir",
+      "outputs/protocol_selection_replay",
+      "--output-dir",
+      "outputs/protocol_selection_check"
+    ],
+    "report": "outputs/protocol_selection_check/report.json"
+  },
+  {
+    "name": "protocol_cost_frontier",
+    "script": "work/risk_adaptivity_revision/protocol_selection/cost_frontier.py",
+    "args": ["--output-dir", "outputs/cost_frontier_replay"],
+    "report": "outputs/cost_frontier_replay/report.json"
+  },
+  {
+    "name": "protocol_cost_frontier_independent",
+    "script": "work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_COST_CHECK.py",
+    "args": ["--results-dir", "outputs/cost_frontier_replay", "--output", "outputs/cost_frontier_check.json"],
+    "report": "outputs/cost_frontier_check.json"
+  },
+  {
+    "name": "printed_worked_example",
+    "script": "work/risk_adaptivity_revision/counter_adaptive/reviewer_diagnostics/check_worked_example.py",
+    "args": ["--output", "outputs/printed_worked_example_check.json"],
+    "report": "outputs/printed_worked_example_check.json"
+  }
+]

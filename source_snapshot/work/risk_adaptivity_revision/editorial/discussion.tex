@@ -1,0 +1,81 @@
+\section{Operational interpretation and scope}
+The classification turns the choice of acquisition objective into a
+decision about feedback. A mean-optimal batch suffices for every
+nondecreasing concave width penalty; a precision requirement can instead
+make feedback necessary. The cumulative-query algorithm determines which
+situation applies before opening optional measurements.
+
+\subsection{A deployment decision, including when to avoid feedback}
+An implementation first records the available archive, valid physical or
+measurement constraints, and actual retrieval interface. It then computes
+the initial interval and compares it with the required precision. If the
+initial interval suffices, no retrieval is needed. Otherwise a guaranteeing
+fixed batch avoids a feedback dependency. If only the adaptive rule meets
+the requirement at the stated budget, feedback is necessary for that
+deterministic assurance. If neither meets it, the rule reports the missing
+guarantee rather than treating a point estimate as certified. A bulk export
+or a different cost model must be evaluated alongside these choices.
+
+The capacity experiment illustrates why this information check is essential.
+At the unchanged absolute requirement, an illustrative $E/2$ cap changes
+282 of 290 originally feedback-essential cases into fixed-batch cases;
+an $E/3$ cap changes all 290. These restrictions supply extra information.
+Their value is that less acquisition assurance is needed, not evidence
+that the uncapped algorithm fails. Neither cap is a validated physical
+limit, and each excludes some recorded traces. The paper therefore does
+not count those hypothetical bounds as deployed operational improvements.
+Likewise the measured public API favors bulk retrieval over selective
+requests. The complete decision process must retain this alternative.
+
+\subsection{Mathematical and measurement boundaries}
+The universal result requires a known compact convex uncertainty set,
+scalar affine target, finite exact-linear query dictionary and the same
+hard budget for both policy classes. Valid bounds, overlapping constraints
+and unequal fixed costs are allowed. A fixed-error latent-record lift
+extends this formulation to declared bounded measurement errors
+(Appendix~\ref{app:stored-error}); its guarantees concern that enlarged
+model. Error bounds and acquisition timestamps must be justified at
+deployment, and the noisy general LP is not the compact exact-total solver.
+
+The efficient coordinate specialization uses disjoint exact totals and
+unit query costs. The counter rule uses two prefix queries and a known
+nonnegative total, with a quadratic arithmetic-operation bound for any
+block length. The compact formulation does not provide an efficient
+arbitrary-budget precision solver for general polytopes. Classical
+minimax theory, Jensen's inequality, Helly theory, local information
+diameter and polyhedral dynamic programming supply established tools;
+the claims concern the penalty classification, query-realizable sharp
+separations and their computable consequences.
+
+\subsection{Empirical strength and its limits}
+Feedback-essential prevalence is 5.90\% in the original panel, below its
+prespecified 10\% target, and 1.73\% in the external panel. Overall
+recorded gains over the best fixed deterministic worst-width batch are
+0.407 and 0.119 percentage points. Greedy adaptation attains 100\%
+precision on the external 29-case subset. The exact planner's theoretical
+optimality therefore does not establish a large recorded advantage over
+ordinary adaptation. Bounded internal-readout sensitivity provides exact rational certificates of the adaptive guarantee
+in 22 of the 29 external cases at an allowance of 1\% of
+block total, with exact endpoints. That check imposes no hourly cap; its
+allowances are not calibrated device specifications. The half-width requirement is a declared scale-free
+service level, not a calibrated financial decision threshold. Three
+systems per source and dependent model pairs do not establish population
+prevalence.
+
+A narrow interval need not certify a winner; the paired ordering results
+and adverse historical controls address that distinction separately.
+Expected requests until certification, shared costs across pairs and
+monetary savings require other objectives and measurements. The present
+result supports an assurance decision under the specified information model.
+
+\section{Conclusion}
+Concavity characterizes when randomized feedback is universally irrelevant
+to minimax penalties of sharp scalar width. Nonconcave penalties admit
+strict coordinate-query advantages and growing sharp separations.
+A dimension-dependent Helly consequence and an exact two-prefix algorithm
+turn the distinction into a decision about attainable precision.
+Matching witnesses establish exact half-success gaps on two public-data
+sources. Capacity and actual-interface tests identify when that gap ceases
+to justify feedback. The resulting method selects an assurance-compatible
+acquisition protocol while making its information, budget and measurement
+assumptions explicit.

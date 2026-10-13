@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "random_multiblock_fixtures": 400,
+  "candidate_scores_checked": 2828,
+  "maximum_absolute_probability_error": 6.661338147750939e-16,
+  "scope": "Independent beta-integral oracle vs prototype; random synthetic fixtures with known coordinates and coefficient ties",
+  "policy_sha256": "17b53e572f01f24d09fc1026e5fd5228ac49c48ad04a7c1037c2c84dcea4e257"
+}

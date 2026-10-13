@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "checker_sha256": "93f90549f8235821ed9fb6b0858eb4f3338747bd31fb28772fd0ad61e8e5b0b4",
+  "input_manifest_sha256": "dcd8f44261f7c1138fef0d476d462d644d0b9ab4469f7b3cea5d934acf551f97",
+  "selected_source_rows_checked": 408172,
+  "hourly_rows_checked": 208320,
+  "eligible_hours_checked": 202716,
+  "max_absolute_decimal_sum_difference_kwh": 8.881784197001252e-16,
+  "selection": "Reconstructed from all100candidate daily training-only quality counts.",
+  "scope": "Scalar reference checking against bundled literal selected source rows, source output integrity, day counts and selection logic. Does not independently re-extract source rows from the8.54GB original or verify physical timezones/arrival metadata.",
+  "selected_ids": [
+    "MAC000002",
+    "MAC000003",
+    "MAC000004",
+    "MAC000005",
+    "MAC000006",
+    "MAC000007",
+    "MAC000008",
+    "MAC000009",
+    "MAC000010",
+    "MAC000011",
+    "MAC000012",
+    "MAC000013",
+    "MAC000014",
+    "MAC000015",
+    "MAC000017",
+    "MAC000018",
+    "MAC000019",
+    "MAC000020",
+    "MAC000021",
+    "MAC000022"
+  ]
+}

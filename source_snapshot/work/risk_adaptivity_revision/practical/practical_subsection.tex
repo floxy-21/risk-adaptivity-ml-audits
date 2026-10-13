@@ -1,0 +1,87 @@
+\subsection{A certificate gate for proposed model comparisons}
+\label{sec:practical_gate}
+An imputation rule can propose a model ranking before its robustness to
+missing verification targets has been established. We implement a separate
+gate that receives that proposed direction and the two certificate endpoints,
+and returns \emph{allow}, \emph{hold}, or \emph{contradict}. A proposal is allowed
+only when the entire interval supports its direction, using the existing
+scaled $10^{-9}$ sign margin. The gate accepts no hidden reference targets.
+Its output supports retrospective model-comparison decisions.
+
+On the original Portugal archive-aware exact-total grid, paired certificates
+allow 7,836 of 9,720 historical-donor proposals, compared with 2,513 for
+separate-loss certificates under identical information and zero additional
+queries. The number held falls from 7,207 to 1,884, a derived reduction of
+73.86\% in unresolved certificates. All 1,884 held paired comparisons have a
+sharp endpoint supporting the opposite ranking beyond the numerical decision
+margin. Consequently, the declared information admits an opposing completion
+even though the donor's realized ranking is correct in every case. Neither
+certificate method contradicts a donor proposal in this grid. This result
+quantifies the distinction between an observed correct imputation and an
+all-completions certificate. Separate-loss intervals are the matched
+certificate comparator, not the strongest point-imputation predictor.
+
+The executable action ledger covers all 20,088 public exact-total comparisons
+across both access regimes and both public cohorts. It fixes gate decisions
+before consulting reference contrasts. Constructing 40,176 gate outputs and
+their ledger columns took 0.462\,s after CSV parsing; the complete replay took
+7.704\,s. These are postprocessing times for frozen endpoints, not times for
+regenerating the forecast archive or computing all bounds.
+
+\subsection{Extended archive certification on the additional consumers}
+\label{sec:extended_archive_replication}
+To extend the earlier primary-scenario replication, we ran the full declared
+comparison grid on the existing 30 additional Portugal consumers: three gap
+lengths, three mask rules, three seed labels, two aggregate lengths, and all
+six model pairs, separately for exact totals and 5\% total tolerance.
+Each period comparison retains all 107 eligible days and a 2,568-target loss
+denominator. The grid protocol and input hashes were saved before this run;
+no models were refitted or cases removed by outcome. These consumers had
+already contributed to an earlier six-hour recovery analysis. This is a new
+full-grid computation from frozen forecasts, not a newly untouched source
+or a blind prospective replication. The deterministic high-demand masks use
+the serialized targets with stable tie breaking; repeated seed labels for
+that rule are dependent stress cases.
+
+\begin{table}[t]
+\centering
+\caption{Fresh whole-period archive-aware certification on the existing
+30 additional Portugal consumers. Each row contains 9,720 comparisons under
+matched information and zero queries. Unresolved reduction is relative to
+the separate-loss unresolved count, not an acquisition-saving measure.}
+\label{tab:extended_archive_replication}
+\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrr}
+\toprule
+Total tolerance & Paired & Separate & Paired unresolved & Unresolved reduction\\
+\midrule
+Exact & 7,753 (79.76\%) & 2,527 (26.00\%) & 1,967 & 72.65\%\\
+5\% & 7,424 (76.38\%) & 2,010 (20.68\%) & 2,296 & 70.22\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The archive reconstruction uses only saved persistence prediction rows and
+their documented one-day copy relationship. Exact-total singleton and
+zero-residual deductions precede both bound methods. Every permitted direct
+copy is used before uncertainty is calculated. Of 3,210 meter-days, 3,060
+are completely reconstructed and therefore yield point intervals for every
+grid setting; the implementation bypasses unnecessary optimizations in
+those cases. The 346,680 day--scenario evaluations require 16,200 bound
+calls for the remaining days. The fresh computation and output generation
+took 39.35\,s. Neither bound method issues an incorrect comparison against
+the held reference, and every separate-loss certificate is also paired-
+certified. The comparison counts are dependent, so they are not interpreted
+as independent Bernoulli trials.
+
+An independently assembled whole-period linear program checks 432 cases
+covering the first and last declared consumers, every gap, mask, aggregate
+length and tolerance, and the first seed. Its 864 endpoint optimizations
+agree with the production paired endpoints to $1.14\times10^{-13}$ in
+absolute units and $1.67\times10^{-15}$ after the declared endpoint scaling;
+the largest LP constraint violation is zero at the stored precision.
+The LP feasibility tolerances are $10^{-9}$, and the endpoint comparison
+tolerance is $10^{-8}\max(1,|D^-|,|D^+|)$. This checker takes 19.86\,s and
+imports no production bound routine. It checks the paired-bound evaluation,
+not an independent forecast refit or every separate-loss quadratic program.
+These checks validate the extended grid's paired-certificate calculations.

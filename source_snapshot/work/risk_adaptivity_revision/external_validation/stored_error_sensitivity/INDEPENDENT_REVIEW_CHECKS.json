@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "scope": "Independent error-eliminated LP reproduction at the same three locked levels",
+  "cases": 29,
+  "case_level_evaluations": 87,
+  "LP_count": 2175,
+  "max_primal_residual": 1.4431164596651058e-14,
+  "max_production_discrepancy": 1.887379141862766e-15,
+  "groups": [
+    {
+      "delta": 0,
+      "cases": 29,
+      "passing": 29,
+      "smallest_passing_margin": 0.0,
+      "smallest_failing_excess": null,
+      "deterministic_passing": 0
+    },
+    {
+      "delta": 0.001,
+      "cases": 29,
+      "passing": 27,
+      "smallest_passing_margin": 0.008195211257472468,
+      "smallest_failing_excess": 0.002166666666666539,
+      "deterministic_passing": 0
+    },
+    {
+      "delta": 0.01,
+      "cases": 29,
+      "passing": 22,
+      "smallest_passing_margin": 0.0037592273417660915,
+      "smallest_failing_excess": 5.906034102887148e-06,
+      "deterministic_passing": 0
+    }
+  ],
+  "seconds": 12.66834239999298,
+  "interpretation": "Floating-point validation, not exact rational or interval-arithmetic certification."
+}

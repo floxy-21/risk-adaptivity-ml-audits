@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-10-11T21:24:46.886799+00:00",
+  "inputs": {
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\confirmation\\source_cases.jsonl": "f82d9cbe6e5a1aca250fbecfba55e81add549d5f14d2fceb76ceb1e15797e31e",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\confirmation_fitted\\reference_targets.csv": "1a59d52260fed1a94929406b076ad647512454ce7f08ac70d7ab1bc8c936178c",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\confirmation\\cases.csv": "85fb85d7c95a99d7abb5dd88fe9f4591a089e8148803e2310796395c442c3135",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\confirmation\\run_result.json": "8f7993cb2b0b8ca156de1d5682824d304c0a392b29bee2cd8868f97f15e3f166",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\oracle\\confirmation_oracle.py": "4f9bd6b4df05dd54aa47257cad8161a04eeac0b7b7fdcc993107c8ef4e2c34d7",
+    "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\decision_revision\\oracle\\hindsight_diagnostic.py": "a68c0aee59131dec2bf848c84e8454fd0b824c18910e2baab7b7a2e166a7f44a"
+  }
+}

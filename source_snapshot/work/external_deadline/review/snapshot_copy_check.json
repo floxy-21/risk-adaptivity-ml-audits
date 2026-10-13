@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-11T20:27:12.239932+00:00",
+  "scope": "Synthetic multistage snapshot regression only; no external data read.",
+  "policies": [
+    {
+      "policy": "exact",
+      "stages": 3,
+      "checked_later_reveal_transitions": 2,
+      "paid_requests": 5,
+      "snapshot_independence": "passed"
+    },
+    {
+      "policy": "greedy",
+      "stages": 3,
+      "checked_later_reveal_transitions": 2,
+      "paid_requests": 5,
+      "snapshot_independence": "passed"
+    },
+    {
+      "policy": "hara",
+      "stages": 3,
+      "checked_later_reveal_transitions": 2,
+      "paid_requests": 5,
+      "snapshot_independence": "passed"
+    },
+    {
+      "policy": "uniform",
+      "stages": 3,
+      "checked_later_reveal_transitions": 2,
+      "paid_requests": 5,
+      "snapshot_independence": "passed"
+    },
+    {
+      "policy": "randomized",
+      "stages": 3,
+      "checked_later_reveal_transitions": 2,
+      "paid_requests": 5,
+      "snapshot_independence": "passed"
+    }
+  ],
+  "evaluator_sha256": "a5c91d25cf16d123673284744a0ed79aa572fb968704e047363de0bd7f829e85",
+  "fixture_sha256": "49d4617e51205c808cf1342d72d455536923907b9b6f0d2d6e2ebb1206f66691"
+}

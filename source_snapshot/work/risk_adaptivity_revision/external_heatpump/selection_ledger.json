@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "mid_metering": 1,
+    "electric_meter": "Other pulse output meter (class 1)",
+    "feed": {
+      "start_time": 1641911700,
+      "end_time": 1791763260,
+      "interval": 88.17188661160468,
+      "npoints": 1699540,
+      "unit": "kWh"
+    },
+    "decision": "selected"
+  },
+  {
+    "id": 2,
+    "mid_metering": 1,
+    "electric_meter": "SDM120 Modbus/MBUS Single Phase (class 1)",
+    "feed": {
+      "start_time": 1600870460,
+      "end_time": 1791770990,
+      "interval": 10,
+      "npoints": 19090054
+    },
+    "decision": "selected"
+  },
+  {
+    "id": 3,
+    "mid_metering": 0,
+    "electric_meter": "Other electricity meter",
+    "decision": "exclude_not_mid"
+  },
+  {
+    "id": 4,
+    "mid_metering": 1,
+    "electric_meter": "SDM120 Modbus/MBUS Single Phase (class 1)",
+    "feed": {
+      "start_time": 1659917670,
+      "end_time": 1742471390,
+      "interval": 10,
+      "npoints": 8255373,
+      "unit": "kW"
+    },
+    "decision": "exclude_metadata_does_not_cover_frozen_calendar"
+  },
+  {
+    "id": 5,
+    "mid_metering": 1,
+    "electric_meter": "SDM120 Modbus/MBUS Single Phase (class 1)",
+    "feed": {
+      "start_time": 1637338670,
+      "end_time": 1744860590,
+      "interval": 10,
+      "npoints": 10752193
+    },
+    "decision": "exclude_metadata_does_not_cover_frozen_calendar"
+  },
+  {
+    "id": 6,
+    "mid_metering": 0,
+    "electric_meter": "OpenEnergyMonitor EmonPi v2, EmonTx4 or newer",
+    "decision": "exclude_not_mid"
+  },
+  {
+    "id": 7,
+    "mid_metering": 1,
+    "electric_meter": "SDM120 Modbus/MBUS Single Phase (class 1)",
+    "feed": {
+      "start_time": 1668776160,
+      "end_time": 1791771090,
+      "interval": 30,
+      "npoints": 4099832,
+      "unit": "kWh"
+    },
+    "decision": "selected"
+  }
+]

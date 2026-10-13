@@ -1,0 +1,3610 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-11T01:10:09.872346+00:00",
+  "archive": "research_supplement.zip",
+  "archive_bytes": 208269392,
+  "archive_sha256": "6d9a25d921c21c252ed41f6237131cdd23b44f06cd6055b32038e335770a41c4",
+  "archive_files": 251,
+  "manifest_content_files": 250,
+  "fresh_extract_directory": "work/data_supplement_verify_20261011T010100189792Z",
+  "fresh_extract_tests_run": 41,
+  "test_failures": 0,
+  "test_errors": 0,
+  "tests_skipped": [
+    [
+      "test_exploratory_diagnostics_reconcile_without_changing_primary (test_study_recovery.RecoveryTests.test_exploratory_diagnostics_reconcile_without_changing_primary)",
+      "Full historical per-day recovery cases withheld; UCI public subset and unchanged-source hash supplied; full check passed locally"
+    ],
+    [
+      "test_recovery_result_integrity_and_counts (test_study_recovery.RecoveryTests.test_recovery_result_integrity_and_counts)",
+      "Regenerate the AI prediction archive and recovery outputs first"
+    ]
+  ],
+  "adaptive_cases_passed": 5952,
+  "interval_total_verification": {
+    "lp_calls": 3458,
+    "exhaustive_instances": 86,
+    "exhaustive_query_subsets": 1247,
+    "conditional_answer_checks": 482,
+    "exact_total_comparisons": 108,
+    "invalid_input_checks": 25
+  },
+  "interval_total_maximum_absolute_errors": {
+    "solver_vs_exhaustive_lp": 0.0,
+    "subset_width_vs_lp": 0.0,
+    "conditional_exceeds_zero_answer_width": 0.0,
+    "conditional_formula_vs_lp": 0.0,
+    "exact_total_reduction": 0.0
+  },
+  "holdout_independent_aggregation_checks": {
+    "pair_seed_rows": 4320,
+    "consumer_rows": 240,
+    "cohort_rows": 8,
+    "named_pair_rows": 48
+  },
+  "holdout_independent_numerical_checks": {
+    "representative_consumers": [
+      "MT_081",
+      "MT_097",
+      "MT_125"
+    ],
+    "q0_detail_rows_recomputed": 2160,
+    "representative_consumer_days": 9,
+    "interval_vertex_cases": 648,
+    "vertices": 2882,
+    "exhaustive_batch_checks": 324,
+    "query_subsets": 5994,
+    "all_q0_pair_seed_regime_cases": 115560
+  },
+  "holdout_independent_maximum_absolute_discrepancies": {
+    "forecast_mse": 7.275957614183426e-12,
+    "forecast_rmse": 2.842170943040401e-14,
+    "forecast_mae": 1.4210854715202004e-14,
+    "detail_derived_means": 0.0,
+    "aggregate_width_sums": 1.4901161193847656e-08,
+    "meter_derived_means": 1.1368683772161603e-13,
+    "cohort_macro_means": 1.8189894035458565e-12,
+    "cohort_pooled_means": 1.8189894035458565e-12,
+    "representative_direct_mse_vertex_endpoints": 2.1827872842550278e-11,
+    "all_q0_width_sums": 5.587935447692871e-09
+  },
+  "review_revision_entrypoint_passed": true,
+  "review_revision_reproduction": {
+    "status": "passed",
+    "completed_utc": "2026-10-11T01:09:05.551748+00:00",
+    "mode": "distributed_verification",
+    "wall_seconds": 478.3195810000034,
+    "model_refitting": false,
+    "original_files_unchanged": true,
+    "raw_reconstruction": null,
+    "steps": [
+      {
+        "script": "work/verify_period_archive.py",
+        "wall_seconds": 298.8331451999984,
+        "log": "work\\reproduction_verify_period_archive.log",
+        "returncode": 0
+      },
+      {
+        "script": "work/verify_interval_trace.py",
+        "wall_seconds": 3.809912099997746,
+        "log": "work\\reproduction_verify_interval_trace.log",
+        "returncode": 0
+      },
+      {
+        "script": "work/compose_final_sections.py",
+        "wall_seconds": 14.739170699991519,
+        "log": "work\\reproduction_compose_final_sections.log",
+        "returncode": 0
+      },
+      {
+        "script": "work/build_final_manuscript.py",
+        "wall_seconds": 0.2448891999956686,
+        "log": "work\\reproduction_build_final_manuscript.log",
+        "returncode": 0
+      }
+    ],
+    "extension_checks": {
+      "status": "passed",
+      "stage": "work\\extension_verification",
+      "fresh_scaling_measurements_requested": false,
+      "archived_generation_inputs_unchanged": true,
+      "steps": [
+        {
+          "script": "work/verify_randomized_revision.py",
+          "wall_seconds": 44.53486880000855,
+          "log": "work\\reproduction_verify_randomized_revision.log",
+          "returncode": 0,
+          "verification_workspace": "work\\extension_verification"
+        },
+        {
+          "script": "work/randomized_recovery_root/verify_compact_policy.py",
+          "wall_seconds": 4.438627199997427,
+          "log": "work\\reproduction_verify_compact_policy.log",
+          "returncode": 0,
+          "verification_workspace": "work\\extension_verification"
+        },
+        {
+          "script": "work/new_direction_practical/noaa/reproduce_extracted_panel.py",
+          "wall_seconds": 0.21010009999736212,
+          "log": "work\\reproduction_reproduce_extracted_panel.log",
+          "returncode": 0,
+          "verification_workspace": "work\\extension_verification"
+        },
+        {
+          "script": "work/randomized_tie_review/verify_ties.py",
+          "wall_seconds": 53.57095199999458,
+          "log": "work\\reproduction_verify_ties.log",
+          "returncode": 0,
+          "verification_workspace": "work\\extension_verification"
+        },
+        {
+          "script": "work/randomized_holdout_review/verify_holdout.py",
+          "wall_seconds": 48.510844500007806,
+          "log": "work\\reproduction_verify_holdout.log",
+          "returncode": 0,
+          "verification_workspace": "work\\extension_verification"
+        },
+        {
+          "script": "work/randomized_scaling_review/verify_scaling.py",
+          "wall_seconds": 0.2551487000018824,
+          "log": "work\\reproduction_verify_scaling.log",
+          "returncode": 0,
+          "verification_workspace": "work\\extension_verification"
+        }
+      ],
+      "reports": {
+        "randomized": {
+          "status": "passed",
+          "completed_utc": "2026-10-11T01:07:01.366895+00:00",
+          "cases": 20736,
+          "compact_versus_finite_game_checks": 1074,
+          "every_positive_support_checked": 2341,
+          "permitted_copy_checks": 19662,
+          "cohort_aggregate_checks": 38,
+          "max_normalized_compact_error": 1.3311244057439254e-13,
+          "saved_mixture_primal_dual_linkage_checks": 1074,
+          "max_saved_mixture_primal_violation": 2.220446049250313e-16,
+          "max_saved_mixture_dual_violation": 9.059419880941277e-14,
+          "max_saved_mixture_primal_dual_gap": 1.0733081090563701e-13,
+          "wall_seconds": 41.878613900000346,
+          "source_hashes": {
+            "work/verify_randomized_revision.py": "c3729ef4627329caedf14a796414d0ab01974efd87e70b2f29e6ccabe3b6a9cb",
+            "outputs/review_frozen_forecasts.csv": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0",
+            "work/new_direction_randomized/cases.csv": "347b95b780a11d5c35882cf9d206bec642bf26ab7b10321f8ff92b881b71ecef",
+            "work/new_direction_randomized/support.csv": "29f518080d8a3c0245efde0aa8b2757e6fb8b5e86d0cf3dda7901a6db00dfd50",
+            "work/new_direction_randomized/lp_solutions.jsonl": "ec5a31615ccc2e74f9c91bcd065eae392f1a4729d56d327a6a47eb4ab5ef2226",
+            "work/new_direction_randomized/result.json": "dbc6ea39ee01ae6a7aef6e19d49d3aad098d3a557389fa73a15cd4ba21f77338",
+            "work/randomized_recovery_root/compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d"
+          },
+          "scope": "Distributed public UCI inputs; no fit, raw download, or independent optimization of randomized adaptive policies. Every case and positive support checked, not a sample. Saved support probabilities and queries are linked bidirectionally to the finite-game LP; its matrix, worst expected mixture objective, primal and dual feasibility, and gap are reconstructed independently."
+        },
+        "compact_policy": {
+          "status": "passed",
+          "cases": 48,
+          "seeded_draws": 5800,
+          "invalid_inputs_rejected": 8,
+          "max_atom_coefficient_error": 1.7763568394002505e-15,
+          "max_enumerated_objective_error": 1.8474111129762605e-13,
+          "reports": [
+            {
+              "case": 0,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 1,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 4,
+                  "equalities": 2,
+                  "inequalities": 3
+                }
+              }
+            },
+            {
+              "case": 1,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 0,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 3,
+                  "equalities": 3,
+                  "inequalities": 4
+                }
+              }
+            },
+            {
+              "case": 2,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 1,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 4,
+                  "equalities": 2,
+                  "inequalities": 3
+                }
+              }
+            },
+            {
+              "case": 3,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 0,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 3,
+                  "equalities": 3,
+                  "inequalities": 4
+                }
+              }
+            },
+            {
+              "case": 4,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 4.440892098500626e-16,
+              "query_count": 1,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 8,
+                  "equalities": 5,
+                  "inequalities": 8
+                }
+              }
+            },
+            {
+              "case": 5,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 2,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 7,
+                  "equalities": 2,
+                  "inequalities": 4
+                }
+              }
+            },
+            {
+              "case": 6,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 0,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 4,
+                  "equalities": 3,
+                  "inequalities": 6
+                }
+              }
+            },
+            {
+              "case": 7,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 1,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 8,
+                  "equalities": 5,
+                  "inequalities": 8
+                }
+              }
+            },
+            {
+              "case": 8,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 7.105427357601002e-15,
+              "query_count": 1,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 11,
+                  "equalities": 5,
+                  "inequalities": 12
+                }
+              }
+            },
+            {
+              "case": 9,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 1.7763568394002505e-15,
+              "query_count": 2,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 17,
+                  "equalities": 8,
+                  "inequalities": 15
+                }
+              }
+            },
+            {
+              "case": 10,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 3,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 11,
+                  "equalities": 2,
+                  "inequalities": 5
+                }
+              }
+            },
+            {
+              "case": 11,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 0,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 5,
+                  "equalities": 3,
+                  "inequalities": 8
+                }
+              }
+            },
+            {
+              "case": 12,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 1,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 14,
+                  "equalities": 5,
+                  "inequalities": 16
+                }
+              }
+            },
+            {
+              "case": 13,
+              "atoms": 4,
+              "coefficient_error": 0.0,
+              "objective_error": 7.105427357601002e-15,
+              "query_count": 2,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 1.1102230246251565e-16,
+                "maximum_unconditional_marginal_change": 5.551115123125783e-17,
+                "maximum_flow_change": 5.551115123125783e-17,
+                "maximum_coefficient_change": 8.881784197001252e-16,
+                "maximum_systematic_cdf_correction": 1.1102230246251565e-16,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 3,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 4.440892098500626e-15,
+                "objective_change": 2.1316282072803006e-14,
+                "lp_dimensions": {
+                  "variables": 23,
+                  "equalities": 8,
+                  "inequalities": 22
+                }
+              }
+            },
+            {
+              "case": 14,
+              "atoms": 6,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 3,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 1.1102230246251565e-16,
+                "maximum_unconditional_marginal_change": 2.7755575615628914e-17,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 4,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 2.7755575615628914e-17,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 31,
+                  "equalities": 12,
+                  "inequalities": 26
+                }
+              }
+            },
+            {
+              "case": 15,
+              "atoms": 3,
+              "coefficient_error": 0.0,
+              "objective_error": 4.440892098500626e-16,
+              "query_count": 4,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 3,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 16,
+                  "equalities": 2,
+                  "inequalities": 6
+                }
+              }
+            },
+            {
+              "case": 16,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 1,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 17,
+                  "equalities": 5,
+                  "inequalities": 20
+                }
+              }
+            },
+            {
+              "case": 17,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 2,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 29,
+                  "equalities": 8,
+                  "inequalities": 29
+                }
+              }
+            },
+            {
+              "case": 18,
+              "atoms": 7,
+              "coefficient_error": 0.0,
+              "objective_error": 8.881784197001252e-16,
+              "query_count": 3,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 2.220446049250313e-16,
+                "maximum_unconditional_marginal_change": 1.1102230246251565e-16,
+                "maximum_flow_change": 1.1102230246251565e-16,
+                "maximum_coefficient_change": 2.220446049250313e-16,
+                "maximum_systematic_cdf_correction": 1.1102230246251718e-16,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 5,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 1.3877787807814457e-17,
+                "objective_change": 8.881784197001252e-16,
+                "lp_dimensions": {
+                  "variables": 41,
+                  "equalities": 12,
+                  "inequalities": 37
+                }
+              }
+            },
+            {
+              "case": 19,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 4,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 51,
+                  "equalities": 17,
+                  "inequalities": 42
+                }
+              }
+            },
+            {
+              "case": 20,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 1,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 20,
+                  "equalities": 5,
+                  "inequalities": 24
+                }
+              }
+            },
+            {
+              "case": 21,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 3.552713678800501e-15,
+              "query_count": 2,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 35,
+                  "equalities": 8,
+                  "inequalities": 36
+                }
+              }
+            },
+            {
+              "case": 22,
+              "atoms": 4,
+              "coefficient_error": 8.881784197001252e-16,
+              "objective_error": 6.039613253960852e-14,
+              "query_count": 3,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 8.881784197001252e-16,
+                "maximum_unconditional_marginal_change": 4.440892098500626e-16,
+                "maximum_flow_change": 5.551115123125783e-17,
+                "maximum_coefficient_change": 1.7763568394002505e-15,
+                "maximum_systematic_cdf_correction": 1.1102230246251565e-16,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 3,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 5.551115123125783e-16,
+                "objective_change": 1.0658141036401503e-14,
+                "lp_dimensions": {
+                  "variables": 51,
+                  "equalities": 12,
+                  "inequalities": 48
+                }
+              }
+            },
+            {
+              "case": 23,
+              "atoms": 10,
+              "coefficient_error": 2.220446049250313e-16,
+              "objective_error": 8.881784197001252e-16,
+              "query_count": 4,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 2.220446049250313e-16,
+                "maximum_unconditional_marginal_change": 1.1102230246251565e-16,
+                "maximum_flow_change": 1.1102230246251565e-16,
+                "maximum_coefficient_change": 4.440892098500626e-16,
+                "maximum_systematic_cdf_correction": 1.1102230246251565e-16,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 5,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 1.1102230246251565e-16,
+                "objective_change": 1.7763568394002505e-15,
+                "lp_dimensions": {
+                  "variables": 66,
+                  "equalities": 17,
+                  "inequalities": 58
+                }
+              }
+            },
+            {
+              "case": 24,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 0,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 2,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 2,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 6,
+                  "equalities": 5,
+                  "inequalities": 8
+                }
+              }
+            },
+            {
+              "case": 25,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 5.329070518200751e-15,
+              "query_count": 1,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 2,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 2,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 17,
+                  "equalities": 9,
+                  "inequalities": 14
+                }
+              }
+            },
+            {
+              "case": 26,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 2,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 2,
+                "maximum_conditional_projection": 6.661338147750939e-16,
+                "maximum_unconditional_marginal_change": 3.3306690738754696e-16,
+                "maximum_flow_change": 3.3306690738754696e-16,
+                "maximum_coefficient_change": 1.7763568394002505e-15,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 2,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 8.881784197001252e-16,
+                "objective_change": -3.552713678800501e-15,
+                "lp_dimensions": {
+                  "variables": 38,
+                  "equalities": 16,
+                  "inequalities": 29
+                }
+              }
+            },
+            {
+              "case": 27,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 3,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 2,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 2,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 22,
+                  "equalities": 9,
+                  "inequalities": 12
+                }
+              }
+            },
+            {
+              "case": 28,
+              "atoms": 4,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 4,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 2,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 4,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 5.551115123125783e-17,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 30,
+                  "equalities": 11,
+                  "inequalities": 16
+                }
+              }
+            },
+            {
+              "case": 29,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 0,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 2,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 2,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 9,
+                  "equalities": 5,
+                  "inequalities": 14
+                }
+              }
+            },
+            {
+              "case": 30,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 1,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 2,
+                "maximum_conditional_projection": 1.1102230246251565e-16,
+                "maximum_unconditional_marginal_change": 1.1102230246251565e-16,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 4.440892098500626e-16,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 2,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 4.440892098500626e-16,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 21,
+                  "equalities": 9,
+                  "inequalities": 19
+                }
+              }
+            },
+            {
+              "case": 31,
+              "atoms": 6,
+              "coefficient_error": 1.7763568394002505e-15,
+              "objective_error": 1.8474111129762605e-13,
+              "query_count": 2,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 2,
+                "maximum_conditional_projection": 1.1102230246251565e-16,
+                "maximum_unconditional_marginal_change": 1.3877787807814457e-17,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 4.440892098500626e-16,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 5,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 5.551115123125783e-17,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 48,
+                  "equalities": 19,
+                  "inequalities": 35
+                }
+              }
+            },
+            {
+              "case": 32,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 1.7763568394002505e-15,
+              "query_count": 3,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 2,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 2,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 82,
+                  "equalities": 26,
+                  "inequalities": 50
+                }
+              }
+            },
+            {
+              "case": 33,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 4,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 2,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 2,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 4,
+                  "equalities": 3,
+                  "inequalities": 6
+                }
+              }
+            },
+            {
+              "case": 34,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 0,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 2,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 2,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 7,
+                  "equalities": 5,
+                  "inequalities": 10
+                }
+              }
+            },
+            {
+              "case": 35,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 7.105427357601002e-15,
+              "query_count": 1,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 2,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 2.220446049250313e-16,
+                "maximum_flow_change": 2.220446049250313e-16,
+                "maximum_coefficient_change": 1.7763568394002505e-15,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 2,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 2.220446049250313e-16,
+                "objective_change": 7.105427357601002e-15,
+                "lp_dimensions": {
+                  "variables": 21,
+                  "equalities": 9,
+                  "inequalities": 19
+                }
+              }
+            },
+            {
+              "case": 36,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 0,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 3,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 3,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 9,
+                  "equalities": 7,
+                  "inequalities": 12
+                }
+              }
+            },
+            {
+              "case": 37,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 1,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 3,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 3,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 20,
+                  "equalities": 10,
+                  "inequalities": 13
+                }
+              }
+            },
+            {
+              "case": 38,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 2,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 3,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 3,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 28,
+                  "equalities": 13,
+                  "inequalities": 14
+                }
+              }
+            },
+            {
+              "case": 39,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 3,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 3,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 3,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 30,
+                  "equalities": 12,
+                  "inequalities": 13
+                }
+              }
+            },
+            {
+              "case": 40,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 4,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 3,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 3,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 26,
+                  "equalities": 11,
+                  "inequalities": 12
+                }
+              }
+            },
+            {
+              "case": 41,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 0,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 3,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 3,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 9,
+                  "equalities": 7,
+                  "inequalities": 12
+                }
+              }
+            },
+            {
+              "case": 42,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 0,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 4,
+                  "equalities": 3,
+                  "inequalities": 6
+                }
+              }
+            },
+            {
+              "case": 43,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 3,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 1,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 2,
+                  "equalities": 2,
+                  "inequalities": 4
+                }
+              }
+            },
+            {
+              "case": 44,
+              "atoms": 2,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 2,
+              "diagnostics": {
+                "preprocessed_blocks": 4,
+                "active_blocks": 1,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 2,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 7,
+                  "equalities": 2,
+                  "inequalities": 4
+                }
+              }
+            },
+            {
+              "case": 45,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 0,
+              "diagnostics": {
+                "preprocessed_blocks": 3,
+                "active_blocks": 0,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 0,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic."
+              }
+            },
+            {
+              "case": 46,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 2,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 2,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 2,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+                "lp_primal_feasibility": 0.0,
+                "objective_change": 0.0,
+                "lp_dimensions": {
+                  "variables": 24,
+                  "equalities": 10,
+                  "inequalities": 14
+                }
+              }
+            },
+            {
+              "case": 47,
+              "atoms": 1,
+              "coefficient_error": 0.0,
+              "objective_error": 0.0,
+              "query_count": 0,
+              "diagnostics": {
+                "preprocessed_blocks": 0,
+                "active_blocks": 0,
+                "maximum_conditional_projection": 0.0,
+                "maximum_unconditional_marginal_change": 0.0,
+                "maximum_flow_change": 0.0,
+                "maximum_coefficient_change": 0.0,
+                "maximum_systematic_cdf_correction": 0.0,
+                "hypersimplex_sum_error": 0.0,
+                "positive_flow_edges": 0,
+                "scope": "Floating-point projection and flow normalization; not interval arithmetic."
+              }
+            }
+          ],
+          "large_case": {
+            "m": 120,
+            "budget": 6,
+            "value": 6.6148767605634315,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 7.216449660063518e-15,
+              "maximum_unconditional_marginal_change": 6.439293542825908e-15,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 4.529709940470639e-14,
+              "maximum_systematic_cdf_correction": 8.215650382226158e-15,
+              "hypersimplex_sum_error": 1.4210854715202004e-14,
+              "positive_flow_edges": 3,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 3.497202527569243e-13,
+              "objective_change": 4.529709940470639e-14,
+              "lp_dimensions": {
+                "variables": 3221,
+                "equalities": 30,
+                "inequalities": 3312
+              }
+            }
+          },
+          "source_hashes": {
+            "compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d",
+            "compact_policy.py": "608af8ac008d91a5cbfc16560b532e42e5c208f1edd384091e8e5eba5503d781",
+            "verify_compact_policy.py": "b49608ed0a48a34ee838417cb231c2e7185ee18465cafb9e8baa1aa5be7af2ab",
+            "policy_protocol.txt": "9da3195da0e6e23be520222a66efe238a0dadb1d8130de71d708cc5ef8be1a84"
+          },
+          "source_value_report_sha256": "cdf3cfada40a5db97584682daa2d3551b05e7d9a81d8cf40f3f76ef1761264d0",
+          "seconds": 2.8752479999966454,
+          "scope": "Exact mixture atom reconstruction on small cases; ordinary floating-point LP tolerance. No empirical outcomes changed."
+        },
+        "noaa": {
+          "status": "passed",
+          "script_sha256": "7c6660bfde7126a885d2fc390be49583f61531e62dba06f06fc547b226c7e225",
+          "source_hashes": {
+            "observation_panel.json": "36ee94939e45cbb3795c297bbce698936e0ef6ce28f6ae3d1565c73c09b0e532",
+            "forecast_panel.json": "067fb4ad74fbd11bb09bf49e5165f2af573cc06f42eee21062137c0a4d057a9c",
+            "panel_result.json": "f805aa803f629c0b52d7cbbf3fa2994f11e48fde7b8053d92d8b03124f20fb08"
+          },
+          "days": 52,
+          "forecast_member_days": 260,
+          "decoded_message_records": 2080,
+          "raw_and_preprocessed_direct_vertex_checks": 832,
+          "natural_cases": 9,
+          "complete_zero_controls": 43,
+          "preprocessed_natural_certificates": 2,
+          "packing_repaired_bin_pairs": 28,
+          "scope": "Distributed metadata/excerpt arithmetic only; no freshGRIBdecode, fullsource re-download or global publicarchive absence proof."
+        },
+        "tie_policies": {
+          "status": "passed",
+          "completed_utc": "2026-10-11T01:07:59.529094+00:00",
+          "script_sha256": "afa500341e187af339bdf78562ae99c67edefac83e6d8bf6f2f7831bf53b815e",
+          "source_hashes": {
+            "work/randomized_tie_review/verify_ties.py": "afa500341e187af339bdf78562ae99c67edefac83e6d8bf6f2f7831bf53b815e",
+            "work/randomized_tie_review/protocol.txt": "e5747f0f18b7b07bd908377bd5e094545cf41f2c4c6178b035005cd26c85bdfa",
+            "work/randomized_tie_review/provenance_wording_amendment.txt": "382d1404bf43bf37237e5e0b53ab6fb525f48c0c947fea00bb98386d1dd3c79b",
+            "work/randomized_tie_review/audit_ties.py": "86e66ba47cd14a7b45fb0aa281d4a372fc5002cc2a28cf567d4d799475fff874",
+            "work/randomized_tie_review/theory_review.txt": "5c5ddd134a9b1ab04063e9f78667b5d8d02fcae5eb68af9fc5a5a20407ea639e",
+            "work/randomized_tie_review/policies.jsonl": "0d80ab7548ac0a37b08088d02b77ff80d1e992adb2ecd5deefe4f72b7e8036ae",
+            "work/randomized_tie_review/selection_complete.json": "04a1cb3ee2106569c1dcc40628b052ba4b326fa73eb2f85c7511ec1ab4daa7ae",
+            "work/randomized_tie_review/result.json": "4b3409e6255725db5dc4119f656e73c580ca671b7ac481971c42e12c7f139afe",
+            "work/randomized_tie_review/cases.csv": "46f409c0c015dffa45490b1c43c1a3291ad367d0842bd965bbcf23fcc66c7305",
+            "work/randomized_tie_review/meters.csv": "1c7eccb57aa8a3fc02874c26a20d4e92c87e548bdc182cd1bd066efb7193e95e",
+            "work/randomized_tie_review/cohorts.csv": "49ac13ff5ae85dc7ee47776325175e77ddd97dc40dda0e19099bb51cde498e7f",
+            "work/randomized_tie_review/support.csv": "f73364707386d4c8bdb3b531c4ddd98104491aa9dbbe7b1d8ce3fd1518d1a813",
+            "work/new_direction_randomized/lp_solutions.jsonl": "ec5a31615ccc2e74f9c91bcd065eae392f1a4729d56d327a6a47eb4ab5ef2226",
+            "work/new_direction_randomized/cases.csv": "347b95b780a11d5c35882cf9d206bec642bf26ab7b10321f8ff92b881b71ecef",
+            "outputs/review_frozen_forecasts.csv": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0"
+          },
+          "original_cases_retained": 20736,
+          "original_columns_reconciled": 28,
+          "zero_width_cases_unchanged": 19662,
+          "finite_game_matrices_reconstructed": 1074,
+          "secondary_optimality_checks": 2148,
+          "positive_support_checks": 4693,
+          "meter_rows_rebuilt": 31,
+          "cohort_rows_rebuilt": 2,
+          "counts": {
+            "dominance": {
+              "realized_improved_vs_original": 0,
+              "realized_worsened_vs_original": 0,
+              "realized_tied_vs_original": 1074,
+              "secondary_strictly_improved": 0
+            },
+            "reference": {
+              "realized_improved_vs_original": 0,
+              "realized_worsened_vs_original": 0,
+              "realized_tied_vs_original": 1074,
+              "secondary_strictly_improved": 0
+            }
+          },
+          "maxima": {
+            "secondary_optimum_error": 1.7610912728116546e-13,
+            "primary_lower_bound_gap": 1.956212969389526e-12,
+            "dominance_excess": 5.7495674887775294e-12,
+            "saved_expected_coefficient_error": 1.1102230246251565e-16,
+            "endpoint_error_scaled": 8.441774171199364e-15,
+            "secondary_lp_primal_violation": 5.7495674887775294e-12,
+            "secondary_lp_dual_violation": 1.8189894035458565e-12,
+            "secondary_lp_duality_gap": 1.4259426972529354e-12
+          },
+          "exact_fraction_examples": [
+            {
+              "coefficients": [
+                0,
+                0,
+                2,
+                3
+              ],
+              "budget": 1,
+              "total": 1,
+              "dominated_coefficients": [
+                "2",
+                "2",
+                "2",
+                "2"
+              ],
+              "dominating_coefficients": [
+                "2",
+                "2",
+                "2",
+                "0"
+              ],
+              "dual": [
+                "1/3",
+                "1/3",
+                "1/3",
+                "0"
+              ],
+              "minimax_value": "2",
+              "all_at_most_budget_batches": 5,
+              "exact_fraction_check": "passed"
+            },
+            {
+              "coefficients": [
+                0,
+                2,
+                4,
+                12
+              ],
+              "budget": 2,
+              "total": 1,
+              "dominated_coefficients": [
+                "8/5",
+                "8/5",
+                "8/5",
+                "8/5"
+              ],
+              "dominating_coefficients": [
+                "8/5",
+                "8/5",
+                "8/5",
+                "0"
+              ],
+              "dual": [
+                "1/5",
+                "3/5",
+                "1/5",
+                "0"
+              ],
+              "minimax_value": "8/5",
+              "all_at_most_budget_batches": 11,
+              "exact_fraction_check": "passed"
+            }
+          ],
+          "separated_pair_contrast_regime": {
+            "energy": "3",
+            "delta": "2",
+            "separation": "5",
+            "minimax_lower_bound": "3",
+            "rows": [
+              {
+                "first_pair_mass_share": "0",
+                "deterministic_width": "0",
+                "randomized_expected_width": "3",
+                "randomized_comparison": "worse"
+              },
+              {
+                "first_pair_mass_share": "1/4",
+                "deterministic_width": "3/2",
+                "randomized_expected_width": "3",
+                "randomized_comparison": "worse"
+              },
+              {
+                "first_pair_mass_share": "1/2",
+                "deterministic_width": "3",
+                "randomized_expected_width": "3",
+                "randomized_comparison": "tie"
+              },
+              {
+                "first_pair_mass_share": "3/4",
+                "deterministic_width": "9/2",
+                "randomized_expected_width": "3",
+                "randomized_comparison": "better"
+              },
+              {
+                "first_pair_mass_share": "1",
+                "deterministic_width": "6",
+                "randomized_expected_width": "3",
+                "randomized_comparison": "better"
+              }
+            ],
+            "exact_fraction_check": "passed"
+          },
+          "selection_scope": {
+            "static_source_order_checked": true,
+            "policy_hash_before_evaluation_matches": true,
+            "selection_functions_read_reference_data": false,
+            "target_file_bytes_hashed_before_selection": true,
+            "limitation": "The source and marker establish the archived pipeline ordering; hashes/timestamps are not independent preregistration or evidence that authors had never inspected these historical targets."
+          },
+          "scope": "All 1,074 positive-width cases, both secondary policies and every saved positive support. Secondary LPs independently solved using product-vertex constraints and HiGHS IPM; no import of audit_ties, no forecast fit, no original full-study rerun. Frozen zero-width cases and all case/meter/cohort aggregates reconciled. Ordinary floating-point tolerances, not outward-rounded formal certificates.",
+          "seconds": 51.325607399994624
+        },
+        "randomized_holdout": {
+          "status": "PASS",
+          "check_kind": "Independent arithmetic and saved-dual verification; no recovery implementation or optimizer imported",
+          "consumers": 30,
+          "meter_days": 3210,
+          "cases": 19260,
+          "positive_cases": 899,
+          "positive_probability_batches": 3958,
+          "maximum_actual_width_discrepancy_scaled": 2.2733204207980862e-13,
+          "source_hashes": {
+            "outputs/study_holdout_consumers_predictions.csv": "6af5c1101850724b2067c14f3bc8abf891b1d12bd04fa3d4a5c24dbbbeb4c9d8",
+            "outputs/study_recovery.py": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241",
+            "outputs/study_archive_access.py": "de88aaf109b9534402c913789b81f992cd312dc2d17902e953b715198e2ae28b",
+            "outputs/study_period_archive.py": "258e29c41b18c11bf9f9a15aa9e7c9344d27f0aaa564d6f0d4723d91ce7abdf9",
+            "outputs/run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+            "work/new_direction_randomized/randomized_recovery_screen.py": "785629e8ccccb8503907f221d30ee382974af5d4681461d4ce9fbdf45b047d6a",
+            "work/randomized_tie_review/audit_ties.py": "86e66ba47cd14a7b45fb0aa281d4a372fc5002cc2a28cf567d4d799475fff874",
+            "work/randomized_recovery_root/compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d"
+          },
+          "protocol_sha256": "9b8352fc4a5dcdeb5bae50055e056fbd587f954b163c1d1d38ae768ebfde2fea",
+          "policy_sha256": "80f5210e70c7f4d8d6516f635ea8f227bf728996ecc377b4eb6cde04fac7c6a5",
+          "result_sha256": "62b9503e7d65fa813f634bff2aad5a7adb55deb09168f402c8c2e5d8e60282b7",
+          "checker_sha256": "152b6ab0f92d43e50777d1d4645825d3b430d5899919cff5cd24e3586ea431c1",
+          "checked_utc": "2026-10-11T01:08:48.126814+00:00"
+        },
+        "scaling": {
+          "status": "PASS",
+          "check_kind": "independent archival consistency and checksum checks; no optimization rerun",
+          "compact_cases": 28,
+          "finite_comparisons": 12,
+          "predeclared_skips": 16,
+          "sample_budget_checks": 560,
+          "source_hashes": {
+            "protocol.txt": "3040642135f8c3e05e529766d17200230aa1d175b1d09a456a74aa0ec48e2211",
+            "instances.json": "b296dfb87fb2c2c52cb5a54aa967a3a01f517b5ca7e4bb598fd258b542830a16",
+            "benchmark.py": "1ec3ea06693ff022dabbd2087a6daa100d2e7a81d86e9262dce00dbbc081c62e",
+            "results.json": "80a936abea60d54df0d6e9d49f5e17c13baa5567d6d8217abc5ff55e8a1a29f1",
+            "results.csv": "5380b8ea2990a9aa54ec46497ac73496672cbca1066d3e8f7ca39e120c18a5b5",
+            "summary.json": "d6ec6d5f476dc0f623d0986739bbe09e1a2702f6540bd36e00115e25571f777f",
+            "scaling_fragment.tex": "1a56c76047ad5f8301b48a356c217a42c3e15112b10b65c3eda3f3c18b557a1f",
+            "verify_scaling.py": "fc93c8cde4fa02ec3e406b2ad077b4615c604826c87e2efc2deaf839fd50fade"
+          },
+          "api_hashes": {
+            "compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d",
+            "compact_policy.py": "608af8ac008d91a5cbfc16560b532e42e5c208f1edd384091e8e5eba5503d781"
+          },
+          "provenance_sha256": "84dce3506ccf938dc274572cf6fa613327af3389c474f24e42711b77d7065ce3"
+        }
+      }
+    },
+    "original_manuscript_sha256": "cd35b87342ad37ddfff8a2d4b541154ee02ae2862a3d739015487cddb129dd63",
+    "reconstructed_manuscript_sha256": "cd35b87342ad37ddfff8a2d4b541154ee02ae2862a3d739015487cddb129dd63",
+    "exact_manuscript_bytes": true,
+    "script_sha256": "929bd27444215db48ca79fec00b39ede5e4d841448e6317a885a277f380c3d93",
+    "stage": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\data_supplement_verify_20261011T010100189792Z\\work\\review_revision_reproduction_20261011T010107231336Z",
+    "scope": "Default verifies distributed period traces/interval aggregates, all randomized public cases, compact policy compilation, NOAA decoded excerpts, independent tie/holdout-policy replay and archived scaling consistency, then rebuilds TeX. Extension checks use separate copies preserving archived reports. It is not fresh NOAA GRIB/raw-source decoding or fresh scaling measurement. --rerun-scaling additionally repeats the frozen scaling measurements in isolation. --raw additionally restores original energy targets without refitting and runs both corrected energy analyses. --reconstruct-only stops after exact raw-input reconstruction. No PDF compilation or journal submission."
+  },
+  "period_independent_audit": {
+    "status": "passed",
+    "completed_utc": "2026-10-11T01:06:10.379961+00:00",
+    "wall_seconds": 296.69411689999106,
+    "script_sha256": "3328f5c8a7bc24f7da722ec59d1e0662affda8325d75897eeae422e6c37648e0",
+    "source_hashes": {
+      "frozen_forecasts.csv": "ac6e2ce45745d92c5c51060fd58b768ac5711c633ae37a6576afae3797d5a2c0",
+      "frozen_forecasts.json": "5a2a2ca09b21eeece898a6f9bdf4e420ef19cc3626e3513c2606790e7b3e7a61",
+      "study_period_archive.json": "acf73343b06dfc1ad00ca30f500cb86bca2d793831e1cf523a0a408ace30c69c",
+      "study_period_archive.py": "258e29c41b18c11bf9f9a15aa9e7c9344d27f0aaa564d6f0d4723d91ce7abdf9",
+      "study_period_archive_cohorts.csv": "fba5874323fb4e1d7457bb6dca291735878d62358ffd01f129e99383cd6d89cf",
+      "study_period_archive_manifest.json": "d565d3030fed01f8295b481a3cc2e129f5222d1b9a0fbf889c78d984a89426d5",
+      "study_period_archive_mask_audit.json": "1c47b02dd3e75edc436316f6a7ef48a8ce25adf034b624cbd82734184cd3bf2c",
+      "study_period_archive_matched.csv": "e19156072bc7d648d0727d46fc82c3b0a334590bb1c98b323a162f81433eb65b",
+      "study_period_archive_pairs.csv": "b7f5044f07c9538cb9d2a4352d2365ca40846a06e5502da29d1de943b0f564b3",
+      "study_period_archive_public_aggregates.csv.gz": "99bd858436886ac690821d383f7bb3a89ccae27afa65538e244ff76cde24b790",
+      "study_period_archive_public_cases.csv": "9e6247beb22ef30878cf533c0ab16a717204ac28050a26970656ffe208af26e9",
+      "study_period_archive_public_links.csv.gz": "e86e579ddc1adcd00b6a34caa6f709152d70eb617010618c9f35762dc6507ab8",
+      "study_period_archive_public_manifest.json": "49968ee72702320b3d9413e45e98fa358b29bbe5d988fd0609fdd0d60d7c702e",
+      "study_period_archive_public_sources.csv": "ba23d819601e5510a7f0c3078c6e9e4acc96425bf874dcf2adccd5f9b817f29c",
+      "study_period_archive_public_states.csv.gz": "4a8ee161c7c9db8dbecf388b1a48ba2ae9de332139c612264dc4f8a07d446d2c",
+      "study_period_archive_scenarios.csv": "9d5bfa55fb9f7870dc32cdd2fd6b9391c8e35c48041c0a1a42720fd8b737f2fd",
+      "study_period_comparisons.csv": "c58640d34b1ca5fad39604b18c3b18f2990182afb11d3268013c896509381854",
+      "study_summary.json": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196"
+    },
+    "verification_mode": "public_UCI_detailed_and_all_cohort_summary_consistency",
+    "counts": {
+      "uci_source_copy_value_hashes": 78648,
+      "source_copy_pointers": 78648,
+      "daily_states": 422447,
+      "aggregate_snapshots": 20736,
+      "meter_days": 3456,
+      "distinct_daily_masks": 93312,
+      "independent_RNG_masks": 62208,
+      "daily_state_links": 1119744,
+      "daily_pair_interval_nonwidening": 6718464,
+      "fully_reconstructed_pair_intervals": 2016,
+      "sample_truth_enclosures": 3888,
+      "numerical_sample_links": 648,
+      "independent_LP_endpoint_witnesses": 3744,
+      "copy_reconstructed_oracle_masks_with_frozen_corrections": 29493,
+      "whole_period_truth_enclosures": 120528,
+      "whole_period_rows_reconstructed": 200880,
+      "scenarios_summary_rows": 720,
+      "cohorts_summary_rows": 40,
+      "pairs_summary_rows": 240,
+      "matched_coverage_rows": 288,
+      "all_cohort_cross_summary_rows": 120,
+      "all_cohort_matched_count_consistency_rows": 432,
+      "legacy_interval_rows_reconciled": 60264
+    },
+    "maximum_absolute_discrepancies": {
+      "fully_observed_width": 0.0,
+      "fully_observed_individual_lower": 0.0,
+      "fully_observed_individual_upper": 0.0,
+      "fully_observed_complete_case": 0.0,
+      "fully_observed_imputation": 0.0,
+      "declared_total_lower": 0.0,
+      "declared_total_upper": 0.0,
+      "sample_retained_totals": 0.0,
+      "sample_determined_truth": 3.552713678800501e-14,
+      "sample_complete_case_numerator": 1.3642420526593924e-12,
+      "sample_fully_reconstructed_MSE": 5.684341886080802e-14,
+      "sample_residual_lower": 0.0,
+      "sample_residual_upper": 0.0,
+      "sample_witness_direct_mse": 5.5138116294983774e-12,
+      "sample_LP_endpoint": 2.2737367544323206e-13,
+      "period_scale": 0.0,
+      "period_endpoints_and_points": 0.0,
+      "period_normalized_width": 0.0,
+      "legacy_daily_CC_mean": 0.0,
+      "summary_scenarios:comparisons": 0.0,
+      "summary_scenarios:decisions": 0.0,
+      "summary_scenarios:unresolved": 0.0,
+      "summary_scenarios:wrong_decisions": 0.0,
+      "summary_scenarios:mean_normalized_width": 3.552713678800501e-15,
+      "summary_scenarios:coverage": 1.1102230246251565e-16,
+      "summary_scenarios:error_among_decisions": 9.71445146547012e-17,
+      "summary_cohorts:comparisons": 0.0,
+      "summary_cohorts:decisions": 0.0,
+      "summary_cohorts:unresolved": 0.0,
+      "summary_cohorts:wrong_decisions": 0.0,
+      "summary_cohorts:mean_normalized_width": 8.881784197001252e-16,
+      "summary_cohorts:coverage": 9.367506770274758e-17,
+      "summary_cohorts:error_among_decisions": 9.71445146547012e-17,
+      "summary_pairs:comparisons": 0.0,
+      "summary_pairs:decisions": 0.0,
+      "summary_pairs:unresolved": 0.0,
+      "summary_pairs:wrong_decisions": 0.0,
+      "summary_pairs:mean_normalized_width": 8.881784197001252e-16,
+      "summary_pairs:coverage": 1.1102230246251565e-16,
+      "summary_pairs:error_among_decisions": 9.71445146547012e-17,
+      "matched_coverage:comparisons": 0.0,
+      "matched_coverage:paired_decisions": 0.0,
+      "matched_coverage:paired_wrong_decisions": 0.0,
+      "matched_coverage:selected_decisions": 0.0,
+      "matched_coverage:available_point_decisions": 0.0,
+      "matched_coverage:wrong_decisions": 0.0,
+      "matched_coverage:selected_with_matching_certificate": 0.0,
+      "matched_coverage:selected_paired_unresolved": 0.0,
+      "matched_coverage:selected_with_opposite_certificate": 0.0,
+      "matched_coverage:minimum_selected_normalized_margin": 9.974659986866641e-17,
+      "all_cohort_cross_summary_scenarios:comparisons": 0.0,
+      "all_cohort_cross_summary_scenarios:decisions": 0.0,
+      "all_cohort_cross_summary_scenarios:unresolved": 0.0,
+      "all_cohort_cross_summary_scenarios:wrong_decisions": 0.0,
+      "all_cohort_cross_summary_scenarios:mean_normalized_width": 8.881784197001252e-16,
+      "all_cohort_cross_summary_scenarios:coverage": 9.367506770274758e-17,
+      "all_cohort_cross_summary_scenarios:error_among_decisions": 9.71445146547012e-17,
+      "all_cohort_cross_summary_pairs:comparisons": 0.0,
+      "all_cohort_cross_summary_pairs:decisions": 0.0,
+      "all_cohort_cross_summary_pairs:unresolved": 0.0,
+      "all_cohort_cross_summary_pairs:wrong_decisions": 0.0,
+      "all_cohort_cross_summary_pairs:mean_normalized_width": 8.881784197001252e-16,
+      "all_cohort_cross_summary_pairs:coverage": 9.367506770274758e-17,
+      "all_cohort_cross_summary_pairs:error_among_decisions": 9.71445146547012e-17,
+      "legacy_reference_gap": 1.3642420526593924e-12,
+      "legacy_paired_bounds_lower": 4.547473508864641e-12,
+      "legacy_paired_bounds_upper": 5.4569682106375694e-12,
+      "legacy_individual_bounds_lower": 1.7462298274040222e-10,
+      "legacy_individual_bounds_upper": 2.3283064365386963e-10,
+      "legacy_uniform_lower": 6.821210263296962e-13,
+      "legacy_uniform_upper": 6.821210263296962e-13,
+      "legacy_seasonal_profile_lower": 9.094947017729282e-13,
+      "legacy_seasonal_profile_upper": 9.094947017729282e-13
+    },
+    "legacy_reconciliation": [
+      {
+        "method": "paired_bounds",
+        "rows": 30132,
+        "changed_decisions": 0
+      },
+      {
+        "method": "individual_bounds",
+        "rows": 30132,
+        "changed_decisions": 0
+      },
+      {
+        "method": "complete_case",
+        "rows": 10044,
+        "changed_decisions": 43
+      },
+      {
+        "method": "uniform",
+        "rows": 10044,
+        "changed_decisions": 0
+      },
+      {
+        "method": "seasonal_profile",
+        "rows": 10044,
+        "changed_decisions": 0
+      },
+      {
+        "method": "historical_donor",
+        "rows": 10044,
+        "changed_decisions": 8
+      }
+    ],
+    "numerical_sample_design": {
+      "meters": "Household and lexically first/last original Portugal meters",
+      "days": [
+        [
+          "household",
+          "household_1",
+          "2010-01-05"
+        ],
+        [
+          "household",
+          "household_1",
+          "2010-11-24"
+        ],
+        [
+          "portugal",
+          "MT_001",
+          "2014-01-01"
+        ],
+        [
+          "portugal",
+          "MT_001",
+          "2014-10-24"
+        ],
+        [
+          "portugal",
+          "MT_033",
+          "2014-01-01"
+        ],
+        [
+          "portugal",
+          "MT_033",
+          "2014-10-24"
+        ]
+      ],
+      "conditions": "First seed1103, every gap/mask/block/tolerance and both regimes, all six pairs",
+      "target_source": "Bundled UCI daily-persistence forecasts at t+24; complete target reconstruction is possible on each selected day"
+    },
+    "scope": {
+      "detailed_period_results": "Reconstructed from archived daily scalar contributions, independently recomputed denominators/signs/normalizations/counts and corresponding aggregation/matched-selection tables: 31UCI meters only",
+      "all_cohort_aggregates": "Scenario and named-pair summaries independently reconcile to cohort summaries; matched count constraints checked for all cohorts",
+      "direct_reconstruction": "Timestamp/source-row eligibility checked for UCI only; UCI copy values hash-checked; BLEM values remain omitted",
+      "numerical_endpoints": "Independent SciPy linear programs, feasible primal witnesses and direct paired MSE on fixed UCI samples",
+      "mask_checks": "Every contiguous/scattered mask independently regenerated; all other masks checked for cardinality and consistency across information/bound settings. High-demand ranks additionally reconstructed on fully copy-covered UCI days, using four explicit original-source rounding corrections from the separate mask audit.",
+      "not_rerun": [
+        "Model fitting and training-data eligibility",
+        "Every daily numerical bound from raw observations",
+        "Boundary-day raw-target numerical validation",
+        "Profile/donor reconstruction from raw training observations",
+        "BLEM target values and persistence-copy value hashes",
+        "Paid-query choices: this analysis is zero-query; separate daily recovery has its own verifier",
+        "BLEM daily scalar traces and method-specific period cases are deliberately omitted; --raw regeneration is needed for full34 scalar reconstruction"
+      ]
+    }
+  },
+  "interval_trace_audit": {
+    "status": "passed",
+    "completed_utc": "2026-10-11T01:06:14.097449+00:00",
+    "aggregation_counts": {
+      "pair_seed_rows": 14688,
+      "meter_rows": 816,
+      "cohort_rows": 72,
+      "policy_difference_rows": 18,
+      "dependent_policy_budget_evaluations": 1610928
+    },
+    "replayed_integration_fixtures": {
+      "independent_lp_endpoint_calls": 192,
+      "max_lp_absolute_error": 1.3322676295501878e-15,
+      "exact_singleton_closed": true,
+      "uncertain_singleton_retained": true,
+      "zero_upper_closed": true,
+      "query_interface_excludes_hidden_truth": true
+    },
+    "maximum_absolute_discrepancies": {
+      "training_normalization": 0.0,
+      "wrong_decisions": 0.0,
+      "enclosed_truth": 0.0,
+      "original_missing_sum": 0.0,
+      "pair_trials": 0.0,
+      "decisions": 0.0,
+      "initial_width_sum": 5.820766091346741e-11,
+      "actual_width_sum": 2.3283064365386963e-10,
+      "worst_width_sum": 4.656612873077393e-10,
+      "queries_sum": 0.0,
+      "free_copy_sum": 0.0,
+      "deduced_sum": 0.0,
+      "certification": 0.0,
+      "mean_queries": 0.0,
+      "free_copy_fraction": 0.0,
+      "deduced_fraction": 0.0,
+      "mean_initial_width": 2.842170943040401e-14,
+      "mean_actual_width": 1.1368683772161603e-13,
+      "mean_worst_width": 2.2737367544323206e-13,
+      "normalized_initial_width": 2.7755575615628914e-17,
+      "normalized_actual_width": 1.3877787807814457e-17,
+      "normalized_worst_width": 2.7755575615628914e-17,
+      "actual_width_fraction": 2.220446049250313e-16,
+      "worst_width_fraction": 1.1102230246251565e-16,
+      "cohort_certification": 0.0,
+      "cohort_mean_queries": 0.0,
+      "cohort_free_copy_fraction": 0.0,
+      "cohort_deduced_fraction": 0.0,
+      "cohort_mean_initial_width": 0.0,
+      "cohort_mean_actual_width": 2.710505431213761e-20,
+      "cohort_mean_worst_width": 2.842170943040401e-14,
+      "cohort_normalized_initial_width": 4.336808689942018e-19,
+      "cohort_normalized_actual_width": 4.336808689942018e-19,
+      "cohort_normalized_worst_width": 4.336808689942018e-19,
+      "cohort_actual_width_fraction": 5.551115123125783e-17,
+      "cohort_worst_width_fraction": 2.7755575615628914e-17,
+      "cohort_pair_trials": 0.0,
+      "cohort_decisions": 0.0,
+      "cohort_wrong_decisions": 0.0,
+      "cohort_enclosed_truth": 0.0,
+      "cohort_pooled_certification": 0.0,
+      "exact_minus_greedy_certification_pp": 0.0,
+      "exact_minus_greedy_normalized_actual_width": 2.168404344971009e-19,
+      "exact_minus_greedy_normalized_worst_width": 2.168404344971009e-19,
+      "exact_mean_queries": 0.0,
+      "greedy_mean_queries": 0.0,
+      "dependent_evaluations": 0.0,
+      "fixture_independent_lp_endpoint_calls": 0.0,
+      "fixture_max_lp_absolute_error": 0.0
+    },
+    "source_hashes": {
+      "study_interval_trace_recovery.json": "06929ab4b9ae4bb7e467c3075981b03bc08c1d2e1b66c2a5c8c57a3ec90518d5",
+      "study_interval_trace_recovery.csv": "f356f014313bac9703c709df1bc8dfe3f851c240d908d28c136b7b12e537c77a",
+      "study_interval_trace_recovery_pair_seed.csv": "81430265ebc0a2b1d9f4344df0d3ed8a392d74728ec3cd6cf8f0fd1d9b218cf1",
+      "study_interval_trace_recovery_cohorts.csv": "779e953ca0aec09b69b6876c16fd32385376163d749eeb0cb8a03d106ccd34e3",
+      "study_interval_trace_recovery_gaps.csv": "f046f6d4012a762fd1128b9fbf6f7cbe0e99ff7acef09b4dc41af871e6f293f2",
+      "study_summary.json": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196",
+      "study_recovery.py": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241",
+      "study_archive_access.py": "de88aaf109b9534402c913789b81f992cd312dc2d17902e953b715198e2ae28b",
+      "study_archive_access_cohorts.csv": "c7f2f0be79ec2f3a697df71c9db194a4a6664586a30cd9d039f58135e4a15f63",
+      "interval_total_recovery.py": "ddda244c9a3bafbcf031061b1a35e9c0ea31ca007dbc754138a5fca50c2b8009",
+      "energy_rank_bounds.py": "2b555e7fbb676f311b87c38a1cfc8bf81b34743e35a7c43b5ff08d759596f467",
+      "run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+      "study_interval_trace_recovery.py": "539c10c553a06a3ff5c32d6768fe3b35af099a399bb51f86e9f5a249c0e01122"
+    },
+    "unavailable_source_files": [
+      "study_predictions.csv"
+    ],
+    "protocol_sha256": "1bd56cfe1dc3534c89b612cedb8e49008262dc6af6e6bc73041bc541aa143cec",
+    "script_sha256": "8a2b5ed6125073f1ff989b1d1018eb3007869ecd818e0caab9254e4ecd6f7f04",
+    "existing_artifacts_unchanged": true,
+    "scope": "Independent stdlib reconstruction of pair/seed aggregates into meter, cohort and exact-versus-greedy tables; report JSON reconciled to CSVs. The 192 LP endpoint fixtures are rerun by importing the original helper, explicitly not an independent fixture implementation.",
+    "limitations": "No raw-trace re-execution, no retraining, no independent recovery-solver implementation, and no independent per-case certificate or query verification. Missing mixed target archive is permitted for supplement-only reconstruction. Separate editorial review examined closure, greedy selection and witness functions. Constructed uncertainty and dependent historical cases do not measure calibration, costs or production latency."
+  },
+  "randomized_and_natural_extension_checks": {
+    "status": "passed",
+    "stage": "work\\extension_verification",
+    "fresh_scaling_measurements_requested": false,
+    "archived_generation_inputs_unchanged": true,
+    "steps": [
+      {
+        "script": "work/verify_randomized_revision.py",
+        "wall_seconds": 44.53486880000855,
+        "log": "work\\reproduction_verify_randomized_revision.log",
+        "returncode": 0,
+        "verification_workspace": "work\\extension_verification"
+      },
+      {
+        "script": "work/randomized_recovery_root/verify_compact_policy.py",
+        "wall_seconds": 4.438627199997427,
+        "log": "work\\reproduction_verify_compact_policy.log",
+        "returncode": 0,
+        "verification_workspace": "work\\extension_verification"
+      },
+      {
+        "script": "work/new_direction_practical/noaa/reproduce_extracted_panel.py",
+        "wall_seconds": 0.21010009999736212,
+        "log": "work\\reproduction_reproduce_extracted_panel.log",
+        "returncode": 0,
+        "verification_workspace": "work\\extension_verification"
+      },
+      {
+        "script": "work/randomized_tie_review/verify_ties.py",
+        "wall_seconds": 53.57095199999458,
+        "log": "work\\reproduction_verify_ties.log",
+        "returncode": 0,
+        "verification_workspace": "work\\extension_verification"
+      },
+      {
+        "script": "work/randomized_holdout_review/verify_holdout.py",
+        "wall_seconds": 48.510844500007806,
+        "log": "work\\reproduction_verify_holdout.log",
+        "returncode": 0,
+        "verification_workspace": "work\\extension_verification"
+      },
+      {
+        "script": "work/randomized_scaling_review/verify_scaling.py",
+        "wall_seconds": 0.2551487000018824,
+        "log": "work\\reproduction_verify_scaling.log",
+        "returncode": 0,
+        "verification_workspace": "work\\extension_verification"
+      }
+    ],
+    "reports": {
+      "randomized": {
+        "status": "passed",
+        "completed_utc": "2026-10-11T01:07:01.366895+00:00",
+        "cases": 20736,
+        "compact_versus_finite_game_checks": 1074,
+        "every_positive_support_checked": 2341,
+        "permitted_copy_checks": 19662,
+        "cohort_aggregate_checks": 38,
+        "max_normalized_compact_error": 1.3311244057439254e-13,
+        "saved_mixture_primal_dual_linkage_checks": 1074,
+        "max_saved_mixture_primal_violation": 2.220446049250313e-16,
+        "max_saved_mixture_dual_violation": 9.059419880941277e-14,
+        "max_saved_mixture_primal_dual_gap": 1.0733081090563701e-13,
+        "wall_seconds": 41.878613900000346,
+        "source_hashes": {
+          "work/verify_randomized_revision.py": "c3729ef4627329caedf14a796414d0ab01974efd87e70b2f29e6ccabe3b6a9cb",
+          "outputs/review_frozen_forecasts.csv": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0",
+          "work/new_direction_randomized/cases.csv": "347b95b780a11d5c35882cf9d206bec642bf26ab7b10321f8ff92b881b71ecef",
+          "work/new_direction_randomized/support.csv": "29f518080d8a3c0245efde0aa8b2757e6fb8b5e86d0cf3dda7901a6db00dfd50",
+          "work/new_direction_randomized/lp_solutions.jsonl": "ec5a31615ccc2e74f9c91bcd065eae392f1a4729d56d327a6a47eb4ab5ef2226",
+          "work/new_direction_randomized/result.json": "dbc6ea39ee01ae6a7aef6e19d49d3aad098d3a557389fa73a15cd4ba21f77338",
+          "work/randomized_recovery_root/compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d"
+        },
+        "scope": "Distributed public UCI inputs; no fit, raw download, or independent optimization of randomized adaptive policies. Every case and positive support checked, not a sample. Saved support probabilities and queries are linked bidirectionally to the finite-game LP; its matrix, worst expected mixture objective, primal and dual feasibility, and gap are reconstructed independently."
+      },
+      "compact_policy": {
+        "status": "passed",
+        "cases": 48,
+        "seeded_draws": 5800,
+        "invalid_inputs_rejected": 8,
+        "max_atom_coefficient_error": 1.7763568394002505e-15,
+        "max_enumerated_objective_error": 1.8474111129762605e-13,
+        "reports": [
+          {
+            "case": 0,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 1,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 4,
+                "equalities": 2,
+                "inequalities": 3
+              }
+            }
+          },
+          {
+            "case": 1,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 0,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 3,
+                "equalities": 3,
+                "inequalities": 4
+              }
+            }
+          },
+          {
+            "case": 2,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 1,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 4,
+                "equalities": 2,
+                "inequalities": 3
+              }
+            }
+          },
+          {
+            "case": 3,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 0,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 3,
+                "equalities": 3,
+                "inequalities": 4
+              }
+            }
+          },
+          {
+            "case": 4,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 4.440892098500626e-16,
+            "query_count": 1,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 8,
+                "equalities": 5,
+                "inequalities": 8
+              }
+            }
+          },
+          {
+            "case": 5,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 2,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 7,
+                "equalities": 2,
+                "inequalities": 4
+              }
+            }
+          },
+          {
+            "case": 6,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 0,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 4,
+                "equalities": 3,
+                "inequalities": 6
+              }
+            }
+          },
+          {
+            "case": 7,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 1,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 8,
+                "equalities": 5,
+                "inequalities": 8
+              }
+            }
+          },
+          {
+            "case": 8,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 7.105427357601002e-15,
+            "query_count": 1,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 11,
+                "equalities": 5,
+                "inequalities": 12
+              }
+            }
+          },
+          {
+            "case": 9,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 1.7763568394002505e-15,
+            "query_count": 2,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 17,
+                "equalities": 8,
+                "inequalities": 15
+              }
+            }
+          },
+          {
+            "case": 10,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 3,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 11,
+                "equalities": 2,
+                "inequalities": 5
+              }
+            }
+          },
+          {
+            "case": 11,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 0,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 5,
+                "equalities": 3,
+                "inequalities": 8
+              }
+            }
+          },
+          {
+            "case": 12,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 1,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 14,
+                "equalities": 5,
+                "inequalities": 16
+              }
+            }
+          },
+          {
+            "case": 13,
+            "atoms": 4,
+            "coefficient_error": 0.0,
+            "objective_error": 7.105427357601002e-15,
+            "query_count": 2,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 1.1102230246251565e-16,
+              "maximum_unconditional_marginal_change": 5.551115123125783e-17,
+              "maximum_flow_change": 5.551115123125783e-17,
+              "maximum_coefficient_change": 8.881784197001252e-16,
+              "maximum_systematic_cdf_correction": 1.1102230246251565e-16,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 3,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 4.440892098500626e-15,
+              "objective_change": 2.1316282072803006e-14,
+              "lp_dimensions": {
+                "variables": 23,
+                "equalities": 8,
+                "inequalities": 22
+              }
+            }
+          },
+          {
+            "case": 14,
+            "atoms": 6,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 3,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 1.1102230246251565e-16,
+              "maximum_unconditional_marginal_change": 2.7755575615628914e-17,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 4,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 2.7755575615628914e-17,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 31,
+                "equalities": 12,
+                "inequalities": 26
+              }
+            }
+          },
+          {
+            "case": 15,
+            "atoms": 3,
+            "coefficient_error": 0.0,
+            "objective_error": 4.440892098500626e-16,
+            "query_count": 4,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 3,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 16,
+                "equalities": 2,
+                "inequalities": 6
+              }
+            }
+          },
+          {
+            "case": 16,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 1,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 17,
+                "equalities": 5,
+                "inequalities": 20
+              }
+            }
+          },
+          {
+            "case": 17,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 2,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 29,
+                "equalities": 8,
+                "inequalities": 29
+              }
+            }
+          },
+          {
+            "case": 18,
+            "atoms": 7,
+            "coefficient_error": 0.0,
+            "objective_error": 8.881784197001252e-16,
+            "query_count": 3,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 2.220446049250313e-16,
+              "maximum_unconditional_marginal_change": 1.1102230246251565e-16,
+              "maximum_flow_change": 1.1102230246251565e-16,
+              "maximum_coefficient_change": 2.220446049250313e-16,
+              "maximum_systematic_cdf_correction": 1.1102230246251718e-16,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 5,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 1.3877787807814457e-17,
+              "objective_change": 8.881784197001252e-16,
+              "lp_dimensions": {
+                "variables": 41,
+                "equalities": 12,
+                "inequalities": 37
+              }
+            }
+          },
+          {
+            "case": 19,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 4,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 51,
+                "equalities": 17,
+                "inequalities": 42
+              }
+            }
+          },
+          {
+            "case": 20,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 1,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 20,
+                "equalities": 5,
+                "inequalities": 24
+              }
+            }
+          },
+          {
+            "case": 21,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 3.552713678800501e-15,
+            "query_count": 2,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 35,
+                "equalities": 8,
+                "inequalities": 36
+              }
+            }
+          },
+          {
+            "case": 22,
+            "atoms": 4,
+            "coefficient_error": 8.881784197001252e-16,
+            "objective_error": 6.039613253960852e-14,
+            "query_count": 3,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 8.881784197001252e-16,
+              "maximum_unconditional_marginal_change": 4.440892098500626e-16,
+              "maximum_flow_change": 5.551115123125783e-17,
+              "maximum_coefficient_change": 1.7763568394002505e-15,
+              "maximum_systematic_cdf_correction": 1.1102230246251565e-16,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 3,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 5.551115123125783e-16,
+              "objective_change": 1.0658141036401503e-14,
+              "lp_dimensions": {
+                "variables": 51,
+                "equalities": 12,
+                "inequalities": 48
+              }
+            }
+          },
+          {
+            "case": 23,
+            "atoms": 10,
+            "coefficient_error": 2.220446049250313e-16,
+            "objective_error": 8.881784197001252e-16,
+            "query_count": 4,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 2.220446049250313e-16,
+              "maximum_unconditional_marginal_change": 1.1102230246251565e-16,
+              "maximum_flow_change": 1.1102230246251565e-16,
+              "maximum_coefficient_change": 4.440892098500626e-16,
+              "maximum_systematic_cdf_correction": 1.1102230246251565e-16,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 5,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 1.1102230246251565e-16,
+              "objective_change": 1.7763568394002505e-15,
+              "lp_dimensions": {
+                "variables": 66,
+                "equalities": 17,
+                "inequalities": 58
+              }
+            }
+          },
+          {
+            "case": 24,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 0,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 2,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 2,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 6,
+                "equalities": 5,
+                "inequalities": 8
+              }
+            }
+          },
+          {
+            "case": 25,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 5.329070518200751e-15,
+            "query_count": 1,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 2,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 2,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 17,
+                "equalities": 9,
+                "inequalities": 14
+              }
+            }
+          },
+          {
+            "case": 26,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 2,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 2,
+              "maximum_conditional_projection": 6.661338147750939e-16,
+              "maximum_unconditional_marginal_change": 3.3306690738754696e-16,
+              "maximum_flow_change": 3.3306690738754696e-16,
+              "maximum_coefficient_change": 1.7763568394002505e-15,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 2,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 8.881784197001252e-16,
+              "objective_change": -3.552713678800501e-15,
+              "lp_dimensions": {
+                "variables": 38,
+                "equalities": 16,
+                "inequalities": 29
+              }
+            }
+          },
+          {
+            "case": 27,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 3,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 2,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 2,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 22,
+                "equalities": 9,
+                "inequalities": 12
+              }
+            }
+          },
+          {
+            "case": 28,
+            "atoms": 4,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 4,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 2,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 4,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 5.551115123125783e-17,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 30,
+                "equalities": 11,
+                "inequalities": 16
+              }
+            }
+          },
+          {
+            "case": 29,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 0,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 2,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 2,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 9,
+                "equalities": 5,
+                "inequalities": 14
+              }
+            }
+          },
+          {
+            "case": 30,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 1,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 2,
+              "maximum_conditional_projection": 1.1102230246251565e-16,
+              "maximum_unconditional_marginal_change": 1.1102230246251565e-16,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 4.440892098500626e-16,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 2,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 4.440892098500626e-16,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 21,
+                "equalities": 9,
+                "inequalities": 19
+              }
+            }
+          },
+          {
+            "case": 31,
+            "atoms": 6,
+            "coefficient_error": 1.7763568394002505e-15,
+            "objective_error": 1.8474111129762605e-13,
+            "query_count": 2,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 2,
+              "maximum_conditional_projection": 1.1102230246251565e-16,
+              "maximum_unconditional_marginal_change": 1.3877787807814457e-17,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 4.440892098500626e-16,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 5,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 5.551115123125783e-17,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 48,
+                "equalities": 19,
+                "inequalities": 35
+              }
+            }
+          },
+          {
+            "case": 32,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 1.7763568394002505e-15,
+            "query_count": 3,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 2,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 2,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 82,
+                "equalities": 26,
+                "inequalities": 50
+              }
+            }
+          },
+          {
+            "case": 33,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 4,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 2,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 2,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 4,
+                "equalities": 3,
+                "inequalities": 6
+              }
+            }
+          },
+          {
+            "case": 34,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 0,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 2,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 2,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 7,
+                "equalities": 5,
+                "inequalities": 10
+              }
+            }
+          },
+          {
+            "case": 35,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 7.105427357601002e-15,
+            "query_count": 1,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 2,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 2.220446049250313e-16,
+              "maximum_flow_change": 2.220446049250313e-16,
+              "maximum_coefficient_change": 1.7763568394002505e-15,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 2,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 2.220446049250313e-16,
+              "objective_change": 7.105427357601002e-15,
+              "lp_dimensions": {
+                "variables": 21,
+                "equalities": 9,
+                "inequalities": 19
+              }
+            }
+          },
+          {
+            "case": 36,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 0,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 3,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 3,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 9,
+                "equalities": 7,
+                "inequalities": 12
+              }
+            }
+          },
+          {
+            "case": 37,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 1,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 3,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 3,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 20,
+                "equalities": 10,
+                "inequalities": 13
+              }
+            }
+          },
+          {
+            "case": 38,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 2,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 3,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 3,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 28,
+                "equalities": 13,
+                "inequalities": 14
+              }
+            }
+          },
+          {
+            "case": 39,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 3,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 3,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 3,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 30,
+                "equalities": 12,
+                "inequalities": 13
+              }
+            }
+          },
+          {
+            "case": 40,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 4,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 3,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 3,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 26,
+                "equalities": 11,
+                "inequalities": 12
+              }
+            }
+          },
+          {
+            "case": 41,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 0,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 3,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 3,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 9,
+                "equalities": 7,
+                "inequalities": 12
+              }
+            }
+          },
+          {
+            "case": 42,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 0,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 4,
+                "equalities": 3,
+                "inequalities": 6
+              }
+            }
+          },
+          {
+            "case": 43,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 3,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 1,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 2,
+                "equalities": 2,
+                "inequalities": 4
+              }
+            }
+          },
+          {
+            "case": 44,
+            "atoms": 2,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 2,
+            "diagnostics": {
+              "preprocessed_blocks": 4,
+              "active_blocks": 1,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 2,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 7,
+                "equalities": 2,
+                "inequalities": 4
+              }
+            }
+          },
+          {
+            "case": 45,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 0,
+            "diagnostics": {
+              "preprocessed_blocks": 3,
+              "active_blocks": 0,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 0,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic."
+            }
+          },
+          {
+            "case": 46,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 2,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 2,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 2,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+              "lp_primal_feasibility": 0.0,
+              "objective_change": 0.0,
+              "lp_dimensions": {
+                "variables": 24,
+                "equalities": 10,
+                "inequalities": 14
+              }
+            }
+          },
+          {
+            "case": 47,
+            "atoms": 1,
+            "coefficient_error": 0.0,
+            "objective_error": 0.0,
+            "query_count": 0,
+            "diagnostics": {
+              "preprocessed_blocks": 0,
+              "active_blocks": 0,
+              "maximum_conditional_projection": 0.0,
+              "maximum_unconditional_marginal_change": 0.0,
+              "maximum_flow_change": 0.0,
+              "maximum_coefficient_change": 0.0,
+              "maximum_systematic_cdf_correction": 0.0,
+              "hypersimplex_sum_error": 0.0,
+              "positive_flow_edges": 0,
+              "scope": "Floating-point projection and flow normalization; not interval arithmetic."
+            }
+          }
+        ],
+        "large_case": {
+          "m": 120,
+          "budget": 6,
+          "value": 6.6148767605634315,
+          "diagnostics": {
+            "preprocessed_blocks": 0,
+            "active_blocks": 1,
+            "maximum_conditional_projection": 7.216449660063518e-15,
+            "maximum_unconditional_marginal_change": 6.439293542825908e-15,
+            "maximum_flow_change": 0.0,
+            "maximum_coefficient_change": 4.529709940470639e-14,
+            "maximum_systematic_cdf_correction": 8.215650382226158e-15,
+            "hypersimplex_sum_error": 1.4210854715202004e-14,
+            "positive_flow_edges": 3,
+            "scope": "Floating-point projection and flow normalization; not interval arithmetic.",
+            "lp_primal_feasibility": 3.497202527569243e-13,
+            "objective_change": 4.529709940470639e-14,
+            "lp_dimensions": {
+              "variables": 3221,
+              "equalities": 30,
+              "inequalities": 3312
+            }
+          }
+        },
+        "source_hashes": {
+          "compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d",
+          "compact_policy.py": "608af8ac008d91a5cbfc16560b532e42e5c208f1edd384091e8e5eba5503d781",
+          "verify_compact_policy.py": "b49608ed0a48a34ee838417cb231c2e7185ee18465cafb9e8baa1aa5be7af2ab",
+          "policy_protocol.txt": "9da3195da0e6e23be520222a66efe238a0dadb1d8130de71d708cc5ef8be1a84"
+        },
+        "source_value_report_sha256": "cdf3cfada40a5db97584682daa2d3551b05e7d9a81d8cf40f3f76ef1761264d0",
+        "seconds": 2.8752479999966454,
+        "scope": "Exact mixture atom reconstruction on small cases; ordinary floating-point LP tolerance. No empirical outcomes changed."
+      },
+      "noaa": {
+        "status": "passed",
+        "script_sha256": "7c6660bfde7126a885d2fc390be49583f61531e62dba06f06fc547b226c7e225",
+        "source_hashes": {
+          "observation_panel.json": "36ee94939e45cbb3795c297bbce698936e0ef6ce28f6ae3d1565c73c09b0e532",
+          "forecast_panel.json": "067fb4ad74fbd11bb09bf49e5165f2af573cc06f42eee21062137c0a4d057a9c",
+          "panel_result.json": "f805aa803f629c0b52d7cbbf3fa2994f11e48fde7b8053d92d8b03124f20fb08"
+        },
+        "days": 52,
+        "forecast_member_days": 260,
+        "decoded_message_records": 2080,
+        "raw_and_preprocessed_direct_vertex_checks": 832,
+        "natural_cases": 9,
+        "complete_zero_controls": 43,
+        "preprocessed_natural_certificates": 2,
+        "packing_repaired_bin_pairs": 28,
+        "scope": "Distributed metadata/excerpt arithmetic only; no freshGRIBdecode, fullsource re-download or global publicarchive absence proof."
+      },
+      "tie_policies": {
+        "status": "passed",
+        "completed_utc": "2026-10-11T01:07:59.529094+00:00",
+        "script_sha256": "afa500341e187af339bdf78562ae99c67edefac83e6d8bf6f2f7831bf53b815e",
+        "source_hashes": {
+          "work/randomized_tie_review/verify_ties.py": "afa500341e187af339bdf78562ae99c67edefac83e6d8bf6f2f7831bf53b815e",
+          "work/randomized_tie_review/protocol.txt": "e5747f0f18b7b07bd908377bd5e094545cf41f2c4c6178b035005cd26c85bdfa",
+          "work/randomized_tie_review/provenance_wording_amendment.txt": "382d1404bf43bf37237e5e0b53ab6fb525f48c0c947fea00bb98386d1dd3c79b",
+          "work/randomized_tie_review/audit_ties.py": "86e66ba47cd14a7b45fb0aa281d4a372fc5002cc2a28cf567d4d799475fff874",
+          "work/randomized_tie_review/theory_review.txt": "5c5ddd134a9b1ab04063e9f78667b5d8d02fcae5eb68af9fc5a5a20407ea639e",
+          "work/randomized_tie_review/policies.jsonl": "0d80ab7548ac0a37b08088d02b77ff80d1e992adb2ecd5deefe4f72b7e8036ae",
+          "work/randomized_tie_review/selection_complete.json": "04a1cb3ee2106569c1dcc40628b052ba4b326fa73eb2f85c7511ec1ab4daa7ae",
+          "work/randomized_tie_review/result.json": "4b3409e6255725db5dc4119f656e73c580ca671b7ac481971c42e12c7f139afe",
+          "work/randomized_tie_review/cases.csv": "46f409c0c015dffa45490b1c43c1a3291ad367d0842bd965bbcf23fcc66c7305",
+          "work/randomized_tie_review/meters.csv": "1c7eccb57aa8a3fc02874c26a20d4e92c87e548bdc182cd1bd066efb7193e95e",
+          "work/randomized_tie_review/cohorts.csv": "49ac13ff5ae85dc7ee47776325175e77ddd97dc40dda0e19099bb51cde498e7f",
+          "work/randomized_tie_review/support.csv": "f73364707386d4c8bdb3b531c4ddd98104491aa9dbbe7b1d8ce3fd1518d1a813",
+          "work/new_direction_randomized/lp_solutions.jsonl": "ec5a31615ccc2e74f9c91bcd065eae392f1a4729d56d327a6a47eb4ab5ef2226",
+          "work/new_direction_randomized/cases.csv": "347b95b780a11d5c35882cf9d206bec642bf26ab7b10321f8ff92b881b71ecef",
+          "outputs/review_frozen_forecasts.csv": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0"
+        },
+        "original_cases_retained": 20736,
+        "original_columns_reconciled": 28,
+        "zero_width_cases_unchanged": 19662,
+        "finite_game_matrices_reconstructed": 1074,
+        "secondary_optimality_checks": 2148,
+        "positive_support_checks": 4693,
+        "meter_rows_rebuilt": 31,
+        "cohort_rows_rebuilt": 2,
+        "counts": {
+          "dominance": {
+            "realized_improved_vs_original": 0,
+            "realized_worsened_vs_original": 0,
+            "realized_tied_vs_original": 1074,
+            "secondary_strictly_improved": 0
+          },
+          "reference": {
+            "realized_improved_vs_original": 0,
+            "realized_worsened_vs_original": 0,
+            "realized_tied_vs_original": 1074,
+            "secondary_strictly_improved": 0
+          }
+        },
+        "maxima": {
+          "secondary_optimum_error": 1.7610912728116546e-13,
+          "primary_lower_bound_gap": 1.956212969389526e-12,
+          "dominance_excess": 5.7495674887775294e-12,
+          "saved_expected_coefficient_error": 1.1102230246251565e-16,
+          "endpoint_error_scaled": 8.441774171199364e-15,
+          "secondary_lp_primal_violation": 5.7495674887775294e-12,
+          "secondary_lp_dual_violation": 1.8189894035458565e-12,
+          "secondary_lp_duality_gap": 1.4259426972529354e-12
+        },
+        "exact_fraction_examples": [
+          {
+            "coefficients": [
+              0,
+              0,
+              2,
+              3
+            ],
+            "budget": 1,
+            "total": 1,
+            "dominated_coefficients": [
+              "2",
+              "2",
+              "2",
+              "2"
+            ],
+            "dominating_coefficients": [
+              "2",
+              "2",
+              "2",
+              "0"
+            ],
+            "dual": [
+              "1/3",
+              "1/3",
+              "1/3",
+              "0"
+            ],
+            "minimax_value": "2",
+            "all_at_most_budget_batches": 5,
+            "exact_fraction_check": "passed"
+          },
+          {
+            "coefficients": [
+              0,
+              2,
+              4,
+              12
+            ],
+            "budget": 2,
+            "total": 1,
+            "dominated_coefficients": [
+              "8/5",
+              "8/5",
+              "8/5",
+              "8/5"
+            ],
+            "dominating_coefficients": [
+              "8/5",
+              "8/5",
+              "8/5",
+              "0"
+            ],
+            "dual": [
+              "1/5",
+              "3/5",
+              "1/5",
+              "0"
+            ],
+            "minimax_value": "8/5",
+            "all_at_most_budget_batches": 11,
+            "exact_fraction_check": "passed"
+          }
+        ],
+        "separated_pair_contrast_regime": {
+          "energy": "3",
+          "delta": "2",
+          "separation": "5",
+          "minimax_lower_bound": "3",
+          "rows": [
+            {
+              "first_pair_mass_share": "0",
+              "deterministic_width": "0",
+              "randomized_expected_width": "3",
+              "randomized_comparison": "worse"
+            },
+            {
+              "first_pair_mass_share": "1/4",
+              "deterministic_width": "3/2",
+              "randomized_expected_width": "3",
+              "randomized_comparison": "worse"
+            },
+            {
+              "first_pair_mass_share": "1/2",
+              "deterministic_width": "3",
+              "randomized_expected_width": "3",
+              "randomized_comparison": "tie"
+            },
+            {
+              "first_pair_mass_share": "3/4",
+              "deterministic_width": "9/2",
+              "randomized_expected_width": "3",
+              "randomized_comparison": "better"
+            },
+            {
+              "first_pair_mass_share": "1",
+              "deterministic_width": "6",
+              "randomized_expected_width": "3",
+              "randomized_comparison": "better"
+            }
+          ],
+          "exact_fraction_check": "passed"
+        },
+        "selection_scope": {
+          "static_source_order_checked": true,
+          "policy_hash_before_evaluation_matches": true,
+          "selection_functions_read_reference_data": false,
+          "target_file_bytes_hashed_before_selection": true,
+          "limitation": "The source and marker establish the archived pipeline ordering; hashes/timestamps are not independent preregistration or evidence that authors had never inspected these historical targets."
+        },
+        "scope": "All 1,074 positive-width cases, both secondary policies and every saved positive support. Secondary LPs independently solved using product-vertex constraints and HiGHS IPM; no import of audit_ties, no forecast fit, no original full-study rerun. Frozen zero-width cases and all case/meter/cohort aggregates reconciled. Ordinary floating-point tolerances, not outward-rounded formal certificates.",
+        "seconds": 51.325607399994624
+      },
+      "randomized_holdout": {
+        "status": "PASS",
+        "check_kind": "Independent arithmetic and saved-dual verification; no recovery implementation or optimizer imported",
+        "consumers": 30,
+        "meter_days": 3210,
+        "cases": 19260,
+        "positive_cases": 899,
+        "positive_probability_batches": 3958,
+        "maximum_actual_width_discrepancy_scaled": 2.2733204207980862e-13,
+        "source_hashes": {
+          "outputs/study_holdout_consumers_predictions.csv": "6af5c1101850724b2067c14f3bc8abf891b1d12bd04fa3d4a5c24dbbbeb4c9d8",
+          "outputs/study_recovery.py": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241",
+          "outputs/study_archive_access.py": "de88aaf109b9534402c913789b81f992cd312dc2d17902e953b715198e2ae28b",
+          "outputs/study_period_archive.py": "258e29c41b18c11bf9f9a15aa9e7c9344d27f0aaa564d6f0d4723d91ce7abdf9",
+          "outputs/run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+          "work/new_direction_randomized/randomized_recovery_screen.py": "785629e8ccccb8503907f221d30ee382974af5d4681461d4ce9fbdf45b047d6a",
+          "work/randomized_tie_review/audit_ties.py": "86e66ba47cd14a7b45fb0aa281d4a372fc5002cc2a28cf567d4d799475fff874",
+          "work/randomized_recovery_root/compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d"
+        },
+        "protocol_sha256": "9b8352fc4a5dcdeb5bae50055e056fbd587f954b163c1d1d38ae768ebfde2fea",
+        "policy_sha256": "80f5210e70c7f4d8d6516f635ea8f227bf728996ecc377b4eb6cde04fac7c6a5",
+        "result_sha256": "62b9503e7d65fa813f634bff2aad5a7adb55deb09168f402c8c2e5d8e60282b7",
+        "checker_sha256": "152b6ab0f92d43e50777d1d4645825d3b430d5899919cff5cd24e3586ea431c1",
+        "checked_utc": "2026-10-11T01:08:48.126814+00:00"
+      },
+      "scaling": {
+        "status": "PASS",
+        "check_kind": "independent archival consistency and checksum checks; no optimization rerun",
+        "compact_cases": 28,
+        "finite_comparisons": 12,
+        "predeclared_skips": 16,
+        "sample_budget_checks": 560,
+        "source_hashes": {
+          "protocol.txt": "3040642135f8c3e05e529766d17200230aa1d175b1d09a456a74aa0ec48e2211",
+          "instances.json": "b296dfb87fb2c2c52cb5a54aa967a3a01f517b5ca7e4bb598fd258b542830a16",
+          "benchmark.py": "1ec3ea06693ff022dabbd2087a6daa100d2e7a81d86e9262dce00dbbc081c62e",
+          "results.json": "80a936abea60d54df0d6e9d49f5e17c13baa5567d6d8217abc5ff55e8a1a29f1",
+          "results.csv": "5380b8ea2990a9aa54ec46497ac73496672cbca1066d3e8f7ca39e120c18a5b5",
+          "summary.json": "d6ec6d5f476dc0f623d0986739bbe09e1a2702f6540bd36e00115e25571f777f",
+          "scaling_fragment.tex": "1a56c76047ad5f8301b48a356c217a42c3e15112b10b65c3eda3f3c18b557a1f",
+          "verify_scaling.py": "fc93c8cde4fa02ec3e406b2ad077b4615c604826c87e2efc2deaf839fd50fade"
+        },
+        "api_hashes": {
+          "compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d",
+          "compact_policy.py": "608af8ac008d91a5cbfc16560b532e42e5c208f1edd384091e8e5eba5503d781"
+        },
+        "provenance_sha256": "84dce3506ccf938dc274572cf6fa613327af3389c474f24e42711b77d7065ce3"
+      }
+    }
+  },
+  "daily_recovery_rows_reconciled": 42,
+  "zip_crc_passed": true,
+  "manifest_sha256_verification_passed": true,
+  "original_aggregate_tables_rebuilt_without_full_prediction_archive": true,
+  "manuscript_exactly_rebuilt_without_original_34_series_prediction_archive": true,
+  "excluded_artifacts": [
+    "original 34-series complete hourly predictions/targets including BLEM",
+    "original raw-source archives",
+    "main TeX/PDF documents",
+    "source caches",
+    "private journal planning"
+  ],
+  "included_tex_fragments": [
+    "work/new_direction_practical/noaa/manuscript_fragment.tex",
+    "work/randomized_holdout_review/holdout_fragment.tex",
+    "work/randomized_recovery_root/bibitem_suggestions.tex",
+    "work/randomized_recovery_root/theory_section.tex",
+    "work/randomized_scaling_review/scaling_fragment.tex"
+  ],
+  "included_target_excerpt": "UCI worked/replication/review records with CC BY 4.0 attribution and NOAA selected observation/decoded-forecast records; no BLEM raw targets or persistence"
+}

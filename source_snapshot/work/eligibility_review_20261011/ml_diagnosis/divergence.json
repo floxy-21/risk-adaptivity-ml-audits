@@ -1,0 +1,32 @@
+{
+  "tie": {
+    "cases": 6227,
+    "divergence_at_2": 484,
+    "same_first_query": 4984,
+    "net_extra_reads_same_first": 0,
+    "divergence_at_0": 4335,
+    "divergence_at_1": 1243,
+    "net_extra_reads_different_first": 0,
+    "divergence_at_3": 150,
+    "divergence_at_4": 15
+  },
+  "win": {
+    "cases": 433,
+    "divergence_at_1": 311,
+    "same_first_query": 122,
+    "net_extra_reads_different_first": -331,
+    "divergence_at_2": 99,
+    "net_extra_reads_same_first": -124,
+    "divergence_at_3": 23
+  },
+  "loss": {
+    "cases": 337,
+    "divergence_at_1": 267,
+    "same_first_query": 70,
+    "net_extra_reads_different_first": 291,
+    "divergence_at_2": 62,
+    "net_extra_reads_same_first": 75,
+    "divergence_at_3": 7,
+    "divergence_at_4": 1
+  }
+}

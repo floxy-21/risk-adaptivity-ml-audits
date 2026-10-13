@@ -1,0 +1,34 @@
+{
+  "completed_utc": "2026-10-10T00:59:14.027140+00:00",
+  "status": "passed",
+  "hashes_verified": {
+    "run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+    "study_protocol.txt": "546c321c28bd5416237d984113d9e607ddb01ad60e96f5b18468e5c58c394df1",
+    "study_protocol_ai_revision.txt": "5cb23a444f1ad2d189c66f4ca5e9a138344b75d214d7b2a9f467a450977cc454",
+    "study_protocol_amendment.txt": "bc3511b183c4dbb262067fc528ffb1054b61d61d85b885cc4dc916a3fb759f05",
+    "study_protocol_blem.txt": "001711ff8eee390895990d934907e5308cadfff15e2be59c7039e3cd2732b69b",
+    "study_protocol_recovery.txt": "d61ea2ec0182be0c11688d05881bc5dfbfb0a47154972b43b3f47fcb953fcd48",
+    "study_protocol_training_convergence.txt": "fd28d92dbfc17c22fe7a9b0bebb2214eee39fc3170538d56dd8c60cd334be416",
+    "study_comparisons.csv": "831c289c84a7ce067777e0c9a2087f330ade80ee68a7d4205557e190702c56fd",
+    "study_period_comparisons.csv": "c58640d34b1ca5fad39604b18c3b18f2990182afb11d3268013c896509381854",
+    "study_predictions.csv": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+    "study_selections.csv": "acfb908510f88ae8dbcd08c9ef7138de2cffcf9c9c1c6259fdbc5cb709f10210"
+  },
+  "meters": 34,
+  "heldout_meter_days": 3729,
+  "dependent_verification_scenarios": 604098,
+  "dependent_pairwise_comparisons": 3624588,
+  "daily_paired_decisions": 999136,
+  "daily_paired_wrong_decisions": 0,
+  "period_paired_decisions": 7441,
+  "period_paired_wrong_decisions": 0,
+  "paired_reference_enclosure_fraction": 1.0,
+  "minimum_selection_regret_bound_coverage": 1.0,
+  "row_counts": {
+    "predictions": 89496,
+    "comparisons": 66096,
+    "selections": 9180,
+    "period_comparisons": 198288
+  },
+  "interpretation": "Cross-file accounting and recorded-input integrity checks, not evidence that scenarios are independent or that future rankings are guaranteed."
+}

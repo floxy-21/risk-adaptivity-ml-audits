@@ -1,0 +1,170 @@
+{
+  "status": "passed",
+  "files": [
+    {
+      "path": "work/external_deadline/source/source_protocol.txt",
+      "bytes": 3642,
+      "sha256": "35a10fa2422f9f09328487b4d89fec5925d055817596f1b7314b3093ed64a535"
+    },
+    {
+      "path": "work/external_deadline/source/source_protocol_amendment.txt",
+      "bytes": 1758,
+      "sha256": "a9e716f05cf43e6065294d3165ee282fe68513903c8d07f2b31acc079fbbb4f2"
+    },
+    {
+      "path": "work/external_deadline/source/source_dates_amendment.txt",
+      "bytes": 1142,
+      "sha256": "e3d9a0eea528a80b9820338f3da7f2b9a1a9fc8212bfc91484d121ca0776ab22"
+    },
+    {
+      "path": "work/external_deadline/source/RAW_READ_ME_081116.txt",
+      "bytes": 11098,
+      "sha256": "6b20b821a36af681e460bde5d24b933aa58e191c4c3f8de05218941e6d34937d"
+    },
+    {
+      "path": "work/external_deadline/source/download_refit.py",
+      "bytes": 1701,
+      "sha256": "4ed775714e66cb1fec1fc2cbf1a928cbc46bd113fd856f4da02e9667d86ea863"
+    },
+    {
+      "path": "work/external_deadline/source/prepare_refit.py",
+      "bytes": 11375,
+      "sha256": "deda961f64c9a98f9d020056c4f9788b7d1ce53cd84049922b72d2ce015162ac"
+    },
+    {
+      "path": "work/external_deadline/source/README.txt",
+      "bytes": 4082,
+      "sha256": "19a3b469395bb0075275b9909b19e2ed92264adb7d074b46a2c4937a81bb884b"
+    },
+    {
+      "path": "work/external_deadline/source/download_manifest.json",
+      "bytes": 902,
+      "sha256": "647423effa9d81e3ae6935641e925d75e64756001189c6fd631c0e2f23ab2c94"
+    },
+    {
+      "path": "work/external_deadline/source/archive_inventory.txt",
+      "bytes": 7685,
+      "sha256": "9c034ce2de8a7e460a5ee0c49071907623cc1d5c0b6598ce5003443b50ca409b"
+    },
+    {
+      "path": "work/external_deadline/data/manifest.json",
+      "bytes": 16769,
+      "sha256": "2a235e08eefd9563731c1e0c9a933d093e711c04d9a1e3483aa42b84598d2228"
+    },
+    {
+      "path": "work/external_deadline/data/household_inventory.json",
+      "bytes": 18409,
+      "sha256": "afe1c9e0781197d30e7970a04d00372fa16e9b60333775e497790319318600a1"
+    },
+    {
+      "path": "work/external_deadline/data/source_feasibility.json",
+      "bytes": 653,
+      "sha256": "284c0f7d0ff84b0941c4be9b58d2309435b2db65d066a4dfb27738521102b94f"
+    },
+    {
+      "path": "work/external_deadline/data/daily_quality.csv",
+      "bytes": 258359,
+      "sha256": "1619a9a2cf44af555f1f5733d1187d5174c2e45988325e6a7293efc1709b80a5"
+    },
+    {
+      "path": "work/external_deadline/data/hourly.csv",
+      "bytes": 5923105,
+      "sha256": "db73d53f9c0816fefdfaa981124c8049c19c540470bd5ac0378f9a23f37e4e74"
+    },
+    {
+      "path": "work/external_deadline/source/lcl_protocol.txt",
+      "bytes": 3809,
+      "sha256": "f3c32aa67f3be8140ca0cb8d20a290c16d6ecc14e0968e314816c96add47092f"
+    },
+    {
+      "path": "work/external_deadline/source/lcl_clock_amendment.txt",
+      "bytes": 1339,
+      "sha256": "858abff672395b31244c9465fada0017b9c21bcded8c4e1ef9dfe2eccd3cfde7"
+    },
+    {
+      "path": "work/external_deadline/source/download_lcl.py",
+      "bytes": 1201,
+      "sha256": "8f070f2f4cb014e8e371329f4a799831882d298782af88cd3bc1d7a5d2411654"
+    },
+    {
+      "path": "work/external_deadline/source/prepare_lcl.py",
+      "bytes": 9580,
+      "sha256": "2d47f9350dc98f224f627fe9db1371a9d6c81daf7033a692e26c3dee94f23b42"
+    },
+    {
+      "path": "work/external_deadline/source/verify_lcl_reference.py",
+      "bytes": 5620,
+      "sha256": "93f90549f8235821ed9fb6b0858eb4f3338747bd31fb28772fd0ad61e8e5b0b4"
+    },
+    {
+      "path": "work/external_deadline/source/LCL_README.txt",
+      "bytes": 4976,
+      "sha256": "4eeb2a158de12686d9d3691b3c56a7c908e71219c62ba3fef35636873c5be89d"
+    },
+    {
+      "path": "work/external_deadline/source/lcl_download_manifest.json",
+      "bytes": 437,
+      "sha256": "65e0a296f0f8f4b2d552a0af3d497a7711779e249f8b0666074cfe86e9c6847d"
+    },
+    {
+      "path": "work/external_deadline/source/lcl_archive_inventory.json",
+      "bytes": 162,
+      "sha256": "85e1fc3f41d656754b758702d78014dab5ef6db92d57a5f8c2269a1b3bcf3fed"
+    },
+    {
+      "path": "work/external_deadline/source/lcl_reference_verification.json",
+      "bytes": 1131,
+      "sha256": "f327cf8d2e24ee05f6ee3227f5168c6491f035fafad1b46f91bea0897edc85ed"
+    },
+    {
+      "path": "work/external_deadline/source/lcl_landing.html",
+      "bytes": 84101,
+      "sha256": "3e1449a84b1ca337be8b70637243ba5d30e5d324f264c6a8650ff922ac3a0075"
+    },
+    {
+      "path": "work/external_deadline/source/make_source_package_manifest.py",
+      "bytes": 2273,
+      "sha256": "af4d70f200f7421079450a90eea319c8f435db46e5147377d19ae7fbd20cb87c"
+    },
+    {
+      "path": "work/external_deadline/data/lcl/hourly.csv",
+      "bytes": 17036656,
+      "sha256": "36e933087d45d08e8b4238c62b64f2ab090c0e6b78ec0b96e11ed0e818b4e0b5"
+    },
+    {
+      "path": "work/external_deadline/data/lcl/daily_quality.csv",
+      "bytes": 2034904,
+      "sha256": "c88e0daf9137e99b791359732fcb1f3b8c2f787afffea6e1d83e566740fc216b"
+    },
+    {
+      "path": "work/external_deadline/data/lcl/household_inventory.json",
+      "bytes": 54607,
+      "sha256": "bf05abcdcee01e338656aad0af992e31530c496a1719828b5e121afa5c11c7a6"
+    },
+    {
+      "path": "work/external_deadline/data/lcl/selected_halfhour_source.csv.gz",
+      "bytes": 1742412,
+      "sha256": "53b8a1e2c4cf6427dc8167227b72f39c50d8989c4104c82def4d0122a59b08cb"
+    },
+    {
+      "path": "work/external_deadline/data/lcl/selection.json",
+      "bytes": 2632,
+      "sha256": "c207ef9130c0cd91d328d16909e63104eea916d12621badb887b1c3277c723c9"
+    },
+    {
+      "path": "work/external_deadline/data/lcl/manifest.json",
+      "bytes": 2693,
+      "sha256": "dcd8f44261f7c1138fef0d476d462d644d0b9ab4469f7b3cea5d934acf551f97"
+    }
+  ],
+  "count": 31,
+  "excluded": [
+    "source/*raw/ full CSV directories",
+    "source/*.7z and source/*.zip original downloads",
+    "source/7zr.exe and source/7zip/ extraction tools",
+    "source/article* full source-paper copies",
+    "source/*preparation.log runtime logs",
+    "source/__pycache__/"
+  ],
+  "note": "The listed files plus this manifest form the bounded source package. Original downloads are regenerated from official URLs with pinned hashes. Root protocol/amendment and forecast/audit files must be added by their owning pipeline."
+}

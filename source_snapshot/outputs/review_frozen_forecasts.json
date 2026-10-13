@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-10-10T03:47:28.130797+00:00",
+  "format": "Original CSV header, row ordering, retained field strings and csv.writer CRLF serialization",
+  "rows": 89496,
+  "omitted_blem_target_and_daily_rows": 6552,
+  "included_uci_target_rows": 82944,
+  "models": [
+    "daily",
+    "ridge",
+    "hist_gradient_boosting",
+    "mlp"
+  ],
+  "original_predictions_sha256": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+  "output_sha256": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0",
+  "script_sha256": "b85e991e4ec9ef59819e271b71d9d39b69ca41844f6cea1df2d6bcceda3628b1",
+  "study_summary_sha256": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196",
+  "retained_fields_are_original_strings": true,
+  "model_refitting": false,
+  "omission": "Only BLEM truth_kwh and daily fields are blank; targets and persistence copies are obtained from pinned raw counters, never fabricated.",
+  "uci_attribution": [
+    {
+      "title": "Individual Household Electric Power Consumption",
+      "repository": "UCI Machine Learning Repository",
+      "doi": "https://doi.org/10.24432/C58K54",
+      "license": "CC BY 4.0",
+      "changes": "Minute average power converted to complete hourly kWh; eligible original held-out rows retained."
+    },
+    {
+      "title": "ElectricityLoadDiagrams20112014",
+      "repository": "UCI Machine Learning Repository",
+      "doi": "https://doi.org/10.24432/C58C86",
+      "license": "CC BY 4.0",
+      "changes": "End-stamped quarter-hour average power shifted to interval starts and summed/divided by four; eligible original held-out rows retained."
+    }
+  ],
+  "limitations": "Reproduces frozen-predictor evaluation; not independent forecasting, fresh training or a new validation population."
+}

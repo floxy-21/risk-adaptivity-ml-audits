@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "responses_matching_original_source_payload_sha256": 60,
+  "requests": 60,
+  "completed_trials": 30,
+  "adaptive_second_choices_checked": 12,
+  "maximum_reference_containment_error": 1.734723475976807e-18,
+  "scope": "Source-token reconstruction matches every received payload hash; timestamp/budget/interval checks and independent adaptive second decisions. Timing summaries are descriptive for three fixed cases.",
+  "measurement_limitations": [
+    "client_cpu_seconds covers measured request processing, not total optimizer CPU; planning wall time is separately measured.",
+    "Full hourly-range response includes two initially known endpoints; a five-interior-point response could reduce its payload further.",
+    "Client one-request-per-second waiting is separately logged and is not provider latency.",
+    "No provider server CPU, packets/TLS wire bytes, or population latency confidence interval is measured."
+  ]
+}

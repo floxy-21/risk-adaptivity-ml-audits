@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "examples": [
+    {
+      "example": "copies_available",
+      "meter": "MT_001",
+      "day": "2014-01-01",
+      "input_sha256": "b4a6ea8aee49220aeb9325f24dc4b180fd6e68f7937a0fabeab2519c8ba36e3a",
+      "output_sha256": "0448af96767a19c95880be5284bfeb6921a4b04683a28476da71ec85a105b8ea",
+      "free_copy_count": 6,
+      "remaining_missing_count": 0,
+      "allowed_rankings": 6,
+      "held_rankings": 0,
+      "certified_best_model": "daily",
+      "paid_queries": 0,
+      "bound_and_validation_seconds": 0.003592299995943904,
+      "checks": {
+        "maximum_known_coordinate_error": 0.0,
+        "maximum_total_error": 0.0,
+        "maximum_endpoint_objective_error": 5.551115123125783e-17,
+        "maximum_independent_lp_error": 2.220446049250313e-16,
+        "maximum_reference_enclosure_error": 5.551115123125783e-17,
+        "wrong_certificates": 0,
+        "independent_endpoint_LPs": 12,
+        "hidden_truth_field_rejected": true,
+        "absolute_acceptance_tolerance": 3.2994923857868036e-07
+      }
+    },
+    {
+      "example": "copies_absent",
+      "meter": "MT_001",
+      "day": "2014-01-28",
+      "input_sha256": "1e1e6455ef498cbbed4aeb0e7be61ad42e6cf4ba56eddc4e488ec458bb41cd5f",
+      "output_sha256": "bb9f5634048f8ab3742ded76f8298b7714f27b391020b8524ed51538697f688c",
+      "free_copy_count": 0,
+      "remaining_missing_count": 6,
+      "allowed_rankings": 1,
+      "held_rankings": 5,
+      "certified_best_model": null,
+      "paid_queries": 0,
+      "bound_and_validation_seconds": 0.0047784000053070486,
+      "checks": {
+        "maximum_known_coordinate_error": 0.0,
+        "maximum_total_error": 0.0,
+        "maximum_endpoint_objective_error": 8.881784197001252e-16,
+        "maximum_independent_lp_error": 1.7763568394002505e-15,
+        "maximum_reference_enclosure_error": 0.0,
+        "wrong_certificates": 0,
+        "independent_endpoint_LPs": 12,
+        "hidden_truth_field_rejected": true,
+        "absolute_acceptance_tolerance": 5.012690355329946e-07
+      }
+    }
+  ],
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "elapsed_seconds": 1.9945706000144128,
+  "source_sha256": {
+    "work/risk_adaptivity_revision/practical_api/prepare_and_verify.py": "c0210a76f0a0c15c8d14aa9b6302de1fb37676d97af2cad31411feb39ebdb488",
+    "work/risk_adaptivity_revision/practical_api/audit_api.py": "9826e5522d094067037bf7ebb88cc0b911552122b6a3a587e41a8932e368c4ca",
+    "work/risk_adaptivity_revision/practical_api/run_example.py": "c359c9c554120b633937a572c3322f2dd1cce37844760be1963e071522090d3b",
+    "outputs/energy_rank_bounds.py": "2b555e7fbb676f311b87c38a1cfc8bf81b34743e35a7c43b5ff08d759596f467",
+    "outputs/review_frozen_forecasts.csv": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0",
+    "outputs/study_period_archive_public_links.csv.gz": "e86e579ddc1adcd00b6a34caa6f709152d70eb617010618c9f35762dc6507ab8",
+    "outputs/study_period_archive_public_aggregates.csv.gz": "99bd858436886ac690821d383f7bb3a89ccae27afa65538e244ff76cde24b790"
+  },
+  "scope": "Two availability-selected executable historical daily examples, not a new empirical performance estimate. No forecasting model refit, hidden-target input to the evaluator, paid retrieval, or production cost measurement."
+}

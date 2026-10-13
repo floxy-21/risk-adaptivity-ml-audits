@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "cases": 49,
+  "by_delta": {
+    "1/1000": 27,
+    "1/100": 22
+  },
+  "arithmetic": "Exact rational source coefficients, proposed binary64 multipliers, exact bounded-box residual correction",
+  "guarantee": "Every saved exact upper bound is <= 1/2 for the same selected first query and sparse successor support",
+  "minimum_certified_margin": 0.0037592273417659822,
+  "max_upper_minus_proposal_LP": 1.8318679906315083e-15,
+  "source_sha256": "601c6b956755a45639d4737eb9e36b2fc2279db4133fa6e531b8f0420a655a11",
+  "certificates_sha256": "935e6c7e75900a012ca44b41955fbd3e28ce094a1479ea925e5300bbc9d235dd",
+  "seconds": 1.2868833999964409,
+  "scope": "Exact feasibility-side guarantee certificates; unchanged selection/results; no physical calibration or assertion of exact optimal objective value"
+}

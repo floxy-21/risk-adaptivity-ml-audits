@@ -1,0 +1,83 @@
+\subsection{A precision consequence of sparse-policy bounds}
+% Research draft: AI-assisted derivation and internal mathematical review.
+% Not a human-specialist validation or historical-priority claim.
+The dimension bound below adapts established sparse-policy reasoning.
+\citet[Theorem~2 and Example~5]{kurtz2026} gives the corresponding
+dimension-plus-one policy bound for continuous concave scenario costs,
+including conditional information discovery. Conditional terminal widths
+fit that framework on polytopes. The direct Helly proof below also allows
+compact convex $F$, for which these widths are upper semicontinuous but
+need not be continuous, and translates the sparse cover into precision
+success under uniform randomization.
+\begin{theorem}[A dimension-dependent batch guarantee, adapted from sparse-policy bounds]
+\label{thm:helly-precision}
+Let $F$ be nonempty, compact and convex, and let $T(x)=c^\top x+d$.
+Fix a first-stage exact linear observation $L_0x$, whose feasible-answer
+set $I=L_0F$ has affine dimension $r$. After this answer, a deterministic
+policy chooses one of finitely many second-stage linear measurement
+batches $L_1,\ldots,L_m$. Every combined batch $(L_0,L_j)$ must obey the
+same declared hard budget, and the eligible second-stage batches must not
+depend on the first answer. Suppose the policy's terminal sharp interval
+has width at most $\tau$ for every $x\in F$.
+Then some randomized nonadaptive policy supported on at most $r+1$
+of these combined batches has worst-case precision success at least
+$1/(r+1)$.
+In particular, a sure-precision policy using two scalar queries yields
+a randomized-batch success guarantee of at least $1/2$, even when its
+conditional worst widths are not affine functions of the first answer.
+\end{theorem}
+\begin{proof}
+For $t\in I$, define the conditional worst terminal width
+\[
+ g_j(t)=\max\{c^\top(u-v):u,v\in F,\ L_0u=L_0v=t,
+                                      \ L_ju=L_jv\}.
+\]
+The feasible set is nonempty and compact, so the maximum is attained.
+The expression is exactly the largest terminal sharp width among records
+with first answer $t$: an endpoint pair with equal first and second
+answers belongs to a common terminal fiber, and the endpoints of every
+such fiber are feasible in this maximization.
+
+Each $g_j$ is concave on $I$. Indeed, convex combinations of optimizing
+endpoint pairs at $t_1,t_2$ are feasible at the corresponding convex
+combination of answers, and attain the same convex combination of their
+objective values. The function is also upper semicontinuous: for a
+convergent sequence of answers, compactness gives convergent subsequences
+of optimizing endpoints, whose limits are feasible at the limiting
+answer. Consequently, $g_j$ is finite and measurable.
+
+For a fixed first answer, the policy chooses a single second-stage batch;
+its sure guarantee therefore implies $\min_jg_j(t)\leq\tau$ throughout
+$I$. The strict failure sets
+\[
+ H_j=\{t\in I:g_j(t)>\tau\}
+\]
+are convex by concavity, and $\bigcap_{j=1}^m H_j=\varnothing$.
+Finite Helly's theorem \citep[Theorem~1.1]{amenta2016}, applied in the affine hull of $I$, gives a
+subfamily $J$ of at most $r+1$ sets with empty intersection. This finite
+form of Helly's theorem does not require the sets to be closed; thus
+using strict failure sets preserves success at equality with $\tau$.
+
+Choose uniformly among the combined batches indexed by $J$. For every
+fixed record $x$, its answer $t=L_0x$ lies outside at least one $H_j$,
+so that batch's actual terminal width is at most $g_j(t)\leq\tau$.
+Its precision success probability is therefore at least $1/|J|$, and
+hence at least $1/(r+1)$, for every record.
+\end{proof}
+
+
+The empty second-stage action includes stopping after the first stage.
+Fixed unequal costs are allowed if all combined batches obey the budget;
+the action dictionary and latent record are fixed before randomization.
+The $K$-capacity construction in Theorem~\ref{prop:risk_K_family} is sharp
+with first-answer dimension $r=K-1$ and optimal batch success $1/K$.
+For scalar first answers, at most two second-stage actions suffice to
+retain the optimal sure-width guarantee. On polytopes, test each singleton
+or pair of actions with the shared-first-answer LP in
+Proposition~\ref{prop:two-query-lp}; there are at most
+$\binom m2+m$ candidates. This sparse policy need not minimize conditional
+width at every individual answer. Helly-based sparsification for
+convex-function optimization is classical
+\citep[Section~2, Theorem~1]{rockafellar1965}. The contribution here is
+its certificate-risk interpretation and sharpness through admissible
+information queries, rather than a new general sparse-policy theorem.

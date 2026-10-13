@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "policy_sha256": "0d80ab7548ac0a37b08088d02b77ff80d1e992adb2ecd5deefe4f72b7e8036ae",
+  "completed_utc": "2026-10-11T00:41:53.608569+00:00",
+  "reference_targets_read_for_selection": false,
+  "inputs": {
+    "work\\new_direction_randomized\\lp_solutions.jsonl": "ec5a31615ccc2e74f9c91bcd065eae392f1a4729d56d327a6a47eb4ab5ef2226",
+    "work\\new_direction_randomized\\cases.csv": "347b95b780a11d5c35882cf9d206bec642bf26ab7b10321f8ff92b881b71ecef",
+    "work\\randomized_tie_review\\protocol.txt": "e5747f0f18b7b07bd908377bd5e094545cf41f2c4c6178b035005cd26c85bdfa",
+    "outputs\\review_frozen_forecasts.csv": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0"
+  }
+}

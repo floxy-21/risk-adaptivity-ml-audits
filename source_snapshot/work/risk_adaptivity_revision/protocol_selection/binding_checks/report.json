@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "bound_tasks": 29,
+  "constructed_bound_executions": 109,
+  "escalations_without_callbacks": 7,
+  "changed_task_rejections": 8,
+  "bad_response_rejections": 8,
+  "source_hash_guard_with_python_O": true,
+  "verified_branch_bytes_not_reopened": true,
+  "new_network_calls": 0,
+  "new_model_fits": 0,
+  "scope": "Metadata/source binding and constructed dispatch checks; not new empirical benefit or data-origin authentication",
+  "task_manifest_sha256": "99fb807c2855b038f40cca8aebc98805bb15d9c17fdb365eb6fdfc7cbf39ddad",
+  "bound_workflow_sha256": "cd12430aa127908d1df2411fad3f7dcb68d42f184691e365a7e6f4eb47caf057",
+  "seconds": 1.8645613000262529
+}

@@ -1,0 +1,225 @@
+{
+  "scope": "Read-only retrospective diagnosis of already reported confirmation results. No policy run, no tuning, not calibrated population inference.",
+  "cost_differences": {
+    "width_one": {
+      "wins": 433,
+      "ties": 6227,
+      "losses": 337,
+      "records_saved_on_wins": 455,
+      "extra_records_on_losses": 366,
+      "net_pooled_saved": 89
+    },
+    "uniform_decision": {
+      "wins": 243,
+      "ties": 6633,
+      "losses": 121,
+      "records_saved_on_wins": 266,
+      "extra_records_on_losses": 123,
+      "net_pooled_saved": 143
+    },
+    "hara_one": {
+      "wins": 3343,
+      "ties": 3486,
+      "losses": 168,
+      "records_saved_on_wins": 4492,
+      "extra_records_on_losses": 181,
+      "net_pooled_saved": 4311
+    },
+    "randomized_one": {
+      "wins": 766,
+      "ties": 5919,
+      "losses": 312,
+      "records_saved_on_wins": 846,
+      "extra_records_on_losses": 334,
+      "net_pooled_saved": 512
+    }
+  },
+  "first_query": {
+    "cases": 6997,
+    "same_first_query": 5176,
+    "ml_cert_first": 3414,
+    "width_cert_first": 3251,
+    "ml_only_cert_first": 205,
+    "width_only_cert_first": 42
+  },
+  "selected_probabilities_by_stage": [
+    {
+      "policy": "ml_decision",
+      "step": 1,
+      "n": 6997,
+      "mean_predicted": 0.4779753753619333,
+      "actual_success_rate": 0.4879233957410319,
+      "brier": 0.0955622517464827
+    },
+    {
+      "policy": "ml_decision",
+      "step": 2,
+      "n": 3583,
+      "mean_predicted": 0.5248889025857176,
+      "actual_success_rate": 0.5319564610661457,
+      "brier": 0.1026436057122012
+    },
+    {
+      "policy": "ml_decision",
+      "step": 3,
+      "n": 1677,
+      "mean_predicted": 0.6807031956483344,
+      "actual_success_rate": 0.689922480620155,
+      "brier": 0.09970677507275776
+    },
+    {
+      "policy": "ml_decision",
+      "step": 4,
+      "n": 520,
+      "mean_predicted": 0.898824963075143,
+      "actual_success_rate": 0.9057692307692308,
+      "brier": 0.04219301369117943
+    },
+    {
+      "policy": "ml_decision",
+      "step": 5,
+      "n": 49,
+      "mean_predicted": 1.0,
+      "actual_success_rate": 1.0,
+      "brier": 2.263950301973567e-33
+    },
+    {
+      "policy": "uniform_decision",
+      "step": 1,
+      "n": 6997,
+      "mean_predicted": 0.5114711105422299,
+      "actual_success_rate": 0.4830641703587252,
+      "brier": 0.10804882470244635
+    },
+    {
+      "policy": "uniform_decision",
+      "step": 2,
+      "n": 3617,
+      "mean_predicted": 0.5530148139527788,
+      "actual_success_rate": 0.5219795410561239,
+      "brier": 0.12141184913202042
+    },
+    {
+      "policy": "uniform_decision",
+      "step": 3,
+      "n": 1729,
+      "mean_predicted": 0.7027299168307187,
+      "actual_success_rate": 0.6737998843262001,
+      "brier": 0.126466949158158
+    },
+    {
+      "policy": "uniform_decision",
+      "step": 4,
+      "n": 564,
+      "mean_predicted": 0.8996199397441506,
+      "actual_success_rate": 0.8900709219858156,
+      "brier": 0.05974005426044233
+    },
+    {
+      "policy": "uniform_decision",
+      "step": 5,
+      "n": 62,
+      "mean_predicted": 1.0,
+      "actual_success_rate": 1.0,
+      "brier": 0.0
+    }
+  ],
+  "first_query_calibration_bins": [
+    {
+      "policy": "ml_decision",
+      "bin": "(-1e-12, 0.1]",
+      "n": 2247,
+      "mean_predicted": 0.024728365064845458,
+      "actual_success_rate": 0.04984423676012461
+    },
+    {
+      "policy": "ml_decision",
+      "bin": "(0.1, 0.3]",
+      "n": 942,
+      "mean_predicted": 0.18972613811039404,
+      "actual_success_rate": 0.2059447983014862
+    },
+    {
+      "policy": "ml_decision",
+      "bin": "(0.3, 0.5]",
+      "n": 564,
+      "mean_predicted": 0.3959714426297228,
+      "actual_success_rate": 0.42907801418439717
+    },
+    {
+      "policy": "ml_decision",
+      "bin": "(0.5, 0.7]",
+      "n": 499,
+      "mean_predicted": 0.5998072246748121,
+      "actual_success_rate": 0.6032064128256514
+    },
+    {
+      "policy": "ml_decision",
+      "bin": "(0.7, 0.9]",
+      "n": 665,
+      "mean_predicted": 0.8093858264986301,
+      "actual_success_rate": 0.8300751879699249
+    },
+    {
+      "policy": "ml_decision",
+      "bin": "(0.9, 1.0]",
+      "n": 2080,
+      "mean_predicted": 0.9852085430909925,
+      "actual_success_rate": 0.9677884615384615
+    },
+    {
+      "policy": "uniform_decision",
+      "bin": "(-1e-12, 0.1]",
+      "n": 973,
+      "mean_predicted": 0.06310300435632335,
+      "actual_success_rate": 0.03391572456320658
+    },
+    {
+      "policy": "uniform_decision",
+      "bin": "(0.1, 0.3]",
+      "n": 1698,
+      "mean_predicted": 0.1854892008041613,
+      "actual_success_rate": 0.10188457008244994
+    },
+    {
+      "policy": "uniform_decision",
+      "bin": "(0.3, 0.5]",
+      "n": 923,
+      "mean_predicted": 0.3945149325496014,
+      "actual_success_rate": 0.3304442036836403
+    },
+    {
+      "policy": "uniform_decision",
+      "bin": "(0.5, 0.7]",
+      "n": 819,
+      "mean_predicted": 0.6019128269630887,
+      "actual_success_rate": 0.5921855921855922
+    },
+    {
+      "policy": "uniform_decision",
+      "bin": "(0.7, 0.9]",
+      "n": 999,
+      "mean_predicted": 0.8044321447682443,
+      "actual_success_rate": 0.8358358358358359
+    },
+    {
+      "policy": "uniform_decision",
+      "bin": "(0.9, 1.0]",
+      "n": 1585,
+      "mean_predicted": 0.9726636426563321,
+      "actual_success_rate": 0.9772870662460568
+    }
+  ],
+  "oracle": {
+    "ml_decision": {
+      "cases_matching_hindsight": 6291,
+      "cases_above_hindsight": 706,
+      "extra_pooled_queries": 763
+    },
+    "width_one": {
+      "cases_matching_hindsight": 6202,
+      "cases_above_hindsight": 795,
+      "extra_pooled_queries": 852
+    }
+  }
+}

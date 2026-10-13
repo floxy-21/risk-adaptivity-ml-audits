@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "synthetic_randomized_states": 80,
+  "corruptions_rejected": 8,
+  "maximum_finite_primary_discrepancy": 9.547918011776346e-15,
+  "maximum_finite_secondary_discrepancy": 6.5503158452884236e-15,
+  "scope": "Fixtures call production to obtain synthetic diagnostics; the independent verifier itself imports no production policy or evaluator."
+}

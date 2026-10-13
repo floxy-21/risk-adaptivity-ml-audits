@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "rows": 89496,
+  "reconstructed_blem_rows": 6552,
+  "uci_raw_target_checks": 82944,
+  "uci_raw_persistence_checks": 82944,
+  "original_predictions_sha256": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+  "reconstructed_predictions_sha256": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+  "exact_original_bytes": true,
+  "raw_source_hashes": {
+    "data_uci_household_power.txt": "4259c9d7ece5dbee9ab8d53682baac68d791c864f0f64a52b4043cb3b90894b7",
+    "data_electricity.txt": "d51565f2cb5a6b768d06ba1bbd3c084c6e2f3aab07f00c6f2dcb80e90175124b",
+    "data_blem_consumer-00000001.csv": "9228795c6369ce144fbb929f9d413397545f86e3a95d2f9a0f27c92f1d55ad8d",
+    "data_blem_consumer-00000002.csv": "93d142217c74ab2c12a98035b3ea178ead234fec0b71942e8e90db5b7e6a2ef3",
+    "data_blem_consumer-00000003.csv": "db69719d2262ebeb6df39abafffca2805c8a03b1b4777f86eb8aa78acf578b6c"
+  },
+  "lossless_export_sha256": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0",
+  "model_refitting": false,
+  "older_lossy_export_used": false,
+  "scope": "The new export preserves original fitted-forecast strings. All UCI targets/persistence are checked against pinned raw loaders; BLEM targets/persistence are rebuilt from original counters and original hourly CSV parsing. This restores the exact original evaluation archive, not independently trained models.",
+  "completed_utc": "2026-10-11T00:59:27.830603+00:00",
+  "runner_sha256": "929bd27444215db48ca79fec00b39ede5e4d841448e6317a885a277f380c3d93",
+  "original_source_files_unchanged": true,
+  "original_mixed_archive_present": true,
+  "original_mixed_archive_sha256": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+  "executed_mode": "raw_reconstruction_only",
+  "full_corrected_analysis_rerun": false
+}

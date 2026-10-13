@@ -1,0 +1,280 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-10T04:55:39.669233+00:00",
+  "wall_seconds": 47.869994799999404,
+  "protocol_hash": "d91bab1cde53fdbe19d037ff7595bb33f5217b6716edff5ceeabfde89d2369b2",
+  "script_hash": "785629e8ccccb8503907f221d30ee382974af5d4681461d4ce9fbdf45b047d6a",
+  "source_hashes": {
+    "study_predictions.csv": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+    "study_summary.json": "8e7133e184a355202908611f7bf16f60383d2b5e12c84e008f6d6d0fd28e9196",
+    "study_recovery.py": "ec9d0bb42a217cde768378a1da98082fe0dedfb27155ae703ae9f365dddeb241",
+    "study_archive_access.py": "de88aaf109b9534402c913789b81f992cd312dc2d17902e953b715198e2ae28b",
+    "study_period_archive.py": "258e29c41b18c11bf9f9a15aa9e7c9344d27f0aaa564d6f0d4723d91ce7abdf9",
+    "run_energy_rank_study.py": "957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183",
+    "study_period_archive.json": "acf73343b06dfc1ad00ca30f500cb86bca2d793831e1cf523a0a408ace30c69c",
+    "study_period_archive_cases.csv": "6db590b075ae3fcea0c29080ec7d3468bcecf3ccd5f2a97dcf76fff69081fe8b",
+    "revised_manuscript.tex": "1e2e4267f1adf8abb36b7c32a665661d90ae1a98388d85cdfbf284a7311ce168"
+  },
+  "public_meters": 31,
+  "meter_days": 3456,
+  "cases": 20736,
+  "positive_width_cases": 1074,
+  "lp_solutions": 1074,
+  "positive_probability_batches_checked": 2341,
+  "max_numerical_residuals": {
+    "primal_violation": 2.8188562595232725e-13,
+    "dual_violation": 9.059419880941277e-14,
+    "normalized_gap": 1.0733081090563701e-13,
+    "pricing_oracle_error": 1.1102230246251565e-16
+  },
+  "max_posterior_width_identity_error_scaled": 1.0240072678691092e-14,
+  "free_revealed_or_deduced_values": 19730,
+  "original_missing_values": 20736,
+  "synthetic_checks": {
+    "synthetic_pricing_cases": 64,
+    "max_pricing_error": 0.0,
+    "analytic_example": {
+      "initial_width": 4.0,
+      "randomized_worst_expected_width": 0.5000000000000001,
+      "deterministic_worst_width": 1.0,
+      "greedy_worst_width": 1.0,
+      "primal_normalized_objective": 0.12500000000000003,
+      "dual_normalized_objective": 0.12500000000000006,
+      "primal_violation": 1.1102230246251565e-16,
+      "dual_violation": 9.71445146547012e-17,
+      "normalized_gap": 2.7755575615628914e-17,
+      "pricing_oracle_error": 0.0,
+      "pricing_oracle_query": [
+        0,
+        1
+      ],
+      "matrix_coordinate_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "matrix_group_indices": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "group_envelopes": [
+        0.12500000000000003
+      ],
+      "raw_group_envelopes": [
+        0.12500000000000003
+      ],
+      "dual_weights": [
+        0.33333333333333337,
+        0.1666666666666668,
+        0.49999999999999983,
+        0.0
+      ],
+      "raw_probability_minimum": 0.0,
+      "probabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.49999999999999994,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.5000000000000001
+      ],
+      "batches": [
+        [],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "deterministic_queries": [
+        2,
+        3
+      ],
+      "greedy_queries": [
+        0,
+        1
+      ],
+      "support_size": 2,
+      "expected_queries": 2.0,
+      "seconds": 0.01077669999722275
+    }
+  },
+  "worst_width_strict_improvements": 663,
+  "actual_width_strict_improvements": 14,
+  "actual_width_strict_worsenings": 649,
+  "cohort_summary": [
+    {
+      "cohort": "household",
+      "scope": "all_cases",
+      "meters": 1,
+      "cases": 1476,
+      "lp_cases": 174,
+      "mean_initial_width": 0.05459095152579948,
+      "mean_randomized_worst_expected_width": 0.01122919845469709,
+      "mean_deterministic_worst_width": 0.012030795121632952,
+      "mean_greedy_worst_width": 0.012869553411982508,
+      "mean_randomized_expected_actual_width": 0.008573802280267249,
+      "mean_deterministic_actual_width": 0.007720638648109538,
+      "mean_greedy_actual_width": 0.008316532461994028,
+      "mean_randomized_expected_queries": 0.23577235772357724,
+      "mean_deterministic_queries": 0.23577235772357724,
+      "mean_greedy_queries": 0.23577235772357724,
+      "mean_randomized_expected_certification": 0.9873368341699862,
+      "mean_deterministic_certification": 0.9884823848238482,
+      "mean_greedy_certification": 0.986449864498645,
+      "fraction_randomized_worst_expected_width": 0.20569706408927885,
+      "fraction_deterministic_worst_width": 0.22038075515037034,
+      "fraction_greedy_worst_width": 0.2357451748372696,
+      "fraction_randomized_expected_actual_width": 0.15705537347549808,
+      "fraction_deterministic_actual_width": 0.14142707595893056,
+      "fraction_greedy_actual_width": 0.15234269104218975,
+      "summed_initial_width": 80.57624445208003,
+      "summed_deterministic_worst_width": 17.757453599530237,
+      "summed_randomized_worst_expected_width": 16.574296919132905,
+      "summed_deterministic_actual_width": 11.39566264460968,
+      "summed_randomized_expected_actual_width": 12.65493216567446
+    },
+    {
+      "cohort": "household",
+      "scope": "positive_initial_width",
+      "meters": 1,
+      "cases": 174,
+      "lp_cases": 174,
+      "mean_initial_width": 0.46308186466712653,
+      "mean_randomized_worst_expected_width": 0.0952545799950167,
+      "mean_deterministic_worst_width": 0.10205433103178298,
+      "mean_greedy_worst_width": 0.10916931514992056,
+      "mean_randomized_expected_actual_width": 0.07272949520502564,
+      "mean_deterministic_actual_width": 0.06549231404948092,
+      "mean_greedy_actual_width": 0.0705471374362252,
+      "mean_randomized_expected_queries": 2.0,
+      "mean_deterministic_queries": 2.0,
+      "mean_greedy_queries": 2.0,
+      "mean_randomized_expected_certification": 0.8925814208902271,
+      "mean_deterministic_certification": 0.9022988505747126,
+      "mean_greedy_certification": 0.8850574712643678,
+      "fraction_randomized_worst_expected_width": 0.20569706408927887,
+      "fraction_deterministic_worst_width": 0.2203807551503704,
+      "fraction_greedy_worst_width": 0.2357451748372696,
+      "fraction_randomized_expected_actual_width": 0.15705537347549814,
+      "fraction_deterministic_actual_width": 0.1414270759589306,
+      "fraction_greedy_actual_width": 0.15234269104218978,
+      "summed_initial_width": 80.57624445208002,
+      "summed_deterministic_worst_width": 17.757453599530237,
+      "summed_randomized_worst_expected_width": 16.574296919132905,
+      "summed_deterministic_actual_width": 11.39566264460968,
+      "summed_randomized_expected_actual_width": 12.654932165674461
+    },
+    {
+      "cohort": "portugal",
+      "scope": "all_cases",
+      "meters": 30,
+      "cases": 19260,
+      "lp_cases": 900,
+      "mean_initial_width": 20.211294428258615,
+      "mean_randomized_worst_expected_width": 5.310858013597165,
+      "mean_deterministic_worst_width": 5.938548441998682,
+      "mean_greedy_worst_width": 6.601483983771914,
+      "mean_randomized_expected_actual_width": 4.740325759022129,
+      "mean_deterministic_actual_width": 3.9996380497253345,
+      "mean_greedy_actual_width": 4.353566305765573,
+      "mean_randomized_expected_queries": 0.0934579439252336,
+      "mean_deterministic_queries": 0.0934579439252336,
+      "mean_greedy_queries": 0.0934579439252336,
+      "mean_randomized_expected_certification": 0.9868832368948005,
+      "mean_deterministic_certification": 0.9879543094496367,
+      "mean_greedy_certification": 0.9874350986500521,
+      "fraction_randomized_worst_expected_width": 0.26672620943432235,
+      "fraction_deterministic_worst_width": 0.2959526986435496,
+      "fraction_greedy_worst_width": 0.3283274197892306,
+      "fraction_randomized_expected_actual_width": 0.236699849945707,
+      "fraction_deterministic_actual_width": 0.2015379574931764,
+      "fraction_greedy_actual_width": 0.21930334671615315,
+      "summed_initial_width": 389269.53068826074,
+      "summed_deterministic_worst_width": 114376.44299289462,
+      "summed_randomized_worst_expected_width": 102287.12534188137,
+      "summed_deterministic_actual_width": 77033.02883770994,
+      "summed_randomized_expected_actual_width": 91298.67411876623
+    },
+    {
+      "cohort": "portugal",
+      "scope": "positive_initial_width",
+      "meters": 30,
+      "cases": 900,
+      "lp_cases": 900,
+      "mean_initial_width": 432.52170076473425,
+      "mean_randomized_worst_expected_width": 113.65236149097932,
+      "mean_deterministic_worst_width": 127.08493665877184,
+      "mean_greedy_worst_width": 141.27175725271894,
+      "mean_randomized_expected_actual_width": 101.4429712430736,
+      "mean_deterministic_actual_width": 85.59225426412218,
+      "mean_greedy_actual_width": 93.16631894338327,
+      "mean_randomized_expected_queries": 2.0,
+      "mean_deterministic_queries": 2.0,
+      "mean_greedy_queries": 2.0,
+      "mean_randomized_expected_certification": 0.719301269548731,
+      "mean_deterministic_certification": 0.7422222222222223,
+      "mean_greedy_certification": 0.731111111111111,
+      "fraction_randomized_worst_expected_width": 0.2667262094343224,
+      "fraction_deterministic_worst_width": 0.2959526986435496,
+      "fraction_greedy_worst_width": 0.3283274197892305,
+      "fraction_randomized_expected_actual_width": 0.23669984994570697,
+      "fraction_deterministic_actual_width": 0.20153795749317638,
+      "fraction_greedy_actual_width": 0.21930334671615315,
+      "summed_initial_width": 389269.53068826074,
+      "summed_deterministic_worst_width": 114376.44299289463,
+      "summed_randomized_worst_expected_width": 102287.12534188136,
+      "summed_deterministic_actual_width": 77033.02883770994,
+      "summed_randomized_expected_actual_width": 91298.67411876623
+    }
+  ],
+  "original_artifacts_unchanged": true,
+  "interpretation": "Frozen exploratory public-UCI archive-aware daily pair-specific B2 screen. Expected worst width uses an oblivious completion adversary. Every selected-batch bound remains valid, but expected improvement is not pathwise dominance. No measured operational cost, external validation or submission claim.",
+  "output_hashes": {
+    "cases.csv": "347b95b780a11d5c35882cf9d206bec642bf26ab7b10321f8ff92b881b71ecef",
+    "meters.csv": "4d15f60dbb23b5d814ca2de80e070ef2ab28450214b5600b6eabc88d29e2eb31",
+    "cohorts.csv": "274d4ea59b340612ee5eb68cbaa0a19c1e5cfac29e9aff67d38e4b8222096e48",
+    "pairs.csv": "fec825c59a94b82bbed030f532aa43ecf9cb4c58bac05dc6110d7c25b36e92b1",
+    "support.csv": "29f518080d8a3c0245efde0aa8b2757e6fb8b5e86d0cf3dda7901a6db00dfd50",
+    "lp_solutions.jsonl": "ec5a31615ccc2e74f9c91bcd065eae392f1a4729d56d327a6a47eb4ab5ef2226"
+  }
+}

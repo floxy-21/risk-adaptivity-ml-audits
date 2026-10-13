@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "cases": 29,
+  "ratios": 6,
+  "case_ratio_rows": 174,
+  "exhaustive_per_case_candidate_evaluations": 306,
+  "exact_threshold_ratio": "1",
+  "universal_fixed_cost": "87+29r",
+  "adaptive_with_fixed_fallback_cost": "65+51r",
+  "cost_aware_catalogue_cost": "min(87+29r,65+51r)",
+  "recorded_api_policies_checked": 2,
+  "recorded_api_trials_checked": 12,
+  "ledger_sha256": "41b0b966188920a250507307216ad09cde880b01e33e1824f38c1d21a9551133",
+  "producer_report_sha256": "527f58072d4310bf26d9084c1e9e48fb2629c571aeeb74d2ec310c5abac2b51e",
+  "scope": "Exact supplied-catalogue cost accounting and source correspondence, not measured monetary savings or new scientific certificate verification"
+}

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "source_sha256": "6af5c1101850724b2067c14f3bc8abf891b1d12bd04fa3d4a5c24dbbbeb4c9d8",
+  "period_cases_sha256": "11b689686ad58c83a1e80c1dca7e4b4c8deef8251e526c67d7e804d89d909339",
+  "script_sha256": "248e79b40fc72fba7bf6793c6e0cb620000cd0d8971e93a17d785daa90809a69",
+  "consumers": [
+    "MT_081",
+    "MT_125"
+  ],
+  "period_comparisons": 432,
+  "linear_programs": 864,
+  "seed": 1103,
+  "all_gaps_patterns_blocks_tolerances": true,
+  "max_absolute_endpoint_difference": 1.1368683772161603e-13,
+  "max_normalized_endpoint_difference": 1.673177637416244e-15,
+  "max_absolute_constraint_violation": 0.0,
+  "checking_tolerance": "1e-8*max(1,abs(production endpoints))",
+  "highs_primal_dual_feasibility_tolerance": 1e-09,
+  "scipy": "1.18.1",
+  "elapsed_seconds": 19.858284200017806,
+  "scope": "Independent whole-period linear-program representation checks paired endpoints only; no production imports. The separate-loss quadratic extrema and model training are not independently rerun by this checker."
+}

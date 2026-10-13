@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-10T05:18:09.237209+00:00",
+  "cases": 20736,
+  "compact_versus_finite_game_checks": 1074,
+  "every_positive_support_checked": 2341,
+  "permitted_copy_checks": 19662,
+  "cohort_aggregate_checks": 38,
+  "max_normalized_compact_error": 1.3311244057439254e-13,
+  "saved_mixture_primal_dual_linkage_checks": 1074,
+  "max_saved_mixture_primal_violation": 2.220446049250313e-16,
+  "max_saved_mixture_dual_violation": 9.059419880941277e-14,
+  "max_saved_mixture_primal_dual_gap": 1.0733081090563701e-13,
+  "wall_seconds": 62.13889199999903,
+  "source_hashes": {
+    "work/verify_randomized_revision.py": "c3729ef4627329caedf14a796414d0ab01974efd87e70b2f29e6ccabe3b6a9cb",
+    "outputs/review_frozen_forecasts.csv": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0",
+    "work/new_direction_randomized/cases.csv": "347b95b780a11d5c35882cf9d206bec642bf26ab7b10321f8ff92b881b71ecef",
+    "work/new_direction_randomized/support.csv": "29f518080d8a3c0245efde0aa8b2757e6fb8b5e86d0cf3dda7901a6db00dfd50",
+    "work/new_direction_randomized/lp_solutions.jsonl": "ec5a31615ccc2e74f9c91bcd065eae392f1a4729d56d327a6a47eb4ab5ef2226",
+    "work/new_direction_randomized/result.json": "dbc6ea39ee01ae6a7aef6e19d49d3aad098d3a557389fa73a15cd4ba21f77338",
+    "work/randomized_recovery_root/compact_randomized.py": "6789e2323702c159c58aa4b77efe26dad83e43f97a9993d0319be0d6e91ab70d"
+  },
+  "scope": "Distributed public UCI inputs; no fit, raw download, or independent optimization of randomized adaptive policies. Every case and positive support checked, not a sample. Saved support probabilities and queries are linked bidirectionally to the finite-game LP; its matrix, worst expected mixture objective, primal and dual feasibility, and gap are reconstructed independently."
+}

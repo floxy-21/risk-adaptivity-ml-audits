@@ -1,0 +1,27 @@
+{
+  "status": "repaired_logging_only",
+  "original_trajectories_gzip": "work/external_deadline/test/trajectories_before_trace_repair.jsonl.gz",
+  "original_trajectories_sha256": "815898592c0359fa735dd07e69e9f61e7ccbab0f1e51f51dfa92ddb364ef3c50",
+  "original_run_result": "work/external_deadline/test/run_result_before_trace_repair.json",
+  "original_run_result_sha256": "38dc5a6a9e697fff91102ad0e541a33e697585658cb2f4075949303ebf70816b",
+  "executed_evaluator_path": "work/external_deadline/evaluate_before_trace_alias_fix.py.txt",
+  "executed_evaluator_sha256": "c32e6be473d6613315cce78e65687a8a51cd588d790d21bb6aa75fa6b98e9aed",
+  "corrected_evaluator_sha256": "a5c91d25cf16d123673284744a0ed79aa572fb968704e047363de0bd7f829e85",
+  "repaired_trace_sha256": "75b6be19ad2faf2e7e3e7a05ff9f5e28c1f5b171a468d475786d9cafe3be72ef",
+  "rows": 17532,
+  "stages": 52995,
+  "changed_after_snapshots": 14600,
+  "repair_script_sha256": "2b78911d85736a367be1d86c7dc74eed0ae1494b2628949cc091b4e1b492f413",
+  "unchanged_outcome_files": {
+    "archive_snapshots.json": "67e5953de598921f16765cd926bf455c6f03d5e6ed5c257f54d8b40b859a32f7",
+    "cases.csv": "f74fa93719f655f4760d690783018dc673fd15930594c6f48ef2a4378db3e6a5",
+    "cost_summary.csv": "bd5aa8dac0379499e10efb1f93ce35ceabcaa5ddd38257da4a9e6e2812ce2799",
+    "coverage_curves.csv": "a68e2fe2941fbd40de228bbfac37d78546c6d1dd18294447cafcafdfec90ddeb",
+    "headline_summary.json": "165c4a9f2b34cf9b4d2ccf1828c3d2b4a34f3bb3c837fb4f654f089ff003c036",
+    "household_curves.csv": "420736e0e8607486c29dada21dbf02b0346a395b4dc77cde8f874066b0512117",
+    "month_curves.csv": "e3c081ea20a1e1fc0f541c7f0407b7338f8e9b0af3da775a2a40ab3e188aa5d0",
+    "pair_curves.csv": "d238a31456de5c59004e2f49a51a77672b7214fc6e1c066492fc556ca408440d",
+    "pre_outcome_manifest.json": "e4e0d3f974f28dfc1d0bd8f548f715be84d8340602db03c4332a7c07e22643ab"
+  },
+  "scope": "Only saved after arrays reconstructed from before, recorded batch answers, and totals. No fits, selections, costs, bounds, decisions, or numerical summaries changed."
+}

@@ -1,0 +1,146 @@
+{
+  "status": "PASS",
+  "scope": "Independent offline cached-metadata qualification and internal chronology check; no network or refit",
+  "public_systems": 817,
+  "screened_stopping_prefix": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "selected_systems": [
+    1,
+    2,
+    7
+  ],
+  "decision_ledger": [
+    {
+      "id": 1,
+      "mid_metering": 1,
+      "electric_meter": "Other pulse output meter (class 1)",
+      "feed": {
+        "start_time": 1641911700,
+        "end_time": 1791763260,
+        "interval": 88.17188661160468,
+        "npoints": 1699540,
+        "unit": "kWh"
+      },
+      "decision": "selected"
+    },
+    {
+      "id": 2,
+      "mid_metering": 1,
+      "electric_meter": "SDM120 Modbus/MBUS Single Phase (class 1)",
+      "feed": {
+        "start_time": 1600870460,
+        "end_time": 1791770990,
+        "interval": 10,
+        "npoints": 19090054
+      },
+      "decision": "selected"
+    },
+    {
+      "id": 3,
+      "mid_metering": 0,
+      "electric_meter": "Other electricity meter",
+      "decision": "exclude_not_mid"
+    },
+    {
+      "id": 4,
+      "mid_metering": 1,
+      "electric_meter": "SDM120 Modbus/MBUS Single Phase (class 1)",
+      "feed": {
+        "start_time": 1659917670,
+        "end_time": 1742471390,
+        "interval": 10,
+        "npoints": 8255373,
+        "unit": "kW"
+      },
+      "decision": "exclude_metadata_does_not_cover_frozen_calendar"
+    },
+    {
+      "id": 5,
+      "mid_metering": 1,
+      "electric_meter": "SDM120 Modbus/MBUS Single Phase (class 1)",
+      "feed": {
+        "start_time": 1637338670,
+        "end_time": 1744860590,
+        "interval": 10,
+        "npoints": 10752193
+      },
+      "decision": "exclude_metadata_does_not_cover_frozen_calendar"
+    },
+    {
+      "id": 6,
+      "mid_metering": 0,
+      "electric_meter": "OpenEnergyMonitor EmonPi v2, EmonTx4 or newer",
+      "decision": "exclude_not_mid"
+    },
+    {
+      "id": 7,
+      "mid_metering": 1,
+      "electric_meter": "SDM120 Modbus/MBUS Single Phase (class 1)",
+      "feed": {
+        "start_time": 1668776160,
+        "end_time": 1791771090,
+        "interval": 30,
+        "npoints": 4099832,
+        "unit": "kWh"
+      },
+      "decision": "selected"
+    }
+  ],
+  "verified_cached_response_hashes": 41,
+  "training": [
+    {
+      "system_id": 1,
+      "valid_intervals": 4344,
+      "total_intervals": 4344,
+      "valid_fraction": 1.0,
+      "complete_raw_days": 181,
+      "feature_eligible_training_days": 174,
+      "eligible": true,
+      "training_response_sha256": "f9f6e91779b2d4045a65f9a4f3017581f6563cf330357ec5bf79da91edac5293"
+    },
+    {
+      "system_id": 2,
+      "valid_intervals": 4344,
+      "total_intervals": 4344,
+      "valid_fraction": 1.0,
+      "complete_raw_days": 181,
+      "feature_eligible_training_days": 174,
+      "eligible": true,
+      "training_response_sha256": "a1b963786c704a90cae4f2df6979bf60624bc6511acb232b6bf9771b1d82a370"
+    },
+    {
+      "system_id": 7,
+      "valid_intervals": 4338,
+      "total_intervals": 4344,
+      "valid_fraction": 0.9986187845303868,
+      "complete_raw_days": 178,
+      "feature_eligible_training_days": 167,
+      "eligible": true,
+      "training_response_sha256": "67084479d4f75cde086ebdb60f72fbc9cdf61eecfb5db539f77d3ed72526370f"
+    }
+  ],
+  "chronology_utc": {
+    "source_rule_frozen": "2026-10-12T02:12:05.103909+00:00",
+    "first_training_request": "2026-10-12T02:15:19.153844+00:00",
+    "last_training_request": "2026-10-12T02:15:25.018368+00:00",
+    "detailed_operational_rule_frozen": "2026-10-12T02:20:03.969830+00:00",
+    "first_July_request": "2026-10-12T02:27:39.430552+00:00"
+  },
+  "chronology_interpretation": "Source rule precedes all hourly data; detailed operational/training gates were locked after training-only inspection and before July retrieval. Internal timestamps are not external preregistration.",
+  "source_sha256": {
+    "source_selection_protocol.json": "ed1985ed81448de60582344ae83dae0999fc0a7267d27ff12a8d857dd3a51cc8",
+    "selected_systems.json": "536d90046d069cabb888aa0a1be9083cca12c29ce89f7996f9f91e987e5158e9",
+    "selection_ledger.json": "45fecb188fe7f6f0f84b611742efcfab68e9faaa994daa0249cd44b8a14dbee8",
+    "request_log.jsonl": "d181a24635c3351c39935c4de12006aa7c8918990be85dc17c7457acedd49246",
+    "protocol_lock.json": "abae34c65056b019ac01b443fa8ef880db50d80509f0a4827885f02b17b8da13"
+  },
+  "script_sha256": "bf390a82ffbd4d62d8c488ca6e3dbd13e0206779c845b4a08fe8b8e96fe017a0",
+  "seconds": 0.15759780001826584
+}

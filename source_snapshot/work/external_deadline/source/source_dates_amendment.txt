@@ -1,0 +1,12 @@
+SOURCE-AVAILABILITY DATE AMENDMENT, 2026-10-11
+Frozen after raw archive member inventory and the first Part2 timestamp, before any computed quality counts, forecasts, model comparisons or acquisition outcomes.
+
+The archive contains 40 CSV members (Part1 and Part2 for each of20 households). The inspected Part2 begins27June2014. Excluding Part1 as already prescribed would leave at most about95 training days in the originally proposed January-September2014 window, before gaps or lag requirements. The experiment therefore adopts the following source-only schedule:
+Training: 2014-07-01 inclusive to2015-01-01 exclusive.
+Validation: 2015-01-01 inclusive to2015-02-01 exclusive.
+Test: 2015-02-01 inclusive to2015-04-01 exclusive.
+Prepare UTC hourly grid from2014-06-23 through2015-04-02 inclusive, retaining unavailable hours explicitly as ineligible.
+Retain90/20/20 source-complete-day eligibility minima unchanged for the first inventory.
+Every fit and acquisition outcome remains uncomputed at this freeze.
+
+All other source rules, including Part2only,16-second maximum integration interval and full3600-second coverage, remain unchanged.

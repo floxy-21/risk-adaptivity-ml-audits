@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-11T19:50:57.033051+00:00",
+  "steps": [
+    {
+      "command": [
+        "acquisition/check_acquisition.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"scope\": \"Analytic quadrature, independent finite-game secondary LP, eligibility and reproducible draws; no external outcome data.\",\n  \"gaussian_quadrature_cases\": 4,\n  \"gaussian_max_absolute_error\": 3.552713678800501e-15,\n  \"finite_game_comparisons\": 10,\n  \"finite_game_max_absolute_error\": 1.3322676295501878e-15,\n  \"policy_seed_cases\": 60,\n  \"all_observed_cases\": 5,\n  \"empty_primary_optimum_progress_fixture\": \"passed\",\n  \"seconds\": 0.9282517000101507,\n  \"sha256\": {\n    \"acquisition.py\": \"9f2963ee9d1dd00fb194e62a962469b91a445bda8078e3000c8d055db51e934c\",\n    \"compact_secondary.py\": \"84b245d7407651ab9d1d4b6f751829fa28f54677b0343542e98f83ab87003121\",\n    \"check_acquisition.py\": \"66f4f134bb453401d22ca488eb5e05e859ad6950dbf26d868ebade16f606c691\"\n  }\n}\n"
+    },
+    {
+      "command": [
+        "forecast/check_design.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"fits_performed\": 0,\n  \"external_data_opened\": false,\n  \"feature_scalar_checks\": 17712,\n  \"feature_names\": [\n    \"lag2_same_hour\",\n    \"lag3_same_hour\",\n    \"lag8_same_hour\",\n    \"mean_day_minus2\",\n    \"hour_sin\",\n    \"hour_cos\",\n    \"weekday_sin\",\n    \"weekday_cos\",\n    \"month_sin\",\n    \"month_cos\"\n  ],\n  \"same_day_future_perturbation_fixtures\": 3,\n  \"missing_lag_persistence_independence\": \"passed\",\n  \"missing_target_forecast_independence\": \"passed\",\n  \"training_issue_boundary\": \"passed\",\n  \"frozen_model_parameters_equal\": true,\n  \"sha256\": {\n    \"work\\\\external_deadline\\\\forecast\\\\forecast.py\": \"dde3d45c43770cffd7d66abcc29c397522a23439203e75ceea7773cee160c359\",\n    \"work\\\\external_deadline\\\\forecast\\\\check_design.py\": \"a57e5a15a7b79dc9bc98cd32b2be8722d3042389f6cf7fa685f1faf3e73f893b\",\n    \"outputs\\\\run_energy_rank_study.py\": \"957036a716cf24c915c10de9bf606a0aee41c5995c2b5610f5c97a21c028e183\"\n  }\n}\n"
+    },
+    {
+      "command": [
+        "review/verify_external.py",
+        "--self-test"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"arithmetic_fixtures\": 4,\n  \"rejected_corruptions\": [\n    \"future feature\",\n    \"future fitted state\",\n    \"query cap\",\n    \"duplicate query\",\n    \"known query\",\n    \"hidden initial target\",\n    \"uncharged requested batch\",\n    \"wrong certificate\"\n  ],\n  \"imports_experiment_or_acquisition\": false,\n  \"external_outcomes_opened\": false\n}\n"
+    }
+  ],
+  "synthetic_full_trajectories": 150,
+  "external_data_read": false,
+  "code_sha256": "d2f6988827e85c9dee55c7b81aa28893af549e0af34d97f5f660f16839a2d5c2"
+}

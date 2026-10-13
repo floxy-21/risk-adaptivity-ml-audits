@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "scope": "Synthetic editorial fixture only; no external outcomes read and no manuscript written.",
+  "scenarios": [
+    {
+      "synthetic_scenario": 0,
+      "abstract_words": 226,
+      "changed_summary_rejected": true,
+      "unverified_results_rejected": true,
+      "pure_identical_output": true
+    },
+    {
+      "synthetic_scenario": 1,
+      "abstract_words": 227,
+      "changed_summary_rejected": true,
+      "unverified_results_rejected": true,
+      "pure_identical_output": true
+    },
+    {
+      "synthetic_scenario": 2,
+      "abstract_words": 228,
+      "changed_summary_rejected": true,
+      "unverified_results_rejected": true,
+      "pure_identical_output": true
+    },
+    {
+      "synthetic_scenario": 3,
+      "abstract_words": 227,
+      "changed_summary_rejected": true,
+      "unverified_results_rejected": true,
+      "pure_identical_output": true
+    }
+  ],
+  "sha256": "b5d364a2ee2721fb188cc2860254df9cbfee72eec74717a176787b6310cdac33"
+}

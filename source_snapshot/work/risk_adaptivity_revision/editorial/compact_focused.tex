@@ -1,0 +1,94 @@
+\section{A Compact Mean-Width Specialization}
+\label{sec:structured}\label{sec:randomized-recovery}
+The general hardest-record LP can enumerate exponentially many batches.
+A supporting specialization avoids this enumeration for disjoint exact
+totals and coordinate queries. It has a different measurement interface
+from cumulative-register retrieval: each query returns one missing increment.
+Write $\F=\prod_g\{y_g\geq0:\sum_i y_{gi}=E_g\}$ and let $d$ include
+all known contributions to the affine contrast. Its sharp endpoints are
+\begin{equation}
+ D^-=d+\sum_gE_g\min_i c_{gi},\qquad
+ D^+=d+\sum_gE_g\max_i c_{gi}.\label{eq:sharp}
+\end{equation}
+For retained coordinates $S_g(Q)$, with singleton/empty ranges defined as zero,
+\begin{equation}
+ W(Q,y)=\sum_g\left(\sum_{i\in S_g(Q)}y_{gi}\right)
+             \operatorname{range}(c_{g,S_g(Q)}).
+ \label{eq:querywidth}
+\end{equation}
+Define $v_{gi}(Q)=\mathbf1\{i\in S_g(Q)\}\operatorname{range}(c_{g,S_g(Q)})$.
+Omit zero-width blocks and redundant queries of a last determined coordinate.
+For admissible batches $\mathcal Q_B$ with at most $B$ unit-cost queries,
+\begin{equation}
+ W(Q,y)=\sum_{g,i}y_{gi}v_{gi}(Q),\qquad
+ R_B=\min_{\pi\in\Delta(\mathcal Q_B)}\sum_gE_g\max_i\mathbb E_\pi v_{gi}(Q).
+ \label{eq:random-objective}
+\end{equation}
+Maximizing a linear function on each mass simplex proves this expression.
+The resulting finite LP has primal constraints
+$\mathbb E_\pi v_{gi}(Q)\leq t_g$ and objective $\min\sum_gE_gt_g$;
+its dual is
+\begin{equation}
+ \max_{w,\eta}\eta\quad\text{subject to}\quad
+ w_{gi}\geq0,\quad\sum_iw_{gi}=E_g,\quad
+ \eta\leq\sum_{g,i}w_{gi}v_{gi}(Q)\quad(Q\in\mathcal Q_B).
+ \label{eq:random-dual}
+\end{equation}
+
+The separation oracle sorts coefficients, fixes the two retained endpoints
+and selects the smallest interior weights until the retained cardinality is
+met. A budget-allocation dynamic program then joins the blocks. Weighted
+interiors need not form consecutive coefficient windows. The equivalent
+compact LP represents this dynamic program by a unit flow through block/budget
+states. Each edge fixes retained endpoints; conditional interior-inclusion
+variables satisfy $0\leq z_{ei}\leq p_e$ and
+$\sum_i z_{ei}=(r_e-2)p_e$, where $p_e$ is edge flow and $r_e$ is retained
+cardinality. These are scaled fixed-cardinality subset polytopes. Flow-path
+decomposition and their integral vertices produce legal batch distributions;
+conversely every legal batch induces such flows and marginals. Thus the
+representation has no relaxation gap. For $B\geq1$, a safe unpruned size
+bound is $O(B\sum_g\min(B,m_g)m_g^3)$, and $O(m_g^3)$ for one block with
+fixed budget. At $B=0$, the sharp interval is evaluated directly from
+\eqref{eq:sharp}, without constructing a recovery LP.
+Online Resource~1, S5, provides the complete formulation, decomposition
+proof, deterministic reference and weighted oracle. General weighted-oracle
+robust optimization and dynamic-program representations are established
+\citep{kawase2024,martin1990}; the retained-endpoint construction is the
+specific implementation used here.
+
+\begin{proposition}[A computable hardest completion]
+\label{prop:adaptive-dual-completion}\label{sec:adaptive-dual-completion}
+An optimal dual vector $w^*$ in \eqref{eq:random-dual}, with determined
+and omitted independent blocks restored, is a feasible completion $y^*$.
+Every admissible batch satisfies $W(Q,y^*)\geq R_B$. The compact batch
+policy is therefore mean-width optimal even among randomized adaptive
+coordinate-query policies with the same hard budget.
+\end{proposition}
+\begin{proof}
+The nonnegative dual block masses are exactly the residual target
+constraints. Strong LP duality gives $\eta^*=R_B$, so the dual batch
+inequalities and \eqref{eq:random-objective} prove the stated bound.
+For each fixed seed, the transcript-fiber argument of
+Proposition~\ref{prop:risk_concavity_transcript} identifies the adaptive
+terminal interval with that of its final queried set. At $y^*$ every
+such execution has width at least $R_B$. The compact batch attains $R_B$
+in worst expectation, giving the reverse inequality.
+\end{proof}
+
+The implementation's redundant nonnegative epigraph bounds can yield dual
+block masses below $E_g$. Adding a deficit to a fixed coordinate cannot
+decrease any payoff because $v_{gi}(Q)\geq0$; weak duality bounds the
+completed payoff by the primal value. Numerical outputs retain raw masses,
+tiny excess-mass corrections, and the completed record for pricing checks.
+These are floating-point certificates with reported tolerances.
+
+\paragraph{Choosing among equally robust policies.}\label{sec:tie-selection}
+Following the optimal-face principle of \citet{iancu2014}, the secondary
+objective minimizes $\sum_g(E_g/m_g)\sum_i\mathbb E_\pi v_{gi}(Q)$,
+the width at the uniform-within-block completion, subject to attaining
+$R_B$. It uses no hidden answers and removes pointwise-dominated expected
+width functions. A separately checked refinement also requires never
+worsening the archived policy. Neither refinement claims to optimize
+precision or requests until a decision. Their adverse recorded outcomes
+remain reported in the historical control study.
+

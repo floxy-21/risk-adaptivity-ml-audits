@@ -1,0 +1,27 @@
+{
+  "cases": 28,
+  "compact_successes": 28,
+  "compact_failures": [],
+  "finite_comparisons": 12,
+  "max_finite_discrepancy_normalized": 1.260028441002609e-15,
+  "maxima": {
+    "primal_normalized": 3.774758283725532e-15,
+    "dual_normalized": -0.0,
+    "stationarity_normalized": 5.218048215738236e-15,
+    "duality_gap_normalized": 5.773801518644678e-16
+  },
+  "method_seconds_range": [
+    0.009612099995138124,
+    10.012186300009489
+  ],
+  "peak_mib_range": [
+    71.421875,
+    168.6171875
+  ],
+  "host": {
+    "platform": "Windows-11-10.0.26100-SP0",
+    "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel"
+  },
+  "single_run": true,
+  "numerical_checks_pass": true
+}

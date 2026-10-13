@@ -1,0 +1,38 @@
+\paragraph{A reading--feedback cost frontier.}
+A post-analysis calculation makes the protocol choice explicit without
+assigning an unmeasured monetary benefit. Let $c_{\rm read}>0$ charge for a
+reserved scalar reading and $c_{\rm round}\geq0$ for an information round;
+write $r=c_{\rm round}/c_{\rm read}$. Under the restricted interface, each of
+the 22 cases admitting the certified adaptive rule costs $2+2r$ in reading
+units, versus $3+r$ for its certified fixed batch. Thus feedback is preferable
+exactly when $r<1$. The seven remaining cases use fixed-three under both
+complete-coverage baselines. Over the same 29 cases, fixed-three costs
+$87+29r$, adaptive-where-certified with fixed fallback costs $65+51r$, and
+the catalogue selector attains their minimum. Ties favor fewer rounds.
+
+\begin{table}[htbp]\centering\small
+\caption{Declared-cost sensitivity on the unchanged 29-case subset at 1\%
+internal error and exact endpoints. Costs are reading-charge units, not
+measured prices or latency. All methods retain the same precision guarantee.}
+\label{tab:protocol-cost-frontier}
+\begin{tabular}{rrrr}\hline
+$r$ & Fixed-three & Adaptive with fixed fallback & Catalogue choice\\\hline
+0 & 87 & 65 & 65\\
+0.25 & 94.25 & 77.75 & 77.75\\
+0.5 & 101.5 & 90.5 & 90.5\\
+1 & 116 & 116 & 116\\
+2 & 145 & 167 & 145\\
+4 & 203 & 269 & 203\\\hline
+\end{tabular}\end{table}
+
+Neither baseline is uniformly inferior: fixed-three is already optimal
+within this catalogue when $r\geq1$, and adaptive with fallback is optimal
+when $r\leq1$. The benefit is preventing an acquisition choice that assigns
+priority to the wrong resource. The analysis uses exact rational arithmetic,
+exports all 174 case--ratio choices with their certificates, and independently
+checks all 306 candidate evaluations. It is separable across pairwise audits;
+shared readings, stopping costs and unlisted protocols are outside this
+calculation. The existing three-task public-API measurements remain separate:
+mean I/O was 0.331~s for bulk and 0.497~s for adaptive retrieval, supporting
+bulk on that admissible interface. Those observations do not calibrate $r$
+or turn the modeled frontier into measured savings.

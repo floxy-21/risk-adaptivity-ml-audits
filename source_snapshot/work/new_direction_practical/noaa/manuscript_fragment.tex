@@ -1,0 +1,121 @@
+% Standalone integration fragment, based on panel_summary.json and immutable
+% recorded source/decode snapshots. Does not claim natural hidden-label truth.
+\subsection{Natural precipitation accumulations: a zero-query audit}
+\label{sec:noaa-natural}
+The aggregate-only information structure also occurs without deliberately
+removing fine-resolution labels. NOAA's COOP Hourly Precipitation Data retain
+legacy records in which an accumulation total is reported but its distribution
+over the intervening hours is unavailable \cite{noaa_hpd_v2,noaa_hpd_format}.
+This supports a limited retrospective verification task: determine whether two
+fixed forecasts can be ordered for every temporal allocation consistent with
+the archived total. It does not establish that historical hourly readings can
+be recovered, or assign a cost to recovering them.
+
+We fixed a small source-based panel before inspecting forecast comparisons.
+A lexical screen of the first three CONUS station files found nine simple
+one-day accumulation records after 2000 at Alberta, Alabama
+(USC00010140; $32.2322^{\circ}$N, $87.4104^{\circ}$W). All nine occur in December
+2008 or June 2009 and are retained. We also retain every eligible complete day
+in those two months. Of 61 calendar dates, 52 are included: nine accumulation
+days and 43 complete days. Seven dates have no hourly row, and two contain
+multi-day accumulations outside this fixed one-day design. Selection is
+purposive and does not estimate the prevalence of useful coarse records.
+
+On each natural case, the hourly record has a beginning flag at 00:00,
+interior accumulation flags, and an ending flag with the total at 23:00.
+The current CSV definition assigns these fields to $[00{:}00,01{:}00)$ and
+$[23{:}00,24{:}00)$ local standard time, respectively. Thus the constraint
+covers the full 24-hour recorded day. Values in hundredths of an inch are
+converted to millimetres by multiplication by $0.254$. We use the original
+accumulation total, never the computed \texttt{DlySum} field as an independent
+measurement. The station inventory specifies UTC$-6$ in both months.
+
+The permitted public-source audit includes the parallel 15-minute station
+file and the digital raw-data files for both months. For the six December
+cases, the parallel file supplies three initial zero quarter-hours followed
+by the same unresolved accumulation and matching total. The three June
+event dates are absent. No selected station record is present in either
+monthly digital raw file. These findings are preserved with source-row
+pointers and hashes. Initial zero quarter-hours do not identify any complete
+three-hour target: every three-hour bin still contains unconstrained
+nonnegative periods, so projecting the checked information onto the eight
+bins leaves $y\geq0$ and $\sum_i y_i=T$. Several legacy download endpoints
+returned HTTP 404; the conclusion concerns the documented files checked,
+not a proof that no other archive exists.
+
+We compare the GEFSv12 control member with the fixed arithmetic mean of its
+five daily members, with no fitting or member selection
+\cite{guan2022gefs,noaa_gefs_archive}. These are retrospective numerical
+weather forecasts, not forecasts issued in 2008--2009 or an ML-performance
+benchmark. The nearest $0.25^{\circ}$ grid point is 8.6565\,km from the station.
+The nominal cycle is 00:00 UTC; Phase 2 integration actually starts at 03:00
+UTC following the replay analysis. Guan et al.'s documented corrections
+concern the initial 00:00--03:00 and 00:00--06:00 accumulated fields. We use
+valid windows 06:00--06:00 the following day, checked against GRIB validity
+metadata, corresponding to eight local three-hour bins. Nested three- and
+six-hour precipitation fields are differenced. There were 28 negative
+differences, between $-0.05$ and $-0.01$\,mm,
+across 27 of 260 member-days. Each discrepancy passed the recorded packing
+resolution bound; this establishes consistency with differential quantization,
+not its exclusive causal explanation. Our specified nonnegative preprocessing caps the first
+three-hour amount at its six-hour total and uses the residual for the second,
+preserving every decoded six-hour total. All raw differences and the complete
+raw-versus-processed endpoint sensitivity are retained.
+
+Let $a$ denote the processed control and $b$ the processed ensemble mean.
+For the daily mean squared-error contrast $\Delta=L(a)-L(b)$, the direct
+paired bounds are compared with subtraction of separately sharp individual
+MSE bounds using exactly the same information. Table~\ref{tab:noaa-natural}
+reports all nine natural cases. Two days certify lower ensemble-mean MSE;
+the separate individual bounds certify neither. One day is an exact forecast
+tie and six permit both orderings. Uniform allocation gives point orderings
+on all eight non-tie days, but six of those orderings are not implied by the
+observed information. There is no fine-resolution truth with which to label
+those point decisions correct or incorrect.
+
+\begin{table}[t]
+\centering
+\caption{All natural accumulation cases. Bounds are for control minus
+ensemble-mean MSE over eight three-hour bins, in $\mathrm{mm}^2$.
+Positive intervals certify the ensemble mean.}
+\label{tab:noaa-natural}
+\begin{tabular}{lrrrl}
+\hline
+Date & Total (mm) & Lower & Upper & Conclusion\\
+\hline
+2008-12-05 & 12.700 & 0.00000 & 0.00000 & exact tie\\
+2008-12-10 & 12.700 & 7.18081 & 25.37356 & ensemble\\
+2008-12-11 & 33.020 & $-24.65680$ & 26.47467 & unresolved\\
+2008-12-17 & 5.080 & $-0.48739$ & 0.43971 & unresolved\\
+2008-12-28 & 5.080 & $-1.01836$ & 0.37356 & unresolved\\
+2008-12-29 & 5.080 & $-0.04186$ & 0.03942 & unresolved\\
+2009-06-05 & 7.874 & $-1.15768$ & 1.48011 & unresolved\\
+2009-06-14 & 1.524 & 0.64919 & 1.47063 & ensemble\\
+2009-06-24 & 9.652 & $-0.00005$ & 0.04821 & unresolved\\
+\hline
+\end{tabular}
+\end{table}
+
+The conclusions on all nine natural days are unchanged using raw signed
+increments; preprocessing changes two dry-control conclusions to ties.
+All 43 complete controls have zero recorded precipitation, predominantly
+archive-assigned zero flags. Their feasible sets are singleton zero vectors,
+so they test only this degenerate case and do not validate nonzero natural
+endpoints against hidden truth. Combining their observed loss contrasts with
+the nine natural intervals yields the 52-day interval
+$[-0.250924,1.195845]\,\mathrm{mm}^2$, which does not order the forecasts.
+We also fixed a supplementary $\pm2.54$\,mm total perturbation before inspecting
+paired outcomes, motivated by NOAA's nominal $0.1$-inch gauge accuracy.
+With $T\in[\max(0,T_0-2.54),T_0+2.54]$, only the 2008-12-10 strict certificate
+remains. This is a source-inspired sensitivity, not a validated error bound
+for the legacy totals or a confidence statement about physical rainfall.
+
+This panel supplies a concrete natural use of zero-query partial-label
+evaluation: some forecast comparisons are identifiable even when their
+individual scores are not. Its scope is limited by the nine selected events,
+recording and measurement uncertainty, and grid-point versus gauge
+representativeness. It provides neither evidence of retrieval savings nor
+a general ranking of the forecast systems. The lightweight archive contains
+source excerpts, every decoded-message record and provenance pointer, both
+forecast variants, and an offline executable reconstruction; fresh GRIB
+decoding and full-source checks are distinguished from excerpt arithmetic.

@@ -19,6 +19,21 @@
     "report": "outputs/two_target_lp.json"
   },
   {
+    "name": "joint_assurance_feasibility",
+    "script": "work/risk_adaptivity_revision/joint_certification/assurance_feasibility/verify_assurance.py",
+    "args": [
+      "--output-dir",
+      "outputs/joint_assurance_feasibility"
+    ],
+    "report": "outputs/joint_assurance_feasibility/report.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json",
+      "work/risk_adaptivity_revision/joint_certification/precision_external_results/plans.json",
+      "work/risk_adaptivity_revision/joint_certification/empirical_external_results/empirical_plans.json",
+      "work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/fresh_both_panel_replay_20261014.json"
+    ]
+  },
+  {
     "name": "source_identity_guards",
     "script": "work/risk_adaptivity_revision/joint_certification/provenance_chain/check_source_guards.py",
     "args": [

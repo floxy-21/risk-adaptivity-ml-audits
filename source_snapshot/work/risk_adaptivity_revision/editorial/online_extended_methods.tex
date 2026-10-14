@@ -2738,7 +2738,7 @@ deployment or in the historical forecasting study.
 \section{S10. Computing policies and hardest records on polytopes}\label{sec:general-algorithms}
 Let $F=\{y\in\mathbb R^n:Ay\le b\}$ be nonempty and compact, and let
 $T(y)=c^\top y+d$. Equalities can be represented by paired inequalities.
-The constant $d$ does not affect width. Write $\rho=\max_{y\in F}\min_{Q\in\mathcal Q}W_Q(y)$ for the hardest-record value, equal to the optimal randomized worst expected width by the main scalar theorem. The first formulation allows any
+The constant $d$ does not affect width. Write $\rho=\max_{y\in F}\min_{Q\in\mathcal Q}W_Q(y)$ for the hardest-record value, equal to the optimal randomized worst expected width by the scalar theorem in S11. The first formulation allows any
 declared finite family $\mathcal Q$ of legal batches; $L_Q$ denotes the matrix
 of their exact linear measurements.
 
@@ -2831,8 +2831,851 @@ the conditional LPs; the polynomial bit-complexity statement applies to
 rationally encoded inputs and answers. It does not solve arbitrary-budget
 randomized precision-risk optimization or minimize expected requests until
 certification. No grid of possible first answers is used.
+\section{S11. Scalar penalty classification and full information proofs}
+\section{Information, terminal width, and risk}
+\label{sec:risk_setup}
+Let $F\subset\mathbb R^n$ be nonempty, compact, and convex, and let
+$T(y)=c^\top y+d$ be the scalar quantity to be audited. A fixed finite
+collection of exact linear measurements is available. Write $L_Q$ for
+the measurement matrix of a selected set $Q$, and let $\mathcal Q$ be
+the nonempty finite family of admissible final sets, available to both
+policy classes. Admissibility is determined before observing answers; for example,
+$\sum_{j\in Q}k_j\le B$ for nonnegative fixed costs $k_j$.
+Coordinate observations correspond to rows of the identity matrix.
+The results do not require nonnegative targets or disjoint aggregates.
+
+For a feasible record $y$, define the information fiber and its sharp
+target width by
+\begin{equation}
+ F_Q(y)=\{z\in F:L_Qz=L_Qy\},\qquad
+ W_Q(y)=\max_{z\in F_Q(y)}T(z)-\min_{z\in F_Q(y)}T(z).
+ \label{eq:risk_fiber}
+\end{equation}
+The extrema exist by compactness, and $0\le W_Q(y)\le D_T$, where
+$D_T=\max_F T-\min_F T$. This is the local diameter of the
+scalar information fiber. The optimized quantity is the full fiber's
+diameter, rather than the actual error of a selected point estimate.
+An additive constant in $T$ does
+not affect $W_Q$. In particular, a paired squared-loss contrast is
+affine in the unknown verification targets and fits this formulation.
+
+A randomized batch policy draws $Q\sim\pi$ before seeing answers. An
+adaptive policy selects successive measurements and a stopping decision
+from the answers already observed and an independent internal random
+seed. Every execution must terminate after finitely many queries at a
+set in $\mathcal Q$. Query and stopping rules are jointly measurable in
+the observed history and seed; observations are exact. For a finite-valued,
+nondecreasing function $\phi:[0,\infty)\to\mathbb R$, define
+\begin{equation}
+ R_{\mathrm{batch}}^{\phi}
+ =\inf_{\pi\in\Delta(\mathcal Q)}\sup_{y\in F}
+   \mathbb E_{Q\sim\pi}\phi(W_Q(y)),\qquad
+ R_{\mathrm{adaptive}}^{\phi}
+ =\inf_{\mathcal P}\sup_{y\in F}
+   \mathbb E\phi(W_{Q_{\mathcal P}(y)}(y)).
+ \label{eq:risk_objectives}
+\end{equation}
+The hidden record is fixed before the random seed is drawn. Thus the
+supremum is outside the expectation. When measurement error is represented
+by additional hidden coordinates, one fixed error vector is part of that
+record for the entire execution. An adversary choosing a new error after
+each query is a different information model. These objectives concern terminal
+width under a hard budget, rather than expected requests until a winner
+is certified. The expectations are well defined: the widths are Borel
+measurable by Proposition~\ref{prop:risk_concavity_transcript}, and a
+finite-valued monotone $\phi$ is Borel measurable and bounded on $[0,D_T]$.
+
+For a required precision $\tau\geq0$, let $\mathcal C$ be either the
+randomized batch or randomized adaptive policy class, and write
+$Q_{\mathcal P}(y,\omega)$ for the terminal set under internal seed
+$\omega$. Define its optimal worst-case precision-success probability by
+\begin{equation}
+\begin{aligned}
+ S_\tau^{\mathcal C}
+ &=\sup_{\mathcal P\in\mathcal C}\inf_{y\in F}
+   \Pr_\omega\!\left\{W_{Q_{\mathcal P}(y,\omega)}(y)\leq\tau\right\}\\
+ &=1-R_{\mathcal C}^{\phi_\tau},\qquad
+   \phi_\tau(w)=\boldsymbol{1}\{w>\tau\},
+\end{aligned}
+\label{eq:risk_precision_success}
+\end{equation}
+where $R_{\mathcal C}^{\phi_\tau}$ denotes the corresponding risk in
+\eqref{eq:risk_objectives}. The identity follows by complementing the
+success event and reversing each supremum or infimum under subtraction
+from one; it does not require an optimal policy to attain either bound.
+The probability concerns the algorithm's seed at a fixed hidden record,
+and equality at the threshold counts as success. Reaching this precision
+does not require the interval to exclude zero, so it need not certify a
+winning model.
+
+\begin{proposition}[Concavity and the transcript fiber]
+\label{prop:risk_concavity_transcript}
+For every fixed $Q$, $W_Q$ is nonnegative, finite, concave, and upper
+semicontinuous on $F$. For every adaptive execution, its terminal
+information fiber is precisely $F_Q(y)$ for its terminal queried set $Q$.
+\end{proposition}
+\begin{proof}
+Choose maximizing and minimizing endpoints $u_k,v_k\in F_Q(y_k)$,
+$k=1,2$. For $0\le\lambda\le1$, convexity of $F$ and linearity of the
+measurements make $\lambda u_1+(1-\lambda)u_2$ and
+$\lambda v_1+(1-\lambda)v_2$ feasible endpoints at
+$\lambda y_1+(1-\lambda)y_2$. Their target difference is
+$\lambda W_Q(y_1)+(1-\lambda)W_Q(y_2)$, proving concavity.
+For upper semicontinuity, take $y_k\to y$ and a subsequence attaining
+the limsup of the widths. Compactness supplies a further subsequence
+whose endpoint pairs converge to $u,v\in F_Q(y)$. Its limiting
+difference is at most $W_Q(y)$.
+
+For the transcript claim, fix the internal random seed. If no query is
+made, both fibers are $F$. Otherwise, any
+$z\in F_Q(y)$ gives the same answer to the first queried measurement.
+Inductively, equal previous answers produce the same next measurement
+and the same next answer. The stopping decision is also unchanged.
+Thus every completion agreeing with all queried answers follows the
+same entire transcript. Conversely, any completion consistent with
+that transcript must agree on every queried answer. Query choices and
+the stopping time therefore impose no additional restrictions on the
+fiber beyond those exact observations. This argument is pointwise in the
+seed; no conditioning on a positive-probability seed event is required.
+\end{proof}
+
+\section{Which width penalties can benefit from adaptation?}
+\label{sec:risk_classification}
+The next result uses classical minimax theory. The contribution is the
+resulting classification for sharp information-fiber widths and its
+coordinate-query converse, rather than a new minimax or duality theorem.
+The proof has two parts. For concave penalties, a single hardest record
+limits every final query set, including those chosen adaptively; Jensen's
+inequality supplies a batch policy meeting that limit. For any nonconcave
+penalty, a three-coordinate construction realizes a strict midpoint
+violation as an adaptive advantage. These arguments establish the universal
+claim; the later numerical checks test implementations on particular inputs.
+
+\begin{theorem}[Universal classification of width penalties]
+\label{prop:risk_classification}
+Let $\phi:[0,\infty)\to\mathbb R$ be finite-valued and nondecreasing.
+Randomized batch and randomized adaptive querying have equal minimax
+$\phi$-risk for every problem satisfying Section~\ref{sec:risk_setup}
+if and only if $\phi$ is concave. More precisely, put
+\begin{equation}
+ \rho=\min_{\pi\in\Delta(\mathcal Q)}\max_{y\in F}
+         \sum_{Q\in\mathcal Q}\pi_Q W_Q(y).
+ \label{eq:risk_rho}
+\end{equation}
+If $\phi$ is concave, then
+\begin{equation}
+ R_{\mathrm{adaptive}}^{\phi}
+ =R_{\mathrm{batch}}^{\phi}=\phi(\rho).
+ \label{eq:risk_concave_value}
+\end{equation}
+Every batch policy attaining~\eqref{eq:risk_rho} simultaneously attains
+this equality for every such concave $\phi$. If $\phi$ is not concave,
+a strict adaptive improvement already occurs on a three-coordinate
+compact convex polytope, with all coordinates queryable at unit cost
+and a hard budget of two.
+\end{theorem}
+\begin{proof}
+The function $\sum_Q\pi_QW_Q(y)$ is affine and continuous in $\pi$,
+and concave and upper semicontinuous in $y$. Sion's minimax theorem \citep{sion1958}
+therefore yields
+\begin{equation}
+ \rho=\max_{y\in F}\min_{Q\in\mathcal Q}W_Q(y).
+ \label{eq:risk_hardest_record}
+\end{equation}
+All values are finite. Writing $G(\pi)=\max_{y\in F}\sum_Q\pi_QW_Q(y)$,
+the bound $|G(\pi)-G(\pi')|\le D_T\|\pi-\pi'\|_1$ proves continuity.
+Thus the minimum in~\eqref{eq:risk_rho} is attained on the compact simplex.
+The maximum in~\eqref{eq:risk_hardest_record} is attained because the
+minimum of finitely many upper semicontinuous functions is upper
+semicontinuous on compact $F$. Hence there is one record $y^\star\in F$
+such that $W_Q(y^\star)\ge\rho$ for every admissible $Q$.
+By Proposition~\ref{prop:risk_concavity_transcript}, every execution of
+every adaptive policy has terminal width at least $\rho$ at this same
+record. Monotonicity gives the lower bound $\phi(\rho)$.
+
+Let $\pi^\star$ attain~\eqref{eq:risk_rho}. Concavity, Jensen's
+inequality, and monotonicity give, for every $y\in F$,
+\[
+ \sum_Q\pi^\star_Q\phi(W_Q(y))
+ \le \phi\!\left(\sum_Q\pi^\star_QW_Q(y)\right)
+ \le\phi(\rho).
+\]
+This proves the upper bound and simultaneous optimality. No continuity
+of $\phi$ at zero is needed; the finite-mixture form of Jensen's
+inequality suffices. For example, $\phi(w)=\boldsymbol{1}\{w>0\}$ is
+concave on $[0,\infty)$ despite its jump at zero.
+
+For necessity, a nonconcave, nondecreasing finite-valued $\phi$ must
+have a strict midpoint-concavity violation: there exist $0\le l<h$ such
+that, with $m=(l+h)/2$,
+\begin{equation}
+ \phi(m)<\{\phi(l)+\phi(h)\}/2.
+ \label{eq:risk_midpoint_violation}
+\end{equation}
+Indeed, if midpoint concavity held, for $0\le x\le z$ and dyadic
+$q_k\uparrow\theta$ its dyadic inequalities and monotonicity would give
+\[
+\phi((1-\theta)x+\theta z)
+\ge\phi((1-q_k)x+q_kz)
+\ge(1-q_k)\phi(x)+q_k\phi(z).
+\]
+Taking the limit only on the right proves full concavity without a
+continuity assumption, a contradiction. Set $d_0=h-l$ and consider
+\begin{equation}
+ F_{l,h}=\{(a,b,c):0\le a\le1,\ 0\le b\le l+d_0a,
+                  \ 0\le c\le h-d_0a\},\qquad T=ha+b+c.
+ \label{eq:risk_converse_polytope}
+\end{equation}
+All three coordinates are available at unit cost, with budget two.
+The widths after querying $\{a,b\}$ and $\{a,c\}$ are respectively
+$h-d_0a$ and $l+d_0a$. An adaptive policy first observes $a$ and then
+queries the coordinate with the larger remaining capacity. Its terminal
+width is at most $m$, so its risk is at most $\phi(m)$.
+At $(a,b,c)=(1/2,0,0)$, these two widths equal $m$, while the width
+after querying $\{b,c\}$ is $h$. Thus every admissible terminal set
+has width at least $m$, and the adaptive optimum is exactly $\phi(m)$.
+
+Now put equal adversarial mass on $(0,0,0)$ and $(1,0,0)$.
+Each batch $\{a,b\}$ or $\{a,c\}$ has average penalty
+$\{\phi(l)+\phi(h)\}/2$. The batch $\{b,c\}$ has width $h$ at both
+records, so its average penalty is no smaller. A batch using fewer
+coordinates cannot improve upon an extension to two coordinates,
+because more observations only shrink the fiber. Every randomized
+batch policy consequently has worst-case risk at least
+$\{\phi(l)+\phi(h)\}/2>\phi(m)$. This is the required strict separation.
+\end{proof}
+
+The universal quantifier is essential. A nonconcave penalty permits an
+adaptive advantage somewhere in this class; it need not yield an
+advantage for every feasible set. The theorem covers heterogeneous fixed
+costs and overlapping constraints at the level of information theory.
+It does not imply a polynomial-time optimizer for an arbitrary feasible
+set or budget.
+
+\section{S12. General dimensional precision bound}
+\subsection{A precision consequence of sparse-policy bounds}
+% Research draft: AI-assisted derivation and internal mathematical review.
+% Not a human-specialist validation or historical-priority claim.
+The dimension bound below adapts established sparse-policy reasoning.
+\citet[Theorem~2 and Example~5]{kurtz2026} gives the corresponding
+dimension-plus-one policy bound for continuous concave scenario costs,
+including conditional information discovery. Conditional terminal widths
+fit that framework on polytopes. The direct Helly proof below also allows
+compact convex $F$, for which these widths are upper semicontinuous but
+need not be continuous, and translates the sparse cover into precision
+success under uniform randomization.
+\begin{theorem}[A dimension-dependent batch guarantee, adapted from sparse-policy bounds]
+\label{thm:helly-precision}
+Let $F$ be nonempty, compact and convex, and let $T(x)=c^\top x+d$.
+Fix a first-stage exact linear observation $L_0x$, whose feasible-answer
+set $I=L_0F$ has affine dimension $r$. After this answer, a deterministic
+policy chooses one of finitely many second-stage linear measurement
+batches $L_1,\ldots,L_m$. Every combined batch $(L_0,L_j)$ must obey the
+same declared hard budget, and the eligible second-stage batches must not
+depend on the first answer. Suppose the policy's terminal sharp interval
+has width at most $\tau$ for every $x\in F$.
+Then some randomized nonadaptive policy supported on at most $r+1$
+of these combined batches has worst-case precision success at least
+$1/(r+1)$.
+In particular, a sure-precision policy using two scalar queries yields
+a randomized-batch success guarantee of at least $1/2$, even when its
+conditional worst widths are not affine functions of the first answer.
+\end{theorem}
+\begin{proof}
+For $t\in I$, define the conditional worst terminal width
+\[
+ g_j(t)=\max\{c^\top(u-v):u,v\in F,\ L_0u=L_0v=t,
+                                      \ L_ju=L_jv\}.
+\]
+The feasible set is nonempty and compact, so the maximum is attained.
+The expression is exactly the largest terminal sharp width among records
+with first answer $t$: an endpoint pair with equal first and second
+answers belongs to a common terminal fiber, and the endpoints of every
+such fiber are feasible in this maximization.
+
+Each $g_j$ is concave on $I$. Indeed, convex combinations of optimizing
+endpoint pairs at $t_1,t_2$ are feasible at the corresponding convex
+combination of answers, and attain the same convex combination of their
+objective values. The function is also upper semicontinuous: for a
+convergent sequence of answers, compactness gives convergent subsequences
+of optimizing endpoints, whose limits are feasible at the limiting
+answer. Consequently, $g_j$ is finite and measurable.
+
+For a fixed first answer, the policy chooses a single second-stage batch;
+its sure guarantee therefore implies $\min_jg_j(t)\leq\tau$ throughout
+$I$. The strict failure sets
+\[
+ H_j=\{t\in I:g_j(t)>\tau\}
+\]
+are convex by concavity, and $\bigcap_{j=1}^m H_j=\varnothing$.
+Finite Helly's theorem \citep[Theorem~1.1]{amenta2016}, applied in the affine hull of $I$, gives a
+subfamily $J$ of at most $r+1$ sets with empty intersection. This finite
+form of Helly's theorem does not require the sets to be closed; thus
+using strict failure sets preserves success at equality with $\tau$.
+
+Choose uniformly among the combined batches indexed by $J$. For every
+fixed record $x$, its answer $t=L_0x$ lies outside at least one $H_j$,
+so that batch's actual terminal width is at most $g_j(t)\leq\tau$.
+Its precision success probability is therefore at least $1/|J|$, and
+hence at least $1/(r+1)$, for every record.
+\end{proof}
+
+
+The empty second-stage action includes stopping after the first stage.
+Fixed unequal costs are allowed if all combined batches obey the budget;
+the action dictionary and latent record are fixed before randomization.
+The $K$-capacity construction in Online Resource~1, S9 is sharp
+with first-answer dimension $r=K-1$ and optimal batch success $1/K$.
+For scalar first answers, at most two second-stage actions suffice to
+retain the optimal sure-width guarantee. On polytopes, test each singleton
+or pair of actions with the shared-first-answer LP in
+Online Resource~1, S10; there are at most
+$\binom m2+m$ candidates. This sparse policy need not minimize conditional
+width at every individual answer. Helly-based sparsification for
+convex-function optimization is classical
+\citep[Section~2, Theorem~1]{rockafellar1965}. The contribution here is
+its certificate-risk interpretation and sharpness through admissible
+information queries, rather than a new general sparse-policy theorem.
+\section{S13. Scalar cumulative-counter planning and feedback triage}
+\subsection{Adaptive precision from cumulative-counter queries}
+\label{sec:counter-precision-method}
+Consider a six-hour block with nonnegative hourly increments
+$z=(z_1,\ldots,z_6)$ and retained cumulative registers $C_0,C_6$,
+all expressed in the same energy units.
+Writing $E=C_6-C_0$, the initial feasible set is
+$F_E=\{z\geq0:\sum_{h=1}^6z_h=E\}$.
+For two frozen forecast vectors $a,b$, their block MSE contrast is
+\[
+ D(z)=d+c^\top z,\qquad
+ d=\frac16\sum_{h=1}^6(a_h^2-b_h^2),\quad
+ c_h=\frac{2(b_h-a_h)}6.
+\]
+The permitted query at boundary $k\in\{1,\ldots,5\}$ returns
+$C_k$, equivalently the prefix sum $s_k=C_k-C_0$.
+The budget is at most two distinct internal registers per pair and block.
+This interface retrieves cumulative registers. The coordinate-increment
+recovery controls are documented separately in Online Resource~1, S2--S4.
+The register queries are exact linear measurements covered by the general
+information model. Adaptive scalar certification also appears in monotone
+integral estimation \citep[Section~4.1]{gaillard2023}; here the target is an
+affine contrast of interval increments under a fixed hard budget.
+
+For integer boundaries $0\leq p<q\leq6$, define
+$r(p,q)=\max_{p<h\leq q}c_h-\min_{p<h\leq q}c_h$.
+With queried boundaries $Q$, let $0=q_0<\cdots<q_m=6$ include
+the outer boundaries and $Q$, and put $s_0=0$, $s_6=E$.
+Nonnegativity and the segment totals give the sharp width
+\begin{equation}
+ W_Q(z)=\sum_{\ell=1}^{m}
+ (s_{q_\ell}-s_{q_{\ell-1}})r(q_{\ell-1},q_\ell).
+ \label{eq:counter-width}
+\end{equation}
+Both endpoints are attainable by placing each segment's mass at a
+minimum- or maximum-coefficient hour. The initial width is $W_0=Er(0,6)$.
+Tasks with $W_0=0$ are already precise and require no queries.
+
+\begin{proposition}[Two best-side splits for an arbitrary block]\label{prop:counter-two-query}
+Let $n\geq3$, $E>0$, $x\geq0$, $\sum_{h=1}^n x_h=E$, and let the target be
+$d+\sum_hc_hx_h$. Each query returns one internal prefix sum. Write
+$r(p,q)=\max_{p<h\leq q}c_h-\min_{p<h\leq q}c_h$.
+For first boundary $k$, put $\ell_k=r(0,k)$ and $r_k=r(k,n)$.
+Define each of the following quantities whenever its corresponding
+side has an eligible second boundary:
+\[
+ \alpha_k=\min_{1\leq j<k}\max\{r(0,j),r(j,k)\},\qquad
+ \beta_k=\min_{k<j<n}\max\{r(k,j),r(j,n)\}.
+\]
+Choose a minimizing boundary on each side, breaking ties by smallest index.
+When both sides are nonempty, for normalized first answer $t=s_k/E$,
+the optimal conditional worst width is
+\[
+ E\min\{\alpha_k t+r_k(1-t),\ \ell_k t+\beta_k(1-t)\}.
+\]
+Thus only one best boundary on each side is needed, independently of $t$.
+If $\Delta_k=\ell_k+r_k-\alpha_k-\beta_k>0$, the switch is
+\[
+ t_k^\star=\frac{r_k-\beta_k}{\Delta_k}\in[0,1],
+\]
+and the worst width for this first boundary is
+\[
+ A_k=E\max\left\{\alpha_k,\beta_k,
+          \frac{\ell_kr_k-\alpha_k\beta_k}{\Delta_k}\right\}.
+\]
+Use the best right split below the switch and the best left split above
+it; either is valid at equality. If $\Delta_k=0$, the two lines coincide
+and $A_k=E\max\{\ell_k,r_k\}$. At $k=1$ only the right split exists and
+$A_1=E\beta_1$; at $k=n-1$ only the left split exists and
+$A_{n-1}=E\alpha_{n-1}$. The optimal deterministic two-query guarantee is
+\begin{equation} A=\min_{1\leq k<n} A_k.\label{eq:counter-adaptive-value}\end{equation}
+\end{proposition}
+\begin{proof}
+All second queries left of $k$ have the common right-side contribution
+$r_k(1-t)$; minimizing their remaining term $t$ times a split range
+selects the same minimizing boundary for every $t\geq0$. The right-side
+argument is identical. Moreover $\alpha_k\leq\ell_k$ and
+$\beta_k\leq r_k$. Hence $\Delta_k\geq0$, and when it is positive the
+displayed intersection belongs to $[0,1]$. The maximum of the lower
+envelope occurs at an endpoint or that intersection. Its endpoint
+values are $\beta_k,\alpha_k$, and its intersection value is the displayed
+quotient. If $\Delta_k=0$, both nonnegative differences vanish, so the
+lines coincide. At an outer eligible boundary the single-hour side has
+zero coefficient range, giving the stated one-line values.
+\end{proof}
+
+All contiguous ranges can be built in $O(n^2)$ arithmetic operations
+and stored in $O(n^2)$ space. Scanning the candidates for every
+$\alpha_k,\beta_k$ costs another $O(n^2)$ operations; the closed forms
+then cost $O(n)$. This is an arithmetic-operation bound for the exact-total,
+uncapped two-prefix problem, not a bit-complexity or noisy-polytope claim.
+For $n=2$, the single internal register determines both increments;
+for $n=1$ the total already determines the only increment.
+
+
+\paragraph{An upper certificate for randomized-batch precision.}
+Returning to the six-hour case, there are ten two-boundary batches.
+Let $z^{(h)}=Ee_h$ be the six feasible
+single-hour mass profiles, and define
+$M_{hQ}(\tau)=\mathbf1\{W_Q(z^{(h)})\leq\tau\}$.
+The finite-profile program
+\begin{equation}
+ U(\tau)=\min_{w\geq0,\,\sum_hw_h=1,\,u}u
+ \quad\text{subject to}\quad
+ \sum_hw_hM_{hQ}(\tau)\leq u\quad\text{for every batch }Q
+ \label{eq:counter-precision-upper}
+\end{equation}
+upper-bounds the worst-case precision success of \emph{every} randomized
+batch policy. Indeed, its minimum success over $F_E$ is at most its success
+averaged over these profiles under $w$, which is at most
+$\max_Q\sum_hw_hM_{hQ}$. This remains valid for batches with fewer queries:
+adding an unused register cannot increase width. The exported $w$ therefore
+provides a checkable upper certificate. The finite profile set need not
+contain a worst completion for an indicator objective, so $U(\tau)$ is not
+asserted to equal the full precision optimum in general. Below, write
+$S_B^\star=S_\tau^{\mathrm{batch}}$ and
+$S_A=S_\tau^{\mathrm{adaptive}}$ for the precision-success values defined
+in \eqref{eq:risk_precision_success}, at this fixed instance and threshold.
+If $A\leq\tau$ and $U(\tau)<1$, the adaptive policy succeeds for every
+completion, whereas no randomized batch can do so. In floating-point
+classification, batch widths within $10^{-9}W_0$ above the threshold count
+as success, and adaptive certification requires a margin of
+$10^{-9}W_0$; exact constructed boundary cases are treated analytically.
+
+\paragraph{An exact counter example.}
+Take $E=1$ and $c=(0,0,1,1,0,1)$, so $W_0=1$.
+Query boundary $4$ first, obtaining $t=s_4$.
+Batch $\{2,4\}$ has width $1-t$, while batch $\{4,5\}$ has width $t$.
+Querying $5$ when $t<1/2$ and $2$ otherwise thus guarantees
+width $\min\{t,1-t\}\leq1/2$.
+Conversely, at $z=e_5$ only batch $\{4,5\}$ attains width below $1$;
+that batch has width $1$ at $z=e_2$. No batch succeeds at both profiles
+for any threshold $\tau<1$. Weights $w_2=w_5=1/2$ in
+\eqref{eq:counter-precision-upper} give $U\leq1/2$.
+An equal mixture of $\{2,4\}$ and $\{4,5\}$ succeeds with probability
+at least $1/2$ on every completion when $\tau\geq1/2$.
+Consequently, for every $\tau\in[1/2,1)$ the optimal adaptive worst-case
+success is $1$ and the optimal randomized-batch worst-case success is
+$1/2$.
+
+\begin{corollary}[The two-register half-success floor]
+\label{prop:counter-half-floor}
+If a deterministic two-register policy guarantees width at most $\tau$,
+a randomized batch supported on at most two batches has worst-case
+precision success at least $1/2$. Thus an adverse-profile upper bound
+$U(\tau)=1/2$ proves the exact batch optimum for such an instance.
+\end{corollary}
+\begin{proof}
+Apply Theorem~\ref{thm:helly-precision} with scalar first answer.
+For the exact-total prefix model the conditional functions are affine:
+their good sets are prefixes or suffixes of $[0,1]$. The longest good
+prefix and earliest good suffix cover all answers; mix their batches
+equally, breaking geometric ties by smallest second-query index.
+\end{proof}
+% Independently reviewed operational corollary; no new historical-priority claim.
+\begin{corollary}[Deciding whether feedback is necessary]
+\label{cor:counter-feedback-triage}
+In the cumulative-counter model, let $\mathcal B$ contain the ten
+two-register batches, and define
+\[
+ D=\min_{Q\in\mathcal B}\max_{z\in F_E}W_Q(z)
+   =\min_{Q\in\mathcal B}\max_{1\leq h\leq6}W_Q(Ee_h).
+\]
+Let $A$ be the exact deterministic adaptive value in
+\eqref{eq:counter-adaptive-value}, and let $U(\tau)$ be the
+finite-profile upper certificate in \eqref{eq:counter-precision-upper}.
+For every $\tau\geq0$,
+\[
+ D\leq\tau
+ \quad\Longleftrightarrow\quad U(\tau)=1
+ \quad\Longleftrightarrow\quad S_B^\star=1.
+\]
+Consequently, the available forecasts and outer registers determine
+three mutually exclusive decisions before any optional retrieval:
+\begin{enumerate}
+\item If $D\leq\tau$, a fixed batch guarantees the requested precision.
+\item If $A\leq\tau<D$, feedback enables a deterministic guarantee that
+      every randomized batch fails to match.
+\item If $\tau<A$, no deterministic adaptive policy with two register
+      queries guarantees the requested precision.
+\end{enumerate}
+In the second case,
+$1/2\leq S_B^\star\leq U(\tau)\leq5/6$.
+The lower bound uses Corollary~\ref{prop:counter-half-floor}; when
+$U(\tau)=1/2$, the randomized-batch optimum is exactly $1/2$.
+\end{corollary}
+\begin{proof}
+For a fixed batch, \eqref{eq:counter-width} is a linear function of
+$z$. It therefore attains its maximum over the energy simplex at a
+concentration profile $Ee_h$, which proves the expression for $D$.
+If $D\leq\tau$, one batch succeeds at all six profiles and, by
+linearity, at every completion. Thus $S_B^\star=1$ and $U(\tau)=1$.
+If $D>\tau$, every batch fails at at least one profile. The uniform
+distribution on the six profiles consequently assigns every batch
+success probability at most $5/6$. It is a feasible adverse distribution
+in \eqref{eq:counter-precision-upper}, so
+$S_B^\star\leq U(\tau)\leq5/6<1$. This proves both equivalences.
+Adaptation includes fixed batches, hence $A\leq D$. The three cases
+then follow from the defining optimality of $A$ and $D$.
+\end{proof}
+
+This decision rule uses only the forecast coefficients, retained total,
+query dictionary and requested precision. It identifies when a sequential
+query response is necessary for a guarantee, without measuring retrieval
+latency, financial cost or the frequency of adverse energy profiles.
+The finite-profile program is decisive for whether batch success equals
+one; it remains only an upper bound on intermediate success values unless
+a matching guarantee is supplied.
+\section{S14. A separate mean joint-width separation}
+\section{Exact shared-query separations: policies, lower bounds, and verifiable certificates}
+\label{sec:joint-separations}
+An auditor comparing several models can reuse each reading across their
+loss contrasts. Let $W_{r,Q}(y)$ be the sharp width for contrast $r$ after
+the common transcript $Q$, and let $W_{r,0}>0$ be its initial width. Define
+\[
+ J_Q(y)=\max_r W_{r,Q}(y)/W_{r,0}.
+\]
+Then $J_Q(y)\leq1/2$ means that every requested comparison has reached
+half its original width. Already determined contrasts can be omitted.
+This is the local diameter of the vector contrast map in a weighted
+$\ell_\infty$ norm, within the established vector-recovery framework
+\citep{krieg2025}; shared-label model certification also has close prior
+work \citep{kuboyama2026}.
+
+\begin{theorem}[Feedback reduces mean joint width with two shared queries]
+\label{thm:shared-prefix-separation}
+Let $F=\{x\in\mathbb R_+^6:\sum_hx_h=1\}$, and allow at most two
+queries from $P_kx=\sum_{h\leq k}x_h$, $k=1,\ldots,5$.  For the two
+contrasts with coefficient vectors
+\[
+ c^{(1)}=(1/2,0,1,1/2,1/2,0),\qquad
+ c^{(2)}=(2/3,2/3,1,1/3,0,1),
+\]
+both initial widths are one.  Let $J_Q(x)$ be the larger terminal sharp
+width and let $R^J_{\mathcal C}=\inf_{P\in\mathcal C}\sup_{x\in F}
+\mathbb E J_{Q_P(x)}(x)$.  Then
+\[
+ R^J_{\mathrm{randomized\ adaptive}}=\tfrac12
+ <\tfrac23=R^J_{\mathrm{randomized\ batch}}.
+\]
+\end{theorem}
+\begin{proof}
+A batch partitions the six coordinates into segments.  Its scalar width
+is the sum, over segments, of segment mass times coefficient range.
+After querying boundary~3 with answer $t$, the worst remaining joint
+widths for second queries~5 and~2 are, respectively,
+\[
+ G_{35}(t)=\max(t,1/3),\qquad
+ G_{32}(t)=\max(1/2,1-t).
+\]
+Query~5 when $t\leq1/2$ and query~2 otherwise.  This guarantees $J\leq1/2$.
+At the single feasible record $x^*=(0,0,1/2,0,0,1/2)$, all ten final
+two-query sets have $J_Q(x^*)\geq1/2$; their values are the first row below.
+Here and below $ij$ means boundaries $\{i,j\}$.
+\[
+\begin{array}{c|cccccccccc}
+Q&12&13&14&15&23&24&25&34&35&45\\\hline
+J_Q(x^*)&1&3/4&5/6&1/2&1/2&5/6&1/2&3/4&1/2&1/2\\
+\mathbb E_\mu J_Q&2/3&2/3&2/3&2/3&2/3&13/18&5/6&5/6&2/3&2/3
+\end{array}
+\]
+For a fixed internal random seed, every completion agreeing with the
+queried answers follows the same adaptive transcript and stopping rule.
+Its terminal interval is therefore the final-set interval used above.
+Fewer queries cannot decrease width.  Thus every randomized adaptive
+policy has expected width at least $1/2$ at $x^*$.
+
+For the batch upper bound, mix $12,23,35$ with probabilities
+$1/6,1/3,1/2$.  Its expected joint widths at $e_1,\ldots,e_6$ are
+$(2/3,2/3,2/3,2/3,2/3,1/2)$.  Each $J_Q$ is a maximum of linear segment
+widths and hence convex; these vertex values bound the expectation
+throughout $F$ by $2/3$.  For the reverse bound, place adverse masses
+$\mu=(1/3,0,1/6,1/6,1/3,0)$ on those vertices.  The table's second row
+shows that every batch has expectation at least $2/3$, and therefore so
+does every batch mixture.  Its worst-record expectation is no smaller.
+\end{proof}
+This is a constructed separation for \emph{mean joint width}, not a
+precision-success probability.  It does not follow from the scalar
+classification: a maximum of concave local widths need not be concave.
+The argument uses established vector recovery and finite-game bounds
+\citep{krieg2025}; its claim is the explicit shared-prefix separation.
+The two contrasts can be realized with a common forecast baseline
+$a=0$ and $b^{(r)}=3c^{(r)}$ in a six-target paired MSE.  Adding other
+contrasts would define a different joint objective.
+For the uncapped exact-total simplex, each batch's scalar widths are
+linear in the energy allocation. Thus $J_Q$ is convex. Its worst mixture
+expectation is attained at a concentration vertex, making the finite-game
+LP exact for randomized-batch mean risk. The deterministic two-query
+planner instead minimizes the worst joint width after feedback. Its
+conditional objective is the maximum of the contrast-specific affine
+widths; checking all line intersections gives the exact optimum.
+The two objectives remain distinct. A deterministic adaptive value below
+the randomized-batch lower bound establishes an adaptive advantage; the
+reverse inequality does not establish optimality among adaptive policies.
+The vertex argument does not transfer to precision indicators, caps or
+measurement error. S8 provides the formulations and verification details.
+\section{S15. Complete operational and historical controls}
+\subsection{Source protocols and the separate-pair controls}
+\label{sec:counter-precision-results}
+The original source contains three cumulative consumption counters
+\citep{blem}, with 91 eligible days per meter. The four frozen forecasters
+are daily persistence, ridge regression, boosted trees and an MLP. We audit
+six-hour blocks ending at 06:00, 12:00 and 18:00 UTC using block endpoints
+and day-start forecasts. Next-day persistence copies are not yet available
+under this declared schedule; production arrival timestamps are not measured.
+The interface permits five internal hourly counters. A two-reading budget
+per separate-pair audit gives 4,914 tasks; a two-reading budget shared by
+all pairs gives the 819-block study above. These are different resource
+requirements. Full source and fitting specifications are in Online
+Resource~1, S3; S6 retains the complete separate-pair controls.
+
+In the separate-pair experiment, a fixed batch guarantees half width on
+4,371 tasks, adaptation is required for the deterministic guarantee on 290,
+and 253 have no such deterministic two-query guarantee. All 290 have exact
+randomized-batch precision optimum $1/2$. Recorded adaptive success is
+98.64\%, versus 98.23\% for the best fixed worst-width batch and 97.96\% for
+greedy; the adaptive--fixed difference is only 0.407 percentage points.
+The prespecified 10\% feedback-prevalence target was not met (5.90\%).
+Adding an illustrative hourly cap of $E/2$ leaves only eight of the 290
+cases requiring feedback at the uncapped half-width threshold; an $E/3$
+cap leaves none. Recorded profiles violate those caps in eight and 57
+cases, respectively. S6 retains both the original-threshold and
+new-constrained-width calculations, all compatibility flags and witnesses.
+
+\subsection{External source and bounded-error controls}
+\label{sec:external-hpm}
+The HeatpumpMonitor source protocol \citep{hpmabout,hpmapi} selected the
+first three ascending system IDs with public MID status, explicit Class-1
+electrical-meter metadata and a cumulative feed spanning January--July
+2025. Systems 1, 2 and 7 qualified. The source rule preceded hourly
+retrieval. Training gates, set after inspecting training data but before
+July retrieval, required 95\% valid hourly intervals and 90 complete days.
+All three passed without replacement. January--June supplied training;
+July supplied 31 test days per system. Each of the four model specifications
+was fitted once, without retuning. The source, exclusion and fitting
+chronology is retained in S6. The later shared-query analysis reuses these
+sources and is retrospective.
+
+Targets are increments of stored API-grid cumulative samples. The interface
+may label a selected native sample with a grid timestamp \citep{hpmcode};
+native acquisition and historical delivery times are unavailable. The
+stored-record interpretation follows Table~\ref{tab:measurement-assumptions}.
+Class-1 metadata is an eligibility condition, not a pointwise error bound.
+
+All 1,674 separate-pair tasks (279 shared blocks) remain eligible. A fixed
+batch guarantees half width on 1,614, feedback supplies the deterministic
+guarantee on 29, and 31 have no such two-query guarantee. The 29 span every
+system and model pair and have exact batch precision optimum $1/2$.
+The adaptive--fixed recorded gain over all tasks is only 0.119 percentage
+points; greedy succeeds on all 29 selected cases. S6 retains the complete
+comparisons and exact checks of 16,740 terminal intervals.
+
+\paragraph{Error allowances and required budgets.}
+\label{sec:stored-error-sensitivity}
+With exact endpoints and fixed internal-readout errors bounded by
+$0.001E$ or $0.01E$, respectively 27 and 22 of those 29 cases retain the
+two-query adaptive guarantee. Both levels cover every system and model
+pair. Exact lower witnesses rule out a deterministic two-query guarantee
+for the remaining cases; no randomized-adaptive impossibility is claimed.
+A separate certified rule uses two adaptive readings for 22 cases and a
+fixed three-reading batch for seven at $0.01E$, guaranteeing precision in
+all 29. Its 65 reserved readings compare with 87 for fixed batches, but
+require 51 information rounds rather than 29. This is a post-analysis
+per-pair hard-budget result, not expected stopping cost or a shared-query
+result. S6 provides the complete latent-error model, rational branch and
+lower witnesses, and three-reading certificates. The next section tests
+the provider's actual unrestricted interface.
+
+\subsection{Retrieval interface and measured operational consequences}
+\label{sec:actual-api}
+The public source permits both single-time and full-range queries
+\citep{hpmapi,hpmcode}. We therefore tested the latter as an operational
+comparator instead of treating a two-reading budget as a measured tariff.
+The first eligible daily-persistence--MLP task from each external system
+was fixed before retrieving optional answers. Two repetitions of five
+policies produced 30 trials and 60 actual HTTP requests, including six
+common endpoint reads. The protocol limited request starts to one per
+second, with no retries or cache-busting. All trials succeeded; timings
+include the recorded persistent-connection behavior and uncontrolled
+public cache/server state.
+
+\begin{table}[htbp]\centering\small
+\caption{Actual public-API measurements on three fixed tasks, two
+repetitions per policy. Incremental I/O excludes the separately logged
+client throttle wait. Bytes are response-body bytes, not wire traffic.
+The full-range interface returns seven hourly samples in one request,
+including retained endpoints; it is an operational alternative outside
+the two-optional-sample benchmark budget.}\label{tab:actual-api}
+\begin{tabular}{lrrr}\toprule
+Policy & Requests & Mean I/O (s) & Mean body bytes\\\midrule
+Exact adaptive & 2 & 0.497 & 104.3\\
+Best deterministic worst-width batch & 2 & 0.539 & 104.7\\
+Mean-width-optimal batch & 2 & 0.582 & 104.3\\
+Greedy adaptive & 2 & 0.551 & 104.3\\
+Full hourly range & 1 & 0.331 & 226.7\\\bottomrule
+\end{tabular}\end{table}
+
+All five policies attained the precision target on these three traces.
+Bulk retrieval used fewer requests and less observed I/O time, while
+also reducing terminal width to zero. Selective retrieval reduced body
+size by about 122 bytes; this small difference excludes HTTP/TLS overhead
+and does not establish an operational saving. A range returning only the
+five internal samples could reduce the bulk response further. Including
+the imposed client throttle, mean completion times were 1.984 seconds
+for exact adaptation and 1.040 seconds for bulk retrieval; these are not
+intrinsic provider latencies. The small workload does not support a
+population speedup or monetary-cost claim.
+
+An offline checker matches all 60 received payload hashes to separately
+cached source responses, checks all 12 adaptive second-query decisions
+and all 30 interval containments (maximum discrepancy
+$1.74\times10^{-18}$). Each result can be verified without repeating
+provider traffic. For this observed interface, select bulk retrieval when
+its unrestricted response is admissible.
+\FloatBarrier
+\paragraph{Selecting a feasible acquisition protocol.}
+The reference implementation chooses among supplied certified protocols
+using the query interface, scalar-reading and information-round limits, and
+the requested priority. On the same 29 external pairwise cases at 1\%
+internal error, it selects bulk in all 29 when range retrieval is admissible;
+under a three-reading restricted interface it uses two adaptive readings in
+22 cases and fixed-three in seven. A one-round restriction instead selects
+fixed-three in all 29. Restricting both interfaces to two readings leaves
+seven cases requiring escalation. The selector does not relax precision or
+treat a missing catalogue certificate as a general impossibility result.
+
+The operational wrapper binds each certificate to its model pair,
+coefficients, meter, block, retained endpoints and source hashes. It rejects
+readout envelopes for a different task, timestamp, feed or unit. Online
+Resource~1, S8 retains all 116 protocol-selection decisions, callback tests,
+exclusions and separate task-binding checks. These protect against accidental
+mismatch; they do not authenticate a provider or calibrate a meter.
+
+Reading charges and feedback delays favor different protocols. If a reserved
+reading costs one unit and an information round costs $r\geq0$, the 29-case
+fixed-three plan costs $87+29r$, while adaptive-where-certified with fixed
+fallback costs $65+51r$. The latter is preferable for $r<1$ and fixed-three
+for $r>1$. This exact catalogue frontier is a declared-cost sensitivity,
+not a measured saving. S8 retains the full grid and all 306 independently
+checked candidate evaluations. Actual public-API retrieval favors bulk:
+the measured three-task mean I/O times are 0.331~s for bulk and 0.497~s for
+adaptive retrieval. A shared-query objective does not change that interface
+advantage.
+\subsection{Computability and proof checks}
+The proofs establish the universal classification. Numerical checks address
+the implementation separately: 3,202 endpoint LPs and 28 finite games agree
+with the analytic constructions, with largest width discrepancy
+$3.34\times10^{-16}$ against a $2\times10^{-8}$ scale-aware tolerance.
+Six explicit polytopes check overlapping constraints, signed contrasts,
+boxes and coupled capacities. All 37 enumerated batches and 24 possible
+first queries agree with the corresponding LP guarantees. These are small
+formulation checks, not a general scalability claim.
+
+For coordinate queries under disjoint exact totals and unit costs, a
+supporting compact mean-width solver avoids enumerating batches.
+Its retained-endpoint flow representation and feasible dual completion
+and adaptive lower-bound proof are given in Online Resource~1, S5;
+S7 supplies the measured comparisons. General weighted-oracle
+and dynamic-program LP constructions are established
+\citep{kawase2024,martin1990}. The specialized representation and its
+hard-budget policy decomposition are the implementation contribution.
+
+All 28 archived compact settings solved. Twelve prescribed enumerated
+comparisons agreed within $1.27\times10^{-15}$ after normalization.
+Compact was faster in eight and used less whole-process peak memory in
+six; enumeration was faster in the four smallest one-block settings.
+The largest tested LP had 38,820 variables and ran in 9.933--10.012 seconds
+for 48 target coordinates. These are single-run measurements on a shared
+Intel Core i7-8565U host with one numerical thread. The complete timing,
+memory, residual, tie-profile and skip ledgers are in S1/S7.
+No large-scale optimizer for arbitrary convex sets or precision risk is implied.
+\subsection{Historical controls: guarantees and observed accuracy}
+\label{sec:historical-application}
+The completed-archive control \citep{portugal,uci} incorporates every permitted forecast
+copy before evaluation. Under identical information and zero new readings,
+paired bounds certify 7,836/9,720 Portugal comparisons (80.62\%), versus
+2,513 (25.85\%) from separate-loss bounds. However, a donor imputer makes
+no observed whole-period errors at full coverage; the added value is an
+all-completions certificate, not demonstrated prediction accuracy.
+In the daily archive analysis, free reconstruction already resolves 95.33\%
+of masked targets, exact acquisition adds only 0.042 percentage points over
+greedy, and robust randomization worsens realized width despite improving
+its objective. Outcome-independent optimal-face refinements retain that
+tradeoff \citep{iancu2014}. The coordinate-acquisition control reports a
+0.9738064\% mean acquisition saving. S2--S4 give its denominator, these adverse controls,
+all 324 grid cells, four-model gates, bootstrap details and full protocols.
+They explain why the present paper evaluates the assurance requirement and
+retrieval interface explicitly rather than claiming general acquisition savings.
+\subsection{Full implementation and source-to-table checks}
+\paragraph{Solver and information-flow checks.}
+All policies reuse the same two counter answers across the six contrasts.
+Plans are saved before recorded answers are loaded; this verifies the new
+run's dependency order, not prospective independence of the reused data.
+A separate implementation reconstructs every plan and summary on all 1,098
+blocks. On 18 fixed representative blocks it solves 19,440 direct endpoint
+LPs and 6,480 conditional LPs. Maximum discrepancies are
+$2.22\times10^{-16}$ and $1.11\times10^{-16}$; the numerical check tolerance
+is $10^{-8}$. The largest batch primal--dual gap is $2.03\times10^{-10}$.
+The numerical adaptive worst-width value is below the optimal randomized
+batch mean value on 462 original and 162 external blocks. This is a
+subset result, not uniform dominance; the full-panel mean differences are
+only 0.00177 and 0.00393 of initial width.
+
+An outcome-informed diagnostic optimizes recorded outcomes over the
+mean-optimal batch face, allowing $10^{-9}$ objective slack. Even its best
+precision success is 54.285512\% original and 69.898131\% external,
+essentially the declared mixtures' 54.285508\% and 69.898130\%.
+Thus arbitrary LP tie selection does not explain this comparison. These
+diagnostic oracle choices are not deployable acquisition policies, nor
+optimal batches for worst-case precision success. S8 supplies all ledgers,
+per-meter results, exact bounded-error certificates and reproduction commands.
+\paragraph{Source-to-table verification.}
+A separate execution regenerated the original counter inputs from three
+version-pinned source files. Restoring the 6,552 omitted target and persistence
+rows recovered the exact byte hash of the 89,496-row frozen forecast archive.
+The external check verified all cached provider decimals against the hourly
+export. Source-to-forecast joins checked all 6,588 contrasts across the
+819 original and 279 external blocks; maximum coefficient discrepancy was below
+$1.12\times10^{-16}$, and retained totals agreed exactly.
+Fresh policy and certificate generation reproduced the 165 and 57 matched
+half-optimal cases. Exact checks covered 7,992 covering multipliers and
+463 adaptive branch intervals. An independent replay recomputed all 10,980
+recorded batch widths and 65,880 paired model-ordering checks. All 1,098
+complete-panel outcome rows agreed with the reported tables, with zero
+numerical difference. Supplemental files retain commands, hashes and
+execution reports; raw-dependent original records are regenerated locally.
+This verifies the frozen-predictor computations, without refitting models
+or claiming external human replication.
 
 \begin{thebibliography}{99}
+\bibitem[Amenta et~al.(2016)]{amenta2016}
+Amenta, N., De Loera, J. A., \& Sober\'on, P. (2016). Helly's theorem: new variations
+and applications. Author manuscript, arXiv:1508.07606v2.
+\url{https://arxiv.org/abs/1508.07606v2}
+
+\bibitem[Gaillard et~al.(2023)]{gaillard2023}
+Gaillard, P., Gerchinovitz, S., \& de Montbrun, {\'E}. (2023).
+Adaptive approximation of monotone functions [Preprint].
+arXiv. \url{https://arxiv.org/abs/2309.07530v1}
+
 \bibitem[Hebrail and Berard(2006)]{uci}
 Hebrail, G., \& Berard, A. (2006). Individual household electric power
 consumption [Data set]. UCI Machine Learning Repository.
@@ -2861,6 +3704,23 @@ On the power of adaption and randomization.
 \emph{Forum of Mathematics, Sigma, 13}, e152.
 \url{https://doi.org/10.1017/fms.2025.10101}
 
+\bibitem[Kuboyama(2026)]{kuboyama2026}
+Kuboyama, T. (2026).
+How many labels does model choice need? Certificates and budgets for selective
+prediction [Preprint].
+arXiv. \url{https://arxiv.org/abs/2609.18622v1}
+
+\bibitem[Kurtz(2026)]{kurtz2026}
+Kurtz, J. (2026). Bounding the optimal number of policies for robust
+K-Adaptability. \emph{Mathematical Programming}. Published 29 January 2026.
+\url{https://doi.org/10.1007/s10107-026-02329-1}
+
+\bibitem[Martin et~al.(1990)]{martin1990}
+Martin, R. K., Rardin, R. L., \& Campbell, B. A. (1990).
+Polyhedral characterization of discrete dynamic programming.
+\emph{Operations Research, 38}(1), 127--138.
+\url{https://doi.org/10.1287/opre.38.1.127}
+
 \bibitem[Mastin et~al.(2015)]{mastin2015}
 Mastin, A., Jaillet, P., \& Chin, S. (2015).
 Randomized minmax regret for combinatorial optimization under uncertainty.
@@ -2884,11 +3744,21 @@ in Online Resource 1.
 \url{https://github.com/openenergymonitor/emoncms/blob/master/Modules/feed/engine/PHPTimeSeries.php}.
 Accessed 12 October 2026.
 
+\bibitem[Rockafellar(1965)]{rockafellar1965}
+Rockafellar, R. T. (1965). Helly's theorem and minima of convex functions.
+\emph{Duke Mathematical Journal, 32}, 381--397.
+\url{https://sites.math.washington.edu/~rtr/papers/rtr005-Helly.pdf}
+
 \bibitem[Sawade et~al.(2012)]{sawade}
 Sawade, C., Landwehr, N., \& Scheffer, T. (2012).
 Active comparison of prediction models.
 \emph{Advances in Neural Information Processing Systems, 25}.
 \url{https://proceedings.neurips.cc/paper_files/paper/2012/file/92fb0c6d1758261f10d052e6e2c1123c-Paper.pdf}
+
+\bibitem[Sion(1958)]{sion1958}
+Sion, M. (1958). On general minimax theorems.
+\emph{Pacific Journal of Mathematics, 8}(1), 171--176.
+\url{https://doi.org/10.2140/pjm.1958.8.171}
 
 \bibitem[Trindade(2015)]{portugal}
 Trindade, A. (2015). ElectricityLoadDiagrams20112014 [Data set].

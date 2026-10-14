@@ -1,23 +1,24 @@
-FINAL INTERNAL REVIEW AND RESPONSE -- FIXED TWO-QUERY BOUNDARY
-Target: PeerJ Computer Science. 13 October 2026.
+FINAL INTERNAL REVIEW AND RESPONSE -- JOINT PRECISION AND ASSURANCE FEASIBILITY
+Target: PeerJ Computer Science. 14 October 2026.
 Manuscript source SHA256:
-a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf
-39-page PDF SHA256:
-59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9
+ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07
+28-page PDF SHA256:
+b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c
 Review: separate AI-assisted analytic, software and practical reviews, followed by integration and visual checks. No external human validation or journal submission.
 
 The new constructed family keeps two coordinate queries and two affine targets fixed: adaptation guarantees precision, while optimal randomized batching has success exactly 1/m for every m>=3. Each target separately admits a fixed two-query guarantee. The separation also holds for all three paired contrasts of three nonnegative forecast vectors.
 The measurement dictionary grows, normalized slack shrinks and three fixed queries suffice. This is a sharp information-model boundary, not a new empirical gain or a general deployment-saving claim.
 The current replay includes exact rational certificates and 7,131 actual endpoint/whole-branch LPs at m=3,5,10. Maximum endpoint discrepancy is 7.105427357601002e-15; maximum width discrepancy is 7.105427357601002e-15, under a 1e-7 comparison tolerance and 1e-9 primal/dual solver tolerances. Finite numerical checks support the implementation; the all-m claim follows from the proof.
-The scalar classification and its limitations remain. The shared-query extension proves an exact constructed mean-risk separation of 1/2 versus 2/3, with full proof and rational checker.
+The focused main text pairs the two-target boundary with assurance feasibility. An elementary finite-action consequence rules out certainty even for randomized adaptive policies on 489 original and 94 external blocks: worst-record success is at most 19/20. This is not a claimed tight optimum or a novel general impossibility principle.
+Source-bound rational checks verify 583 seed-independent adverse distributions and 11,660 strictly failing fibers without recorded answers. Default offline replay independently regenerates the 94 external distributions and 1,880 fibers; the original-panel evidence comes from the separately executed pinned-source chain. The claim applies to the uncapped exact-total noiseless prefix model.
 The complete frozen panels contain 819 original and 279 external blocks, all six model pairs per block, and two total readings. Recorded precision gains over fixed worst-width batches are 7.81 and 11.11 percentage points; greedy gains 2.20 and 2.15 points.
 On 165 original and 57 external blocks, adaptation guarantees precision and the best randomized batch has exactly 50% worst-case success. Recorded success is 100% versus batch expectations of 65.45% and 64.91%. These subsets are selected by the mathematical guarantees, not recorded outcomes.
 At declared 1% stored errors and exact endpoints, 45 external blocks have verified adaptive precision guarantees that every randomized batch fails to match; 26 batch success upper bounds are at most one half. These are upper bounds, not unproved continuum equalities.
-Capacity, bulk retrieval and model-ordering controls are retained. Cap-invalid records are flagged. The shared study is retrospective, not a locked untouched confirmation.
+Capacity, bulk retrieval and model-ordering controls are retained. On the external panel, exact adaptation certifies a best model on 207 blocks and greedy adaptation on 208, despite exact adaptation's higher joint-precision success. Measured public-API retrieval favors bulk. Cap-invalid records are flagged. The shared study is retrospective, not a locked untouched confirmation.
 The latest follow-up review, objective-matched challenger and paired-outcome uncertainty details are recorded in peerj_final_followup_review_20261013.txt and the indexed joint supplement.
-The paper now leads with the joint study and includes the full central proof and one worked real-data certificate in the main text. Further witnesses and cost tables remain in Online Resource 1.
+The 28-page paper leads with the fixed-two-query joint boundary, the assurance-feasibility decision and a worked source-derived certificate. Scalar classification and mean-risk developments remain in the supplement. Further witnesses and cost tables remain in Online Resource 1.
 The latest review also added a reconstructible shared-query algorithm box and absolute interval widths for the existing worked example. Direct endpoint LPs verify that table. A separately completed pinned source-to-table run regenerated both panels, all 165/57 matching certificates and all 1,098 table rows with zero numeric discrepancy. Default offline replay remains distinct from the original raw-source route. See LATEST_REVIEW_FIXES_20261013.txt.
-The current follow-up adds a claim/objective/evidence map, explicit unresolved probability-gap magnitudes, and a checked exploratory threshold sweep over all 1,098 blocks with unchanged policies. The current main paper has 39 pages; full pairwise controls remain in S6. Two broken root commands and two unpinned transitive dependencies were fixed. The final package ran in a newly created isolated virtual environment with the pinned requirements. See LATEST_REVIEW_FIXES_20261013.txt for all changes and limits.
+The focused revision uses a policy-objective table, a worked certificate, explicit unresolved probability-gap magnitudes, and a checked exploratory threshold sweep over all 1,098 blocks with unchanged policies. The current main paper has 28 pages; full pairwise controls remain in S6. Two broken root commands and two unpinned transitive dependencies were fixed in the preceding preparation. The current package ran in the isolated virtual environment with the pinned requirements. See LATEST_REVIEW_FIXES_20261013.txt for all changes and limits.
 The latest diagnostic reports the complete fixed/adaptive/no-guarantee partition, the saved greedy-first-query assurance gaps and a stronger fixed-batch fallback. These are retrospective additions using unchanged data. A source-linked two-panel figure displays the exact acquisition envelopes and recorded target sensitivity. The scalar Helly result is explicitly distinguished from the joint objective.
 Earlier read-only fit and practical-value challenges are retained in peerj_final_fit_challenge.txt and peerj_practical_value_challenge.txt with their original source hashes. They are historical internal reviews, not a new review of this source. The current compiled-source and PDF review is latest_compiled_review.txt, bound to the hashes above.
 Live PeerJ policies and author instructions were checked. Supplemental Data S1/S2 meet the 30 MB individual and 50 MB combined limits. The complete historical archive remains separately preserved.
@@ -25,12 +26,12 @@ The three-criterion audit is in PEERJ_CRITERIA_AUDIT.txt. Remaining factual auth
 Author-supervised AI disclosure accurately credits author topic/direction and substantive content/code/drafting assistance.
 The author personally confirmed checking the AI tools' terms of use and publication suitability; that item is no longer pending. Final content approval, disclosure accuracy, record retention and unrelated portal terms remain separately recorded.
 The final prose cleanup removes revision-only wording and repeated caveats while retaining the scientific values, chronology, uncertainty definitions and unfavorable controls. The bounded fragment-edit record is first_reader_prose_review.txt; the final source/PDF assessment remains latest_compiled_review.txt.
-The introductory workflow now makes the bulk/fixed/adaptive/extend decision explicit under the declared exact-total noiseless model. Policy objectives and guarantees are distinguished from recorded outcomes; the closed/open certificate partition is separated from the overlapping fallback label. The current compiled review covers the workflow and displayed equations. The prior successful execution remains source-bound in pre_workflow_*; it is not reused as the current run.
+The introductory workflow makes the bulk/fixed/adaptive/extend decision explicit under the declared exact-total noiseless model. The no-certainty branch now covers all randomized adaptive policies. This supports a protocol-feasibility decision under the declared interface, not a validated deployment, privacy or model-selection benefit. Policy objectives and guarantees are distinguished from recorded outcomes. The current compiled review covers the workflow and displayed equations. Prior successful executions remain source-bound in pre_workflow_* and pre_focus_*; they are not reused as the current run.
 No calibrated individual acceptance probability or greater-than-80% threshold is established by these checks.
 
 FINAL EXECUTABLE VERIFICATION
-PASS: all 76 steps from a fresh isolated copy of the 1081-member publisher supplement, with network disabled.
-Elapsed 723.56 seconds. Main source reconstructed byte-for-byte.
-ZIP SHA256: 75da51dd70387635b12f1cdbff2e23ca32cebf99aaf1ac2509c70334aa082b0e
+PASS: all 77 steps from a fresh isolated copy of the 1096-member publisher supplement, with network disabled.
+Elapsed 1026.08 seconds. Main source reconstructed byte-for-byte.
+ZIP SHA256: 9cf8d57bf3acaf52d273b8c5c6dc7cc84ff3ad80aac7517c4b084ed0c88b4495
 Both new task-binding checks and all malformed-input regressions passed.
 The initial wrong-runtime import failure and its correction are recorded in risk_delivery_verification.json.

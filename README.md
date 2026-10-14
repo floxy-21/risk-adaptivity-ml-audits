@@ -9,16 +9,18 @@ stores the author's submission materials; it does not indicate journal acceptanc
 
 - [Read the paper](manuscript/revised_manuscript.pdf).
 - [Editable LaTeX source](manuscript/revised_manuscript.tex).
-- [Complete reproducibility release](https://github.com/floxy-21/risk-adaptivity-ml-audits/releases/tag/peerj-cs-2026-10-13-two-target).
+- [Complete reproducibility release](https://github.com/floxy-21/risk-adaptivity-ml-audits/releases/tag/peerj-cs-2026-10-14-assurance).
 - [Table-to-command map](source_snapshot/work/risk_adaptivity_revision/CURRENT_RESULTS_MAP.txt).
 - [Fresh execution record](verification/current_clean_package_replay.json).
-- [Final five-point review](verification/peerj_five_point_audit.txt).
+- [Earlier five-point review, retained with its original scope](verification/peerj_five_point_audit.txt).
 - [Current compiled-source review](verification/latest_compiled_review.txt).
-- [Bounded first-reader prose cleanup](verification/first_reader_prose_review.txt).
+- [Earlier first-reader prose review](verification/first_reader_prose_review.txt).
 - [Hash-bound upload-hygiene scan](verification/final_upload_hygiene.json).
 - [Acquisition geometry and replay figure](figures/practical_guarantee_replay.pdf).
 - [Fixed two-query proof review](verification/two_target_boundary/proof_review_memo.txt).
 - [Precise prior-art comparison](verification/two_target_boundary/novelty_review.txt).
+- [Assurance-feasibility proof](verification/assurance_feasibility/proof.txt).
+- [Full source-derived assurance evidence](verification/assurance_feasibility/full_source_report.json).
 
 The fixed-budget result uses two affine targets and two coordinate queries:
 adaptation guarantees joint precision, while the best randomized fixed batch
@@ -28,12 +30,22 @@ contrasts of three constructed nonnegative forecast vectors. Its dictionary
 grows with `m`, its normalized margin shrinks, and three fixed queries suffice.
 It proves a boundary for shared assurance, not an empirical or financial gain.
 
-Explicit policies, matching lower bounds and a worked real-data proof certificate
-connect this boundary to the existing study. A scalar classification provides
-the foundation. Fixed, adaptive and bulk retrieval have different assurance
-and resource trade-offs; the paper reports where each is appropriate. It includes
-proofs, two public-source replays, measurement sensitivities and exact witnesses.
-The declared-cost frontier is a modeled comparison, not measured financial savings.
+The accompanying assurance-feasibility consequence identifies when the declared
+two-reading protocol cannot provide certainty even with randomized feedback.
+On 489 original and 94 external blocks, every randomized adaptive policy has
+worst-record success at most `19/20`. This elementary finite-action bound is
+not claimed optimal. Source-derived exact witnesses use no recorded answers.
+Together with the fixed and adaptive guarantee certificates, it supports a
+choice among fixed, adaptive and extended acquisition under the specified model.
+
+The 28-page paper centers these two results and a worked
+source-derived joint certificate. Scalar classification and mean-risk developments
+remain in the supplement. Recorded outcomes retain the limits: exact adaptation
+certifies a best model on 207 external blocks and greedy adaptation on 208,
+despite exact adaptation's higher joint-precision success. Capacity information
+reduces the precision advantage, and measured public-API retrieval favors bulk.
+The query contract is declared; no deployed selective interface, privacy/compliance
+benefit, financial saving or improved model choice is established.
 
 ## Reproduce the complete current paper
 
@@ -49,10 +61,10 @@ python work/risk_adaptivity_revision/reproduce.py
 
 Run these commands from the extracted package root. The default entry point
 checks all manifested files, creates a new isolated stage, blocks network access
-during scientific replay, executes 76 checks, compares saved
+during scientific replay, executes 77 checks, compares saved
 scientific results and reconstructs the current manuscript byte-for-byte.
 The tested environment and exact scope appear in the verification record.
-The verified run took about 12.1 minutes on
+The verified run took about 17.1 minutes on
 the study host, plus extraction/copy time; allow several GB of free disk.
 
 The new `two_target_exact` and `two_target_lp` jobs check the constructed family
@@ -63,6 +75,15 @@ The maximum recorded width discrepancy is
 `1e-7` comparison tolerance and `1e-9` primal/dual solver tolerances.
 Both reports include the checker SHA-256 and canonical mathematical-input hash.
 The all-size theorem rests on its proof; these finite checks test the implementation.
+
+The `joint_assurance_feasibility` job independently regenerates exact adverse
+distributions for 94 external no-certainty cases and checks 1,880 failing fibers.
+The separately executed source-bound report covers both panels: 583 distributions
+and 11,660 fibers. The full report, witnesses, current checker and proof are
+hash-bound in the delivery record. Default replay does not recheck original raw
+coefficients; the documented pinned-source route supplies that separate evidence.
+The result concerns the uncapped exact-total noiseless prefix model and does not
+transfer automatically to noisy or capacity-constrained interfaces.
 
 Default replay uses frozen forecasts; it does not refit models, download source
 data or repeat the archived API/timing measurements. Separate regeneration and
@@ -77,13 +98,14 @@ scope and execution records are in `joint_certification/provenance_chain/`.
 That run uses frozen models; it is not fresh fitting or external human review.
 
 The latest review adds a five-threshold sensitivity over unchanged policies and
-reports the remaining probability-bound gaps. The 39-page main text separates
+reports the remaining probability-bound gaps. The 28-page main text separates
 the mathematical optima, exact instance guarantees, recorded outcomes and API
 costs. Complete controls remain in the supplement. The current full replay uses
 a newly created isolated Python environment with all 11 runtime packages pinned.
-The final additions expose the exact three-way guarantee regimes, the saved
-greedy first-query limitation and a stronger fixed-fallback control. These
-remain retrospective diagnostics rather than a new independent experiment.
+The assurance consequence completes the exact three-way feasibility decision,
+including all randomized adaptive policies in the no-certainty branch. The saved
+greedy first-query limitation and stronger fixed-fallback control remain visible.
+These are source-derived results rather than a new independent experiment.
 The main figure is generated from exact source coefficients and case counts;
 its standalone PDF/PNG and independent check are available in `figures/`.
 An introductory workflow now explains the choice among bulk, fixed, adaptive
@@ -92,7 +114,8 @@ The policy and status tables distinguish optimization objectives, guaranteed
 success and recorded outcomes; fallback is an overlapping label rather than
 another status-partition cell. The final compiled-source review also records
 the workflow and displayed-equation rendering checks. These are presentation
-clarifications, not new experiments or altered scientific outcomes.
+clarifications accompanying the new assurance consequence; recorded outcomes
+and the scientific producer scripts are unchanged.
 
 ## Repository and release contents
 
@@ -102,6 +125,9 @@ fixtures from the exact release. Large frozen inputs remain in the complete ZIP
 release asset rather than Git history. Run the full package, not this intentionally
 partial source snapshot. `verification/` contains the final execution and review
 records. SHA-256 checksums identify the precise manuscript and supplement.
+`verification/delivery_scripts/` contains the final post-replay publishing gates,
+bound by hashes in the delivery record. They were updated separately from the
+scientific package, whose exact manifested snapshot remains preserved.
 Earlier internal review files are kept with their original source hashes;
 they are not represented as fresh assessments of the final revision.
 `verification/latest_compiled_review.txt` identifies the current artifact review.
@@ -111,6 +137,9 @@ The `pre_workflow_*` files preserve the preceding successful replay at its
 own source hash. The upload-hygiene record matches the current manuscript and three archives.
 The `pre_two_target_*` files likewise retain the preceding successful release
 as history, not as a substitute for the two new jobs or current source replay.
+The `pre_focus_*` files preserve the immediately preceding manuscript, PDF and
+verification history. The private release `peerj-cs-2026-10-13-two-target` remains available;
+`peerj-cs-2026-10-14-assurance` identifies this focused revision.
 Recorded host-native process failures and subsequent complete successful runs
 remain separate execution history, rather than silently discarded failures.
 
@@ -122,7 +151,7 @@ The retained `work/randomized_tie_review/theory_review.txt` provides substantive
 historical mathematical rationale used as a hash-pinned checker input. It is
 internal AI-assisted review, not external validation of the current manuscript.
 The publisher package omits unused historical caches and lists those omissions;
-its 76-step execution uses the same scientific files and driver. No browser
+its 77-step execution uses the same scientific files and driver. No browser
 sessions, account credentials, registration forms or private outreach drafts are
 part of this repository.
 
@@ -132,3 +161,5 @@ Author contributions and supervised generative-AI assistance are disclosed in th
 manuscript. Internal checks are not external human peer review. Third-party source
 and data notices remain in the supplement; no blanket relicensing is asserted.
 This repository is private. The manuscript has not been submitted or accepted.
+Submission remains blocked by the recorded browser startup failure before page
+creation. Preparing or verifying this release performs no fresh portal check.

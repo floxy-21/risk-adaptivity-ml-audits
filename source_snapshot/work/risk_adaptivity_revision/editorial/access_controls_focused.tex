@@ -1,0 +1,34 @@
+\subsection{What the retrieval interface changes}
+\label{sec:actual-api}
+The two-reading constraint is a specified benchmark access rule. Neither
+public source documents a service that enforces this particular limit.
+The HeatpumpMonitor API permits full-range retrieval, so we tested it
+directly \citep{hpmapi,hpmcode}. We fixed the first eligible
+daily-persistence--MLP task from each external system before querying its
+optional answers. Two repetitions of five policies produced 30 trials
+and 60 HTTP requests, including common endpoint reads.
+
+\begin{table}[htbp]\centering\small
+\caption{Observed public-API control: three tasks, two repetitions per
+policy. Incremental I/O excludes client throttle waiting. The full-range
+response includes the seven hourly samples and is outside the benchmark's
+two-optional-reading limit. All five tested policies met the precision
+target; the full five-policy measurements and cached response hashes are
+in Online Resource~1, S15.}\label{tab:actual-api}
+\begin{tabular}{lrrr}\toprule
+Policy & Requests & Mean I/O (s) & Mean body bytes\\\midrule
+Exact adaptive & 2 & 0.497 & 104.3\\
+Full hourly range & 1 & 0.331 & 226.7\\\bottomrule
+\end{tabular}\end{table}
+
+Bulk retrieval uses one request, achieves zero terminal width and has
+lower observed I/O time on these tasks. We therefore recommend bulk when
+the full response is admissible. The selective method answers a different
+operational question: whether a declared measurement budget can meet the
+required assurance, and whether doing so requires feedback. Applying that
+decision in a deployment requires a documented reason for the restricted
+interface, valid measurement bounds and an audit precision requirement.
+The present sources establish the certificate calculations and recorded
+replay, rather than a deployed two-reading service or measured financial
+savings. The separate protocol-selection implementation and its cost
+catalogue are retained in Online Resource~1, S8.

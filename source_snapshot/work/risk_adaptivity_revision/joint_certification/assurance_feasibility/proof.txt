@@ -1,0 +1,88 @@
+FINITE-WITNESS TEST FOR TWO-QUERY ASSURANCE
+
+Status: elementary consequence of the finite query dictionary, not a claim
+of a new general theorem or an optimal randomized-adaptive value.
+
+Model and premise
+-----------------
+The latent record is fixed before an independent policy seed is drawn.
+There are K legal first queries. After first query k, there are J_k legal
+second actions; these dictionaries and their costs do not depend on answers.
+Every execution uses at most two queries. Success requires every terminal
+sharp target interval to meet its fixed width threshold. Query and stopping
+rules are measurable. The current exact-total simplex has five internal
+prefix queries and four distinct continuations for each first query.
+
+Suppose no deterministic adaptive two-query policy guarantees success.
+For every first query k there is a feasible answer t_k at which no second
+action guarantees success over the compatible records. In the present model
+this follows directly from the exact conditional success intervals: if their
+finite union covered the answer domain, selecting the least-index successful
+action would give a legal measurable deterministic guaranteeing policy.
+The constructed intervals are closed rational intervals, so this selector
+has no measurability ambiguity.
+
+For each legal pair (k,j), choose a feasible record x_kj giving first answer
+t_k, on which terminal batch {k,j} fails. Such a record exists by the premise.
+Our implementation supplies two explicit simplex endpoints u_kj and v_kj
+with identical k and j prefix readings and a contrast difference strictly
+larger than one half of its initial range. Set x_kj=v_kj. The sharp fiber
+contains both endpoints, so the target fails regardless of post-processing.
+
+Seed-independent adverse mixture
+--------------------------------
+Let N=sum_k J_k. Put mass 1/N on each ordered witness x_kj, independently of
+the policy seed. Coincident records retain their multiplicities. This is a
+fixed hidden-record distribution, not an adversary responding to queries.
+
+For any randomized adaptive policy P, denote its first action by K(omega)
+and its second action after first answer t by J(k,t,omega). Every x_kj in
+row k gives the same t_k when the first action is k. Consequently
+
+ E_{x~mu,omega}[failure of P on x]
+ >= (1/N) sum_k sum_j Pr_omega[K(omega)=k, J(k,t_k,omega)=j]
+  = (1/N) sum_k Pr_omega[K(omega)=k]
+  = 1/N.
+
+The restriction of the seed to first action k is identical across records
+in that row; no record-dependent reconditioning is used. Other failures
+only increase the left side. Thus every randomized adaptive policy has a
+fixed record on which success is at most 1-1/N, and the supremum over all
+such policies also obeys this bound. The result rules out even a sequence
+of randomized policies whose worst-record success approaches one.
+
+Stopping early and repeated queries
+----------------------------------
+Pad a shorter execution with legal distinct queries without using later
+answers to revise its previous choices. In the current five-prefix model,
+there is always an available continuation and padding respects budget two.
+Additional observations can only shrink sharp intervals, so failure after
+padding implies failure of the original execution. The upper bound for the
+padded class therefore also bounds stopping/repetition policies. A no-query
+execution can first be padded with any fixed first query and continuation.
+
+Consequence for the existing joint panels
+---------------------------------------
+Here K=5 and J_k=4, so N=20 and S_adaptive <= 19/20 on every instance with
+no deterministic two-query guarantee. The bound is not asserted tight.
+Conversely, an available deterministic sure policy is itself a randomized
+policy with a degenerate seed. Certainty feasibility is therefore equivalent
+for deterministic and randomized adaptive policies in this declared model.
+
+The supplied exact check reconstructs all first-query success intervals from
+the source-derived serialized coefficients. It constructs and directly checks
+twenty endpoint witnesses for each excluded instance: 489 original and 94
+external cases. All witnesses are synthetic normalized simplex points.
+Neither recorded outcomes nor the empirical prevalence of adverse profiles
+enters the proof or construction.
+
+Interpretation
+--------------
+The exact three-way protocol classification can be stated as: fixed certainty
+is available; feedback is necessary for certainty within the two-reading
+class; or no two-reading protocol, including randomized adaptation, can meet
+certainty. This is a feasibility result under a declared uncertainty set,
+threshold and access dictionary. It supplies neither a deployment budget
+justification nor improved model selection, privacy/compliance assurance,
+physical-meter calibration, monetary savings, or an optimal success value
+below one. A catalogue exclusion without these witnesses remains insufficient.

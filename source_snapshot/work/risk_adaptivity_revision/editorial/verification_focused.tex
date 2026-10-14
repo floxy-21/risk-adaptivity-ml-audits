@@ -1,0 +1,18 @@
+\paragraph{Reproducibility and numerical checks.}
+The supplement connects version-pinned source records, frozen forecasts,
+contrast coefficients, saved policies and reported outcomes. A fresh
+both-source run reproduced all 1,098 outcome rows exactly, including the
+165 original and 57 external matched-half certificates. The original
+source route rejects mismatched files; its raw records are regenerated
+locally. Default offline replay uses the bundled inputs and is separate
+from raw regeneration and fresh model fitting.
+
+A separately written checker reconstructs the policies and summaries. On
+18 fixed representative blocks, 19,440 endpoint LPs and 6,480 conditional
+LPs have maximum discrepancies of $2.22\times10^{-16}$ and
+$1.11\times10^{-16}$, against a $10^{-8}$ check tolerance. Exact rational
+covering and adverse-record inequalities establish the matched precision
+claims. An optimal-face diagnostic also checks that arbitrary selection
+among mean-optimal batch mixtures does not explain their lower recorded
+success. Online Resource~1, S8 supplies the full checks and the
+results-to-command map identifies each reproduction entry point.

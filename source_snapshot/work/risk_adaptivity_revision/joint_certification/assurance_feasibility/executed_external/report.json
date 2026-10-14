@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "scope": "Exact source-bound impossibility of randomized adaptive certainty under the existing two-prefix-reading contract.",
+  "checked_cohorts": [
+    "external"
+  ],
+  "regimes": {
+    "external": {
+      "fixed_guarantee": 128,
+      "no_deterministic_adaptive_guarantee": 94,
+      "adaptive_only_guarantee": 57
+    }
+  },
+  "randomized_adaptive_success_upper_bound_on_no_guarantee_cases": "19/20",
+  "bound_is_not_claimed_optimal": true,
+  "actual_check_counts": {
+    "coefficient_instances_classified": 279,
+    "first_query_interval_covers_checked": 1395,
+    "common_first_answer_checks": 470,
+    "simplex_endpoint_checks": 3760,
+    "shared_query_answer_checks": 3760,
+    "strict_failing_fiber_checks": 1880,
+    "seed_independent_adverse_distributions": 94
+  },
+  "minimum_strict_failure_margin_by_cohort": {
+    "external": "2087402680973369074870657671/2824512820857047119379103973504"
+  },
+  "minimum_strict_failure_margin_float_by_cohort": {
+    "external": 0.0007390310518540981
+  },
+  "provenance": {
+    "mode": "bundled_external_only",
+    "source_execution_evidence_sha256": "3c7dbb113beee7547d42ff68c826cc0c96e2e7d91811a37930eb651091fa189d",
+    "source_physical_blocks": {
+      "external": 279
+    },
+    "original_coefficients_verified_in_this_run": false,
+    "plans_sha256": "26b1f10f11680883ea51bafba00e3907c7240a48227190c9da119abf56397d04",
+    "shared_plans_sha256": "9258e3d7508d333c9aaaaf243495d0a459adba8bf075bab1d244ace7f2ae9387",
+    "geometry_sha256": {
+      "external_validation/replay/geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0"
+    },
+    "precision_producer_sha256": "264259ca972a94781f8348cd462381d0d6bfc77b5070dbce0448aef3d84e842a",
+    "exact_coefficient_normalization_checks": 1674,
+    "maximum_exact_normalization_difference": "0"
+  },
+  "source_sha256": "fa2ac421b17e58afc056f2d7f3e9c4e251f31aba053efbfc37521a5737e2eede",
+  "synthetic_witnesses_sha256": "64544fc1025e45c12bd57e15269480a73ee1e98a0eaa4d9d60a49bef61e9341e",
+  "elapsed_seconds": 2.094523300002038,
+  "input_fields_used": [
+    "case identifier",
+    "cohort",
+    "paired case identifiers",
+    "affine coefficients",
+    "source hashes"
+  ],
+  "recorded_answers_or_replay_outcomes_used": false,
+  "original_coefficients_exported": false,
+  "new_forecast_fits": 0,
+  "new_network_calls": 0,
+  "limitations": "Elementary finite-action consequence, not a claimed novel theorem or optimized randomized-adaptive success value. Exact serialized-coefficient, uncapped, exact-total/noiseless prefix model. No winner-selection, hardware-calibration, privacy/compliance or deployment-saving claim."
+}

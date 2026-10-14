@@ -91,9 +91,7 @@ def main():
     assert text.count(workflow_marker) == 1
     text = text.replace(workflow_marker,
                         local('editorial/audit_workflow.tex') + '\n' + workflow_marker, 1)
-    old_prior = between(text, 'The width of an information fiber', 'Information-dependent decisions')
-    text = text.replace(old_prior, local('general/prior_art_precision.tex') + '\n')
-    # Pinpoint related-work prose carries the comparison without a duplicate table.
+    # The focused introduction owns its concise, pinpoint-attributed comparison.
     theory = local('math/theorem_proof.tex')
     for title in ('Universal classification of width penalties', 'Sharp growing separations'):
         start = theory.index(r'\begin{proposition}[' + title + ']')
@@ -108,8 +106,9 @@ def main():
     scalar_example = theory[example_start:growing_start]
     growing_support = theory[growing_start:]
     general_algorithms = local('general/algorithms.tex')
-    text += scalar_setup
-    text += local('editorial/helly_focused.tex').replace(
+    text += local('editorial/focused_information.tex')
+    helly_full = local('editorial/helly_focused.tex')
+    text += local('editorial/helly_precision_short.tex').replace(
         r'\subsection{A precision consequence of sparse-policy bounds}',
         r'\section{A precision consequence of sparse-policy bounds}', 1)
     text += local('two_target_boundary/main_theorem.tex')
@@ -138,11 +137,10 @@ hashes, and the checked witnesses. The numerical report additionally records
 the 7,131 LPs and their discrepancies. These commands verify the construction;
 the complete source-to-table replay is documented in Supplementary Materials.
 '''
-    text += local('counter_adaptive/literature/counter_methods.tex').replace(
-        r'\subsection{Adaptive precision from cumulative-counter queries}',
-        r'\section{Adaptive precision from cumulative-counter queries}', 1)
-    text += local('editorial/counter_half_corollary.tex')
-    text += local('counter_adaptive/feedback_triage/math_review.tex')
+    counter_full = (local('counter_adaptive/literature/counter_methods.tex')
+                    + local('editorial/counter_half_corollary.tex')
+                    + local('counter_adaptive/feedback_triage/math_review.tex'))
+    text += local('editorial/joint_counter_setup.tex')
     joint_methods = local('joint_certification/manuscript_methods.tex')
     joint_definition = between(joint_methods,
                                'An auditor comparing several models',
@@ -151,8 +149,9 @@ the complete source-to-table replay is documented in Supplementary Materials.
     inspectable = local('joint_certification/main_inspectable_proof.tex')
     inspectable = inspectable.replace(r'\begin{theorem}',
                                      joint_definition + r'\begin{theorem}', 1)
-    text += inspectable + joint_algorithms
+    text += joint_definition
     text += local('joint_certification/main_planner_algorithm.tex')
+    text += local('editorial/assurance_feasibility.tex')
     text += local('joint_certification/final_practical_figure/clarification.tex')
     text += local('joint_certification/main_worked_precision_certificate.tex')
     text += local('joint_certification/absolute_width_fragment.tex')
@@ -163,10 +162,11 @@ the complete source-to-table replay is documented in Supplementary Materials.
     assert figure_check['envelope_equalities'] == 735 and figure_check['replay_points_checked'] == 30
     assert figure_check['figure_data_sha256'] == sha(BASE / 'joint_certification/final_practical_figure/figure_data.json')
     text += local('joint_certification/final_practical_figure/figure_fragment.tex')
-    text += '\n\\FloatBarrier\n' + classification
-    text += '\n\\section{Application assumptions and protocol}\n'
+    text += '\n\\FloatBarrier\n'
+    text += local('editorial/source_protocols_short.tex')
     text += local('editorial/measurement_assumptions.tex')
-    text += local('editorial/joint_protocol_summary.tex')
+    protocol_numerics = local('editorial/joint_protocol_summary.tex')
+    text += protocol_numerics[protocol_numerics.index(r'\begin{table}'):]
     structured = local('editorial/structured_start.tex')
     compact = between(old, r'\section{Randomized Recovery under a Hard Budget}', r'\subsection{Interpreting the robust objective}')
     compact = compact.replace(r'\section{Randomized Recovery under a Hard Budget}', r'\subsection{Randomized recovery under a hard budget}')
@@ -285,7 +285,9 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
              'recorded precision success. Table~\\ref{tab:joint_precision_status}\n'
              'identifies where the precision challenger has matching bounds.\n')
     text += local('joint_certification/final_review_comparators.tex')
-    text += local('joint_certification/empirical_manuscript_fragment.tex')
+    text += local('joint_certification/empirical_manuscript_fragment.tex').replace(
+        r'Sections~\ref{sec:external-hpm} and~\ref{sec:counter-precision-results}',
+        r'Section~\ref{sec:joint-protocol-summary}')
     text += local('joint_certification/final_review_results/main_system_table.tex')
     text += local('joint_certification/final_review_dependence_paragraph.tex')
     text += local('joint_certification/precision_manuscript_fragment.tex')
@@ -296,6 +298,13 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
     assert diagnostics_check['coefficient_derived_cases'] == 279
     assert [(r['fixed_guarantee'], r['adaptive_only_guarantee'], r['no_deterministic_adaptive_guarantee']) for r in diagnostics['regimes']] == [(162,168,489),(128,57,94)]
     text += local('joint_certification/final_challenger_diagnostics/manuscript_fragment.tex')
+    assurance = json_source('work/risk_adaptivity_revision/joint_certification/assurance_feasibility/executed_all/report.json')
+    assert assurance['status'] == 'PASS'
+    assert assurance['randomized_adaptive_success_upper_bound_on_no_guarantee_cases'] == '19/20'
+    assert assurance['actual_check_counts']['seed_independent_adverse_distributions'] == 583
+    for cohort, count in [('original', 489), ('external', 94)]:
+        assert assurance['regimes'][cohort]['no_deterministic_adaptive_guarantee'] == count
+    text += local('editorial/assurance_results.tex')
     sensitivity_report = json_source('work/risk_adaptivity_revision/joint_certification/review_sensitivity/results/report.json')
     sensitivity_check = json_source('work/risk_adaptivity_revision/joint_certification/review_sensitivity/independent_check.json')
     assert sensitivity_report['status'] == sensitivity_check['status'] == 'PASS'
@@ -305,12 +314,11 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
     # The geometry/replay figure presents these counts; retain the numeric table in S8.
     text += '\n\\FloatBarrier\n'
     text += local('joint_certification/noise_manuscript_fragment.tex')
-    text += local('joint_certification/verification_main.tex')
+    text += local('editorial/verification_focused.tex')
     lineage = json_source('work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/table_chain.json')
     assert lineage['status'] == 'PASS' and lineage['all_case_ledger_rows_compared'] == 1098
     assert lineage['maximum_ledger_numeric_difference'] == 0
     assert [lineage['tables'][c]['matched_half_blocks'] for c in ('original','external')] == [165,57]
-    text += local('joint_certification/provenance_chain/manuscript_fragment.tex')
     counter = json_source('work/risk_adaptivity_revision/counter_adaptive/summary/report.json')
     assert counter['tasks']==4914 and counter['groups']['overall'][0]['strong_separations']==290
     half = json_source('work/risk_adaptivity_revision/counter_adaptive/math_review/half_cover_verification.json')
@@ -320,7 +328,6 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
     assert triage['status']=='PASS' and triage['cases']==4914
     assert triage['counts']=={'batch_suffices':4371,'feedback_required':290,'adaptive_not_guaranteed':253}
     assert triage['exact_half_cases']==290
-    text += local('editorial/pairwise_controls_short.tex')
     qualification = json_source('work/risk_adaptivity_revision/external_validation/operational/source_qualification_check.json')
     assert qualification['status'] == 'PASS' and qualification['selected_systems'] == [1, 2, 7]
     assert qualification['verified_cached_response_hashes'] == 41
@@ -345,8 +352,7 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
     end_sensitivity = '% END MANUSCRIPT BODY'
     if begin_sensitivity in sensitivity:
         sensitivity = between(sensitivity, begin_sensitivity, end_sensitivity).replace(begin_sensitivity, '', 1)
-    text += local('editorial/operational_api_results.tex')
-    text += local('editorial/protocol_selection_short.tex')
+    text += local('editorial/access_controls_focused.tex')
     selector_report = json_source('work/risk_adaptivity_revision/protocol_selection/results/report.json')
     selector_check = json_source('work/risk_adaptivity_revision/protocol_selection/independent_results/report.json')
     assert selector_report['status'] == selector_check['status'] == 'PASS'
@@ -364,8 +370,6 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
     assert [s['cost_aware_cost_exact'] for s in cost['summaries']] == ['65', '311/4', '181/2', '116', '145', '203']
     historical = local('editorial/evaluation_historical.tex')
     division = historical.index(r'\subsection{The retained adverse recovery result}')
-    text += local('editorial/computation_short.tex')
-    text += local('editorial/historical_control_short.tex')
     text += local('editorial/discussion_short.tex')
     # Detailed empirical witnesses and historical protocols are indexed online.
     protocol = between(old, r'\section{Historical Energy Study: Design and Reproducibility}', r'\subsection{Additional designs and reproducibility}')
@@ -428,7 +432,23 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
                            'The constant $d$ does not affect width. Write '
                            r'$\rho=\max_{y\in F}\min_{Q\in\mathcal Q}W_Q(y)$ '
                            'for the hardest-record value, equal to the optimal '
-                           'randomized worst expected width by the main scalar theorem.'))
+                           'randomized worst expected width by the scalar theorem in S11.')
+                + '\\section{S11. Scalar penalty classification and full information proofs}\n'
+                + scalar_setup + classification
+                + '\\section{S12. General dimensional precision bound}\n' + helly_full
+                + '\\section{S13. Scalar cumulative-counter planning and feedback triage}\n'
+                + counter_full
+                + '\\section{S14. A separate mean joint-width separation}\n'
+                + inspectable + joint_algorithms
+                + '\\section{S15. Complete operational and historical controls}\n'
+                + local('editorial/pairwise_controls_short.tex')
+                + local('editorial/operational_api_results.tex')
+                + local('editorial/protocol_selection_short.tex')
+                + local('editorial/computation_short.tex')
+                + local('editorial/historical_control_short.tex')
+                + '\\subsection{Full implementation and source-to-table checks}\n'
+                + local('joint_certification/verification_main.tex')
+                + local('joint_certification/provenance_chain/manuscript_fragment.tex'))
     # References to relocated appendices now identify the indexed resource.
     for label, section in [('app:stored-error', 'S6'),
                            ('app:complete-counter-witness', 'S6'),

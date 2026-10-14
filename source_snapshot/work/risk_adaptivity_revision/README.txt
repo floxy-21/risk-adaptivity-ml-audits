@@ -16,8 +16,8 @@ the full replay creates its own isolated stage.
    python -S work/risk_adaptivity_revision/two_target_boundary/verify_boundary.py --solver-free --output outputs/two_target_exact.json
    python work/risk_adaptivity_revision/joint_certification/proof_check_joint.py
    python work/risk_adaptivity_revision/joint_certification/check_main_inspectable_certificate.py
-   These check the fixed-budget two-target boundary, the shared-prefix
-   construction, and the printed external witness.
+   These check the fixed-budget two-target boundary, the separate shared-prefix
+   mean-width construction (S14), and the printed external witness.
    They do not regenerate the forecasts or all empirical cases.
    The independent LP check of the new boundary is also in the full replay:
    python work/risk_adaptivity_revision/two_target_boundary/verify_boundary.py --output outputs/two_target_lp.json
@@ -54,10 +54,31 @@ controls; S3 data/forecast protocol; S4 historical grid; S5 full compact
 construction; S6 extended counter checks, measurement proofs and full
 counter replay; S7 detailed computational verification; S8 shared-query
 proofs, paired outcomes and protocol selection; S9 scalar examples and the
-complete growing-family proof; S10 general-polytope algorithms). Its own reference
+complete growing-family proof; S10 general-polytope algorithms; S11 the complete
+scalar penalty classification and information proofs; S12 the general dimensional
+precision bound; S13 scalar cumulative-counter planning and feedback triage;
+S14 the separate mean joint-width separation; S15 complete operational and
+historical controls). Its own reference
 list includes every work cited in those supporting sections.
 
 CURRENT SHARED-BUDGET RESULTS -- PUBLIC OFFLINE ROUTE
+The new certainty check needs only the Python standard library:
+  python -S work/risk_adaptivity_revision/joint_certification/assurance_feasibility/verify_assurance.py --output-dir outputs/joint_assurance_feasibility
+It independently normalizes the 1,674 external contrast vectors, classifies
+all 279 blocks, and verifies 1,880 failing endpoint pairs for the 94 blocks
+without a two-reading guarantee. Each such block has a finite-witness upper
+bound of 19/20 on every randomized adaptive policy's worst-case success; the
+bound is not claimed optimal. The default replay includes this checker as
+joint_assurance_feasibility, before any frozen inputs are regenerated.
+To check the original panel too, first complete the both-source command above,
+then run:
+  python -S work/risk_adaptivity_revision/joint_certification/assurance_feasibility/verify_assurance.py --chain-dir complete_source_chain --output-dir all_assurance_new
+This distinct route checks all 6,588 coefficient vectors and 11,660 failing
+endpoint pairs, with 489 original and 94 external excluded blocks. See
+joint_certification/assurance_feasibility/README.txt for the witness format,
+source-link checks and completed execution records. The new result concerns
+the uncapped, noiseless, exact-total two-prefix-reading contract only.
+
 All commands below are included in the current default replay. It preserves
 the earlier checks and adds source-to-forecast linkage, input-mismatch guards
 and the absolute-width example. Read the final execution
@@ -158,8 +179,8 @@ The classification check took about11seconds, the general-polytope suite under
 one second, and the80-case dual check about32seconds on the available shared
 host. The default also parses historical empirical traces and checks2,148
 secondary LPs. The preceding 63-step replay took about 21 minutes on the study
-host; allow roughly 20--30 minutes plus extraction/copying time for this 69-step
-revision. Runtime varies with hardware and storage; consult the release log
+host; allow roughly 20--30 minutes plus extraction/copying time for the current
+replay. Runtime varies with hardware and storage; consult the release log
 for the actual measured final duration.
 These are planning descriptions of observed runs, not universal runtime bounds.
 
@@ -249,7 +270,7 @@ were matched before these derived summaries were frozen; public replay does
 not claim to reconstruct original raw-dependent plans.
 
 INSPECTABLE SHARED-QUERY RESULT
-The main theorem and worked real-data certificate are verified without an optimizer.
+The two-target theorem and worked real-data certificate are verified without an optimizer.
 See joint_certification/INSPECTABLE_CERTIFICATES.txt for the four-command chain.
   python work/risk_adaptivity_revision/joint_certification/check_main_inspectable_certificate.py
 This default step checks the actual printed real-data coefficients, outward

@@ -1,0 +1,43 @@
+\subsection{When two readings cannot guarantee precision}
+\label{sec:assurance-feasibility}
+The planner also identifies an insufficient budget. Randomizing the
+adaptive choices cannot restore certainty in this case. The following
+finite-witness argument makes that conclusion checkable.
+
+\begin{proposition}[A certificate against randomized adaptive certainty]
+\label{prop:assurance-feasibility}
+In the six-hour exact model with five permitted internal prefixes,
+suppose $A>\tau$. Then every randomized
+adaptive policy using at most two readings has worst-record precision
+success at most $19/20$. The bound need not be tight. Thus a policy with
+success one exists if and only if a deterministic adaptive policy with
+success one exists.
+\end{proposition}
+\begin{proof}
+For each of the five first queries $k$, choose an answer $t_k$ at which
+every second query $j\ne k$ has $g_{kj}(t_k)>\tau$. Such an answer exists
+because $A>\tau$. For each ordered pair $(k,j)$ choose a feasible record
+$x_{kj}$ with first answer $t_k$ on which the terminal sharp joint width
+exceeds $\tau$. Put mass $1/20$ on these twenty records, retaining
+multiplicities. This adverse distribution is fixed before the policy's
+independent random seed is drawn.
+
+Fix a seed. It determines a first query $k$ and, upon answer $t_k$, a
+second query $j$. All four records in row $k$ have that same first answer,
+so the policy follows this path on $x_{kj}$ and fails. Its failure
+probability under the fixed adverse distribution is therefore at least
+$1/20$. Averaging over seeds preserves the bound. For each randomized
+policy there is therefore a fixed record with success at most $19/20$.
+Early stopping or repeated queries can be padded with unused legal queries;
+failure after padding implies failure before it because observations only
+shrink the compatible intervals. Conversely, a deterministic successful
+policy is a randomized policy with a constant seed. This proves the claim.
+\end{proof}
+
+For each $x_{kj}$ the executable certificate supplies two nonnegative,
+unit-sum endpoint records with identical queried answers and a contrast
+difference strictly above $\tau$. One endpoint serves as $x_{kj}$; the
+other proves failure of its sharp interval. The verifier checks these
+equalities and inequalities directly, without using an optimizer's verdict.
+This elementary finite-action argument concerns certainty under the stated
+model; it does not compute the optimal success probability below one.

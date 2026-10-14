@@ -1,15 +1,25 @@
 {
   "status": "PASS",
-  "review_date": "2026-10-13",
-  "completed_utc": "2026-10-14T04:01:29.880928+00:00",
+  "review_date": "2026-10-14",
+  "release_tag": "peerj-cs-2026-10-14-assurance",
+  "release_focus": "Fixed two-query joint-precision boundary and exact assurance feasibility.",
+  "delivery_script_sha256": {
+    "finalize_delivery.py": "7f7777b6bd7f92137dd58f4d0ddedeee820683b024b96a4053f0a832da80c51e",
+    "prepare_github.py": "ad4cd5d8b914121398e7d8d10154d536d47beb0e264e43ff2190029cb542abb5",
+    "verify_github.py": "397d5b8b357f2638bcd0df7c2b5d956ea83d22023e466aa588a638d652e110be",
+    "refresh_delivery_docs.py": "fafa647f1116bef9ff05e7641632599668e94fb16e80756875878c4f27ed63e4",
+    "sync_submission_metadata.py": "3ea05a378cfb142d508094ab0364a050c51fae702c843d993337a73104b9e70d"
+  },
+  "delivery_script_scope": "Local post-replay delivery gates, archived separately in GitHub verification/delivery_scripts; the scientific ZIP retains its exact manifested snapshot.",
+  "completed_utc": "2026-10-14T04:54:02.365002+00:00",
   "target": "PeerJ Computer Science",
-  "manuscript_sha256": "a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf",
-  "pdf_sha256": "59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9",
-  "zip_sha256": "75da51dd70387635b12f1cdbff2e23ca32cebf99aaf1ac2509c70334aa082b0e",
-  "pdf_pages": 39,
+  "manuscript_sha256": "ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07",
+  "pdf_sha256": "b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c",
+  "zip_sha256": "9cf8d57bf3acaf52d273b8c5c6dc7cc84ff3ad80aac7517c4b084ed0c88b4495",
+  "pdf_pages": 28,
   "abstract_words": 240,
   "full_current_package_replay": "outputs/current_clean_package_replay.json",
-  "replay_steps": 76,
+  "replay_steps": 77,
   "complete_source_to_table_chain": "work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/",
   "complete_source_to_table_rows": 1098,
   "complete_source_to_table_difference": 0.0,
@@ -123,22 +133,73 @@
     },
     "prior_execution_history": "outputs/pre_two_target_* preserve the preceding source-specific release; the two new jobs belong to the separately executed current replay."
   },
+  "assurance_feasibility": {
+    "status": "PASS",
+    "source_sha256": "fa2ac421b17e58afc056f2d7f3e9c4e251f31aba053efbfc37521a5737e2eede",
+    "proof_sha256": "e6e1709066788b487d71046cce22bf8259baea3d8c76428a83954f2be65e3f2f",
+    "full_report": {
+      "path": "work/risk_adaptivity_revision/joint_certification/assurance_feasibility/executed_all/report.json",
+      "sha256": "c44beb7c8e801e0987c3fbdd326bebe70249b9947ecab2dd9ccd6def9591e269"
+    },
+    "external_report": {
+      "path": "work/risk_adaptivity_revision/joint_certification/assurance_feasibility/executed_external/report.json",
+      "sha256": "9311a852f54a6999d834944275ed9f27ca77ff7ec69d97514e7517fd8784d015"
+    },
+    "full_witnesses_sha256": "6e37bfe9817fe83dfc693bddf2f60e838202c52067b4509d8d10d6eff27675c3",
+    "external_witnesses_sha256": "64544fc1025e45c12bd57e15269480a73ee1e98a0eaa4d9d60a49bef61e9341e",
+    "full_check_counts": {
+      "coefficient_instances_classified": 1098,
+      "first_query_interval_covers_checked": 5490,
+      "common_first_answer_checks": 2915,
+      "simplex_endpoint_checks": 23320,
+      "shared_query_answer_checks": 23320,
+      "strict_failing_fiber_checks": 11660,
+      "seed_independent_adverse_distributions": 583
+    },
+    "external_replay_check_counts": {
+      "coefficient_instances_classified": 279,
+      "first_query_interval_covers_checked": 1395,
+      "common_first_answer_checks": 470,
+      "simplex_endpoint_checks": 3760,
+      "shared_query_answer_checks": 3760,
+      "strict_failing_fiber_checks": 1880,
+      "seed_independent_adverse_distributions": 94
+    },
+    "regimes": {
+      "original": {
+        "fixed_guarantee": 162,
+        "adaptive_only_guarantee": 168,
+        "no_deterministic_adaptive_guarantee": 489
+      },
+      "external": {
+        "fixed_guarantee": 128,
+        "adaptive_only_guarantee": 57,
+        "no_deterministic_adaptive_guarantee": 94
+      }
+    },
+    "success_upper_bound": "19/20",
+    "replay_job": "joint_assurance_feasibility",
+    "fresh_source_evidence_sha256": "3c7dbb113beee7547d42ff68c826cc0c96e2e7d91811a37930eb651091fa189d",
+    "scope": "Elementary finite-action consequence: no two-reading randomized adaptive policy can guarantee precision on the 489 original and 94 external no-certainty cases under the uncapped exact-total noiseless prefix model. The 19/20 bound is not claimed optimal.",
+    "execution_scope": "Source-derived full report verifies 583 adverse distributions and 11,660 strictly failing fibers; the current default offline replay independently regenerates the 94 external distributions and 1,880 fibers. Original raw records and coefficient vectors are not redistributed; recorded answers are unused.",
+    "prior_execution_history": "outputs/pre_focus_* preserve the preceding release and are not substituted for the current replay."
+  },
   "latest_review_response": "outputs/LATEST_REVIEW_FIXES_20261013.txt",
-  "manifested_members": 1183,
-  "journal_manifested_members": 1081,
+  "manifested_members": 1198,
+  "journal_manifested_members": 1096,
   "journal_parts": [
     {
       "path": "Supplemental_Data_S1.zip",
-      "bytes": 17513047,
-      "sha256": "be7ee4c807b29796f3b596edbfb57281c37305119e4506d4ede8e948d1723a48"
+      "bytes": 18020633,
+      "sha256": "a2e7f547c9e268181d2b98e5826b9492efd8a85a8374503a8ead3fbb4c902b15"
     },
     {
       "path": "Supplemental_Data_S2.zip",
-      "bytes": 23568606,
-      "sha256": "7b07f9558fc13bb12c4b9fd16a1901657f90cd998c3456574f1aa5e504c35fd2"
+      "bytes": 23569280,
+      "sha256": "252e184043eaf5b5206a7d71decd8654a64eecafeed3d06a2232a96fe7332293"
     }
   ],
-  "journal_total_zip_bytes": 41081653,
+  "journal_total_zip_bytes": 41589913,
   "replay_distribution": "Publisher Supplemental Data S1 and S2, extracted together; full historical archive separately hash-verified.",
   "historical_members_recoverable": 583,
   "historical_editorial_notes_omitted": [
@@ -154,27 +215,27 @@
     }
   ],
   "historical_preservation_scope": "Every prior manifested member remains hash-identical at its declared path or preserved alternate except explicitly identified internal editorial notes; those notes remain in the prior private archive/local files, not the current scientific assets.",
-  "elapsed_replay_seconds": 723.563963300001,
+  "elapsed_replay_seconds": 1026.0802184999993,
   "review_report": "outputs/PEERJ_REVIEW_AND_RESPONSE_20261013.txt",
   "visual_review": "outputs/peerj_final_visual_review.txt",
   "review_kind": "Three separate AI-assisted internal reviews, an additional PeerJ criteria challenge, and final regression/layout review; no external specialist contact or formal proof-assistant certification.",
   "current_source_review": {
     "path": "work\\risk_adaptivity_revision\\peerj_revision\\latest_compiled_review.txt",
-    "sha256": "a7a461960c006b06fd11e11edeeec6ad876b31cd171b55a500e36a186512dd37",
-    "manuscript_sha256": "a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf",
-    "pdf_sha256": "59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9"
+    "sha256": "cd1328b936a91db971ffa0aa04d1b398f1de2ff3fbe223bf38afbdb98ad972dd",
+    "manuscript_sha256": "ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07",
+    "pdf_sha256": "b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c"
   },
   "workflow_editorial_revision": {
-    "scope": "Exact-total noiseless audit routing; policy objectives versus achieved guarantees; closed/open status partition versus overlapping fallback classification. No new scientific outcomes.",
+    "scope": "Exact-total noiseless audit routing, including the new finite-witness bound against randomized adaptive certainty; policy objectives versus achieved guarantees; closed/open precision status. Historical recorded outcomes are unchanged.",
     "render_evidence": "work\\risk_adaptivity_revision\\peerj_revision\\latest_compiled_review.txt",
     "checks": "Workflow and displayed-equation rendering explicitly assessed in the current source/PDF review.",
     "prior_execution_history": "outputs/pre_workflow_* retain the preceding source-specific successful replay; the current replay is separately executed."
   },
   "current_boundary_review": {
     "path": "work\\risk_adaptivity_revision\\peerj_revision\\latest_boundary_review.txt",
-    "sha256": "0722bf525f1fa89f0cd6031659688f3e7dc60d25e96a5bff267d92d9bd5df710",
-    "manuscript_sha256": "a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf",
-    "pdf_sha256": "59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9"
+    "sha256": "75ad4fdf937267ff9d814a62b56811e93d07e03409c838b9d4d24a7312c0f0f3",
+    "manuscript_sha256": "ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07",
+    "pdf_sha256": "b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c"
   },
   "prior_review_reports": {
     "new_core_theory_review.txt": {
@@ -214,14 +275,14 @@
   "peerj_alignment": "Structured abstract; CS algorithmic contribution; complete central proof and worked certificate; 12-point Times-style text; Letter paper and one-inch margins; left alignment; line numbers; references; explicit Acknowledgements; editable source; size-compliant current supplement and cover letter.",
   "policy_verification_limit": "Live preparation, code/data, authorship, AI and copyright policies inspected on 2026-10-13. The author confirmed checking AI-tool terms and publication suitability. Separate final-content/record-retention attestations and precise historical AI-version identifiers remain unverified; final portal declarations and fees have not been accepted. Supplement upload limits require the separately checked S1/S2 package, not the larger private development archive.",
   "scientific_verdict": "No unresolved blocking scientific flaw identified in this internal review; suitable for journal consideration.",
-  "acceptance_probability": "Not calibrated. No evidence-based greater-than80% threshold established.",
+  "acceptance_probability": "Not calibrated. Internal proof and computational checks do not establish a greater-than90% acceptance probability or direct acceptance.",
   "author_ai_tools_terms_confirmation": "The author personally confirmed checking the AI tools' terms of use and publication suitability. This records the author statement; other final author and portal facts remain separate.",
   "submission_status": "not submitted",
   "external_contact": false,
   "last_recorded_browser_attempt": {
-    "checked_utc": "2026-10-14T03:58:56.9964029Z",
+    "checked_utc": "2026-10-14T04:32:58.2472854Z",
     "diagnostic_path": "work/risk_adaptivity_revision/peerj_revision/browser_startup_check_20261014.json",
-    "diagnostic_sha256": "8c041276775f790ff8f2bf5952745414df4ac994c3b6fa34e3b64377d70270fa",
+    "diagnostic_sha256": "b8d6f906f51e941bb57b0ee9b6b8db47777030f49a2f4dce4460b76a61ac9437",
     "target": "https://peerj.com/manuscripts/",
     "error": "failed to write kernel assets: The system cannot find the path specified. (os error 3)",
     "journal_form_accessed": false,

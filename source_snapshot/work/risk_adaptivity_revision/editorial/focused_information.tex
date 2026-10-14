@@ -1,0 +1,54 @@
+\section{Information and precision}
+\label{sec:risk_setup}
+Let $F\subset\mathbb R^n$ be nonempty, compact and convex, and let
+$T(y)=c^\top y+d$ be the scalar contrast. We select exact linear
+measurements from a fixed finite dictionary. The nonempty family
+$\mathcal Q$ of legal final query sets is fixed before observing answers
+and is the same for batch and adaptive policies. For example, fixed costs
+$k_j\geq0$ and a hard budget $B$ require $\sum_{j\in Q}k_j\leq B$ on
+every execution. Write $L_Q$ for the matrix of measurements in $Q$.
+
+For a feasible record $y$, the compatible records and sharp width are
+\begin{equation}
+ F_Q(y)=\{z\in F:L_Qz=L_Qy\},\qquad
+ W_Q(y)=\max_{z\in F_Q(y)}T(z)-\min_{z\in F_Q(y)}T(z).
+ \label{eq:risk_fiber}
+\end{equation}
+Compactness guarantees both endpoints. This width is the scalar local
+diameter of information; additive constants in $T$ do not affect it.
+A randomized batch chooses $Q$ before seeing answers. An adaptive policy
+uses previous answers and an independent random seed to choose later
+measurements and when to stop. Query and stopping rules are jointly
+measurable, and every execution ends after finitely many queries in
+$\mathcal Q$. The hidden record is fixed before the seed is drawn.
+For bounded-error models, one fixed error vector is part of that record
+throughout the execution; the resulting feasible set must remain convex.
+
+For either randomized policy class $\mathcal C$, define precision success by
+\begin{equation}
+ S_\tau^{\mathcal C}
+ =\sup_{\mathcal P\in\mathcal C}\inf_{y\in F}
+   \Pr_\omega\{W_{Q_{\mathcal P}(y,\omega)}(y)\leq\tau\},
+ \qquad \tau\geq0.
+ \label{eq:risk_precision_success}
+\end{equation}
+Probability concerns the policy's seed at a fixed record; equality at the
+threshold counts as success. A narrow interval need not exclude zero and
+therefore need not identify a winning model.
+
+\begin{proposition}[Width and the transcript fiber]
+\label{prop:risk_concavity_transcript}
+For fixed $Q$, $W_Q$ is finite, nonnegative, concave and upper
+semicontinuous on $F$. For a fixed policy seed, the records consistent
+with an adaptive transcript are exactly $F_Q(y)$ for its terminal set $Q$.
+\end{proposition}
+\begin{proof}
+Convex combinations of maximizing/minimizing endpoint pairs are feasible
+at the corresponding combined record, proving concavity. Along a
+convergent sequence of records, compactness supplies convergent endpoint
+subsequences; their limits are feasible in the limiting fiber, proving
+upper semicontinuity. Thus the widths are Borel measurable. For a fixed
+seed, records agreeing on queried answers produce the same next query
+and stopping decision, by induction. Conversely, a consistent transcript
+requires those answers. The argument includes a transcript with no queries.
+\end{proof}

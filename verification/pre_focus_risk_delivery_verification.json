@@ -1,0 +1,232 @@
+{
+  "status": "PASS",
+  "review_date": "2026-10-13",
+  "completed_utc": "2026-10-14T04:01:29.880928+00:00",
+  "target": "PeerJ Computer Science",
+  "manuscript_sha256": "a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf",
+  "pdf_sha256": "59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9",
+  "zip_sha256": "75da51dd70387635b12f1cdbff2e23ca32cebf99aaf1ac2509c70334aa082b0e",
+  "pdf_pages": 39,
+  "abstract_words": 240,
+  "full_current_package_replay": "outputs/current_clean_package_replay.json",
+  "replay_steps": 76,
+  "complete_source_to_table_chain": "work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/",
+  "complete_source_to_table_rows": 1098,
+  "complete_source_to_table_difference": 0.0,
+  "fresh_both_panel_source_replay": {
+    "path": "work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/fresh_both_panel_replay_20261014.json",
+    "sha256": "3c7dbb113beee7547d42ff68c826cc0c96e2e7d91811a37930eb651091fa189d",
+    "status": "PASS",
+    "runtime_seconds": 925.1283855000001,
+    "no_reuse_flags": true,
+    "new_forecast_fits": 0,
+    "scope": "Fresh single-invocation regeneration of both panels, coefficients, policies, exact certificates and 1,098 outcome rows using pinned raw sources and frozen forecasts; no independent refitting."
+  },
+  "fresh_virtual_environment": "outputs/fresh_environment_setup_20261013.json",
+  "threshold_case_rows_both_conventions": 10980,
+  "threshold_paired_summaries": 320,
+  "threshold_scope": "Exploratory unchanged-policy replay at five width targets; not new optimal precision policies or calibrated downstream decisions.",
+  "final_challenger_diagnostics": {
+    "regime_rows": 1098,
+    "replay_rows": 2196,
+    "paired_summary_rows": 64,
+    "scope": "Retrospective diagnostic and fixed-fallback extension on the existing panels, not a locked confirmation.",
+    "regimes": [
+      {
+        "cohort": "original",
+        "meter": "ALL",
+        "blocks": 819,
+        "adaptive_only_guarantee": 168,
+        "no_deterministic_adaptive_guarantee": 489,
+        "fixed_guarantee": 162,
+        "matched_half": 165,
+        "matched_half_greedy_first_failure": 25,
+        "adaptive_guarantees_but_greedy_first_does_not": 28,
+        "greedy_recorded_success_among_matched_first_failures": 20
+      },
+      {
+        "cohort": "external",
+        "meter": "ALL",
+        "blocks": 279,
+        "fixed_guarantee": 128,
+        "no_deterministic_adaptive_guarantee": 94,
+        "adaptive_only_guarantee": 57,
+        "matched_half": 57,
+        "matched_half_greedy_first_failure": 13,
+        "adaptive_guarantees_but_greedy_first_does_not": 16,
+        "greedy_recorded_success_among_matched_first_failures": 11
+      }
+    ]
+  },
+  "practical_figure": {
+    "source_contrasts_checked": 6,
+    "conditional_lines_checked": 24,
+    "exact_envelope_points_checked": 147,
+    "envelope_equalities": 735,
+    "replay_points_checked": 30,
+    "exact_switch": "402983999413455277/771030112647101785",
+    "exact_maximum": "368046113233646508/771030112647101785"
+  },
+  "two_target_boundary": {
+    "source_sha256": "b84c11b09fd275119478a488c0274b4cc0b428ad77332df417b9847c32cb3ffc",
+    "proof_input_sha256": "5f08ca8fbf76454ca18a12185476579dbcec13e6e9a22ed709156dada60d5e9f",
+    "theorem_fragment_sha256": "c655594f1e86223c5f8b1f2fd2235b0c45c1f1a53e4be919da232380ef5efd98",
+    "family_sizes": [
+      3,
+      5,
+      10
+    ],
+    "exact_job": "two_target_exact",
+    "numerical_job": "two_target_lp",
+    "numerical_verification": {
+      "solver": "scipy.optimize.linprog(method='highs')",
+      "scipy_version": "1.18.1",
+      "LP_counts_by_category": {
+        "initial_endpoint_LPs": 18,
+        "adverse_fiber_endpoint_LPs": 7026,
+        "whole_branch_width_LPs": 54,
+        "whole_interval_fixed_query_width_LPs": 33
+      },
+      "actual_total_LPs": 7131,
+      "absolute_comparison_tolerance": 1e-07,
+      "primal_feasibility_tolerance": 1e-09,
+      "dual_feasibility_tolerance": 1e-09,
+      "maximum_endpoint_discrepancy": 7.105427357601002e-15,
+      "maximum_endpoint_discrepancy_case": {
+        "m": 10,
+        "target": 3,
+        "query": [
+          "t"
+        ],
+        "record_t": "11/20"
+      },
+      "maximum_width_discrepancy": 7.105427357601002e-15,
+      "maximum_width_discrepancy_case": {
+        "m": 10,
+        "target": 3,
+        "query": [
+          "t"
+        ],
+        "record_t": "11/20"
+      }
+    },
+    "scope": "Constructed fixed-two-query family: adaptive precision success 1 versus optimal randomized-batch success 1/m; includes all three paired contrasts of three nonnegative forecast vectors. Input dimension grows with m, normalized slack shrinks, and three fixed queries suffice. This does not alter or independently validate the empirical panels.",
+    "review_memos": {
+      "proof_review_memo.txt": {
+        "path": "work\\risk_adaptivity_revision\\two_target_boundary\\proof_review_memo.txt",
+        "sha256": "0d567e21c6f4402b7b62aa997e54f2a9e88e358c1b9cf65f82f9ba0bfb489f10"
+      },
+      "novelty_review.txt": {
+        "path": "work\\risk_adaptivity_revision\\two_target_boundary\\novelty_review.txt",
+        "sha256": "bfda0a085839331e9b598ec6b840f757a1c81af5240bbdc4b1f0c79c68cbf2ff"
+      }
+    },
+    "prior_execution_history": "outputs/pre_two_target_* preserve the preceding source-specific release; the two new jobs belong to the separately executed current replay."
+  },
+  "latest_review_response": "outputs/LATEST_REVIEW_FIXES_20261013.txt",
+  "manifested_members": 1183,
+  "journal_manifested_members": 1081,
+  "journal_parts": [
+    {
+      "path": "Supplemental_Data_S1.zip",
+      "bytes": 17513047,
+      "sha256": "be7ee4c807b29796f3b596edbfb57281c37305119e4506d4ede8e948d1723a48"
+    },
+    {
+      "path": "Supplemental_Data_S2.zip",
+      "bytes": 23568606,
+      "sha256": "7b07f9558fc13bb12c4b9fd16a1901657f90cd998c3456574f1aa5e504c35fd2"
+    }
+  ],
+  "journal_total_zip_bytes": 41081653,
+  "replay_distribution": "Publisher Supplemental Data S1 and S2, extracted together; full historical archive separately hash-verified.",
+  "historical_members_recoverable": 583,
+  "historical_editorial_notes_omitted": [
+    {
+      "path": "work/external_deadline/editorial/pretest_scientific_review.txt",
+      "bytes": 5181,
+      "sha256": "268734a09a62abd00506d83d0eff5bc12ca96d039083434ea45fdbfe87d3c350"
+    },
+    {
+      "path": "work/external_deadline/editorial/provisional_numerical_review.txt",
+      "bytes": 3313,
+      "sha256": "6745ae32d839bb06e866157f795964ee58da629b7181af108a1ce813855a9e78"
+    }
+  ],
+  "historical_preservation_scope": "Every prior manifested member remains hash-identical at its declared path or preserved alternate except explicitly identified internal editorial notes; those notes remain in the prior private archive/local files, not the current scientific assets.",
+  "elapsed_replay_seconds": 723.563963300001,
+  "review_report": "outputs/PEERJ_REVIEW_AND_RESPONSE_20261013.txt",
+  "visual_review": "outputs/peerj_final_visual_review.txt",
+  "review_kind": "Three separate AI-assisted internal reviews, an additional PeerJ criteria challenge, and final regression/layout review; no external specialist contact or formal proof-assistant certification.",
+  "current_source_review": {
+    "path": "work\\risk_adaptivity_revision\\peerj_revision\\latest_compiled_review.txt",
+    "sha256": "a7a461960c006b06fd11e11edeeec6ad876b31cd171b55a500e36a186512dd37",
+    "manuscript_sha256": "a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf",
+    "pdf_sha256": "59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9"
+  },
+  "workflow_editorial_revision": {
+    "scope": "Exact-total noiseless audit routing; policy objectives versus achieved guarantees; closed/open status partition versus overlapping fallback classification. No new scientific outcomes.",
+    "render_evidence": "work\\risk_adaptivity_revision\\peerj_revision\\latest_compiled_review.txt",
+    "checks": "Workflow and displayed-equation rendering explicitly assessed in the current source/PDF review.",
+    "prior_execution_history": "outputs/pre_workflow_* retain the preceding source-specific successful replay; the current replay is separately executed."
+  },
+  "current_boundary_review": {
+    "path": "work\\risk_adaptivity_revision\\peerj_revision\\latest_boundary_review.txt",
+    "sha256": "0722bf525f1fa89f0cd6031659688f3e7dc60d25e96a5bff267d92d9bd5df710",
+    "manuscript_sha256": "a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf",
+    "pdf_sha256": "59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9"
+  },
+  "prior_review_reports": {
+    "new_core_theory_review.txt": {
+      "sha256": "c9f627542ea96dfc1ba253f7a0d56560ce749fb17a97be89106777ab99f99d2a",
+      "scope": "Earlier source-specific review retained as history; not a new review of current artifacts."
+    },
+    "new_package_review.txt": {
+      "sha256": "048234f8bfc6ca4a83f3f42284106e37c50192def75810d44d860cc1b618423d",
+      "scope": "Earlier source-specific review retained as history; not a new review of current artifacts."
+    },
+    "peerj_final_fit_challenge.txt": {
+      "sha256": "23c4d63ccc564df405ecf889d24c081c61805f26cc7c21927fdf6fc70c4f640a",
+      "scope": "Earlier source-specific review retained as history; not a new review of current artifacts."
+    },
+    "peerj_practical_value_challenge.txt": {
+      "sha256": "0aeb25976f6420fb77ce1ad2322bfbe7dffcd6c58085d0d4342cec370773f8e6",
+      "scope": "Earlier source-specific review retained as history; not a new review of current artifacts."
+    }
+  },
+  "full_current_package_replay_scope": "Fresh isolated executable replay from bundled inputs with network disabled; includes cached new-source counter replay and archived HTTP-trace checks, but no model fitting, private BLEM raw regeneration, new HTTP measurements, repeated scaling measurements, or external independent replication.",
+  "study_environment": "Python3.12.14; requirements-study.txt versions, including SciPy1.18.1",
+  "setup_failure_resolved": "Initial bundled-runtime attempt lacked SciPy and stopped at import before scientific checks; rerun used documented study environment. Log retained in peerj_runtime_setup_failure_20261013.log.",
+  "native_process_failure": "A run of the preceding 71-step revision stopped at historical checker48 with an empty log. Windows Application Error1000 recorded a Python/ntdll.dll exception0xc000070a. The unchanged checker then passed, and a complete unchanged 71-step rerun passed. That source-specific history, event, failed-run log and invocation remain separately retained as peerj_native_crash_*_20261013 and pre_additional_review* files. The current final replay validates the later revision with the added diagnostics and figure; no automatic scientific-failure retries were added.",
+  "integration_failure_resolved": "Initial integration scheduled frozen task-binding checks after geometry regeneration. Reordered them before regeneration and added an upfront dependency guard, tested on the actual driver. Old failure log: peerj_replay_order_failure_20261013.log. Scientific geometry entries matched; only its manifest differed.",
+  "storage_setup_failure_resolved": "Staging attempts exhausted disk space before scientific checks. Temporary-copy deletion was previously blocked by automatic policy review; lossless NTFS compression of generated copies preserved their contents and recovered space. Logs: peerj_disk_setup_failure_20261013.log and peerj_disk_setup_failure_20261014.log. The latest compression additionally checked SHA-256 equality for twelve old generated trajectory copies; peerj_storage_compression_20261014.log records compression. The final unchanged replay passed after space was recovered.",
+  "protocol_selection_case_interfaces": 116,
+  "task_bindings_checked": 29,
+  "retained_endpoints_checked": 58,
+  "valid_scientific_ledger_unchanged": true,
+  "practical_cost_analysis": "Exact supplied-catalogue frontier; 174 case-ratio decisions and 306 independently evaluated candidates. Declared costs, not new field savings.",
+  "printed_worked_example": "Exact rational check of all displayed coefficient enclosures, both continuum branches and all ten adverse batch columns; optional regenerated geometry check recorded separately.",
+  "fallback_guaranteed_cases": 29,
+  "fallback_budget_counts": {
+    "2": 22,
+    "3": 7
+  },
+  "peerj_alignment": "Structured abstract; CS algorithmic contribution; complete central proof and worked certificate; 12-point Times-style text; Letter paper and one-inch margins; left alignment; line numbers; references; explicit Acknowledgements; editable source; size-compliant current supplement and cover letter.",
+  "policy_verification_limit": "Live preparation, code/data, authorship, AI and copyright policies inspected on 2026-10-13. The author confirmed checking AI-tool terms and publication suitability. Separate final-content/record-retention attestations and precise historical AI-version identifiers remain unverified; final portal declarations and fees have not been accepted. Supplement upload limits require the separately checked S1/S2 package, not the larger private development archive.",
+  "scientific_verdict": "No unresolved blocking scientific flaw identified in this internal review; suitable for journal consideration.",
+  "acceptance_probability": "Not calibrated. No evidence-based greater-than80% threshold established.",
+  "author_ai_tools_terms_confirmation": "The author personally confirmed checking the AI tools' terms of use and publication suitability. This records the author statement; other final author and portal facts remain separate.",
+  "submission_status": "not submitted",
+  "external_contact": false,
+  "last_recorded_browser_attempt": {
+    "checked_utc": "2026-10-14T03:58:56.9964029Z",
+    "diagnostic_path": "work/risk_adaptivity_revision/peerj_revision/browser_startup_check_20261014.json",
+    "diagnostic_sha256": "8c041276775f790ff8f2bf5952745414df4ac994c3b6fa34e3b64377d70270fa",
+    "target": "https://peerj.com/manuscripts/",
+    "error": "failed to write kernel assets: The system cannot find the path specified. (os error 3)",
+    "journal_form_accessed": false,
+    "submitted": false,
+    "credential_access": false,
+    "scope": "Last recorded browser startup attempt only; finalizing delivery does not perform a fresh portal check."
+  }
+}

@@ -1,107 +1,122 @@
-LATEST CLAIM-BOUNDARY REVIEW: PRESENTATION REORDER
-Date: 14 October 2026 UTC
-Reviewer: /root/review_pdf_claims; internal AI-assisted analytic/reporting review
+LATEST CLAIM-BOUNDARY REVIEW: FOCUSED SHARED-QUERY MANUSCRIPT
+Date: 14 October 2026
+Reviewer: /root/peerj_final_fit_challenge; internal AI-assisted analytic review
 Status: PASS within the scope below
 
 CURRENT ARTIFACTS
 Source SHA256:
-a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf
+ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07
 PDF SHA256:
-59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9
-PDF length: 39 pages; structured abstract: 240 words.
-Render manifest and independently read filesystem hashes agree.
+b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c
+PDF length: 28 pages, checked with pypdf.
+Previous review preserved at pre_focus_20261014/latest_boundary_review.txt.
 
-VERDICT AND SCOPE
-No mandatory correction to the contribution or interpretation was identified.
-I checked the source, reordered dependencies, exact theorem commands,
-current equation rendering, workflow and application claims against supplied
-evidence. No scientific result changed in the reorder. Earlier analytic and
-prior-art review remains documented separately. This is not an external
-specialist review, a new exhaustive literature search, a machine-checked
-universal proof or an editorial acceptance assurance.
+VERDICT AND REVIEW SCOPE
+No mandatory scientific correction was identified in the current scalar floor,
+two-target construction/corollary, new assurance-feasibility proposition, or
+their abstract/introduction/discussion/conclusion interpretation. I reread
+these current source sections and compared the central theorem against its
+scientific input and prior composed source. This is a source/claim/proof review;
+the PDF hash binds its companion artifact but does not assert a new full visual
+render inspection. It is not external specialist validation, a proof-assistant
+certificate, a new exhaustive literature search, or an acceptance assurance.
 
-THE THEORETICAL DISTINCTION
-The scalar floor explicitly starts with a deterministic sure-precision
-policy, two exact scalar queries, one affine target, compact convex set
-and answer-independent finite query dictionary. Sparse-policy/Helly
-reasoning is credited. No new general sparsification theorem is claimed.
+UNCHANGED CENTRAL THEOREM (source lines 348-525)
+The theorem and corollary block matches two_target_boundary/main_theorem.tex
+exactly after its section-to-subsection composition transformation. It also
+matches outputs/pre_focus_revised_manuscript.tex. The scientific fragment hash
+is c655594f1e86223c5f8b1f2fd2235b0c45c1f1a53e4be919da232380ef5efd98.
+The verifier hash b84c11b09fd275119478a488c0274b4cc0b428ad77332df417b9847c32cb3ffc
+matches the source hash recorded in the saved numerical report.
 
-The complete two-target theorem is now Theorem 2 on pages 9-10, followed
-by Corollary 1 on pages 10-11. It proves exact optimal success 1 versus
-1/m for every integer m>=3 at budget two. All coordinates are queryable;
-each target separately has a fixed successful batch. A covering mixture
-proves the lower bound over the full continuum. A feasible adverse
-distribution bounds every randomized batch. The three-model-pairs
-extension has common forecast vectors and a separate third-width check;
-these constructed vectors are not presented as newly trained forecasts.
+The two-target theorem supplies both bounds: an adaptive branch rule and a
+uniform fixed-batch mixture valid on the entire polytope, plus a fixed adverse
+distribution covering all seven types of two-coordinate batches. Monotonicity
+covers shorter/repeated-query executions. It proves exact success 1 versus 1/m
+for every m>=3 with two affine targets and two unit-cost coordinate queries.
+The common nonnegative forecast construction realizes all three model pairs;
+the third contrast already meets its own threshold after the first query.
+The shrinking normalized margin, growing dictionary and sufficient three-query
+fixed alternative remain explicit. No claim of fixed-dimensional divergence,
+fixed-error robustness, unbounded query savings or empirical 1/m advantage is
+made. The exact commands follow the proof at lines 527-550.
 
-Target count and query budget stay fixed while dimension and dictionary
-size grow. Three fixed queries suffice. The normalized threshold margin
-shrinks. These limits remain explicit; threshold robustness is not
-relabeled measurement-error robustness. The prefix-query mean separation
-is a different result/objective. The full scalar classification remains
-in Section 2.7; its relocation removes no premise of the earlier theorems.
+I did NOT rerun the 7,131 LPs in this review. Their recorded execution, script
+hash and finite-check scope remain distinguishable from the universal proof.
+The root's current clean-package replay is a separate ongoing verification;
+this review does not assert that it has finished or that an earlier package
+run establishes current-package success.
 
-PRACTICAL EVIDENCE AND COMPARATORS
-The application provides instance-specific assurance under a declared
-two-reading cumulative-register interface. Matching certificates close
-randomized-batch precision at one half for 165 original and 57 external
-blocks. This is separate from remaining full-panel gaps, width-optimal
-comparators and recorded success. The worked example includes a
-full-continuum cover, adverse-record upper bound, original loss units and
-executable checks.
+SCALAR FOUNDATION AND NOVELTY BOUNDARY (lines 251-347; 170-221)
+The scalar theorem assumes a deterministic sure policy, a fixed finite
+answer-independent dictionary and a common hard budget. Conditional scalar
+worst widths are concave, so their strict failure sets are convex. The finite
+one-dimensional Helly argument supplies two covering batches, with equality at
+the precision threshold treated as success. Stopping is included as an action.
+The result is credited to sparse-policy reasoning rather than claimed as a new
+Helly theorem. Local diameters, vector recovery, reconstruction-error criteria,
+Sion/Jensen, adjustable robust optimization and Kurtz Theorem 11 are explicitly
+acknowledged. The precise additional claim is the query-realizable fixed-budget,
+small-output construction with matching probabilities. The supporting penalty
+classification and separate mean-joint-width construction are correctly sent
+to Online Resource 1, S11 and S14; the main result does not depend on an omitted
+uncited theorem. The prior-art scope remains that of the source-linked memo
+in two_target_boundary/novelty_review.txt; no historical first claim is added.
 
-Whole-panel gains over greedy remain about two percentage points.
-Capacity information can remove most feedback need. The combined cap/error
-control retains its three-success difference among 200 compatible records,
-with a primary interval including zero. Greedy's additional external
-best-model certificate remains disclosed. Precision does not imply winner
-identification, improved predictions or financial savings.
+NEW PROPOSITION 2 (lines 663-705)
+The statement specializes to the six-hour, exact-total, noiseless model with
+five permitted internal prefixes. If A>tau, each first query has one feasible
+answer at which all four continuations fail. Twenty endpoint witnesses,
+retaining multiplicities, define one uniform adverse distribution independent
+of the policy and its seed. For each fixed seed, the common first answer forces
+a failing member of the corresponding row; averaging yields failure at least
+1/20. Therefore every randomized adaptive policy has a fixed adverse record
+with success at most 19/20. Legal unused queries justify padding early stops
+and repetitions. This excludes a limiting sequence of success probabilities
+approaching one, not only an attained sure policy.
 
-The actual public API favors bulk. The early workflow recommends bulk
-when admissible; the Discussion retains that result. Restricted replay is
-not described as the provider's deployed constraint. Reading counts,
-requests, feedback rounds and observed I/O times remain distinct resources.
-Capacity/error allowances remain sensitivity models, not device calibration.
+The proposition meets the padding clarification in my separate
+assurance_feasibility_review_20261014.txt. That review independently checked
+11,660 strict failing fibers for 489 original and 94 external source-bound
+certificates with Fraction arithmetic; its exact input/checker hashes and
+margins are recorded there. The current source reports these counts and scopes
+accurately at lines 1264-1276. The bound is explicitly non-tight, the witnesses
+are synthetic completions, and no transfer to capacity/error models is made.
+The workflow can now say that its three branches exhaust certainty under this
+specific model, including randomized policies. Probabilities below one remain
+a separate problem.
 
-REPRODUCIBILITY AND PRESENTATION
-Exact construction commands accompany the proof and specify inputs,
-dependencies and expected outputs. They do not claim to reproduce the
-forecasting pipeline. Original/external routes are separately described.
-S9 has supporting scalar examples; S10 has general-polytope algorithms with
-an explicit hardest-record definition. No missing or duplicate main
-cross-reference was found. The classification statement is uninterrupted
-by application floats, and application assumptions have their own Methods
-subsection. Inspected equation and workflow displays are legible.
+PRACTICAL CLAIMS AND ADVERSE EVIDENCE
+The abstract and opening distinguish the construction from its narrower meter
+counterpart. The shared budget is a declared benchmark contract, not a deployed
+provider restriction. Matching all-completion guarantees remain limited to 165
+original and 57 external blocks, while the 351/67 unresolved batch-precision
+gaps are explicit. Recorded gains of 7.81/11.11 percentage points over fixed
+worst-width batching and 2.20/2.15 over greedy do not become objective-matched
+full-panel optimal-batch claims. The covering challenger can have a stronger
+worst-case guarantee and poorer recorded success; the source preserves that
+tradeoff and its stronger-fallback diagnostic.
 
-The manuscript is clearer and technically reviewable. This pass does not
-establish historical priority against every publication, calibrated
-acceptance odds or completed submission. Final archive reproduction and
-delivery must be recorded for the exact package sent to reviewers. No
-external person was contacted.
+Discussion lines 1384-1466 now states the usable audit decision directly:
+choose fixed retrieval, feedback, or more information for a supplied precision
+requirement. External best-model counts 207 versus greedy 208 are prominent,
+as are original counts 123 versus 118. Precision is not model selection.
+Capacity/error sensitivity, exact endpoints, retrospective reused panels and
+three systems per source remain visible. Bulk is the best observed option on
+the measured unrestricted API. The separate declared-cost catalogue is not
+relabeled deployed savings. Conclusion leads with the proved shared-budget
+boundary and then the matched meter certificates, preserving these conditions.
 
-CHECKLIST FOLLOW-UP: FINAL SOURCE LINKS AND ROADMAP
-The current hash above also includes the subsequent two editorial edits:
-the introduction now says the scalar precision bound starts the comparison
-and the later classification explains the wider risk objective; Data and
-Code Availability now names https://github.com/QuantLet/BLEM and the
-accompanying paper DOI https://doi.org/10.3390/en12142718 directly.
-The pinned-source/hash-mismatch check and redistribution distinction remain.
+PEERJ COMPUTER SCIENCE FIT
+The focused contribution is an acquisition algorithm, exact query-complexity
+boundary and executable certificate method for fixed ML model audits. That is
+a defensible CS scope. The source supports Basic Reporting through explicit
+success events and assumptions; Experimental Design through common information,
+budgets, objectives and source chronology; and Validity through matching bounds,
+scoped replay and adverse controls. This review relies on the previously
+recorded official-criteria inspection, not a new successful live website read.
+The remaining editorial judgment concerns significance and distinctness within
+the cited literature. No technical correction found here removes that judgment
+or justifies a calibrated greater-than-90-percent acceptance probability.
 
-Full-size inspection of updated pages 3, 35 and 36 confirms the revised
-roadmap and source links fit, remain legible, and introduce no clipping.
-The mathematical content is unchanged. Current built-in compile and
-preflight pass, and the PDF remains 39 pages.
-
-The five new typesetting allegations were checked item by item:
-1. Page 19: the switch interval visibly contains its closing square bracket.
-2. Page 10: queried coordinates, W_1 and W_2 are separate table headers.
-3. Page 16: the alpha/beta cases and j<k / j>k conditions are aligned.
-4. Page 18: the HPM coefficient-enclosure table has five separate headers.
-5. Pages 37-39: DOI links have normal spaces or line breaks after preceding
-   text; no merged bibliographic sentence/link was found.
-These are extraction/reading artifacts, not current PDF defects.
-See typesetting_checklist_20261014.txt for the preceding artifact's exact
-page and source pointers; the inspected formulas did not change in this
-two-edit follow-up. No cosmetic math edit was made to repair a nonexistent
-defect. The component/full-package verification distinction remains.
+No manuscript, scientific input, checker or empirical result was changed.

@@ -1,212 +1,74 @@
-FINAL PEERJ COMPUTER SCIENCE REVIEW -- 13 October 2026
-Source SHA256: a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf
-PDF SHA256: 59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9
-Pages: 39
+FINAL PEERJ COMPUTER SCIENCE REVIEW -- 14 October 2026
+Source SHA256: ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07
+PDF SHA256: b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c
+Pages: 28
 
 Current comprehensive response: LATEST_REVIEW_FIXES_20261013.txt
 PeerJ-specific criteria: PEERJ_CRITERIA_AUDIT.txt
 
-CURRENT INTERNAL REVIEW -- 13 October 2026
-Source SHA256: a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf
-PDF SHA256: 59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9
-Pages: 39
+CURRENT INTERNAL REVIEW -- 14 October 2026
+Source SHA256: ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07
+PDF SHA256: b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c
+Pages: 28
+Recorded UTC: 2026-10-14T04:31:42.168499+00:00
 
-LATEST REVIEW: OBJECTIVE ALIGNMENT, PRECISION SENSITIVITY AND REVIEWER ENTRY
+FOCUSED REVISION AND CURRENT REVIEW
 
-A. Different claims answer different questions -- FIXED PRESENTATION.
-The abstract, introduction, discussion and new claim/objective/evidence map
-separate scalar classification, constructed mean-joint-risk optima, exact
-real-instance precision optima, recorded-answer success, and API costs.
-The matched 165 original / 57 external half-success certificates are the primary
-application evidence. Broad replay gains are not described as empirical
-estimates of the constructed 1/2-versus-2/3 mean-risk separation.
+The main manuscript is reduced from 39 to 28 pages while retaining the full
+two-target theorem, its matching lower and upper bounds, the shared-query
+algorithm, a worked real-data certificate and the adverse application controls.
+The scalar penalty classification and older mean-width construction are indexed
+in Online Resource 1, S11 and S14. Historical experiments remain in S1-S15.
+This is a change in presentation, not deletion of unfavorable scientific results.
 
-B. Incomplete global precision optimization -- QUANTIFIED, NOT MISLABELED SOLVED.
-The 351 original and 67 external unresolved probability brackets have median
-widths 1/3 and 1/2, IQRs [1/4,1/2] and [1/3,1/2], and range 1/5 to 1/2.
-The main text calls these gaps substantial. All-panel mean gaps are 0.1583
-and 0.0983. Exact optimality
-claims remain confined to matching certificates; the broad challenger is a
-declared policy rather than a universal optimum. This is a scientific scope
-boundary, not a remaining arithmetic defect.
+The new current-model Proposition 2 provides a checkable upper bound against
+every randomized adaptive two-reading policy where deterministic certainty
+is impossible. Each first query has four failing records with one common first
+answer. Uniform mass on all twenty records is independent of the policy seed.
+All 489 original and 94 external excluded blocks have exact certificates;
+11,660 failing-fiber endpoint pairs passed direct rational checks. Separate
+internal code repeated these checks without importing the producer. The 19/20
+bound is conservative, not the optimized randomized-adaptive success value.
+The main proof explicitly scopes this to five permitted internal prefixes and
+the exact, noiseless six-hour model. The quantifiers are for each policy,
+there exists a fixed adverse record, not one universal adverse record.
 
-C. Dependence on the half-width target -- NEW CHECKED EXPLORATORY ANALYSIS.
-Unchanged policies replay all 1,098 blocks at 0.40, 0.45, 0.50, 0.55 and 0.60.
-Fixed-batch gains remain 2.08--7.81 pp (original) and 7.89--11.11 pp (external);
-greedy gains remain smaller at 0.37--2.69 and 0.36--2.87 pp, with some intervals including
-zero. No forecasts, policy choices, mixtures or original thresholds changed.
-The supplement supplies all outcomes, systems, paired cells and 2,000-draw
-seven-day circular-block intervals under two numerical threshold conventions.
-One external randomized boundary case differs by 1.11e-16 in normalized width;
-the prior mixed conventions are documented. No adaptive/fixed/greedy outcome
-changes at any of the five thresholds. Historical reported results remain.
-Verification: 6,588 coefficient joins, 10,980 rational batch widths, 720 endpoint
-LPs (maximum discrepancy 2.22e-16), 10,980 threshold rows and 320 paired
-summaries (maximum discrepancy 1.07e-14 pp).
+The practical decision is now complete within that model: use a fixed batch,
+use feedback, or extend an insufficient acquisition contract. This does not
+establish why a real service would enforce two-reading access. The measured
+public API favors bulk; external greedy certifies 208 model winners versus
+207 for adaptation. Capacity/error controls and 351/67 open batch-precision
+gaps remain explicit. Assurance is not equivalent to forecasting accuracy,
+model selection, measured cost savings or deployment validation.
 
-D/E. Information interface and limited systems -- BOUNDARIES PRESERVED.
-The main paper retains exact endpoints, illustrative caps/errors, repeated
-days, three systems per source and retrospective chronology. The actual API
-favors bulk retrieval; no monetary saving, calibrated decision threshold or
-improved model choice is inferred. Full pairwise controls remain in S6.
-The current main manuscript has 39 pages; full controls remain available.
+The abstract remains 240 words and the paper follows Introduction, Methods,
+Results, Discussion and Conclusions. The early workflow, exact theorem table,
+algorithm box, coefficient matrix, switch interval and enclosure headers were
+inspected in the rendered PDF. No overflow, underflow or undefined-reference
+warning remains in the final TeX log. A successful desktop compilation is
+recorded separately from the scientific checks.
 
-F. Reviewer reproducibility -- CONCRETE DEFECTS FIXED AND TESTED.
-Corrected two command paths that contradicted the stated root directory,
-removed stale step counts, and pinned narwhals/cloudpickle transitives.
-Added a three-level quick start: solver-free witnesses; offline full replay;
-both-source pinned raw regeneration. Prior requirements are preserved.
-A newly created isolated Python 3.12 venv installed the current 11 package pins
-and passed pip check. The focused external source-to-table chain ran 9 steps
-in 91.71 seconds with no reused producer directories: 279 rows and 57 half certificates
-matched. Both-source source-to-table execution remains separately recorded.
-Final revised publisher-ZIP full replay is recorded independently in
-current_clean_package_replay.json; this prose is not its execution evidence.
+All previous empirical values and the pinned scientific producer scripts are
+unchanged. Both-source regeneration previously reproduced all 1,098 ledger
+rows and 165/57 matched-half counts exactly, without producer reuse. The new
+assurance output is tied to that source chain. Its default solver-free command
+checks the bundled external panel; original coefficients require the documented
+pinned raw-source route. Current publisher ZIP execution is recorded separately
+in current_clean_package_replay.json; historical successful runs are not
+relabeled as checks of the new source. No new model fitting is claimed.
 
-G. Comparator and guarantee diagnostics -- CHECKED ON EXISTING INPUTS.
-The exact three-way partition is 162 fixed / 168 adaptive-only / 489 without
-a deterministic two-query guarantee on the original panel, and 128 / 57 / 94
-externally. Among the 165 / 57 matched-half cases, the saved greedy first query
-fails to guarantee half-width on 25 / 13, although recorded success occurs on
-20 / 11 of those. Replacing only the existing no-cover fallback by fixed
-worst-width batching gives 64.71% / 74.19% recorded success. Pure fixed batching
-remains stronger at 70.45% / 79.21%. This retrospective diagnostic does not
-change the exact matched-half optima or solve the remaining continuum gaps.
-The independent checker covers 1,098 exact regime cases and the exported
-paired outcomes. Default original-panel checks use saved derived certificates;
-the separate source route verifies their coefficient construction.
+Current fit assessment: suitable for PeerJ Computer Science consideration as
+a theoretical/computational audit method with conditional application evidence.
+No blocking proof or numeric error was identified in this internal review.
+Reviewers can still judge significance, practical scope and presentation.
+These corrections do not establish a calibrated 90% individual acceptance
+probability or direct-acceptance probability. No external specialist was
+contacted. Journal submission has not occurred; the recorded supported browser
+startup failed before any page or form was reached.
 
-H. Shared-query geometry -- EXPOSED AND VISUALLY CHECKED.
-A self-contained two-panel figure shows the worked HPM1 conditional envelopes
-and both panels' five-target replay curves. Its coordinates derive from saved
-exact rational coefficients and integer counts, not a rounded printed matrix.
-The independent check verifies 24 conditional lines, 735 envelope equalities
-at 147 breakpoints and all 30 replay points. The scalar Helly result's
-single-target and sure-precision premises are made explicit; joint convex
-envelopes do not satisfy the same failure-set argument. Curvature alone is
-not presented as proof of a strict separation.
-
-I. LAST CONSISTENCY REVIEW -- NECESSARY CLARIFICATIONS ONLY.
-The fixed-versus-cover replay deficit is now attributed exactly: fixed succeeds
-on 155/165 and 51/57 matched-half records, versus expected cover successes of
-108/165 and 37/57. All nonmatched block success probabilities agree under both
-threshold conventions. The 47/14 deficits are independently recounted by the
-default checker. Fixed batches have worst-case precision success zero on each
-matched-half instance, whereas the cover guarantees one half. Better recorded
-success and a better worst-case guarantee are thus different comparisons.
-The text distinguishes the exact 0.47734 peak from conservative outward bounds
-0.47743079/0.4774. Remaining cover labels are consistent. Alleged DOI spacing
-and corporate-author spelling defects were absent; no unsupported GPT-5 usage
-claim was inserted. The author subsequently confirmed personally checking the
-AI tools' terms of use and publication suitability; that confirmation is now
-recorded. It does not establish other final author or portal facts. Matrix
-decimals were already legible and their values were retained.
-
-J. LATEST CONTRIBUTION/ACCESS REVIEW -- CHECKED AGAINST CURRENT CLAIMS.
-The related-work section distinguishes reconstruction error, randomized local
-width risk, expected global radius and vector recovery, with exact source
-locators; it attributes the minimax/Jensen and sparse-policy foundations.
-The central shared-prefix result includes policies and matching lower bounds.
-The access replay does not claim a deployed two-register service. Bulk remains
-preferred on the measured API. E/3, combined capacity/error and best-model
-counterexamples remain in the results and discussion. Full-panel comparisons
-remain selected-policy replay; exact superiority is confined to matching
-certificate subsets. The new read-only current-source audit found no necessary
-source correction. Its evidence map is latest_boundary_review.txt. The actual
-S1/S2 execution, rather than the PDF description, closes the packaging condition
-only when the final replay report passes.
-
-K. FIRST-READER CLARITY -- BOUNDED EDITORIAL CLEANUP.
-Revision-only phrases and repeated caveats were removed. The text now names
-the coordinate-increment controls, the J<=1/2 fallback threshold, the uncapped
-noiseless normalization and the completed-archive control directly. Scientific
-values, eligibility gates, retrospective chronology, unfavorable controls and
-source-reconstruction limits remain unchanged. first_reader_prose_review.txt
-records the fragment edits before integration; it is not itself a review of
-the final compiled PDF. latest_compiled_review.txt supplies that hash-bound
-assessment. Generator-owned captions were regenerated with their checks.
-
-L. AUDIT WORKFLOW AND POLICY STATUS -- EDITORIAL CLARIFICATION.
-The introductory workflow makes the usable decision explicit: use admissible
-bulk retrieval; otherwise compare the best fixed and deterministic adaptive
-two-reading guarantees with the declared precision target, then choose fixed,
-adaptive or an extended audit. The diagram states its exact-total, noiseless
-scope and separates randomized precision success. The policy table distinguishes
-planning objectives, achieved guarantees and recorded comparisons. The status
-table's closed columns and open-gap column partition each panel; fallback is
-a separate overlapping classification, not an additional partition category.
-The current hash-bound compiled review explicitly checks this workflow and
-the displayed equations. It supplies rendering evidence; numerical replay
-and analytic proof remain separate checks. The preceding successful source
-and replay are preserved as pre_workflow_* records with their original hashes.
-No private repository or release reference has been added to the manuscript.
-
-CORE MATHEMATICS AND ATTRIBUTION
-The new main result fixes the hard budget at two and the number of affine
-outputs at two, while proving exact adaptive success 1 versus optimal
-randomized-batch success 1/m for every m>=3. The complete proof covers every
-permitted final query-set type and supplies the continuum lower guarantee.
-The all-three-model-pair corollary, nonzero threshold band and three-fixed-query
-sufficiency are explicit. Input dimension grows and the margin shrinks; this
-is not a fixed-error result or an unbounded saving in needed readings.
-The new independent implementation checks 1,171 adverse/query combinations
-and executes 7,131 LPs, with maximum discrepancy 7.11e-15 against exact rational
-formulas. Its actual clean-package rerun is recorded separately. The current
-abstract is 240 words and distinguishes constructed and measured evidence.
-The earlier growing scalar-family statement and proof are in S9; the general
-polytope algorithms are in S10. The cumulative-meter specialization is a sibling Methods
-subsection, not part of the new coordinate construction. The matched-subset
-tradeoff table and consolidated numerical conventions make comparator scope
-directly inspectable. No historical empirical outcome has been changed.
-
-LATEST ATTACHMENT -- REPRODUCIBILITY AND READING ORDER
-The complete two-target theorem now starts on page 9 rather than page 13.
-Setup and the scalar precision floor lead directly to the new boundary, then
-the meter planner and worked certificates. The complete scalar classification
-proof follows; its small example and the general-polytope algorithms are indexed
-in S9/S10. The methods hierarchy and floating-figure placement were checked in
-the final PDF. The exact theorem commands, required inputs, output filenames,
-expected PASS fields and numerical tolerances are printed beside its proof.
-The current main text is 39 pages. The prior 40-page version's
-successful 76-step run is retained as pre_entry_revision_* evidence, not relabeled
-as verification of this source. The final rebuilt package has its own replay.
-Growing dimension, shrinking threshold margin and the three-reading fixed
-alternative are mathematical boundaries, not errors to erase. The measured
-bulk advantage and unfavorable capacity/error controls remain visible.
-
-FINAL TYPOGRAPHY CHECKLIST
-The alleged missing switch bracket, merged width/enclosure headers, malformed
-piecewise brace and missing DOI spaces were checked against source and pixels;
-they were already correct. They were not changed on the basis of text-extraction
-artifacts. The availability paragraph now contains direct public QuantLet/BLEM
-and Kostmann--Hardle DOI links. No private research-repository link was added.
-The introduction now calls the scalar precision bound the starting point and
-describes the later penalty classification as the broader risk explanation.
-The fresh both-source chain completed without producer-reuse flags in 925.13
-seconds: all ten stages and nine original-regeneration stages passed, all
-1,098 ledger rows matched exactly, and the 165/57 certificate counts agreed.
-The sanitized execution record is in provenance_chain/executed/
-fresh_both_panel_replay_20261014.json. No fresh model fitting is claimed.
-
-A separate analytic review found no blocking flaw in the scalar iff proof,
-jump-at-zero treatment, transcript identity or shared construction. Independent
-rational arithmetic reproduced its printed bounds. Primary Sion, Krieg--Ullrich,
-Kurtz and Osipenko statements support the precise objective distinctions.
-The sufficient proof uses established minimax/Jensen; sparse-policy overlap
-is credited. No exhaustive priority or external-specialist validation claimed.
-Those earlier reviews retain their original source identities. The current
-compiled-source review is latest_compiled_review.txt and matches the source
-and PDF hashes at the top of this report; it does not turn earlier reviews
-into independent validation of the later revision.
-
-VERDICT
-The review's concrete reporting, diagnostic and executable-entry requests are
-addressed. No unresolved blocking scientific error was identified internally.
-General deployment value, global precision optima on all blocks and broad
-population prevalence remain outside the established claims. This is suitable
-for PeerJ Computer Science consideration after final artifact checks and factual
-author declarations, not evidence of a statistically calibrated 90% acceptance
-probability. No journal submission or external contact occurred.
+Earlier source-bound reviews and failed/successful reproduction attempts remain
+in history. This memo records current scope without treating AI-assisted checks
+as independent external validation.
 
 FINAL ARTIFACT VERIFICATION
-PASS: 76 steps in a fresh network-disabled stage from the two publisher ZIP files, 1081 manifested members, 723.56 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 41.08 MB. Full historical archive integrity also passed.
+PASS: 77 steps in a fresh network-disabled stage from the two publisher ZIP files, 1096 manifested members, 1026.08 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 41.59 MB. Full historical archive integrity also passed.

@@ -1,11 +1,12 @@
 {
   "status": "passed",
-  "review_date": "2026-10-13",
-  "completed_utc": "2026-10-14T03:36:24.909219+00:00",
+  "review_date": "2026-10-14",
+  "completed_utc": "2026-10-14T04:31:50.721326+00:00",
   "scope": "PeerJ structure and source/PDF correspondence; analytic and software reviews are separate. Full clean ZIP replay reported separately.",
-  "manuscript_sha256": "a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf",
-  "pdf_sha256": "59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9",
-  "pdf_pages": 39,
+  "manuscript_sha256": "ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07",
+  "pdf_sha256": "b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c",
+  "extended_methods_sha256": "45e54b221e1df0b5a3af8048553b6c9ddca6652bfa52b3a7134232939865b8da",
+  "pdf_pages": 28,
   "abstract_words": 240,
   "builtin_main_compile": "success",
   "manuscript_overfull_or_undefined_warnings": 0,
@@ -35,9 +36,12 @@
     "final_challenger": "a64275b82906bc637c080ef82cdbe59dd129b6a4af2a192a0fbf63e95389d117",
     "final_challenger_both_source": "bcf0f3e234765842ae91810ccd7c70fd645d0cfd59f803fa2827cecd4423a8fb",
     "two_target_exact": "7eef134aaf78c6ae0de981747d14a113f54fd7373553a88429e6084e18a96270",
-    "two_target_lp": "6484c2f23bbc51709d90cbbba78e34059cea1f728905d6f734d1c15e15413acf"
+    "two_target_lp": "6484c2f23bbc51709d90cbbba78e34059cea1f728905d6f734d1c15e15413acf",
+    "assurance_external": "9311a852f54a6999d834944275ed9f27ca77ff7ec69d97514e7517fd8784d015",
+    "assurance_both_sources": "c44beb7c8e801e0987c3fbdd326bebe70249b9947ecab2dd9ccd6def9591e269"
   },
   "historical_empirical_result_changes": false,
+  "new_assurance_result_scope": "Finite-witness upper bound on randomized adaptive certainty in the existing uncapped exact-total two-prefix-reading model; external default replay and separate both-source execution remain distinct.",
   "target": "PeerJ Computer Science",
   "policy_evidence": [
     "User-supplied current Research Article editorial criteria",

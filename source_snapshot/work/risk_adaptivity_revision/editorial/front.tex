@@ -37,179 +37,111 @@ its narrower, instance-specific counterpart under declared access rules.
 adaptive information; minimax risk; optimal recovery; robust optimization.
 
 \section{Introduction}
-A model audit may need additional measurements before it can justify a
-comparison. The auditor can retrieve the full record, choose a batch of
-readings in advance, or choose later readings after seeing earlier answers.
-We call the last option adaptive querying. A sharp interval is the smallest
-interval containing the loss difference for every record compatible with
-the available information. We ask when feedback improves the
-guarantee that this interval will be sufficiently narrow. Width limits how
-much the reported loss difference can vary across compatible records.
-The application requires retrieval to halve that range: a declared uncertainty
-budget for reporting a comparison, not a validated proxy for choosing a winner.
+A model audit may need more verification data before it can report a precise
+comparison. The auditor can retrieve a complete record, choose a batch of
+readings, or choose later readings after seeing earlier answers. We study
+this last option, adaptive querying. Our output is a sharp interval: the
+smallest interval containing the loss difference for every record compatible
+with the observations. Its width measures how much the reported comparison
+can still change. We ask when feedback is needed to meet a stated width
+requirement with the same reading budget.
 
-We study affine scalar contrasts on nonempty compact convex uncertainty
-sets, with queries selected from a fixed finite dictionary of linear
-measurements. This formulation includes paired squared-loss comparisons,
-overlapping linear constraints, valid coordinate bounds, signed targets,
-and fixed query costs. Batch and adaptive policies have the same hard
-budget. The unknown record is fixed before the algorithm's random seed is
-drawn; probabilities describe acquisition randomization, not a distribution
-assumed for the missing truth. Fixed bounded measurement errors can be
-included by enlarging the hidden record when the resulting uncertainty set
-is compact and convex.
-
-The practical decision is which retrieval protocol can meet the auditor's
-required precision. We use fixed model predictions and choose which
-verification readings to retrieve. A certificate checks whether the resulting
-comparison meets the requirement for every compatible record. This differs
-from improving the predictor itself.
+This is an acquisition problem for fixed predictors. The auditor specifies
+which loss contrasts must be precise, what information is already available,
+and which measurements may be requested. The algorithm then chooses readings
+and checks the resulting intervals. Identifying a better model is a separate
+condition: a comparison interval must also exclude zero.
 
 The central result is a boundary between one comparison and a shared
 collection of comparisons. For one affine contrast, a deterministic policy
-using two exact scalar queries to guarantee precision implies randomized-batch success of at least
-one half (Theorem~\ref{thm:helly-precision}). With just two contrasts, that
-floor disappears: Theorem~\ref{thm:two-target-collapse} gives optimal success
-$1$ versus $1/m$ for every $m\geq3$, still using only two readings.
-Every coordinate is available at the same cost, and each contrast separately
-has a successful fixed batch. Corollary~\ref{cor:all-pairs-collapse} extends
-the same separation to all pairs among three nonnegative forecast vectors.
-The decision is consequential: observations sufficient for each comparison
-separately need not suffice when the reading budget is shared.
+that guarantees precision with two exact scalar readings implies a
+randomized fixed batch with worst-case success at least one half
+(Theorem~\ref{thm:helly-precision}). With two contrasts, that floor disappears.
+For every $m\geq3$, Theorem~\ref{thm:two-target-collapse} constructs instances
+with optimal adaptive success $1$ and optimal batch success $1/m$, still
+using two readings. Each contrast separately has a successful fixed batch;
+all coordinates are queryable at equal cost. The same separation holds for
+all pairs among three nonnegative forecast vectors
+(Corollary~\ref{cor:all-pairs-collapse}). The dictionary grows with $m$,
+and three fixed queries suffice. The result isolates a loss of assurance
+when separately sufficient measurements must share a budget.
 
-The scalar precision bound provides the starting point for this comparison.
-The later penalty classification explains the broader role of the risk
-objective using established minimax reasoning, Jensen's inequality and a
-coordinate-query converse. The scalar half-success bound adapts sparse-policy reasoning
-\citep{kurtz2026}. A complementary cumulative-prefix construction gives an
-exact mean-joint-width separation. Table~\ref{tab:claim-evidence} identifies
-the different objectives; the fixed-budget precision boundary is the main
-shared-query result.
+We make that distinction computable for cumulative-meter audits. An exact
+two-query planner and matching certificates identify 165 of 819 original
+blocks and 57 of 279 external blocks where feedback guarantees precision
+for all six model pairs, while the best randomized batch succeeds with
+worst-case probability exactly one half. Complete-panel replay then measures
+what the policies achieve on the stored answers. The two-reading limit is
+a declared benchmark contract, not a source-enforced service restriction;
+our measured public-API workload favors bulk retrieval when admissible.
 
-The data answer a related, more specific question: can the same two readings
-make all six forecast comparisons precise? We identify 165 original and 57
-external blocks with a guaranteed adaptive success probability of one and
-an optimal randomized-batch success probability of one half. These exact
-instance certificates are the principal application evidence. The complete
-819- and 279-block replays test selected policies on the stored answers;
-their empirical success rates do not estimate the constructed mean-risk gap.
-This is a retrospective extension using frozen data, not an additional
-independent sample. Capacity and error controls test the information model;
-the measured API workload identifies bulk retrieval as preferable when its
-full response is admissible.
+The same calculation can rule out an insufficient budget. Explicit adverse
+records show that randomizing an adaptive policy cannot restore certainty
+on any of the 583 blocks without a deterministic guarantee
+(Proposition~\ref{prop:assurance-feasibility}). Thus the method supports a
+three-way decision: choose a fixed batch, use feedback, or obtain more
+information.
 
-\begin{table}[htbp]\centering\small
-\caption{Claims, objectives and evidence. A guarantee over compatible
-records differs from success on the single stored record in each audit.}
-\label{tab:claim-evidence}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.20\linewidth}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\raggedright\arraybackslash}p{0.44\linewidth}@{}}
-\toprule
-Claim & Objective & Evidence and scope\\\midrule
-Two-target boundary & Worst-case joint precision success &
-Theorem~\ref{thm:two-target-collapse}: $1$ versus $1/m$ with two readings;
-all three model pairs remain covered by Corollary~\ref{cor:all-pairs-collapse}.\\
-Scalar classification & Worst expected penalty of one interval's width &
-Theorem~\ref{prop:risk_classification}: universal equality exactly for
-nondecreasing concave penalties.\\
-Shared-query separation & Worst expected largest normalized width &
-Theorem~\ref{thm:shared-prefix-separation}: constructed optima $1/2$ versus
-$2/3$, each with matching bounds.\\
-Certified meter instances & Worst-case probability that every width meets
-its target & 165/819 and 57/279 blocks: adaptive optimum one versus batch
-optimum $1/2$; worked proof in Section~\ref{sec:worked-joint-certificate}.\\
-Complete-panel replay & Precision success on stored answers &
-Section~\ref{sec:joint-results}: fixed selected policies on all 1,098
-blocks; incomplete batch-precision bounds remain explicit.\\
-Retrieval interface & Recorded requests and I/O time &
-Section~\ref{sec:actual-api}: bulk wins on a three-task public-API workload;
-this does not measure deployment savings.\\\bottomrule
-\end{tabular}\end{table}
-
-The paper starts with the scalar precision guarantee and its failure for
-two shared targets, followed by the cumulative-meter planner and exact
-application certificates. The scalar classification then explains how the
-choice of width penalty determines the value of feedback. The
-evaluation reports fixed protocols, recorded replay, uncertainty sensitivity
-and actual retrieval measurements. Online Resource~1 provides extended
-proofs, the separate compact coordinate-query solver, historical controls,
-complete case ledgers and executable verification.
+The paper develops the scalar bound, the shared-budget construction and the
+meter planner, then reports its certificates, recorded outcomes and controls.
+The retrospective study reuses frozen source panels. Online Resource~1
+retains the supporting scalar penalty classification (S11), a separate
+mean-joint-width construction (S14), historical controls and executable
+source-to-table verification.
 
 \subsection{Related work and the contribution boundary}
 Partial identification studies conclusions that survive incomplete
-observations \citep{manski,polo}. For model comparison, cancellation in
-paired squared losses leaves an affine function of the unknown truth;
-this is established loss structure rather than a new loss function
-\citep{patton}. Active evaluation and model selection acquire labels for
-estimating performance or choosing among predictors
-\citep{sawade,hara,active,okanovic2025}. Our target is the entire sharp
-interval of a fixed-record contrast after exact observations. No estimator
-of the population risk, surrogate label distribution, or new forecasting
-architecture is introduced.
+observations \citep{manski,polo}. Cancellation in paired squared losses
+already yields an affine function of the missing truth \citep{patton}.
+Active evaluation and model selection acquire labels to estimate performance
+or choose predictors \citep{sawade,hara,active,okanovic2025}. We instead
+require the entire compatible interval of each fixed-record contrast to
+meet a declared precision target. \citet[Theorem~1 and Proposition~1]{kuboyama2026}
+studies completion-based model-choice certificates with adaptive binary
+labels and shared paired bounds. Its distinction between hindsight certificate
+size and acquisition requirements (Theorem~2 and Proposition~3) is also
+relevant here; our guarantees concern joint widths for continuous targets.
 
-The width of an information fiber is an established local diameter of
-information in optimal recovery \citep{novak2008}. Adaptivity and
-randomization for approximation of linear operators on convex classes
-have a substantial literature \citep{osipenko,krieg2025,krieg2026}.
-The objective here must be distinguished both from actual reconstruction
-error and from an expected global radius. For a scalar fiber, its radius
-is half its width, but the risk considered here is
-$\sup_y\mathbb E_\omega W_{Q_\omega(y)}(y)$: first average the local
-width at a fixed record, then take the worst record. In general this is
-different from averaging a worst-fiber radius after each random choice
-of information. Nor is actual point-estimation error at $y$ necessarily
-half the width of its information fiber. The theorem does not deny
-adaptivity benefits for those other objectives.
+The width of an information fiber is the established local diameter of
+information \citep[Section~4.1]{novak2008}. Our shared objective is its
+weighted $\ell_\infty$ version for a vector target. Classical deterministic
+adaptivity bounds cover linear information on convex symmetric classes
+\citep[Theorems~4.4--4.5]{novak2008}; nonsymmetric recovery is studied by
+\citet{novak1995}, and noisy scalar criteria by
+\citet[Theorems~2--3 and~5]{osipenko}. Modern randomized recovery minimizes
+reconstruction error \citep[Section~2 and Proposition~4.1]{krieg2025}
+\citep[Section~9.1, Eq.~(9.15), author manuscript v2]{krieg2026}.
+Our precision objective instead asks whether the full terminal fiber is
+sufficiently narrow. For supporting mean-width results, the order of the
+worst-record and randomization operations also differs from expected global
+radius \citep[Eq.~(2.4), Remark~6.1, author manuscript v2]{krieg2026}.
+Online Resource~1, S11 gives that comparison and the scalar penalty
+classification, whose sufficient direction applies Sion's minimax theorem
+\citep[Theorem~3.4]{sion1958} and Jensen's inequality.
 
-Our minimax interchange is an application of \citet{sion1958}, and its
-concave-penalty upper bound is Jensen's inequality. The claim is the
-resulting universal penalty classification, its coordinate-query
-converse, and the exact precision and moment separations. We make no
-claim of inventing minimax theory, local diameter, or the general concept
-of adaptive information. The bounded literature comparison identifies
-these precise objectives and assumptions; it is not a proof of historical
-priority over every optimal-recovery result.
+Information-dependent decisions are established in adjustable robust
+optimization \citep{wei2024,ddid}. Our scalar precision bound adapts the
+sufficient-policy result of \citet[Theorem~2 and Example~5]{kurtz2026}.
+Kurtz's Theorem~11 also permits policy counts to grow with recourse-region
+complexity. The fixed-budget construction here specifies a different
+combination: two affine targets, two unit-cost coordinate queries, separately
+sufficient fixed batches, and exact joint success values $1$ and $1/m$.
+Its observation fibers realize the gap while the measurement dictionary
+grows. These conditions define the contribution beyond the established
+benefits of adaptive vector recovery or information-dependent decisions.
 
-Information-dependent decisions are also established in adjustable robust
-optimization \citep{adjust2024,ddid}. The dimension-dependent precision
-bound below adapts the sufficient-policy result of
-\citet[Theorem~2 and Example~5]{kurtz2026}; its query interpretation and
-sharp examples are made explicit. Kurtz's Theorem~11 also permits policy
-counts to grow with recourse-region complexity. Our two-target construction
-isolates a sharper combination: output dimension and query budget remain
-fixed, while genuine coordinate-observation fibers yield the exact
-precision-success values $1$ and $1/m$. The measurement dictionary grows
-with $m$. This distinguishes the construction from a general claim that
-vector recovery or information-dependent decisions benefit from feedback.
-Weighted-oracle randomized optimization
-and dynamic-program LP constructions are established
-\citep{kawase2024,martin1990}. The supporting aggregate solver contributes
-a structured hard-budget batch representation and dual-completion
-certificate (Online Resource~1, S5/S7). Secondary optimization among tied
-robust solutions follows an established concern \citep{iancu2014}.
-
-Adaptive sampling of cumulative information has close precedents.
-\citet[Section~4.1.1, Corollary~1 and Theorem~3]{gaillard2023}
-study certified scalar integral estimation from sequential evaluations of
-a monotone function. For monotone contrast coefficients, summation by parts
-relates the register problem to weighted monotone integration. Our instance
-test pairs an adaptive precision guarantee with an adverse distribution
-limiting every randomized batch under the same information interface.
-
-\citet[Theorem~1 and Proposition~1]{kuboyama2026} gives exact model-choice
-certificates after adaptive binary labels and compares shared-label paired
-bounds with separate intervals. That work also distinguishes hindsight
-certificate size from acquisition requirements (Theorem~2 and Proposition~3).
-Our application uses constrained continuous targets, while the central
-classification concerns the penalty of terminal sharp width. These precise
-distinctions, rather than certification or shared comparisons generally,
-define the contribution relative to model-choice and information-discovery
-frameworks. The shared-query objective is the established weighted
-$\ell_\infty$ local diameter of a vector target, not a new uncertainty measure.
-Our fixed-budget result realizes an exact $1$-versus-$1/m$ precision
-separation through coordinate-observation fibers with only two affine
-targets. The two-prefix theorem and meter certificates give a distinct,
-structured application of shared acquisition. Neither shared observations nor
-adaptive vector recovery alone is claimed as new.
+Adaptive cumulative sampling has close precedents.
+\citet[Section~4.1.1, Corollary~1 and Theorem~3]{gaillard2023} studies
+certified scalar integral estimation from a monotone function. For monotone
+contrast coefficients, summation by parts relates our meter problem to
+weighted monotone integration. We pair an exact shared-query planner with
+continuum covering and adverse-record certificates, so each reported
+precision separation has matching bounds under one measurement interface.
+The separate aggregate solver in Online Resource~1, S5/S7 builds on
+weighted-oracle randomization \citep{kawase2024}, dynamic-program LP
+representations \citep{martin1990}, and refinement of tied robust solutions
+\citep{iancu2014}; it is supporting computation rather than the central
+shared-query contribution.
 
 \section{Model Comparisons and Sharp Information}
 Let $a,b\in\mathbb R^N$ be two fixed prediction vectors for the same

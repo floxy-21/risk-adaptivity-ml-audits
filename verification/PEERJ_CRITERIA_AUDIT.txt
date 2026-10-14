@@ -1,7 +1,7 @@
-FINAL PEERJ COMPUTER SCIENCE REVIEW -- 13 October 2026
-Source SHA256: a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf
-PDF SHA256: 59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9
-Pages: 39
+FINAL PEERJ COMPUTER SCIENCE REVIEW -- 14 October 2026
+Source SHA256: ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07
+PDF SHA256: b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c
+Pages: 28
 
 Policy evidence includes live checks on 13 October 2026 at:
 https://peerj.com/journals/computer-science/editorial-criteria
@@ -13,8 +13,10 @@ reporting, design and validity rather than promised importance or impact.
 1. BASIC REPORTING -- addressed in the reviewed files.
 The structured abstract, introduction, methods, results, discussion and
 conclusions identify the computer-science acquisition/certification problem.
-The main text gives the central theorem with both optimality bounds, a worked
-real certificate, and the complete two-query planner with its tie convention.
+The focused main text gives the two-target boundary with both optimality bounds,
+the assurance-feasibility consequence, a worked source-derived certificate and
+the complete two-query planner with its tie convention. Scalar classification
+and mean-risk developments remain in the supplement.
 The new fixed-budget family shows adaptive precision success one versus
 optimal randomized-batch success 1/m with two affine targets and two coordinate
 queries; all three pairs of three constructed nonnegative forecast vectors
@@ -23,12 +25,12 @@ and three-query fixed alternative are stated. The contribution is separated
 from established vector recovery, minimax reasoning and sparse-policy bounds.
 The absolute-width example distinguishes original loss units from normalized
 precision. Prior work is credited by objective and precise statement.
-The claim/objective/evidence map distinguishes mean risk, precision guarantees,
-recorded success and retrieval costs. An unchanged-policy exploratory sweep
+The policy table and worked certificate distinguish mean risk, precision
+guarantees, recorded success and retrieval costs. An unchanged-policy exploratory sweep
 uses all five targets from 0.40 to 0.60; unresolved batch-probability gaps are
 quantified. Older separate-pair controls remain in S6. Active prose replaces repeated framing; mathematical notation remains where
 needed for reproducibility. Tables and references are readable in the rendered
-39-page PDF. Letter paper, one-inch margins, 12-point Times-family text,
+28-page PDF. Letter paper, one-inch margins, 12-point Times-family text,
 left alignment and line numbers follow the instructions. The 240-word
 abstract is below the journal limit. Editable LaTeX and PDF are supplied.
 The two-panel figure exposes the exact conditional geometry and source-specific
@@ -39,6 +41,9 @@ extended-audit routes within the exact-total noiseless model. Policy objectives
 are separated from guarantees and recorded outcomes. The certificate-status
 table makes its closed/open partition and overlapping fallback label explicit.
 The current compiled-source review covers the workflow and displayed equations.
+The elementary finite-action consequence closes the no-certainty branch for
+all randomized adaptive policies under the declared uncapped exact-total
+noiseless prefix model. Its 19/20 bound is explicitly not claimed optimal.
 
 2. EXPERIMENTAL DESIGN -- addressed within the stated research scope.
 Models, chronological splits, information cutoffs, source versions, query
@@ -49,6 +54,11 @@ deterministic worst-width baselines; unresolved optimization gaps are retained.
 The complete three-way assurance partition, saved greedy-first-query limitation
 and deterministic-fallback diagnostic expose the practical decision and stronger
 controls. Their post-hoc chronology and source-reconstruction scopes are explicit.
+On the external panel, exact adaptation certifies a best model on 207 blocks
+and greedy adaptation on 208, despite exact adaptation's higher joint-precision
+success. Capacity information reduces the precision advantage and measured API
+retrieval favors bulk. Protocol feasibility follows from the stated model,
+without an empirically validated selective-access deployment or privacy benefit.
 Retrospective extensions are not called untouched confirmation. Six pairwise
 comparisons within one block are not treated as six independent observations.
 Paired outcomes, per-system effects, synchronized calendar-block resampling
@@ -67,6 +77,15 @@ LPs at m=3,5,10. The maximum width discrepancy is
 tolerance is 1e-7 and primal/dual solver tolerances are 1e-9. These finite
 checks support implementation; the universal family claim follows from the
 analytic proof. The empirical studies remain separate and unchanged.
+The assurance checker verifies 583 seed-independent adverse distributions and
+11,660 strictly failing fibers on all 489 original and 94 external no-certainty
+cases. All coefficient normalizations agree exactly. These source-bound checks
+use no recorded answers or outcomes. The default offline job independently
+regenerates the 94 external distributions and 1,880 fibers; original coefficients
+are checked by the separate pinned-source route and are not redistributed.
+The proof and current checker, reports and witnesses are hash-bound in the
+delivery record. This is an elementary certainty consequence rather than a
+claimed new general theorem or optimized randomized-adaptive success value.
 The latest source-to-table run actually regenerates both panels from pinned
 original inputs and frozen forecasts, then reconciles policies, certificates
 and all 1,098 outcome rows. Source mismatch tests fail as intended. Default
@@ -102,6 +121,8 @@ acceptance remains an editorial decision. This is not external human peer
 review, a formal proof certificate for the universal theorem, or a calibrated
 greater-than-80% probability. No external person was contacted. Nothing was
 submitted to a journal.
+Submission remains blocked by the recorded browser startup failure before page
+creation. These delivery checks do not constitute a fresh portal attempt.
 
 FINAL ARTIFACT VERIFICATION
-PASS: 76 steps in a fresh network-disabled stage from the two publisher ZIP files, 1081 manifested members, 723.56 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 41.08 MB. Full historical archive integrity also passed.
+PASS: 77 steps in a fresh network-disabled stage from the two publisher ZIP files, 1096 manifested members, 1026.08 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 41.59 MB. Full historical archive integrity also passed.

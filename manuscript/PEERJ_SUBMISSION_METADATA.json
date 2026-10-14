@@ -1,6 +1,8 @@
 {
   "journal": "PeerJ Computer Science",
   "article_type": "Research Article",
+  "release_tag": "peerj-cs-2026-10-14-assurance",
+  "release_focus": "Fixed two-query joint-precision boundary and exact assurance feasibility.",
   "title": "Risk and Adaptivity in Certifying Machine-Learning Model Comparisons",
   "author": {
     "given_name": "Jishan",
@@ -30,8 +32,8 @@
     "mathematical foundations of machine learning"
   ],
   "reviewer_matching_status": "Expertise request prepared in cover letter; portal selection and individual conflict checks have not occurred. No reviewers contacted.",
-  "manuscript_sha256": "a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf",
-  "pdf_sha256": "59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9",
+  "manuscript_sha256": "ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07",
+  "pdf_sha256": "b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c",
   "files": [
     "revised_manuscript.pdf",
     "revised_manuscript.tex",
@@ -42,9 +44,9 @@
   "status": "Prepared, not submitted. The last recorded browser attempt failed before page creation; no fresh portal check is implied.",
   "browser_error": "failed to write kernel assets: The system cannot find the path specified. (os error 3)",
   "last_recorded_browser_attempt": {
-    "checked_utc": "2026-10-14T03:58:56.9964029Z",
+    "checked_utc": "2026-10-14T04:32:58.2472854Z",
     "diagnostic_path": "work/risk_adaptivity_revision/peerj_revision/browser_startup_check_20261014.json",
-    "diagnostic_sha256": "8c041276775f790ff8f2bf5952745414df4ac994c3b6fa34e3b64377d70270fa",
+    "diagnostic_sha256": "b8d6f906f51e941bb57b0ee9b6b8db47777030f49a2f4dce4460b76a61ac9437",
     "target": "https://peerj.com/manuscripts/",
     "error": "failed to write kernel assets: The system cannot find the path specified. (os error 3)",
     "journal_form_accessed": false,

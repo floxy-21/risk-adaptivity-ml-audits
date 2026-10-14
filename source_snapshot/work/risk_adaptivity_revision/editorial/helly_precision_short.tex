@@ -1,0 +1,39 @@
+\section{The scalar two-query precision floor}
+The following scalar specialization adapts sparse-policy reasoning
+\citep[Theorem~2 and Example~5]{kurtz2026}. Online Resource~1, S12 gives
+the general first-answer-dimension bound and its proof.
+
+\begin{theorem}[A half-success guarantee for scalar precision]
+\label{thm:helly-precision}
+Under Section~\ref{sec:risk_setup}, suppose a deterministic policy using
+at most two exact scalar measurements guarantees $W\leq\tau$ for every
+record. The eligible second measurements are fixed before the first
+answer, and every resulting final set obeys the common hard budget.
+Then a randomized nonadaptive policy supported on at most two legal
+batches has worst-case precision success at least $1/2$.
+\end{theorem}
+\begin{proof}
+If the policy makes no query, the empty batch succeeds. Otherwise its
+first measurement $L_0y$ is fixed. Its feasible answers form a compact
+interval $I=L_0F$, possibly a singleton. Index the finitely many legal
+second actions by $j$, including an empty action when stopping after the
+first query is legal. Let
+\[
+ g_j(t)=\max\{c^\top(u-v):u,v\in F,\ L_0u=L_0v=t,
+                                      \ L_ju=L_jv\}.
+\]
+This is the largest terminal width after choosing action $j$ at first
+answer $t$: each feasible endpoint pair belongs to a common terminal
+fiber, and every such fiber supplies feasible endpoints. Convex
+combinations of endpoint pairs show that $g_j$ is concave. Hence its
+strict failure set $H_j=\{t\in I:g_j(t)>\tau\}$ is convex.
+The policy's guarantee implies $\bigcap_j H_j=\varnothing$.
+
+Finite Helly's theorem in dimension at most one supplies at most two
+failure sets with empty intersection \citep[Theorem~1.1]{amenta2016}.
+This form does not require closed sets, so equality at the precision
+threshold is preserved. Choose uniformly among the corresponding
+fixed batches $(L_0,L_j)$. At every record, at least one selected batch
+has width at most $g_j(L_0y)\leq\tau$. Its success probability is
+therefore at least $1/2$ (or one if a single batch suffices).
+\end{proof}

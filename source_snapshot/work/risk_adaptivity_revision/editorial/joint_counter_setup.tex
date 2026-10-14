@@ -1,0 +1,29 @@
+\section{Shared precision from cumulative-meter readings}
+\label{sec:counter-precision-method}
+Consider a six-hour block with nonnegative hourly energy increments
+$z=(z_1,\ldots,z_6)$ and retained cumulative readings $C_0,C_6$.
+In common energy units, $E=C_6-C_0$ gives
+$F_E=\{z\geq0:\sum_hz_h=E\}$. For two frozen forecast vectors,
+the block MSE contrast is $D(z)=d+c^\top z$, with
+$c_h=2(b_h-a_h)/6$. All six targets remain in its denominator.
+
+The five optional queries return internal cumulative readings $C_k$,
+$k=1,\ldots,5$, equivalently exact prefix sums
+$s_k=C_k-C_0=\sum_{h\leq k}z_h$. The budget is two distinct readings
+shared by every model comparison in the block. The endpoints are initially
+available and do not use this optional-query budget.
+
+For $0\leq p<q\leq6$, put
+$r(p,q)=\max_{p<h\leq q}c_h-\min_{p<h\leq q}c_h$.
+Order the queried and outer boundaries as $0=q_0<\cdots<q_m=6$,
+with $s_0=0$ and $s_6=E$. The exact terminal width is
+\begin{equation}
+ W_Q(z)=\sum_{\ell=1}^{m}
+ (s_{q_\ell}-s_{q_{\ell-1}})r(q_{\ell-1},q_\ell).
+ \label{eq:counter-width}
+\end{equation}
+Within each segment, its nonnegative energy can be placed at an hour with
+the smallest or largest coefficient. These choices attain both endpoints,
+proving sharpness. Initially $W_0=Er(0,6)$; zero-width contrasts require
+no further information. Online Resource~1, S6 retains the separate scalar
+closed forms and their controls.

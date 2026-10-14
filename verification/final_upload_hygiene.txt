@@ -1,18 +1,18 @@
 FINAL READ-ONLY UPLOAD HYGIENE CHECK
 Status: PASS
-Completed UTC: 2026-10-14T04:05:13.136176+00:00
+Completed UTC: 2026-10-14T04:57:39.850091+00:00
 
-Current manuscript SHA256: a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf
-Current PDF SHA256: 59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9
+Current manuscript SHA256: ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07
+Current PDF SHA256: b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c
 Scanner SHA256: 787f41aa7fbd8279d78801d619661f1a37869e1583364b7e49bcb3cc069631bc
 
-research_supplement.zip SHA256: 75da51dd70387635b12f1cdbff2e23ca32cebf99aaf1ac2509c70334aa082b0e
-Supplemental_Data_S1.zip SHA256: be7ee4c807b29796f3b596edbfb57281c37305119e4506d4ede8e948d1723a48
-Supplemental_Data_S2.zip SHA256: 7b07f9558fc13bb12c4b9fd16a1901657f90cd998c3456574f1aa5e504c35fd2
+research_supplement.zip SHA256: 9cf8d57bf3acaf52d273b8c5c6dc7cc84ff3ad80aac7517c4b084ed0c88b4495
+Supplemental_Data_S1.zip SHA256: a2e7f547c9e268181d2b98e5826b9492efd8a85a8374503a8ead3fbb4c902b15
+Supplemental_Data_S2.zip SHA256: 252e184043eaf5b5206a7d71decd8654a64eecafeed3d06a2232a96fe7332293
 
 Sanitized finding categories: 0
-Local manuscript/report/template files scanned: 91
-Expanded text bytes scanned/reused: 3004070198
+Local manuscript/report/template files scanned: 104
+Expanded text bytes scanned/reused: 3024146841
 Repository privacy check: PASS
 Current manuscript private-repository/release mentions: 0
 Prior scan preserved in pre_two_target_final_upload_hygiene.json/.txt.
@@ -22,4 +22,4 @@ Existing staging snapshot is historical until prepare_github runs. Expected file
 All raw/redaction checks, reused byte-identical archive checks and any sanitized findings are explicit in the JSON report.
 No upload, repository setting, scientific file, manuscript or ZIP was modified.
 Finalization may rewrite delivery reports; rerun with --reuse-archive-results after that step to rescan local metadata while retaining identical archive checks.
-Elapsed seconds: 4.97
+Elapsed seconds: 6.47

@@ -1,87 +1,81 @@
-\section{Discussion}\subsection{What the method changes in an audit}
-The auditor first states the contrast, required precision, available
-information and retrieval options. A sufficient initial interval
-needs no query. Otherwise, a bulk response or fixed batch can avoid feedback;
-adaptive retrieval is useful when it meets the required guarantee with fewer
-permitted readings.
+\section{Discussion}
+\subsection{The decision supported by a precision certificate}
+The practical output is a choice of acquisition protocol for a specified
+uncertainty budget. The auditor supplies the model contrasts, available
+information, permissible measurements and precision target. A sufficient
+initial interval needs no query; otherwise the certificate identifies a
+fixed or adaptive route, or the need for more information.
 
-\paragraph{Why sharing the budget changes the problem.}
-With one affine comparison, two adaptive readings imply a randomized-batch
-precision guarantee of at least one half. Two comparisons remove that
-universal floor, even if each one separately has a sufficient fixed batch.
-The construction has adaptive success one and optimal batch success $1/m$,
-and also covers all pairs among three models. Its dictionary grows with $m$;
-three fixed readings already suffice, and its normalized threshold margin
-shrinks. The conclusion is about reliability at the same two-reading budget,
-rather than an unbounded saving in acquired records.
+Precision and model selection answer different questions. On the external
+panel, adaptation certifies a best model on 207 blocks and greedy on 208,
+despite adaptation's higher joint-precision success. The original-panel
+counts are 123 and 118; fixed batches certify 122 original and 201 external
+blocks. Narrowing every comparison therefore need not identify more winners.
+The half-width target is a declared reporting requirement, not a validated
+threshold for model replacement or financial action. Requests until a winner
+is identified require a different optimization objective.
 
-\paragraph{What the application establishes.}
-With two readings shared across six comparisons, feedback guarantees the
-required precision on 165 original and 57 external blocks where every
-randomized fixed batch has worst-case success at most one half. Matching
-batch constructions attain that bound. This is a change in the assurance
-available at the same budget. The worked example also reports the six
-interval widths in original loss units (Table~\ref{tab:absolute_joint_widths}).
-These certificates exhibit a fixed-budget assurance advantage on recorded
-forecast geometries. They do not establish the arbitrary $m$-fold
-construction or its growing dimension in the meter interface. Across the
-complete panels, recorded gains over the best fixed worst-width
-batch are 7.81 and 11.11 percentage points, with smaller gains of 2.20 and
-2.15 points over greedy adaptation. We do not infer improved forecasting
-accuracy or operating savings from these precision results.
+\subsection{What sharing the budget changes}
+Theorem~\ref{thm:two-target-collapse} shows that two simultaneous comparisons
+can remove the scalar two-query success floor. Adaptive certainty coexists
+with optimal batch success $1/m$, although each contrast separately admits
+a sufficient fixed batch. The dictionary grows, the normalized threshold
+margin shrinks, and three fixed readings suffice. The result concerns
+assurance at the same budget, not an unbounded reduction in readings.
 
-The separate-pair replay has smaller recorded gains of 0.407 and
-0.119 percentage points. Both analyses use three systems per source;
-repeated days and model pairs do not establish population prevalence.
+The meter certificates establish a narrower counterpart on actual frozen
+forecast geometries: with two readings shared across six comparisons,
+adaptation guarantees precision on 165 original and 57 external blocks
+where the best randomized batch has worst-case success exactly one half.
+The worked example gives both normalized and original loss-unit widths
+(Table~\ref{tab:absolute_joint_widths}). Across all blocks, recorded gains
+over fixed worst-width batching are 7.81 and 11.11 percentage points, versus
+2.20 and 2.15 over greedy adaptation. The separate-pair gains are only
+0.407 and 0.119 points. Each source contains three systems, and the
+shared-budget extension reuses these panels retrospectively.
 
-The capacity controls show that feedback's larger gains need not survive
-additional hourly information, while internal-reading errors can increase
-the sufficient budget. These are alternative information models, not
-deployment-calibrated bounds (Table~\ref{tab:measurement-assumptions}).
-The half-width target limits the remaining range of each loss contrast;
-we have not validated it as a threshold for financial action or model selection.
-A secondary shared-query check
-certifies a best model on 123 original and 207 external blocks, versus
-122 and 201 for fixed batches and 118 and 208 for greedy adaptation.
-On the external panel, greedy certifies one more best model despite its
-lower joint-precision success. The width objective therefore does not
-uniformly improve model choice.
-Requests until a decision are another objective; neither theorem optimizes it.
+Additional information changes the acquisition decision. Capacity bounds
+can remove the need for feedback; errors can increase the sufficient budget.
+These controls use declared sensitivity models, with exact retained
+endpoints, rather than calibrated physical measurement bounds
+(Table~\ref{tab:measurement-assumptions}). Recorded performance also differs
+from worst-case assurance: a covering mixture can have a better guarantee
+yet succeed less often on the stored traces. The 351 original and 67 external
+open batch-precision gaps restrict exact superiority claims to the instances
+with matching certificates.
 
-\paragraph{Choosing an acquisition interface.}
-Bulk uses one request and is faster on the measured three-task API workload,
-so the implementation selects it when admissible. Under the separate
-restricted-reading contract, it uses 22 two-reading and seven three-reading
-prescriptions. Their 65 reserved readings compare with 87 for fixed batches,
-but they require 51 information rounds rather than 29. The declared cost
-frontier explains when each prescription is preferable; it is not measured
-financial or service-wide benefit. Capacity bounds can likewise make fixed
-retrieval sufficient. The practical output is a checked choice under a stated
-contract, including cases where selective adaptation is unnecessary.
+\subsection{When the retrieval interface favors another policy}
+Bulk retrieval is the best observed option on the measured three-task
+public-API workload: it uses one request, takes less I/O time and removes
+all remaining width. The two-reading contract defines a different,
+restricted benchmark. The protocol selector chooses among supplied
+certificates using reading and feedback-round limits; it does not infer
+that an unlisted protocol is impossible. The separate 29-case cost study
+also exposes the tradeoff: 65 reserved readings and 51 rounds for adaptation
+with fixed fallback, versus 87 readings and 29 rounds for fixed retrieval.
+That is a declared-cost comparison, not measured deployment savings.
 
-\paragraph{Breadth of the theory and limits of the implementations.}
-The scalar classification permits compact convex sets, affine targets, a
-finite linear-query dictionary and answer-independent legal query sets.
-It includes signed targets, overlapping constraints and unequal fixed costs.
-Fixed bounded errors can enter the hidden record (Online Resource~1, S6).
-The finite dictionary matters: unrestricted linear measurements would permit
-querying the scalar target directly. The algorithms are more specialized:
-general polyhedra with an enumerated batch family or two-query planning;
-cumulative sums with a known nonnegative total; and compact coordinate
-recovery with disjoint exact totals and unit costs. They do not provide an
-efficient arbitrary-budget precision optimizer for every convex set.
+The finite measurement dictionary is essential. If every linear functional
+were available at unit cost, one could query a scalar target directly.
+The main exact planner covers two cumulative-prefix queries with a known
+nonnegative total. General convex-set results, unequal fixed costs and
+bounded-error extensions have wider mathematical scope, but do not provide
+an efficient arbitrary-budget precision optimizer. Online Resource~1 retains
+the scalar penalty classification (S11), the separate mean-joint-width
+construction (S14) and the specialized coordinate-recovery solver (S5/S7).
 
 \section{Conclusions}
-The risk objective determines whether feedback can improve the worst-case
-guarantee for a model-comparison interval. Concavity gives a complete
-no-improvement classification; nonconcave penalties admit sharp query-based
-separations. Two simultaneous comparisons remove the scalar two-query success floor:
-adaptive certainty can coexist with optimal batch success $1/m$.
-A separate prefix-query construction shows an advantage in mean joint width.
-An exact two-query rule and checkable certificates turn that
-distinction into an acquisition decision. The reference implementation chooses among supplied bulk, fixed and adaptive
-certificates using declared access and resource limits. New comparisons require
-new certificates; a catalogue exclusion alone is not an impossibility proof.
-The public-data results show both when feedback changes assurance and when
-bulk or fixed retrieval is preferable. These choices remain conditional on
-the declared uncertainty set and access rules.
+Sharing a reading budget can make feedback necessary for an assurance
+requirement that each comparison could meet separately. With two affine
+targets and two coordinate queries, adaptive success can be one while
+optimal randomized-batch success is $1/m$. The same construction covers
+all pairs among three models.
+
+An exact prefix-query planner and checkable certificates connect this
+boundary to model auditing: 165 original and 57 external meter blocks admit
+adaptive assurance one and optimal batch assurance one half under the
+specified two-reading contract. Recorded gains, uncertainty controls and
+the bulk-retrieval comparison delimit that benefit. The implementation
+supports a conditional acquisition decision; bulk is preferable on the
+measured unrestricted API, and precision alone does not establish a model
+winner.

@@ -1,7 +1,7 @@
 FINAL PEERJ COMPUTER SCIENCE REVIEW -- 13 October 2026
-Source SHA256: 53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
-PDF SHA256: cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302
-Pages: 36
+Source SHA256: a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf
+PDF SHA256: 59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9
+Pages: 39
 
 Policy evidence includes live checks on 13 October 2026 at:
 https://peerj.com/journals/computer-science/editorial-criteria
@@ -15,6 +15,12 @@ The structured abstract, introduction, methods, results, discussion and
 conclusions identify the computer-science acquisition/certification problem.
 The main text gives the central theorem with both optimality bounds, a worked
 real certificate, and the complete two-query planner with its tie convention.
+The new fixed-budget family shows adaptive precision success one versus
+optimal randomized-batch success 1/m with two affine targets and two coordinate
+queries; all three pairs of three constructed nonnegative forecast vectors
+retain the separation. Its growing dictionary, shrinking normalized margin
+and three-query fixed alternative are stated. The contribution is separated
+from established vector recovery, minimax reasoning and sparse-policy bounds.
 The absolute-width example distinguishes original loss units from normalized
 precision. Prior work is credited by objective and precise statement.
 The claim/objective/evidence map distinguishes mean risk, precision guarantees,
@@ -22,8 +28,8 @@ recorded success and retrieval costs. An unchanged-policy exploratory sweep
 uses all five targets from 0.40 to 0.60; unresolved batch-probability gaps are
 quantified. Older separate-pair controls remain in S6. Active prose replaces repeated framing; mathematical notation remains where
 needed for reproducibility. Tables and references are readable in the rendered
-36-page PDF. Letter paper, one-inch margins, 12-point Times-family text,
-left alignment and line numbers follow the instructions. The 246-word
+39-page PDF. Letter paper, one-inch margins, 12-point Times-family text,
+left alignment and line numbers follow the instructions. The 240-word
 abstract is below the journal limit. Editable LaTeX and PDF are supplied.
 The two-panel figure exposes the exact conditional geometry and source-specific
 threshold curves. The scalar precision bound's premises are explicitly
@@ -54,6 +60,13 @@ validated tariffs or device specifications. Bulk retrieval remains a control.
 Analytic proofs establish the general and constructed guarantees. Numerical
 checks do not purport to prove a universal theorem. Exact rational branch,
 covering and adverse-record witnesses support the central assurance claims.
+The current replay checks the new construction by exact rational certificates
+and 7,131 endpoint/whole-branch
+LPs at m=3,5,10. The maximum width discrepancy is
+7.105427357601002e-15; comparison
+tolerance is 1e-7 and primal/dual solver tolerances are 1e-9. These finite
+checks support implementation; the universal family claim follows from the
+analytic proof. The empirical studies remain separate and unchanged.
 The latest source-to-table run actually regenerates both panels from pinned
 original inputs and frozen forecasts, then reconciles policies, certificates
 and all 1,098 outcome rows. Source mismatch tests fail as intended. Default
@@ -91,4 +104,4 @@ greater-than-80% probability. No external person was contacted. Nothing was
 submitted to a journal.
 
 FINAL ARTIFACT VERIFICATION
-PASS: 74 steps in a fresh network-disabled stage from the two publisher ZIP files, 1074 manifested members, 1250.83 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 41.04 MB. Full historical archive integrity also passed.
+PASS: 76 steps in a fresh network-disabled stage from the two publisher ZIP files, 1081 manifested members, 723.56 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 41.08 MB. Full historical archive integrity also passed.

@@ -13,10 +13,14 @@ below start from that root. Use a disposable extraction for focused commands;
 the full replay creates its own isolated stage.
 
 1. Inspect the central proof without an optimization solver (Python stdlib):
+   python -S work/risk_adaptivity_revision/two_target_boundary/verify_boundary.py --solver-free --output outputs/two_target_exact.json
    python work/risk_adaptivity_revision/joint_certification/proof_check_joint.py
    python work/risk_adaptivity_revision/joint_certification/check_main_inspectable_certificate.py
-   These check the constructed theorem and printed external witness in seconds.
+   These check the fixed-budget two-target boundary, the shared-prefix
+   construction, and the printed external witness.
    They do not regenerate the forecasts or all empirical cases.
+   The independent LP check of the new boundary is also in the full replay:
+   python work/risk_adaptivity_revision/two_target_boundary/verify_boundary.py --output outputs/two_target_lp.json
 2. Reproduce the current paper offline after installing the pinned environment:
    python -m pip install -r requirements.txt
    python work/risk_adaptivity_revision/reproduce.py
@@ -29,6 +33,10 @@ the full replay creates its own isolated stage.
    to a valid local cache; the output directory must not already exist. Source
    hash mismatches fail. It regenerates policies, certificates and table rows
    for both panels, without refitting models. Read the chain README for scope.
+   A fresh single-invocation run with no producer-reuse flags is recorded in
+   joint_certification/provenance_chain/executed/fresh_both_panel_replay_20261014.json
+   under work/risk_adaptivity_revision. It reconciled all 1,098 ledger rows
+   exactly and regenerated the 165 original / 57 external half-success cases.
 
 Start with work/risk_adaptivity_revision/CURRENT_RESULTS_MAP.txt for a direct
 table-by-table and claim-by-claim map of the current revision: commands,
@@ -37,7 +45,7 @@ The final_challenger_diagnostics folder supplies the exact three-way guarantee
 classification, the greedy-first-query check, and a fixed-fallback comparison.
 Its default replay checks both panels' saved certificates and derives the
 external panel's inequalities; the original derivation uses the raw route.
-The final_practical_figure folder contains Figure 1, its exact inputs and a
+The final_practical_figure folder contains the geometry/replay figure, its exact inputs and a
 solver-free checker. Both additions are included in the default replay.
 The map separates current results from optional historical development.
 The main paper is shortened; full current methods and controls remain in
@@ -45,7 +53,8 @@ editorial/online_extended_methods.tex (S1 scaling; S2 historical gates and
 controls; S3 data/forecast protocol; S4 historical grid; S5 full compact
 construction; S6 extended counter checks, measurement proofs and full
 counter replay; S7 detailed computational verification; S8 shared-query
-proofs, paired outcomes and protocol selection). Its own reference
+proofs, paired outcomes and protocol selection; S9 scalar examples and the
+complete growing-family proof; S10 general-polytope algorithms). Its own reference
 list includes every work cited in those supporting sections.
 
 CURRENT SHARED-BUDGET RESULTS -- PUBLIC OFFLINE ROUTE
@@ -92,7 +101,7 @@ software and provenance checks, not new empirical gains or device calibration.
 READING VERSUS FEEDBACK COST
   python work/risk_adaptivity_revision/protocol_selection/cost_frontier.py --output-dir outputs/cost_frontier_replay
   python work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_COST_CHECK.py --results-dir outputs/cost_frontier_replay --output outputs/cost_frontier_check.json
-These commands are included in the current 69-step full replay. The exact
+These commands are included in the current full replay. The exact
 declared-cost analysis exports 174 case/ratio choices and checks 306 candidates.
 It identifies when feedback is worth its extra information round while keeping
 the same assurance. It does not estimate monetary savings or new API timings.

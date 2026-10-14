@@ -10,9 +10,9 @@ unverified final-content review or record-retention inventory has already happen
 
 Current manuscript identity
 Source SHA-256:
-53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
+a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf
 PDF SHA-256:
-cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302
+59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9
 
 Suggested factual confirmations, only if true
 
@@ -58,7 +58,7 @@ reason to believe they changed
 Release facts for the agent to verify, not extra author questions
 - Both current Supplemental Data S1/S2 files meet the individual and total
   size limits and extract into the documented common directory.
-- The current 74-step clean-package replay passes and the manuscript,
+- The current 76-step clean-package replay passes and the manuscript,
   package manifests and uploaded file hashes correspond.
 - Source attribution and included permissive licenses remain in the
   submission materials; excluded raw BLEM traces are not reintroduced.

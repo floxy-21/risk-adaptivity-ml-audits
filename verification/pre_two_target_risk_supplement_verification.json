@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "zip_sha256": "940144c6bc2217ebada13a510ac5f17afbd37d359f3e249b0a4c13f48acdf7e6",
+  "zip_bytes": 373393932,
+  "manifested_members": 1176,
+  "old_members_preserved_in_place": 581,
+  "old_members_exactly_recoverable": 585,
+  "replaced_paths": [
+    "README.txt",
+    "outputs/requirements-study.txt",
+    "outputs/revised_manuscript.tex",
+    "requirements.txt"
+  ],
+  "new_manuscript_sha256": "53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f",
+  "scope": "Complete member integrity and historical preservation; executable clean replay reported separately."
+}

@@ -1,0 +1,105 @@
+FIXED-BUDGET TWO-TARGET CONSTRUCTION: INTERNAL ANALYTIC REVIEW
+Reviewer: /root/review_pdf_claims
+Date: 14 October 2026 UTC
+Status: PROOF CHECK PASSED under the assumptions stated below.
+This is internal mathematical analysis, not external specialist validation,
+formal proof-assistant certification, or a historical-priority claim.
+
+INPUTS READ
+1. Attachment 3fbadda2-86ab-4364-b9ae-671486683d93/Pasted text.txt:
+   request to foreground assurance versus recorded success, preserve open
+   precision gaps, and streamline protocols/numerical conventions.
+2. Attachment a6b8b9b0-874a-446b-8c87-c94631ae8c0d/Pasted text.txt:
+   proposed m-family with two targets, m+3 coordinates and two queries.
+3. Current editorial/helly_focused.tex and counter_half_corollary.tex.
+4. Root's proposed all-three-pair extension and threshold-margin check.
+The attachment's claimed 3,908 prior LP executions were not used as evidence
+of executions by this review. The attached sandbox ZIP was not locally
+available. A separate team agent is running the present numerical check.
+
+DECISIVE FINDING
+The proposed construction is correct for every integer m>=3. The lower
+guarantees hold on the entire compact convex polytope, not a finite grid.
+The finite adverse records suffice for the matching full-continuum upper
+bound. This yields adaptive success one and optimal randomized-batch
+success exactly 1/m under the same two-coordinate hard budget.
+
+EXHAUSTIVE QUERY CHECK
+There are seven unordered types of distinct two-query batches:
+{t,z_j}, {t,u}, {t,v}, {u,v}, {u,z_j}, {v,z_j}, {z_j,z_k}.
+At x_i=((i-1/2)/m,0,0,0,...,0), only {t,z_j} can succeed; its maximum
+width is H+|i-j|-3/4, so success occurs exactly when j=i.
+The candidate theorem includes all seven exact width pairs and elementary
+inequalities for the failing types. The earlier informal message's 'six
+types' meant the six alternatives to {t,z_j}; the full table has seven.
+Shorter/repeated/stopped executions are covered by monotonicity of sharp
+intervals under extending their queried sets to two distinct coordinates.
+
+MATCHING LOWER BOUNDS
+Query t, then z_j for (j-1)/m<=t<=j/m. Endpoint ties use smallest j;
+t=0 and t=1 are covered. Each width is at most H-1/4, independently
+of the observed z_j. Uniformly choosing {t,z_j} before observing anything
+has success at least 1/m at every record, because these branches cover
+[0,1]. Uniform adverse mass over x_i makes every batch's average success
+at most 1/m; mixture averaging and min<=average give the robust upper bound.
+The adverse record distribution is fixed before the random seed.
+
+SCALAR AND THREE-QUERY CHECKS
+Each scalar already has a deterministic fixed two-query guarantee:
+{t,z_m} gives W1<=H-1/4; {t,z_1} gives W2<=H-1/4.
+The simpler {t,u} and {t,v} batches also work at half-width, with width H.
+The three-query batch {t,z_1,z_m} gives both first widths <=H-3/2.
+Therefore three fixed queries, versus two adaptive queries, suffice; this
+family does not establish an unbounded query-count or cost reduction.
+
+ADDITIONAL VERIFIED STRENGTHENING: ALL THREE MODEL PAIRS
+For T3=T1-T2, let P=floor(m^2/4). Its initial range is exactly
+[-(H+P),H+P], and after t alone its sharp width is exactly m+2P.
+This already meets the half-initial-width target. The common nonnegative
+forecast realization in main_theorem.tex produces T1 and T2 as paired
+MSE contrasts up to constants and T3 as the remaining model pair.
+Consequently the exact separation holds for all three pairwise comparisons
+among three models, not only two comparisons selected against a baseline.
+This does not mean that these constructed forecasts were fitted or useful
+predictors on an observed application; the result is algebraic realizability.
+
+THRESHOLD INTERVAL CHECK
+For common normalized tau in [1/2-1/(8H),1/2+1/(8H)), the same all-three
+claim holds. For T1,T2 this is absolute q in [H-1/4,H+1/4). Off-diagonal
+{t,z_j} batches fail at width >=H+1/4; all six other types have larger
+failing widths. At the upper endpoint adjacent batches can succeed, so the
+open upper endpoint is necessary for this particular upper-bound argument.
+The third target already meets the lower endpoint: the difference between
+its allowed width there and m+2P is M-P-(1+P/H)/4>0 for m>=3.
+Each scalar's fixed policy and the joint three-query policy above remain
+valid throughout this interval. The normalized margin equals
+1/[2m(2m+3)] and vanishes with m. No fixed positive measurement-error
+tolerance is established by this calculation.
+
+RELATION TO THE CURRENT SCALAR HALF-FLOOR
+Current Theorem 3 assumes ONE affine target, a compact convex uncertainty
+set, an exact first-stage linear observation with answer dimension r, and
+a fixed finite answer-independent eligible continuation dictionary under
+the same hard budget. Its conditional worst scalar width is concave; its
+strict failure sets are convex and Helly gives at most r+1 actions.
+This construction satisfies the feasible-set and query assumptions but
+changes the objective to a maximum of two normalized widths. Its joint
+conditional function is convex piecewise affine, not scalar-concave.
+The good set for action z_j is an interval, while its strict failure set
+can be the union of two separated intervals. The scalar theorem therefore
+does not apply. No contradiction or error in that theorem was identified.
+
+SCOPE AND RECOMMENDATION
+This is a valid candidate strengthening of the general mathematical
+boundary. It is not a theorem about arbitrarily large gaps in six-hour
+cumulative-prefix data, nor a new practical effect size. Existing empirical
+comparators, open continuum gaps, capacity/error controls and bulk API
+results must remain unchanged. The first attachment's objective-alignment
+requests remain useful even after adding this theorem.
+
+Files produced: main_theorem.tex and this memo only. No main source,
+builder, manuscript freeze or current numerical ledger was edited. Integrate
+only after the independent implementation check and bounded prior-art
+comparison; do not infer any individual acceptance probability from this
+proof. The analytic proof, rather than a finite test count, establishes
+the stated universal-in-m result.

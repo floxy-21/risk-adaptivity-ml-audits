@@ -2636,6 +2636,201 @@ calculation. The existing three-task public-API measurements remain separate:
 mean I/O was 0.331~s for bulk and 0.497~s for adaptive retrieval, supporting
 bulk on that admissible interface. Those observations do not calibrate $r$
 or turn the modeled frontier into measured savings.
+\section{S9. Scalar examples and growing separations}
+\subsection{A three-coordinate example}
+\label{sec:risk_small_example}
+Take $0\le a\le1$, $0\le b\le a$, $0\le c\le1-a$, and
+$T=a+b+c$, with two unit-cost queries. The widths for batches
+$\{a,b\}$, $\{a,c\}$, and $\{b,c\}$ are $1-a$, $a$, and $1-b-c$.
+Querying $a$ first and then $c$ if $a\le1/2$, or $b$ otherwise, leaves
+width $\min(a,1-a)\le1/2$.
+
+\begin{table}[htbp]
+\centering
+\caption{Exact constructed-example values. These are mathematical
+guarantees, not forecasting improvements measured on public data.}
+\label{tab:risk_three_coordinate}
+\begin{tabular}{lcc}
+\toprule
+Criterion & Best randomized batch & Best adaptive policy\\
+\midrule
+Worst expected width & $1/2$ & $1/2$\\
+Worst expected squared width & $1/2$ & $1/4$\\
+Worst-case success, width $\le3/4$ & $1/2$ & $1$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+An equal mixture of $\{a,b\}$ and $\{a,c\}$ attains the batch values.
+The endpoint records $(0,0,0)$ and $(1,0,0)$ give the corresponding
+batch lower bounds. At $(1/2,0,0)$ every admissible terminal set has
+width at least $1/2$, establishing the adaptive moment lower bounds.
+The precision separation holds for every threshold $1/2\le\tau<1$.
+
+\subsection{Growing scalar-family separation: complete proof}
+\label{sec:risk_growing}
+For $K\ge2$, let $a_1,\ldots,a_K\ge0$ sum to one and impose
+$0\le b_j\le a_j$. The actual queryable coordinates are
+$a_1,\ldots,a_{K-1},b_1,\ldots,b_K$; $a_K$ is determined by the
+first $K-1$ capacities. Define
+\begin{equation}
+ T=\sum_{i<K}a_i+\sum_{j=1}^K b_j,\qquad B=2K-2.
+ \label{eq:risk_K_setup}
+\end{equation}
+This is a compact convex polytope in $2K-1$ dimensions, and every
+coordinate has the same unit cost.
+
+\begin{theorem}[Sharp growing separations]
+\label{prop:risk_K_family}
+For~\eqref{eq:risk_K_setup}, the optimal worst expected width is $1/K$
+for both randomized batch and adaptive policies. For every $p>1$,
+\begin{equation}
+ R_{\mathrm{batch}}^{w^p}=1/K,\qquad
+ R_{\mathrm{adaptive}}^{w^p}=1/K^p.
+ \label{eq:risk_K_moments}
+\end{equation}
+For required width $\tau=1/K$, the best worst-case success probabilities
+are $1/K$ for randomized batches and $1$ for adaptive policies.
+\end{theorem}
+\begin{proof}
+It suffices to consider batches using the full budget: adding observations
+cannot increase width. Such a batch omits exactly one coordinate.
+Omitting $b_j$ leaves width $a_j$; omitting $a_i$, $i<K$, leaves width
+$a_i+a_K-b_i-b_K$. The latter follows because the remaining feasible
+range of $a_i$ is $[b_i,a_i+a_K-b_K]$ and its coefficient in $T$ is one.
+An adaptive policy queries all explicit capacities and then all $b_j$
+except one having the smallest capacity. Its width is
+$\min_j a_j\le1/K$. At the record with all $a_j=1/K$ and all $b_j=0$,
+every full-budget batch has width at least $1/K$. This proves the
+adaptive lower bounds and the mean-width lower bound.
+
+The randomized batch policy omitting each $b_j$ with probability $1/K$
+has expected width exactly $1/K$. Its expected $p$th power is
+$K^{-1}\sum_j a_j^p\le1/K$, since $0\le a_j\le1$ and $p>1$.
+For the reverse moment bound, average over the $K$ records
+$a=e_j$, $b=0$. A batch omitting a $b_j$ has average $p$th-power width
+$1/K$; one omitting an explicit $a_i$ has average $2/K$.
+Therefore every batch distribution has worst-case moment at least $1/K$.
+
+For precision, omitting a uniformly random $b_j$ succeeds with
+probability at least $1/K$ at every record, because at least one capacity
+is no greater than $1/K$. To prove the matching upper bound, use $K$
+records indexed by $j$, with $b=0$,
+\[
+ a_j=\frac{1}{2K},\qquad
+ a_i=\frac{2K-1}{2K(K-1)}\quad(i\ne j).
+\]
+These capacities sum to one. Only the batch omitting $b_j$ reaches
+width at most $1/K$ at record $j$: every other $b$-omitting batch has larger
+width, and every $a$-omitting batch has width $a_i+a_K>1/K$.
+If $q_j$ is the probability of omitting $b_j$, worst-case success is
+at most $\min_j q_j\le1/K$. The adaptive policy always succeeds.
+The precision upper bound uses these interior capacity records;
+checking only vertices would not establish it.
+\end{proof}
+
+The moment ratio is $K^{p-1}$, while the ratio of worst-case success
+probabilities at precision $1/K$ is $K$. These separations use a
+structured constructed feasible set and a budget querying all but one
+coordinate. They establish the possible difference between objectives;
+they do not establish comparable gains at small relative budgets in a
+deployment or in the historical forecasting study.
+\section{S10. Computing policies and hardest records on polytopes}\label{sec:general-algorithms}
+Let $F=\{y\in\mathbb R^n:Ay\le b\}$ be nonempty and compact, and let
+$T(y)=c^\top y+d$. Equalities can be represented by paired inequalities.
+The constant $d$ does not affect width. Write $\rho=\max_{y\in F}\min_{Q\in\mathcal Q}W_Q(y)$ for the hardest-record value, equal to the optimal randomized worst expected width by the main scalar theorem. The first formulation allows any
+declared finite family $\mathcal Q$ of legal batches; $L_Q$ denotes the matrix
+of their exact linear measurements.
+
+\subsection{An enumerative hardest-record formulation}
+Introduce a common record $y$, endpoint witnesses $u_Q,v_Q$ for each
+$Q\in\mathcal Q$, and a scalar $\eta$. Consider
+\begin{equation}\label{eq:general-hardest-lp}
+\begin{aligned}
+\max\quad &\eta\\
+\text{subject to}\quad &Ay\le b,\quad Au_Q\le b,\quad Av_Q\le b
+                         &&(Q\in\mathcal Q),\\
+&L_Qu_Q=L_Qy,\quad L_Qv_Q=L_Qy &&(Q\in\mathcal Q),\\
+&\eta\le c^\top(u_Q-v_Q) &&(Q\in\mathcal Q).
+\end{aligned}
+\end{equation}
+For fixed $y$, the independent witnesses for batch $Q$ can attain its sharp
+width $W_Q(y)$. Thus the largest feasible $\eta$ at that record is
+$\min_Q W_Q(y)$, and the optimum of \eqref{eq:general-hardest-lp} is $\rho$.
+Its common record is a certificate that every legal batch leaves width at
+least $\rho$ there.
+
+The nonnegative dual multipliers $\pi_Q$ of the last constraints form an
+optimal randomized batch policy. Indeed, the free variable $\eta$ forces
+$\sum_Q\pi_Q=1$. Dualizing these constraints first yields
+\[
+\min_{\pi\in\Delta(\mathcal Q)}
+ \max_{y,u_Q,v_Q}\sum_Q\pi_Qc^\top(u_Q-v_Q)
+ =\min_{\pi\in\Delta(\mathcal Q)}\max_{y\in F}
+       \sum_Q\pi_Q W_Q(y)=\rho,
+\]
+where the endpoint feasibility constraints remain in the inner maximization.
+Ordinary linear-programming strong duality supplies the equality and the
+policy. In the implementation, a separate
+LP fixes the extracted $\pi$ and maximizes its expected width, checking the
+upper bound independently of the constraints involving $\eta$.
+
+With $M=|\mathcal Q|$ batches, the formulation has $n(1+2M)+1$ variables.
+It is polynomial in the explicitly enumerated batch family, which may be
+exponential in the number of available measurements. It is a small-instance
+benchmark and certificate generator; the aggregate-specific compact
+formulation avoids this enumeration in its structured setting.
+
+\subsection{An exact deterministic two-query algorithm}\label{sec:two-query}
+Assume every one of the $n\ge2$ coordinates is queryable at unit cost and the
+hard budget is two. An unused query can be added without increasing width,
+so considering two distinct coordinates includes policies that stop earlier.
+For a first query $i$ and feasible answer $t$, define
+\begin{equation}\label{eq:conditional-two-query}
+g_{ij}(t)=\max\{c^\top(u-v):Au\le b,\ Av\le b,\
+                u_i=v_i=t,\ u_j=v_j\},\qquad j\ne i.
+\end{equation}
+This maximizes the terminal width over all feasible records having first
+answer $t$, after second query $j$. The best deterministic policy beginning
+with $i$ therefore has worst width
+$\rho_i=\max_t\min_{j\ne i}g_{ij}(t)$.
+
+\begin{proposition}\label{prop:two-query-lp}
+For each $i$, $\rho_i$ is the value of the following single linear program,
+with one endpoint pair $(u^j,v^j)$ for each $j\ne i$:
+\begin{equation}\label{eq:two-query-lp}
+\begin{aligned}
+\max\quad &\eta\\
+\text{subject to}\quad &Au^j\le b,\quad Av^j\le b &&(j\ne i),\\
+&(u^j)_i=(v^j)_i=t,\quad (u^j)_j=(v^j)_j &&(j\ne i),\\
+&\eta\le c^\top(u^j-v^j) &&(j\ne i).
+\end{aligned}
+\end{equation}
+The optimal deterministic adaptive two-query worst-width value is
+$\min_i\rho_i$.
+\end{proposition}
+\begin{proof}
+At fixed feasible $t$, each endpoint pair has only its own constraints and
+can attain $g_{ij}(t)$. All inequalities on $\eta$ are feasible precisely up
+to their smallest attainable upper bound, $\min_{j\ne i}g_{ij}(t)$.
+Maximizing over the shared $t$ proves the first claim.
+For any deterministic policy beginning with $i$, its chosen second coordinate
+at answer $t$ has conditional worst width at least $\min_jg_{ij}(t)$.
+Conversely, choosing a minimizing $j$ after observing $t$ attains that value.
+Finite tie breaking gives a measurable selection because these polyhedral
+value functions are piecewise linear on their feasible interval. Finally,
+minimize over the first coordinate.
+\end{proof}
+
+For rational input, $n$ LPs of polynomial description size choose the first
+coordinate; after its answer, $n-1$ conditional LPs implement the second
+choice. This is a polynomial-time deterministic two-query procedure in the
+standard bit-complexity model, including the encoding length of rational
+query answers. For arbitrary exact answers, the policy is still defined by
+the conditional LPs; the polynomial bit-complexity statement applies to
+rationally encoded inputs and answers. It does not solve arbitrary-budget
+randomized precision-risk optimization or minimize expected requests until
+certification. No grid of possible first answers is used.
 
 \begin{thebibliography}{99}
 \bibitem[Hebrail and Berard(2006)]{uci}

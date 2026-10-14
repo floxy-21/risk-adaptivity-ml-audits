@@ -9,7 +9,7 @@ stores the author's submission materials; it does not indicate journal acceptanc
 
 - [Read the paper](manuscript/revised_manuscript.pdf).
 - [Editable LaTeX source](manuscript/revised_manuscript.tex).
-- [Complete reproducibility release](https://github.com/floxy-21/risk-adaptivity-ml-audits/releases/tag/peerj-cs-2026-10-13-review).
+- [Complete reproducibility release](https://github.com/floxy-21/risk-adaptivity-ml-audits/releases/tag/peerj-cs-2026-10-13-two-target).
 - [Table-to-command map](source_snapshot/work/risk_adaptivity_revision/CURRENT_RESULTS_MAP.txt).
 - [Fresh execution record](verification/current_clean_package_replay.json).
 - [Final five-point review](verification/peerj_five_point_audit.txt).
@@ -17,10 +17,20 @@ stores the author's submission materials; it does not indicate journal acceptanc
 - [Bounded first-reader prose cleanup](verification/first_reader_prose_review.txt).
 - [Hash-bound upload-hygiene scan](verification/final_upload_hygiene.json).
 - [Acquisition geometry and replay figure](figures/practical_guarantee_replay.pdf).
+- [Fixed two-query proof review](verification/two_target_boundary/proof_review_memo.txt).
+- [Precise prior-art comparison](verification/two_target_boundary/novelty_review.txt).
 
-The central result gives exact shared-query separations with explicit policies,
-matching lower bounds and a worked real-data proof certificate. A scalar
-classification provides the foundation for understanding adaptive acquisition. Fixed, adaptive and bulk retrieval have different assurance
+The fixed-budget result uses two affine targets and two coordinate queries:
+adaptation guarantees joint precision, while the best randomized fixed batch
+has worst-case success exactly `1/m` for every `m >= 3`. Each target separately
+has a fixed two-query guarantee. The same separation holds for all three paired
+contrasts of three constructed nonnegative forecast vectors. Its dictionary
+grows with `m`, its normalized margin shrinks, and three fixed queries suffice.
+It proves a boundary for shared assurance, not an empirical or financial gain.
+
+Explicit policies, matching lower bounds and a worked real-data proof certificate
+connect this boundary to the existing study. A scalar classification provides
+the foundation. Fixed, adaptive and bulk retrieval have different assurance
 and resource trade-offs; the paper reports where each is appropriate. It includes
 proofs, two public-source replays, measurement sensitivities and exact witnesses.
 The declared-cost frontier is a modeled comparison, not measured financial savings.
@@ -39,11 +49,20 @@ python work/risk_adaptivity_revision/reproduce.py
 
 Run these commands from the extracted package root. The default entry point
 checks all manifested files, creates a new isolated stage, blocks network access
-during scientific replay, executes 74 checks, compares saved
+during scientific replay, executes 76 checks, compares saved
 scientific results and reconstructs the current manuscript byte-for-byte.
 The tested environment and exact scope appear in the verification record.
-The verified run took about 20.8 minutes on
+The verified run took about 12.1 minutes on
 the study host, plus extraction/copy time; allow several GB of free disk.
+
+The new `two_target_exact` and `two_target_lp` jobs check the constructed family
+at `m=3,5,10` with rational arithmetic and
+7,131 actual LPs, respectively.
+The maximum recorded width discrepancy is
+`7.105427357601002e-15` under a
+`1e-7` comparison tolerance and `1e-9` primal/dual solver tolerances.
+Both reports include the checker SHA-256 and canonical mathematical-input hash.
+The all-size theorem rests on its proof; these finite checks test the implementation.
 
 Default replay uses frozen forecasts; it does not refit models, download source
 data or repeat the archived API/timing measurements. Separate regeneration and
@@ -58,7 +77,7 @@ scope and execution records are in `joint_certification/provenance_chain/`.
 That run uses frozen models; it is not fresh fitting or external human review.
 
 The latest review adds a five-threshold sensitivity over unchanged policies and
-reports the remaining probability-bound gaps. The 36-page main text separates
+reports the remaining probability-bound gaps. The 39-page main text separates
 the mathematical optima, exact instance guarantees, recorded outcomes and API
 costs. Complete controls remain in the supplement. The current full replay uses
 a newly created isolated Python environment with all 11 runtime packages pinned.
@@ -90,12 +109,20 @@ they are not represented as fresh assessments of the final revision.
 clarity edits; it is not a separate final-PDF or external human review.
 The `pre_workflow_*` files preserve the preceding successful replay at its
 own source hash. The upload-hygiene record matches the current manuscript and three archives.
+The `pre_two_target_*` files likewise retain the preceding successful release
+as history, not as a substitute for the two new jobs or current source replay.
 Recorded host-native process failures and subsequent complete successful runs
 remain separate execution history, rather than silently discarded failures.
 
 The larger `research_supplement.zip` preserves historical development records.
+Its `EXCLUDED_EDITORIAL_NOTES.json` explicitly identifies three internal notes
+omitted from scientific assets. The inherited notes remain in the previous private
+release/local originals and are excluded from the current recoverability count.
+The retained `work/randomized_tie_review/theory_review.txt` provides substantive
+historical mathematical rationale used as a hash-pinned checker input. It is
+internal AI-assisted review, not external validation of the current manuscript.
 The publisher package omits unused historical caches and lists those omissions;
-its 74-step execution uses the same scientific files and driver. No browser
+its 76-step execution uses the same scientific files and driver. No browser
 sessions, account credentials, registration forms or private outreach drafts are
 part of this repository.
 

@@ -1,32 +1,25 @@
 FINAL READ-ONLY UPLOAD HYGIENE CHECK
-Status: PASS within the stated scan scope.
-Completed UTC: 2026-10-14T02:04:05.359851+00:00
+Status: PASS
+Completed UTC: 2026-10-14T04:05:13.136176+00:00
 
-Current manuscript source SHA-256: 53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
-Current PDF SHA-256: cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302
+Current manuscript SHA256: a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf
+Current PDF SHA256: 59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9
+Scanner SHA256: 787f41aa7fbd8279d78801d619661f1a37869e1583364b7e49bcb3cc069631bc
 
-Scanned all three exact final archives, including decompressed gzip contents:
-3,009,780,570 expanded bytes. Also scanned 44 intended manuscript/report
-files from the actual delivery copy lists. The JSON report lists each archive
-hash, member count and finding category; potential secret values are not printed.
-Checked signatures cover credentials, private-key markers, quoted credential
-assignments, author registration password/street/telephone identifiers and the
-outdated author email. This signature scan does not prove that every possible
-secret is absent. No excluded private-review/browser/raw-cache paths occurred.
+research_supplement.zip SHA256: 75da51dd70387635b12f1cdbff2e23ca32cebf99aaf1ac2509c70334aa082b0e
+Supplemental_Data_S1.zip SHA256: be7ee4c807b29796f3b596edbfb57281c37305119e4506d4ede8e948d1723a48
+Supplemental_Data_S2.zip SHA256: 7b07f9558fc13bb12c4b9fd16a1901657f90cd998c3456574f1aa5e504c35fd2
 
-All 6,552 original BLEM rows keep original truth and direct-copy persistence
-fields blank. The named raw traces, original pilot/continuation and joint_review
-folders remain absent. Derived outcomes and attributed external public caches
-remain the documented distributed inputs.
+Sanitized finding categories: 0
+Local manuscript/report/template files scanned: 91
+Expanded text bytes scanned/reused: 3004070198
+Repository privacy check: PASS
+Current manuscript private-repository/release mentions: 0
+Prior scan preserved in pre_two_target_final_upload_hygiene.json/.txt.
 
-The source-snapshot copy filter admits 1030 current files. Its existing
-980-file payload has no stale extras; 50 files will be added by
-preparation. The six intended release assets match verify_github.py's allowlist.
-The live read-only repository check returned PRIVATE. Current manuscript source
-has zero private-repository/release identifiers; 3 primary-source GitHub URLs remain.
-
-This scan took 134.13 seconds. The preceding successful hygiene
-scan is preserved as outputs/pre_workflow_hygiene_20261014.json/.txt with its old
-hashes, not relabelled as the current check. No upload, repository settings,
-package, scientific file or manuscript was changed. Current execution readiness
-and release metadata remain separate finalization checks.
+Read-only signature/contact scan, including streamed gzip text. Reports contain categories and paths, never matched values. Pattern matching does not prove absence of every secret. Binary image/array payloads are not interpreted as text; PDFs are text/metadata-scanned locally. This is upload hygiene, not proof validation, source licensing review or scientific replay.
+Existing staging snapshot is historical until prepare_github runs. Expected files are scanned in the new full archive; missing files are normal before preparation. Extra old files would survive its copy-only update and require review.
+All raw/redaction checks, reused byte-identical archive checks and any sanitized findings are explicit in the JSON report.
+No upload, repository setting, scientific file, manuscript or ZIP was modified.
+Finalization may rewrite delivery reports; rerun with --reuse-archive-results after that step to rescan local metadata while retaining identical archive checks.
+Elapsed seconds: 4.97

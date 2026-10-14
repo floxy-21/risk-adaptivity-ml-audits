@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "zip_sha256": "c6256bae479ddd20157bc9592acec8d753cd9d9d6639091db79dd034e3fd7604",
+  "zip_bytes": 373438992,
+  "manifested_members": 1182,
+  "old_members_preserved_in_place": 578,
+  "old_members_exactly_recoverable": 582,
+  "replaced_paths": [
+    "README.txt",
+    "outputs/requirements-study.txt",
+    "outputs/revised_manuscript.tex",
+    "requirements.txt"
+  ],
+  "old_editorial_notes_omitted": [
+    {
+      "path": "work/external_deadline/editorial/pretest_scientific_review.txt",
+      "bytes": 5181,
+      "sha256": "268734a09a62abd00506d83d0eff5bc12ca96d039083434ea45fdbfe87d3c350"
+    },
+    {
+      "path": "work/external_deadline/editorial/provisional_numerical_review.txt",
+      "bytes": 3313,
+      "sha256": "6745ae32d839bb06e866157f795964ee58da629b7181af108a1ce813855a9e78"
+    },
+    {
+      "path": "work/randomized_tie_review/theory_review.txt",
+      "bytes": 6143,
+      "sha256": "5c5ddd134a9b1ab04063e9f78667b5d8d02fcae5eb68af9fc5a5a20407ea639e"
+    }
+  ],
+  "editorial_omission_manifest": "EXCLUDED_EDITORIAL_NOTES.json",
+  "new_manuscript_sha256": "a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf",
+  "scope": "Complete member integrity and scientific historical preservation, excluding the explicitly listed internal editorial notes retained only in the prior private archive/local files; executable clean replay reported separately."
+}

@@ -2,10 +2,10 @@
   "scope": "Publisher S1/S2 delivery; full archival ZIP retained separately",
   "assembly": {
     "status": "assembled_clean_replay_pending",
-    "source_zip_sha256": "940144c6bc2217ebada13a510ac5f17afbd37d359f3e249b0a4c13f48acdf7e6",
-    "included_files": 1071,
-    "estimated_zip_bytes": 47039320,
-    "uncompressed_bytes": 265804514,
+    "source_zip_sha256": "75da51dd70387635b12f1cdbff2e23ca32cebf99aaf1ac2509c70334aa082b0e",
+    "included_files": 1078,
+    "estimated_zip_bytes": 47085730,
+    "uncompressed_bytes": 265988564,
     "selected": [
       {
         "path": "outputs/REPRODUCE.txt",
@@ -1628,18 +1628,6 @@
         "reason": "code, editable source, protocol, or documentation"
       },
       {
-        "path": "work/external_deadline/editorial/pretest_scientific_review.txt",
-        "bytes": 5181,
-        "compressed_bytes": 2497,
-        "reason": "code, editable source, protocol, or documentation"
-      },
-      {
-        "path": "work/external_deadline/editorial/provisional_numerical_review.txt",
-        "bytes": 3313,
-        "compressed_bytes": 1712,
-        "reason": "code, editable source, protocol, or documentation"
-      },
-      {
         "path": "work/external_deadline/editorial/results_generator_check.json",
         "bytes": 1030,
         "compressed_bytes": 291,
@@ -2865,8 +2853,8 @@
       },
       {
         "path": "README.txt",
-        "bytes": 17153,
-        "compressed_bytes": 7421,
+        "bytes": 17949,
+        "compressed_bytes": 7732,
         "reason": "code, editable source, protocol, or documentation"
       },
       {
@@ -2883,20 +2871,20 @@
       },
       {
         "path": "outputs/revised_manuscript.tex",
-        "bytes": 127360,
-        "compressed_bytes": 52362,
+        "bytes": 133571,
+        "compressed_bytes": 55289,
         "reason": "code, editable source, protocol, or documentation"
       },
       {
         "path": "outputs/risk_editorial_verification.json",
-        "bytes": 3627,
-        "compressed_bytes": 2000,
+        "bytes": 3952,
+        "compressed_bytes": 2173,
         "reason": "small provenance or archived summary"
       },
       {
         "path": "outputs/risk_release_manifest.json",
-        "bytes": 15747,
-        "compressed_bytes": 5979,
+        "bytes": 16474,
+        "compressed_bytes": 6268,
         "reason": "small provenance or archived summary"
       },
       {
@@ -2907,20 +2895,20 @@
       },
       {
         "path": "work/risk_adaptivity_revision/CURRENT_RESULTS_MAP.txt",
-        "bytes": 77195,
-        "compressed_bytes": 30701,
+        "bytes": 78650,
+        "compressed_bytes": 31278,
         "reason": "current proof, method, replay, or report tree"
       },
       {
         "path": "work/risk_adaptivity_revision/README.txt",
-        "bytes": 17153,
-        "compressed_bytes": 7421,
+        "bytes": 17949,
+        "compressed_bytes": 7732,
         "reason": "current proof, method, replay, or report tree"
       },
       {
         "path": "work/risk_adaptivity_revision/build_manuscript.py",
-        "bytes": 32261,
-        "compressed_bytes": 11315,
+        "bytes": 36936,
+        "compressed_bytes": 12878,
         "reason": "current proof, method, replay, or report tree"
       },
       {
@@ -3447,8 +3435,8 @@
       },
       {
         "path": "work/risk_adaptivity_revision/editorial/declarations.tex",
-        "bytes": 4476,
-        "compressed_bytes": 2185,
+        "bytes": 4618,
+        "compressed_bytes": 2288,
         "reason": "current proof, method, replay, or report tree"
       },
       {
@@ -3459,8 +3447,8 @@
       },
       {
         "path": "work/risk_adaptivity_revision/editorial/discussion_short.tex",
-        "bytes": 4806,
-        "compressed_bytes": 2371,
+        "bytes": 5666,
+        "compressed_bytes": 2716,
         "reason": "current proof, method, replay, or report tree"
       },
       {
@@ -3477,14 +3465,14 @@
       },
       {
         "path": "work/risk_adaptivity_revision/editorial/front.tex",
-        "bytes": 13192,
-        "compressed_bytes": 6022,
+        "bytes": 15040,
+        "compressed_bytes": 6737,
         "reason": "current proof, method, replay, or report tree"
       },
       {
         "path": "work/risk_adaptivity_revision/editorial/helly_focused.tex",
-        "bytes": 4769,
-        "compressed_bytes": 2326,
+        "bytes": 4745,
+        "compressed_bytes": 2312,
         "reason": "current proof, method, replay, or report tree"
       },
       {
@@ -3506,6 +3494,12 @@
         "reason": "current proof, method, replay, or report tree"
       },
       {
+        "path": "work/risk_adaptivity_revision/editorial/joint_protocol_summary.tex",
+        "bytes": 2538,
+        "compressed_bytes": 1346,
+        "reason": "current proof, method, replay, or report tree"
+      },
+      {
         "path": "work/risk_adaptivity_revision/editorial/measurement_assumptions.tex",
         "bytes": 2333,
         "compressed_bytes": 1172,
@@ -3513,8 +3507,8 @@
       },
       {
         "path": "work/risk_adaptivity_revision/editorial/online_extended_methods.tex",
-        "bytes": 156493,
-        "compressed_bytes": 65861,
+        "bytes": 166116,
+        "compressed_bytes": 69841,
         "reason": "current proof, method, replay, or report tree"
       },
       {
@@ -4550,12 +4544,6 @@
         "reason": "current proof, method, replay, or report tree"
       },
       {
-        "path": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/INTERNAL_LOWER_REVIEW.txt",
-        "bytes": 3065,
-        "compressed_bytes": 1603,
-        "reason": "current proof, method, replay, or report tree"
-      },
-      {
         "path": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/PROTOCOL.txt",
         "bytes": 1406,
         "compressed_bytes": 802,
@@ -4905,8 +4893,8 @@
       },
       {
         "path": "work/risk_adaptivity_revision/joint_certification/empirical_manuscript_fragment.tex",
-        "bytes": 6259,
-        "compressed_bytes": 3077,
+        "bytes": 7401,
+        "compressed_bytes": 3539,
         "reason": "current proof, method, replay, or report tree"
       },
       {
@@ -5751,8 +5739,8 @@
       },
       {
         "path": "work/risk_adaptivity_revision/joint_certification/provenance_chain/README.txt",
-        "bytes": 4914,
-        "compressed_bytes": 2401,
+        "bytes": 5561,
+        "compressed_bytes": 2693,
         "reason": "current proof, method, replay, or report tree"
       },
       {
@@ -5777,6 +5765,18 @@
         "path": "work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/chain_execution.json",
         "bytes": 12107,
         "compressed_bytes": 2242,
+        "reason": "current proof, method, replay, or report tree"
+      },
+      {
+        "path": "work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/fresh_both_panel_replay_20261014.json",
+        "bytes": 33898,
+        "compressed_bytes": 8763,
+        "reason": "current proof, method, replay, or report tree"
+      },
+      {
+        "path": "work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/fresh_both_panel_replay_20261014.txt",
+        "bytes": 1963,
+        "compressed_bytes": 1121,
         "reason": "current proof, method, replay, or report tree"
       },
       {
@@ -5991,8 +5991,8 @@
       },
       {
         "path": "work/risk_adaptivity_revision/package_release.py",
-        "bytes": 6727,
-        "compressed_bytes": 2622,
+        "bytes": 9698,
+        "compressed_bytes": 3542,
         "reason": "current proof, method, replay, or report tree"
       },
       {
@@ -6417,8 +6417,8 @@
       },
       {
         "path": "work/risk_adaptivity_revision/replay_jobs.json",
-        "bytes": 31069,
-        "compressed_bytes": 3726,
+        "bytes": 31602,
+        "compressed_bytes": 3809,
         "reason": "current proof, method, replay, or report tree"
       },
       {
@@ -6432,6 +6432,48 @@
         "bytes": 1277,
         "compressed_bytes": 676,
         "reason": "current proof, method, replay, or report tree"
+      },
+      {
+        "path": "work/risk_adaptivity_revision/two_target_boundary/README.txt",
+        "bytes": 2791,
+        "compressed_bytes": 1356,
+        "reason": "current proof, method, replay, or report tree"
+      },
+      {
+        "path": "work/risk_adaptivity_revision/two_target_boundary/main_theorem.tex",
+        "bytes": 7715,
+        "compressed_bytes": 3751,
+        "reason": "current proof, method, replay, or report tree"
+      },
+      {
+        "path": "work/risk_adaptivity_revision/two_target_boundary/make_summary_svg.py",
+        "bytes": 8585,
+        "compressed_bytes": 3711,
+        "reason": "current proof, method, replay, or report tree"
+      },
+      {
+        "path": "work/risk_adaptivity_revision/two_target_boundary/numeric_report.json",
+        "bytes": 41057,
+        "compressed_bytes": 5468,
+        "reason": "current proof, method, replay, or report tree"
+      },
+      {
+        "path": "work/risk_adaptivity_revision/two_target_boundary/solver_free_report.json",
+        "bytes": 39596,
+        "compressed_bytes": 5079,
+        "reason": "current proof, method, replay, or report tree"
+      },
+      {
+        "path": "work/risk_adaptivity_revision/two_target_boundary/verify_boundary.py",
+        "bytes": 23146,
+        "compressed_bytes": 7794,
+        "reason": "current proof, method, replay, or report tree"
+      },
+      {
+        "path": "EXCLUDED_EDITORIAL_NOTES.json",
+        "bytes": 1593,
+        "compressed_bytes": 796,
+        "reason": "small provenance or archived summary"
       }
     ],
     "excluded": [
@@ -7067,35 +7109,40 @@
       }
     ],
     "driver": "work/risk_adaptivity_revision/reproduce.py",
-    "configured_steps": 74,
-    "scope": "All scientific file bytes retained unchanged; dependency completeness requires the clean default replay. Historical reconstruction caches excluded, all source programs retained.",
+    "configured_steps": 76,
+    "editorial_exclusion_paths": [
+      "work/external_deadline/editorial/pretest_scientific_review.txt",
+      "work/external_deadline/editorial/provisional_numerical_review.txt",
+      "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/INTERNAL_LOWER_REVIEW.txt"
+    ],
+    "scope": "All retained scientific file bytes unchanged; dependency completeness requires the clean default replay. Historical reconstruction caches and explicitly named internal review notes excluded, all source programs retained.",
     "parts": [
       {
         "path": "Supplemental_Data_S1.zip",
-        "bytes": 17474102,
-        "sha256": "51058e338410447f832d88ef2b50d9832d265e61f690911e4bcdbc68898e9262"
+        "bytes": 17513047,
+        "sha256": "be7ee4c807b29796f3b596edbfb57281c37305119e4506d4ede8e948d1723a48"
       },
       {
         "path": "Supplemental_Data_S2.zip",
-        "bytes": 23567266,
-        "sha256": "f6138fb01c1d0abd38aebca19cef22badcd299cff9518a86ab6f969739e5e837"
+        "bytes": 23568606,
+        "sha256": "7b07f9558fc13bb12c4b9fd16a1901657f90cd998c3456574f1aa5e504c35fd2"
       }
     ],
-    "total_zip_bytes": 41041368,
-    "manifested_files": 1074,
+    "total_zip_bytes": 41081653,
+    "manifested_files": 1081,
     "all_retained_original_hashes_match_except_documentation_override": true,
     "documentation_override": {
       "path": "README.txt",
       "change": "Journal-specific extract-both-parts preface; original retained as SOURCE_ARCHIVE_README.txt"
     },
-    "combined_members_verified": 1074
+    "combined_members_verified": 1081
   },
-  "extraction": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\peerj_journal_verified_20261014_015951",
+  "extraction": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\peerj_journal_verified_20261014_034908",
   "entry_point": "work/risk_adaptivity_revision/reproduce.py",
   "python_executable": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\reviewer_freshvenv_20261013\\Scripts\\python.exe",
   "stage_storage": {
     "kind": "NTFS transparent compression on the new extraction directory",
-    "command_output": "Compressing files in C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\\n\npeerj_journal_verified_20261014_015951         0 :         0 = 1.0 to 1 [OK]\n\n1 files within 1 directories were compressed.\n0 total bytes of data are stored in 0 bytes.\nThe compression ratio is 1.0 to 1.",
+    "command_output": "Compressing files in C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\\n\npeerj_journal_verified_20261014_034908         0 :         0 = 1.0 to 1 [OK]\n\n1 files within 1 directories were compressed.\n0 total bytes of data are stored in 0 bytes.\nThe compression ratio is 1.0 to 1.",
     "returncode": 0
   }
 }

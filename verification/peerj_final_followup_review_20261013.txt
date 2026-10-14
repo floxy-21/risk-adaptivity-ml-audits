@@ -1,15 +1,15 @@
 FINAL PEERJ COMPUTER SCIENCE REVIEW -- 13 October 2026
-Source SHA256: 53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
-PDF SHA256: cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302
-Pages: 36
+Source SHA256: a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf
+PDF SHA256: 59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9
+Pages: 39
 
 Current comprehensive response: LATEST_REVIEW_FIXES_20261013.txt
 PeerJ-specific criteria: PEERJ_CRITERIA_AUDIT.txt
 
 CURRENT INTERNAL REVIEW -- 13 October 2026
-Source SHA256: 53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
-PDF SHA256: cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302
-Pages: 36
+Source SHA256: a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf
+PDF SHA256: 59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9
+Pages: 39
 
 LATEST REVIEW: OBJECTIVE ALIGNMENT, PRECISION SENSITIVITY AND REVIEWER ENTRY
 
@@ -49,7 +49,7 @@ The main paper retains exact endpoints, illustrative caps/errors, repeated
 days, three systems per source and retrospective chronology. The actual API
 favors bulk retrieval; no monetary saving, calibrated decision threshold or
 improved model choice is inferred. Full pairwise controls remain in S6.
-The current main manuscript has 36 pages; full controls remain available.
+The current main manuscript has 39 pages; full controls remain available.
 
 F. Reviewer reproducibility -- CONCRETE DEFECTS FIXED AND TESTED.
 Corrected two command paths that contradicted the stated root directory,
@@ -142,6 +142,52 @@ and replay are preserved as pre_workflow_* records with their original hashes.
 No private repository or release reference has been added to the manuscript.
 
 CORE MATHEMATICS AND ATTRIBUTION
+The new main result fixes the hard budget at two and the number of affine
+outputs at two, while proving exact adaptive success 1 versus optimal
+randomized-batch success 1/m for every m>=3. The complete proof covers every
+permitted final query-set type and supplies the continuum lower guarantee.
+The all-three-model-pair corollary, nonzero threshold band and three-fixed-query
+sufficiency are explicit. Input dimension grows and the margin shrinks; this
+is not a fixed-error result or an unbounded saving in needed readings.
+The new independent implementation checks 1,171 adverse/query combinations
+and executes 7,131 LPs, with maximum discrepancy 7.11e-15 against exact rational
+formulas. Its actual clean-package rerun is recorded separately. The current
+abstract is 240 words and distinguishes constructed and measured evidence.
+The earlier growing scalar-family statement and proof are in S9; the general
+polytope algorithms are in S10. The cumulative-meter specialization is a sibling Methods
+subsection, not part of the new coordinate construction. The matched-subset
+tradeoff table and consolidated numerical conventions make comparator scope
+directly inspectable. No historical empirical outcome has been changed.
+
+LATEST ATTACHMENT -- REPRODUCIBILITY AND READING ORDER
+The complete two-target theorem now starts on page 9 rather than page 13.
+Setup and the scalar precision floor lead directly to the new boundary, then
+the meter planner and worked certificates. The complete scalar classification
+proof follows; its small example and the general-polytope algorithms are indexed
+in S9/S10. The methods hierarchy and floating-figure placement were checked in
+the final PDF. The exact theorem commands, required inputs, output filenames,
+expected PASS fields and numerical tolerances are printed beside its proof.
+The current main text is 39 pages. The prior 40-page version's
+successful 76-step run is retained as pre_entry_revision_* evidence, not relabeled
+as verification of this source. The final rebuilt package has its own replay.
+Growing dimension, shrinking threshold margin and the three-reading fixed
+alternative are mathematical boundaries, not errors to erase. The measured
+bulk advantage and unfavorable capacity/error controls remain visible.
+
+FINAL TYPOGRAPHY CHECKLIST
+The alleged missing switch bracket, merged width/enclosure headers, malformed
+piecewise brace and missing DOI spaces were checked against source and pixels;
+they were already correct. They were not changed on the basis of text-extraction
+artifacts. The availability paragraph now contains direct public QuantLet/BLEM
+and Kostmann--Hardle DOI links. No private research-repository link was added.
+The introduction now calls the scalar precision bound the starting point and
+describes the later penalty classification as the broader risk explanation.
+The fresh both-source chain completed without producer-reuse flags in 925.13
+seconds: all ten stages and nine original-regeneration stages passed, all
+1,098 ledger rows matched exactly, and the 165/57 certificate counts agreed.
+The sanitized execution record is in provenance_chain/executed/
+fresh_both_panel_replay_20261014.json. No fresh model fitting is claimed.
+
 A separate analytic review found no blocking flaw in the scalar iff proof,
 jump-at-zero treatment, transcript identity or shared construction. Independent
 rational arithmetic reproduced its printed bounds. Primary Sion, Krieg--Ullrich,
@@ -163,4 +209,4 @@ author declarations, not evidence of a statistically calibrated 90% acceptance
 probability. No journal submission or external contact occurred.
 
 FINAL ARTIFACT VERIFICATION
-PASS: 74 steps in a fresh network-disabled stage from the two publisher ZIP files, 1074 manifested members, 1250.83 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 41.04 MB. Full historical archive integrity also passed.
+PASS: 76 steps in a fresh network-disabled stage from the two publisher ZIP files, 1081 manifested members, 723.56 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 41.08 MB. Full historical archive integrity also passed.

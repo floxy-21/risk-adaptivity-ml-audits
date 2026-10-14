@@ -1,18 +1,18 @@
 {
   "status": "passed",
   "review_date": "2026-10-13",
-  "completed_utc": "2026-10-14T01:55:02.630185+00:00",
+  "completed_utc": "2026-10-14T03:36:24.909219+00:00",
   "scope": "PeerJ structure and source/PDF correspondence; analytic and software reviews are separate. Full clean ZIP replay reported separately.",
-  "manuscript_sha256": "53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f",
-  "pdf_sha256": "cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302",
-  "pdf_pages": 36,
-  "abstract_words": 246,
+  "manuscript_sha256": "a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf",
+  "pdf_sha256": "59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9",
+  "pdf_pages": 39,
+  "abstract_words": 240,
   "builtin_main_compile": "success",
   "manuscript_overfull_or_undefined_warnings": 0,
   "visual_review": "outputs/peerj_final_visual_review.txt",
   "export_environment_advisory": "Fontconfig and lineno source-comment encoding advisories; rendered pages separately inspected.",
   "proof_review_kind": "separate AI-assisted internal analytic review; not external human or formal proof-assistant validation",
-  "novelty_repair": "Explicit comparison with Osipenko Theorems 2--3 and 5, in addition to existing objective-specific comparisons.",
+  "novelty_repair": "Fixed-budget two-target boundary, all-three-model-pair realization, complete matching bounds, threshold margin; distinguished from sparse scalar policy bounds and established vector recovery. Existing Osipenko and objective-specific comparisons retained.",
   "practical_repairs": [
     "strict interface schema",
     "canonical typed task/plan binding",
@@ -33,7 +33,9 @@
     "threshold_source": "768666bb4fa0a86798f6ceaded73bfb6d61440993ab07f4e1b2f15151f0edd19",
     "final_practical_figure": "b00b83739686ccad00f1d9944088b1bd4ec52e9e4e194e91ee82655561c8ba6e",
     "final_challenger": "a64275b82906bc637c080ef82cdbe59dd129b6a4af2a192a0fbf63e95389d117",
-    "final_challenger_both_source": "bcf0f3e234765842ae91810ccd7c70fd645d0cfd59f803fa2827cecd4423a8fb"
+    "final_challenger_both_source": "bcf0f3e234765842ae91810ccd7c70fd645d0cfd59f803fa2827cecd4423a8fb",
+    "two_target_exact": "7eef134aaf78c6ae0de981747d14a113f54fd7373553a88429e6084e18a96270",
+    "two_target_lp": "6484c2f23bbc51709d90cbbba78e34059cea1f728905d6f734d1c15e15413acf"
   },
   "historical_empirical_result_changes": false,
   "target": "PeerJ Computer Science",
@@ -43,7 +45,7 @@
     "Live browser: https://peerj.com/journals/computer-science/author-instructions"
   ],
   "policy_verification_limit": "Live preparation, code/data, authorship, AI and copyright policies inspected on 2026-10-13. The author confirmed checking AI-tool terms and publication suitability. Separate final-content/record-retention attestations and precise historical AI-version identifiers remain unverified; final portal declarations and fees have not been accepted. Supplement upload limits require the separately checked S1/S2 package, not the larger private development archive.",
-  "acceptance_probability": "No calibrated individual acceptance probability; internal corrections do not establish an 80% threshold.",
+  "acceptance_probability": "No calibrated individual acceptance probability follows from internal corrections or numerical checks.",
   "submission_status": "not submitted",
   "external_contact": false
 }

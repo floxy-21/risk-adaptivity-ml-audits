@@ -49,6 +49,15 @@ def main():
     primary = next(r for r in selection['summary'] if r['cohort'] == 'portugal' and r['total_tolerance'] == 0)
     assert selection['status'] == 'passed' and (primary['paired_certified'],primary['separate_certified']) == (933,167)
     assert api['status'] == 'PASS' and sum(r['checks']['independent_endpoint_LPs'] for r in api['examples']) == 24
+    boundary = json_source('work/risk_adaptivity_revision/two_target_boundary/numeric_report.json')
+    boundary_exact = json_source('work/risk_adaptivity_revision/two_target_boundary/solver_free_report.json')
+    boundary_source = BASE / 'two_target_boundary/verify_boundary.py'
+    READ.add(boundary_source)
+    assert boundary['status'] == boundary_exact['status'] == 'PASS'
+    assert boundary['source_sha256'] == boundary_exact['source_sha256'] == sha(boundary_source)
+    assert boundary['proof_input_sha256'] == boundary_exact['proof_input_sha256']
+    assert boundary['numerical_verification']['actual_total_LPs'] == 7131
+    assert boundary['numerical_verification']['maximum_width_discrepancy'] < 1e-7
 
     preamble = r'''% Self-contained source composed from pinned proofs and measured outputs.
 \documentclass[12pt]{article}
@@ -78,7 +87,7 @@ def main():
 \newcommand{\clip}{\operatorname{clip}}
 '''
     text = preamble + local('editorial/front.tex').replace('adjust2024', 'wei2024')
-    workflow_marker = 'Our primary contribution is the mathematical classification'
+    workflow_marker = 'The central result is a boundary'
     assert text.count(workflow_marker) == 1
     text = text.replace(workflow_marker,
                         local('editorial/audit_workflow.tex') + '\n' + workflow_marker, 1)
@@ -91,9 +100,47 @@ def main():
         end = theory.index(r'\end{proposition}', start) + len(r'\end{proposition}')
         theory = theory[:start] + theory[start:end].replace('{proposition}', '{theorem}') + theory[end:]
     theory = theory.replace("Sion's minimax theorem\ntherefore", "Sion's minimax theorem \\citep{sion1958}\ntherefore")
-    text += theory + local('general/algorithms.tex')
-    text += local('editorial/helly_focused.tex')
-    text += local('counter_adaptive/literature/counter_methods.tex')
+    growing_start = theory.index(r'\section{Growing moment and precision separations}')
+    classification_start = theory.index(r'\section{Which width penalties can benefit from adaptation?}')
+    example_start = theory.index(r'\subsection{A three-coordinate example}')
+    scalar_setup = theory[:classification_start]
+    classification = theory[classification_start:example_start]
+    scalar_example = theory[example_start:growing_start]
+    growing_support = theory[growing_start:]
+    general_algorithms = local('general/algorithms.tex')
+    text += scalar_setup
+    text += local('editorial/helly_focused.tex').replace(
+        r'\subsection{A precision consequence of sparse-policy bounds}',
+        r'\section{A precision consequence of sparse-policy bounds}', 1)
+    text += local('two_target_boundary/main_theorem.tex')
+    text += r'''
+\paragraph{Executable checks.}
+Online Resource~1 includes a standard-library rational verifier and a
+separate LP calculation for $m=3,5,10$. The rational checks enumerate
+1,171 adverse-record/query-set combinations and verify continuum branch
+coverage. The 7,131 endpoint and whole-branch LPs agree with the exact
+formulas to at most $7.11\times10^{-15}$; the absolute comparison tolerance
+is $10^{-7}$ and the primal/dual feasibility tolerances are $10^{-9}$.
+The proof above establishes the result for every $m\geq3$; these finite
+checks test its implementation, including the third contrast and the
+threshold interval. From the extracted supplement root, run:
+\begin{verbatim}
+cd work/risk_adaptivity_revision/two_target_boundary
+python -S verify_boundary.py --solver-free --output replay_exact.json
+python verify_boundary.py --output replay_numeric.json
+\end{verbatim}
+The first command needs only Python's standard library; the second also
+needs the pinned NumPy/SciPy environment. Both use the rational construction
+encoded in \texttt{verify\_boundary.py}, with default sizes $m=3,5,10$;
+no meter data are required. Successful reports contain
+\texttt{status: PASS}, \texttt{all\_checks\_passed: true}, input and script
+hashes, and the checked witnesses. The numerical report additionally records
+the 7,131 LPs and their discrepancies. These commands verify the construction;
+the complete source-to-table replay is documented in Supplementary Materials.
+'''
+    text += local('counter_adaptive/literature/counter_methods.tex').replace(
+        r'\subsection{Adaptive precision from cumulative-counter queries}',
+        r'\section{Adaptive precision from cumulative-counter queries}', 1)
     text += local('editorial/counter_half_corollary.tex')
     text += local('counter_adaptive/feedback_triage/math_review.tex')
     joint_methods = local('joint_certification/manuscript_methods.tex')
@@ -116,7 +163,10 @@ def main():
     assert figure_check['envelope_equalities'] == 735 and figure_check['replay_points_checked'] == 30
     assert figure_check['figure_data_sha256'] == sha(BASE / 'joint_certification/final_practical_figure/figure_data.json')
     text += local('joint_certification/final_practical_figure/figure_fragment.tex')
+    text += '\n\\FloatBarrier\n' + classification
+    text += '\n\\section{Application assumptions and protocol}\n'
     text += local('editorial/measurement_assumptions.tex')
+    text += local('editorial/joint_protocol_summary.tex')
     structured = local('editorial/structured_start.tex')
     compact = between(old, r'\section{Randomized Recovery under a Hard Budget}', r'\subsection{Interpreting the robust objective}')
     compact = compact.replace(r'\section{Randomized Recovery under a Hard Budget}', r'\subsection{Randomized recovery under a hard budget}')
@@ -252,7 +302,7 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
     assert sensitivity_report['blocks'] == 1098 and sensitivity_report['outcome_rows'] == 5490
     assert sensitivity_report['new_forecast_fits'] == sensitivity_report['new_policy_optimizations'] == 0
     text += local('joint_certification/review_sensitivity/manuscript_fragment.tex')
-    # Figure 1(b) presents these same counts; retain the numeric table in S8.
+    # The geometry/replay figure presents these counts; retain the numeric table in S8.
     text += '\n\\FloatBarrier\n'
     text += local('joint_certification/noise_manuscript_fragment.tex')
     text += local('joint_certification/verification_main.tex')
@@ -366,7 +416,19 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
                 + local('joint_certification/noise_proof_fragment.tex')
                 + local('joint_certification/precision_proof_fragment.tex')
                 + local('protocol_selection/manuscript_fragment.tex')
-                + local('protocol_selection/manuscript_fragment_cost.tex'))
+                + local('protocol_selection/manuscript_fragment_cost.tex')
+                + '\\section{S9. Scalar examples and growing separations}\n'
+                + scalar_example
+                + growing_support.replace(r'\section{Growing moment and precision separations}',
+                                          r'\subsection{Growing scalar-family separation: complete proof}')
+                + general_algorithms.replace(
+                    r'\section{Computing policies and hardest records on polytopes}',
+                    r'\section{S10. Computing policies and hardest records on polytopes}')
+                  .replace('The constant $d$ does not affect width.',
+                           'The constant $d$ does not affect width. Write '
+                           r'$\rho=\max_{y\in F}\min_{Q\in\mathcal Q}W_Q(y)$ '
+                           'for the hardest-record value, equal to the optimal '
+                           'randomized worst expected width by the main scalar theorem.'))
     # References to relocated appendices now identify the indexed resource.
     for label, section in [('app:stored-error', 'S6'),
                            ('app:complete-counter-witness', 'S6'),

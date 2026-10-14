@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "returncode": 0,
+  "stage": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\peerj_journal_verified_20261014_033958\\work\\rr_034003509297",
+  "scientific_script_unchanged": true,
+  "restored_actual_input": "work/randomized_tie_review/theory_review.txt",
+  "restored_input_sha256": "5c5ddd134a9b1ab04063e9f78667b5d8d02fcae5eb68af9fc5a5a20407ea639e",
+  "elapsed_seconds": 30.91834210000161,
+  "scope": "Focused rerun of unchanged historical tie checker after restoring its actual hash-pinned mathematical rationale in the previously failed stage. Does not relabel the failed full-package run as passed.",
+  "log": "outputs\\editorial_rationale_focused_retry_20261014.log"
+}

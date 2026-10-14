@@ -1,5 +1,24 @@
 [
   {
+    "name": "two_target_exact",
+    "script": "work/risk_adaptivity_revision/two_target_boundary/verify_boundary.py",
+    "args": [
+      "--solver-free",
+      "--output",
+      "outputs/two_target_exact.json"
+    ],
+    "report": "outputs/two_target_exact.json"
+  },
+  {
+    "name": "two_target_lp",
+    "script": "work/risk_adaptivity_revision/two_target_boundary/verify_boundary.py",
+    "args": [
+      "--output",
+      "outputs/two_target_lp.json"
+    ],
+    "report": "outputs/two_target_lp.json"
+  },
+  {
     "name": "source_identity_guards",
     "script": "work/risk_adaptivity_revision/joint_certification/provenance_chain/check_source_guards.py",
     "args": [

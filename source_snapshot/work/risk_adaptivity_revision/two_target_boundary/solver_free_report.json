@@ -1,0 +1,1996 @@
+{
+  "status": "PASS",
+  "source_sha256": "b84c11b09fd275119478a488c0274b4cc0b428ad77332df417b9847c32cb3ffc",
+  "proof_input_sha256": "5f08ca8fbf76454ca18a12185476579dbcec13e6e9a22ed709156dada60d5e9f",
+  "proof_input_hash_encoding": "UTF-8 JSON, sort_keys=True, separators=(',', ':'), exact rational strings",
+  "proof_input_parameters": {
+    "certificate_schema": "two-target-boundary-v1",
+    "family_sizes": [
+      3,
+      5,
+      10
+    ],
+    "base_inequalities_A_x_le_b": [
+      [
+        [
+          -1,
+          0,
+          0
+        ],
+        0
+      ],
+      [
+        [
+          1,
+          0,
+          0
+        ],
+        1
+      ],
+      [
+        [
+          0,
+          -1,
+          0
+        ],
+        0
+      ],
+      [
+        [
+          -1,
+          1,
+          0
+        ],
+        0
+      ],
+      [
+        [
+          0,
+          0,
+          -1
+        ],
+        0
+      ],
+      [
+        [
+          1,
+          0,
+          1
+        ],
+        1
+      ]
+    ],
+    "all_coordinate_bounds": [
+      0,
+      1
+    ],
+    "coordinate_query_cost": 1,
+    "batch_budget": 2,
+    "families": [
+      {
+        "m": 3,
+        "coefficients": [
+          [
+            "15/4",
+            "3",
+            "0",
+            "5/4",
+            "9/4",
+            "13/4"
+          ],
+          [
+            "-15/4",
+            "0",
+            "3",
+            "13/4",
+            "9/4",
+            "5/4"
+          ],
+          [
+            "15/2",
+            "3",
+            "-3",
+            "-2",
+            "0",
+            "2"
+          ]
+        ],
+        "constants": [
+          "0",
+          "15/4",
+          "-15/4"
+        ],
+        "adverse_records": [
+          [
+            "1/6",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "5/6",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "adaptive_branch_intervals": [
+          [
+            "0",
+            "1/3"
+          ],
+          [
+            "1/3",
+            "2/3"
+          ],
+          [
+            "2/3",
+            "1"
+          ]
+        ],
+        "threshold_band_lower_inclusive": "13/27",
+        "threshold_band_upper_exclusive": "14/27"
+      },
+      {
+        "m": 5,
+        "coefficients": [
+          [
+            "45/4",
+            "5",
+            "0",
+            "5/4",
+            "9/4",
+            "13/4",
+            "17/4",
+            "21/4"
+          ],
+          [
+            "-45/4",
+            "0",
+            "5",
+            "21/4",
+            "17/4",
+            "13/4",
+            "9/4",
+            "5/4"
+          ],
+          [
+            "45/2",
+            "5",
+            "-5",
+            "-4",
+            "-2",
+            "0",
+            "2",
+            "4"
+          ]
+        ],
+        "constants": [
+          "0",
+          "45/4",
+          "-45/4"
+        ],
+        "adverse_records": [
+          [
+            "1/10",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "3/10",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "7/10",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "9/10",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "adaptive_branch_intervals": [
+          [
+            "0",
+            "1/5"
+          ],
+          [
+            "1/5",
+            "2/5"
+          ],
+          [
+            "2/5",
+            "3/5"
+          ],
+          [
+            "3/5",
+            "4/5"
+          ],
+          [
+            "4/5",
+            "1"
+          ]
+        ],
+        "threshold_band_lower_inclusive": "32/65",
+        "threshold_band_upper_exclusive": "33/65"
+      },
+      {
+        "m": 10,
+        "coefficients": [
+          [
+            "95/2",
+            "10",
+            "0",
+            "5/4",
+            "9/4",
+            "13/4",
+            "17/4",
+            "21/4",
+            "25/4",
+            "29/4",
+            "33/4",
+            "37/4",
+            "41/4"
+          ],
+          [
+            "-95/2",
+            "0",
+            "10",
+            "41/4",
+            "37/4",
+            "33/4",
+            "29/4",
+            "25/4",
+            "21/4",
+            "17/4",
+            "13/4",
+            "9/4",
+            "5/4"
+          ],
+          [
+            "95",
+            "10",
+            "-10",
+            "-9",
+            "-7",
+            "-5",
+            "-3",
+            "-1",
+            "1",
+            "3",
+            "5",
+            "7",
+            "9"
+          ]
+        ],
+        "constants": [
+          "0",
+          "95/2",
+          "-95/2"
+        ],
+        "adverse_records": [
+          [
+            "1/20",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "3/20",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1/4",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "7/20",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "9/20",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "11/20",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "13/20",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "3/4",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "17/20",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "19/20",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "adaptive_branch_intervals": [
+          [
+            "0",
+            "1/10"
+          ],
+          [
+            "1/10",
+            "1/5"
+          ],
+          [
+            "1/5",
+            "3/10"
+          ],
+          [
+            "3/10",
+            "2/5"
+          ],
+          [
+            "2/5",
+            "1/2"
+          ],
+          [
+            "1/2",
+            "3/5"
+          ],
+          [
+            "3/5",
+            "7/10"
+          ],
+          [
+            "7/10",
+            "4/5"
+          ],
+          [
+            "4/5",
+            "9/10"
+          ],
+          [
+            "9/10",
+            "1"
+          ]
+        ],
+        "threshold_band_lower_inclusive": "229/460",
+        "threshold_band_upper_exclusive": "231/460"
+      }
+    ]
+  },
+  "description": "Independent verification of a constructed adaptive versus batch family",
+  "mode": "solver-free exact rational",
+  "family_sizes": [
+    3,
+    5,
+    10
+  ],
+  "fraction_encoding": "exact numerator/denominator strings",
+  "all_checks_passed": true,
+  "elapsed_seconds": 1.2082716000004439,
+  "rational_base_vertex_cache": {
+    "hits": 3659,
+    "misses": 70,
+    "maxsize": null,
+    "currsize": 70
+  },
+  "families": [
+    {
+      "m": 3,
+      "dimension": 6,
+      "H": "27/4",
+      "M": "15/4",
+      "P": "2",
+      "a": [
+        "5/4",
+        "9/4",
+        "13/4"
+      ],
+      "b": [
+        "13/4",
+        "9/4",
+        "5/4"
+      ],
+      "d": [
+        "-2",
+        "0",
+        "2"
+      ],
+      "initial_endpoints": [
+        [
+          "0",
+          "27/2"
+        ],
+        [
+          "0",
+          "27/2"
+        ],
+        [
+          "-35/4",
+          "35/4"
+        ]
+      ],
+      "initial_widths": [
+        "27/2",
+        "27/2",
+        "35/2"
+      ],
+      "legal_query_sets_by_size": {
+        "0": 1,
+        "1": 6,
+        "2": 15
+      },
+      "legal_query_sets_total": 22,
+      "adverse_record_count": 3,
+      "actual_exact_check_counts": {
+        "exact_endpoint_pairs": 252,
+        "adverse_record_query_pairs": 66,
+        "adverse_t_z_formula_checks": 27,
+        "branch_endpoint_formula_checks": 18
+      },
+      "actual_LP_counts": {},
+      "adverse_success_counts_at_half": {
+        "size_0_two_target": 0,
+        "size_0_three_target": 0,
+        "size_1_two_target": 0,
+        "size_1_three_target": 0,
+        "size_2_two_target": 3,
+        "size_2_three_target": 3
+      },
+      "adverse_t_z_success_incidence_at_half": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "adverse_t_z_success_incidence_at_upper_endpoint": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "minimum_non_designated_max_first_two_normalized_widths": "14/27",
+      "minimum_non_designated_case": {
+        "adverse_record": 1,
+        "query": [
+          "t",
+          "z2"
+        ],
+        "widths": [
+          "5",
+          "7",
+          "7"
+        ],
+        "max_first_two_normalized_widths": "14/27"
+      },
+      "maximum_designated_max_three_normalized_widths": "4/9",
+      "threshold_band": {
+        "lower_inclusive": "13/27",
+        "upper_exclusive": "14/27"
+      },
+      "adaptive_branch_maxima": [
+        {
+          "j": 1,
+          "interval": [
+            "0",
+            "1/3"
+          ],
+          "width_maxima": [
+            "13/2",
+            "13/2",
+            "5"
+          ]
+        },
+        {
+          "j": 2,
+          "interval": [
+            "1/3",
+            "2/3"
+          ],
+          "width_maxima": [
+            "13/2",
+            "13/2",
+            "7"
+          ]
+        },
+        {
+          "j": 3,
+          "interval": [
+            "2/3",
+            "1"
+          ],
+          "width_maxima": [
+            "13/2",
+            "13/2",
+            "5"
+          ]
+        }
+      ],
+      "fixed_query_whole_interval_checks": [
+        {
+          "name": "scalar_half_T1_t_u",
+          "target": 1,
+          "query": [
+            "t",
+            "u"
+          ],
+          "worst_width": "27/4",
+          "normalized_worst_width": "1/2",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "scalar_half_T2_t_v",
+          "target": 2,
+          "query": [
+            "t",
+            "v"
+          ],
+          "worst_width": "27/4",
+          "normalized_worst_width": "1/2",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "third_target_t_only",
+          "target": 3,
+          "query": [
+            "t"
+          ],
+          "worst_width": "7",
+          "normalized_worst_width": "2/5",
+          "threshold_checked": "13/27"
+        },
+        {
+          "name": "scalar_band_T1_t_zm",
+          "target": 1,
+          "query": [
+            "t",
+            "z3"
+          ],
+          "worst_width": "13/2",
+          "normalized_worst_width": "13/27",
+          "threshold_checked": "13/27"
+        },
+        {
+          "name": "scalar_band_T2_t_z1",
+          "target": 2,
+          "query": [
+            "t",
+            "z1"
+          ],
+          "worst_width": "13/2",
+          "normalized_worst_width": "13/27",
+          "threshold_checked": "13/27"
+        },
+        {
+          "name": "three_fixed_t_u_v_T1",
+          "target": 1,
+          "query": [
+            "t",
+            "u",
+            "v"
+          ],
+          "worst_width": "27/4",
+          "normalized_worst_width": "1/2",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "three_fixed_t_z1_zm_T1",
+          "target": 1,
+          "query": [
+            "t",
+            "z1",
+            "z3"
+          ],
+          "worst_width": "21/4",
+          "normalized_worst_width": "7/18",
+          "threshold_checked": "13/27"
+        },
+        {
+          "name": "three_fixed_t_u_v_T2",
+          "target": 2,
+          "query": [
+            "t",
+            "u",
+            "v"
+          ],
+          "worst_width": "27/4",
+          "normalized_worst_width": "1/2",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "three_fixed_t_z1_zm_T2",
+          "target": 2,
+          "query": [
+            "t",
+            "z1",
+            "z3"
+          ],
+          "worst_width": "21/4",
+          "normalized_worst_width": "7/18",
+          "threshold_checked": "13/27"
+        },
+        {
+          "name": "three_fixed_t_u_v_T3",
+          "target": 3,
+          "query": [
+            "t",
+            "u",
+            "v"
+          ],
+          "worst_width": "4",
+          "normalized_worst_width": "8/35",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "three_fixed_t_z1_zm_T3",
+          "target": 3,
+          "query": [
+            "t",
+            "z1",
+            "z3"
+          ],
+          "worst_width": "3",
+          "normalized_worst_width": "6/35",
+          "threshold_checked": "13/27"
+        }
+      ],
+      "uniform_batch_continuum_lower_bound_at_band_lower_endpoint": {
+        "intervals": [
+          [
+            1,
+            "0",
+            "1/3"
+          ],
+          [
+            2,
+            "1/3",
+            "2/3"
+          ],
+          [
+            3,
+            "2/3",
+            "1"
+          ]
+        ],
+        "minimum_coverage_multiplicity": 1,
+        "number_of_breakpoints_and_midpoints_checked": 7,
+        "uniform_success_lower_bound": "1/3"
+      },
+      "upper_endpoint_counterexample": {
+        "support_j": [
+          1,
+          3
+        ],
+        "uniform_mixture": true,
+        "coverage": {
+          "intervals": [
+            [
+              1,
+              "0",
+              "1/2"
+            ],
+            [
+              3,
+              "1/2",
+              "1"
+            ]
+          ],
+          "minimum_coverage_multiplicity": 1,
+          "number_of_breakpoints_and_midpoints_checked": 5,
+          "uniform_success_lower_bound": "1/2"
+        },
+        "strictly_beats_one_over_m": true
+      },
+      "certified_optimal_values_throughout_threshold_band": {
+        "adaptive_success": "1",
+        "randomized_nonadaptive_success": "1/3"
+      },
+      "passed": true
+    },
+    {
+      "m": 5,
+      "dimension": 8,
+      "H": "65/4",
+      "M": "45/4",
+      "P": "6",
+      "a": [
+        "5/4",
+        "9/4",
+        "13/4",
+        "17/4",
+        "21/4"
+      ],
+      "b": [
+        "21/4",
+        "17/4",
+        "13/4",
+        "9/4",
+        "5/4"
+      ],
+      "d": [
+        "-4",
+        "-2",
+        "0",
+        "2",
+        "4"
+      ],
+      "initial_endpoints": [
+        [
+          "0",
+          "65/2"
+        ],
+        [
+          "0",
+          "65/2"
+        ],
+        [
+          "-89/4",
+          "89/4"
+        ]
+      ],
+      "initial_widths": [
+        "65/2",
+        "65/2",
+        "89/2"
+      ],
+      "legal_query_sets_by_size": {
+        "0": 1,
+        "1": 8,
+        "2": 28
+      },
+      "legal_query_sets_total": 37,
+      "adverse_record_count": 5,
+      "actual_exact_check_counts": {
+        "exact_endpoint_pairs": 621,
+        "adverse_record_query_pairs": 185,
+        "adverse_t_z_formula_checks": 75,
+        "branch_endpoint_formula_checks": 30
+      },
+      "actual_LP_counts": {},
+      "adverse_success_counts_at_half": {
+        "size_0_two_target": 0,
+        "size_0_three_target": 0,
+        "size_1_two_target": 0,
+        "size_1_three_target": 0,
+        "size_2_two_target": 5,
+        "size_2_three_target": 5
+      },
+      "adverse_t_z_success_incidence_at_half": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "adverse_t_z_success_incidence_at_upper_endpoint": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "minimum_non_designated_max_first_two_normalized_widths": "33/65",
+      "minimum_non_designated_case": {
+        "adverse_record": 1,
+        "query": [
+          "t",
+          "z2"
+        ],
+        "widths": [
+          "29/2",
+          "33/2",
+          "15"
+        ],
+        "max_first_two_normalized_widths": "33/65"
+      },
+      "maximum_designated_max_three_normalized_widths": "31/65",
+      "threshold_band": {
+        "lower_inclusive": "32/65",
+        "upper_exclusive": "33/65"
+      },
+      "adaptive_branch_maxima": [
+        {
+          "j": 1,
+          "interval": [
+            "0",
+            "1/5"
+          ],
+          "width_maxima": [
+            "16",
+            "16",
+            "13"
+          ]
+        },
+        {
+          "j": 2,
+          "interval": [
+            "1/5",
+            "2/5"
+          ],
+          "width_maxima": [
+            "16",
+            "16",
+            "15"
+          ]
+        },
+        {
+          "j": 3,
+          "interval": [
+            "2/5",
+            "3/5"
+          ],
+          "width_maxima": [
+            "16",
+            "16",
+            "17"
+          ]
+        },
+        {
+          "j": 4,
+          "interval": [
+            "3/5",
+            "4/5"
+          ],
+          "width_maxima": [
+            "16",
+            "16",
+            "15"
+          ]
+        },
+        {
+          "j": 5,
+          "interval": [
+            "4/5",
+            "1"
+          ],
+          "width_maxima": [
+            "16",
+            "16",
+            "13"
+          ]
+        }
+      ],
+      "fixed_query_whole_interval_checks": [
+        {
+          "name": "scalar_half_T1_t_u",
+          "target": 1,
+          "query": [
+            "t",
+            "u"
+          ],
+          "worst_width": "65/4",
+          "normalized_worst_width": "1/2",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "scalar_half_T2_t_v",
+          "target": 2,
+          "query": [
+            "t",
+            "v"
+          ],
+          "worst_width": "65/4",
+          "normalized_worst_width": "1/2",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "third_target_t_only",
+          "target": 3,
+          "query": [
+            "t"
+          ],
+          "worst_width": "17",
+          "normalized_worst_width": "34/89",
+          "threshold_checked": "32/65"
+        },
+        {
+          "name": "scalar_band_T1_t_zm",
+          "target": 1,
+          "query": [
+            "t",
+            "z5"
+          ],
+          "worst_width": "16",
+          "normalized_worst_width": "32/65",
+          "threshold_checked": "32/65"
+        },
+        {
+          "name": "scalar_band_T2_t_z1",
+          "target": 2,
+          "query": [
+            "t",
+            "z1"
+          ],
+          "worst_width": "16",
+          "normalized_worst_width": "32/65",
+          "threshold_checked": "32/65"
+        },
+        {
+          "name": "three_fixed_t_u_v_T1",
+          "target": 1,
+          "query": [
+            "t",
+            "u",
+            "v"
+          ],
+          "worst_width": "65/4",
+          "normalized_worst_width": "1/2",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "three_fixed_t_z1_zm_T1",
+          "target": 1,
+          "query": [
+            "t",
+            "z1",
+            "z5"
+          ],
+          "worst_width": "59/4",
+          "normalized_worst_width": "59/130",
+          "threshold_checked": "32/65"
+        },
+        {
+          "name": "three_fixed_t_u_v_T2",
+          "target": 2,
+          "query": [
+            "t",
+            "u",
+            "v"
+          ],
+          "worst_width": "65/4",
+          "normalized_worst_width": "1/2",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "three_fixed_t_z1_zm_T2",
+          "target": 2,
+          "query": [
+            "t",
+            "z1",
+            "z5"
+          ],
+          "worst_width": "59/4",
+          "normalized_worst_width": "59/130",
+          "threshold_checked": "32/65"
+        },
+        {
+          "name": "three_fixed_t_u_v_T3",
+          "target": 3,
+          "query": [
+            "t",
+            "u",
+            "v"
+          ],
+          "worst_width": "12",
+          "normalized_worst_width": "24/89",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "three_fixed_t_z1_zm_T3",
+          "target": 3,
+          "query": [
+            "t",
+            "z1",
+            "z5"
+          ],
+          "worst_width": "9",
+          "normalized_worst_width": "18/89",
+          "threshold_checked": "32/65"
+        }
+      ],
+      "uniform_batch_continuum_lower_bound_at_band_lower_endpoint": {
+        "intervals": [
+          [
+            1,
+            "0",
+            "1/5"
+          ],
+          [
+            2,
+            "1/5",
+            "2/5"
+          ],
+          [
+            3,
+            "2/5",
+            "3/5"
+          ],
+          [
+            4,
+            "3/5",
+            "4/5"
+          ],
+          [
+            5,
+            "4/5",
+            "1"
+          ]
+        ],
+        "minimum_coverage_multiplicity": 1,
+        "number_of_breakpoints_and_midpoints_checked": 11,
+        "uniform_success_lower_bound": "1/5"
+      },
+      "upper_endpoint_counterexample": {
+        "support_j": [
+          1,
+          3,
+          5
+        ],
+        "uniform_mixture": true,
+        "coverage": {
+          "intervals": [
+            [
+              1,
+              "0",
+              "3/10"
+            ],
+            [
+              3,
+              "3/10",
+              "7/10"
+            ],
+            [
+              5,
+              "7/10",
+              "1"
+            ]
+          ],
+          "minimum_coverage_multiplicity": 1,
+          "number_of_breakpoints_and_midpoints_checked": 7,
+          "uniform_success_lower_bound": "1/3"
+        },
+        "strictly_beats_one_over_m": true
+      },
+      "certified_optimal_values_throughout_threshold_band": {
+        "adaptive_success": "1",
+        "randomized_nonadaptive_success": "1/5"
+      },
+      "passed": true
+    },
+    {
+      "m": 10,
+      "dimension": 13,
+      "H": "115/2",
+      "M": "95/2",
+      "P": "25",
+      "a": [
+        "5/4",
+        "9/4",
+        "13/4",
+        "17/4",
+        "21/4",
+        "25/4",
+        "29/4",
+        "33/4",
+        "37/4",
+        "41/4"
+      ],
+      "b": [
+        "41/4",
+        "37/4",
+        "33/4",
+        "29/4",
+        "25/4",
+        "21/4",
+        "17/4",
+        "13/4",
+        "9/4",
+        "5/4"
+      ],
+      "d": [
+        "-9",
+        "-7",
+        "-5",
+        "-3",
+        "-1",
+        "1",
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "initial_endpoints": [
+        [
+          "0",
+          "115"
+        ],
+        [
+          "0",
+          "115"
+        ],
+        [
+          "-165/2",
+          "165/2"
+        ]
+      ],
+      "initial_widths": [
+        "115",
+        "115",
+        "165"
+      ],
+      "legal_query_sets_by_size": {
+        "0": 1,
+        "1": 13,
+        "2": 78
+      },
+      "legal_query_sets_total": 92,
+      "adverse_record_count": 10,
+      "actual_exact_check_counts": {
+        "exact_endpoint_pairs": 2856,
+        "adverse_record_query_pairs": 920,
+        "adverse_t_z_formula_checks": 300,
+        "branch_endpoint_formula_checks": 60
+      },
+      "actual_LP_counts": {},
+      "adverse_success_counts_at_half": {
+        "size_0_two_target": 0,
+        "size_0_three_target": 0,
+        "size_1_two_target": 0,
+        "size_1_three_target": 0,
+        "size_2_two_target": 10,
+        "size_2_three_target": 10
+      },
+      "adverse_t_z_success_incidence_at_half": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "adverse_t_z_success_incidence_at_upper_endpoint": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "minimum_non_designated_max_first_two_normalized_widths": "231/460",
+      "minimum_non_designated_case": {
+        "adverse_record": 1,
+        "query": [
+          "t",
+          "z2"
+        ],
+        "widths": [
+          "223/4",
+          "231/4",
+          "53"
+        ],
+        "max_first_two_normalized_widths": "231/460"
+      },
+      "maximum_designated_max_three_normalized_widths": "227/460",
+      "threshold_band": {
+        "lower_inclusive": "229/460",
+        "upper_exclusive": "231/460"
+      },
+      "adaptive_branch_maxima": [
+        {
+          "j": 1,
+          "interval": [
+            "0",
+            "1/10"
+          ],
+          "width_maxima": [
+            "229/4",
+            "229/4",
+            "51"
+          ]
+        },
+        {
+          "j": 2,
+          "interval": [
+            "1/10",
+            "1/5"
+          ],
+          "width_maxima": [
+            "229/4",
+            "229/4",
+            "53"
+          ]
+        },
+        {
+          "j": 3,
+          "interval": [
+            "1/5",
+            "3/10"
+          ],
+          "width_maxima": [
+            "229/4",
+            "229/4",
+            "55"
+          ]
+        },
+        {
+          "j": 4,
+          "interval": [
+            "3/10",
+            "2/5"
+          ],
+          "width_maxima": [
+            "229/4",
+            "229/4",
+            "57"
+          ]
+        },
+        {
+          "j": 5,
+          "interval": [
+            "2/5",
+            "1/2"
+          ],
+          "width_maxima": [
+            "229/4",
+            "229/4",
+            "59"
+          ]
+        },
+        {
+          "j": 6,
+          "interval": [
+            "1/2",
+            "3/5"
+          ],
+          "width_maxima": [
+            "229/4",
+            "229/4",
+            "59"
+          ]
+        },
+        {
+          "j": 7,
+          "interval": [
+            "3/5",
+            "7/10"
+          ],
+          "width_maxima": [
+            "229/4",
+            "229/4",
+            "57"
+          ]
+        },
+        {
+          "j": 8,
+          "interval": [
+            "7/10",
+            "4/5"
+          ],
+          "width_maxima": [
+            "229/4",
+            "229/4",
+            "55"
+          ]
+        },
+        {
+          "j": 9,
+          "interval": [
+            "4/5",
+            "9/10"
+          ],
+          "width_maxima": [
+            "229/4",
+            "229/4",
+            "53"
+          ]
+        },
+        {
+          "j": 10,
+          "interval": [
+            "9/10",
+            "1"
+          ],
+          "width_maxima": [
+            "229/4",
+            "229/4",
+            "51"
+          ]
+        }
+      ],
+      "fixed_query_whole_interval_checks": [
+        {
+          "name": "scalar_half_T1_t_u",
+          "target": 1,
+          "query": [
+            "t",
+            "u"
+          ],
+          "worst_width": "115/2",
+          "normalized_worst_width": "1/2",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "scalar_half_T2_t_v",
+          "target": 2,
+          "query": [
+            "t",
+            "v"
+          ],
+          "worst_width": "115/2",
+          "normalized_worst_width": "1/2",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "third_target_t_only",
+          "target": 3,
+          "query": [
+            "t"
+          ],
+          "worst_width": "60",
+          "normalized_worst_width": "4/11",
+          "threshold_checked": "229/460"
+        },
+        {
+          "name": "scalar_band_T1_t_zm",
+          "target": 1,
+          "query": [
+            "t",
+            "z10"
+          ],
+          "worst_width": "229/4",
+          "normalized_worst_width": "229/460",
+          "threshold_checked": "229/460"
+        },
+        {
+          "name": "scalar_band_T2_t_z1",
+          "target": 2,
+          "query": [
+            "t",
+            "z1"
+          ],
+          "worst_width": "229/4",
+          "normalized_worst_width": "229/460",
+          "threshold_checked": "229/460"
+        },
+        {
+          "name": "three_fixed_t_u_v_T1",
+          "target": 1,
+          "query": [
+            "t",
+            "u",
+            "v"
+          ],
+          "worst_width": "115/2",
+          "normalized_worst_width": "1/2",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "three_fixed_t_z1_zm_T1",
+          "target": 1,
+          "query": [
+            "t",
+            "z1",
+            "z10"
+          ],
+          "worst_width": "56",
+          "normalized_worst_width": "56/115",
+          "threshold_checked": "229/460"
+        },
+        {
+          "name": "three_fixed_t_u_v_T2",
+          "target": 2,
+          "query": [
+            "t",
+            "u",
+            "v"
+          ],
+          "worst_width": "115/2",
+          "normalized_worst_width": "1/2",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "three_fixed_t_z1_zm_T2",
+          "target": 2,
+          "query": [
+            "t",
+            "z1",
+            "z10"
+          ],
+          "worst_width": "56",
+          "normalized_worst_width": "56/115",
+          "threshold_checked": "229/460"
+        },
+        {
+          "name": "three_fixed_t_u_v_T3",
+          "target": 3,
+          "query": [
+            "t",
+            "u",
+            "v"
+          ],
+          "worst_width": "50",
+          "normalized_worst_width": "10/33",
+          "threshold_checked": "1/2"
+        },
+        {
+          "name": "three_fixed_t_z1_zm_T3",
+          "target": 3,
+          "query": [
+            "t",
+            "z1",
+            "z10"
+          ],
+          "worst_width": "42",
+          "normalized_worst_width": "14/55",
+          "threshold_checked": "229/460"
+        }
+      ],
+      "uniform_batch_continuum_lower_bound_at_band_lower_endpoint": {
+        "intervals": [
+          [
+            1,
+            "0",
+            "1/10"
+          ],
+          [
+            2,
+            "1/10",
+            "1/5"
+          ],
+          [
+            3,
+            "1/5",
+            "3/10"
+          ],
+          [
+            4,
+            "3/10",
+            "2/5"
+          ],
+          [
+            5,
+            "2/5",
+            "1/2"
+          ],
+          [
+            6,
+            "1/2",
+            "3/5"
+          ],
+          [
+            7,
+            "3/5",
+            "7/10"
+          ],
+          [
+            8,
+            "7/10",
+            "4/5"
+          ],
+          [
+            9,
+            "4/5",
+            "9/10"
+          ],
+          [
+            10,
+            "9/10",
+            "1"
+          ]
+        ],
+        "minimum_coverage_multiplicity": 1,
+        "number_of_breakpoints_and_midpoints_checked": 21,
+        "uniform_success_lower_bound": "1/10"
+      },
+      "upper_endpoint_counterexample": {
+        "support_j": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          10
+        ],
+        "uniform_mixture": true,
+        "coverage": {
+          "intervals": [
+            [
+              1,
+              "0",
+              "3/20"
+            ],
+            [
+              3,
+              "3/20",
+              "7/20"
+            ],
+            [
+              5,
+              "7/20",
+              "11/20"
+            ],
+            [
+              7,
+              "11/20",
+              "3/4"
+            ],
+            [
+              9,
+              "3/4",
+              "19/20"
+            ],
+            [
+              10,
+              "17/20",
+              "1"
+            ]
+          ],
+          "minimum_coverage_multiplicity": 1,
+          "number_of_breakpoints_and_midpoints_checked": 15,
+          "uniform_success_lower_bound": "1/6"
+        },
+        "strictly_beats_one_over_m": true
+      },
+      "certified_optimal_values_throughout_threshold_band": {
+        "adaptive_success": "1",
+        "randomized_nonadaptive_success": "1/10"
+      },
+      "passed": true
+    }
+  ],
+  "scope": "No empirical application data or manuscript claims are validated by this verifier."
+}

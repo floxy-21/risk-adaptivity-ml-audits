@@ -66,6 +66,27 @@ with expected frequencies 108/165 (65.45\%) and 37/57 (64.91\%). Coefficient
 certificates define these subsets before record replay. The complete fixed-batch and greedy
 comparisons in Table~\ref{tab:joint_shared_replay} remain the broader controls.
 
+\paragraph{A stronger guarantee can score worse on stored records.}
+Table~\ref{tab:guarantee-recorded-tradeoff} makes the distinction visible on
+the same certified subsets. The fixed worst-width batch succeeds more often
+on the stored answers than the optimal randomized cover, yet its worst-case
+precision success is zero. Indeed, a deterministic batch's worst-case
+indicator is either zero or one; a value of one would contradict the
+proved randomized optimum of one half. Feedback attains both certainty
+over compatible records and success on these recorded cases.
+
+\begin{table}[htbp]\centering\small
+\caption{Assurance and replay answer different questions on the matched-half
+subsets. Randomized entries are expected success counts for the saved
+optimal mixtures. All methods use the same two readings and information.}
+\label{tab:guarantee-recorded-tradeoff}
+\begin{tabular}{lrrr}\toprule
+Policy & Worst-case success & Original (165) & External (57)\\\midrule
+Adaptive & $1$ & 165 & 57\\
+Fixed worst-width batch & $0$ & 155 & 51\\
+Optimal randomized cover & $1/2$ & 108 & 37\\
+\bottomrule\end{tabular}\end{table}
+
 \paragraph{Capacity control.}
 For an illustrative cap $y_h\leq E/2$, we reoptimize the noiseless planner
 using concave piecewise-linear segment widths. We solve each conditional

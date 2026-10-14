@@ -2,13 +2,14 @@ CURRENT SCIENTIFIC PREPARATION -- 13 October 2026
 Target: PeerJ Computer Science, Research Article.
 Internal review: no unresolved blocking scientific flaw identified after corrections.
 Proof and prior-art review are analytic; reproduction has its separately stated finite scope.
-Current source SHA256: 53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
-Current PDF: 36 pages.
+Current source SHA256: a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf
+Current PDF: 39 pages.
 Submission files: revised_manuscript.tex; revised_manuscript.pdf; Supplemental_Data_S1.zip; Supplemental_Data_S2.zip; peerj_cover_letter.txt. The larger research_supplement.zip preserves development history separately.
-Fresh complete current replay: PASS, 74 steps, 1074 manifested members across the two publisher ZIP files.
+Fresh complete current replay: PASS, 76 steps, 1081 manifested members across the two publisher ZIP files.
 Default replay includes task-bound acquisition checks and manuscript reconstruction; no new forecast fitting, source downloading or HTTP measurement.
+The new fixed-two-query theorem has exact rational and 7,131-LP replay checks for m=3,5,10, with current checker and proof-input hashes. Its all-three-pair extension is a constructed forecast realization, not a relabeling of the empirical study.
 The earlier 29-case fallback result is two readings for 22 cases and three for 7 at the declared 1% internal error with exact endpoints. The current shared-query extension is reported separately.
 Live policies and preparation instructions were inspected through the browser. The author confirmed the AI-tools terms check and publication suitability. Other final author attestations, unavailable historical exact AI-version identifiers, portal terms and fees remain separate from scientific readiness; see PEERJ_AUTHOR_DECLARATIONS.txt.
 No calibrated individual acceptance probability or greater-than80% threshold is established.
-No paper submitted and no external person contacted. Browser control fails before connection with kernel-assets/path error (os error 3); an in-app page-open request was queued but form access was not confirmed. Prepared portal fields are in PEERJ_SUBMISSION_METADATA.json.
+No paper submitted and no external person contacted. The last recorded browser startup attempt at 2026-10-14T03:58:56.9964029Z failed before page creation: failed to write kernel assets: The system cannot find the path specified. (os error 3). No journal form or credential was accessed. This is not a fresh portal check. The diagnostic path and SHA-256 are bound in PEERJ_SUBMISSION_METADATA.json and risk_delivery_verification.json.
 Detailed response: PEERJ_REVIEW_AND_RESPONSE_20261013.txt. Current hashes and verification: risk_delivery_verification.json.

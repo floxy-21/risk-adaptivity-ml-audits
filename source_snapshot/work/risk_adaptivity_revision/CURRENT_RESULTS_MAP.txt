@@ -6,19 +6,25 @@ The main paper now includes a claim/objective/evidence map and an exploratory
 shared-query threshold sensitivity; review_sensitivity/README.txt documents it.
 Separate-pair replay tables, scalar capacity controls and full stored-error
 fallback details are in Online Resource1,S6; their headline values and source
-protocols remain in the main text. The mathematical proofs are unchanged.
+protocols remain in the main text. The new fixed-budget two-target boundary
+and its all-three-pair corollary have complete proofs in the main paper.
 
 Moved supporting material is current, not discarded: see
-editorial/online_extended_methods.tex sections S1--S8. Its uncompiled LaTeX
+editorial/online_extended_methods.tex sections S1--S10. Its uncompiled LaTeX
 content fragment preserves methods and tables; numerical CSV/JSON outputs and
 entry commands below are usable without compiling another document.
-The current main text keeps the complete universal proof and the cumulative
+The current main text keeps the complete universal classification proof,
+the fixed-budget two-target proof, and the cumulative
 query algorithms. The compact-coordinate specialization, comparative timings,
 general-polytope test table and dual checks are indexed in S5/S7. Original
 counter diagnostics, full empirical witness and bounded-error derivations
 are in S6; historical forecasting specifications are in S3. These relocations
 change presentation, not the archived numerical outputs. The supporting
-fragment supplies its own alphabetized reference list.
+fragment supplies its own alphabetized reference list. S9 contains the
+complete proof of the older growing scalar family and its 2K-2 budget,
+alongside the small scalar example. S10 gives the general-polytope algorithms.
+The main text leads with the scalar precision floor, the two-target boundary,
+and the meter certificates; the full scalar classification proof follows.
 
 ONE ENTRY POINT
 From the extracted supplement root, after installing requirements.txt:
@@ -51,6 +57,20 @@ few frozen composition inputs needed for byte-identical manuscript generation.
 Timing and alternative optimal LP witnesses can differ on a new execution.
 MANIFEST.sha256 records frozen file hashes; checking tolerances, not the fresh
 report's entire byte hash, determine numerical reproduction.
+
+FIXED-BUDGET TWO-TARGET BOUNDARY -- main theorem and corollary
+Labels: thm:two-target-collapse; cor:all-pairs-collapse.
+Source: two_target_boundary/main_theorem.tex.
+Commands from the extracted supplement root:
+  python -S work/risk_adaptivity_revision/two_target_boundary/verify_boundary.py --solver-free --output outputs/two_target_exact.json
+  python work/risk_adaptivity_revision/two_target_boundary/verify_boundary.py --output outputs/two_target_lp.json
+Frozen reports: two_target_boundary/solver_free_report.json and numeric_report.json.
+Both commands are in the default replay. They check exact rational inputs,
+1,171 adverse-record/query combinations and continuum branch coverage at
+m=3,5,10. The LP mode independently solves 7,131 endpoint/whole-branch LPs.
+Read source_sha256, proof_input_sha256, status and numerical_verification.
+These are implementation checks of a proved construction, not new meter
+observations or a numerical proof of its universal statement for every m.
 
 CURRENT SHARED-BUDGET STUDY -- Online Resource S8
 All paths in this section start with

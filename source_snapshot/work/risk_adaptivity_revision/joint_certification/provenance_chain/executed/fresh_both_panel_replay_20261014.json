@@ -1,0 +1,624 @@
+{
+  "status": "PASS",
+  "completed_report_utc": "2026-10-14T03:34:38.136682+00:00",
+  "scope": "Fresh single-invocation execution of the documented both-source chain with unchanged scientific scripts and no generated-output reuse.",
+  "launched_utc": "20261014T031901Z",
+  "executed_command": [
+    "<WORKSPACE>\\work\\review-env\\Scripts\\python.exe",
+    "<WORKSPACE>\\work\\risk_adaptivity_revision\\joint_certification\\provenance_chain\\run_chain.py",
+    "--cohort",
+    "all",
+    "--raw-dir",
+    "<WORKSPACE>\\work",
+    "--output-dir",
+    "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run"
+  ],
+  "portable_command": [
+    "python",
+    "work/risk_adaptivity_revision/joint_certification/provenance_chain/run_chain.py",
+    "--cohort",
+    "all",
+    "--raw-dir",
+    "<PINNED_BLEM_CACHE>",
+    "--output-dir",
+    "<NEW_NONEXISTENT_OUTPUT_DIRECTORY>"
+  ],
+  "reuse_flags": [],
+  "fresh_original_regeneration": true,
+  "fresh_shared_policy_generation": true,
+  "fresh_precision_plan_generation": true,
+  "source_route_detail": "Pinned original BLEM counters are freshly converted to hourly endpoints and geometry. External cached provider responses, exported decimal readings, frozen forecasts and bundled geometry are source-checked by the unchanged chain. Both cohorts' shared policies and precision challengers are freshly generated.",
+  "top_level_steps": [
+    {
+      "command": [
+        "<WORKSPACE>\\work\\review-env\\Scripts\\python.exe",
+        "<WORKSPACE>\\work\\risk_adaptivity_revision\\joint_certification\\provenance_chain\\check_source_guards.py",
+        "--output",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\source_guards.json"
+      ],
+      "script_sha256": "9388e7c4aedee49c828c5291f6f68e331a22d2aa01d74499b334f0a016817e43",
+      "returncode": 0,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\01_check_source_guards.log",
+      "log_sha256": "c4282b698ede1f378f296e3312ec7dba2575cb77718844f9b373338ada7e6274",
+      "elapsed_seconds": 4.003308200000902
+    },
+    {
+      "command": [
+        "<WORKSPACE>\\work\\review-env\\Scripts\\python.exe",
+        "<WORKSPACE>\\work\\risk_adaptivity_revision\\counter_adaptive\\reproduce_counter.py",
+        "--output-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw",
+        "--data-dir",
+        "<WORKSPACE>\\work"
+      ],
+      "script_sha256": "bebe21f038b64ea0730370a4e32526f5cafb36017b9997815897152dd59b39ab",
+      "returncode": 0,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\02_reproduce_counter.log",
+      "log_sha256": "ff3fe30c9295ba2da7d18f2956772f10366a50f7e6706d9a17a1eee1cdb0252b",
+      "elapsed_seconds": 608.7219356000005
+    },
+    {
+      "command": [
+        "<WORKSPACE>\\work\\review-env\\Scripts\\python.exe",
+        "<WORKSPACE>\\work\\risk_adaptivity_revision\\joint_certification\\provenance_chain\\check_source_chain.py",
+        "--cohort",
+        "all",
+        "--output",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\source_chain.json",
+        "--raw-dir",
+        "<WORKSPACE>\\work",
+        "--original-geometry",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\results\\geometry.json",
+        "--original-endpoints",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\prepared\\data_blem_hourly_endpoints.csv"
+      ],
+      "script_sha256": "190330812eded546b3cc84313045dd1343bd7d425ce285730d6348160d378a7a",
+      "returncode": 0,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\03_check_source_chain.log",
+      "log_sha256": "9bf8f938a290ce806c6ee9786ce60620bd726f342245689aa7b3bd8829b5f5de",
+      "elapsed_seconds": 15.674350200000845
+    },
+    {
+      "command": [
+        "<WORKSPACE>\\work\\review-env\\Scripts\\python.exe",
+        "<WORKSPACE>\\work\\risk_adaptivity_revision\\joint_certification\\empirical_shared_audit.py",
+        "--cohort",
+        "all",
+        "--original-geometry",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\results\\geometry.json",
+        "--original-answers",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\prepared\\data_blem_hourly_endpoints.csv",
+        "--output-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\shared"
+      ],
+      "script_sha256": "a5cc463e6cd282d0aeacbbf1b2a7befa417023b123336fbb21ee20f5b00a837f",
+      "returncode": 0,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\04_empirical_shared_audit.log",
+      "log_sha256": "353239399008abf962f19fa18c44c73171bb80426e196b5d8a184acbf9163228",
+      "elapsed_seconds": 29.604970599999433
+    },
+    {
+      "command": [
+        "<WORKSPACE>\\work\\review-env\\Scripts\\python.exe",
+        "<WORKSPACE>\\work\\risk_adaptivity_revision\\joint_certification\\precision_batch.py",
+        "--cohort",
+        "all",
+        "--plans",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\shared\\empirical_plans.json",
+        "--original-geometry",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\results\\geometry.json",
+        "--output-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\precision"
+      ],
+      "script_sha256": "77ebd6996964fb49ef579f56ac20589a1381b63dca19754d2e0e6b06292b7338",
+      "returncode": 0,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\05_precision_batch.log",
+      "log_sha256": "1ca0b72f8f40426db6cf42fd7132f2484d98ddb89b27246d18371be8ef6e58c8",
+      "elapsed_seconds": 102.7244853000011
+    },
+    {
+      "command": [
+        "<WORKSPACE>\\work\\review-env\\Scripts\\python.exe",
+        "<WORKSPACE>\\work\\risk_adaptivity_revision\\joint_certification\\precision_batch_check.py",
+        "--directory",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\precision"
+      ],
+      "script_sha256": "49c01543b55ef85a2f21189dfb342d1a39df16cb20c44498bdf7f00185604c2c",
+      "returncode": 0,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\06_precision_batch_check.log",
+      "log_sha256": "21b10b1d3e389b4eb4e81a077ec090cef63ee165638ff196707d7aecf287c01a",
+      "elapsed_seconds": 68.6636344999988
+    },
+    {
+      "command": [
+        "<WORKSPACE>\\work\\review-env\\Scripts\\python.exe",
+        "<WORKSPACE>\\work\\risk_adaptivity_revision\\joint_certification\\precision_adaptive_link.py",
+        "--directory",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\precision",
+        "--base-plans",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\shared\\empirical_plans.json"
+      ],
+      "script_sha256": "ab91ff8b13bb9bc2bfec1228a538d035299098f7be77e7cc11d7cb150a8a0c89",
+      "returncode": 0,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\07_precision_adaptive_link.log",
+      "log_sha256": "dbf54c63794e76b2458e0563c46a1b2e7eb65a1fb042338aea0283e49961ab01",
+      "elapsed_seconds": 22.324471199999607
+    },
+    {
+      "command": [
+        "<WORKSPACE>\\work\\review-env\\Scripts\\python.exe",
+        "<WORKSPACE>\\work\\risk_adaptivity_revision\\joint_certification\\empirical_precision_replay.py",
+        "--cohort",
+        "all",
+        "--precision-plans",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\precision\\plans.json",
+        "--plans",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\shared\\empirical_plans.json",
+        "--ledger",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\shared\\empirical_cases.csv",
+        "--original-geometry",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\results\\geometry.json",
+        "--original-answers",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\prepared\\data_blem_hourly_endpoints.csv",
+        "--output-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\recorded_replay"
+      ],
+      "script_sha256": "5b930c3b16b58f675cec47b1749ed0dd0a6d0a6f5a6f6a978a3d56d779c8f34a",
+      "returncode": 0,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\08_empirical_precision_replay.log",
+      "log_sha256": "601ee059d58199a8e0c880da93096905e3725420450f4a8c95400e5e3be2e28f",
+      "elapsed_seconds": 26.670952399999805
+    },
+    {
+      "command": [
+        "<WORKSPACE>\\work\\review-env\\Scripts\\python.exe",
+        "<WORKSPACE>\\work\\risk_adaptivity_revision\\joint_certification\\independent_precision_replay_check.py",
+        "--cohort",
+        "all",
+        "--replay-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\recorded_replay",
+        "--output",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\recorded_replay\\independent_replay_check.json"
+      ],
+      "script_sha256": "8286a0a920ea914f0751301d62bae310a80eb1d316074057c61aee697fe28c1c",
+      "returncode": 0,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\09_independent_precision_replay_check.log",
+      "log_sha256": "d6c61838b7027c48917e83a98e8c1b9f9fa56b5cf5ed6aa105c432a8e3f771ad",
+      "elapsed_seconds": 45.24118180000005
+    },
+    {
+      "command": [
+        "<WORKSPACE>\\work\\review-env\\Scripts\\python.exe",
+        "<WORKSPACE>\\work\\risk_adaptivity_revision\\joint_certification\\provenance_chain\\check_table_chain.py",
+        "--cohort",
+        "all",
+        "--shared-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\shared",
+        "--precision-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\precision",
+        "--replay-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\recorded_replay",
+        "--output",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\table_chain.json"
+      ],
+      "script_sha256": "20dc48e338239efe40e61056b59e1eadde813ea9165bca536b213bf318de56b5",
+      "returncode": 0,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\10_check_table_chain.log",
+      "log_sha256": "c6329ed2af3e487cd3436a212c7654b8162c5ef937b22586dd307c72ebcdba19",
+      "elapsed_seconds": 0.6832952000004298
+    }
+  ],
+  "original_regeneration_steps": [
+    {
+      "script": "work/data_prepare_blem.py",
+      "arguments": [
+        "--download",
+        "--data-dir",
+        "<WORKSPACE>\\work",
+        "--output-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\prepared"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 4.220337400000062,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\01_data_prepare_blem.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/counter_adaptive/data_audit/audit_counter_interface.py",
+      "arguments": [
+        "--data-dir",
+        "<WORKSPACE>\\work",
+        "--output",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\interface_verification.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 4.950456399999894,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\02_audit_counter_interface.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/counter_adaptive/study.py",
+      "arguments": [
+        "geometry",
+        "--panel",
+        "all",
+        "--output-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\results",
+        "--endpoints",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\prepared\\data_blem_hourly_endpoints.csv"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 208.00795860000107,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\03_study.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/counter_adaptive/study.py",
+      "arguments": [
+        "replay",
+        "--panel",
+        "all",
+        "--output-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\results",
+        "--data-dir",
+        "<WORKSPACE>\\work"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 30.099278499999855,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\04_study.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/counter_adaptive/summarize.py",
+      "arguments": [
+        "--input-dirs",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\results",
+        "--output-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\summary"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 4.234245999999985,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\05_summarize.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/counter_adaptive/math_review/check_saved_geometry.py",
+      "arguments": [
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\results\\geometry.json",
+        "--full",
+        "--output",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\geometry_verification.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 276.2995912999995,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\06_check_saved_geometry.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/counter_adaptive/feedback_triage/analyze.py",
+      "arguments": [
+        "--geometry",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\results\\geometry.json",
+        "--replay",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\results\\replay_cases.csv",
+        "--output-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\feedback_triage"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 64.53635299999951,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\07_analyze.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/counter_adaptive/feedback_triage/verify_bundled.py",
+      "arguments": [
+        "--input-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\feedback_triage",
+        "--output",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\feedback_triage_verification.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 5.934355299999879,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\08_verify_bundled.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/counter_adaptive/reviewer_diagnostics/analyze.py",
+      "arguments": [
+        "--directories",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\results",
+        "--data-dir",
+        "<WORKSPACE>\\work",
+        "--output-dir",
+        "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\reviewer_diagnostics"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 9.551911099999415,
+      "log": "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\09_analyze.log"
+    }
+  ],
+  "script_sha256_before": {
+    "work/risk_adaptivity_revision/joint_certification/empirical_precision_replay.py": "5b930c3b16b58f675cec47b1749ed0dd0a6d0a6f5a6f6a978a3d56d779c8f34a",
+    "work/risk_adaptivity_revision/joint_certification/provenance_chain/check_source_guards.py": "9388e7c4aedee49c828c5291f6f68e331a22d2aa01d74499b334f0a016817e43",
+    "work/risk_adaptivity_revision/joint_certification/independent_precision_replay_check.py": "8286a0a920ea914f0751301d62bae310a80eb1d316074057c61aee697fe28c1c",
+    "work/risk_adaptivity_revision/joint_certification/precision_adaptive_link.py": "ab91ff8b13bb9bc2bfec1228a538d035299098f7be77e7cc11d7cb150a8a0c89",
+    "work/data_prepare_blem.py": "75383782c6565f328a9e6d0fa48eaa90bcdbb6c0106fe3bdee484326bd9115b7",
+    "work/risk_adaptivity_revision/joint_certification/precision_batch.py": "77ebd6996964fb49ef579f56ac20589a1381b63dca19754d2e0e6b06292b7338",
+    "work/risk_adaptivity_revision/counter_adaptive/math_review/check_saved_geometry.py": "733b35627549c78b7e9e3b964069f8f95d7222c3fee2855cca123028ffdce057",
+    "work/risk_adaptivity_revision/joint_certification/provenance_chain/run_chain.py": "783bfe34198c9e8d425a7423452135e7c74f3790ec158e60bfe7371ce943a210",
+    "work/risk_adaptivity_revision/joint_certification/provenance_chain/check_table_chain.py": "20dc48e338239efe40e61056b59e1eadde813ea9165bca536b213bf318de56b5",
+    "work/risk_adaptivity_revision/joint_certification/precision_batch_check.py": "49c01543b55ef85a2f21189dfb342d1a39df16cb20c44498bdf7f00185604c2c",
+    "work/risk_adaptivity_revision/counter_adaptive/feedback_triage/analyze.py": "7e24841574c3b4da5f848acf0ff62fad31477fc1c23ef591e7087f798088ad98",
+    "work/risk_adaptivity_revision/counter_adaptive/summarize.py": "8b24db32658c5c155af955e608b13b2e4b0216ebbbc92add7396416761b6c866",
+    "work/risk_adaptivity_revision/joint_certification/provenance_chain/check_source_chain.py": "190330812eded546b3cc84313045dd1343bd7d425ce285730d6348160d378a7a",
+    "work/risk_adaptivity_revision/counter_adaptive/study.py": "722f6262660c1ca559c006d6a3a19316d589a3a2049fd0d6fa631a789dd3591b",
+    "work/risk_adaptivity_revision/counter_adaptive/reviewer_diagnostics/analyze.py": "fb763e7c251db0b6e0ab8dd18181084de23731adc55831b2a185b9935eced16b",
+    "work/risk_adaptivity_revision/counter_adaptive/reproduce_counter.py": "bebe21f038b64ea0730370a4e32526f5cafb36017b9997815897152dd59b39ab",
+    "work/risk_adaptivity_revision/counter_adaptive/feedback_triage/verify_bundled.py": "de65097b60d4f6d33c599863a1c07305c8dfc07d13a054cf84ae049ed3a6dcb3",
+    "work/risk_adaptivity_revision/joint_certification/empirical_shared_audit.py": "a5cc463e6cd282d0aeacbbf1b2a7befa417023b123336fbb21ee20f5b00a837f"
+  },
+  "script_sha256_after": {
+    "work/risk_adaptivity_revision/joint_certification/empirical_precision_replay.py": "5b930c3b16b58f675cec47b1749ed0dd0a6d0a6f5a6f6a978a3d56d779c8f34a",
+    "work/risk_adaptivity_revision/joint_certification/provenance_chain/check_source_guards.py": "9388e7c4aedee49c828c5291f6f68e331a22d2aa01d74499b334f0a016817e43",
+    "work/risk_adaptivity_revision/joint_certification/independent_precision_replay_check.py": "8286a0a920ea914f0751301d62bae310a80eb1d316074057c61aee697fe28c1c",
+    "work/risk_adaptivity_revision/joint_certification/precision_adaptive_link.py": "ab91ff8b13bb9bc2bfec1228a538d035299098f7be77e7cc11d7cb150a8a0c89",
+    "work/data_prepare_blem.py": "75383782c6565f328a9e6d0fa48eaa90bcdbb6c0106fe3bdee484326bd9115b7",
+    "work/risk_adaptivity_revision/joint_certification/precision_batch.py": "77ebd6996964fb49ef579f56ac20589a1381b63dca19754d2e0e6b06292b7338",
+    "work/risk_adaptivity_revision/counter_adaptive/math_review/check_saved_geometry.py": "733b35627549c78b7e9e3b964069f8f95d7222c3fee2855cca123028ffdce057",
+    "work/risk_adaptivity_revision/joint_certification/provenance_chain/run_chain.py": "783bfe34198c9e8d425a7423452135e7c74f3790ec158e60bfe7371ce943a210",
+    "work/risk_adaptivity_revision/joint_certification/provenance_chain/check_table_chain.py": "20dc48e338239efe40e61056b59e1eadde813ea9165bca536b213bf318de56b5",
+    "work/risk_adaptivity_revision/joint_certification/precision_batch_check.py": "49c01543b55ef85a2f21189dfb342d1a39df16cb20c44498bdf7f00185604c2c",
+    "work/risk_adaptivity_revision/counter_adaptive/feedback_triage/analyze.py": "7e24841574c3b4da5f848acf0ff62fad31477fc1c23ef591e7087f798088ad98",
+    "work/risk_adaptivity_revision/counter_adaptive/summarize.py": "8b24db32658c5c155af955e608b13b2e4b0216ebbbc92add7396416761b6c866",
+    "work/risk_adaptivity_revision/joint_certification/provenance_chain/check_source_chain.py": "190330812eded546b3cc84313045dd1343bd7d425ce285730d6348160d378a7a",
+    "work/risk_adaptivity_revision/counter_adaptive/study.py": "722f6262660c1ca559c006d6a3a19316d589a3a2049fd0d6fa631a789dd3591b",
+    "work/risk_adaptivity_revision/counter_adaptive/reviewer_diagnostics/analyze.py": "fb763e7c251db0b6e0ab8dd18181084de23731adc55831b2a185b9935eced16b",
+    "work/risk_adaptivity_revision/counter_adaptive/reproduce_counter.py": "bebe21f038b64ea0730370a4e32526f5cafb36017b9997815897152dd59b39ab",
+    "work/risk_adaptivity_revision/counter_adaptive/feedback_triage/verify_bundled.py": "de65097b60d4f6d33c599863a1c07305c8dfc07d13a054cf84ae049ed3a6dcb3",
+    "work/risk_adaptivity_revision/joint_certification/empirical_shared_audit.py": "a5cc463e6cd282d0aeacbbf1b2a7befa417023b123336fbb21ee20f5b00a837f"
+  },
+  "scientific_scripts_unchanged": true,
+  "raw_source_sha256": {
+    "data_blem_consumer-00000002.csv": "93d142217c74ab2c12a98035b3ea178ead234fec0b71942e8e90db5b7e6a2ef3",
+    "data_blem_consumer-00000003.csv": "db69719d2262ebeb6df39abafffca2805c8a03b1b4777f86eb8aa78acf578b6c",
+    "data_blem_consumer-00000001.csv": "9228795c6369ce144fbb929f9d413397545f86e3a95d2f9a0f27c92f1d55ad8d"
+  },
+  "all_source_input_sha256": {
+    "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\train_test_hourly_counters.csv": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+    "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\system_1_train_2025H1.json": "f9f6e91779b2d4045a65f9a4f3017581f6563cf330357ec5bf79da91edac5293",
+    "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\system_1_test_2025July.json": "5ef47a765ae8b86380b16e602814c425710c89a977b1c8600acec893a0580802",
+    "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\system_2_train_2025H1.json": "a1b963786c704a90cae4f2df6979bf60624bc6511acb232b6bf9771b1d82a370",
+    "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\system_2_test_2025July.json": "077991d1f334095d5acb3f8d89b2d8a42598a25261c324d7226e9872986695c4",
+    "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\system_7_train_2025H1.json": "67084479d4f75cde086ebdb60f72fbc9cdf61eecfb5db539f77d3ed72526370f",
+    "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\system_7_test_2025July.json": "68fb2b5a83dc382a25cfdee6cbe8c7fa7f4d66e31fea4d72950a6ece602e388a",
+    "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_validation\\operational\\fresh_fits_20261012\\frozen_forecasts.csv": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+    "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_validation\\operational\\fresh_fits_20261012\\training_report.json": "6a21c26ed18f81102e214eec2c56983d69ca4d2705dfa21a33d728923ffb99e5",
+    "<WORKSPACE>\\work\\data_blem_consumer-00000001.csv": "9228795c6369ce144fbb929f9d413397545f86e3a95d2f9a0f27c92f1d55ad8d",
+    "<WORKSPACE>\\work\\data_blem_consumer-00000002.csv": "93d142217c74ab2c12a98035b3ea178ead234fec0b71942e8e90db5b7e6a2ef3",
+    "<WORKSPACE>\\work\\data_blem_consumer-00000003.csv": "db69719d2262ebeb6df39abafffca2805c8a03b1b4777f86eb8aa78acf578b6c",
+    "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\prepared\\data_blem_hourly_endpoints.csv": "2d8a88d83123216d71329c1745a4dbf1d0c47b34ba1a22b6529f348f4e5987eb",
+    "<WORKSPACE>\\outputs\\review_frozen_forecasts.csv": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0",
+    "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\prepared\\data_blem_hourly.csv": "527b1e3a07e2d1b688354796c41cdce5ee27d1ba3503a041461fce6121c9f56a",
+    "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_validation\\replay\\geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0",
+    "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\results\\geometry.json": "d3af9794d9f6fb242b5bd91424f2878a28dc334fbbed97eb39b85685e4aced53"
+  },
+  "source_identity_guards": {
+    "status": "PASS",
+    "checks": [
+      {
+        "guard": "Pinned original raw-source bytes",
+        "script_sha256": "75383782c6565f328a9e6d0fa48eaa90bcdbb6c0106fe3bdee484326bd9115b7",
+        "exit_code": 1,
+        "expected_message": "Checksum mismatch",
+        "passed": true
+      },
+      {
+        "guard": "Pinned original frozen-forecast bytes",
+        "script_sha256": "722f6262660c1ca559c006d6a3a19316d589a3a2049fd0d6fa631a789dd3591b",
+        "exit_code": 1,
+        "expected_message": "Frozen forecast export changed",
+        "passed": true
+      },
+      {
+        "guard": "External frozen-forecast gate in source-chain checker",
+        "script_sha256": "190330812eded546b3cc84313045dd1343bd7d425ce285730d6348160d378a7a",
+        "passed": true,
+        "expected_message": "Pinned source mismatch"
+      }
+    ],
+    "mutations": "Temporary sentinel files only; no archived source or scientific artifact changed.",
+    "source_sha256": "9388e7c4aedee49c828c5291f6f68e331a22d2aa01d74499b334f0a016817e43",
+    "scope": "Fail-closed checksum regression, not a new scientific experiment."
+  },
+  "source_counts": {
+    "source_metrics": {
+      "external": {
+        "provider_decimal_tokens_verified": 15270,
+        "unique_hourly_records": 15267,
+        "frozen_forecast_rows": 2232,
+        "causal_persistence_checks": 2232
+      },
+      "original": {
+        "verified_hourly_endpoints": 26280,
+        "restored_blem_rows": 6552,
+        "restored_mixed_archive_rows": 89496,
+        "restored_archive_sha256": "c1f6d2663d228aeeb8073226488ea8f2fca6b14b308e4a4f62ce38482c93f8e6",
+        "restoration_scope": "Rebuild BLEM targets/persistence from pinned counters; preserve all other frozen CSV fields. UCI raw targets are not rechecked by this focused original-counter chain."
+      }
+    },
+    "coefficient_cases": {
+      "external": 1674,
+      "original": 4914
+    },
+    "physical_blocks": {
+      "external": 279,
+      "original": 819
+    },
+    "six_hour_forecast_row_checks": 39528
+  },
+  "source_maximum_float_differences": {
+    "coefficient": 1.1102230246251565e-16,
+    "constant": 8.881784197001252e-16,
+    "total": 0.0
+  },
+  "source_coefficient_tolerance": "1e-12 times max(1, magnitude), allowing historical CSV/binary64 conversion only",
+  "original_reference_comparison": {
+    "status": "passed",
+    "reference_sha256": "6854d1bbab9bea92b7a4e1fea24d621cfa5e3db307e11fe84b2a79792d11bde9",
+    "fields": [
+      "status",
+      "tasks",
+      "meters",
+      "model_pairs",
+      "primary_fraction",
+      "groups",
+      "replay",
+      "screening_criteria",
+      "screening_all_met",
+      "zero_width_cases",
+      "max_mean_optimal_face_residual"
+    ],
+    "absolute_numeric_tolerance": 1e-08,
+    "numeric_fields": 64,
+    "exact_fields": 81,
+    "maximum_absolute_numeric_difference": 0.0,
+    "excluded_fields": "Source paths, phase-file partitioning, geometry hashes and measured runtimes; all declared counts, group counts, policy metrics and criteria are compared."
+  },
+  "original_replay_check": {
+    "status": "PASS",
+    "geometry_sha256": "d3af9794d9f6fb242b5bd91424f2878a28dc334fbbed97eb39b85685e4aced53",
+    "cases": 4914,
+    "policy_evaluations": 24570,
+    "max_containment_error": 0.0,
+    "max_total_discrepancy": 1.7763568394002505e-15,
+    "seconds": 21.39369209999859
+  },
+  "original_independent_geometry": {
+    "status": "PASS",
+    "available_cases": 4914,
+    "full": true,
+    "counts": {
+      "cases": 4914,
+      "exact_batch_columns": 49140,
+      "finite_games_reoptimized": 24570,
+      "conditional_lps": 720,
+      "certified_adaptive_guarantees": 21248,
+      "certified_strong_separations": 1717,
+      "exact_vs_generous_matrix_changes": 0
+    },
+    "maximum_errors": {
+      "A": 1.942890293094024e-16,
+      "V": 0.0,
+      "normalization": 2.7247790489966106e-16,
+      "conditional_lp": 1.1102230246251565e-16,
+      "conditional_primal_residual": 0.0,
+      "mean_value_vs_checked": 2.1412557837940938e-10,
+      "primal_vs_adverse_upper": 0.0,
+      "claimed_upper_understatement": 0.0
+    },
+    "comparison_tolerance": 2e-08,
+    "runtime_seconds": 274.31556069999897
+  },
+  "exact_certificate_checks": {
+    "cases": 1098,
+    "pair_cover_multipliers": 7992,
+    "finite_profile_batch_evaluations": 241560,
+    "matching_continuum_bounds": 680
+  },
+  "precision_summary": {
+    "external": {
+      "cases": 279,
+      "deterministic_guarantee": 128,
+      "certified_pair": 57,
+      "fallback": 94,
+      "matching_continuum_bounds": 212,
+      "matching_half": 57,
+      "mean_certified_gap": 0.09826762246117085
+    },
+    "original": {
+      "cases": 819,
+      "deterministic_guarantee": 162,
+      "certified_pair": 165,
+      "fallback": 492,
+      "matching_continuum_bounds": 468,
+      "matching_half": 165,
+      "mean_certified_gap": 0.15828245828245827
+    }
+  },
+  "adaptive_certificate_checks": {
+    "matched_half_cases": 222,
+    "branches": 463
+  },
+  "independent_recorded_replay_checks": {
+    "status": "PASS",
+    "cohort": "all",
+    "blocks": 1098,
+    "exact_pair_decision_checks": 65880,
+    "exact_batch_width_checks": 10980,
+    "maximum_replay_difference": 0.0,
+    "maximum_normalized_source_rounding": 4.828691524085248e-15,
+    "scope": "All ten recorded batch widths, half-width outcomes, and policy mixture summaries recomputed independently. MSE winner/ranking signs reconstructed directly from frozen forecasts with exact rational arithmetic. Plan optimality and the universal theorem require separate proofs/checks.",
+    "source_sha256": "8286a0a920ea914f0751301d62bae310a80eb1d316074057c61aee697fe28c1c",
+    "replay_cases_sha256": "d6dcb674b89bea4ce2539b8e25c7845f2f0e251ecd4fa4e8b1131ff8d78cfee7",
+    "precision_plans_sha256": "15cfa445e0a6213494a71ee3e01b87067d1f8169f6b32b7164b38ca48c793f3f",
+    "original_forecasts_sha256": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0",
+    "elapsed_seconds": 44.84292479999931
+  },
+  "tables": {
+    "original": {
+      "complete_blocks": 819,
+      "matched_half_blocks": 165,
+      "adaptive_matched_success_count": 165,
+      "matched_batch_expected_success_count": 108.0,
+      "matched_batch_success_percent": 65.45454545454545,
+      "adaptive_full_success_count": 641.0,
+      "fixed_full_success_count": 577.0,
+      "greedy_full_success_count": 623.0
+    },
+    "external": {
+      "complete_blocks": 279,
+      "matched_half_blocks": 57,
+      "adaptive_matched_success_count": 57,
+      "matched_batch_expected_success_count": 37.0,
+      "matched_batch_success_percent": 64.91228070175438,
+      "adaptive_full_success_count": 252.0,
+      "fixed_full_success_count": 221.0,
+      "greedy_full_success_count": 246.0
+    }
+  },
+  "complete_panel_comparison": {
+    "all_case_ledger_rows_compared": 1098,
+    "maximum_ledger_numeric_difference": 0.0,
+    "numeric_fields_with_different_serialization": 0
+  },
+  "runtime_seconds": {
+    "full_chain": 925.1283855000001,
+    "original_raw_regeneration": 608.3352474000003,
+    "shared_policy_generator": 27.950163299999986,
+    "precision_plan_generator": 100.84181340000032
+  },
+  "storage": {
+    "free_bytes_before": 3612680192,
+    "free_bytes_after": 3686170624,
+    "prior_component_logical_bytes_estimate": 89714231,
+    "fresh_output_parent_ntfs_compressed": true,
+    "fresh_output_child_existed_before": false,
+    "fresh_output": {
+      "files": 71,
+      "logical_bytes": 89720353,
+      "allocated_bytes": 28815102,
+      "ntfs_compressed_files": 71
+    },
+    "historical_outputs_deleted": false,
+    "historical_outputs_modified_for_storage": false
+  },
+  "new_forecast_fits": 0,
+  "report_file_sha256": {
+    "chain_execution.json": "680ac100810efd6c5004f405f9aa916c7dc79dd20e246d06d89ff2b70171f59d",
+    "source_chain.json": "29b0400a3584502d9d46620f2c7cbb5250e4c97cbc0bb0e190202a1b8d3be9c6",
+    "table_chain.json": "103afb6bcb0fe4cd538e87713be5fa5f223a4a7d69a6fa385b067581771f42c9",
+    "source_guards.json": "c4282b698ede1f378f296e3312ec7dba2575cb77718844f9b373338ada7e6274",
+    "original_raw/reproduction_report.json": "a9f41f2dee270fae8e4acb0f8b9d1ba9f60c6bb544509cf9ce338a00a38dcbfc",
+    "shared/empirical_report.json": "a7c77f01ad1083fe3266e94a071e9585b4a0ce066e75044dba6f0300690b6c76",
+    "precision/report.json": "d1e3a61d6ff1c3581db6b655a5d6b523277097fc94aacb08e779f76c79392407",
+    "precision/independent_check.json": "21b10b1d3e389b4eb4e81a077ec090cef63ee165638ff196707d7aecf287c01a",
+    "precision/adaptive_half_check.json": "8e487eca306f42408246f6b03d5a38f1bf5aee8c7436078102c018928f63467a",
+    "recorded_replay/independent_replay_check.json": "d6c61838b7027c48917e83a98e8c1b9f9fa56b5cf5ed6aa105c432a8e3f771ad"
+  },
+  "launch_record_sha256": "df4a4c443210b44cac735cda32daac916e9c5a3ce13e1f917ca482fdd16ea457",
+  "exporter_sha256": "64059973c669cd2738dac84b017a320b670a68dd82aa1ec21f33df8bef9f035b",
+  "public_export_contents": "Commands, source/script/report hashes, aggregate row and certificate counts, maximum discrepancies, runtimes and storage metadata only. No raw original BLEM records, hourly values, coefficients, fine-reading answers or certificate vectors are exported.",
+  "limitation": "Frozen-predictor verification, not independent refitting, external human replication, native device calibration or proof of the universal theorem."
+}

@@ -1,0 +1,26 @@
+{
+  "prior_archive_sha256": "e88e3dd1726c64060577b40f5cda7fb57a225e7ec7ad70eb486d95761dde1c92",
+  "configured_paths": [
+    "work/external_deadline/editorial/pretest_scientific_review.txt",
+    "work/external_deadline/editorial/provisional_numerical_review.txt",
+    "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/INTERNAL_LOWER_REVIEW.txt"
+  ],
+  "omitted_inherited_editorial_notes": [
+    {
+      "path": "work/external_deadline/editorial/pretest_scientific_review.txt",
+      "bytes": 5181,
+      "sha256": "268734a09a62abd00506d83d0eff5bc12ca96d039083434ea45fdbfe87d3c350"
+    },
+    {
+      "path": "work/external_deadline/editorial/provisional_numerical_review.txt",
+      "bytes": 3313,
+      "sha256": "6745ae32d839bb06e866157f795964ee58da629b7181af108a1ce813855a9e78"
+    }
+  ],
+  "retained_historical_mathematical_rationale": {
+    "path": "work/randomized_tie_review/theory_review.txt",
+    "sha256": "5c5ddd134a9b1ab04063e9f78667b5d8d02fcae5eb68af9fc5a5a20407ea639e",
+    "scope": "Retained as substantive mathematical rationale and an actual hash-pinned checker input. This is historical internal AI-assisted review, not external validation or a new review of the current manuscript."
+  },
+  "scope": "These internal editorial/review notes are omitted from the current scientific package. The inherited notes remain in the unchanged previous private archive; local originals are not deleted. They are excluded from current historical-recoverability counts. Scientific inputs, code, outputs and protocols are retained unchanged."
+}

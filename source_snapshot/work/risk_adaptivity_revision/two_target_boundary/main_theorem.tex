@@ -1,0 +1,180 @@
+% Internally reviewed construction; exact and LP verification accompany it.
+\section{A fixed-budget boundary between scalar and joint precision}
+\label{sec:two-target-boundary}
+The scalar half-success floor need not survive adding a second target.
+The following construction keeps the query budget at two and makes every
+coordinate available at unit cost.
+
+\begin{theorem}[Two-target precision with a fixed two-query budget]
+\label{thm:two-target-collapse}
+For every integer $m\geq3$, let
+\[
+ F_m=\{(t,u,v,z_1,\ldots,z_m):0\leq u\leq t\leq1,
+             \ 0\leq v\leq1-t,\ 0\leq z_j\leq1\}.
+\]
+All $m+3$ coordinates are exact unit-cost queries. Define
+\[
+ a_j=j+\tfrac14,\quad b_j=m+1-j+\tfrac14,\quad
+ H=\frac{m(2m+3)}4,\quad M=H-m,
+\]
+and the affine targets
+\[
+ T_1=Mt+mu+\sum_j a_jz_j,\qquad
+ T_2=M(1-t)+mv+\sum_j b_jz_j.
+\]
+Both initial target intervals are $[0,2H]$. With at most two queries on
+every execution, let success mean that both terminal sharp widths are at
+most $H$. Then the optimal worst-record precision-success probabilities are
+\[
+ S^{\star}_{\mathrm{adaptive}}=1,\qquad
+ S^{\star}_{\mathrm{randomized\ batch}}=\frac1m.
+\]
+Each scalar target separately admits a fixed two-query policy with sure
+success. The adversarial record is fixed before any policy randomization.
+\end{theorem}
+\begin{proof}
+The polytope $F_m$ is nonempty, compact and convex. Since
+$\sum_j a_j=\sum_j b_j=H$ and $M+m=H$, the extrema of $T_1$ are
+$0$ and $2H$, attained at $(t,u,z)=(0,0,0)$ and $(1,1,\boldsymbol1)$.
+The corresponding choices $(t,v,z)=(1,0,0)$ and
+$(0,1,\boldsymbol1)$ give the same extrema for $T_2$.
+
+Query $t$, choose the smallest index $j$ satisfying
+$(j-1)/m\leq t\leq j/m$, and query $z_j$. The exact terminal widths are
+\begin{equation}
+ W_1=H+mt-a_j,\qquad W_2=H+m(1-t)-b_j.
+ \label{eq:two-target-boundary-widths}
+\end{equation}
+Indeed, conditioning on $t$ leaves $u\in[0,t]$ and $v\in[0,1-t]$;
+the unqueried $z$ coordinates remain an independent box. The observed
+value of $z_j$ contributes only a constant. The chosen branch gives
+$\max(W_1,W_2)\leq H-1/4$, proving adaptive success one.
+
+For the randomized-batch lower bound, choose $j$ uniformly before any
+observations and query $\{t,z_j\}$. Every feasible $t$ belongs to at least
+one branch interval, so success probability is at least $1/m$ for every
+record. This lower bound holds over the full continuum of $F_m$.
+
+For the upper bound, give equal adverse mass to the $m$ feasible records
+\[
+ x_i=\bigl((i-\tfrac12)/m,0,0,0,\ldots,0\bigr),
+       \qquad i=1,\ldots,m,
+\]
+and write $t_i=(i-1/2)/m$. The following table lists the exact terminal
+widths on these records for every type of distinct two-coordinate batch:
+\[
+\begin{array}{c|cc}
+\text{queried coordinates}&W_1&W_2\\\hline
+\{t,z_j\}&H+mt_i-a_j&H+m(1-t_i)-b_j\\
+\{t,u\}&H&H+m(1-t_i)\\
+\{t,v\}&H+mt_i&H\\
+\{u,v\}&H+M&H+M\\
+\{u,z_j\}&H+M-a_j&2H-b_j\\
+\{v,z_j\}&2H-a_j&H+M-b_j\\
+\{z_j,z_k\},\ j\ne k&2H-a_j-a_k&2H-b_j-b_k
+\end{array}
+\]
+For the first row,
+\[
+ \max(W_1,W_2)=H+|i-j|-\tfrac34,
+\]
+so the batch succeeds exactly at $x_j$. The next two rows fail because
+$0<t_i<1$, and the fourth fails because $M>0$. For the fifth and sixth,
+$a_j,b_j\leq m+1/4<H$, so the displayed $2H$ term exceeds $H$.
+Finally,
+\[
+ (a_j+a_k)+(b_j+b_k)=2m+3<2H \qquad(m\geq3).
+\]
+At least one of $a_j+a_k,b_j+b_k$ is therefore below $H$, so every
+two-$z$ batch fails as well. Thus each deterministic batch succeeds on
+at most $1/m$ of the adverse mass. The same holds for any batch mixture;
+its minimum success over records cannot exceed this adverse average.
+
+Fewer than two distinct queries, repeated queries, and stopping early do
+not evade the bound. Extend any such query set to a distinct two-query
+set. Additional observations cannot enlarge either sharp interval, so the
+original success set is contained in the extended success set. The table
+therefore also bounds every permitted shorter execution. This completes
+the matching upper and lower bounds.
+
+Finally, the fixed batch $\{t,z_m\}$ makes $W_1\leq H-1/4$ for every
+record, and $\{t,z_1\}$ makes $W_2\leq H-1/4$. The difficulty concerns
+serving both targets with the same two queries, not either target alone.
+\end{proof}
+
+\begin{corollary}[All pairs of three models, threshold margin, and query cost]
+\label{cor:all-pairs-collapse}
+The construction can be realized as all three paired squared-loss
+comparisons among three nonnegative prediction vectors. The exact success
+values remain $1$ and $1/m$ at every common normalized threshold
+\[
+ \tau\in\left[\frac12-\frac1{8H},\,
+                    \frac12+\frac1{8H}\right).
+\]
+Each target separately remains fixed-batch certifiable, and three fixed
+queries suffice jointly throughout this interval. Hence the unbounded
+ratio concerns success probabilities at a common two-query budget, not
+an unbounded reduction in the number of readings.
+\end{corollary}
+\begin{proof}
+Add $T_3=T_1-T_2$ and put
+\[
+ d_j=a_j-b_j=2j-m-1,\qquad
+ P=\sum_{d_j>0}d_j=\lfloor m^2/4\rfloor.
+\]
+The core $M(2t-1)+m(u-v)$ ranges from $-H$ to $H$, independently of
+the $z$ box, whose contribution ranges from $-P$ to $P$. Thus $T_3$ has
+initial width $2(H+P)$. After querying $t$ alone its exact width is
+$m+2P$. Moreover,
+\[
+ (H+P)\left(1-\frac1{4H}\right)-(m+2P)
+ =M-P-\frac14\left(1+\frac PH\right)>0,
+\]
+because $M-P\geq m(m-1)/4\geq3/2$ and $P\leq H$.
+The third target therefore meets even the smallest displayed normalized
+threshold after the first query.
+
+For the first two targets, the displayed interval is equivalent to an
+absolute width threshold $q=2H\tau\in[H-1/4,H+1/4)$. The adaptive
+branches and uniform batch mixture retain their lower guarantees.
+On the adverse records, off-diagonal $\{t,z_j\}$ batches have maximum
+width at least $H+1/4$. Every other table row has a larger failing width:
+at least $H+1/2$ for $\{t,u\},\{t,v\}$;
+$H+M$ for $\{u,v\}$; $H+M-1/4$ for the mixed $u/v,z$ rows;
+and $H+M-3/2$ for two-$z$ batches. All exceed $H+1/4$ when $m\geq3$.
+Thus the same adverse distribution proves the upper bound $1/m$
+throughout the stated half-open interval, also when success includes $T_3$.
+The upper endpoint is excluded because an off-diagonal adjacent batch
+then succeeds at equality.
+
+The scalar batches from the theorem remain valid throughout the interval,
+and $T_3$ needs only $t$. The fixed three-query batch $\{t,z_1,z_m\}$
+gives both first widths at most $H-3/2$, while its third width cannot
+exceed the width after $t$ alone. Thus three fixed queries suffice;
+two fixed queries cannot suffice because their optimal randomized success
+is only $1/m<1$.
+
+For an explicit model comparison, write $N=m+3$ and choose the three
+nonnegative prediction vectors, in coordinate order $(t,u,v,z_1,\ldots,z_m)$,
+\[
+ p=(NM/2,0,0,0,\ldots,0),
+\]
+\[
+ q^{(1)}=(NM,Nm/2,0,Na_1/2,\ldots,Na_m/2),\qquad
+ q^{(2)}=(0,0,Nm/2,Nb_1/2,\ldots,Nb_m/2).
+\]
+Then $\operatorname{MSE}(p,x)-\operatorname{MSE}(q^{(r)},x)$ has
+the coefficient vector of $T_r$, for $r=1,2$. Additive constants differ
+but do not affect widths. The remaining model-pair contrast has the
+coefficient vector of $T_1-T_2$, up to orientation. Therefore the guarantee
+holds for all three comparisons, each normalized by its own initial width.
+\end{proof}
+
+The adaptive normalized margin at half-width is
+$1/(8H)=1/[2m(2m+3)]$, which shrinks with $m$. These are exact-query
+constructed instances, not a fixed-error robustness result or a new
+empirical advantage on the cumulative-meter data. The scalar sparse-cover
+theorem concerns one affine target. Here each conditional joint width is
+the maximum of two affine functions; its strict failure set can be
+disconnected, so the scalar Helly argument does not supply a half-success
+floor.

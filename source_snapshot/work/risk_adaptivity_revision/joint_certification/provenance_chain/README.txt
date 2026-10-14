@@ -57,6 +57,16 @@ What each stage verifies
    either matched subset is summarized. Table totals and rounding are checked.
 
 Current executed evidence
+The latest full run is fresh_both_panel_replay_20261014.json and its text
+companion in executed/. It ran the complete --cohort all command in a new
+directory with no raw/shared/precision reuse flags. All ten top-level stages
+and nine original-regeneration stages passed in 925.13 seconds. It matched
+all 1,098 ledger rows exactly and recovered the 165/57 matched-half counts.
+All eighteen recorded scientific script hashes were unchanged. The sanitized
+record supplies source hashes, commands and aggregate checks without original
+BLEM readings or coefficient vectors. Forecasts were frozen; no models were fitted.
+
+Earlier component-run evidence
 See executed/record_manifest.json, source_chain.json, table_chain.json,
 source_guards.json, original_raw_execution.json and chain_execution.json.
 The complete original raw wrapper, shared planner and precision producer

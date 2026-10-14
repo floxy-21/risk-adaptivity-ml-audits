@@ -1,0 +1,170 @@
+CURRENT INTERNAL REVIEW -- 13 October 2026
+Source SHA256: 772174118ecdd815a46c37b7baac62a50354082c94fe0c03aab170b6870c0457
+PDF SHA256: c36cfb3a0a59ebbf546265a04797c701b9fd16cb0035d9fbecf92cd86cac4c1b
+Pages: 40
+
+The current compiled-source review below is explicitly bound to these hashes.
+Earlier source-specific reviews are retained separately as historical records.
+This is an internal AI-assisted review, not external human validation.
+
+FINAL COMPILED MANUSCRIPT REVIEW: TWO-TARGET REVISION
+Date: 14 October 2026 UTC
+Reviewer: /root/review_pdf_claims, internal AI-assisted review
+Target: PeerJ Computer Science, Research Article
+
+CURRENT ARTIFACTS
+Source: outputs/revised_manuscript.tex
+SHA256: 772174118ecdd815a46c37b7baac62a50354082c94fe0c03aab170b6870c0457
+PDF: outputs/revised_manuscript.pdf
+SHA256: c36cfb3a0a59ebbf546265a04797c701b9fd16cb0035d9fbecf92cd86cac4c1b
+Length: 40 pages; structured abstract: 240 whitespace words.
+Render manifest: work/pdf_export/decision_rendered/pages.json
+The manifest and filesystem hashes match these artifacts.
+Earlier report preserved as pre_two_target_latest_compiled_review.txt.
+
+VERDICT
+PASS within the technical-content, presentation and claim-boundary scope
+described below. No further required manuscript correction was identified
+after the scalar-premise clarification and cumulative-counter heading repair.
+This is internal review, not external specialist validation, formal theorem
+verification, an exhaustive novelty search or an editorial acceptance decision.
+Final package execution, file delivery and portal attestations are separate.
+
+SCOPE
+Read the current abstract, introduction, new complete theorem/corollary,
+scalar sparse-cover theorem, protocol summary, numerical conventions and
+relevant existing methods fragments. Re-derived the new construction and
+all seven two-coordinate batch types analytically. Inspected every current
+page layout through the four contact sheets, using only pages 1-40.
+Full-size inspection covered the title/abstract, workflow, scalar-to-joint
+transition, complete new proof (pages 12-15), counter-model transition,
+protocol and policy tables, piecewise planner equation and worked matrix.
+The final heading-only rebuild was checked at pages 15, 20 and 22.
+Built-in compile and editorial preflight report success with no overfull
+or undefined-reference warnings.
+
+1. ABSTRACT AND MAIN CONTRIBUTION
+The abstract now states the actual premise of the scalar half-success floor:
+a deterministic policy, two exact scalar readings, affine target, compact
+convex uncertainty and a fixed finite query dictionary. This avoids implying
+a theorem about arbitrary randomized adaptive policies or vector-valued
+first observations. At 240 words it remains concise.
+
+The two-target claim is supported by the complete proof: for each integer
+m>=3, the budget stays two and every coordinate is available at unit cost.
+Each scalar comparison separately has a fixed successful batch, while
+joint adaptive success is one and optimal randomized-batch success is 1/m.
+The all-three-pairs extension is supported by the additional contrast proof
+and explicit common nonnegative forecast vectors.
+
+The abstract retains recorded gains of 7.81/11.11 percentage points over
+fixed batching and 2.20/2.15 over greedy adaptation. It retains the capacity
+and bulk-API findings. The synthetic construction is not presented as an
+observed 1/m result on meter data or a new trained forecasting architecture.
+The title and framing remain computer-science model-audit methodology.
+
+2. STRICT CHECK OF THE NEW MATHEMATICS
+The initial widths are exactly 2H because the target core and independent
+z box each contribute range H. After querying t and z_j, the exact widths
+are H+mt-a_j and H+m(1-t)-b_j. The declared branch partition covers all
+t in [0,1], including endpoint ties, and guarantees both widths <=H-1/4.
+
+The uniform nonadaptive mixture over {t,z_j} has success >=1/m for every
+feasible record. This is a continuum lower bound, not a finite-grid estimate.
+At x_i=((i-1/2)/m,0,...,0), {t,z_j} has largest width H+|i-j|-3/4 and
+succeeds exactly if i=j. The exact table also covers {t,u}, {t,v}, {u,v},
+{u,z_j}, {v,z_j}, and {z_j,z_k}; all fail on all adverse records.
+The last type fails because its two removed coefficient sums total
+2m+3<2H. Equal adverse masses therefore bound every batch mixture by 1/m.
+Shorter, repeated and stopped nonadaptive query plans cannot improve upon
+their two-distinct-query extensions. The adversary does not see the seed.
+
+For T3=T1-T2, P=floor(m^2/4), the exact initial width is 2(H+P) and the
+width after t alone is m+2P. The displayed inequality establishes the
+three-pair guarantee throughout the normalized half-open threshold band.
+The band has radius 1/(8H)=1/[2m(2m+3)]; its lower endpoint is included
+and upper endpoint excluded. The common forecast realization has the
+required coefficient vectors up to additive constants and pair orientation.
+
+The fixed batch {t,z_1,z_m} succeeds with three readings. Consequently
+the paper correctly states a growing probability gap at budget two, not
+unbounded savings in the number of queries. The shrinking normalized margin
+does not establish robustness to a fixed measurement-error percentage.
+
+The new result does not contradict the scalar Helly theorem: one scalar
+conditional width is concave and has convex strict failure sets. The joint
+maximum has potentially disconnected failure sets. The manuscript preserves
+this exact distinction and attributes established sparse-policy reasoning.
+
+3. COMPUTATIONAL EVIDENCE FOR THE CONSTRUCTION
+The current verifier's SHA256 is
+b84c11b09fd275119478a488c0274b4cc0b428ad77332df417b9847c32cb3ffc.
+Both numeric_report.json and solver_free_report.json name that source hash
+and report PASS with matching proof-input hash. The manuscript reports the
+actual independent implementation's 1,171 adverse-record/query-set checks
+and 7,131 endpoint/whole-branch LPs for m=3,5,10. The maximum reported
+discrepancy is 7.105427357601002e-15, consistent with the printed 7.11e-15;
+absolute comparison tolerance is 1e-7 and LP feasibility tolerances 1e-9.
+
+This review inspected those saved reports and their source binding; it did
+not relabel the attachment's earlier claimed 3,908 LP executions as our
+execution. Finite checks test implementation. The proof establishes the
+arbitrary-m conclusion. A current-source clean package run is still a
+separate requirement and is not inferred from these component passes.
+
+4. STRUCTURE, WORKFLOW AND VISUAL EQUATION REVIEW
+The new complete result remains in the main paper. Moving the older
+growing scalar-family proof to S9 retains its definition, statement and
+explicit proof pointer while reducing competition with the fixed-budget
+result. The scalar classification proof and scalar sparse-cover proof
+remain in the main text.
+
+A genuine outline problem was repaired: the cumulative-counter model was
+initially nested inside the new coordinate-construction subsection. It is
+now the sibling Methods subsection 2.7, followed by the separate shared
+prefix construction in 2.8. This avoids suggesting that the arbitrary-m
+coordinate result automatically applies to the meter prefix dictionary.
+
+The workflow on page 2 remains legible and prioritizes admissible bulk
+retrieval. Its restricted branches concern deterministic guarantees under
+the declared exact prefix model. The old stretched heading spaces and
+crowded No connector remain repaired. The new equation displays, seven-type
+proof table, threshold interval and explicit forecast vectors are complete
+and readable. The existing piecewise alpha/beta planner equation on page 20
+and worked coefficient/lambda matrix on page 22 are clean; no OCR-based
+allegation was treated as an actual missing symbol. Contact sheets show no
+clipped content, overlapping tables, blank accidental pages or missing pages.
+
+5. APPLICATION PROTOCOL AND COMPARATOR INTERPRETATION
+The new protocol summary appears before results. Three BLEM meters times
+91 days times three blocks gives 819 audits; three external systems times
+31 days times three blocks gives 279. Four forecasts give six shared model
+pairs per block. The same two internal readings serve all six comparisons.
+The uncapped initial-width denominator remains explicit for cap/error
+controls, and the analysis is described as retrospective on both sources.
+
+The summary now references both S3 and S6 for source/fitting details.
+Numerical conventions distinguish rational certification, planner ties,
+slope-intersection thresholds, LP feasibility, primary-objective slack,
+floating-point replay and outward printed coefficient enclosures.
+The table says five-threshold sensitivity, avoiding confusion with the
+new two-target theorem. Policy objectives and closed/open certificate
+categories remain separate tables.
+
+The exact 165/57 matched-half subset claims remain narrower than full-panel
+precision optimization. The 351/67 open instances remain disclosed.
+The recorded 155/165 and 51/57 fixed-batch successes versus cover expectations
+108/165 and 37/57 remain visible as different objectives, not a contradiction.
+Capacity/error limitations, modest heterogeneous greedy gains, the stronger
+unrestricted bulk API result and the unchanged historical 0.9738064% saving
+are not replaced by the new synthetic theorem.
+
+6. LIMITS OF THIS PASS
+The mathematical checks and presentation corrections support a technically
+reviewable submission. They do not establish historical priority against
+every publication or guarantee direct acceptance. The construction sharpens
+the general boundary but does not supply new deployment cost, device-error,
+latency or empirical forecasting evidence. Current reviewer ZIPs must
+include the new verifier, reports, proof inputs, S9 and matching source.
+Final package replay and delivery should use the current hashes above.
+No external person was contacted in this review.

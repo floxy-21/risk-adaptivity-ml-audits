@@ -1,0 +1,45 @@
+\subsection{Application protocol and numerical conventions}
+\label{sec:joint-protocol-summary}
+The principal application reuses two fixed source panels. The original
+panel has three BLEM meters and 91 eligible days per meter; the external
+panel has three HeatpumpMonitor systems and 31 days per system. Three
+six-hour blocks per day give 819 and 279 shared-query audits. Each audit
+compares daily persistence, ridge regression, boosted trees and an MLP,
+using the same four frozen prediction vectors and all six model pairs.
+Chronological fitting, training-only filters and source identifiers are
+specified in Online Resource~1, S3 and S6.
+
+At each declared intraday cutoff, the auditor has the block endpoints and
+day-start forecasts. The query dictionary contains its five internal
+cumulative readings, with a total budget of two shared readings.
+The fixed target is $W_r\leq W_{r,0}/2$ for every pair, with $W_{r,0}$ from
+the uncapped exact-total model. Queries use forecast coefficients and
+previously requested answers; withheld answers are used only for replay.
+The shared-budget analysis is retrospective on both sources.
+Table~\ref{tab:joint_objectives} identifies each policy's planning objective.
+We report exact instance guarantees separately from recorded success.
+
+\begin{table}[htbp]\centering\small
+\caption{Numerical conventions for the central shared-query analysis.
+Exact certificates and floating-point replay have distinct roles.}
+\label{tab:numerical-conventions}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.27\linewidth}>{\raggedright\arraybackslash}p{.66\linewidth}@{}}
+\toprule
+Calculation & Convention\\\midrule
+Constructed and matched certificates &
+Rational inequalities on the supplied exact inputs; no outcome tolerance.\\
+Planner ties and intersections &
+Treat values within $10^{-12}$ of a minimum as tied; use the smallest index.
+Skip slope differences of magnitude at most $10^{-14}$.\\
+Shared mean-batch LP &
+Primal and dual feasibility tolerances $10^{-9}$; secondary selection
+allows primary objective slack $10^{-10}$.\\
+Full-panel floating-point replay &
+Classify normalized widths using $J\leq\tau+10^{-8}$.\\
+Exact cover replay &
+Use exact rational $J\leq\tau$; the exploratory five-threshold analysis
+retains both conventions and reports their boundary difference.\\
+Printed worked-example coefficients &
+The $10^{-4}$ interval is a rational enclosure of displayed coefficients,
+not a solver feasibility tolerance. Full coefficients drive the checks.\\
+\bottomrule\end{tabular}\end{table}

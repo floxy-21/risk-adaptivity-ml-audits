@@ -1,0 +1,77 @@
+TWO-TARGET BOUNDARY: FOCUSED NOVELTY AND PEERJ CS REVIEW
+Date: 2026-10-13
+Internal AI-assisted review, not external specialist validation.
+Reviewed source SHA256: 53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
+Proposal: attachment a6b8b9b0-874a-446b-8c87-c94631ae8c0d/Pasted text.txt.
+Presentation review: attachment 3fbadda2-86ab-4364-b9ae-671486683d93/Pasted text.txt.
+No manuscript, bibliography or scientific result file was edited for this review.
+
+VERDICT
+The proposed construction is a coherent addition to the existing central question. Its defensible distinction is a fixed budget of two coordinate queries and only two affine outputs, with exact optimal joint precision success 1 for adaptation and 1/m for randomized batching, despite each output being separately certifiable by a fixed two-query batch. That is substantially more specific than the established fact that adaptation can help vector recovery. It closes an explicit boundary left by the manuscript's scalar half-success result. The sources inspected below do not state this exact construction or quantitative combination of restrictions. This is a bounded literature assessment, not proof of historical priority.
+
+Do not describe the addition as a new general theory of adaptive acquisition, a new local-diameter concept, a new minimax principle, or a demonstrated practical 1-versus-1/m gain on the meter panel. Those claims would overreach. The existing actual-data certificates supply the application evidence; the new construction explains why simultaneous assurance can be qualitatively harder than either scalar task alone.
+
+ALGEBRAIC ASSESSMENT AND CLAIM BOUNDARY
+The printed construction uses x=(t,u,v,z_1,...,z_m), 0<=u<=t<=1, 0<=v<=1-t, and 0<=z_j<=1. With a_j=j+1/4, b_j=m+1-j+1/4, H=m(2m+3)/4 and M=H-m, the two initial widths are 2H. After {t,z_j}, the widths are H+mt-a_j and H+m(1-t)-b_j. Selecting j when (j-1)/m<=t<=j/m keeps both at most H-1/4.
+
+At the m feasible adverse records t_i=(i-1/2)/m, u=v=z=0, the joint width of {t,z_j} is H+|i-j|-3/4, so only j=i succeeds. The other types of two-query batches fail on these records: {t,u}/{t,v} leave the opposite width above H; {u,v} leaves width H+M; {u,z_j}/{v,z_j} leave an opposite width 2H-b_j/2H-a_j; and {z_i,z_j} cannot remove H from both coefficient sums. For the last case, (a_i+a_j)+(b_i+b_j)=2m+3 and H>m+3/2 for m>=3. This supports the uniform-adversary 1/m upper bound. A uniform mixture of {t,z_j} gives the matching lower bound because the success intervals cover every t in [0,1]. Fewer-query sets are covered by monotonicity under adding observations. This review checked these symbolic inequalities; it did not rerun or authenticate the attachment's reported 3,908 LPs. The new executable verifier must record its own actual runs.
+
+Preserve five qualifications in the theorem discussion:
+1. Input dimension and the coordinate dictionary grow with m; output dimension and hard budget remain fixed.
+2. Three fixed queries {t,u,v} already meet the joint target. The result concerns success at budget two, not an unbounded saving in required readings.
+3. The normalized margin below the half-width threshold is 1/[2m(2m+3)], which tends to zero. This does not prove robustness to a fixed percentage error as m grows.
+4. Arbitrary linear-functional queries would allow direct target queries and destroy the intended comparison. The declared coordinate dictionary is essential.
+5. The family is not the fixed six-interval cumulative-prefix model. A further algebraic observation supports all three pairs among three predictors: writing S=sum_j |2j-m-1|, T_1-T_2 has initial width 2H+S and width m+S after t alone. Since m+S/2<=H for m>=3, the third contrast already meets its half-width target after that first query. Thus adding it preserves both the adaptive guarantee and the uniform-batch lower guarantee, while the adverse upper bound still follows from the original two requirements. The separate proof/code review is checking this extension. In a forecast realization, verify the common normalization and nonnegative forecast construction explicitly; do not extrapolate to arbitrary extra comparisons.
+
+PRIMARY PRIOR ART AND PRECISE DIFFERENCES
+
+A. Krieg, Novak and Ullrich (2025), On the power of adaption and randomization.
+https://doi.org/10.1017/fms.2025.10101
+https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/on-the-power-of-adaption-and-randomization/3633856556AFDE5A9942452F04CC5D39
+Section 2 defines adaptive information for a linear map into a Banach output space, so vector outputs are already included. Proposition 4.1 relates deterministic reconstruction errors to diameters; Section 6 treats nonsymmetric sets and restricted information. Section 6.3 explicitly introduces an admissible dictionary Lambda. Their principal randomized criterion charges reconstruction error, not the event that the entire output fiber has prescribed coordinate diameters. Existing large adaptive gains therefore prevent a generic vector-adaptivity novelty claim. The precise fixed-two-query, two-output, exact precision-success game remains distinct from the inspected statements. Do not claim that their framework excludes coordinates or nonsymmetric convex uncertainty.
+
+B. Krieg and Ullrich (2026), Approximation of Functions: Optimal Sampling and Complexity, author manuscript v2.
+https://arxiv.org/pdf/2602.02066v2
+Section 9.1, Eq. (9.15), explicitly uses inf_A sup_f E||S(f)-A(f)||. The paragraph immediately after it points to established prescribed-probability error criteria; probability-based recovery itself is not new. Equation (2.4), Remark 6.1 and Section 6.1 distinguish fixed-information global radius and random sampling good for a whole class. The manuscript correctly separates these from random terminal local-width risk. For two outputs, maximum normalized coordinate width is the local diameter in a weighted infinity norm. Calling it a joint certificate does not create a new diameter notion. The new content must be the exact small-output/small-budget separation, not terminology or an expectation/supremum distinction alone.
+
+C. Kurtz (2026), Bounding the optimal number of policies for robust K-Adaptability.
+https://link.springer.com/article/10.1007/s10107-026-02329-1
+Theorem 2 gives a dimension-plus-one sufficient policy count for continuous costs concave in the uncertain parameters; Example 5 applies conditional information-fiber optimization to decision-dependent information discovery. This closely supports the scalar Helly consequence, already credited in the manuscript. Theorem 11 permits a count depending on the number of convex recourse-stable regions. Thus growing policy complexity outside the concave setting is not a new general phenomenon. In the proposed family, each candidate second query has a joint conditional width equal to the maximum of two affine functions; its precision-success region is a short interval. The exact query-realizable construction and matching randomized success bounds are the distinct claim, rather than a new abstract sparse-policy theorem.
+
+D. Vayanos, Georghiou and Yu (2026), Robust Optimization with Decision-Dependent Information Discovery.
+https://doi.org/10.1287/mnsc.2021.00160
+https://arxiv.org/html/2004.08490v3
+Section 3.2, Eq. (3), models endogenous measurement selection and requires decisions to agree whenever observed coordinates agree. Its measurement set can impose a cardinality budget. Sections 3.3-6 develop information-fiber formulations, K-adaptability, piecewise-linear objectives and multistage extensions. Costly acquisition, feedback, transcript-consistent recourse and general piecewise objectives therefore have established precedents. The inspected results do not give the proposed exact precision-success value for two scalar affine targets under two coordinate queries. Cite this work as the general decision framework and state the smaller, exact information-complexity result without implying that it supersedes that framework.
+
+E. Kunsch and Wnuk (2024 preprint), Uniform approximation of vectors using adaptive randomized information.
+https://arxiv.org/abs/2408.01098
+The authors establish large adaptive/nonadaptive randomized reconstruction-error gaps for vector embeddings using linear information. This additional primary example reinforces the need to avoid claiming that a growing vector-adaptivity gap is itself new. It does not identify the proposed fixed-output-dimension, fixed-budget, sharp joint-diameter success boundary.
+
+SUGGESTED PRECISE CONTRIBUTION LANGUAGE
+"For one affine target, a deterministic two-query precision guarantee yields a randomized fixed batch with success probability at least one half. We show that no positive universal floor remains for two targets sharing those queries: for every m>=3, a compact convex coordinate-query instance has adaptive success one and optimal randomized-batch success 1/m, even though each target alone admits a fixed two-query guarantee. The construction keeps the output dimension and query budget fixed while the measurement dictionary grows."
+
+Connect it immediately to the application: an audit that must assure two comparisons simultaneously cannot justify a fixed acquisition plan from separate scalar guarantees. This is an algorithm-selection implication, not evidence of financial savings. Keep the existing exact empirical matched-half certificates and negative operational controls intact. The new family should be one short theorem/proof adjoining the shared-query boundary, with the checker and extended tables in the supplement; it does not justify another large experimental narrative.
+
+CONCISE RELATED-WORK PARAGRAPH (EXISTING CITATION KEYS)
+"Adaptive recovery of vector-valued linear maps and restricted measurement dictionaries are established \citep[Sections~2 and~6.3]{krieg2025}; prescribed-probability reconstruction criteria are also classical \citep[Section~9.1]{krieg2026}. Our separation concerns the complete terminal information fiber: two affine targets and two coordinate queries suffice for adaptive precision success one while optimal randomized-batch success is 1/m. The scalar half-success bound adapts concave-cost policy sparsity \citep[Theorem~2 and Example~5]{kurtz2026}. Kurtz's Theorem~11 also allows policy counts to grow with recourse-region complexity; we do not claim a new general failure of sparse policies. The contribution is an explicit coordinate-query realization with matching precision bounds, within the established framework of decision-dependent information \citep{ddid}."
+
+After its independent verification, the proof can add: "The same separation holds for all three paired squared-loss contrasts of three nonnegative forecast vectors, because the third contrast meets its own half-width requirement after the first query." This is a consequence of the constructed coefficients, not an assertion about the frozen empirical models.
+
+PEERJ COMPUTER SCIENCE FIT
+Official requested page: https://peerj.com/journals/computer-science/editorial-criteria
+In this review's live access, the web tool returned internal errors. A direct official HTTP request returned status 200 but only a JavaScript shell, not readable criteria. I therefore do not claim fresh live verification of the criteria text. The existing source-bound outputs/PEERJ_CRITERIA_AUDIT.txt records a separate successful 13 October policy inspection and its Basic Reporting / Experimental Design / Validity of Findings assessment.
+
+My fit inference is positive: query algorithms, exact lower bounds, decision protocols and executable certificate verification are computer-science contributions, with ML comparison as a concrete application. Adding this theorem can clarify the research question and its boundary; it does not require describing a new forecasting architecture. For reporting, define the success event and fixed dictionary before the claim. For design, cover every allowed final batch, including fewer than two queries, and give the matching continuum lower guarantee. For validity, keep constructed asymptotic examples distinct from measured meter performance and uncertainty sensitivity. None of these criteria supplies a calibrated >90% acceptance probability or a promise of acceptance without revision.
+
+MINIMAL PRESENTATION ACTIONS FROM ATTACHMENT 3FBADDA2
+1. Move the existing recorded-score/guarantee tradeoff next to the first matched-half result. Current source lines 1573-1582 report cover outcomes, but the revealing comparison with fixed batching occurs around lines 1661-1662. There fixed batching succeeds on 155/165 and 51/57 actual records, versus cover expectations 108/165 and 37/57, while fixed worst-case success is zero and cover success is 1/2. A two-sentence move or cross-reference makes the meaning of "better" clear. Do not repeat the entire fallback history.
+2. Put one compact protocol summary before Results. Current lines 1512-1537 already supply source sizes, common models, timing, shared budgets and threshold, but later Sections 3.2-3.3 carry additional source/fitting details. Moving that overview to the end of Methods would address the request without adding new methods or pretending untouched confirmation.
+3. Add a compact numerical-conventions reference, preserving distinct roles: exact rational certificates and inclusive threshold have no floating tolerance; scalar classification uses its documented 1e-9 W0 convention; shared-planner ties use 1e-12 and slope screening 1e-14; exploratory replay uses 1e-8; the 1e-4 worked-coefficient enclosure is a printed-data enclosure, not solver accuracy. Keep secondary LP feasibility/optimality tolerances linked to their sections. Do not silently unify or change these choices.
+
+ALREADY ADDRESSED; DO NOT TURN INTO NEW RESEARCH REQUIREMENTS
+- The 351/67 open probability gaps are explicit, with distributions and a warning against full-panel optimal-challenger interpretation (approximately lines 1663-1673 and the status table).
+- The small greedy gains, HPM2 contribution, HPM7 reversal and cap/error interval crossing zero are already exposed (approximately lines 1543-1555 and 1614-1643).
+- The current source-to-table package separates default external checks, original raw regeneration and fresh fitting. The reviewer lacked the ZIP files; that is a review access boundary. Supply the tested current S1/S2 and result map, rather than inventing another experiment to answer it.
+- Bulk retrieval and declared interface limitations remain necessary. The new theorem does not reverse the actual API finding.
+
+No confirmed fatal flaw was identified in the proposed algebra or current presentation by this focused review. Inclusion should depend on the separately executed proof-certificate checks and source/package integration, not on the attachment's unverified test count. No external person was contacted.

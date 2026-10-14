@@ -1,0 +1,27 @@
+FRESH BOTH-SOURCE SINGLE-INVOCATION REPLAY: PASS
+
+Command: python work/risk_adaptivity_revision/joint_certification/provenance_chain/run_chain.py --cohort all --raw-dir <PINNED_BLEM_CACHE> --output-dir <NEW_NONEXISTENT_OUTPUT_DIRECTORY>
+No --raw-run, --shared-run or --precision-run options were supplied.
+The output child did not exist before execution; its parent used NTFS compression.
+
+All 10 top-level stages and 9 original raw-source stages passed.
+Full chain runtime: 925.128386 seconds.
+Original raw regeneration runtime: 608.335247 seconds.
+All 18 recorded scientific entry-script hashes agree before and after execution.
+Three pinned BLEM source SHA-256 values and all source identity guards passed.
+Both cohorts: 819 original + 279 external blocks = 1,098 complete-panel rows.
+Coefficient/source joins: 4,914 original + 1,674 external contrasts = 6,588.
+Exact-half matching certificates: 165 original and 57 external cases.
+Complete-panel ledger maximum numerical difference: 0.0.
+Independent recorded replay maximum difference: 0.0.
+Original scientific-reference maximum difference: 0.0.
+Source maximum floating differences: {"coefficient": 1.1102230246251565e-16, "constant": 8.881784197001252e-16, "total": 0.0}.
+Exact certificate check counts: {"cases": 1098, "finite_profile_batch_evaluations": 241560, "matching_continuum_bounds": 680, "pair_cover_multipliers": 7992}.
+Adaptive continuum check counts: {"branches": 463, "matched_half_cases": 222}.
+No forecasting model was fitted.
+
+The accompanying JSON contains commands, script/source/report hashes, stage runtimes,
+aggregate counts and discrepancies. It contains no raw BLEM records, hourly values,
+coefficients, fine-reading answers or certificate vectors. Historical table_chain.json
+is retained unchanged. This is same-study frozen-predictor verification, not independent
+training, external human validation, device calibration or proof of the universal theorem.

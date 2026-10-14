@@ -5,6 +5,16 @@ needs no query. Otherwise, a bulk response or fixed batch can avoid feedback;
 adaptive retrieval is useful when it meets the required guarantee with fewer
 permitted readings.
 
+\paragraph{Why sharing the budget changes the problem.}
+With one affine comparison, two adaptive readings imply a randomized-batch
+precision guarantee of at least one half. Two comparisons remove that
+universal floor, even if each one separately has a sufficient fixed batch.
+The construction has adaptive success one and optimal batch success $1/m$,
+and also covers all pairs among three models. Its dictionary grows with $m$;
+three fixed readings already suffice, and its normalized threshold margin
+shrinks. The conclusion is about reliability at the same two-reading budget,
+rather than an unbounded saving in acquired records.
+
 \paragraph{What the application establishes.}
 With two readings shared across six comparisons, feedback guarantees the
 required precision on 165 original and 57 external blocks where every
@@ -12,8 +22,9 @@ randomized fixed batch has worst-case success at most one half. Matching
 batch constructions attain that bound. This is a change in the assurance
 available at the same budget. The worked example also reports the six
 interval widths in original loss units (Table~\ref{tab:absolute_joint_widths}).
-These precision certificates complement the constructed mean-risk theorem;
-they do not measure its $1/2$-versus-$2/3$ gap on the data. Across the
+These certificates exhibit a fixed-budget assurance advantage on recorded
+forecast geometries. They do not establish the arbitrary $m$-fold
+construction or its growing dimension in the meter interface. Across the
 complete panels, recorded gains over the best fixed worst-width
 batch are 7.81 and 11.11 percentage points, with smaller gains of 2.20 and
 2.15 points over greedy adaptation. We do not infer improved forecasting
@@ -64,8 +75,9 @@ efficient arbitrary-budget precision optimizer for every convex set.
 The risk objective determines whether feedback can improve the worst-case
 guarantee for a model-comparison interval. Concavity gives a complete
 no-improvement classification; nonconcave penalties admit sharp query-based
-separations. Simultaneous comparisons have a different boundary: the largest
-normalized width can benefit from feedback even under a mean-risk objective.
+separations. Two simultaneous comparisons remove the scalar two-query success floor:
+adaptive certainty can coexist with optimal batch success $1/m$.
+A separate prefix-query construction shows an advantage in mean joint width.
 An exact two-query rule and checkable certificates turn that
 distinction into an acquisition decision. The reference implementation chooses among supplied bulk, fixed and adaptive
 certificates using declared access and resource limits. New comparisons require

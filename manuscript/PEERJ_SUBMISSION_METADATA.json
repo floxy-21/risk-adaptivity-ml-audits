@@ -8,7 +8,7 @@
     "affiliation": "Independent Researcher, Toronto M4Y 1C9, Canada",
     "corresponding_email": "kapoorjishan19@gmail.com"
   },
-  "abstract": "Background. When verification records are incomplete, an auditor needs to know whether further readings will make a model comparison precise enough. We ask when choosing the next reading after seeing an earlier answer improves that guarantee under a fixed budget.\n\nMethods. We bound model-loss differences over all compatible records. We classify scalar width penalties and prove a shared-query separation with matching lower bounds. We then check precision certificates on frozen forecast comparisons and replay the policies on stored answers.\n\nResults. A shared-query construction has optimal adaptive mean joint width 1/2, versus 2/3 for randomized batching, with matching lower bounds. For scalar width, the two minimax risks agree universally exactly for nondecreasing concave penalties. On 165 of 819 original blocks and 57 of 279 external blocks, two shared adaptive readings guarantee joint half-width precision, whereas optimal randomized-batch worst-case success is exactly 50%. These are precision-success guarantees, distinct from mean-width risk. On the certified subsets, recorded success is 100% versus 65.45% and 64.91% for the selected optimal batch mixtures. Complete-panel replay gives 7.81- and 11.11-percentage-point gains over fixed worst-width batches, and 2.20- and 2.15-point gains over greedy adaptation. Under illustrative 1% internal errors with exact endpoints, 45 external blocks retain an adaptive guarantee that every randomized batch fails to match. Capacity information reduces this advantage, and measured public-API retrieval favors bulk.\n\nConclusions. These guarantees depend on the supplied bounds and access rules. The shared-budget evidence is retrospective; physical meter accuracy and improved downstream model choice are not established.",
+  "abstract": "Background. Model audits often share a limited set of verification readings across several predictors. We ask whether sharing this budget changes the value of choosing later readings after seeing earlier answers.\n\nMethods. We study sharp intervals for affine model-loss contrasts on compact convex sets using a fixed finite query dictionary. We prove fixed-budget bounds, supply exact certificates, and replay two-reading policies on cumulative-meter data.\n\nResults. For one comparison, if a deterministic policy guarantees precision with two exact scalar readings, some randomized fixed batch succeeds with worst-case probability at least 1/2. This lower bound disappears with two comparisons. For every m>=3, we construct instances where adaptation always succeeds but the best randomized batch succeeds with worst-case probability exactly 1/m. All coordinates are queryable, the budget remains two, and each comparison is separately certifiable by a fixed batch. The separation also holds for all pairwise comparisons among three models. In the meter application, 165 of 819 original blocks and 57 of 279 external blocks have verified adaptive success one versus optimal batch success 1/2. Recorded gains over fixed worst-width batches are 7.81 and 11.11 percentage points; gains over greedy adaptation are 2.20 and 2.15 points. Capacity information reduces the advantage, and measured public-API retrieval favors bulk.\n\nConclusions. Sharing a reading budget can make feedback necessary for assurance even when separate comparisons need none. The construction proves a fixed-budget boundary; the retrospective meter study establishes its narrower, instance-specific counterpart under declared access rules.",
   "keywords": [
     "artificial intelligence",
     "machine learning",
@@ -30,8 +30,8 @@
     "mathematical foundations of machine learning"
   ],
   "reviewer_matching_status": "Expertise request prepared in cover letter; portal selection and individual conflict checks have not occurred. No reviewers contacted.",
-  "manuscript_sha256": "53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f",
-  "pdf_sha256": "cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302",
+  "manuscript_sha256": "a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf",
+  "pdf_sha256": "59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9",
   "files": [
     "revised_manuscript.pdf",
     "revised_manuscript.tex",
@@ -39,7 +39,18 @@
     "Supplemental_Data_S2.zip",
     "peerj_cover_letter.txt"
   ],
-  "status": "Prepared, not submitted. Browser runtime fails before connecting.",
+  "status": "Prepared, not submitted. The last recorded browser attempt failed before page creation; no fresh portal check is implied.",
   "browser_error": "failed to write kernel assets: The system cannot find the path specified. (os error 3)",
+  "last_recorded_browser_attempt": {
+    "checked_utc": "2026-10-14T03:58:56.9964029Z",
+    "diagnostic_path": "work/risk_adaptivity_revision/peerj_revision/browser_startup_check_20261014.json",
+    "diagnostic_sha256": "8c041276775f790ff8f2bf5952745414df4ac994c3b6fa34e3b64377d70270fa",
+    "target": "https://peerj.com/manuscripts/",
+    "error": "failed to write kernel assets: The system cannot find the path specified. (os error 3)",
+    "journal_form_accessed": false,
+    "submitted": false,
+    "credential_access": false,
+    "scope": "Last recorded browser startup attempt only; finalizing delivery does not perform a fresh portal check."
+  },
   "author_declarations": "The author confirmed the AI-tools terms check and publication suitability. See PEERJ_AUTHOR_DECLARATIONS.txt for separate remaining personal facts, which are not represented as verified."
 }

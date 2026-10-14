@@ -22,11 +22,13 @@ def include_current_path(p):
     if rel.startswith('peerj_revision/'): return False  # private editorial/reviewer working notes
     if rel.startswith('joint_review/'): return False  # reviewed production copies are in joint_certification
     if rel.startswith(('counter_adaptive/pilot/','counter_adaptive/continuation/')): return False
-    if rel.startswith('prior_release/') and p.name not in {'revised_manuscript.tex','README_prior.txt','MANIFEST_prior.sha256'}: return False
+    if rel.startswith('prior_release/') and p.name not in {'revised_manuscript.tex','README_prior.txt','MANIFEST_prior.sha256','requirements_prior.txt'}: return False
     if p.name.endswith('_review.txt') or p.name.startswith('final_pdf_visual_review') or p.name in {'final_review.txt','math_review_notes.txt'}: return False
     if p.name in {'HUMAN_REVIEW_BRIEF.txt','INTERNAL_INDEPENDENT_REVIEW.txt','LITERATURE_JOURNAL_REVIEW.txt','HELly_REFERENCE.txt','INTERNAL_REPLAY_CHECKS.json','peerj_fit_verification_20261012.txt','SCIENTIFIC_SYNTHESIS_REVIEW.txt','literature_review.md','INTERNAL_REVIEW.txt'}: return False
     if p.name in {'check_practical_selection.py','practical_selection_diagnostic.json','cap_sensitivity_cases.csv'}: return False
     if any(part.startswith(('replay_','raw_cache','__')) for part in p.relative_to(BASE).parts[:-1]): return False
+    if rel in {'joint_certification/final_practical_figure/practical_guarantee_replay.pdf',
+               'joint_certification/final_practical_figure/practical_guarantee_replay.png'}: return True
     return p.suffix.lower() in {'.py','.tex','.txt','.json','.csv','.jsonl','.md','.sha256','.gz'}
 
 def main():
@@ -35,8 +37,11 @@ def main():
     with zipfile.ZipFile(PRIOR) as old:
         (BASE/'prior_release/README_prior.txt').write_bytes(old.read('README.txt'))
         (BASE/'prior_release/MANIFEST_prior.sha256').write_bytes(old.read('MANIFEST.sha256'))
-    paths={ROOT/'outputs/revised_manuscript.tex',ROOT/'outputs/risk_release_manifest.json',BASE/'replay_jobs.json'}
-    for name in ('risk_editorial_verification.json',):
+        old_requirements=old.read('requirements.txt')
+        assert old_requirements==old.read('outputs/requirements-study.txt')
+        (BASE/'prior_release/requirements_prior.txt').write_bytes(old_requirements)
+    paths={ROOT/'outputs/revised_manuscript.tex',ROOT/'outputs/risk_release_manifest.json',ROOT/'outputs/requirements-study.txt',BASE/'replay_jobs.json'}
+    for name in ('risk_editorial_verification.json','fresh_environment_setup_20261013.json'):
         p=ROOT/'outputs'/name
         if p.is_file(): paths.add(p)
     for p in BASE.rglob('*'):
@@ -48,6 +53,7 @@ def main():
         paths.add(p)
     additions={p.relative_to(ROOT).as_posix():p for p in paths}
     additions['README.txt']=BASE/'README.txt'
+    additions['requirements.txt']=ROOT/'outputs/requirements-study.txt'
     destination=ROOT/'outputs/research_supplement.zip'
     staging=ROOT/'outputs/research_supplement.risk-building.zip'
     hashes={}; preserved=0; replaced=[]
@@ -72,7 +78,9 @@ def main():
         old_manifest=(BASE/'prior_release/MANIFEST_prior.sha256').read_text().splitlines()
         historical=0
         specials={'README.txt':'work/risk_adaptivity_revision/prior_release/README_prior.txt',
-                  'outputs/revised_manuscript.tex':'work/risk_adaptivity_revision/prior_release/revised_manuscript.tex'}
+                  'outputs/revised_manuscript.tex':'work/risk_adaptivity_revision/prior_release/revised_manuscript.tex',
+                  'requirements.txt':'work/risk_adaptivity_revision/prior_release/requirements_prior.txt',
+                  'outputs/requirements-study.txt':'work/risk_adaptivity_revision/prior_release/requirements_prior.txt'}
         for line in old_manifest:
             expected,name=line.split('  ',1)
             assert hashes[specials.get(name,name)]==expected,name

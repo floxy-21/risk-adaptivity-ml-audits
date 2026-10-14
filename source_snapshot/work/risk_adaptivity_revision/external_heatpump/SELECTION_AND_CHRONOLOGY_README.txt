@@ -44,5 +44,5 @@ operational/protocol_lock.json: abae34c65056b019ac01b443fa8ef880db50d80509f0a482
 
 Executable qualification check added for the current revision
 From the supplement root, run:
-  python external_validation/operational/check_source_qualification.py
+  python work/risk_adaptivity_revision/external_validation/operational/check_source_qualification.py
 The optional --output argument selects the JSON report path. The default is external_validation/operational/source_qualification_check.json. It uses only the Python standard library and the cached files: no network, refitting, or policy replay. The completed check independently reproduces the seven-row selection, all 41 cached body hashes and byte counts, all three raw and lag-complete training-eligibility summaries, and the stated internal chronology. It passed in 0.16 seconds.

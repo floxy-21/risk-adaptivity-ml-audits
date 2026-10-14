@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "scope": "Final editorial generator changes preserve all saved numerical fields; provenance hashes change as expected.",
+  "checks": {
+    "joint_certification/absolute_width_results/report.json": {
+      "changed_fields": [
+        "source_sha256"
+      ],
+      "old_sha256": "e88631ae7d72c4025ca47e3616241b8d2e8577c612915b3b4e23b058c8339201",
+      "new_sha256": "0643ea1a9b44f94954ae6c82260aa5de3960e1b0bb8ec5734096802cd1f1f9ea"
+    },
+    "joint_certification/final_practical_figure/figure_data.json": {
+      "changed_fields": [
+        "generator_sha256"
+      ],
+      "old_sha256": "5878ffbb5d9bb456907610c4cf5a34df19ed3cec82ec2f86a5c51fa0897cbf6c",
+      "new_sha256": "09700a76f079d2b035d199154438cc4b39c8604bedacaf01ee823dbcbfe72718"
+    }
+  }
+}

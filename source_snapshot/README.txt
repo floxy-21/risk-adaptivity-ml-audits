@@ -7,9 +7,38 @@ Affiliation: Independent Researcher, Toronto M4Y 1C9, Canada
 CURRENT PAPER -- ONE ENTRY COMMAND
   python work/risk_adaptivity_revision/reproduce.py
 
+REVIEWER QUICK START
+Extract both publisher ZIP files into the same empty directory. All commands
+below start from that root. Use a disposable extraction for focused commands;
+the full replay creates its own isolated stage.
+
+1. Inspect the central proof without an optimization solver (Python stdlib):
+   python work/risk_adaptivity_revision/joint_certification/proof_check_joint.py
+   python work/risk_adaptivity_revision/joint_certification/check_main_inspectable_certificate.py
+   These check the constructed theorem and printed external witness in seconds.
+   They do not regenerate the forecasts or all empirical cases.
+2. Reproduce the current paper offline after installing the pinned environment:
+   python -m pip install -r requirements.txt
+   python work/risk_adaptivity_revision/reproduce.py
+   Allow about 20 minutes on the study host. The driver validates source hashes,
+   replays bundled external inputs and all-panel derived results, and rebuilds
+   the manuscript. It does not refit models or download original BLEM inputs.
+3. Reconstruct both source panels with their frozen forecasts:
+   python work/risk_adaptivity_revision/joint_certification/provenance_chain/run_chain.py --cohort all --output-dir complete_source_chain
+   This downloads three version-pinned BLEM source files unless --raw-dir points
+   to a valid local cache; the output directory must not already exist. Source
+   hash mismatches fail. It regenerates policies, certificates and table rows
+   for both panels, without refitting models. Read the chain README for scope.
+
 Start with work/risk_adaptivity_revision/CURRENT_RESULTS_MAP.txt for a direct
 table-by-table and claim-by-claim map of the current revision: commands,
 inputs, outputs, validation fields and any raw-source requirements.
+The final_challenger_diagnostics folder supplies the exact three-way guarantee
+classification, the greedy-first-query check, and a fixed-fallback comparison.
+Its default replay checks both panels' saved certificates and derives the
+external panel's inequalities; the original derivation uses the raw route.
+The final_practical_figure folder contains Figure 1, its exact inputs and a
+solver-free checker. Both additions are included in the default replay.
 The map separates current results from optional historical development.
 The main paper is shortened; full current methods and controls remain in
 editorial/online_extended_methods.tex (S1 scaling; S2 historical gates and
@@ -20,7 +49,7 @@ proofs, paired outcomes and protocol selection). Its own reference
 list includes every work cited in those supporting sections.
 
 CURRENT SHARED-BUDGET RESULTS -- PUBLIC OFFLINE ROUTE
-All commands below are included in the default 69-step replay. It preserves
+All commands below are included in the current default replay. It preserves
 the earlier checks and adds source-to-forecast linkage, input-mismatch guards
 and the absolute-width example. Read the final execution
 report for completion; a configured job count is not evidence that it ran.

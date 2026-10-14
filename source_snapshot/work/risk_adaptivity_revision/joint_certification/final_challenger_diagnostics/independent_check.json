@@ -1,0 +1,140 @@
+{
+  "status": "PASS",
+  "scope": "Independent same-study stdlib reconstruction, not external validation.",
+  "exact_regime_cases": 1098,
+  "exact_conditional_intervals": 21960,
+  "coefficient_derived_cases": 279,
+  "original_scope": "Original saved interval endpoints, coverage and outcomes checked; original coefficient derivation requires the separate --precision-plans route.",
+  "representative_all_intersection_checks": [
+    {
+      "id": "external/hpm_1/2025-07-01/00",
+      "first": 1,
+      "max_min_exact": "14040374875369732/20263129271386641",
+      "saved_float_discrepancy": 0.0
+    },
+    {
+      "id": "external/hpm_1/2025-07-01/00",
+      "first": 2,
+      "max_min_exact": "13433135951233010/20263129271386641",
+      "saved_float_discrepancy": 0.0
+    },
+    {
+      "id": "external/hpm_1/2025-07-01/00",
+      "first": 3,
+      "max_min_exact": "912657842367562/2251458807931849",
+      "saved_float_discrepancy": 1.1102230246251565e-16
+    },
+    {
+      "id": "external/hpm_1/2025-07-01/00",
+      "first": 4,
+      "max_min_exact": "73892199019602203919728210714000/188505887301957076756318198174289",
+      "saved_float_discrepancy": 0.0
+    },
+    {
+      "id": "external/hpm_1/2025-07-01/00",
+      "first": 5,
+      "max_min_exact": "1852611069378215/4245501887842458",
+      "saved_float_discrepancy": 5.551115123125783e-17
+    },
+    {
+      "id": "external/hpm_2/2025-07-01/00",
+      "first": 1,
+      "max_min_exact": "43087482763316152/53065323212457459",
+      "saved_float_discrepancy": 1.1102230246251565e-16
+    },
+    {
+      "id": "external/hpm_2/2025-07-01/00",
+      "first": 2,
+      "max_min_exact": "75387391926216511213174973683456/154858510518138284662712215447907",
+      "saved_float_discrepancy": 5.551115123125783e-17
+    },
+    {
+      "id": "external/hpm_2/2025-07-01/00",
+      "first": 3,
+      "max_min_exact": "1",
+      "saved_float_discrepancy": 0.0
+    },
+    {
+      "id": "external/hpm_2/2025-07-01/00",
+      "first": 4,
+      "max_min_exact": "1",
+      "saved_float_discrepancy": 0.0
+    },
+    {
+      "id": "external/hpm_2/2025-07-01/00",
+      "first": 5,
+      "max_min_exact": "1",
+      "saved_float_discrepancy": 0.0
+    },
+    {
+      "id": "external/hpm_7/2025-07-01/00",
+      "first": 1,
+      "max_min_exact": "1501199875790165/3377699720527872",
+      "saved_float_discrepancy": 0.0
+    },
+    {
+      "id": "external/hpm_7/2025-07-01/00",
+      "first": 2,
+      "max_min_exact": "54473284852989563530027386095936/126399964436243399869582451041171",
+      "saved_float_discrepancy": 0.0
+    },
+    {
+      "id": "external/hpm_7/2025-07-01/00",
+      "first": 3,
+      "max_min_exact": "75577976617619057047462122401896/160295790435828359293200708981095",
+      "saved_float_discrepancy": 0.0
+    },
+    {
+      "id": "external/hpm_7/2025-07-01/00",
+      "first": 4,
+      "max_min_exact": "3682116632283288/8029455705253081",
+      "saved_float_discrepancy": 0.0
+    },
+    {
+      "id": "external/hpm_7/2025-07-01/00",
+      "first": 5,
+      "max_min_exact": "1501199875790165/3377699720527872",
+      "saved_float_discrepancy": 0.0
+    }
+  ],
+  "max_saved_guarantee_discrepancy": 1.1102230246251565e-16,
+  "replay_cases": 2196,
+  "paired_summaries": 64,
+  "max_summary_discrepancy": 2.842170943040401e-14,
+  "fallback_deficit_attribution": [
+    {
+      "cohort": "original",
+      "convention": "strict",
+      "matched_blocks": 165,
+      "fixed_successes": "155",
+      "cover_expected_successes": "108",
+      "entire_panel_deficit": "47"
+    },
+    {
+      "cohort": "original",
+      "convention": "original_tolerance",
+      "matched_blocks": 165,
+      "fixed_successes": "155",
+      "cover_expected_successes": "108",
+      "entire_panel_deficit": "47"
+    },
+    {
+      "cohort": "external",
+      "convention": "strict",
+      "matched_blocks": 57,
+      "fixed_successes": "51",
+      "cover_expected_successes": "37",
+      "entire_panel_deficit": "14"
+    },
+    {
+      "cohort": "external",
+      "convention": "original_tolerance",
+      "matched_blocks": 57,
+      "fixed_successes": "51",
+      "cover_expected_successes": "37",
+      "entire_panel_deficit": "14"
+    }
+  ],
+  "input_sha256": "5b927421984f78fd6d3bff527a40a0cf147145e1fc53615ebe56219356d6b497",
+  "source_sha256": "6983de578b7531774705eb6cc3dab67aee8edcfa8eb531fe5693e457bc2dc57e"
+}

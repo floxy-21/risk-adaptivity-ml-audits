@@ -2,6 +2,8 @@ Dear Academic Editor,
 
 Please consider "Risk and Adaptivity in Certifying Machine-Learning Model Comparisons" as a Research Article in PeerJ Computer Science.
 
+We request a handling editor and reviewers with expertise in exact optimization, optimal recovery, information-based complexity, robust optimization, or the mathematical foundations of machine learning. The main contribution is an acquisition algorithm and its proof of assurance; the forecasting models supply the application.
+
 The paper studies when feedback helps certify machine-learning comparisons under a fixed measurement budget. Its central section gives an exact shared-query separation: optimal adaptive mean joint width is 1/2, versus 2/3 for randomized batching. The main text supplies the coefficients, policies and matching lower bounds against all policies in each class. A worked real-data certificate then proves a distinct precision-success separation, using explicit rational inequalities and a standalone verifier rather than trusting a solver's reported optimum.
 
 A scalar risk classification provides the foundation. It characterizes the width penalties for which feedback cannot improve minimax risk on compact convex uncertainty sets. We distinguish these contributions from established minimax, optimal-recovery and robust-optimization methods.
@@ -10,7 +12,7 @@ The application compares four frozen forecasting models using two cumulative-met
 
 A declared 1% reading-error sensitivity gives 45 external blocks with verified adaptive guarantees that no randomized batch can match. Capacity constraints reduce this advantage, and unrestricted bulk retrieval remains preferable on the measured API. We report these controls, paired block outcomes and dependence-aware descriptive intervals. The shared-budget analysis reuses existing sources and is labeled retrospective.
 
-The contribution concerns algorithms for acquiring verification data and certifying ML comparisons, not a new predictor. Supplemental Data S1 and S2 supply proofs, executable checks, frozen inputs, per-case witnesses and a table-to-command map. Together they occupy 38.86 MB and use one documented reproduction command after extraction into the same directory. The package separates offline replay, source regeneration and model refitting. A completed source-to-table run also reproduced both panels and all 1,098 outcome rows. The main text gives the planner and absolute-width example. The editable manuscript and both supplemental files accompany the submission materials.
+The contribution concerns algorithms for acquiring verification data and certifying ML comparisons, not a new predictor. Supplemental Data S1 and S2 supply proofs, executable checks, frozen inputs, per-case witnesses and a table-to-command map. Together they occupy 41.04 MB and use one documented reproduction command after extraction into the same directory. The package separates offline replay, source regeneration and model refitting. A completed source-to-table run also reproduced both panels and all 1,098 outcome rows. The main text gives the planner and absolute-width example. The editable manuscript and both supplemental files accompany the submission materials.
 
 This manuscript is unpublished and is not under consideration elsewhere. I received no external funding and declare no competing interests. The manuscript discloses generative-AI assistance under my supervision. I am the sole author and corresponding author.
 

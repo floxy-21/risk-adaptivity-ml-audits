@@ -1,4 +1,7 @@
 \paragraph{Shared-budget evaluation.}
+Table~\ref{tab:joint_objectives} distinguishes the five acquisition policies.
+The ``closed'' and ``open gap'' labels in Table~\ref{tab:joint_precision_status}
+describe whether the lower and upper precision bounds match.
 We retrospectively reuse all 819 original and 279 external six-hour blocks,
 retaining all six positive-width model contrasts in every block. A single pair
 of cumulative-register queries serves all contrasts. For contrast $r$, let
@@ -51,9 +54,9 @@ mean realized $J$ is 0.2823 for adaptive, 0.3381 for the fixed batch and
 recorded precision probability is not an optimal-batch precision baseline.
 We retain all block-level outcomes, including unfavorable comparisons.
 
-A precision-matched batch challenger uses a guaranteeing fixed batch when
+The cover + mean fallback policy uses a guaranteeing fixed batch when
 available, then a certified equal mixture of two batches, and otherwise a
-declared fallback.
+mean-width fallback.
 Its recorded success is 54.98\% over the original panel and 72.55\% over the
 external panel; these full-panel rates are not those of a universally optimal
 precision policy. Matching certificates prove a batch precision optimum of

@@ -21,7 +21,10 @@ archive is preserved separately.
 The numerical code and detailed outputs are supplied in Online Resource 1.
 The public source identifiers are given in the references. The package
 separates bundled Portugal/household replay from BLEM raw-source
-regeneration; it does not redistribute the latter's raw counter traces.
+regeneration. BLEM counter traces are regenerated from the pinned public
+QuantLet sources; the commands reject inputs with mismatched hashes.
+These raw traces are not redistributed because redistribution permission
+has not been established.
 Constructed polytopes include their complete inequalities and objectives.
 Dual outputs retain raw multipliers, any numerical mass correction, the
 completed record, and pricing and enumerated lower bounds. LP and endpoint
@@ -29,10 +32,8 @@ cross-checks use floating-point arithmetic with explicit tolerances; the
 counter covering and adverse-profile certificates are additionally checked
 with exact rational arithmetic on their serialized inputs. Shared-query
 checks include all joint outcomes, optimal-batch tie diagnostics, bounded-error
-dual certificates and adverse completions. A versioned private GitHub release
-also preserves the full development archive. Reviewers receive the current
-executable materials as Supplemental Data S1 and S2 without requiring
-repository access.
+dual certificates and adverse completions. Reviewers receive the current
+executable materials as Supplemental Data S1 and S2.
 
 \subsection*{Funding}
 This research received no external funding.
@@ -64,8 +65,10 @@ not consistently retained). The tool assisted with literature searches,
 development and checking of research content and code, computational
 execution, and manuscript drafting and editing. It supported iterative
 verification and clearer presentation. The author reviewed and revised
-these outputs and retains full responsibility for the research decisions,
-interpretation of results, and final manuscript. Separate checker
+these outputs, checked the tools' terms of use and confirmed their suitability
+for publishing this work. The author retains full responsibility for the
+research decisions, originality and integrity of the work, accuracy of the
+references, interpretation of results, and final manuscript. Separate checker
 implementations within this study are not external independent replication.
 This generative assistance is distinct from the boosted-tree and neural
 forecasting models fitted to the public application data.

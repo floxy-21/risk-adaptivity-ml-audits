@@ -1,0 +1,98 @@
+[
+  {
+    "cohort": "original",
+    "meter": "ALL",
+    "blocks": 819,
+    "adaptive_only_guarantee": 168,
+    "no_deterministic_adaptive_guarantee": 489,
+    "fixed_guarantee": 162,
+    "matched_half": 165,
+    "matched_half_greedy_first_failure": 25,
+    "adaptive_guarantees_but_greedy_first_does_not": 28,
+    "greedy_recorded_success_among_matched_first_failures": 20
+  },
+  {
+    "cohort": "original",
+    "meter": "consumer_00000001",
+    "blocks": 273,
+    "adaptive_only_guarantee": 63,
+    "no_deterministic_adaptive_guarantee": 147,
+    "fixed_guarantee": 63,
+    "matched_half": 62,
+    "matched_half_greedy_first_failure": 6,
+    "adaptive_guarantees_but_greedy_first_does_not": 6,
+    "greedy_recorded_success_among_matched_first_failures": 6
+  },
+  {
+    "cohort": "original",
+    "meter": "consumer_00000002",
+    "blocks": 273,
+    "fixed_guarantee": 44,
+    "no_deterministic_adaptive_guarantee": 189,
+    "adaptive_only_guarantee": 40,
+    "matched_half": 40,
+    "matched_half_greedy_first_failure": 7,
+    "adaptive_guarantees_but_greedy_first_does_not": 8,
+    "greedy_recorded_success_among_matched_first_failures": 6
+  },
+  {
+    "cohort": "original",
+    "meter": "consumer_00000003",
+    "blocks": 273,
+    "adaptive_only_guarantee": 65,
+    "fixed_guarantee": 55,
+    "no_deterministic_adaptive_guarantee": 153,
+    "matched_half": 63,
+    "matched_half_greedy_first_failure": 12,
+    "adaptive_guarantees_but_greedy_first_does_not": 14,
+    "greedy_recorded_success_among_matched_first_failures": 8
+  },
+  {
+    "cohort": "external",
+    "meter": "ALL",
+    "blocks": 279,
+    "fixed_guarantee": 128,
+    "no_deterministic_adaptive_guarantee": 94,
+    "adaptive_only_guarantee": 57,
+    "matched_half": 57,
+    "matched_half_greedy_first_failure": 13,
+    "adaptive_guarantees_but_greedy_first_does_not": 16,
+    "greedy_recorded_success_among_matched_first_failures": 11
+  },
+  {
+    "cohort": "external",
+    "meter": "hpm_1",
+    "blocks": 93,
+    "fixed_guarantee": 47,
+    "no_deterministic_adaptive_guarantee": 33,
+    "adaptive_only_guarantee": 13,
+    "matched_half": 13,
+    "matched_half_greedy_first_failure": 5,
+    "adaptive_guarantees_but_greedy_first_does_not": 8,
+    "greedy_recorded_success_among_matched_first_failures": 4
+  },
+  {
+    "cohort": "external",
+    "meter": "hpm_2",
+    "blocks": 93,
+    "adaptive_only_guarantee": 18,
+    "fixed_guarantee": 44,
+    "no_deterministic_adaptive_guarantee": 31,
+    "matched_half": 18,
+    "matched_half_greedy_first_failure": 4,
+    "adaptive_guarantees_but_greedy_first_does_not": 4,
+    "greedy_recorded_success_among_matched_first_failures": 3
+  },
+  {
+    "cohort": "external",
+    "meter": "hpm_7",
+    "blocks": 93,
+    "fixed_guarantee": 37,
+    "no_deterministic_adaptive_guarantee": 30,
+    "adaptive_only_guarantee": 26,
+    "matched_half": 26,
+    "matched_half_greedy_first_failure": 4,
+    "adaptive_guarantees_but_greedy_first_does_not": 4,
+    "greedy_recorded_success_among_matched_first_failures": 4
+  }
+]

@@ -1,0 +1,9 @@
+cohort,meter,blocks,adaptive_only_guarantee,no_deterministic_adaptive_guarantee,fixed_guarantee,matched_half,matched_half_greedy_first_failure,adaptive_guarantees_but_greedy_first_does_not,greedy_recorded_success_among_matched_first_failures
+original,ALL,819,168,489,162,165,25,28,20
+original,consumer_00000001,273,63,147,63,62,6,6,6
+original,consumer_00000002,273,40,189,44,40,7,8,6
+original,consumer_00000003,273,65,153,55,63,12,14,8
+external,ALL,279,57,94,128,57,13,16,11
+external,hpm_1,93,13,33,47,13,5,8,4
+external,hpm_2,93,18,31,44,18,4,4,3
+external,hpm_7,93,26,30,37,26,4,4,4

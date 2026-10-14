@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{llrrr}
+\toprule
+Panel & Target & Adaptive & Fixed & Greedy\\
+\midrule
+Original & 0.40 & 51.28 & 49.21 & 49.21\\
+Original & 0.45 & 67.03 & 61.29 & 64.35\\
+Original & 0.50 & 78.27 & 70.45 & 76.07\\
+Original & 0.55 & 87.79 & 81.07 & 86.69\\
+Original & 0.60 & 93.77 & 88.64 & 93.41\\
+External & 0.40 & 74.55 & 66.67 & 73.12\\
+External & 0.45 & 80.65 & 72.40 & 77.78\\
+External & 0.50 & 90.32 & 79.21 & 88.17\\
+External & 0.55 & 93.91 & 83.87 & 93.19\\
+External & 0.60 & 95.70 & 85.66 & 95.34\\
+\bottomrule
+\end{tabular}
+\caption{Exploratory recorded success (\%) as the joint-width target changes. We replay the unchanged policies on all 819 original and 279 external blocks with two shared counter readings. The exact-endpoint, uncapped, noiseless replays retain the original $10^{-8}$ width-comparison tolerance. The supplement includes randomized policies, paired uncertainty summaries, and zero-tolerance sensitivity. These are recorded outcomes, not new all-completions guarantees.}
+\label{tab:joint_threshold_sensitivity}
+\end{table}

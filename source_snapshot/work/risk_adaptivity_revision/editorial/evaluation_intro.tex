@@ -1,17 +1,13 @@
 \section{Computational Verification and Historical Application}
 \label{sec:evaluation}
-The evaluation separates proofs, constructed algorithm checks, saved-forecast
-replay, a frozen external-source replication with fresh model fits, and
-an actual public-API retrieval benchmark. The historical forecast inputs
-remain unchanged. LP calculations use explicit floating-point tolerances;
-particular serialized counter coefficients and adverse distributions are
-also checked using exact rational arithmetic. These checks establish
-the reported computation under its measurement model. The external-source
-study is a new public-data replication by the same author, not independent
-human validation.
+We evaluate the algorithms on constructed instances, replay saved forecasts,
+replicate the method on an external public source with fresh model fits,
+and measure retrieval on a public API. LP checks use reported floating-point
+tolerances; counter coefficients and adverse distributions also receive
+exact rational checks. The same author conducted both source studies.
 
 \subsection{Comparative formulations and scaling}
-The existing frozen grid has 24 base aggregate instances with one, two or four
+The scaling grid has 24 base aggregate instances with one, two or four
 blocks, six or twelve coordinates per block, budgets near one quarter or
 one half of the coordinates, and two joint coefficient/total profiles.
 Four additional one-block profiles use 24 or 48 coordinates, giving 28 in total. The cases

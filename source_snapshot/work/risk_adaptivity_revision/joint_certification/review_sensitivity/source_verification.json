@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "blocks": 1098,
+  "coefficient_rows": 6588,
+  "exact_batch_widths": 10980,
+  "exact_width_discrepancies": 0,
+  "endpoint_LP_solves": 720,
+  "endpoint_LP_cases": [
+    "external/hpm_1/2025-07-01/00",
+    "external/hpm_2/2025-07-01/00",
+    "external/hpm_7/2025-07-01/00",
+    "original/consumer_00000001/2017-10-01/00",
+    "original/consumer_00000002/2017-10-01/00",
+    "original/consumer_00000003/2017-10-01/00"
+  ],
+  "max_endpoint_LP_discrepancy": 2.220446049250313e-16,
+  "LP_comparison_tolerance": 1e-10,
+  "coefficients": "Exact rational values of stored binary64 forecast-contrast coefficients, normalized in rational arithmetic; not exact decimal measurements or uncertainty bounds on fitted coefficients.",
+  "scope": "Recorded original and external counter values joined to existing frozen coefficients. No new model fitting or raw-source authentication; source identity is separately verified by provenance_chain.",
+  "inputs": [
+    {
+      "path": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\joint_certification\\review_sensitivity\\frozen_inputs.json",
+      "sha256": "d02395c3e5248d283e35c90e32f625e3e2da4add695d5ff80ab815bfd25ab66d"
+    },
+    {
+      "path": "work\\risk_adaptivity_revision\\joint_review\\precision_results\\plans.json",
+      "sha256": "3f52c14542a108aca1514ef0edc9a56e44cc7e8066420d0029d664c5de61e841"
+    },
+    {
+      "path": "work\\risk_adaptivity_revision\\counter_adaptive\\pilot\\geometry.json",
+      "sha256": "6c94583d757db31b33b6388cd29c2d1b6999385c76b049368e58ef97f75424cb"
+    },
+    {
+      "path": "work\\risk_adaptivity_revision\\counter_adaptive\\continuation\\geometry.json",
+      "sha256": "cb176afdd9eaae140d1830b5deb408dd2de041898a8499b93edcf59813ffb12d"
+    },
+    {
+      "path": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\external_validation\\replay\\geometry.json",
+      "sha256": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0"
+    },
+    {
+      "path": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\data_blem_hourly_endpoints.csv",
+      "sha256": "2d8a88d83123216d71329c1745a4dbf1d0c47b34ba1a22b6529f348f4e5987eb"
+    },
+    {
+      "path": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\train_test_hourly_counters.csv",
+      "sha256": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da"
+    }
+  ],
+  "source_sha256": "f8a0309ca380fb2888c43f3ab4bb7c95a6467ebe8f1fc87d473446df3136299a",
+  "elapsed_seconds": 23.08921680000003
+}

@@ -3,10 +3,10 @@ Exact shared-query certificates: no optimization solver is needed
 Run from the supplement root, using Python 3. These commands use the saved
 external coefficient geometry and exported exact certificate ledgers:
 
-python joint_certification/proof_check_joint.py
-python joint_certification/precision_batch_check.py
-python joint_certification/precision_adaptive_link.py
-python joint_certification/check_main_inspectable_certificate.py
+python work/risk_adaptivity_revision/joint_certification/proof_check_joint.py
+python work/risk_adaptivity_revision/joint_certification/precision_batch_check.py
+python work/risk_adaptivity_revision/joint_certification/precision_adaptive_link.py
+python work/risk_adaptivity_revision/joint_certification/check_main_inspectable_certificate.py
 
 The first command checks the constructed mean-joint-width separation,
 including the batch mixture, its adversarial lower bound and the single

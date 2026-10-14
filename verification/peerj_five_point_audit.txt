@@ -1,85 +1,166 @@
 FINAL PEERJ COMPUTER SCIENCE REVIEW -- 13 October 2026
-Source SHA256: f9554269d768ee25de92e077b301e745a536805699ec9df8509483ad8980e6f2
-PDF SHA256: 62f50ab90d455dec539feb9257990da2cf32117defa3bc3f793de43e24361e2f
-Pages: 38
+Source SHA256: 53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
+PDF SHA256: cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302
+Pages: 36
 
 Current comprehensive response: LATEST_REVIEW_FIXES_20261013.txt
 PeerJ-specific criteria: PEERJ_CRITERIA_AUDIT.txt
 
 CURRENT INTERNAL REVIEW -- 13 October 2026
-Source SHA256: f9554269d768ee25de92e077b301e745a536805699ec9df8509483ad8980e6f2
-PDF SHA256: 62f50ab90d455dec539feb9257990da2cf32117defa3bc3f793de43e24361e2f
-PDF pages: 38
+Source SHA256: 53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
+PDF SHA256: cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302
+Pages: 36
 
-LATEST USER REVIEW: FINDINGS AND CORRECTIONS
+LATEST REVIEW: OBJECTIVE ALIGNMENT, PRECISION SENSITIVITY AND REVIEWER ENTRY
 
-1. Scope/significance. The general scalar theorem covers compact convex
-uncertainty sets, affine targets and a finite linear-query dictionary; it is
-not restricted to meters or disjoint totals. The central shared-query result
-has explicit policies and matching lower bounds. The exact scalable planner
-is more specialized: two cumulative queries on an exact-total simplex.
-The manuscript states these scopes separately and credits prior minimax,
-optimal-recovery and robust-optimization machinery. No unsupported first-in-
-history, general operational superiority or groundbreaking-impact claim added.
+A. Different claims answer different questions -- FIXED PRESENTATION.
+The abstract, introduction, discussion and new claim/objective/evidence map
+separate scalar classification, constructed mean-joint-risk optima, exact
+real-instance precision optima, recorded-answer success, and API costs.
+The matched 165 original / 57 external half-success certificates are the primary
+application evidence. Broad replay gains are not described as empirical
+estimates of the constructed 1/2-versus-2/3 mean-risk separation.
 
-2. Practical benefit. In 165 original and 57 external blocks, two shared
-adaptive readings guarantee the required precision whereas the optimal
-randomized fixed batch has worst-case success exactly one half. Recorded
-success on those subsets is 100% versus 65.45% and 64.91%. Full-panel fixed-
-batch gains are 7.81/11.11 percentage points; greedy gains are 2.20/2.15.
-These are assurance and precision benefits. Capacity information can remove
-the advantage; measured bulk retrieval is preferable on the unrestricted API.
-No financial benefit, deployed service saving or improved model choice is
-inferred. The adverse model-choice control remains.
+B. Incomplete global precision optimization -- QUANTIFIED, NOT MISLABELED SOLVED.
+The 351 original and 67 external unresolved probability brackets have median
+widths 1/3 and 1/2, IQRs [1/4,1/2] and [1/3,1/2], and range 1/5 to 1/2.
+The main text calls these gaps substantial. All-panel mean gaps are 0.1583
+and 0.0983. Exact optimality
+claims remain confined to matching certificates; the broad challenger is a
+declared policy rather than a universal optimum. This is a scientific scope
+boundary, not a remaining arithmetic defect.
 
-3. Complete provenance. This revision actually ran pinned original-source
-regeneration, restored the 89,496-row forecast archive to its historical
-hash, verified all 6,588 source/forecast/contrast joins and regenerated both
-panels' policies and exact certificates. All 1,098 outcome rows agree exactly.
-The original run checks 26,280 hourly endpoints; exact proof checks include
-7,992 covering multipliers and 463 branch intervals. Independent replay
-checks 10,980 batch widths and 65,880 pair decisions. Altered-input tests
-confirm rejection by the real raw-source and frozen-forecast entry points.
-The code and complete execution records are indexed in
-joint_certification/provenance_chain/README.txt. The final orchestrator
-explicitly reused the raw/plan/certificate directories freshly produced in
-this same revision; it does not claim a second regeneration or model refit.
-The default public run regenerates the external panel; the original raw
-route remains separately documented and its execution is separately recorded.
+C. Dependence on the half-width target -- NEW CHECKED EXPLORATORY ANALYSIS.
+Unchanged policies replay all 1,098 blocks at 0.40, 0.45, 0.50, 0.55 and 0.60.
+Fixed-batch gains remain 2.08--7.81 pp (original) and 7.89--11.11 pp (external);
+greedy gains remain smaller at 0.37--2.69 and 0.36--2.87 pp, with some intervals including
+zero. No forecasts, policy choices, mixtures or original thresholds changed.
+The supplement supplies all outcomes, systems, paired cells and 2,000-draw
+seven-day circular-block intervals under two numerical threshold conventions.
+One external randomized boundary case differs by 1.11e-16 in normalized width;
+the prior mixed conventions are documented. No adaptive/fixed/greedy outcome
+changes at any of the five thresholds. Historical reported results remain.
+Verification: 6,588 coefficient joins, 10,980 rational batch widths, 720 endpoint
+LPs (maximum discrepancy 2.22e-16), 10,980 threshold rows and 320 paired
+summaries (maximum discrepancy 1.07e-14 pp).
 
-4. Reconstructible planner. A main-text algorithm gives the segment ranges,
-conditional affine lines, all intersections and endpoints, tie rules and
-online second query. A short proof explains why those points suffice over
-the full answer interval. Floating tolerances are distinguished from the
-exact calculation and rational assurance certificates. Cap/error variants
-remain separate rather than silently applying the simplex formula to them.
+D/E. Information interface and limited systems -- BOUNDARIES PRESERVED.
+The main paper retains exact endpoints, illustrative caps/errors, repeated
+days, three systems per source and retrospective chronology. The actual API
+favors bulk retrieval; no monetary saving, calibrated decision threshold or
+improved model choice is inferred. Full pairwise controls remain in S6.
+The current main manuscript has 36 pages; full controls remain available.
 
-5. Absolute scale. The existing HPM1 example now reports all six original
-loss widths, targets and terminal widths in squared kWh of stored-grid
-increments. Initial widths range from 0.107125 to 0.303143; terminal widths
-range from 0.000673 to 0.005336. The largest normalized terminal width is
-0.0435244. Twenty-four independent endpoint LPs agree within 3.13e-17.
-The caption was corrected: these are interval widths, not bounds on the
-value or absolute magnitude of the signed loss contrast. No thresholds,
-models, forecasts, subset definition or outcome changed.
+F. Reviewer reproducibility -- CONCRETE DEFECTS FIXED AND TESTED.
+Corrected two command paths that contradicted the stated root directory,
+removed stale step counts, and pinned narwhals/cloudpickle transitives.
+Added a three-level quick start: solver-free witnesses; offline full replay;
+both-source pinned raw regeneration. Prior requirements are preserved.
+A newly created isolated Python 3.12 venv installed the current 11 package pins
+and passed pip check. The focused external source-to-table chain ran 9 steps
+in 91.71 seconds with no reused producer directories: 279 rows and 57 half certificates
+matched. Both-source source-to-table execution remains separately recorded.
+Final revised publisher-ZIP full replay is recorded independently in
+current_clean_package_replay.json; this prose is not its execution evidence.
 
-6. Reporting and structure. The abstract and introduction use direct active
-prose. Repeated scope explanations were shortened. The discussion foregrounds
-the joint result and retains the smaller scalar effects as context. Research-
-article structure is explicit: Introduction, Methods, Results, Discussion,
-Conclusions, supplementary materials, declarations, acknowledgements,
-references. Essential proofs and the worked certificate remain in the main
-paper. Detail needed for verification is retained rather than replaced by
-promotional language. The final PDF is 38 pages including references.
+G. Comparator and guarantee diagnostics -- CHECKED ON EXISTING INPUTS.
+The exact three-way partition is 162 fixed / 168 adaptive-only / 489 without
+a deterministic two-query guarantee on the original panel, and 128 / 57 / 94
+externally. Among the 165 / 57 matched-half cases, the saved greedy first query
+fails to guarantee half-width on 25 / 13, although recorded success occurs on
+20 / 11 of those. Replacing only the existing no-cover fallback by fixed
+worst-width batching gives 64.71% / 74.19% recorded success. Pure fixed batching
+remains stronger at 70.45% / 79.21%. This retrospective diagnostic does not
+change the exact matched-half optima or solve the remaining continuum gaps.
+The independent checker covers 1,098 exact regime cases and the exported
+paired outcomes. Default original-panel checks use saved derived certificates;
+the separate source route verifies their coefficient construction.
+
+H. Shared-query geometry -- EXPOSED AND VISUALLY CHECKED.
+A self-contained two-panel figure shows the worked HPM1 conditional envelopes
+and both panels' five-target replay curves. Its coordinates derive from saved
+exact rational coefficients and integer counts, not a rounded printed matrix.
+The independent check verifies 24 conditional lines, 735 envelope equalities
+at 147 breakpoints and all 30 replay points. The scalar Helly result's
+single-target and sure-precision premises are made explicit; joint convex
+envelopes do not satisfy the same failure-set argument. Curvature alone is
+not presented as proof of a strict separation.
+
+I. LAST CONSISTENCY REVIEW -- NECESSARY CLARIFICATIONS ONLY.
+The fixed-versus-cover replay deficit is now attributed exactly: fixed succeeds
+on 155/165 and 51/57 matched-half records, versus expected cover successes of
+108/165 and 37/57. All nonmatched block success probabilities agree under both
+threshold conventions. The 47/14 deficits are independently recounted by the
+default checker. Fixed batches have worst-case precision success zero on each
+matched-half instance, whereas the cover guarantees one half. Better recorded
+success and a better worst-case guarantee are thus different comparisons.
+The text distinguishes the exact 0.47734 peak from conservative outward bounds
+0.47743079/0.4774. Remaining cover labels are consistent. Alleged DOI spacing
+and corporate-author spelling defects were absent; no unsupported GPT-5 usage
+claim was inserted. The author subsequently confirmed personally checking the
+AI tools' terms of use and publication suitability; that confirmation is now
+recorded. It does not establish other final author or portal facts. Matrix
+decimals were already legible and their values were retained.
+
+J. LATEST CONTRIBUTION/ACCESS REVIEW -- CHECKED AGAINST CURRENT CLAIMS.
+The related-work section distinguishes reconstruction error, randomized local
+width risk, expected global radius and vector recovery, with exact source
+locators; it attributes the minimax/Jensen and sparse-policy foundations.
+The central shared-prefix result includes policies and matching lower bounds.
+The access replay does not claim a deployed two-register service. Bulk remains
+preferred on the measured API. E/3, combined capacity/error and best-model
+counterexamples remain in the results and discussion. Full-panel comparisons
+remain selected-policy replay; exact superiority is confined to matching
+certificate subsets. The new read-only current-source audit found no necessary
+source correction. Its evidence map is latest_boundary_review.txt. The actual
+S1/S2 execution, rather than the PDF description, closes the packaging condition
+only when the final replay report passes.
+
+K. FIRST-READER CLARITY -- BOUNDED EDITORIAL CLEANUP.
+Revision-only phrases and repeated caveats were removed. The text now names
+the coordinate-increment controls, the J<=1/2 fallback threshold, the uncapped
+noiseless normalization and the completed-archive control directly. Scientific
+values, eligibility gates, retrospective chronology, unfavorable controls and
+source-reconstruction limits remain unchanged. first_reader_prose_review.txt
+records the fragment edits before integration; it is not itself a review of
+the final compiled PDF. latest_compiled_review.txt supplies that hash-bound
+assessment. Generator-owned captions were regenerated with their checks.
+
+L. AUDIT WORKFLOW AND POLICY STATUS -- EDITORIAL CLARIFICATION.
+The introductory workflow makes the usable decision explicit: use admissible
+bulk retrieval; otherwise compare the best fixed and deterministic adaptive
+two-reading guarantees with the declared precision target, then choose fixed,
+adaptive or an extended audit. The diagram states its exact-total, noiseless
+scope and separates randomized precision success. The policy table distinguishes
+planning objectives, achieved guarantees and recorded comparisons. The status
+table's closed columns and open-gap column partition each panel; fallback is
+a separate overlapping classification, not an additional partition category.
+The current hash-bound compiled review explicitly checks this workflow and
+the displayed equations. It supplies rendering evidence; numerical replay
+and analytic proof remain separate checks. The preceding successful source
+and replay are preserved as pre_workflow_* records with their original hashes.
+No private repository or release reference has been added to the manuscript.
+
+CORE MATHEMATICS AND ATTRIBUTION
+A separate analytic review found no blocking flaw in the scalar iff proof,
+jump-at-zero treatment, transcript identity or shared construction. Independent
+rational arithmetic reproduced its printed bounds. Primary Sion, Krieg--Ullrich,
+Kurtz and Osipenko statements support the precise objective distinctions.
+The sufficient proof uses established minimax/Jensen; sparse-policy overlap
+is credited. No exhaustive priority or external-specialist validation claimed.
+Those earlier reviews retain their original source identities. The current
+compiled-source review is latest_compiled_review.txt and matches the source
+and PDF hashes at the top of this report; it does not turn earlier reviews
+into independent validation of the later revision.
 
 VERDICT
-No unresolved blocking scientific or presentation error was identified in
-this internal review. The contribution remains specialized, with demonstrated
-conditional assurance value rather than demonstrated financial impact.
-This is suitable for journal consideration after factual author declarations; the final package checks passed. It is not external specialist validation,
-a formal proof-assistant certificate, an acceptance decision or a calibrated
-acceptance probability. The current release verification records the final
-package run separately. No person was contacted and no paper was submitted.
+The review's concrete reporting, diagnostic and executable-entry requests are
+addressed. No unresolved blocking scientific error was identified internally.
+General deployment value, global precision optima on all blocks and broad
+population prevalence remain outside the established claims. This is suitable
+for PeerJ Computer Science consideration after final artifact checks and factual
+author declarations, not evidence of a statistically calibrated 90% acceptance
+probability. No journal submission or external contact occurred.
 
 FINAL ARTIFACT VERIFICATION
-PASS: 69 steps in a fresh network-disabled stage from the two publisher ZIP files, 1014 manifested members, 1136.96 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 38.86 MB. Full historical archive integrity also passed.
+PASS: 74 steps in a fresh network-disabled stage from the two publisher ZIP files, 1074 manifested members, 1250.83 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 41.04 MB. Full historical archive integrity also passed.

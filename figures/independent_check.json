@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "case": "external/hpm_1/2025-07-05/12",
+  "source_contrasts_checked": 6,
+  "conditional_lines_checked": 24,
+  "exact_envelope_points_checked": 147,
+  "envelope_equalities": 735,
+  "replay_points_checked": 30,
+  "exact_switch": "402983999413455277/771030112647101785",
+  "exact_maximum": "368046113233646508/771030112647101785",
+  "source_sha256": "e541cb88f34feb98ac67fd6f27b5aefe2d0b56fed0084e603601c0386bf97c44",
+  "figure_data_sha256": "09700a76f079d2b035d199154438cc4b39c8604bedacaf01ee823dbcbfe72718",
+  "scope": "Exact reconstruction of plotted geometry and integer-count replay percentages; not new observations or optimization."
+}

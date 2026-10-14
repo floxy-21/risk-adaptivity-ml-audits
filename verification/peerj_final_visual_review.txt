@@ -1,12 +1,259 @@
 CURRENT INTERNAL REVIEW -- 13 October 2026
-Source SHA256: f9554269d768ee25de92e077b301e745a536805699ec9df8509483ad8980e6f2
-PDF SHA256: 62f50ab90d455dec539feb9257990da2cf32117defa3bc3f793de43e24361e2f
-PDF pages: 38
+Source SHA256: 53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
+PDF SHA256: cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302
+Pages: 36
 
-PASS. Built-in compiler and Tectonic export succeeded. No overfull/underfull
-boxes, undefined references/citations or missing-glyph diagnostics were found.
-All 38 pages were reviewed in rendered contact sheets; changed planner,
-worked certificate, absolute-width table and provenance paragraph were also
-reviewed at full resolution. No clipping, overlap or unreadable table detected.
-Engine font-selection/Fontconfig advisories do not correspond to visible
-defects in these rendered pages. Editorial review is internal, AI-assisted.
+The current compiled-source review below is explicitly bound to these hashes.
+Earlier source-specific reviews are retained separately as historical records.
+This is an internal AI-assisted review, not external human validation.
+
+FINAL COMPILED MANUSCRIPT REVIEW
+Date: 14 October 2026 UTC
+Reviewer: /root/review_pdf_claims, internal AI review
+Target: PeerJ Computer Science, Research Article
+
+CURRENT ARTIFACTS
+Source: outputs/revised_manuscript.tex
+SHA256: 53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
+PDF: outputs/revised_manuscript.pdf
+SHA256: cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302
+Pages: 36. Structured abstract: 246 words.
+Render manifest: work/pdf_export/decision_rendered/pages.json
+The manifest matches the current PDF. Stale images beyond page 36 are not
+part of the current manuscript.
+
+VERDICT
+PASS within this review's scope after identified figure-layout issues were
+repaired. No unresolved blocking error was found in the new
+source, its reported diagnostics, or inspected rendered pages. This is an
+internal technical/presentation review, not external specialist validation,
+formal proof verification, an editorial decision, or an acceptance-probability
+estimate. Completion of the fresh full-package replay and author-specific
+submission declarations are tracked separately.
+
+REVIEW SCOPE
+I inspected the current source additions, checked the main-paper wording
+against its diagnostic ledgers and documented checking outputs, inspected
+all 36 current page layouts in contact sheets, and inspected the final
+workflow on page 2 and full-size equation and figure pages 5, 16, 17,
+19, 20 and 21. Prior full-size checks covered the underlying unchanged
+proofs, results, controls and declarations. Earlier direct inspection had
+shown that the alleged formula corruptions were not present; the equations
+remain legible after the workflow insertion. The editorial preflight reports
+successful built-in compilation and no overfull or undefined-reference
+warnings for the source/PDF hashes above.
+
+1. BASIC REPORTING
+
+The source uses a structured abstract, introduction/related work, methods,
+results, discussion, conclusions, supplementary-material description and
+declarations. The title and application concern computational certification
+of machine-learning model comparisons. The paper does not present its
+uncertainty intervals as sampling confidence intervals or promise improved
+forecast accuracy. The claim/objective/evidence table differentiates the
+scalar classification, constructed shared mean-risk separation, real-instance
+precision certificates, retrospective replay and retrieval-interface study.
+
+Figure 1 now provides an early audit workflow. It tests full-trace
+admissibility before restricted retrieval, then defines deterministic batch
+and adaptive worst joint widths D and A and separates D<=tau, A<=tau<D,
+and tau<A. Fixed batching is an adaptive special case, so A<=D makes this
+partition exhaustive. Its caption defines the joint normalization, exact
+noiseless prefix scope and preset threshold. The final branch says only
+that no deterministic two-reading guarantee exists. It does not imply
+universal recorded failure or zero randomized precision success. Two small
+layout issues in the first render were fixed: stretched bold-label spacing
+and insufficient clearance around the No connector. Final page 2 is clean.
+
+Figure 2 connects the conditional acquisition rule to recorded
+precision outcomes. The first compiled version had two lower legend notes
+colliding with the x-axis labels. These notes were removed and their meaning
+retained in the caption. In the final page-21 pixels, axis labels, tick labels,
+legends, switch annotation, caption and following table are separated and
+readable. No clipping or overlapping text remains there.
+
+The plotted switch is 0.5226566288441445 and the maximum lower envelope is
+0.4773433711558554; both agree with the exact rational figure-check outputs.
+The caption distinguishes continuum conditional guarantees in panel (a)
+from recorded success in panel (b), specifies the 819/279 panels and the
+existing 1e-8 threshold tolerance, and labels the target sensitivity exploratory.
+The original and external curves are distinguished by solid/dashed lines.
+
+The six alleged severe mathematical rendering corruptions from the supplied
+reviews were not real current-PDF defects. The summation, squared terms,
+Theorem 4 vectors, cases displays, matrix decimals and lambda display are
+present and legible. The source remains consistent with the mathematics.
+
+The inconsistent Amenta, Novak 1995, Rockafellar and OpenEnergyMonitor
+reference punctuation has been standardized. The sole-author Novak record
+now precedes Novak and Wozniakowski. Versioned preprint references and source
+access dates remain. Redundant caveats were shortened without deleting the
+material scope boundaries. 'Post-hoc sensitivity analysis' now describes the
+new analysis without presenting the paper as a revision-response document.
+
+2. EXPERIMENTAL DESIGN
+
+The new diagnostics answer specific objections on the existing frozen panels;
+they are not advertised as a new locked confirmation. No new model fit,
+source, tuning set or operational deployment is inferred from these checks.
+The first-query guarantee is determined from the contrast coefficients and
+query dictionary before replaying the hidden answers.
+
+The three deterministic regimes reconcile exactly:
+ - Original: 162 fixed-guaranteed + 168 adaptive-only-guaranteed +
+   489 without a deterministic two-query guarantee = 819.
+ - External: 128 + 57 + 94 = 279.
+The claims are expressly about the uncapped, noiseless simplex and a
+deterministic two-query guarantee. They are not mislabeled as observed
+success rates or as complete randomized-adaptive optimization results.
+
+The saved greedy rule receives its optimal conditional second query, so the
+diagnostic isolates the first query rather than handicapping continuation.
+Within the matched-half subsets, its first query cannot assure half-width
+in 25 original and 13 external blocks. Yet the stored records yield success
+in 20/25 and 11/13 of these blocks. This is a concrete distinction between
+recorded success and a guarantee before acquisition. Full-panel counts of
+28 and 16 agree with the supplied rational regime summaries.
+
+The fallback check preserves the certified fixed or equal two-batch covers
+and replaces only the mean-width fallback by the existing fixed worst-width
+batch. The replacement is based on pre-query coefficients. Its recorded
+64.71%/74.19% success rates match the strict-threshold paired summaries, as
+do the prior 54.98%/72.55% rates. The paper explicitly retains the stronger
+pure fixed-batch recorded rates, 70.45%/79.21%, and does not call the fallback
+policy globally optimal for precision. It retains both numerical threshold
+conventions in the supplement rather than silently changing historical values.
+
+Default diagnostic verification checks all 1,098 interval covers and replay
+outcomes but reconstructs coefficient inequalities directly only for the
+279 bundled external blocks. The separate executed full-source check covers
+all 1,098 coefficient derivations and 21,960 conditional intervals. The
+README states this distinction and gives the raw-route commands. The source
+verification report joins 6,588 coefficient rows. These are same-study checks,
+not independent human replication or fresh model fitting.
+
+3. VALIDITY OF FINDINGS
+
+The scalar Helly clarification is correct: conditional scalar worst widths
+are concave and have convex strict failure sets; the joint conditional
+objective is a maximum of affine contrast widths and its failure set can
+be disconnected. Therefore the scalar half-success floor is not automatically
+a theorem for the joint objective. The new text does not mistake a loose
+computed lower bound or an unresolved optimization gap for a contradiction
+of the scalar theorem.
+
+The shared theorem still supplies an explicit policy and matching lower
+bounds for the constructed mean-risk values 1/2 and 2/3. The application
+certificates separately establish precision-success values 1 and 1/2 on
+165/57 blocks. This distinction remains explicit in the abstract, main
+result, figure caption and discussion.
+
+Full-panel randomized precision optimization remains unresolved on 351/67
+blocks. The paper quantifies those gaps and restricts exact superiority
+claims to matching certificates. The new fallback diagnostic does not
+pretend to close those gaps. This is a remaining method boundary, not an
+unreported result or a demonstrated calculation defect.
+
+Capacity, bounded-error and actual API findings remain visible. The new
+figure or guarantee diagnostics do not create financial savings, verified
+device accuracy, new source diversity or a deployed selective interface.
+The small cap-plus-error effect and stronger unrestricted bulk-retrieval
+performance are retained. The practical contribution is the ability to
+identify when feedback is required for a declared assurance level at the
+same permitted reading budget; it is not universal operational superiority.
+
+4. PRESERVED REPRODUCTION AND DISCLOSURE BOUNDARIES
+
+The printed 'cd work/risk_adaptivity_revision' command matches the package
+layout and is followed by valid relative script paths. The proposed cosmetic
+replacement with 'cd supplemental_package' was correctly rejected.
+
+The manuscript does not adopt the supplied review's invented GPT-5 session
+history. Since that review, the author explicitly confirmed personally
+checking the tools' terms and suitability for publication. The final
+declaration reflects that confirmation and the author's responsibility,
+while preserving the actual assistance disclosure and uncertainty about
+earlier model identifiers. Remaining portal-specific attestations are
+tracked separately. Reviewer access now depends on the named S1/S2 files,
+not the private repository. The original-source route identifies pinned
+public QuantLet records, rejects mismatched hashes, and explains why raw
+BLEM traces are not redistributed without established permission.
+
+5. FINAL ATTACHMENT CONSISTENCY CHECK
+
+The newest attachment's fixed-fallback attribution has been added and
+verified. On the matched-half blocks, fixed batching succeeds on 155/165
+original and 51/57 external stored records, versus cover expectations of
+108/165 and 37/57. The deficits of 47 and 14 account for the entire panel
+deficits under both supplied threshold conventions. The independent check
+now reconstructs this attribution explicitly. The prose correctly says the
+recorded-score deficit arises there; it does not claim that every policy
+action is identical outside those subsets. The zero worst-case success of
+each deterministic batch on a matched-half block is a valid consequence of
+the proven randomized optimum 1/2.
+
+The worked-certificate paragraph now distinguishes its conservative upper
+bounds, 0.47743079 and 0.4774 on enlarged domains, from the exact envelope
+peak about 0.47734 in Figure 2(a). No value was changed. The source retains
+the earlier table's rounded upper enclosures; the displayed conservative
+guarantee remains valid. Both the new paragraph and unchanged figure render
+clearly in final pages 20 and 21.
+
+The named gap paragraph now refers to the batch-precision cover and its
+full-panel cover replay. A generic description 'precision challenger' remains
+in the results lead; it refers to the same clearly defined policy and is
+not a scientific or submission defect. No claim is made that every lexical
+occurrence was renamed.
+
+The newest review's missing DOI space and inconsistent OpenEnergyMonitor
+spelling were checked against the actual source and pixels and were not
+present. All three corporate-author references use the same spelling. Those
+false allegations did not prompt incorrect edits. Leading-zero matrix polish
+was optional and not applied; the matrix remains legible. The unsupported
+earlier-model history was not inserted. The terms-of-use statement is now
+supported by the author's subsequent explicit confirmation. No required
+further manuscript edit follows from these items.
+
+6. FINAL FIRST-READER EDITORIAL PASS
+
+Approximately 180 words of revision-history language and duplicated caveats
+were removed from the component fragments before this final composition.
+Unintroduced references to 'existing', 'unchanged' or 'earlier' analyses were
+replaced by self-contained method descriptions or explicit supplement
+locations. No coefficients, thresholds, outcome counts or scientific claims
+were changed. Capacity/error controls, exploratory chronology, the small
+historical acquisition saving and the superior unrestricted bulk API result
+remain visible. The absolute-width explanation and generated captions now
+read as a standalone paper rather than a response to previous drafts.
+
+The alleged missing coordinate 2 in the worked proof and missing closing
+parenthesis in the API discrepancy were checked in actual pixels: both are
+present. They required no mathematical or typesetting edit. The current
+proof, figure, diagnostics, source-protocol details, API results and final
+declarations are legible in the final render. Root also reports that the
+preflight's general unverified-attestation metadata has been narrowed to
+reflect the new author confirmation; that was not a manuscript defect.
+
+The preceding source-6e32 full 74-step publisher replay passed in 1068.16
+seconds after the earlier disk-space setup failure was resolved. Root
+preserves both that actual pass and the earlier failure log. This is the
+completed scientific verification immediately before the workflow and
+bounded presentation edits; it is not claimed as a fresh run of the current
+source-53a3 package. The new current-source package execution remains a
+separate pending delivery check at this review's completion.
+
+The evaluation opening now uses concise active language to distinguish
+constructed checks, saved replay, the external-source fits and actual API
+measurements. Two orientation sentences separate the acquisition policies
+in Table 5 from the guarantee-status categories in Table 6. These changes
+and two paragraph splits reduce reading load without altering results.
+
+CONCLUSION OF THIS INTERNAL REVIEW
+The newest changes strengthen the practical explanation and comparator
+transparency without changing the historical results. The confirmed plot
+and workflow layout issues were fixed and their final renders verified. I found
+no additional required manuscript edit in this pass. This finding does not
+establish a 90-95% acceptance probability or guarantee direct acceptance.
+
+POST-REVIEW EXECUTION COMPLETION
+The subsequent final publisher-package replay passed all 74 steps in 1250.8333193 seconds. It reconstructed the reviewed source byte-for-byte (53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f). This completes the pending execution recorded above; earlier source-specific runs remain separate. See outputs/current_clean_package_replay.json for scope and outputs/journal_supplement_verification.json for the tested archives.

@@ -1,12 +1,8 @@
 \paragraph{Precision on the original loss scale.}
-The relative target can be translated into the units of the audit.
-Table~\ref{tab:absolute_joint_widths} does so for the existing worked example,
-using the frozen forecasts and the same two queried registers. Here the
-six-target loss uses $c_h=2(b_h-a_h)/6$, so the interval widths are in
-$\mathrm{kWh}^2$; a 24-target normalization is not used. The units describe
-differences of stored cumulative API-grid samples, with the timestamp and
-physical-measurement qualifications in Table~\ref{tab:measurement-assumptions}.
-The half-width requirement is a declared audit-precision target. It has not
-been calibrated to financial loss or operational decision materiality, and a
-narrower interval need not exclude zero. Exact segment ranges and independent
-endpoint LPs reproduce these absolute widths without changing any threshold.
+Table~\ref{tab:absolute_joint_widths} translates the relative target into
+loss units for the HPM~1 task above, using its frozen forecasts and two queried
+registers. The six-target loss uses $c_h=2(b_h-a_h)/6$, so the interval widths
+are in $\mathrm{kWh}^2$; a 24-target normalization is not used. The targets
+are stored API-grid increments under the measurement assumptions in
+Table~\ref{tab:measurement-assumptions}. Exact segment ranges and separately
+implemented endpoint LPs reproduce the absolute widths.

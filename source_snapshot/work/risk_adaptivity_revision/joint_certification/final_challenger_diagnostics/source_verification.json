@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "blocks": 1098,
+  "coefficient_rows_joined": 6588,
+  "original_coefficients_bundled": false,
+  "scope": "Both-panel diagnostic joins to regenerated shared and precision catalogs and the existing verified derived-width replay. Coefficient inequalities checked separately in full_source_independent_check.json. Source timestamps, source bytes, frozen forecasts and coefficient derivation are verified by provenance_chain; this is not a fresh fit.",
+  "inputs": {
+    "shared_plans": "e22e2241e390700149a3914c29f2959881d04196248e82233cb894e778cb1625",
+    "precision_plans": "98f82f104f17781272055bbd1c69f2f2bcb28cdcdde950e12a365596c53ad204",
+    "replay_inputs": "d02395c3e5248d283e35c90e32f625e3e2da4add695d5ff80ab815bfd25ab66d",
+    "diagnostic_inputs": "5b927421984f78fd6d3bff527a40a0cf147145e1fc53615ebe56219356d6b497"
+  },
+  "source_sha256": "0da3a30cd5274e760f55dc583489559e52ec05ee085e1aa19fdb3bd09911c5fa",
+  "new_network_calls": 0,
+  "new_forecast_fits": 0
+}

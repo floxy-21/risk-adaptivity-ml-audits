@@ -14,8 +14,8 @@ For two frozen forecast vectors $a,b$, their block MSE contrast is
 The permitted query at boundary $k\in\{1,\ldots,5\}$ returns
 $C_k$, equivalently the prefix sum $s_k=C_k-C_0$.
 The budget is at most two distinct internal registers per pair and block.
-This is a declared cumulative-register access interface, rather than the
-coordinate-increment interface of the earlier recovery experiment.
+This interface retrieves cumulative registers. The coordinate-increment
+recovery controls are documented separately in Online Resource~1, S2--S4.
 The register queries are exact linear measurements covered by the general
 information model. Adaptive scalar certification also appears in monotone
 integral estimation \citep[Section~4.1]{gaillard2023}; here the target is an
@@ -135,5 +135,4 @@ An equal mixture of $\{2,4\}$ and $\{4,5\}$ succeeds with probability
 at least $1/2$ on every completion when $\tau\geq1/2$.
 Consequently, for every $\tau\in[1/2,1)$ the optimal adaptive worst-case
 success is $1$ and the optimal randomized-batch worst-case success is
-$1/2$. These are exact mathematical values, not measured application
-performance or acquisition-cost savings.
+$1/2$.

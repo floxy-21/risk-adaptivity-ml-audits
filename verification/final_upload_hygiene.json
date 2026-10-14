@@ -1,0 +1,63 @@
+{
+  "archives": {
+    "research_supplement.zip": {
+      "members_scanned": 1177,
+      "expanded_bytes_scanned": 2557260977,
+      "sha256": "940144c6bc2217ebada13a510ac5f17afbd37d359f3e249b0a4c13f48acdf7e6",
+      "findings": [],
+      "flagged_paths": [],
+      "nested_zips": []
+    },
+    "Supplemental_Data_S1.zip": {
+      "members_scanned": 822,
+      "expanded_bytes_scanned": 166455716,
+      "sha256": "51058e338410447f832d88ef2b50d9832d265e61f690911e4bcdbc68898e9262",
+      "findings": [],
+      "flagged_paths": [],
+      "nested_zips": []
+    },
+    "Supplemental_Data_S2.zip": {
+      "members_scanned": 253,
+      "expanded_bytes_scanned": 286063877,
+      "sha256": "f6138fb01c1d0abd38aebca19cef22badcd299cff9518a86ab6f969739e5e837",
+      "findings": [],
+      "flagged_paths": [],
+      "nested_zips": []
+    }
+  },
+  "local_payload": {},
+  "scope": "Read-only signature and author-registration-identifier scan including gzip contents. Potential values are never printed. Pattern matching does not prove absence of every possible secret. This completed scan is bound to the final workflow-edited artifacts; preceding scan retained separately.",
+  "additional_intended_report_files_scanned": 44,
+  "original_raw_check": {
+    "frozen_blem_rows": 6552,
+    "nonblank_truth_fields": 0,
+    "nonblank_direct_copy_forecast_fields": 0,
+    "excluded_raw_paths_present": []
+  },
+  "copy_filter_check": {
+    "current_snapshot_files": 980,
+    "expected_current_snapshot_files": 1030,
+    "stale_snapshot_extras": [],
+    "missing_before_prepare": 50
+  },
+  "private_repository_read_only_check": {
+    "isPrivate": true,
+    "nameWithOwner": "floxy-21/risk-adaptivity-ml-audits",
+    "visibility": "PRIVATE"
+  },
+  "manuscript_sha256": "53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f",
+  "pdf_sha256": "cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302",
+  "manuscript_current_private_repo_mentions": 0,
+  "primary_source_github_reference_count": 3,
+  "release_assets": [
+    "RELEASE_SHA256.txt",
+    "research_supplement.zip",
+    "revised_manuscript.pdf",
+    "revised_manuscript.tex",
+    "Supplemental_Data_S1.zip",
+    "Supplemental_Data_S2.zip"
+  ],
+  "elapsed_seconds": 134.12961750000068,
+  "completed_utc": "2026-10-14T02:04:05.359851+00:00",
+  "status": "PASS"
+}

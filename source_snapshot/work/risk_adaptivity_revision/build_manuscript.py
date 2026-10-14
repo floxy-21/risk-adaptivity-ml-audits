@@ -57,6 +57,7 @@ def main():
 \usepackage{newtxtext,ragged2e}
 \usepackage[justification=raggedright,singlelinecheck=false]{caption}
 \usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage{tikz}
 \usepackage[authoryear,round]{natbib}
 \usepackage[hidelinks]{hyperref}
 \usepackage{xurl,microtype,placeins}
@@ -77,6 +78,10 @@ def main():
 \newcommand{\clip}{\operatorname{clip}}
 '''
     text = preamble + local('editorial/front.tex').replace('adjust2024', 'wei2024')
+    workflow_marker = 'Our primary contribution is the mathematical classification'
+    assert text.count(workflow_marker) == 1
+    text = text.replace(workflow_marker,
+                        local('editorial/audit_workflow.tex') + '\n' + workflow_marker, 1)
     old_prior = between(text, 'The width of an information fiber', 'Information-dependent decisions')
     text = text.replace(old_prior, local('general/prior_art_precision.tex') + '\n')
     # Pinpoint related-work prose carries the comparison without a duplicate table.
@@ -101,9 +106,16 @@ def main():
                                      joint_definition + r'\begin{theorem}', 1)
     text += inspectable + joint_algorithms
     text += local('joint_certification/main_planner_algorithm.tex')
+    text += local('joint_certification/final_practical_figure/clarification.tex')
     text += local('joint_certification/main_worked_precision_certificate.tex')
     text += local('joint_certification/absolute_width_fragment.tex')
     text += local('joint_certification/absolute_width_results/main_table.tex')
+    figure_check = json_source('work/risk_adaptivity_revision/joint_certification/final_practical_figure/independent_check.json')
+    figure_data = json_source('work/risk_adaptivity_revision/joint_certification/final_practical_figure/figure_data.json')
+    assert figure_check['status'] == 'PASS'
+    assert figure_check['envelope_equalities'] == 735 and figure_check['replay_points_checked'] == 30
+    assert figure_check['figure_data_sha256'] == sha(BASE / 'joint_certification/final_practical_figure/figure_data.json')
+    text += local('joint_certification/final_practical_figure/figure_fragment.tex')
     text += local('editorial/measurement_assumptions.tex')
     structured = local('editorial/structured_start.tex')
     compact = between(old, r'\section{Randomized Recovery under a Hard Budget}', r'\subsection{Interpreting the robust objective}')
@@ -227,6 +239,21 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
     text += local('joint_certification/final_review_results/main_system_table.tex')
     text += local('joint_certification/final_review_dependence_paragraph.tex')
     text += local('joint_certification/precision_manuscript_fragment.tex')
+    diagnostics = json_source('work/risk_adaptivity_revision/joint_certification/final_challenger_diagnostics/results/report.json')
+    diagnostics_check = json_source('work/risk_adaptivity_revision/joint_certification/final_challenger_diagnostics/independent_check.json')
+    assert diagnostics['status'] == diagnostics_check['status'] == 'PASS'
+    assert diagnostics['blocks'] == diagnostics_check['exact_regime_cases'] == 1098
+    assert diagnostics_check['coefficient_derived_cases'] == 279
+    assert [(r['fixed_guarantee'], r['adaptive_only_guarantee'], r['no_deterministic_adaptive_guarantee']) for r in diagnostics['regimes']] == [(162,168,489),(128,57,94)]
+    text += local('joint_certification/final_challenger_diagnostics/manuscript_fragment.tex')
+    sensitivity_report = json_source('work/risk_adaptivity_revision/joint_certification/review_sensitivity/results/report.json')
+    sensitivity_check = json_source('work/risk_adaptivity_revision/joint_certification/review_sensitivity/independent_check.json')
+    assert sensitivity_report['status'] == sensitivity_check['status'] == 'PASS'
+    assert sensitivity_report['blocks'] == 1098 and sensitivity_report['outcome_rows'] == 5490
+    assert sensitivity_report['new_forecast_fits'] == sensitivity_report['new_policy_optimizations'] == 0
+    text += local('joint_certification/review_sensitivity/manuscript_fragment.tex')
+    # Figure 1(b) presents these same counts; retain the numeric table in S8.
+    text += '\n\\FloatBarrier\n'
     text += local('joint_certification/noise_manuscript_fragment.tex')
     text += local('joint_certification/verification_main.tex')
     lineage = json_source('work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/table_chain.json')
@@ -243,11 +270,7 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
     assert triage['status']=='PASS' and triage['cases']==4914
     assert triage['counts']=={'batch_suffices':4371,'feedback_required':290,'adaptive_not_guaranteed':253}
     assert triage['exact_half_cases']==290
-    text += local('editorial/counter_results_short.tex').replace(
-        '% WORKED_EXAMPLE_MAIN', local('counter_adaptive/reviewer_diagnostics/worked_example_main.tex'))
-    text += local('external_validation/math/manuscript_caps.tex')
-    text += '\n\\FloatBarrier\n'
-    text += local('external_validation/replay/manuscript_fragment.tex')
+    text += local('editorial/pairwise_controls_short.tex')
     qualification = json_source('work/risk_adaptivity_revision/external_validation/operational/source_qualification_check.json')
     assert qualification['status'] == 'PASS' and qualification['selected_systems'] == [1, 2, 7]
     assert qualification['verified_cached_response_hashes'] == 41
@@ -272,7 +295,6 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
     end_sensitivity = '% END MANUSCRIPT BODY'
     if begin_sensitivity in sensitivity:
         sensitivity = between(sensitivity, begin_sensitivity, end_sensitivity).replace(begin_sensitivity, '', 1)
-    text += sensitivity
     text += local('editorial/operational_api_results.tex')
     text += local('editorial/protocol_selection_short.tex')
     selector_report = json_source('work/risk_adaptivity_revision/protocol_selection/results/report.json')
@@ -331,6 +353,8 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
                 + local('counter_adaptive/reviewer_diagnostics/complete_witness.tex')
                 + local('external_validation/math/manuscript_uncertainty_appendix.tex')
                 + local('editorial/stored_error_full.tex')
+                + local('external_validation/math/manuscript_caps.tex')
+                + local('external_validation/replay/manuscript_fragment.tex')
                 + '\\section{S7. Detailed computational verification}\n' + computation
                 + '\\section{S8. Shared-query certificates and protocol selection}\n'
                 + local('joint_certification/proof_supplement.tex')
@@ -338,6 +362,7 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
                 + local('joint_certification/empirical_paired_all_results/paired_table.tex')
                 + local('joint_certification/final_review_methods.tex')
                 + local('joint_certification/final_review_results/supporting_dependence_table.tex')
+                + local('joint_certification/review_sensitivity/results/threshold_table.tex')
                 + local('joint_certification/noise_proof_fragment.tex')
                 + local('joint_certification/precision_proof_fragment.tex')
                 + local('protocol_selection/manuscript_fragment.tex')
@@ -374,7 +399,8 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
         if not m: continue
         if m.group(2) not in cited | online_cited: continue
         sort = re.sub(r'[^A-Za-z0-9 ]', '', m.group(1)).lower()
-        sort = {'krieg2025': 'krieg novak ullrich', 'krieg2026': 'krieg ullrich'}.get(m.group(2), sort)
+        sort = {'krieg2025': 'krieg novak ullrich', 'krieg2026': 'krieg ullrich',
+                'novak1995': 'novak 1995', 'novak2008': 'novak wozniakowski 2008'}.get(m.group(2), sort)
         if m.group(2) in cited:
             entries.append((sort, m.group(2), item.strip()))
         if m.group(2) in online_cited:

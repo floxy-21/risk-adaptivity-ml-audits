@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "tasks": 4914,
+  "ledger_rows": 24570,
+  "primary_guarantees": 4661,
+  "primary_strong": 290,
+  "exact_half_cover_witnesses": 290,
+  "screening_prevalence_met": false,
+  "scope": "Bundled report/ledger/table consistency, rational witness masses and covering-interval algebra. Does not reopen raw registers or recompute original-coefficient envelopes. Use reproduce_counter.py and check_half_cover.py for those fresh checks."
+}

@@ -5,33 +5,6 @@ needs no query. Otherwise, a bulk response or fixed batch can avoid feedback;
 adaptive retrieval is useful when it meets the required guarantee with fewer
 permitted readings.
 
-The public API's full-range response is admissible,
-uses one request, and is faster on the measured three-task workload. The
-selector therefore recommends bulk. Under the separate restricted-reading
-contract, the same assurance analysis instead justifies 22 two-reading and
-seven three-reading prescriptions. The contracts limit different resources:
-65 versus 87 counts reserved scalar readings across the selected 29 audits,
-while 51 versus 29 counts information rounds. A service that values rounds
-more than readings can reasonably choose fixed batches. Actual monetary
-costs and service-wide latency require corresponding operational measurements.
-
-\paragraph{Breadth of the theory and limits of the implementations.}
-The classification applies to any known compact convex feasible set, scalar
-affine target, finite exact-linear query dictionary and answer-independent
-family of legal final query sets. It permits signed targets, overlapping
-constraints, valid upper bounds and unequal fixed costs. It is not restricted
-to energy or disjoint totals. Fixed bounded errors also fit by including
-them in the hidden record, as detailed in Online Resource~1, S6.
-The finite dictionary matters: allowing every linear functional at equal
-cost would permit a direct query of the scalar contrast itself.
-
-Computational guarantees have narrower scopes. The general polyhedral
-formulations handle a declared batch family and exact deterministic
-two-query planning. The counter rule exploits cumulative sums and a known
-nonnegative total. The compact coordinate solver uses disjoint exact totals
-and unit costs. These specializations do not supply an efficient
-arbitrary-budget precision optimizer for every convex set.
-
 \paragraph{What the application establishes.}
 With two readings shared across six comparisons, feedback guarantees the
 required precision on 165 original and 57 external blocks where every
@@ -39,17 +12,16 @@ randomized fixed batch has worst-case success at most one half. Matching
 batch constructions attain that bound. This is a change in the assurance
 available at the same budget. The worked example also reports the six
 interval widths in original loss units (Table~\ref{tab:absolute_joint_widths}).
-Across the complete panels, recorded gains over the best fixed worst-width
+These precision certificates complement the constructed mean-risk theorem;
+they do not measure its $1/2$-versus-$2/3$ gap on the data. Across the
+complete panels, recorded gains over the best fixed worst-width
 batch are 7.81 and 11.11 percentage points, with smaller gains of 2.20 and
 2.15 points over greedy adaptation. We do not infer improved forecasting
 accuracy or operating savings from these precision results.
 
-The earlier, separate-pair analysis has smaller effects: the exact
-feedback-dependent gap occurs in 5.90\% and 1.73\% of cases, while overall
-recorded gains are 0.407 and 0.119 percentage points. Greedy succeeds on all
-29 external separation cases. Both analyses use three systems per source;
-the shared analysis reuses these data. Repeated days and model pairs do not
-establish population prevalence.
+The separate-pair replay has smaller recorded gains of 0.407 and
+0.119 percentage points. Both analyses use three systems per source;
+repeated days and model pairs do not establish population prevalence.
 
 The capacity controls show that feedback's larger gains need not survive
 additional hourly information, while internal-reading errors can increase
@@ -64,6 +36,29 @@ On the external panel, greedy certifies one more best model despite its
 lower joint-precision success. The width objective therefore does not
 uniformly improve model choice.
 Requests until a decision are another objective; neither theorem optimizes it.
+
+\paragraph{Choosing an acquisition interface.}
+Bulk uses one request and is faster on the measured three-task API workload,
+so the implementation selects it when admissible. Under the separate
+restricted-reading contract, it uses 22 two-reading and seven three-reading
+prescriptions. Their 65 reserved readings compare with 87 for fixed batches,
+but they require 51 information rounds rather than 29. The declared cost
+frontier explains when each prescription is preferable; it is not measured
+financial or service-wide benefit. Capacity bounds can likewise make fixed
+retrieval sufficient. The practical output is a checked choice under a stated
+contract, including cases where selective adaptation is unnecessary.
+
+\paragraph{Breadth of the theory and limits of the implementations.}
+The scalar classification permits compact convex sets, affine targets, a
+finite linear-query dictionary and answer-independent legal query sets.
+It includes signed targets, overlapping constraints and unequal fixed costs.
+Fixed bounded errors can enter the hidden record (Online Resource~1, S6).
+The finite dictionary matters: unrestricted linear measurements would permit
+querying the scalar target directly. The algorithms are more specialized:
+general polyhedra with an enumerated batch family or two-query planning;
+cumulative sums with a known nonnegative total; and compact coordinate
+recovery with disjoint exact totals and unit costs. They do not provide an
+efficient arbitrary-budget precision optimizer for every convex set.
 
 \section{Conclusions}
 The risk objective determines whether feedback can improve the worst-case

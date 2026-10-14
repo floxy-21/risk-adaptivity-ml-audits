@@ -121,7 +121,7 @@ def main():
          r'Model contrast & Initial $W_{r,0}$ & Target $W_{r,0}/2$ & Terminal $W_r$ & $W_r/W_{r,0}$\\',r'\midrule']
     for r in rows:
         tex.append(f"{LABELS[r['model_a']]}--{LABELS[r['model_b']]} & {r['initial_width_kwh2']:.6f} & {r['half_threshold_kwh2']:.6f} & {r['terminal_width_kwh2']:.6f} & {r['normalized_terminal_width']:.4f}"+r'\\')
-    tex += [r'\bottomrule',r'\end{tabular}',r'\caption{Original loss scale for the existing HPM~1 worked example on 5 July 2025, 12:00--18:00 UTC. The first three numeric columns have units $\mathrm{kWh}^2$: they are widths and width targets for identification intervals of six-target MSE differences on stored API-grid increments. The retained endpoint difference is $E=1.83984375$ kWh. The unchanged adaptive policy retrieves the 14:00 register and then the 13:00 register. Normalization uses the initial width of each contrast, not a common numerical loss scale.}',r'\label{tab:absolute_joint_widths}',r'\end{table}']
+    tex += [r'\bottomrule',r'\end{tabular}',r'\caption{Original loss scale for the HPM~1 worked example on 5 July 2025, 12:00--18:00 UTC. The first three numeric columns have units $\mathrm{kWh}^2$: they are widths and width targets for identification intervals of six-target MSE differences on stored API-grid increments. The retained endpoint difference is $E=1.83984375$ kWh. The adaptive policy retrieves the 14:00 register and then the 13:00 register. Normalization uses the initial width of each contrast, not a common numerical loss scale.}',r'\label{tab:absolute_joint_widths}',r'\end{table}']
     (out/'main_table.tex').write_text('\n'.join(tex)+'\n',encoding='utf8')
     print(json.dumps({k:v for k,v in report.items() if k not in ['pairs','inputs']},indent=2))
 

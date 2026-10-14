@@ -2,6 +2,12 @@ CURRENT FOCUSED MANUSCRIPT: TABLE AND VERIFICATION CORRESPONDENCE
 Risk and Adaptivity in Certifying Machine-Learning Model Comparisons
 Source: outputs/revised_manuscript.tex
 Use semantic LaTeX labels below; table numbers change when new evidence is inserted.
+The main paper now includes a claim/objective/evidence map and an exploratory
+shared-query threshold sensitivity; review_sensitivity/README.txt documents it.
+Separate-pair replay tables, scalar capacity controls and full stored-error
+fallback details are in Online Resource1,S6; their headline values and source
+protocols remain in the main text. The mathematical proofs are unchanged.
+
 Moved supporting material is current, not discarded: see
 editorial/online_extended_methods.tex sections S1--S8. Its uncompiled LaTeX
 content fragment preserves methods and tables; numerical CSV/JSON outputs and
@@ -31,7 +37,7 @@ listed below. Read its actual status and steps, not merely the existence of a
 frozen report. --small runs mathematical checks only, not the empirical checks.
 The historical 13-step full-run record is archived separately at
 work/risk_adaptivity_revision/executed/full_clean_replay.json; it predates the
-current extensions and does not establish completion of the current 69-step
+current extensions and does not establish completion of the current full
 replay. Read outputs/risk_clean_replay.json for the current run's status and
 steps. The new counter study is documented separately below and in
 counter_adaptive/executed/raw_reproduction_report.json; it extends the paper
@@ -128,10 +134,10 @@ arithmetic. Joint precision and a certified winner remain distinct outcomes.
 Case-by-case fresh/frozen correspondence
 empirical_release_check.py checks the fresh exact, precision, cap and noisy
 case ledgers, including invalid-cap flags. Default report:
-outputs/joint_scientific_match.json. These24newjobs precede external cached
+outputs/joint_scientific_match.json. Shared-study checks precede external cached
 geometry regeneration; requires_frozen_inputs in replay_jobs.json and the
-driver's dependency check enforce this ordering. The previous39driversteps
-are retained, with two final-review dependence checks and one printed-certificate check giving 66 steps. Completion requires the actual final
+driver's dependency check enforce this ordering. The current job list is
+replay_jobs.json; the driver adds seven base checks. Completion requires the actual final
 outputs/risk_clean_replay.json, not these archived PASS records alone.
 
 tab:risk_three_coordinate -- Exact three-coordinate example
@@ -1065,3 +1071,36 @@ Omit --raw-dir to obtain the three mandatory version-pinned public sources.
 This route reconstructs original raw-dependent outputs locally. It does not
 refit models. It reproduced 819/279 complete blocks and 165/57 matched-half
 certificates. Default offline external execution does not claim this raw route.
+
+POST-HOC THRESHOLD AND GAP ANALYSIS
+Commands from extracted root:
+  python work/risk_adaptivity_revision/joint_certification/review_sensitivity/analyze.py
+  python work/risk_adaptivity_revision/joint_certification/review_sensitivity/check.py
+Figure fig:practical-guarantee-replay(b); S8 table tab:joint_threshold_sensitivity;
+gap paragraph. All 1,098 frozen blocks, all 5 targets, unchanged policies; no
+new fits or optimization. Source checks verify 6,588 coefficients, 10,980
+widths and 720 endpoint LPs. Default replay covers derived
+inputs/outputs; separate source command is in review_sensitivity/README.txt.
+
+FINAL GUARANTEE AND FALLBACK DIAGNOSTICS
+  python work/risk_adaptivity_revision/joint_certification/final_challenger_diagnostics/analyze.py
+  python work/risk_adaptivity_revision/joint_certification/final_challenger_diagnostics/check.py
+Main paragraphs: When feedback changes the available guarantee; A stronger
+fallback check. Outputs: results/regime_cases.csv, regime_certificates.json,
+paired_summary.csv, replay_cases.csv and report.json. Default jobs
+final_challenger_diagnostics and final_challenger_independent reconstruct
+all 1,098 saved interval/replay summaries and the 279 external coefficient
+derivations. Original coefficient derivation uses the pinned raw-source route;
+its completed separate check is full_source_independent_check.json. Fixed,
+adaptive-only and unguaranteed counts are 162/168/489 and 128/57/94.
+The same jobs reconstruct fallback_attribution.json and its case/group CSVs:
+the complete fixed-versus-cover score deficit is 47 original and 14 external
+expected successes, all on matched-half blocks. Nonmatched outcomes agree.
+
+TWO-PANEL PRACTICAL FIGURE
+  python work/risk_adaptivity_revision/joint_certification/final_practical_figure/check_figure.py --output outputs/final_practical_figure_check.json
+Figure fig:practical-guarantee-replay combines the worked external block's
+exact conditional curves with the unchanged five-target recorded replay.
+Default job final_practical_figure checks 735 exact envelope equalities and
+30 recorded success points. TikZ is embedded in the main editable source;
+standalone PDF/PNG, generation source and rational figure_data.json are bundled.

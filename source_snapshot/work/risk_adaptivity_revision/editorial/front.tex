@@ -10,10 +10,10 @@ needs to know whether further readings will make a model comparison precise
 enough. We ask when choosing the next reading after seeing an earlier answer
 improves that guarantee under a fixed budget.
 
-\textbf{Methods.} We bound model-loss differences over all records compatible
-with the available measurements. We classify scalar width penalties and
-derive shared-query policies with matching lower bounds and executable
-certificates.
+\textbf{Methods.} We bound model-loss differences over all compatible records.
+We classify scalar width penalties and prove a shared-query separation with
+matching lower bounds. We then check precision certificates on frozen
+forecast comparisons and replay the policies on stored answers.
 
 \textbf{Results.} A shared-query construction has optimal adaptive mean
 joint width $1/2$, versus $2/3$ for randomized batching, with matching
@@ -21,10 +21,11 @@ lower bounds. For scalar width, the two minimax risks agree universally
 exactly for nondecreasing concave penalties. On 165 of 819 original blocks and 57 of 279 external
 blocks, two shared adaptive readings guarantee joint half-width precision,
 whereas optimal randomized-batch worst-case success is exactly 50\%.
-On these subsets, recorded success is 100\% versus 65.45\% and 64.91\%
-for certified optimal batch mixtures. Across the complete panels,
-adaptive gains over fixed worst-width batches are 7.81 and 11.11 percentage
-points; gains over greedy adaptation are 2.20 and 2.15 points. Under
+These are precision-success guarantees, distinct from mean-width risk.
+On the certified subsets, recorded success is 100\% versus 65.45\% and 64.91\%
+for the selected optimal batch mixtures. Complete-panel replay gives
+7.81- and 11.11-percentage-point gains over fixed worst-width batches,
+and 2.20- and 2.15-point gains over greedy adaptation. Under
 illustrative 1\% internal errors with exact endpoints, 45 external blocks
 retain an adaptive guarantee that every randomized batch fails to match.
 Capacity information reduces this advantage, and measured public-API retrieval
@@ -48,7 +49,6 @@ guarantee that this interval will be sufficiently narrow. Width limits how
 much the reported loss difference can vary across compatible records.
 The application requires retrieval to halve that range: a declared uncertainty
 budget for reporting a comparison, not a validated proxy for choosing a winner.
-A narrow interval can still contain zero.
 
 We study affine scalar contrasts on nonempty compact convex uncertainty
 sets, with queries selected from a fixed finite dictionary of linear
@@ -67,41 +67,49 @@ verification readings to retrieve. A certificate checks whether the resulting
 comparison meets the requirement for every compatible record. This differs
 from improving the predictor itself.
 
-The central result is a shared-query separation with explicit policies and
-matching lower bounds (Section~\ref{sec:joint-separations}). A six-interval
-construction has optimal mean joint width $1/2$ for adaptive policies and
-$2/3$ for randomized batches. A worked meter example then certifies a
-different objective: feedback guarantees precision that no randomized
-fixed batch can guarantee. Both arguments have executable proof certificates.
-These results build on the scalar classification: concavity exactly
-characterizes the nondecreasing width penalties for which adaptation never
-improves randomized minimax risk. A coordinate-query construction proves
-the converse. The classification credits established minimax reasoning and
-Jensen's inequality; a dimension-dependent precision consequence adapts
-established sparse-policy bounds \citep{kurtz2026}.
+Our primary contribution is the mathematical classification and the explicit
+shared-query separation in Table~\ref{tab:claim-evidence}. The classification
+uses established minimax reasoning and Jensen's inequality; we supply its
+coordinate-query converse. A separate construction proves an exact adaptive
+advantage for the largest normalized width across contrasts. The supporting
+dimension-dependent precision result adapts sparse-policy bounds
+\citep{kurtz2026}.
 
-Cumulative meter records let us ask a concrete question: can the same
-two readings make all six comparisons precise at once? On all 819 original
-and 279 external blocks, the shared adaptive policy improves recorded joint
-precision success by 7.81 and 11.11 percentage points over the best fixed
-worst-width batch. The gains over a strong greedy adaptive policy are 2.20
-and 2.15 points. This is a retrospective extension using the frozen data,
-not an additional independent sample. Bounded-error certificates and capacity
-controls test when the shared-query advantage persists.
-An objective-matched calculation identifies 165 original and 57 external
-blocks where adaptive success is guaranteed and the full-continuum
-randomized-batch precision optimum is exactly $1/2$. On those same blocks,
-the recorded batch success is 65.45\% and 64.91\%, versus 100\% for adaptive
-querying. The subset criterion uses the forecast geometry, not these recorded
-outcomes; the complete panels and their stronger empirical comparators remain
-in the evaluation.
+The data answer a related, more specific question: can the same two readings
+make all six forecast comparisons precise? We identify 165 original and 57
+external blocks with a guaranteed adaptive success probability of one and
+an optimal randomized-batch success probability of one half. These exact
+instance certificates are the principal application evidence. The complete
+819- and 279-block replays test selected policies on the stored answers;
+their empirical success rates do not estimate the constructed mean-risk gap.
+This is a retrospective extension using frozen data, not an additional
+independent sample. Capacity and error controls test the information model;
+the measured API workload identifies bulk retrieval as preferable when its
+full response is admissible.
 
-The retrieval service determines which choices are useful. We test bounded
-reading errors and hourly capacity information, which can respectively
-increase the required budget or remove the need for feedback. Bulk retrieval
-is preferable on the measured public API. Our implementation therefore checks
-the permitted measurements and resource limits before choosing among supplied
-bulk, fixed and adaptive certificates.
+\begin{table}[htbp]\centering\small
+\caption{Claims, objectives and evidence. A guarantee over compatible
+records differs from success on the single stored record in each audit.}
+\label{tab:claim-evidence}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.20\linewidth}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\raggedright\arraybackslash}p{0.44\linewidth}@{}}
+\toprule
+Claim & Objective & Evidence and scope\\\midrule
+Scalar classification & Worst expected penalty of one interval's width &
+Theorem~\ref{prop:risk_classification}: universal equality exactly for
+nondecreasing concave penalties.\\
+Shared-query separation & Worst expected largest normalized width &
+Theorem~\ref{thm:shared-prefix-separation}: constructed optima $1/2$ versus
+$2/3$, each with matching bounds.\\
+Certified meter instances & Worst-case probability that every width meets
+its target & 165/819 and 57/279 blocks: adaptive optimum one versus batch
+optimum $1/2$; worked proof in Section~\ref{sec:worked-joint-certificate}.\\
+Complete-panel replay & Precision success on stored answers &
+Section~\ref{sec:joint-results}: fixed selected policies on all 1,098
+blocks; incomplete batch-precision bounds remain explicit.\\
+Retrieval interface & Recorded requests and I/O time &
+Section~\ref{sec:actual-api}: bulk wins on a three-task public-API workload;
+this does not measure deployment savings.\\\bottomrule
+\end{tabular}\end{table}
 
 The paper develops the classification and sharp examples, then computable
 two-query guarantees and their cumulative-meter specialization. The

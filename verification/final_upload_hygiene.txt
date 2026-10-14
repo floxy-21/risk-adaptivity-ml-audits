@@ -1,0 +1,32 @@
+FINAL READ-ONLY UPLOAD HYGIENE CHECK
+Status: PASS within the stated scan scope.
+Completed UTC: 2026-10-14T02:04:05.359851+00:00
+
+Current manuscript source SHA-256: 53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
+Current PDF SHA-256: cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302
+
+Scanned all three exact final archives, including decompressed gzip contents:
+3,009,780,570 expanded bytes. Also scanned 44 intended manuscript/report
+files from the actual delivery copy lists. The JSON report lists each archive
+hash, member count and finding category; potential secret values are not printed.
+Checked signatures cover credentials, private-key markers, quoted credential
+assignments, author registration password/street/telephone identifiers and the
+outdated author email. This signature scan does not prove that every possible
+secret is absent. No excluded private-review/browser/raw-cache paths occurred.
+
+All 6,552 original BLEM rows keep original truth and direct-copy persistence
+fields blank. The named raw traces, original pilot/continuation and joint_review
+folders remain absent. Derived outcomes and attributed external public caches
+remain the documented distributed inputs.
+
+The source-snapshot copy filter admits 1030 current files. Its existing
+980-file payload has no stale extras; 50 files will be added by
+preparation. The six intended release assets match verify_github.py's allowlist.
+The live read-only repository check returned PRIVATE. Current manuscript source
+has zero private-repository/release identifiers; 3 primary-source GitHub URLs remain.
+
+This scan took 134.13 seconds. The preceding successful hygiene
+scan is preserved as outputs/pre_workflow_hygiene_20261014.json/.txt with its old
+hashes, not relabelled as the current check. No upload, repository settings,
+package, scientific file or manuscript was changed. Current execution readiness
+and release metadata remain separate finalization checks.

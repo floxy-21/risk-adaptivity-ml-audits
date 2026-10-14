@@ -5,8 +5,8 @@ the 279 external blocks and all six pairs per block, with two shared cumulative 
 Public code defaults do not require original BLEM geometry or register answers.
 The package-wide entry point is:
   python work/risk_adaptivity_revision/reproduce.py
-Its 66 steps include 24 shared-budget jobs, two final-review dependence checks,
-and one printed-certificate check before cached external geometry regeneration.
+Its current job list is replay_jobs.json, plus seven base checks in the driver.
+Frozen-input and certificate checks precede cached external geometry regeneration.
 This order matters: exact provenance checks verify frozen hashes.
 Use a disposable extracted copy for manual default commands, which write the
 named output subdirectories here. The package wrapper writes fresh outputs into

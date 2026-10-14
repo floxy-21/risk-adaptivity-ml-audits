@@ -2,22 +2,86 @@
   {
     "name": "source_identity_guards",
     "script": "work/risk_adaptivity_revision/joint_certification/provenance_chain/check_source_guards.py",
-    "args": ["--output", "outputs/source_identity_guards.json"],
+    "args": [
+      "--output",
+      "outputs/source_identity_guards.json"
+    ],
     "report": "outputs/source_identity_guards.json"
   },
   {
     "name": "external_source_forecast_chain",
     "script": "work/risk_adaptivity_revision/joint_certification/provenance_chain/check_source_chain.py",
-    "args": ["--cohort", "external", "--output", "outputs/source_chain_external.json"],
+    "args": [
+      "--cohort",
+      "external",
+      "--output",
+      "outputs/source_chain_external.json"
+    ],
     "report": "outputs/source_chain_external.json",
-    "requires_frozen_inputs": ["work/risk_adaptivity_revision/external_validation/replay/geometry.json"]
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
   },
   {
     "name": "joint_absolute_widths",
     "script": "work/risk_adaptivity_revision/joint_certification/absolute_widths.py",
-    "args": ["--output-dir", "outputs/joint_absolute_widths"],
+    "args": [
+      "--output-dir",
+      "outputs/joint_absolute_widths"
+    ],
     "report": "outputs/joint_absolute_widths/report.json",
-    "requires_frozen_inputs": ["work/risk_adaptivity_revision/external_validation/replay/geometry.json"]
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json"
+    ]
+  },
+  {
+    "name": "joint_threshold_sensitivity",
+    "script": "work/risk_adaptivity_revision/joint_certification/review_sensitivity/analyze.py",
+    "args": [
+      "--output-dir",
+      "outputs/joint_threshold_sensitivity"
+    ],
+    "report": "outputs/joint_threshold_sensitivity/report.json"
+  },
+  {
+    "name": "joint_threshold_independent",
+    "script": "work/risk_adaptivity_revision/joint_certification/review_sensitivity/check.py",
+    "args": [
+      "--results",
+      "outputs/joint_threshold_sensitivity",
+      "--output",
+      "outputs/joint_threshold_independent.json"
+    ],
+    "report": "outputs/joint_threshold_independent.json"
+  },
+  {
+    "name": "final_challenger_diagnostics",
+    "script": "work/risk_adaptivity_revision/joint_certification/final_challenger_diagnostics/analyze.py",
+    "args": [
+      "--output-dir",
+      "outputs/final_challenger_diagnostics"
+    ],
+    "report": "outputs/final_challenger_diagnostics/report.json"
+  },
+  {
+    "name": "final_challenger_independent",
+    "script": "work/risk_adaptivity_revision/joint_certification/final_challenger_diagnostics/check.py",
+    "args": [
+      "--results",
+      "outputs/final_challenger_diagnostics",
+      "--output",
+      "outputs/final_challenger_independent.json"
+    ],
+    "report": "outputs/final_challenger_independent.json"
+  },
+  {
+    "name": "final_practical_figure",
+    "script": "work/risk_adaptivity_revision/joint_certification/final_practical_figure/check_figure.py",
+    "args": [
+      "--output",
+      "outputs/final_practical_figure_check.json"
+    ],
+    "report": "outputs/final_practical_figure_check.json"
   },
   {
     "name": "joint_constructed",

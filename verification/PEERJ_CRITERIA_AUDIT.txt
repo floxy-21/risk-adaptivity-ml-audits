@@ -1,9 +1,9 @@
 FINAL PEERJ COMPUTER SCIENCE REVIEW -- 13 October 2026
-Source SHA256: f9554269d768ee25de92e077b301e745a536805699ec9df8509483ad8980e6f2
-PDF SHA256: 62f50ab90d455dec539feb9257990da2cf32117defa3bc3f793de43e24361e2f
-Pages: 38
+Source SHA256: 53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
+PDF SHA256: cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302
+Pages: 36
 
-Policy sources checked live on 13 October 2026:
+Policy evidence includes live checks on 13 October 2026 at:
 https://peerj.com/journals/computer-science/editorial-criteria
 https://peerj.com/journals/computer-science/policies/
 https://peerj.com/journals/computer-science/author-instructions
@@ -17,11 +17,22 @@ The main text gives the central theorem with both optimality bounds, a worked
 real certificate, and the complete two-query planner with its tie convention.
 The absolute-width example distinguishes original loss units from normalized
 precision. Prior work is credited by objective and precise statement.
-Active prose replaces repeated framing; mathematical notation remains where
+The claim/objective/evidence map distinguishes mean risk, precision guarantees,
+recorded success and retrieval costs. An unchanged-policy exploratory sweep
+uses all five targets from 0.40 to 0.60; unresolved batch-probability gaps are
+quantified. Older separate-pair controls remain in S6. Active prose replaces repeated framing; mathematical notation remains where
 needed for reproducibility. Tables and references are readable in the rendered
-38-page PDF. Letter paper, one-inch margins, 12-point Times-family text,
-left alignment and line numbers follow the instructions. The 232-word
+36-page PDF. Letter paper, one-inch margins, 12-point Times-family text,
+left alignment and line numbers follow the instructions. The 246-word
 abstract is below the journal limit. Editable LaTeX and PDF are supplied.
+The two-panel figure exposes the exact conditional geometry and source-specific
+threshold curves. The scalar precision bound's premises are explicitly
+distinguished from the joint objective; curvature alone proves no separation.
+An introductory workflow exposes the admissible bulk, fixed, adaptive and
+extended-audit routes within the exact-total noiseless model. Policy objectives
+are separated from guarantees and recorded outcomes. The certificate-status
+table makes its closed/open partition and overlapping fallback label explicit.
+The current compiled-source review covers the workflow and displayed equations.
 
 2. EXPERIMENTAL DESIGN -- addressed within the stated research scope.
 Models, chronological splits, information cutoffs, source versions, query
@@ -29,6 +40,9 @@ dictionaries, costs, budgets, thresholds and tie rules are documented.
 Comparators receive identical information and two shared readings. The
 precision-matched batch challenger is distinguished from mean-width and
 deterministic worst-width baselines; unresolved optimization gaps are retained.
+The complete three-way assurance partition, saved greedy-first-query limitation
+and deterministic-fallback diagnostic expose the practical decision and stronger
+controls. Their post-hoc chronology and source-reconstruction scopes are explicit.
 Retrospective extensions are not called untouched confirmation. Six pairwise
 comparisons within one block are not treated as six independent observations.
 Paired outcomes, per-system effects, synchronized calendar-block resampling
@@ -59,18 +73,22 @@ private development archive preserves history separately.
 
 The manuscript acknowledges supervised generative-AI assistance and identifies
 unknown historical model-version details as unknown. Existing funding,
-conflict and exclusivity facts come from the author. Factual final author
-accountability, relevant tool terms/record retention, portal declarations and
-fees remain author matters; see PEERJ_AUTHOR_DECLARATIONS.txt. This review does
-not invent those attestations or declare all submission terms satisfied.
+conflict and exclusivity facts come from the author. The author has personally
+confirmed checking the AI tools' terms of use and publication suitability.
+Final content accountability, disclosure accuracy, record retention, portal
+declarations and fees remain separate author matters; see
+PEERJ_AUTHOR_DECLARATIONS.txt. The confirmed tools-terms check does not establish
+that every other submission term has been satisfied.
 
 VERDICT
 No unresolved blocking scientific or presentation flaw was identified by
-this internal review. The paper is suitable for PeerJ CS consideration;
+the internal reviews and current compiled-source follow-up. Earlier reviews
+retain their original source hashes; latest_compiled_review.txt identifies the
+current source/PDF review. The paper is suitable for PeerJ CS consideration;
 acceptance remains an editorial decision. This is not external human peer
 review, a formal proof certificate for the universal theorem, or a calibrated
 greater-than-80% probability. No external person was contacted. Nothing was
 submitted to a journal.
 
 FINAL ARTIFACT VERIFICATION
-PASS: 69 steps in a fresh network-disabled stage from the two publisher ZIP files, 1014 manifested members, 1136.96 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 38.86 MB. Full historical archive integrity also passed.
+PASS: 74 steps in a fresh network-disabled stage from the two publisher ZIP files, 1074 manifested members, 1250.83 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 41.04 MB. Full historical archive integrity also passed.

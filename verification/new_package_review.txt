@@ -1,0 +1,123 @@
+REVIEWER-PACKAGE AND REPORTING AUDIT -- 13 OCTOBER 2026
+
+Reviewer scope
+AI-assisted internal audit of the delivered S1/S2 ZIPs, entry-point documentation,
+source-to-table lineage, dependency installation and reporting hierarchy. This is
+not external human review, independent model refitting or a universal proof check.
+
+Delivered files actually inspected
+Supplemental_Data_S1.zip: 15,295,346 bytes; SHA256
+582ae2159e465c6697b66bc86f246d061ed70fb8a376cdecd0a5f9a5e0ad5af8.
+Supplemental_Data_S2.zip: 23,565,178 bytes; SHA256
+6f79878f6195453e2b5b1c53d03ec1acb9346a0048644310450f7017d8b9794b.
+Both were newly extracted into work/reviewer_entry_audit_20261013.
+All 1,014 listed MANIFEST.sha256 entries matched before focused commands ran.
+The distribution is 38.86 MB total. Neither ZIP is complete alone; this is clearly
+stated in the first README lines and JOURNAL_PACKAGE_README.txt.
+
+Concrete issues identified and root-agent corrections checked
+1. INSPECTABLE_CERTIFICATES.txt incorrectly declared the supplement root while
+   giving paths relative to work/risk_adaptivity_revision. All four commands now
+   carry the complete work/risk_adaptivity_revision/joint_certification prefix.
+2. external_heatpump/SELECTION_AND_CHRONOLOGY_README.txt had the same prefix
+   omission for the source-qualification checker; root agent corrected it.
+3. CURRENT_RESULTS_MAP.txt and joint_certification/README.txt retained a stale
+   66-step description. Root replaced it with the current job-list reference.
+4. Submitted requirements omitted two transitive dependencies despite describing
+   an exact environment. Fresh installation selected narwhals2.27.1, whereas the
+   study uses2.26.0. Root added narwhals==2.26.0 and cloudpickle==3.1.2 to current
+   requirements and retained the historical requirements separately.
+5. The complete both-source command was near line1056 of CURRENT_RESULTS_MAP.
+   Recommended a top-level three-tier reviewer quick start: exact certificates,
+   complete offline replay, then full both-source raw regeneration. Navigation
+   should not require reading a thousand-line historical map.
+These are reproducibility/usability corrections. No numerical failure was found.
+They require rebuilding the delivered ZIPs/manifests; the hashes above identify
+THE PRE-REVISION files reviewed, not the upcoming revised release.
+
+Fresh dependency environment and actual rerun
+Created work/reviewer_freshvenv_20261013 from Python3.12.14 with system-site-packages
+false. Installed the old submitted requirements, then explicitly pinned the two
+transitive packages to the current study versions. All11 scientific pins now
+match outputs/requirements-study.txt; pip check reports no broken requirements.
+Wheels were reused from pip cache where available. This is a fresh virtualenv on
+the same Windows host, not an independent machine/OS reproduction.
+Machine-readable setup: outputs/fresh_environment_setup_20261013.json.
+Associated pip-list and pip-check records are linked in that file.
+
+Executed from the newly extracted package root using that fresh Python:
+  python work/risk_adaptivity_revision/joint_certification/proof_check_joint.py
+  python work/risk_adaptivity_revision/joint_certification/check_main_inspectable_certificate.py
+  python work/risk_adaptivity_revision/general/check_general_lp.py --output outputs/fresh_env_general_lp.json
+  python work/risk_adaptivity_revision/joint_certification/provenance_chain/run_chain.py --cohort external --output-dir fresh_environment_external_chain
+
+Results
+- Constructed shared theorem: PASS. Adaptive mean1/2; batch mean2/3;126 rational
+  grid records,4032 scalar-fiber endpoint checks,160 conditional-extremum checks.
+- Main printed certificate: PASS;6 source contrasts,36 coefficient enclosures,
+ 24 range enclosures,36 covering multipliers,108 component inequalities,
+ 20 adverse-batch widths and two full adaptive branches.
+- Six general-polytope LP fixtures: PASS; maximum primal/dual gap1.110223e-16,
+  maximum hardest-record gap5.551115e-16.
+- Complete external source-to-table chain: PASS, nine subprocesses,91.710seconds.
+  No reused producer directories; zero new model fits.15,270 provider decimal
+  tokens/15,267 unique records;2,232 forecasts/persistence checks;1,674 contrast
+  cases. Coefficient/total differences zero; maximum constant difference1.67e-16.
+- All279 current external rows match with zero numeric or serialization difference.
+  Exact checks include2,052 pair-cover multipliers,61,380 adverse profile/batch
+  evaluations,212 matching continuum bounds,57 half-success cases/122 branches.
+  Independent replay checks2,790 batch widths and16,740 pair model-ordering signs.
+  Adaptive/fixed/greedy counts252/221/246; matched adaptive57 and batch37 expected
+  successes are recovered from source-linked coefficients and saved answers.
+Fresh reports/logs:
+  work/reviewer_entry_audit_20261013/fresh_environment_external_chain/
+
+Earlier full reviewer-package replay
+outputs/current_clean_package_replay.json records a successful69-step run from
+both submitted parts, 1,136.958seconds, network disabled in replay subprocesses,
+and byte-identical manuscript SHA256
+f9554269d768ee25de92e077b301e745a536805699ec9df8509483ad8980e6f2.
+That earlier run used the established study environment. The fresh virtualenv
+checks above add installation evidence; they do not retroactively turn it into a
+fresh-venv69-step run. Root can use the new venv for the revised package run.
+
+Original-source route and complete chain
+The current command and all scripts are supplied. Source commit
+756b2c1265f964b70f72625a95d98413cdfb78bd and all three source SHA256 values are
+mandatory; changed temporary inputs are rejected by actual preparer/geometry
+entry points. On this audit, HEAD requests to all three pinned public rawGitHub
+CSV URLs returned200 (sizes10,400,357;10,494,589;10,303,870bytes). This verifies
+present availability; I did not download the source files again.
+The archived executed chain identifies26,280 hourly endpoints,6,552 restored
+BLEM target/persistence rows, restored89,496row forecast CSV hash c1f6...8e6,
+all6,588 original/external contrasts,165/57 matching half-success certificates,
+and1,098 matching block rows with zero numerical discrepancy. The recorded final
+orchestrator transparently reused its same-turn freshly generated raw/shared/
+precision producers, then reran downstream checks. It is not a second fresh
+model fit or an external execution. The README accurately distinguishes these
+levels. No absence of raw redistributable BLEM traces is concealed.
+
+Reporting hierarchy recommendation
+Lead with the scalar risk classification and explicit shared-query separation.
+Treat exact real-instance precision certificates as the principal application
+connection. Report broad recorded traces separately as panel-specific outcomes.
+Put API/capacity/error controls in a concise limitations/control subsection;
+retain adverse values. A one-page claim/objective/evidence map will do more for
+clarity than more favorable language or another aggregate effect size. The
+constructed mean separation, actual-instance precision optimum, replay success,
+and measuredAPI cost are different statements and should never share an
+unqualified 'improvement' label.
+
+Criteria/status
+The available package already addresses the substance of concernF: actual files,
+commands, frozen inputs, a source-pinned raw route, and genuine clean-copy
+execution exist. The correct response is to supply these reviewer files and
+correct the entry-point/dependency defects, not to claim external validation.
+A fresh attempt to open current official PeerJ editorial criteria/author pages
+with the web tool failed (403/inaccessible); no new live policy wording was
+inferred from unrelated search results. The audit uses the actual three criteria
+in the provided review and previously verified submission instructions.
+No reproducibility blocker remains in the focused paths after documented fixes.
+The revised ZIP build and full newpackage run must still be confirmed before
+calling the next delivery complete. No acceptance probability is statistically
+calibrated by these checks, and no journal submission occurred during this audit.

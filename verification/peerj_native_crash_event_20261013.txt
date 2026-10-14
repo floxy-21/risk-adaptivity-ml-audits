@@ -1,0 +1,11 @@
+Faulting application name: python.exe, version: 3.12.14150.1013, time stamp: 0x6a8da072
+Faulting module name: ntdll.dll, version: 10.0.26100.9444, time stamp: 0x6bdf03ca
+Exception code: 0xc000070a
+Fault offset: 0x00000000000c87a4
+Faulting process id: 0x710
+Faulting application start time: 0x1DD5B72BB27A4E4
+Faulting application path: C:\Users\floxy\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe
+Faulting module path: C:\windows\SYSTEM32\ntdll.dll
+Report Id: 9da8593e-06fd-4532-9868-43991633e34f
+Faulting package full name: 
+Faulting package-relative application ID: 

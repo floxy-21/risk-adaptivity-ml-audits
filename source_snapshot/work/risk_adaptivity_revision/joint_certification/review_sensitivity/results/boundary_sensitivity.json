@@ -1,0 +1,34 @@
+[
+  {
+    "id": "external/hpm_1/2025-07-19/00",
+    "cohort": "external",
+    "threshold": "1/2",
+    "policy": "randomized_mean",
+    "primary_success_probability": "4954818082705042/8006399337547549",
+    "strict_success_probability": "29728908585544880/72057594037927941",
+    "difference": "14864454158800498/72057594037927941",
+    "near_boundary_batches": [
+      {
+        "index": 5,
+        "width": "2251799813685248/4503599627370495",
+        "excess_above_threshold": "1/9007199254740990"
+      }
+    ]
+  },
+  {
+    "id": "external/hpm_1/2025-07-19/00",
+    "cohort": "external",
+    "threshold": "1/2",
+    "policy": "randomized_half_precision",
+    "primary_success_probability": "4954818082705042/8006399337547549",
+    "strict_success_probability": "29728908585544880/72057594037927941",
+    "difference": "14864454158800498/72057594037927941",
+    "near_boundary_batches": [
+      {
+        "index": 5,
+        "width": "2251799813685248/4503599627370495",
+        "excess_above_threshold": "1/9007199254740990"
+      }
+    ]
+  }
+]

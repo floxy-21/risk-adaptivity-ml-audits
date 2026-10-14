@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "saved_source_cases": 1098,
+  "saved_source_batch_widths": 10980,
+  "threshold_case_rows": 5490,
+  "strict_threshold_case_rows": 5490,
+  "paired_summaries": 320,
+  "gap_summaries": 4,
+  "max_original_half_replay_difference": 2.220446049250313e-16,
+  "max_bootstrap_interval_discrepancy_pp": 1.0658141036401503e-14,
+  "comparison_tolerance": 1e-09,
+  "scope": "Independent implementation from saved widths and choices. All original/external source inputs independently checked by verify_source.py in its separate execution record. No fresh models fitted.",
+  "source_sha256": "b9f67ad0d25700951a5bd4f58fcf428705fd24e89493e2e514851ccce95e7245"
+}

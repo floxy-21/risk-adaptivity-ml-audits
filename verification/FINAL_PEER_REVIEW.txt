@@ -1,9 +1,9 @@
 FINAL INTERNAL REVIEW AND RESPONSE -- JOINT-QUERY REVISION
 Target: PeerJ Computer Science. 13 October 2026.
 Manuscript source SHA256:
-f9554269d768ee25de92e077b301e745a536805699ec9df8509483ad8980e6f2
-38-page PDF SHA256:
-62f50ab90d455dec539feb9257990da2cf32117defa3bc3f793de43e24361e2f
+53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
+36-page PDF SHA256:
+cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302
 Review: separate AI-assisted analytic, software and practical reviews, followed by integration and visual checks. No external human validation or journal submission.
 
 The scalar classification and its limitations remain. The shared-query extension proves an exact constructed mean-risk separation of 1/2 versus 2/3, with full proof and rational checker.
@@ -14,14 +14,20 @@ Capacity, bulk retrieval and model-ordering controls are retained. Cap-invalid r
 The latest follow-up review, objective-matched challenger and paired-outcome uncertainty details are recorded in peerj_final_followup_review_20261013.txt and the indexed joint supplement.
 The paper now leads with the joint study and includes the full central proof and one worked real-data certificate in the main text. Further witnesses and cost tables remain in Online Resource 1.
 The latest review also added a reconstructible shared-query algorithm box and absolute interval widths for the existing worked example. Direct endpoint LPs verify that table. A separately completed pinned source-to-table run regenerated both panels, all 165/57 matching certificates and all 1,098 table rows with zero numeric discrepancy. Default offline replay remains distinct from the original raw-source route. See LATEST_REVIEW_FIXES_20261013.txt.
+The current follow-up adds a claim/objective/evidence map, explicit unresolved probability-gap magnitudes, and a checked exploratory threshold sweep over all 1,098 blocks with unchanged policies. The current main paper has 36 pages; full pairwise controls remain in S6. Two broken root commands and two unpinned transitive dependencies were fixed. The final package ran in a newly created isolated virtual environment with the pinned requirements. See LATEST_REVIEW_FIXES_20261013.txt for all changes and limits.
+The latest diagnostic reports the complete fixed/adaptive/no-guarantee partition, the saved greedy-first-query assurance gaps and a stronger fixed-batch fallback. These are retrospective additions using unchanged data. A source-linked two-panel figure displays the exact acquisition envelopes and recorded target sensitivity. The scalar Helly result is explicitly distinguished from the joint objective.
+Earlier read-only fit and practical-value challenges are retained in peerj_final_fit_challenge.txt and peerj_practical_value_challenge.txt with their original source hashes. They are historical internal reviews, not a new review of this source. The current compiled-source and PDF review is latest_compiled_review.txt, bound to the hashes above.
 Live PeerJ policies and author instructions were checked. Supplemental Data S1/S2 meet the 30 MB individual and 50 MB combined limits. The complete historical archive remains separately preserved.
 The three-criterion audit is in PEERJ_CRITERIA_AUDIT.txt. Remaining factual author confirmations are listed in PEERJ_AUTHOR_DECLARATIONS.txt; unknown historical AI model identifiers are disclosed, not invented.
 Author-supervised AI disclosure accurately credits author topic/direction and substantive content/code/drafting assistance.
+The author personally confirmed checking the AI tools' terms of use and publication suitability; that item is no longer pending. Final content approval, disclosure accuracy, record retention and unrelated portal terms remain separately recorded.
+The final prose cleanup removes revision-only wording and repeated caveats while retaining the scientific values, chronology, uncertainty definitions and unfavorable controls. The bounded fragment-edit record is first_reader_prose_review.txt; the final source/PDF assessment remains latest_compiled_review.txt.
+The introductory workflow now makes the bulk/fixed/adaptive/extend decision explicit under the declared exact-total noiseless model. Policy objectives and guarantees are distinguished from recorded outcomes; the closed/open certificate partition is separated from the overlapping fallback label. The current compiled review covers the workflow and displayed equations. The prior successful execution remains source-bound in pre_workflow_*; it is not reused as the current run.
 No calibrated individual acceptance probability or greater-than-80% threshold is established by these checks.
 
 FINAL EXECUTABLE VERIFICATION
-PASS: all 69 steps from a fresh isolated copy of the 1014-member publisher supplement, with network disabled.
-Elapsed 1136.96 seconds. Main source reconstructed byte-for-byte.
-ZIP SHA256: 4820cfb3963d09dcf899afeff6002d5470610f10d48022b2864342a785e14150
+PASS: all 74 steps from a fresh isolated copy of the 1074-member publisher supplement, with network disabled.
+Elapsed 1250.83 seconds. Main source reconstructed byte-for-byte.
+ZIP SHA256: 940144c6bc2217ebada13a510ac5f17afbd37d359f3e249b0a4c13f48acdf7e6
 Both new task-binding checks and all malformed-input regressions passed.
 The initial wrong-runtime import failure and its correction are recorded in risk_delivery_verification.json.

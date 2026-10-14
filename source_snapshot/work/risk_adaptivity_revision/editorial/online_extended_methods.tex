@@ -1771,21 +1771,157 @@ optimize expected stopping costs, share readings across model pairs, or
 change the original two-query result; full-range retrieval remains the
 preferred option on the measured public API.
 \FloatBarrier
+\paragraph{Sensitivity to additional hourly information.}
+Before computing this sensitivity, we fixed the subset to all 290
+original feedback-essential cases and the illustrative caps
+$0\leq x_h\leq E/2$ and $0\leq x_h\leq E/3$.
+These are scenario constraints, not validated physical limits. The primary comparison
+keeps the original absolute requirement $\tau=W_0^{\rm old}/2$.
+A separate calculation halves the new constrained width and therefore
+asks a different precision question (Table~\ref{tab:counter-caps}).
+
+\begin{table}[htbp]\centering\small
+\caption{Illustrative-cap sensitivity of the fixed 290-case subset.
+Each row partitions all cases into a fixed-batch guarantee, a
+feedback-essential deterministic guarantee, and no deterministic
+two-query guarantee. ``Old'' and ``new'' identify the initial width used
+in the threshold, not different data.}
+\label{tab:counter-caps}
+\begin{tabular}{llrrr}\toprule
+Hourly cap & Precision threshold & Batch & Feedback & Unresolved\\\midrule
+None & $W_0^{\rm old}/2$ & 0 & 290 & 0\\
+$E/2$ & $W_0^{\rm old}/2$ & 282 & 8 & 0\\
+$E/3$ & $W_0^{\rm old}/2$ & 290 & 0 & 0\\
+$E/2$ & $W_0^{\rm new}/2$ & 163 & 33 & 94\\
+$E/3$ & $W_0^{\rm new}/2$ & 221 & 0 & 69\\\bottomrule
+\end{tabular}\end{table}
+
+At the unchanged requirement, the $E/2$ cap leaves eight feedback-essential
+cases, five on meter~1 and three on meter~2; all retain exact randomized-batch
+success $1/2$. The $E/3$ cap leaves none; 34 cases already satisfy the
+old threshold without a query. The constructed example
+$E=1$, $c=(0,0,1,1,0,1)$ illustrates the mechanism: imposing $x_h\leq1/2$
+changes the best fixed-batch guarantee from one to $1/2$, matching
+adaptation, while its initial width remains one.
+Thus the original guarantee gap is sensitive to additional valid hourly
+information; it is not established as robust to physical capacity bounds.
+
+After freezing the capped geometry, an exact integer-register check found
+that the recorded trace violates the $E/2$ assumption in 8 of 290 cases
+(meters 1--3: 1, 0, 7) and the $E/3$ assumption in 57 cases (11, 8, 38).
+These correspond to 8 and 48 of the 228 distinct blocks. All cases remain
+in Table~\ref{tab:counter-caps}; the capped guarantees do not cover an
+excluded trace. Compatibility does not establish a physical operating bound.
+None of the eight remaining feedback-essential cases at the unchanged
+threshold violates the $E/2$ cap in its recorded trace; the eight excluded
+cases form a different set.
+
+All results use the original coefficients and total. Exact rational
+bounded-allocation formulas and independently assembled polytope LPs
+agree across every case, batch and first query; the largest discrepancy
+is $6.11\times10^{-16}$ in units of $W_0^{\rm old}$.
+Finite adverse games use only exactly feasible capped profiles.
+Their upper bounds are called exact continuum optima only when a
+matching fixed-batch or two-batch guarantee is supplied.
+The fixed protocol, 1,740-row ledger, coefficients and checkable witnesses
+are included in Online Resource~1. This calculation does not estimate
+full-panel prevalence or measured acquisition savings.
+% Optional concise insertion; the main manuscript is not edited by this agent.
+\subsection{Replication on an external stored-counter source}
+\label{sec:external-hpm}
+We froze a public-source protocol for HeatpumpMonitor.org \citep{hpmabout,hpmapi} before fitting
+forecasts or evaluating acquisition outcomes. The ascending-ID screen
+required public MID status, explicit Class-1 electrical-meter metadata and
+a cumulative electrical-energy feed spanning January--July 2025. The first
+three qualifiers were systems 1, 2 and 7: systems 3 and 6 lacked MID status,
+while 4 and 5 failed calendar coverage. The source rule was locked before
+hourly retrieval. Detailed training gates were fixed after training-only
+inspection but before July retrieval; all three systems met the requirements
+of at least 95\% valid hourly intervals and 90 complete training days, without
+replacement. Bundled metadata, request logs and protocol locks expose this
+chronology and every exclusion. January--June 2025 supplied training data; July supplied 31 test
+days per system. The four existing model specifications were fitted once,
+without retuning or replacement. All three six-hour blocks and six model
+pairs were retained, giving 1,674 tasks with no reference-data attrition
+and no zero-width case. The half-initial-width target, five optional
+internal cumulative samples and two-sample budget were unchanged.
+
+The target here is the difference of consecutive hourly \emph{API-grid
+stored cumulative samples}. The interface can label a selected native
+sample with a grid timestamp \citep{hpmcode}. Native acquisition and historical delivery
+times are unavailable, so chronological forecast features are established
+on the declared grid, not as measured midnight production availability.
+The exact stored-sample model does not assert exact physical energy or
+unconditional Class-1 pointwise error bounds.
+
+The exact triage found 1,614 tasks with a guaranteeing fixed batch, 29
+requiring feedback for a deterministic half-width guarantee, and 31
+without such a two-query adaptive guarantee. The 29 cases span all three
+systems (2, 14 and 13 cases) and all six model pairs. Each has matching
+rational adverse-profile and all-completion covering witnesses proving
+optimal randomized-batch worst-case success exactly $1/2$; adaptation
+guarantees success one. All 29 batch optima are exactly $1/2$, including
+their minimum, median and quartiles.
+
+\begin{table}[htbp]
+\centering\small\setlength{\tabcolsep}{4pt}
+\caption{External stored-sample replay. Success is the probability of
+reaching half initial width. Randomized outcomes average the declared
+mixture exactly over its finite support. The cover policy is specified
+only on the 29 cases with certified batch optimum $1/2$. Full recovery
+uses all five optional samples, outside the two-sample budget; its actual
+API request cost is compared in Section~\ref{sec:actual-api}.}
+\label{tab:external-hpm}
+\begin{tabular}{lrrr}
+\toprule
+Policy & All-task success (\%) & 29-case success (\%) &
+29-case mean $W/W_0$\\
+\midrule
+Exact adaptive & 99.223 & 100.000 & 0.3113\\
+Best deterministic worst-width batch & 99.104 & 96.552 & 0.3736\\
+Greedy adaptive & 99.104 & 100.000 & 0.3114\\
+Mean-width-optimal batch & 95.250 & 82.004 & 0.4003\\
+Precision-optimal covering batch & --- & 81.034 & 0.3942\\
+Uniform batch & 63.053 & 34.138 & 0.5899\\
+Full stored-trace recovery & 100.000 & 100.000 & 0.0000\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In recorded replay, exact adaptation and the best deterministic batch
+both succeed in 1,658 tasks; only adaptation succeeds in three, only the
+batch in one, and neither in twelve. The net observed gain is therefore
+two tasks, or 0.119 percentage points. Ordering certification is 91.219\%
+versus 90.741\%, with 14 adaptive-only and six batch-only decisions.
+The replication extends the information-model separation to a new source;
+it does not demonstrate a large improvement over an ordinary adaptive
+policy or the provider's permitted full-range retrieval. These dependent
+tasks represent three systems, not 1,674 independent deployments.
+Section~\ref{sec:actual-api} compares that full-range alternative under
+the actual provider interface and measured request times.
+
+A separate internal checker verifies 16,740 terminal intervals by exact
+rational arithmetic, all 29 matching half-success witnesses, and the
+two-side adaptive formula for every positive-width task. Independent
+fiber LPs for the earliest task in each system--pair group (360 solves)
+agree with the interval endpoints to $2.78\times10^{-17}$; solver
+feasibility tolerance is $10^{-9}$ and comparison tolerance $2\times10^{-8}$.
+All 2,232 saved persistence values equal the corresponding prior-day
+grid differences. This is independent implementation checking within
+the study, not an external human validation.
+
+\FloatBarrier
 \section{S7. Detailed computational verification}
 \section{Computational Verification and Historical Application}
 \label{sec:evaluation}
-The evaluation separates proofs, constructed algorithm checks, saved-forecast
-replay, a frozen external-source replication with fresh model fits, and
-an actual public-API retrieval benchmark. The historical forecast inputs
-remain unchanged. LP calculations use explicit floating-point tolerances;
-particular serialized counter coefficients and adverse distributions are
-also checked using exact rational arithmetic. These checks establish
-the reported computation under its measurement model. The external-source
-study is a new public-data replication by the same author, not independent
-human validation.
+We evaluate the algorithms on constructed instances, replay saved forecasts,
+replicate the method on an external public source with fresh model fits,
+and measure retrieval on a public API. LP checks use reported floating-point
+tolerances; counter coefficients and adverse distributions also receive
+exact rational checks. The same author conducted both source studies.
 
 \subsection{Comparative formulations and scaling}
-The existing frozen grid has 24 base aggregate instances with one, two or four
+The scaling grid has 24 base aggregate instances with one, two or four
 blocks, six or twelve coordinates per block, budgets near one quarter or
 one half of the coordinates, and two joint coefficient/total profiles.
 Four additional one-block profiles use 24 or 48 coordinates, giving 28 in total. The cases
@@ -2236,6 +2372,27 @@ E & exact & greedy & 2.15 & [1.08, 3.23] / [1.42, 2.87] & [1.08, 3.76]\\
 \caption{Temporal and leave-one-system-out sensitivity. Primary seven-day intervals are unchanged; fourteen-day intervals are a longer-block sensitivity. LOO gives the range of paired percentage-point effects after omitting each system in turn. All are descriptive for the same fixed panels. O/E denote original/external panels; U/C denote policies frozen from uncapped/capacity-aware planning. Combined-error greedy is the frozen uncapped control.}
 \label{tab:joint_long_dependence}
 \end{table}
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{llrrr}
+\toprule
+Panel & Target & Adaptive & Fixed & Greedy\\
+\midrule
+Original & 0.40 & 51.28 & 49.21 & 49.21\\
+Original & 0.45 & 67.03 & 61.29 & 64.35\\
+Original & 0.50 & 78.27 & 70.45 & 76.07\\
+Original & 0.55 & 87.79 & 81.07 & 86.69\\
+Original & 0.60 & 93.77 & 88.64 & 93.41\\
+External & 0.40 & 74.55 & 66.67 & 73.12\\
+External & 0.45 & 80.65 & 72.40 & 77.78\\
+External & 0.50 & 90.32 & 79.21 & 88.17\\
+External & 0.55 & 93.91 & 83.87 & 93.19\\
+External & 0.60 & 95.70 & 85.66 & 95.34\\
+\bottomrule
+\end{tabular}
+\caption{Exploratory recorded success (\%) as the joint-width target changes. We replay the unchanged policies on all 819 original and 279 external blocks with two shared counter readings. The exact-endpoint, uncapped, noiseless replays retain the original $10^{-8}$ width-comparison tolerance. The supplement includes randomized policies, paired uncertainty summaries, and zero-tolerance sensitivity. These are recorded outcomes, not new all-completions guarantees.}
+\label{tab:joint_threshold_sensitivity}
+\end{table}
 \subsection{Shared certificates with bounded stored-register errors}
 \label{sec:joint-stored-errors}
 This sensitivity calculation retains the same two shared prefix queries and
@@ -2515,6 +2672,22 @@ Randomized minmax regret for combinatorial optimization under uncertainty.
 In \emph{Algorithms and Computation (ISAAC 2015)}, Lecture Notes in
 Computer Science, 9472, 491--501. Springer.
 \url{https://doi.org/10.1007/978-3-662-48971-0_42}
+
+\bibitem[OpenEnergyMonitor(2026a)]{hpmabout}
+OpenEnergyMonitor. (2026a). HeatpumpMonitor.org: About.
+\url{https://heatpumpmonitor.org/about}. Accessed 12 October 2026.
+
+\bibitem[OpenEnergyMonitor(2026b)]{hpmapi}
+OpenEnergyMonitor. (2026b). HeatpumpMonitor.org API helper.
+\url{https://heatpumpmonitor.org/api-helper}. Accessed 12 October 2026.
+
+\bibitem[OpenEnergyMonitor(2026c)]{hpmcode}
+OpenEnergyMonitor. (2026c). HeatpumpMonitor.org timeseries controller and
+Emoncms PHPTimeSeries implementation. Source snapshots and hashes supplied
+in Online Resource 1.
+\url{https://github.com/openenergymonitor/heatpumpmonitor.org/blob/main/www/Modules/timeseries/timeseries_controller.php};
+\url{https://github.com/openenergymonitor/emoncms/blob/master/Modules/feed/engine/PHPTimeSeries.php}.
+Accessed 12 October 2026.
 
 \bibitem[Sawade et~al.(2012)]{sawade}
 Sawade, C., Landwehr, N., \& Scheffer, T. (2012).

@@ -1,0 +1,74 @@
+FINAL PRACTICAL DIAGNOSTICS REVIEW -- 14 OCTOBER 2026 UTC
+
+Scope: read-only review of the final_challenger_diagnostics contribution,
+its wording, actual outputs, code and package boundary. This is a separate
+agent review in the same study, not external specialist validation.
+
+Verdict: no blocking issue found in these new diagnostics after the checks
+below. They answer the specific missing-regime and fallback objections.
+They strengthen assurance interpretation; they do not justify a numerical
+acceptance guarantee or a claim of deployed cost savings.
+
+1. Exact regime counts agree with independent interval-cover verification:
+   original 162 fixed-guaranteed /168 adaptive-only /489 neither;
+   external 128/57/94. D and A concern the deterministic two-query optimum
+   under exact endpoints, uncapped nonnegative allocations and exact prefix
+   queries. The claims do not extend these counts to capped/noisy models.
+   All saved adaptive first choices attain their stated half-width regime.
+   All saved fixed choices have the same half-width classification as the
+   exact minimum over the ten deterministic batches.
+
+2. Greedy is correctly described. The implemented first step is myopic,
+   with continuation-aware tie-breaking; its second step already minimizes
+   the conditional joint-width envelope. Even granting this best second
+   step, its saved first query loses the half-width guarantee on 25 of 165
+   original and 13 of 57 external matched-half blocks. Recorded successes
+   still occur in 20/25 and 11/13. Thus the diagnostic is about assurance
+   before retrieval, not merely an improved empirical success percentage.
+   Full-panel assurance gaps 28/819 and 16/279 are not mislabeled independent
+   replications or evidence against every possible greedy heuristic.
+
+3. Fixed fallback is defined before reading the individual replay answers.
+   The extension was developed retrospectively and is labeled accordingly.
+   It changes only 492 original/94 external fallback blocks. Strict and
+   1e-8 replay conventions give identical new outcomes 530/819 and 207/279.
+   The old mean fallback is preserved. Pure fixed batching 577/819 and
+   221/279 still beats both cover hybrids on recorded precision; the main
+   fragment states this explicitly. The larger adaptive-versus-hybrid gap
+   must not replace the already reported stronger-comparator comparison.
+   Remaining full-continuum optimization gaps are not claimed solved.
+
+4. Paired outcomes and uncertainty are inspectable. There are 2196 case
+   rows (1,098 at each of two threshold conventions), 64 source/system paired
+   summaries, and explicit bootstrap indices. The code uses synchronized
+   seven-day circular date blocks and all systems/blocks of a sampled date
+   together, 2,000 percentile draws with declared seed 20261014. Randomized
+   comparator cells are expected counts. Intervals are descriptive within
+   these panels of three systems, not population or confirmatory inference.
+
+5. Verification actually executed. The default stdlib checker passes all
+   saved interval-cover/replay summaries and freshly derives 279 external
+   coefficient cases. A separate full-source invocation freshly derives
+   all 1,098 coefficient cases, 21,960 second-action intervals and 30 exact
+   all-intersection calculations on the first block of each system. Maximum
+   difference from saved binary64 guarantees is 1.11e-16; maximum summary
+   arithmetic difference is 2.84e-14. Source verification joins 6,588 contrast
+   rows to the previously regenerated source catalogs. This is neither a
+   new forecast fit nor an independent human audit.
+
+6. Package boundary checked through the actual include_current_path filter
+   in package_release.py: joint_review/final_challenger_private_inputs.json
+   returns False. The public frozen_inputs.json is included and contains
+   zero original normalized coefficient arrays; it includes 279 external
+   arrays plus original scalar outputs, intervals and coefficient digests.
+   The original coefficient check remains accessible through the existing
+   pinned raw-source route. README distinguishes default from both-source
+   verification. The release packaging must preserve this distinction.
+
+One small wording adjustment applied in the owned fragment: replaced
+"the stronger recorded comparator" with explicit wording that pure fixed
+batching performs better than the two cover hybrids and remains compared.
+This avoids implying that it also outperforms the separate greedy baseline.
+
+No existing manuscript source was edited by this agent. Final PDF layout,
+complete package replay and submission metadata are root-agent checks.

@@ -1,0 +1,97 @@
+Running: work/risk_adaptivity_revision/math/check_classification.py
+Running: work/risk_adaptivity_revision/general/check_general_lp.py --output outputs/risk_general_replay.json
+Running: work/risk_adaptivity_revision/dual/verify_dual.py --output-dir outputs/risk_dual_replay
+Running: work/risk_adaptivity_revision/dual/summarize_solver_comparison.py --output-dir outputs/risk_solver_replay
+Running: work/certificate_grid_review/summarize_certificates.py --source public --output-dir outputs/risk_grid_replay
+Running: work/randomized_tie_review/verify_ties.py
+Running: work/risk_adaptivity_revision/joint_certification/provenance_chain/check_source_guards.py --output outputs/source_identity_guards.json
+Running: work/risk_adaptivity_revision/joint_certification/provenance_chain/check_source_chain.py --cohort external --output outputs/source_chain_external.json
+Running: work/risk_adaptivity_revision/joint_certification/absolute_widths.py --output-dir outputs/joint_absolute_widths
+Running: work/risk_adaptivity_revision/joint_certification/review_sensitivity/analyze.py --output-dir outputs/joint_threshold_sensitivity
+Running: work/risk_adaptivity_revision/joint_certification/review_sensitivity/check.py --results outputs/joint_threshold_sensitivity --output outputs/joint_threshold_independent.json
+Running: work/risk_adaptivity_revision/joint_certification/final_challenger_diagnostics/analyze.py --output-dir outputs/final_challenger_diagnostics
+Running: work/risk_adaptivity_revision/joint_certification/final_challenger_diagnostics/check.py --results outputs/final_challenger_diagnostics --output outputs/final_challenger_independent.json
+Running: work/risk_adaptivity_revision/joint_certification/final_practical_figure/check_figure.py --output outputs/final_practical_figure_check.json
+Running: work/risk_adaptivity_revision/joint_certification/proof_check_joint.py --output outputs/joint_proof.json
+Running: work/risk_adaptivity_revision/joint_certification/empirical_regression.py --output outputs/joint_regressions.json
+Running: work/risk_adaptivity_revision/joint_certification/empirical_shared_audit.py --output-dir outputs/joint_external_replay
+Running: work/risk_adaptivity_revision/joint_certification/empirical_check.py --results-dir outputs/joint_external_replay --output outputs/joint_endpoint_check.json
+Running: work/risk_adaptivity_revision/joint_certification/independent_shared_review.py --results-dir outputs/joint_external_replay --output outputs/joint_full_independent.json
+Running: work/risk_adaptivity_revision/joint_certification/independent_model_coherence.py --results-dir outputs/joint_external_replay --output outputs/joint_model_coherence.json
+Running: work/risk_adaptivity_revision/joint_certification/decision_replay.py --plans outputs/joint_external_replay/empirical_plans.json --ledger outputs/joint_external_replay/empirical_cases.csv --output-dir outputs/joint_decision_replay
+Running: work/risk_adaptivity_revision/joint_certification/independent_decision_check.py --results-dir outputs/joint_external_replay --decision-dir outputs/joint_decision_replay --output outputs/joint_decision_check.json
+Running: work/risk_adaptivity_revision/joint_certification/precision_batch.py --plans outputs/joint_external_replay/empirical_plans.json --output-dir outputs/joint_precision_catalog
+Running: work/risk_adaptivity_revision/joint_certification/precision_batch_check.py --directory outputs/joint_precision_catalog
+Running: work/risk_adaptivity_revision/joint_certification/precision_adaptive_link.py --directory outputs/joint_precision_catalog --base-plans outputs/joint_external_replay/empirical_plans.json
+Running: work/risk_adaptivity_revision/joint_certification/check_main_inspectable_certificate.py
+Running: work/risk_adaptivity_revision/joint_certification/empirical_precision_replay.py --precision-plans outputs/joint_precision_catalog/plans.json --plans outputs/joint_external_replay/empirical_plans.json --ledger outputs/joint_external_replay/empirical_cases.csv --output-dir outputs/joint_precision_replay
+Running: work/risk_adaptivity_revision/joint_certification/independent_precision_replay_check.py --replay-dir outputs/joint_precision_replay --output outputs/joint_precision_replay_check.json
+Running: work/risk_adaptivity_revision/joint_certification/empirical_capacity.py --plans outputs/joint_external_replay/empirical_plans.json --output-dir outputs/joint_capacity_replay
+Running: work/risk_adaptivity_revision/joint_certification/empirical_capacity_check.py --results-dir outputs/joint_capacity_replay --output outputs/joint_capacity_independent.json
+Running: work/risk_adaptivity_revision/joint_certification/noise_independent_check.py --directory work/risk_adaptivity_revision/joint_certification/noise_external_results
+Running: work/risk_adaptivity_revision/joint_certification/noise_independent_check.py --directory work/risk_adaptivity_revision/joint_certification/noise_external_capacity_results
+Running: work/risk_adaptivity_revision/joint_certification/empirical_noise_replay.py --plans outputs/joint_external_replay/empirical_plans.json --certification-dir work/risk_adaptivity_revision/joint_certification/noise_external_results --output-dir outputs/joint_noise_replay
+Running: work/risk_adaptivity_revision/joint_certification/empirical_noise_check.py --results-dir outputs/joint_noise_replay --output outputs/joint_noisy_independent.json
+Running: work/risk_adaptivity_revision/joint_certification/empirical_noise_replay.py --plans outputs/joint_external_replay/empirical_plans.json --certification-dir work/risk_adaptivity_revision/joint_certification/noise_external_capacity_results --output-dir outputs/joint_capacity_noise_replay
+Running: work/risk_adaptivity_revision/joint_certification/empirical_noise_check.py --results-dir outputs/joint_capacity_noise_replay --output outputs/joint_capacity_noisy_independent.json
+Running: work/risk_adaptivity_revision/joint_certification/empirical_pair_summary.py --exact-cases outputs/joint_external_replay/empirical_cases.csv --capacity-cases outputs/joint_capacity_replay/empirical_capacity_cases.csv --precision-replay-dir outputs/joint_precision_replay --noise-dir outputs/joint_noise_replay --capacity-noise-dir outputs/joint_capacity_noise_replay --output-dir outputs/joint_paired_replay
+Running: work/risk_adaptivity_revision/joint_certification/empirical_pair_check.py --results-dir outputs/joint_paired_replay --output outputs/joint_paired_independent.json
+Running: work/risk_adaptivity_revision/joint_certification/empirical_release_check.py --exact-dir outputs/joint_external_replay --capacity-dir outputs/joint_capacity_replay --noise-dir outputs/joint_noise_replay --capacity-noise-dir outputs/joint_capacity_noise_replay --precision-dir outputs/joint_precision_replay --output outputs/joint_scientific_match.json
+Running: work/risk_adaptivity_revision/joint_certification/final_review_analysis.py --output-dir outputs/final_review_dependence
+Running: work/risk_adaptivity_revision/joint_certification/final_review_check.py --results-dir outputs/final_review_dependence --output outputs/final_review_independent.json
+Running: work/risk_adaptivity_revision/protocol_selection/check_bound_workflow.py --output-dir outputs/bound_workflow_check
+Running: work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_BINDING_CHECK.py --output-dir outputs/independent_binding_check
+Running: work/risk_adaptivity_revision/practical/audit_decision_gate.py --output-dir outputs/risk_gate_replay
+Running: work/risk_adaptivity_revision/practical_multi/evaluate_model_selection.py --source public --output-dir outputs/risk_selection_replay
+Running: work/risk_adaptivity_revision/practical/replicate_archive_grid.py --output-dir outputs/risk_replication_replay
+Running: work/risk_adaptivity_revision/practical/check_replication_lp.py --replication-dir outputs/risk_replication_replay --output-dir outputs/risk_replication_lp_replay
+Running: work/risk_adaptivity_revision/practical_api/replication_independent_check.py --replication-dir outputs/risk_replication_replay --output outputs/risk_replication_independent.json
+Running: work/risk_adaptivity_revision/practical_api/prepare_and_verify.py --output-dir outputs/risk_api_replay
+Running: work/risk_adaptivity_revision/counter_adaptive/math_review/check_counter_adaptive.py
+Running: work/risk_adaptivity_revision/counter_adaptive/verify_packaged.py --output outputs/counter_packaged_check.json
+Running: work/risk_adaptivity_revision/counter_adaptive/feedback_triage/verify_bundled.py --output outputs/counter_feedback_triage_check.json
+Running: work/risk_adaptivity_revision/counter_adaptive/reviewer_diagnostics/verify_bundled.py --output outputs/reviewer_counter_diagnostics.json
+Running: work/risk_adaptivity_revision/external_validation/math/robust_two_query.py --output outputs/bounded_uncertainty_prototype.json
+Running: work/risk_adaptivity_revision/external_validation/math/INTERNAL_EDGE_CHECK.py --output outputs/bounded_uncertainty_edges.json
+Running: work/risk_adaptivity_revision/external_validation/math/check_cap_package.py --output outputs/cap_sensitivity_check.json
+Running: work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/check_exact_certificates.py --output outputs/stored_error_exact_certificates.json
+Running: work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/INDEPENDENT_EXACT_CHECK.py
+Running: work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/check_lower_witnesses.py --output outputs/stored_error_lower_certificates.json
+Running: work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/INDEPENDENT_LOWER_CHECK.py
+Running: work/risk_adaptivity_revision/external_validation/stored_error_fallback/INDEPENDENT_CERTIFICATE_CHECK.py --output outputs/stored_error_fallback_fixed.json
+Running: work/risk_adaptivity_revision/external_validation/stored_error_fallback/INDEPENDENT_BRANCH_CHECK.py --output outputs/stored_error_fallback_branches.json
+Running: work/risk_adaptivity_revision/external_validation/stored_error_fallback/policy.py --self-test --output outputs/stored_error_fallback_execution.json
+Running: work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/run_sensitivity.py
+Running: work/risk_adaptivity_revision/external_validation/operational/check_source_qualification.py --output outputs/external_source_qualification.json
+Running: work/risk_adaptivity_revision/external_validation/replay/run_external.py
+Running: work/risk_adaptivity_revision/external_validation/replay/check_external.py
+Running: work/risk_adaptivity_revision/external_validation/operational/verify_http.py --benchmark-dir work/risk_adaptivity_revision/external_validation/operational/http_benchmark_20261012
+Running: work/risk_adaptivity_revision/protocol_selection/selector.py --output-dir outputs/protocol_selection_replay
+Running: work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_CHECK.py --results-dir outputs/protocol_selection_replay --output-dir outputs/protocol_selection_check
+Running: work/risk_adaptivity_revision/protocol_selection/cost_frontier.py --output-dir outputs/cost_frontier_replay
+Running: work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_COST_CHECK.py --results-dir outputs/cost_frontier_replay --output outputs/cost_frontier_check.json
+Running: work/risk_adaptivity_revision/counter_adaptive/reviewer_diagnostics/check_worked_example.py --output outputs/printed_worked_example_check.json
+Running: work/risk_adaptivity_revision/build_manuscript.py
+{
+  "status": "passed",
+  "completed_utc": "2026-10-14T01:26:14.969257+00:00",
+  "package_members_verified": 1073,
+  "stage": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\peerj_journal_verified_20261014_011136\\work\\rr_011144315253",
+  "small": false,
+  "restored_frozen_reports": [
+    "work/randomized_tie_review/independent_verification.json",
+    "work/risk_adaptivity_revision/counter_adaptive/math_review/verification.json",
+    "work/risk_adaptivity_revision/external_validation/replay/geometry.json",
+    "work/risk_adaptivity_revision/external_validation/replay/independent_checks.json",
+    "work/risk_adaptivity_revision/external_validation/replay/report.json",
+    "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/INDEPENDENT_EXACT_CHECKS.json",
+    "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/INDEPENDENT_LOWER_CHECKS.json",
+    "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/report.json",
+    "work/risk_adaptivity_revision/joint_certification/noise_external_capacity_results/independent_check.json",
+    "work/risk_adaptivity_revision/joint_certification/noise_external_results/independent_check.json",
+    "work/risk_adaptivity_revision/math/classification_verification.json"
+  ],
+  "manuscript_reproduced_sha256": "50c931901f559c7efa0ce79a6b1f7cf854bd61548b0d78b3c59f90c7acf8d2d2",
+  "elapsed_seconds": 870.6581787999994,
+  "scope": "Fresh isolated executable replay from bundled inputs with network disabled; includes cached new-source counter replay and archived HTTP-trace checks, but no model fitting, private BLEM raw regeneration, new HTTP measurements, repeated scaling measurements, or external independent replication."
+}

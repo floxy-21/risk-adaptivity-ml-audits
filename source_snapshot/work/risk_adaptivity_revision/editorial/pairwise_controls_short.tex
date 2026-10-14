@@ -1,0 +1,71 @@
+\subsection{Source protocols and the separate-pair controls}
+\label{sec:counter-precision-results}
+The original source contains three cumulative consumption counters
+\citep{blem}, with 91 eligible days per meter. The four frozen forecasters
+are daily persistence, ridge regression, boosted trees and an MLP. We audit
+six-hour blocks ending at 06:00, 12:00 and 18:00 UTC using block endpoints
+and day-start forecasts. Next-day persistence copies are not yet available
+under this declared schedule; production arrival timestamps are not measured.
+The interface permits five internal hourly counters. A two-reading budget
+per separate-pair audit gives 4,914 tasks; a two-reading budget shared by
+all pairs gives the 819-block study above. These are different resource
+requirements. Full source and fitting specifications are in Online
+Resource~1, S3; S6 retains the complete separate-pair controls.
+
+In the separate-pair experiment, a fixed batch guarantees half width on
+4,371 tasks, adaptation is required for the deterministic guarantee on 290,
+and 253 have no such deterministic two-query guarantee. All 290 have exact
+randomized-batch precision optimum $1/2$. Recorded adaptive success is
+98.64\%, versus 98.23\% for the best fixed worst-width batch and 97.96\% for
+greedy; the adaptive--fixed difference is only 0.407 percentage points.
+The prespecified 10\% feedback-prevalence target was not met (5.90\%).
+Adding an illustrative hourly cap of $E/2$ leaves only eight of the 290
+cases requiring feedback at the uncapped half-width threshold; an $E/3$
+cap leaves none. Recorded profiles violate those caps in eight and 57
+cases, respectively. S6 retains both the original-threshold and
+new-constrained-width calculations, all compatibility flags and witnesses.
+
+\subsection{External source and bounded-error controls}
+\label{sec:external-hpm}
+The HeatpumpMonitor source protocol \citep{hpmabout,hpmapi} selected the
+first three ascending system IDs with public MID status, explicit Class-1
+electrical-meter metadata and a cumulative feed spanning January--July
+2025. Systems 1, 2 and 7 qualified. The source rule preceded hourly
+retrieval. Training gates, set after inspecting training data but before
+July retrieval, required 95\% valid hourly intervals and 90 complete days.
+All three passed without replacement. January--June supplied training;
+July supplied 31 test days per system. Each of the four model specifications
+was fitted once, without retuning. The source, exclusion and fitting
+chronology is retained in S6. The later shared-query analysis reuses these
+sources and is retrospective.
+
+Targets are increments of stored API-grid cumulative samples. The interface
+may label a selected native sample with a grid timestamp \citep{hpmcode};
+native acquisition and historical delivery times are unavailable. The
+stored-record interpretation follows Table~\ref{tab:measurement-assumptions}.
+Class-1 metadata is an eligibility condition, not a pointwise error bound.
+
+All 1,674 separate-pair tasks (279 shared blocks) remain eligible. A fixed
+batch guarantees half width on 1,614, feedback supplies the deterministic
+guarantee on 29, and 31 have no such two-query guarantee. The 29 span every
+system and model pair and have exact batch precision optimum $1/2$.
+The adaptive--fixed recorded gain over all tasks is only 0.119 percentage
+points; greedy succeeds on all 29 selected cases. S6 retains the complete
+comparisons and exact checks of 16,740 terminal intervals.
+
+\paragraph{Error allowances and required budgets.}
+\label{sec:stored-error-sensitivity}
+With exact endpoints and fixed internal-readout errors bounded by
+$0.001E$ or $0.01E$, respectively 27 and 22 of those 29 cases retain the
+two-query adaptive guarantee. Both levels cover every system and model
+pair. Exact lower witnesses rule out a deterministic two-query guarantee
+for the remaining cases; no randomized-adaptive impossibility is claimed.
+A separate certified rule uses two adaptive readings for 22 cases and a
+fixed three-reading batch for seven at $0.01E$, guaranteeing precision in
+all 29. Its 65 reserved readings compare with 87 for fixed batches, but
+require 51 information rounds rather than 29. This is a post-analysis
+per-pair hard-budget result, not expected stopping cost or a shared-query
+result. S6 provides the complete latent-error model, rational branch and
+lower witnesses, and three-reading certificates. The next section tests
+the provider's actual unrestricted interface.
+

@@ -1,0 +1,264 @@
+{
+  "status": "PASS",
+  "preserved_utc": "2026-10-14T05:20:08.396929+00:00",
+  "release_tag": "peerj-cs-2026-10-14-assurance",
+  "commit": "c878784db195e74be395ff9735870eeef1054c4c",
+  "prior_replay_steps": 77,
+  "scope": "Published assurance revision history; not evidence for the budget revision.",
+  "files": [
+    {
+      "source": "outputs/revised_manuscript.tex",
+      "retained": "outputs/pre_budget_revised_manuscript.tex",
+      "sha256": "ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07",
+      "bytes": 95558
+    },
+    {
+      "source": "outputs/revised_manuscript.pdf",
+      "retained": "outputs/pre_budget_revised_manuscript.pdf",
+      "sha256": "b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c",
+      "bytes": 191762
+    },
+    {
+      "source": "outputs/revised_manuscript.log",
+      "retained": "outputs/pre_budget_revised_manuscript.log",
+      "sha256": "5ac7343ceb60be600aa733dce91365d194de3463d24b564bd299a2bf0ff2ae6b",
+      "bytes": 24730
+    },
+    {
+      "source": "outputs/risk_release_manifest.json",
+      "retained": "outputs/pre_budget_risk_release_manifest.json",
+      "sha256": "268e04b3cbb409111f38e95bb59d4ca1e7bd4c724db2ca05061a8a5ce735919a",
+      "bytes": 17639
+    },
+    {
+      "source": "outputs/risk_editorial_verification.json",
+      "retained": "outputs/pre_budget_risk_editorial_verification.json",
+      "sha256": "59ff3912479dcd58399c0179adf3fcd32f8a18c63f669cce30ba7462b01e497d",
+      "bytes": 4479
+    },
+    {
+      "source": "outputs/risk_delivery_verification.json",
+      "retained": "outputs/pre_budget_risk_delivery_verification.json",
+      "sha256": "a6b8e09dd8b902aa26b568639bf79385c737532d8f8f1304debb46a75b41d3af",
+      "bytes": 18589
+    },
+    {
+      "source": "outputs/risk_supplement_verification.json",
+      "retained": "outputs/pre_budget_risk_supplement_verification.json",
+      "sha256": "fd4b44cc1bdc854076fe7dd58f7e3739e373ba9a555302011c769378026b6bdd",
+      "bytes": 1256
+    },
+    {
+      "source": "outputs/current_clean_package_replay.json",
+      "retained": "outputs/pre_budget_current_clean_package_replay.json",
+      "sha256": "1e01fe419d734bafd5515eb5ff76f2127c0e248a1791feedd2e3ead255098bdd",
+      "bytes": 1028027
+    },
+    {
+      "source": "outputs/journal_supplement_verification.json",
+      "retained": "outputs/pre_budget_journal_supplement_verification.json",
+      "sha256": "60dd5993bbfbabaed248246b0766025dd6ed442ec55125361fd929b500fe2831",
+      "bytes": 269507
+    },
+    {
+      "source": "outputs/github_delivery_verification.json",
+      "retained": "outputs/pre_budget_github_delivery_verification.json",
+      "sha256": "26cf809cbebb63fb1eb5d5ad5578b4b9daff9c6779dccebf66d994105132115f",
+      "bytes": 4403
+    },
+    {
+      "source": "outputs/GITHUB_RELEASE_NOTES.txt",
+      "retained": "outputs/pre_budget_GITHUB_RELEASE_NOTES.txt",
+      "sha256": "78e0e9c6fb716c9c03e124d7db38cc3d823281711a0b3b82a0cd519c0f645381",
+      "bytes": 6682
+    },
+    {
+      "source": "outputs/RELEASE_SHA256.txt",
+      "retained": "outputs/pre_budget_RELEASE_SHA256.txt",
+      "sha256": "c1b022c807746774f47ba76a457bfca624b0c0daa1e0943991d91706645e915b",
+      "bytes": 455
+    },
+    {
+      "source": "outputs/REPRODUCE.txt",
+      "retained": "outputs/pre_budget_REPRODUCE.txt",
+      "sha256": "4e9ddd763a550a2c10e3d350ba4e9d1ed483af72e6eee11236f9cce5edbc6e76",
+      "bytes": 39658
+    },
+    {
+      "source": "outputs/PEERJ_SUBMISSION_METADATA.json",
+      "retained": "outputs/pre_budget_PEERJ_SUBMISSION_METADATA.json",
+      "sha256": "8583b769ccc14fef6c62c41e76c4c06e64abbd7cadcdf2e9f56a28b28012205d",
+      "bytes": 4462
+    },
+    {
+      "source": "outputs/PEERJ_AUTHOR_DECLARATIONS.txt",
+      "retained": "outputs/pre_budget_PEERJ_AUTHOR_DECLARATIONS.txt",
+      "sha256": "e40776e9ef00eb901f3fda2170c35dad168445d6963960adcef7ffb18a7fd67d",
+      "bytes": 3755
+    },
+    {
+      "source": "outputs/PEERJ_CRITERIA_AUDIT.txt",
+      "retained": "outputs/pre_budget_PEERJ_CRITERIA_AUDIT.txt",
+      "sha256": "59bf9454a888296c243ba66fd32cea09ade17e956bbf832f49d9cfa2c7390bff",
+      "bytes": 8902
+    },
+    {
+      "source": "outputs/PEERJ_REVIEW_AND_RESPONSE_20261013.txt",
+      "retained": "outputs/pre_budget_PEERJ_REVIEW_AND_RESPONSE_20261013.txt",
+      "sha256": "8e0517255797c6ea4a089feb5bc821946a9645a7a0d60b58b863a43f936793c3",
+      "bytes": 7859
+    },
+    {
+      "source": "outputs/FINAL_PEER_REVIEW.txt",
+      "retained": "outputs/pre_budget_FINAL_PEER_REVIEW.txt",
+      "sha256": "8e0517255797c6ea4a089feb5bc821946a9645a7a0d60b58b863a43f936793c3",
+      "bytes": 7859
+    },
+    {
+      "source": "outputs/SUBMISSION_READINESS.txt",
+      "retained": "outputs/pre_budget_SUBMISSION_READINESS.txt",
+      "sha256": "618408783d0aa021ce9706b04cfeff68408c2c15b67920af50856fc6a9e4528f",
+      "bytes": 2642
+    },
+    {
+      "source": "outputs/peerj_cover_letter.txt",
+      "retained": "outputs/pre_budget_peerj_cover_letter.txt",
+      "sha256": "00bec51209ea7e7752e92385475790dd9791920c02000ba5fe6965c9904d1019",
+      "bytes": 4663
+    },
+    {
+      "source": "outputs/peerj_final_visual_review.txt",
+      "retained": "outputs/pre_budget_peerj_final_visual_review.txt",
+      "sha256": "394f5c291526dc1e14de8feb7c74a1db4858711ab2235dac696354129c2f570c",
+      "bytes": 2855
+    },
+    {
+      "source": "outputs/LATEST_REVIEW_FIXES_20261013.txt",
+      "retained": "outputs/pre_budget_LATEST_REVIEW_FIXES_20261013.txt",
+      "sha256": "0dde44717cb3d0ca03827f7d8ad728df3e7dc536e812dc709202838f50c99242",
+      "bytes": 4283
+    },
+    {
+      "source": "outputs/peerj_clean_replay_20261013.log",
+      "retained": "outputs/pre_budget_peerj_clean_replay_20261013.log",
+      "sha256": "e7f474fa31c6d7dc22c73bc74190a587a8328487d3d3ea3b3cc9e6e5ec8826f4",
+      "bytes": 13922
+    },
+    {
+      "source": "outputs/peerj_replay_invocation_20261013.json",
+      "retained": "outputs/pre_budget_peerj_replay_invocation_20261013.json",
+      "sha256": "3b53e4b4e82066c58befb18911e8e64c2c501cae21dda99d30a3c8d3c1ee9a28",
+      "bytes": 284732
+    },
+    {
+      "source": "outputs/manuscript_compile_check.json",
+      "retained": "outputs/pre_budget_manuscript_compile_check.json",
+      "sha256": "20f4a4ef14532056a217391b7a6a4d148e2daeccf690da63f4a27ad75c311275",
+      "bytes": 652
+    },
+    {
+      "source": "outputs/pdf_export_check.json",
+      "retained": "outputs/pre_budget_pdf_export_check.json",
+      "sha256": "e43f82aea5fc37b050979117bf6b3d70aca047fdbc9831009389266064a2ccb0",
+      "bytes": 1789
+    },
+    {
+      "source": "work/risk_adaptivity_revision/peerj_revision/finalize_delivery.py",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/pre_budget_20261014/finalize_delivery.py",
+      "sha256": "7f7777b6bd7f92137dd58f4d0ddedeee820683b024b96a4053f0a832da80c51e",
+      "bytes": 43062
+    },
+    {
+      "source": "work/risk_adaptivity_revision/peerj_revision/prepare_github.py",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/pre_budget_20261014/prepare_github.py",
+      "sha256": "ad4cd5d8b914121398e7d8d10154d536d47beb0e264e43ff2190029cb542abb5",
+      "bytes": 30196
+    },
+    {
+      "source": "work/risk_adaptivity_revision/peerj_revision/verify_github.py",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/pre_budget_20261014/verify_github.py",
+      "sha256": "397d5b8b357f2638bcd0df7c2b5d956ea83d22023e466aa588a638d652e110be",
+      "bytes": 5995
+    },
+    {
+      "source": "work/risk_adaptivity_revision/peerj_revision/refresh_delivery_docs.py",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/pre_budget_20261014/refresh_delivery_docs.py",
+      "sha256": "fafa647f1116bef9ff05e7641632599668e94fb16e80756875878c4f27ed63e4",
+      "bytes": 14507
+    },
+    {
+      "source": "work/risk_adaptivity_revision/peerj_revision/sync_submission_metadata.py",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/pre_budget_20261014/sync_submission_metadata.py",
+      "sha256": "3ea05a378cfb142d508094ab0364a050c51fae702c843d993337a73104b9e70d",
+      "bytes": 1844
+    },
+    {
+      "source": "work/risk_adaptivity_revision/peerj_revision/preflight.py",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/pre_budget_20261014/preflight.py",
+      "sha256": "12abc1efc3001d6c8876ca2d5de54be2b5208982a997a5132570f0539ad59673",
+      "bytes": 10548
+    },
+    {
+      "source": "work/risk_adaptivity_revision/peerj_revision/latest_boundary_review.txt",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/pre_budget_20261014/latest_boundary_review.txt",
+      "sha256": "75ad4fdf937267ff9d814a62b56811e93d07e03409c838b9d4d24a7312c0f0f3",
+      "bytes": 7859
+    },
+    {
+      "source": "work/risk_adaptivity_revision/peerj_revision/latest_compiled_review.txt",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/pre_budget_20261014/latest_compiled_review.txt",
+      "sha256": "cd1328b936a91db971ffa0aa04d1b398f1de2ff3fbe223bf38afbdb98ad972dd",
+      "bytes": 2552
+    },
+    {
+      "source": "work/risk_adaptivity_revision/peerj_revision/final_upload_hygiene.json",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/pre_budget_20261014/final_upload_hygiene.json",
+      "sha256": "b06c5bfc43ceab87655d56fce763b857e3897c8b25f913279d16cc53f2616aa5",
+      "bytes": 30160
+    },
+    {
+      "source": "work/risk_adaptivity_revision/peerj_revision/final_upload_hygiene.txt",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/pre_budget_20261014/final_upload_hygiene.txt",
+      "sha256": "bd5ec65c6adddfc6c61eefd4756f038c811b6221a149b517257d1b9143c50af1",
+      "bytes": 1960
+    },
+    {
+      "source": "work/risk_adaptivity_revision/peerj_revision/journal_delivery/assembly_report.json",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/pre_budget_20261014/assembly_report.json",
+      "sha256": "0b3586348c01938578e8f0ca2f24b1d9de783e2a19842dcd0328888b393c7d1b",
+      "bytes": 269312
+    }
+  ],
+  "release_asset_identity": [
+    {
+      "name": "RELEASE_SHA256.txt",
+      "bytes": 455,
+      "sha256": "c1b022c807746774f47ba76a457bfca624b0c0daa1e0943991d91706645e915b"
+    },
+    {
+      "name": "research_supplement.zip",
+      "bytes": 374309458,
+      "sha256": "9cf8d57bf3acaf52d273b8c5c6dc7cc84ff3ad80aac7517c4b084ed0c88b4495"
+    },
+    {
+      "name": "revised_manuscript.pdf",
+      "bytes": 191762,
+      "sha256": "b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c"
+    },
+    {
+      "name": "revised_manuscript.tex",
+      "bytes": 95558,
+      "sha256": "ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07"
+    },
+    {
+      "name": "Supplemental_Data_S1.zip",
+      "bytes": 18020633,
+      "sha256": "a2e7f547c9e268181d2b98e5826b9492efd8a85a8374503a8ead3fbb4c902b15"
+    },
+    {
+      "name": "Supplemental_Data_S2.zip",
+      "bytes": 23569280,
+      "sha256": "252e184043eaf5b5206a7d71decd8654a64eecafeed3d06a2232a96fe7332293"
+    }
+  ]
+}

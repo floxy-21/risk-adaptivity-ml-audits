@@ -1,0 +1,57 @@
+REVIEW OF ATTACHMENT 7554df6c-c7b4-41b7-a7e2-d789503a38d0
+Date: 14 October 2026 UTC
+Internal AI review, read-only; no manuscript changes by this reviewer.
+Input source SHA256:
+1dfaba75d8c0f9c23d6603e0820ebc4e5d7f63da67b2de0a65870f348dc07932
+
+Issue 2: Explaining the fixed-fallback replay deficit is useful. The
+diagnostic agent is independently checking the proposed 155/165 and 51/57
+recorded counts. Subject to those checks, add a compact explanation that
+the recorded-score deficit comes from the matched-half blocks. Avoid saying
+the two policies differ only there: their batches could differ on closed-at-1
+blocks but both still succeed. On a block with randomized batch optimum 1/2,
+every deterministic batch necessarily has worst-case precision success zero;
+one with success one would contradict the optimum. That can coexist with
+high success on the single stored record.
+
+Issue 3: Do not paste the proposed generative-AI disclosure. Earlier GPT-5
+usage and the author's personal confirmation of checked tool terms are not
+established by the request. Author-specific factual attestations require
+truthful confirmation; they cannot be supplied as cosmetic boilerplate.
+
+Issue 4: There is no numerical contradiction between the figure peak and
+the worked certificate's branch-domain upper bounds. The actual exact
+coefficient envelope has peak
+368046113233646508/771030112647101785 = 0.4773433711558554
+at switch
+402983999413455277/771030112647101785 = 0.5226566288441445.
+The printed 0.47743079 and 0.4774 bounds use rounded-up coefficient ranges
+AND enlarged branch domains [0,.5227] and [.5226,1]. The exact checker
+check_main_inspectable_certificate.py, lines 55-63, directly calculates
+these two conservative bounds. A one-sentence main-text explanation would
+avoid making the reader infer this distinction:
+  These conservative bounds use rounded-up coefficient ranges and enlarged
+  branch domains; Figure 1(a) uses the exact saved coefficients and switch,
+  giving a peak of about 0.47734.
+Keep the compact caption. Do not change either numerical result.
+
+The policy naming cleanup is useful. The current results lead still says
+'precision challenger', and review_sensitivity/manuscript_fragment.tex uses
+that term and 'full-panel challenger replay'. Align them with 'batch-precision
+cover' and 'full-panel cover replay'. The underlying historical output keys
+need not be renamed, which would create unnecessary reproducibility churn.
+
+Issue 5: Adding leading zeros to the matrix entries is harmless readability
+polish if the display still fits after recompilation. The current decimals
+are present and legible; this is not a numerical correction.
+
+The remaining two reference allegations are not confirmed. The source has
+'e152.' followed by a newline and a URL command, which creates normal space;
+the rendered PDF also shows the separation. All three OpenEnergyMonitor
+bibliography labels and records use the same closed-up corporate name.
+No 'OpenEnergy Monitor' alternate spelling appears in the current source.
+Do not introduce an inconsistency to repair a nonexistent one.
+
+Assessment: bounded clarity improvements, not a new scientific flaw. No
+change to the guarantees, reported results or risk interpretation is needed.
+A new render inspection should check the widened matrix after leading zeros.

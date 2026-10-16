@@ -1,0 +1,64 @@
+{
+  "archives": {
+    "research_supplement.zip": {
+      "members_scanned": 1176,
+      "expanded_bytes_scanned": 2557255132,
+      "sha256": "138e47be76301b0c7e95f1287e2aa5c391927710f6f2b44c3d2ff8713382ed90",
+      "findings": [],
+      "flagged_paths": [],
+      "nested_zips": []
+    },
+    "Supplemental_Data_S1.zip": {
+      "members_scanned": 821,
+      "expanded_bytes_scanned": 166450095,
+      "sha256": "c05a47d919fbb8a6b9feffab827e6750da9b9e8fc712820c13234f37a19ca39f",
+      "findings": [],
+      "flagged_paths": [],
+      "nested_zips": []
+    },
+    "Supplemental_Data_S2.zip": {
+      "members_scanned": 253,
+      "expanded_bytes_scanned": 286063653,
+      "sha256": "7036b955da581836757d3b542218646fcaf4899497b3ce91120a40924affc585",
+      "findings": [],
+      "flagged_paths": [],
+      "nested_zips": []
+    }
+  },
+  "local_payload": {},
+  "scope": "Read-only signature and author-registration-identifier scan including gzip contents. Potential values are never printed. Pattern matching does not prove absence of every possible secret. The earlier unoptimized scan was stopped without completing; this is the replacement full scan.",
+  "manuscript_current_private_repo_mentions": 0,
+  "elapsed_seconds": 111.90177010000025,
+  "status": "PASS",
+  "manuscript_sha256": "6e32a08d8a054fcac5dd32554a010121aa0a6388ebd0efe6b270680ed2ef329d",
+  "pdf_sha256": "841a0c1bd7b71bc37aa76306b889fb06f12d6eb3be1318ebbae533954d5e8eb3",
+  "private_repository_read_only_check": {
+    "repository": "floxy-21/risk-adaptivity-ml-audits",
+    "isPrivate": true,
+    "visibility": "PRIVATE",
+    "command": "gh repo view floxy-21/risk-adaptivity-ml-audits --json nameWithOwner,isPrivate,visibility"
+  },
+  "copy_filter_check": {
+    "current_snapshot_files": 980,
+    "expected_current_snapshot_files": 1029,
+    "stale_snapshot_extras": 0,
+    "missing_before_prepare": 49
+  },
+  "additional_intended_report_files_scanned": 36,
+  "additional_report_findings": [],
+  "original_raw_check": {
+    "frozen_blem_rows": 6552,
+    "nonblank_truth_fields": 0,
+    "nonblank_direct_copy_forecast_fields": 0,
+    "original_pilot_continuation_joint_review_folders_present": 0,
+    "named_raw_counter_files_present": 0
+  },
+  "release_assets": [
+    "RELEASE_SHA256.txt",
+    "research_supplement.zip",
+    "revised_manuscript.pdf",
+    "revised_manuscript.tex",
+    "Supplemental_Data_S1.zip",
+    "Supplemental_Data_S2.zip"
+  ]
+}

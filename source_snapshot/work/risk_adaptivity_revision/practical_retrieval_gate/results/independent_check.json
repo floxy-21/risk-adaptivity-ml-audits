@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "Network-free independent accounting and saved-response replay.\n\nDoes not import analyze.py or issue requests. Does not read private answers.\n",
+  "source_sha256": "04856c854d6998397080570369b9aa5881ae0e42960540ea8bb97fe60b754b7f",
+  "analyzed_report_sha256": "fa50a78ce2402019858b1ff04386b8674c634fd99886d1f09b77c2da4175a209",
+  "input_sha256": "4dab6420e1a365feb9bd08d21ebb936f347c21b445848a49b898086dd8029230",
+  "direct_vertex_loss_checks": 39528,
+  "exact_gates_checked": 1098,
+  "case_policy_cache_checks": 4392,
+  "exhaustive_small_partition_budget_checks": 394,
+  "frontier_plan_coverage_checks": 37,
+  "saved_HTTP_requests_checked": 12,
+  "saved_HTTP_rows_checked": 4623,
+  "exact_overlap_checks": 2745,
+  "exact_live_total_checks": 279,
+  "external_zero_query_decisions_validated": 198,
+  "external_bulk_selected_decisions_validated": 81,
+  "network_requests_issued_by_checker": 0
+}

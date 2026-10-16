@@ -1,6 +1,6 @@
-FINAL PEERJ COMPUTER SCIENCE REVIEW -- 14 October 2026
-Source SHA256: ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07
-PDF SHA256: b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c
+FINAL PEERJ COMPUTER SCIENCE REVIEW -- 2026-10-16
+Source SHA256: 47167e289fe4be679605071b8529ea9294758990640c7bdea3ba6479dfb90bf1
+PDF SHA256: 5064e18e7950721612790112605b5046baa821fa49480fddb8e7c2d549536355
 Pages: 28
 
 Policy evidence includes live checks on 13 October 2026 at:
@@ -23,15 +23,21 @@ queries; all three pairs of three constructed nonnegative forecast vectors
 retain the separation. Its growing dictionary, shrinking normalized margin
 and three-query fixed alternative are stated. The contribution is separated
 from established vector recovery, minimax reasoning and sparse-policy bounds.
+The support argument identifies the precise additional obstruction: all m
+specific batches are necessary for positive worst-record success and their
+uniform mixture is uniquely optimal. This is a consequence of the constructed
+adverse records, not a claim to have introduced minimax theory.
 The absolute-width example distinguishes original loss units from normalized
 precision. Prior work is credited by objective and precise statement.
 The policy table and worked certificate distinguish mean risk, precision
 guarantees, recorded success and retrieval costs. An unchanged-policy exploratory sweep
-uses all five targets from 0.40 to 0.60; unresolved batch-probability gaps are
-quantified. Older separate-pair controls remain in S6. Active prose replaces repeated framing; mathematical notation remains where
+uses all five targets from 0.40 to 0.60. The new exact completion closes the
+previous 418 batch-probability gaps; all 1,098 current precision optima have
+matching rational certificates. Older separate-pair controls remain in S6.
+Active prose replaces repeated framing; mathematical notation remains where
 needed for reproducibility. Tables and references are readable in the rendered
 28-page PDF. Letter paper, one-inch margins, 12-point Times-family text,
-left alignment and line numbers follow the instructions. The 240-word
+left alignment and line numbers follow the instructions. The 233-word
 abstract is below the journal limit. Editable LaTeX and PDF are supplied.
 The two-panel figure exposes the exact conditional geometry and source-specific
 threshold curves. The scalar precision bound's premises are explicitly
@@ -39,7 +45,7 @@ distinguished from the joint objective; curvature alone proves no separation.
 An introductory workflow exposes the admissible bulk, fixed, adaptive and
 extended-audit routes within the exact-total noiseless model. Policy objectives
 are separated from guarantees and recorded outcomes. The certificate-status
-table makes its closed/open partition and overlapping fallback label explicit.
+table separates exact current optima from retained historical fallback controls.
 The current compiled-source review covers the workflow and displayed equations.
 The elementary finite-action consequence closes the no-certainty branch for
 all randomized adaptive policies under the declared uncapped exact-total
@@ -49,8 +55,10 @@ noiseless prefix model. Its 19/20 bound is explicitly not claimed optimal.
 Models, chronological splits, information cutoffs, source versions, query
 dictionaries, costs, budgets, thresholds and tie rules are documented.
 Comparators receive identical information and two shared readings. The
-precision-matched batch challenger is distinguished from mean-width and
-deterministic worst-width baselines; unresolved optimization gaps are retained.
+precision-optimal batch challenger is distinguished from mean-width and
+deterministic worst-width baselines. A coefficient-only secondary width rule
+resolves policy choice before recorded answers are read; exact primary
+precision is reverified after numerical secondary refinement.
 The complete three-way assurance partition, saved greedy-first-query limitation
 and deterministic-fallback diagnostic expose the practical decision and stronger
 controls. Their post-hoc chronology and source-reconstruction scopes are explicit.
@@ -65,6 +73,24 @@ Paired outcomes, per-system effects, synchronized calendar-block resampling
 and sensitivity intervals are reported. There are only three systems per
 source. Unit costs, caps and error allowances are declared models, not
 validated tariffs or device specifications. Bulk retrieval remains a control.
+An additional fixed-policy diagnostic links the interval to epsilon-optimal
+model certification at a declared training-scale tolerance. At the primary
+tolerance, adaptive certification counts are 189/277 original/external,
+fixed-batch counts 188/263, and greedy counts 186/277. This supports a gain
+over fixed batching on the external panel, while preserving the greedy tie.
+
+A supplementary safe stopping application returns a model within the unchanged
+0.01-training-second-moment tolerance. With retained endpoints, it avoids
+8/819 original
+and 198/279 external
+per-block fetches. All four models share each acquisition. These are declared-
+schedule replay counts; twelve separate public API calls include full-record
+downloads for validation. Cold request-oriented access selects direct bulk,
+and historical access uses available rounded forecast copies before range
+batching. The table retains unfavorable cold and whole-period comparisons.
+This application does not establish monetary savings, cost dominance, a
+latency advantage, or improved joint-precision performance. The tolerance is
+a stated audit requirement, not a calibrated deployment threshold.
 
 3. VALIDITY OF FINDINGS -- addressed by separate proof and execution evidence.
 Analytic proofs establish the general and constructed guarantees. Numerical
@@ -76,13 +102,14 @@ LPs at m=3,5,10. The maximum width discrepancy is
 7.105427357601002e-15; comparison
 tolerance is 1e-7 and primal/dual solver tolerances are 1e-9. These finite
 checks support implementation; the universal family claim follows from the
-analytic proof. The empirical studies remain separate and unchanged.
+analytic proof. The original empirical studies are retained; the four new diagnostics are separately identified.
 The assurance checker verifies 583 seed-independent adverse distributions and
 11,660 strictly failing fibers on all 489 original and 94 external no-certainty
 cases. All coefficient normalizations agree exactly. These source-bound checks
 use no recorded answers or outcomes. The default offline job independently
-regenerates the 94 external distributions and 1,880 fibers; original coefficients
-are checked by the separate pinned-source route and are not redistributed.
+regenerates the 94 external distributions and 1,880 fibers; this job checks
+original coefficients through the separate pinned-source route. New diagnostic
+jobs separately replay bundled derived coefficient certificates.
 The proof and current checker, reports and witnesses are hash-bound in the
 delivery record. This is an elementary certainty consequence rather than a
 claimed new general theorem or optimized randomized-adaptive success value.
@@ -94,6 +121,51 @@ and fresh fitting. Practical conclusions concern certificate precision under
 the declared interface. Monetary savings, deployed superiority and improved
 downstream model choice are not established or claimed. Negative controls
 and combined-capacity/error limitations remain visible.
+
+The minimum fixed-budget addition makes the readout constraint an output of
+the assurance requirement. A general O(R*n) range scan computes the exact
+minimum fixed prefix budget, including randomized sure-success batches.
+Across all 1,098 blocks, 35,136 subset checks and a separate shortest-path
+checker agree. The independent run checks 737,856 fixed endpoint pairs,
+41,400 adaptive endpoint pairs and 500 adaptive interval covers. General
+constructed instances cover 180 inputs and 20,440 enumerated batches.
+On 168 original and 57 external blocks spanning all six systems, the exact
+comparison is three fixed versus two adaptive readings: one third fewer
+reserved readouts with one extra feedback round per qualifying block.
+Certified adaptation with a minimum fixed fallback reduces full-panel totals
+from 2,625 to 2,457 and 743 to 686 (6.40% and 7.67%). No optional answers were
+used to derive these retrospective counts. The scope is the uncapped,
+noiseless exact-total model. Adaptive budgets above two remain unsolved.
+The 126,195 exact support evaluations and four added replay jobs are bound to
+the current scripts, reports and archive manifest. Default budget replay
+covers the external panel; both-source evidence retains its separate chain.
+
+FOUR EMPIRICAL REVIEW ISSUES -- resolved by new computations.
+Scalar fixed-budget checks isolate a joint-only obstruction on 191 of the 225
+baseline reading-saving blocks (137 original and 54 external). The remaining
+34 contain at least one scalar obstruction; 188 of the 222 matched-half cases
+are joint-only. Binding contrasts are reported in original loss units.
+The absolute floor is 1% of the training mean squared hourly consumption and
+uses no withheld evaluation answers. All 57 baseline external blocks remain
+assured with at most two readings. Thirty-nine now need no feedback; the
+unchanged 57-block cohort uses 70 readings versus 88 minimum fixed readings.
+The complete 279-block external panel uses 358 versus 378 readings, with 18
+retained and two newly qualifying feedback cases. Both denominators are shown.
+This floor is a declared sensitivity scale, not a calibrated decision threshold.
+Exact rational checks establish sufficient closed-left/open-right threshold
+intervals for all 222 frozen matched-half certificates. Entire symmetric bands
+[0.49,0.51], [0.475,0.525] and [0.45,0.55] retain adaptive certainty and batch
+worst-record success exactly one half in 179, 119 and 53 cases. Outside an
+interval the frozen certificate is inconclusive; no maximality is asserted.
+Matched-cohort capacity tables separate exclusions from added information.
+Of the 225 baseline saving cases, the E/2 cap excludes 25, makes 191 fixed-
+certifiable and leaves nine requiring feedback. The E/3 cap excludes 75 and
+makes all 150 retained cases fixed-certifiable. Additional capacity can remove
+the advantage; the counts do not hide either selection or this consequence.
+Eleven new jobs replay the derived inputs and certificates, independently check
+endpoints and reconcile the manuscript counts. Bundled both-panel certificate
+replay is distinct from original raw-source/training reconstruction, whose
+pinned execution evidence is retained. External raw-source checks run by default.
 
 DATA, CODE AND PUBLICATION PREPARATION
 Reviewers receive complete current code, proofs, case ledgers, attributed
@@ -121,8 +193,10 @@ acceptance remains an editorial decision. This is not external human peer
 review, a formal proof certificate for the universal theorem, or a calibrated
 greater-than-80% probability. No external person was contacted. Nothing was
 submitted to a journal.
-Submission remains blocked by the recorded browser startup failure before page
-creation. These delivery checks do not constitute a fresh portal attempt.
+Signed-in PeerJ submission preparation is recorded in the current browser
+diagnostic. These delivery checks do not submit the manuscript or perform a
+fresh portal action.
 
 FINAL ARTIFACT VERIFICATION
-PASS: 77 steps in a fresh network-disabled stage from the two publisher ZIP files, 1096 manifested members, 1026.08 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 41.59 MB. Full historical archive integrity also passed.
+Scientific verification: the preserved 101-step clean replay passed on source 6ff21873993503ebf5641f325f8313e1d5868ce1e42d53acc4f365422fb5bfbc. All scientific code, inputs and results in the final package are byte-identical. A subsequent, explicitly reviewed prose-only delta passed a fresh isolated manuscript rebuild and document checks. No second full scientific execution is claimed for the final prose revision.
+Current publisher package: 1280 manifested members; combined ZIP size 49.42 MB. Recorded scientific execution time: 1301.05 seconds. Full historical archive integrity also passed.

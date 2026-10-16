@@ -1,0 +1,45 @@
+\subsubsection{Certifying the optimal randomized batch}
+\label{sec:complete-batch-precision}
+The ten two-reading batches define a small precision game. An
+at-most-two-reading policy can be padded to two readings without
+reducing its precision success, so this list also covers smaller batches.
+For batch $q$,
+let $v_{qr}$ assign the normalized coefficient range of contrast $r$ to
+every hour in each segment. Its success set is
+\[
+ S_q=\{x\geq0:\mathbf1^\top x=1,\ v_{qr}^\top x\leq\tau
+       \text{ for every }r\}.
+\]
+A mixture $\pi$ has precision success
+$\sum_q\pi_q\mathbf1\{x\in S_q\}$ at record $x$. We compute its optimal
+worst-record value by alternating a finite game with a full-domain check.
+
+The finite game returns a candidate mixture and an adverse distribution
+over feasible records. To verify a proposed lower guarantee $s$, consider
+any set $M$ of failed batches with $\sum_{q\in M}\pi_q>1-s$.
+Such a failure set must be impossible. We check it by branching over a
+failing contrast for each batch: failure requires
+$v_{q,r_q}^\top x>\tau$. For each nonempty branch, we maximize a common
+slack $\delta$ subject to $x\geq0$, $\mathbf1^\top x=1$ and
+$v_{q,r_q}^\top x\geq\tau+\delta$ for every selected row.
+A positive optimum characterizes strict feasibility; we accept proposed
+witnesses only after exact rational verification. The LP proposes either
+such a record or nonnegative rational weights satisfying
+\[
+ \sum_{q\in M'}\lambda_q=1,\qquad
+ \sum_{q\in M'}\lambda_q v_{q,r_q,h}\leq\tau
+ \quad(h=1,\ldots,6)
+\]
+for the contrasts selected along the current branch $M'\subseteq M$.
+The latter inequalities contradict simultaneous strict failure on the
+simplex and close that branch. Within each batch, we omit a contrast row
+only if another retained row dominates it componentwise, so every possible
+failure remains covered.
+A feasible failure record is added to the game, and we repeat.
+
+The resulting proof consists of branch covers for the lower bound and an
+adverse-record distribution for the upper bound. A solver-free checker
+reconstructs the coefficients, verifies the rational inequalities, and
+checks all $2^{10}=1{,}024$ possible failure masks. Matching bounds establish
+the continuum optimum. This computation uses forecasts and initial totals;
+optional reading answers enter only the subsequent replay.

@@ -31,6 +31,7 @@ The following rational upper enclosures are obtained from the exact saved
 coefficients; each actual range lies between the displayed value minus
 $10^{-4}$ and that value, with zero and one exact.
 \begin{center}
+\setlength{\tabcolsep}{8pt}
 \begin{tabular}{rcccc}
 \toprule
 Contrast $r$&$a_r\leq$&$b_r\leq$&$d_r\leq$&$e_r\leq$\\
@@ -82,20 +83,8 @@ These conservative bounds exceed the exact envelope peak, about $0.47734$,
 plotted in Figure~\ref{fig:practical-guarantee-replay}(a).
 Hence its success is guaranteed, even allowing either action inside the
 displayed switch enclosure.
-From the extracted package root, run the following commands; they require
-no optimization solver:
-\begin{verbatim}
-cd work/risk_adaptivity_revision
-python joint_certification/proof_check_joint.py
-python joint_certification/precision_batch_check.py
-python joint_certification/precision_adaptive_link.py
-python joint_certification/check_main_inspectable_certificate.py
-\end{verbatim}
-The first three verify the constructed theorem and all 57 matching
-half-success certificates within the complete 279-block external panel.
-The last verifies this example's source hashes, 36 coefficient enclosures,
-24 range enclosures, 36 multipliers, 20 adverse widths, and both branch
-domains.  Full coefficients and the rational switch remain in its output.
-The original panel's 165 certificates require the documented raw-data
-regeneration route; these default commands do not reconstruct absent
-original inputs.
+The solver-free verifier checks the source hashes, 36 coefficient enclosures,
+24 range enclosures, 36 multipliers, 20 adverse widths and both branch domains.
+Online Resource~1 gives its command and complete coefficients. The default
+replay includes all 57 external matched-half certificates; reproducing the
+165 original certificates also requires the pinned BLEM raw-source route.

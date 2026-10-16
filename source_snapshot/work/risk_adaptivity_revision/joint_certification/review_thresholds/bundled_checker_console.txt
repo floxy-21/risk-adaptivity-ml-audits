@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checks": {
+    "fixed_batch_pure_profiles": 13320,
+    "adaptive_conditional_extreme_profiles": 7644,
+    "adaptive_branches": 463,
+    "primal_dual_cover_equalities": 7992,
+    "adversary_batch_inequalities": 2220,
+    "matched_half_cases": 222
+  },
+  "scope": "Exact threshold certificates for all 222 saved matched-half cases; independently reconstructed widths and primal/dual cover equality; no solver or producer import.",
+  "execution_mode": "bundled_certificate_replay",
+  "source_records_verified_in_this_run": false,
+  "intervals_sha256": "caa520ca2a2d3564e19fe734c79b3d4fbd304083c2f44c1624e9bfb53bdaf7bd",
+  "report_sha256": "3356bc55aac7041875b12dff449978af425868e26226667908341cc615d7bb41",
+  "inputs_sha256": "b9fcb2b6ef916057402b213c4b1dab1a11aa53a1288a62982b7c48aa00865652",
+  "checker_sha256": "acf52cd8d0fa3a76f1f0184ef881acb00aa55bb6b5c0158bbf0ec0cd302dd9f8",
+  "elapsed_seconds": 65.20721419999609,
+  "numerical_tolerance": "None: exact Fraction arithmetic on saved binary64 rational inputs."
+}

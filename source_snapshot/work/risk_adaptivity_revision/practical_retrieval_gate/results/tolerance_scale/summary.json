@@ -1,0 +1,204 @@
+{
+  "status": "PASS",
+  "scope": "Rebuild system-level tolerance context from existing frozen forecasts/targets.\n\nThis exploratory descriptive table changes no model, threshold, cohort or\npolicy. Only system aggregates are exported, never original fine-answer arrays.\nThe original source needs the separately documented pinned raw-source chain.\n",
+  "cases": 1098,
+  "model_losses_evaluated": 4392,
+  "exact_paired_loss_checks": 6588,
+  "selection": "All 819 original and 279 external existing blocks; no replacements.",
+  "tolerance_factor": "1/100",
+  "units": "kWh squared",
+  "definitions": {
+    "median_block_best_mse_kwh2": "Median across blocks of the smallest of four realized block MSEs; descriptive hindsight reference, not one deployable model.",
+    "median_block_model_mse_spread_kwh2": "Median across blocks of maximum minus minimum realized MSE among the same four fixed models.",
+    "median_pooled_model_mse_kwh2": "Median of all four realized model MSEs pooled across blocks within one system.",
+    "median_pooled_absolute_pair_gap_kwh2": "Median absolute MSE difference over all six model pairs pooled across blocks within one system.",
+    "all_four_models_within_epsilon_blocks": "Number of blocks where maximum minus minimum realized model MSE is at most epsilon. This uses reference targets and is not a no-query certificate count."
+  },
+  "systems": [
+    {
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "blocks": 273,
+      "models_per_block": 4,
+      "pairs_per_block": 6,
+      "all_four_models_within_epsilon_blocks": 12,
+      "at_least_two_models_within_epsilon_blocks": 118,
+      "exact": {
+        "epsilon_kwh2": "38040583625622466733661/10640000000000000000000000",
+        "median_block_best_mse_kwh2": "2083208851598435760808023463442264848751152729/185691005892807041234868633600000000000000000000",
+        "median_block_model_mse_spread_kwh2": "1249643469483247398076852743731786278597/38029518006846882044901096161280000000000",
+        "median_pooled_model_mse_kwh2": "1467422115101872036966019117810117777729527519/61897001964269013744956211200000000000000000000",
+        "median_pooled_absolute_pair_gap_kwh2": "11373393537202491100005130015174961123/950737950171172051122527404032000000000"
+      },
+      "decimal": {
+        "epsilon_kwh2": 0.0035752428219569987,
+        "median_block_best_mse_kwh2": 0.011218684726178929,
+        "median_block_model_mse_spread_kwh2": 0.032859829284669344,
+        "median_pooled_model_mse_kwh2": 0.023707482891480978,
+        "median_pooled_absolute_pair_gap_kwh2": 0.01196270069492315
+      },
+      "median_each_model_mse_kwh2": {
+        "daily": "1558515281002604603295132996113069433857799809/46422751473201760308717158400000000000000000000",
+        "hist_gradient_boosting": "2876596453642183794545428157218219135226473693/185691005892807041234868633600000000000000000000",
+        "mlp": "701103054950759935878059275202173169623922071/23211375736600880154358579200000000000000000000",
+        "ridge": "527971180273219945592774584930171434235362859/23211375736600880154358579200000000000000000000"
+      }
+    },
+    {
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "blocks": 273,
+      "models_per_block": 4,
+      "pairs_per_block": 6,
+      "all_four_models_within_epsilon_blocks": 15,
+      "at_least_two_models_within_epsilon_blocks": 115,
+      "exact": {
+        "epsilon_kwh2": "47099075643337018794547/10640000000000000000000000",
+        "median_block_best_mse_kwh2": "3492261332972412349626781492090144264335216341/185691005892807041234868633600000000000000000000",
+        "median_block_model_mse_spread_kwh2": "488614901944213021024196451173583114467/9507379501711720511225274040320000000000",
+        "median_pooled_model_mse_kwh2": "985690326040811269975518149074634331543465903/24758800785707605497982484480000000000000000000",
+        "median_pooled_absolute_pair_gap_kwh2": "2742482869520656521211835938055311180117/152118072027387528179604384645120000000000"
+      },
+      "decimal": {
+        "epsilon_kwh2": 0.0044266048536970885,
+        "median_block_best_mse_kwh2": 0.018806841592469876,
+        "median_block_model_mse_spread_kwh2": 0.05139322584695837,
+        "median_pooled_model_mse_kwh2": 0.03981171521884921,
+        "median_pooled_absolute_pair_gap_kwh2": 0.018028645991693192
+      },
+      "median_each_model_mse_kwh2": {
+        "daily": "10064609500117180902148672242962581528471384237/185691005892807041234868633600000000000000000000",
+        "hist_gradient_boosting": "439964286004882619343252870978386142703415689/15474250491067253436239052800000000000000000000",
+        "mlp": "301296421809943040373229715436329213173988877/7737125245533626718119526400000000000000000000",
+        "ridge": "1850794861777246439607235611797312975416118779/46422751473201760308717158400000000000000000000"
+      }
+    },
+    {
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "blocks": 273,
+      "models_per_block": 4,
+      "pairs_per_block": 6,
+      "all_four_models_within_epsilon_blocks": 0,
+      "at_least_two_models_within_epsilon_blocks": 67,
+      "exact": {
+        "epsilon_kwh2": "6485654941025697338183/1995000000000000000000000",
+        "median_block_best_mse_kwh2": "17708056397799885017059259232138126108112669643/742764023571228164939474534400000000000000000000",
+        "median_block_model_mse_spread_kwh2": "2277652991213127484845597829335635949991/25353012004564588029934064107520000000000",
+        "median_pooled_model_mse_kwh2": "27889962261397324575484414698299472831767654863/495176015714152109959649689600000000000000000000",
+        "median_pooled_absolute_pair_gap_kwh2": "324119097523167318065469914240934579109/9507379501711720511225274040320000000000"
+      },
+      "decimal": {
+        "epsilon_kwh2": 0.0032509548576569913,
+        "median_block_best_mse_kwh2": 0.02384075673544217,
+        "median_block_model_mse_spread_kwh2": 0.08983757002138665,
+        "median_pooled_model_mse_kwh2": 0.056323330242830726,
+        "median_pooled_absolute_pair_gap_kwh2": 0.034091317956205756
+      },
+      "median_each_model_mse_kwh2": {
+        "daily": "12856393317448369925967941399493736929896571089/148552804714245632987894906880000000000000000000",
+        "hist_gradient_boosting": "7244040776075109549232527696827414729999436397/185691005892807041234868633600000000000000000000",
+        "mlp": "206625183691961935622401512739941744700818537173/2971056094284912659757898137600000000000000000000",
+        "ridge": "4674632326319552254386287898864322287785687113/92845502946403520617434316800000000000000000000"
+      }
+    },
+    {
+      "cohort": "external",
+      "meter": "hpm_1",
+      "blocks": 93,
+      "models_per_block": 4,
+      "pairs_per_block": 6,
+      "all_four_models_within_epsilon_blocks": 0,
+      "at_least_two_models_within_epsilon_blocks": 47,
+      "exact": {
+        "epsilon_kwh2": "296831433/48653926400",
+        "median_block_best_mse_kwh2": "9/2097152",
+        "median_block_model_mse_spread_kwh2": "1278006547927333087070631930978649/7788445287802241442795744493830144",
+        "median_pooled_model_mse_kwh2": "176974459666734152421247613573/7605903601369376408980219232256",
+        "median_pooled_absolute_pair_gap_kwh2": "145887460593615000883992204655231/3894222643901120721397872246915072"
+      },
+      "decimal": {
+        "epsilon_kwh2": 0.006100873145563849,
+        "median_block_best_mse_kwh2": 4.291534423828125e-06,
+        "median_block_model_mse_spread_kwh2": 0.1640900719850808,
+        "median_pooled_model_mse_kwh2": 0.023268038742283226,
+        "median_pooled_absolute_pair_gap_kwh2": 0.0374625371823808
+      },
+      "median_each_model_mse_kwh2": {
+        "daily": "9/2097152",
+        "hist_gradient_boosting": "47126375038561397510717826777633/1298074214633706907132624082305024",
+        "mlp": "19633768461161043844189475370117629/124615124604835863084731911901282304",
+        "ridge": "4695559192975806169446918547639/649037107316853453566312041152512"
+      }
+    },
+    {
+      "cohort": "external",
+      "meter": "hpm_2",
+      "blocks": 93,
+      "models_per_block": 4,
+      "pairs_per_block": 6,
+      "all_four_models_within_epsilon_blocks": 25,
+      "at_least_two_models_within_epsilon_blocks": 65,
+      "exact": {
+        "epsilon_kwh2": "491467367/218942668800",
+        "median_block_best_mse_kwh2": "57433978590542281920897121171/162259276829213363391578010288128",
+        "median_block_model_mse_spread_kwh2": "2919676095176944870090928560639699/498460498419343452338927647605129216",
+        "median_pooled_model_mse_kwh2": "11541632850580481578734007887847/3894222643901120721397872246915072",
+        "median_pooled_absolute_pair_gap_kwh2": "100902876734484404339116007615613/41538374868278621028243970633760768"
+      },
+      "decimal": {
+        "epsilon_kwh2": 0.0022447308681020333,
+        "median_block_best_mse_kwh2": 0.00035396422141702655,
+        "median_block_model_mse_spread_kwh2": 0.005857387103763411,
+        "median_pooled_model_mse_kwh2": 0.002963783508540848,
+        "median_pooled_absolute_pair_gap_kwh2": 0.002429148397221971
+      },
+      "median_each_model_mse_kwh2": {
+        "daily": "707/786432",
+        "hist_gradient_boosting": "111297336021867814806374764017263/31153781151208965771182977975320576",
+        "mlp": "43497126351361233019171095577/7605903601369376408980219232256",
+        "ridge": "7240585597738632838094139380279/2596148429267413814265248164610048"
+      }
+    },
+    {
+      "cohort": "external",
+      "meter": "hpm_7",
+      "blocks": 93,
+      "models_per_block": 4,
+      "pairs_per_block": 6,
+      "all_four_models_within_epsilon_blocks": 44,
+      "at_least_two_models_within_epsilon_blocks": 87,
+      "exact": {
+        "epsilon_kwh2": "7763291/838860800",
+        "median_block_best_mse_kwh2": "151/2097152",
+        "median_block_model_mse_spread_kwh2": "76396248373437247106113522731389/7788445287802241442795744493830144",
+        "median_pooled_model_mse_kwh2": "113515630799456842177620654380045/249230249209671726169463823802564608",
+        "median_pooled_absolute_pair_gap_kwh2": "330798592028023506780558296397857/249230249209671726169463823802564608"
+      },
+      "decimal": {
+        "epsilon_kwh2": 0.009254564046859742,
+        "median_block_best_mse_kwh2": 7.200241088867188e-05,
+        "median_block_model_mse_spread_kwh2": 0.009808921492083164,
+        "median_pooled_model_mse_kwh2": 0.00045546490106808315,
+        "median_pooled_absolute_pair_gap_kwh2": 0.0013272810707248067
+      },
+      "median_each_model_mse_kwh2": {
+        "daily": "641/6291456",
+        "hist_gradient_boosting": "44863552278483187437099269734621/124615124604835863084731911901282304",
+        "mlp": "100315146091621979855010017555483/15576890575604482885591488987660288",
+        "ridge": "487298082266473697362073875949/486777830487640090174734030864384"
+      }
+    }
+  ],
+  "source_sha256": {
+    "inputs/public_decision_inputs_coherent.json": "4dab6420e1a365feb9bd08d21ebb936f347c21b445848a49b898086dd8029230",
+    "original_raw/prepared/data_blem_hourly_endpoints.csv": "2d8a88d83123216d71329c1745a4dbf1d0c47b34ba1a22b6529f348f4e5987eb",
+    "http_probe/request_plan.json": "f22a807180d2ab5138225168df710ab461d563d35ce519c7ee3a3f028db1d695",
+    "http_probe/http_log.json": "3e9b1c8617034e48ed3e5577e2a0f7817408af2893b6874d961776d3e8dc7df1",
+    "http_probe/response_05.json": "d1e93ceb8c70dd5c5cbbb09f529430fbf9e3bd210d7df084fa16c7e7f516473d",
+    "http_probe/response_08.json": "051f9cbce0432e97b573bd8d85013645dce56369c6efb506f1e5f9dc7fb06705",
+    "http_probe/response_11.json": "16c2bf73a00aef2727f346ed103dcf4fa09fdfecb795128f24adf5f6b6cea6eb"
+  },
+  "builder_sha256": "9fad44d0d75058b201e231656b6e857285b1f3f2eb60933134e99e7d35a34cba",
+  "privacy": "Only six system-level aggregate rows are exported. No original fine-answer arrays or per-block original losses are exported."
+}

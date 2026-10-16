@@ -1,0 +1,29 @@
+\subsection{Computing the minimum fixed reading budget}
+\label{sec:minimum-fixed-budget}
+We can choose the reading budget instead of assuming it. Here
+$F=\{x\geq0:\sum_hx_h=1\}$ and $\tau\geq0$. For the normalized
+coefficients above, a fixed prefix set $Q$ partitions the record into segments
+$\mathcal S(Q)$. Concentrating the unknown mass in one segment gives
+\[
+ \sup_{x\in F}J_Q(x)=
+ \max_{r,S\in\mathcal S(Q)}\operatorname{range}(c_r|_S),\qquad
+ b_{\rm fix}(\tau)=\min_Q\{|Q|:\sup_{x\in F}J_Q(x)\leq\tau\}.
+\]
+This yields a simple exact algorithm. Starting at the first interval, extend
+the current segment while every coefficient row has range at most $\tau$.
+When the next interval would violate a bound, place a query immediately
+before it and start a new segment. The resulting partition has the fewest
+segments, hence the fewest readings: its first segment ends no earlier than
+that of any optimal partition, whose remaining segments can be truncated
+to give a valid partition of the remaining suffix. Induction completes the
+exchange argument. Maintaining each row's minimum and maximum takes
+$O(Rn)$ comparisons for $R$ contrasts and $n$ intervals.
+
+Randomization cannot reduce this fixed budget when success one is required.
+Any positive-probability batch that fails on a feasible record prevents
+certainty at that record. We compare the fixed minimum with the existing
+two-query adaptive certificate. If no single reading suffices and that
+certificate exists, the adaptive minimum is exactly two. Otherwise the
+minimum fixed batch supplies a constructive fallback; we do not optimize
+adaptive budgets above two. This calculation concerns exact, uncapped
+nonnegative allocations and noiseless prefix readings.

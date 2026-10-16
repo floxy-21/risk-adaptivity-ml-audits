@@ -1,0 +1,26 @@
+\paragraph{Exact comparison with randomized batching.}
+We solved the half-width precision game on every block.
+Table~\ref{tab:joint_precision_status} gives the exact optima: matching
+feasible adverse distributions and rational branch covers close all
+1,098 cases. On the 225 blocks where feedback saves a reading, adaptation
+guarantees success, whereas the best randomized batch has worst-record
+success $1/2$ on 222 blocks and $1/3$ on the remaining three.
+The comparison therefore includes every randomized mixture of the ten
+permitted batches.
+
+\begin{table}[htbp]\centering\small
+\caption{Exact optimal worst-record batch precision success with two readings.
+Each row partitions the complete panel; all lower and upper bounds match.}
+\label{tab:joint_precision_status}
+\begin{tabular}{lrrrrrrr}\toprule
+Panel & Blocks & $0$ & $1/5$ & $1/4$ & $1/3$ & $1/2$ & $1$\\\midrule
+Original & 819 & 434 & 1 & 13 & 44 & 165 & 162\\
+External & 279 & 81 & 0 & 2 & 11 & 57 & 128\\\bottomrule
+\end{tabular}\end{table}
+
+For the 418 of 1,098 games whose initial lower and upper precision bounds
+differed, exact completion took 92.09 seconds on the recorded host (maximum 2.27 seconds per case; 5,261 LPs). The independent
+checker verified 428,032 failure masks, 2,328 rational dual inequalities
+and 96,820 adverse-record/batch evaluations. These certificates are exact
+for the stored binary64-derived coefficients. The LPs propose witnesses;
+rational arithmetic determines whether they prove the reported bounds.

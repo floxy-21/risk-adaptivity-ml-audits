@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "verification_mode": "full_replay_plus_verified_editorial_delta",
+  "completed_utc": "2026-10-16T02:59:16.112940+00:00",
+  "old_source_sha256": "6ff21873993503ebf5641f325f8313e1d5868ce1e42d53acc4f365422fb5bfbc",
+  "new_source_sha256": "47167e289fe4be679605071b8529ea9294758990640c7bdea3ba6479dfb90bf1",
+  "new_pdf_sha256": "5064e18e7950721612790112605b5046baa821fa49480fddb8e7c2d549536355",
+  "baseline_replay_steps": 101,
+  "baseline_replay_sha256": "6a77973ae18d2e4170eb51381929e539bf34bb77453228e77ee07e4221910c2f",
+  "baseline_replay_path": "work/risk_adaptivity_revision/peerj_revision/pre_editorial_delta_20261016/current_clean_package_replay.json",
+  "baseline_archives": [
+    {
+      "path": "work/risk_adaptivity_revision/peerj_revision/pre_editorial_delta_20261016/research_supplement.zip",
+      "bytes": 404335712,
+      "sha256": "b4d466ddfa82f846ea2a1e57e479f73050defbed02b60414aa54d673a2f3e2e1"
+    },
+    {
+      "path": "work/risk_adaptivity_revision/peerj_revision/pre_editorial_delta_20261016/Supplemental_Data_S1.zip",
+      "bytes": 24646694,
+      "sha256": "029d92369bef9eaf750a66c5d4f7220d9e8c3a1280d784e11ce40cdc3abae704"
+    },
+    {
+      "path": "work/risk_adaptivity_revision/peerj_revision/pre_editorial_delta_20261016/Supplemental_Data_S2.zip",
+      "bytes": 24776779,
+      "sha256": "35090966a62d2323fccaa8735aa1e80c6d8fb68fa282c2013411b770194a42b2"
+    }
+  ],
+  "current_archive_sha256": {
+    "research_supplement.zip": "2d63e125ae566edb72d98ace34431f3a06e2bdbfd144cbb2e8640bf168357b1e",
+    "Supplemental_Data_S1.zip": "0cd1cb6f7c721bfa843f12674508a78cecf2928c04118bdc15ab4ce431123233",
+    "Supplemental_Data_S2.zip": "0329b0eeaa14ed771156337e453a07a4c780f7ec7b47749a21cb2bafa243e9e2"
+  },
+  "scientific_inventory_unchanged": true,
+  "full_manifest_members": 1381,
+  "journal_manifest_members": 1280,
+  "reviewed_changed_members": [
+    {
+      "path": "outputs/revised_manuscript.tex",
+      "old_sha256": "6ff21873993503ebf5641f325f8313e1d5868ce1e42d53acc4f365422fb5bfbc",
+      "new_sha256": "47167e289fe4be679605071b8529ea9294758990640c7bdea3ba6479dfb90bf1"
+    },
+    {
+      "path": "outputs/risk_editorial_verification.json",
+      "old_sha256": "f0bd0d95c9afc9df981c104d6acbd41ce20f0002e1877f2ae079d10a7d18fe79",
+      "new_sha256": "ea6c851f24032938ae1e03c1a4b5c219a658bc5101849a0cf778ede3e2a47d66"
+    },
+    {
+      "path": "outputs/risk_release_manifest.json",
+      "old_sha256": "b8ba0a8b894ecf3c18de8d8b3fe9bab0cf6d2eae1c15c18f479db0c1d5d86d92",
+      "new_sha256": "0fd1c2e865d5947086564dbcc5822902288ce33a102df3729d31ec705055e004"
+    },
+    {
+      "path": "work/risk_adaptivity_revision/editorial/source_protocols_short.tex",
+      "old_sha256": "16171904205ae0f3a61e42d331e7284655c5a52de4869d8da9d2506d0ced61fd",
+      "new_sha256": "85bea5a04a9f200ea638eba068c5eea9d2a4d12311b3c733ccf07c7156ac58c9"
+    },
+    {
+      "path": "work/risk_adaptivity_revision/joint_certification/precision_completion_probe/results_exact.tex",
+      "old_sha256": "780fca167fe66ab3529f6124ad157913fc57c72dcd51a0be7d85af39deed2a50",
+      "new_sha256": "7efd822e13552794ac844c6a8dd773cfd8f438ae6007409adba364ccfae0796d"
+    }
+  ],
+  "fresh_scientific_steps_executed": 0,
+  "fresh_composition_build": {
+    "script": "work/risk_adaptivity_revision/build_manuscript.py",
+    "arguments": [],
+    "network_disabled": true,
+    "python_executable": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\reviewer_freshvenv_20261013\\Scripts\\python.exe",
+    "returncode": 0,
+    "source_sha256": "47167e289fe4be679605071b8529ea9294758990640c7bdea3ba6479dfb90bf1",
+    "ntfs_compressed_stage": true,
+    "stage": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\editorial_delta_20261016_025806",
+    "log": "work/risk_adaptivity_revision/peerj_revision/editorial_delta_evidence/20261016_025806/composition_build.log",
+    "log_sha256": "b470c2f8e86e1249b0a7cf6982e8b3c8e92ff5d4f5042ec662176a9d166f2fab"
+  },
+  "verifier_sha256": "1207b31b7c76c6ed327e96cefef57729db7f2ac0b501e7ce676c7201834c08d5",
+  "artifact_sha256": {
+    "work/risk_adaptivity_revision/peerj_revision/editorial_delta_plan.json": "fe7e2b9146275ff18b058ff2d03c6776a42c7e1c1f65c8314e8fdd211b0fa240",
+    "work/risk_adaptivity_revision/peerj_revision/final_gate_mathematical_review.txt": "8f6f34a624b7cd15b6cbf0344363b8c86ff49a740e65e09380de4dbc2661b0f6",
+    "work/risk_adaptivity_revision/peerj_revision/pre_editorial_delta_20261016/current_clean_package_replay.json": "6a77973ae18d2e4170eb51381929e539bf34bb77453228e77ee07e4221910c2f",
+    "work/risk_adaptivity_revision/peerj_revision/pre_editorial_delta_20261016/peerj_replay_invocation_20261013.json": "7cc7c2ef2bc3e1853e35c4d55adbe7da6dde020a36c31c3d26d40523b1069d91",
+    "work/risk_adaptivity_revision/peerj_revision/pre_editorial_delta_20261016/journal_supplement_verification.json": "73e4ff2dcde4290994f0a10078df604e329555cd00f45ebe9c141aab93068213",
+    "work/risk_adaptivity_revision/peerj_revision/journal_delivery/assembly_report.json": "acedffc755fde2ce37f3f623b2f02c29c32183ee98e613155cdbec3c187a1a3f",
+    "outputs/risk_editorial_verification.json": "ea6c851f24032938ae1e03c1a4b5c219a658bc5101849a0cf778ede3e2a47d66",
+    "work/risk_adaptivity_revision/peerj_revision/originality_resolution_20261014/final_claims_report.json": "f12e77a66cc9969f6c1f6de6d28803e0a1fda620f3c7ba64e12caad1d0b47af9",
+    "work/risk_adaptivity_revision/peerj_revision/verify_editorial_delta.py": "1207b31b7c76c6ed327e96cefef57729db7f2ac0b501e7ce676c7201834c08d5",
+    "work/risk_adaptivity_revision/peerj_revision/editorial_delta_support.py": "4bbbac05a6571a89ad853f9aa489574c7b321cd63dd6957ba275169dc32f2d79",
+    "work/risk_adaptivity_revision/peerj_revision/editorial_delta_evidence/20261016_025806/composition_build.log": "b470c2f8e86e1249b0a7cf6982e8b3c8e92ff5d4f5042ec662176a9d166f2fab",
+    "work/risk_adaptivity_revision/peerj_revision/editorial_delta_evidence/20261016_025806/new_full_MANIFEST.sha256": "216030bd6c7128f1bbcb09ff6892fa4a97cb74fa56f520dd666a0719b746b6f5",
+    "work/risk_adaptivity_revision/peerj_revision/editorial_delta_evidence/20261016_025806/new_journal_MANIFEST.sha256": "1b75266d3aead5eb607f0c273d472453682d161fe28865de072bc9236d4fc938",
+    "work/risk_adaptivity_revision/peerj_revision/editorial_delta_evidence/20261016_025806/old_full_MANIFEST.sha256": "b32cbc2dc6bd3f6e499aa066963f96ee04dfd518350f0033166c26993724f4cc",
+    "work/risk_adaptivity_revision/peerj_revision/editorial_delta_evidence/20261016_025806/old_journal_MANIFEST.sha256": "cd21c1e4167a656c8d7559039550d4d48dc9d1b6e9076a5b8dc7c796f7a18e6c"
+  },
+  "scope": "Preserved full 101-step clean replay plus byte-identical scientific inventory and a subsequent reviewed prose-only delta. Only final manuscript composition was freshly rerun. No new full scientific run, model fit, data analysis or field measurement is claimed."
+}

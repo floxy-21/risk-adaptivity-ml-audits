@@ -1,0 +1,60 @@
+Least sufficient prefix-readout authorization
+===========================================
+
+Model. Let x>=0, sum_i x_i=1 on n ordered intervals. Each query returns an
+exact prefix sum. Let c_ri be contrast r's coefficients divided by its
+initial coefficient range; constant contrasts may be omitted. Fix tau>=0.
+After prefix batch Q partitions the intervals into consecutive segments S,
+the normalized width for target r is sum_S x(S) range(c_r,S).
+The joint requirement is max_r width_r <= tau for every feasible x.
+
+Fixed-budget optimum. All mass may lie in any one segment. Consequently
+the worst joint width is max_{r,S} range(c_r,S). A fixed batch is sufficient
+if and only if every segment has range at most tau for every target.
+Let an edge (i,j), 0<=i<j<=n, be permitted if interval [i,j) satisfies all
+these range bounds. Then the exact minimum fixed query count is the
+shortest 0-to-n path length minus one. This is a constructive optimal
+readout authorization, not a bound inferred from actual withheld answers.
+
+Linear scan. At each left endpoint choose the longest admissible segment.
+An optimal partition's first segment cannot end later. Restrict the other
+segments of that optimal partition to the suffix after the greedy end;
+deleting empty pieces leaves an admissible suffix partition, since every
+subinterval of a permitted segment is permitted. It has at most one fewer
+segment than the original optimum. Induction gives an optimal partition.
+Maintaining the running minimum and maximum of each target gives O(R*n)
+arithmetic comparisons. Rational bit cost additionally depends on the
+input encoding. This elementary ordered-partition consequence is not
+claimed as a new general segmentation algorithm.
+
+Randomized fixed policies. There are finitely many legal prefix batches.
+To have success probability one for every feasible record, every batch
+with positive probability must itself be sufficient. Otherwise choose a
+failing record for such a batch; its positive mass makes success strictly
+less than one there. Thus randomization cannot lower the minimum hard
+fixed readout budget for certainty. This does not assert that randomization
+cannot help a requirement strictly below certainty or an expectation cost.
+
+Adaptive minimum on the reported savings subset. A policy with at most one
+reading cannot depend on an answer before choosing its only measurement.
+It is a randomized fixed policy, so the above argument applies. On each
+reported block, the minimum fixed count is exactly three and the verified
+two-query adaptive first-answer cover is complete. Therefore the exact
+minimum adaptive hard budget is two, including randomized adaptive policies.
+The cover inequalities hold on the entire first-answer interval: each
+target's conditional worst width is affine in the first answer for each
+choice of the second boundary. Endpoint checks therefore suffice for each
+declared closed subinterval. Selection among covering continuations can
+use the smallest timestamp as a fixed tie rule.
+
+The benefit is one fewer readout (three to two, 1/3) in exchange for one
+additional answer-dependent acquisition round. This is a resource statement
+under the exact, uncapped prefix interface. It is not a measured latency,
+request, privacy, financial, calibrated-noise, or deployment benefit. Bulk
+retrieval remains admissible and empirically preferable on the measured API.
+
+The mixed fallback uses adaptive two only where certified; elsewhere it
+uses the exact minimum fixed batch. It guarantees the target on all blocks,
+but is not asserted to minimize arbitrary-budget adaptive acquisition:
+adaptive minima above two are not computed here. Expected requests until
+certification are not the objective.

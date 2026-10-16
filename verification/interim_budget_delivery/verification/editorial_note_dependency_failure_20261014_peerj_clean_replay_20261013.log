@@ -1,0 +1,36 @@
+Running: work/risk_adaptivity_revision/math/check_classification.py
+Running: work/risk_adaptivity_revision/general/check_general_lp.py --output outputs/risk_general_replay.json
+Running: work/risk_adaptivity_revision/dual/verify_dual.py --output-dir outputs/risk_dual_replay
+Running: work/risk_adaptivity_revision/dual/summarize_solver_comparison.py --output-dir outputs/risk_solver_replay
+Running: work/certificate_grid_review/summarize_certificates.py --source public --output-dir outputs/risk_grid_replay
+Running: work/randomized_tie_review/verify_ties.py
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\floxy\Documents\Codex\2026-10-09\paper-title-proposal-decoupled-low-rank\work\peerj_journal_verified_20261014_033958\work\rr_034003509297\work\randomized_tie_review\verify_ties.py", line 292, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\floxy\Documents\Codex\2026-10-09\paper-title-proposal-decoupled-low-rank\work\peerj_journal_verified_20261014_033958\work\rr_034003509297\work\randomized_tie_review\verify_ties.py", line 98, in main
+    pins={str(p.relative_to(ROOT)).replace('\\','/'):sha(p) for p in sources}
+                                                     ^^^^^^
+  File "C:\Users\floxy\Documents\Codex\2026-10-09\paper-title-proposal-decoupled-low-rank\work\peerj_journal_verified_20261014_033958\work\rr_034003509297\work\randomized_tie_review\verify_ties.py", line 27, in sha
+    def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
+                                      ^^^^^^^^^^^^^^
+  File "C:\Users\floxy\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\floxy\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\peerj_journal_verified_20261014_033958\\work\\rr_034003509297\\work\\randomized_tie_review\\theory_review.txt'
+Traceback (most recent call last):
+  File "C:\Users\floxy\Documents\Codex\2026-10-09\paper-title-proposal-decoupled-low-rank\work\peerj_journal_verified_20261014_033958\work\risk_adaptivity_revision\reproduce.py", line 156, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "C:\Users\floxy\Documents\Codex\2026-10-09\paper-title-proposal-decoupled-low-rank\work\peerj_journal_verified_20261014_033958\work\risk_adaptivity_revision\reproduce.py", line 89, in main
+    run('work/randomized_tie_review/verify_ties.py')
+  File "C:\Users\floxy\Documents\Codex\2026-10-09\paper-title-proposal-decoupled-low-rank\work\peerj_journal_verified_20261014_033958\work\risk_adaptivity_revision\reproduce.py", line 75, in run
+    raise RuntimeError('Reproduction failed: ' + str(log))
+RuntimeError: Reproduction failed: C:\Users\floxy\Documents\Codex\2026-10-09\paper-title-proposal-decoupled-low-rank\work\peerj_journal_verified_20261014_033958\work\rr_034003509297\outputs\risk_step_06.log

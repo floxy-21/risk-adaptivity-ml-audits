@@ -19,6 +19,57 @@
     "report": "outputs/two_target_lp.json"
   },
   {
+    "name": "two_target_support",
+    "script": "work/risk_adaptivity_revision/two_target_boundary/verify_support.py",
+    "args": [
+      "--output",
+      "outputs/two_target_support.json"
+    ],
+    "report": "outputs/two_target_support.json"
+  },
+  {
+    "name": "reading_budget_external",
+    "script": "work/risk_adaptivity_revision/joint_certification/reading_budget/reading_budget.py",
+    "args": [
+      "--output-dir",
+      "outputs/reading_budget_external"
+    ],
+    "report": "outputs/reading_budget_external/report.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json",
+      "work/risk_adaptivity_revision/joint_certification/precision_external_results/plans.json",
+      "work/risk_adaptivity_revision/joint_certification/empirical_external_results/empirical_plans.json",
+      "work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/fresh_both_panel_replay_20261014.json"
+    ]
+  },
+  {
+    "name": "reading_budget_external_check",
+    "script": "work/risk_adaptivity_revision/joint_certification/reading_budget/check_reading_budget.py",
+    "args": [
+      "--results",
+      "outputs/reading_budget_external"
+    ],
+    "report": "outputs/reading_budget_external/independent_check.json",
+    "depends_on": [
+      "reading_budget_external"
+    ],
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json",
+      "work/risk_adaptivity_revision/joint_certification/precision_external_results/plans.json",
+      "work/risk_adaptivity_revision/joint_certification/empirical_external_results/empirical_plans.json",
+      "work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/fresh_both_panel_replay_20261014.json"
+    ]
+  },
+  {
+    "name": "reading_budget_general",
+    "script": "work/risk_adaptivity_revision/joint_certification/reading_budget/check_partition_general.py",
+    "args": [
+      "--output",
+      "outputs/reading_budget_general.json"
+    ],
+    "report": "outputs/reading_budget_general.json"
+  },
+  {
     "name": "joint_assurance_feasibility",
     "script": "work/risk_adaptivity_revision/joint_certification/assurance_feasibility/verify_assurance.py",
     "args": [
@@ -743,6 +794,39 @@
     "report": "outputs/external_source_qualification.json"
   },
   {
+    "name": "review_revision_capacity_external",
+    "script": "work/risk_adaptivity_revision/joint_certification/review_capacity/analyze_capacity.py",
+    "args": [
+      "--output-dir",
+      "outputs/review_capacity"
+    ],
+    "report": "outputs/review_capacity/report.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json",
+      "work/risk_adaptivity_revision/joint_certification/precision_external_results/plans.json",
+      "work/risk_adaptivity_revision/joint_certification/empirical_external_results/empirical_plans.json",
+      "work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/fresh_both_panel_replay_20261014.json"
+    ]
+  },
+  {
+    "name": "review_revision_capacity_external_check",
+    "script": "work/risk_adaptivity_revision/joint_certification/review_capacity/check_capacity.py",
+    "args": [
+      "--results",
+      "outputs/review_capacity"
+    ],
+    "report": "outputs/review_capacity/independent_check.json",
+    "requires_frozen_inputs": [
+      "work/risk_adaptivity_revision/external_validation/replay/geometry.json",
+      "work/risk_adaptivity_revision/joint_certification/precision_external_results/plans.json",
+      "work/risk_adaptivity_revision/joint_certification/empirical_external_results/empirical_plans.json",
+      "work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/fresh_both_panel_replay_20261014.json"
+    ],
+    "depends_on": [
+      "review_revision_capacity_external"
+    ]
+  },
+  {
     "name": "external_counter_cached_replay",
     "script": "work/risk_adaptivity_revision/external_validation/replay/run_external.py",
     "args": [],
@@ -856,5 +940,189 @@
       "outputs/printed_worked_example_check.json"
     ],
     "report": "outputs/printed_worked_example_check.json"
+  },
+  {
+    "name": "review_revision_mechanism",
+    "script": "work/risk_adaptivity_revision/joint_certification/review_mechanism/analyze.py",
+    "args": [
+      "--output-dir",
+      "outputs/review_mechanism"
+    ],
+    "report": "outputs/review_mechanism/report.json"
+  },
+  {
+    "name": "review_revision_mechanism_check",
+    "script": "work/risk_adaptivity_revision/joint_certification/review_mechanism/check.py",
+    "args": [
+      "--results",
+      "outputs/review_mechanism"
+    ],
+    "report": "outputs/review_mechanism/independent_check.json"
+  },
+  {
+    "name": "review_revision_training_check",
+    "script": "work/risk_adaptivity_revision/joint_certification/review_mechanism/check_training.py",
+    "args": [
+      "--results",
+      "outputs/review_mechanism"
+    ],
+    "report": "outputs/review_mechanism/training_independent_check.json"
+  },
+  {
+    "name": "review_revision_floor_diagnostic",
+    "script": "work/risk_adaptivity_revision/joint_certification/review_mechanism/diagnose_floor.py",
+    "args": [
+      "--results",
+      "outputs/review_mechanism"
+    ],
+    "report": "outputs/review_mechanism/floor_assurance_diagnostic.json"
+  },
+  {
+    "name": "review_revision_floor_plan",
+    "script": "work/risk_adaptivity_revision/joint_certification/review_mechanism/decision_plan.py",
+    "args": [
+      "--results",
+      "outputs/review_mechanism"
+    ],
+    "report": "outputs/review_mechanism/decision_plan_check.json"
+  },
+  {
+    "name": "review_revision_thresholds",
+    "script": "work/risk_adaptivity_revision/joint_certification/review_thresholds/threshold_stability.py",
+    "args": [
+      "--output-dir",
+      "outputs/review_thresholds"
+    ],
+    "report": "outputs/review_thresholds/report.json"
+  },
+  {
+    "name": "review_revision_threshold_check",
+    "script": "work/risk_adaptivity_revision/joint_certification/review_thresholds/check_threshold_stability.py",
+    "args": [
+      "--results",
+      "outputs/review_thresholds"
+    ],
+    "report": "outputs/review_thresholds/independent_check.json"
+  },
+  {
+    "name": "review_revision_capacity_all_certificates",
+    "script": "work/risk_adaptivity_revision/joint_certification/review_capacity/check_capacity.py",
+    "args": [
+      "--results",
+      "work/risk_adaptivity_revision/joint_certification/review_capacity/executed_all",
+      "--certificate-inputs",
+      "work/risk_adaptivity_revision/joint_certification/review_capacity/executed_all/checker_inputs.json"
+    ],
+    "report": "work/risk_adaptivity_revision/joint_certification/review_capacity/executed_all/certificate_check.json",
+    "mutable_reports": [
+      "work/risk_adaptivity_revision/joint_certification/review_capacity/executed_all/certificate_check.json"
+    ]
+  },
+  {
+    "name": "review_revision_correspondence",
+    "script": "work/risk_adaptivity_revision/joint_certification/check_review_revision.py",
+    "args": [],
+    "report": "outputs/review_revision_match.json"
+  },
+  {
+    "name": "precision_completion_all_open_cases",
+    "script": "work/risk_adaptivity_revision/joint_certification/precision_completion_probe/complete_precision.py",
+    "args": [
+      "--plans",
+      "work/risk_adaptivity_revision/joint_certification/precision_completion_probe/inputs/precision_catalog.json",
+      "--selection",
+      "all",
+      "--output-dir",
+      "outputs/precision_completion_replay"
+    ],
+    "report": "outputs/precision_completion_replay/report.json"
+  },
+  {
+    "name": "precision_completion_exact_verifier",
+    "script": "work/risk_adaptivity_revision/joint_certification/precision_completion_probe/check_completion.py",
+    "args": [
+      "--plans",
+      "work/risk_adaptivity_revision/joint_certification/precision_completion_probe/inputs/precision_catalog.json",
+      "--results",
+      "outputs/precision_completion_replay"
+    ],
+    "report": "outputs/precision_completion_replay/independent_check.json",
+    "maximum_report_values": {
+      "unresolved_cases": 0
+    }
+  },
+  {
+    "name": "precision_completion_corruption_tests",
+    "script": "work/risk_adaptivity_revision/joint_certification/precision_completion_probe/test_rejection.py",
+    "args": [
+      "--results",
+      "outputs/precision_completion_replay"
+    ],
+    "report": "outputs/precision_completion_replay/mutation_checks.json"
+  },
+  {
+    "name": "precision_completion_secondary_full_panel",
+    "script": "work/risk_adaptivity_revision/joint_certification/precision_completion_probe/refine_secondary.py",
+    "args": [
+      "--catalog",
+      "work/risk_adaptivity_revision/joint_certification/precision_completion_probe/inputs/precision_catalog.json",
+      "--completed",
+      "outputs/precision_completion_replay/report.json",
+      "--output-dir",
+      "outputs/precision_refined_replay"
+    ],
+    "report": "outputs/precision_refined_replay/report.json"
+  },
+  {
+    "name": "precision_completion_secondary_exact_verifier",
+    "script": "work/risk_adaptivity_revision/joint_certification/precision_completion_probe/check_completion.py",
+    "args": [
+      "--plans",
+      "work/risk_adaptivity_revision/joint_certification/precision_completion_probe/inputs/precision_catalog.json",
+      "--completed",
+      "outputs/precision_completion_replay/report.json",
+      "--results",
+      "outputs/precision_refined_replay"
+    ],
+    "report": "outputs/precision_refined_replay/independent_check.json",
+    "maximum_report_values": {
+      "unresolved_cases": 0
+    }
+  },
+  {
+    "name": "precision_completion_recorded_replay",
+    "script": "work/risk_adaptivity_revision/joint_certification/precision_completion_probe/replay_completed.py",
+    "args": [
+      "--results",
+      "outputs/precision_refined_replay"
+    ],
+    "report": "outputs/precision_refined_replay/recorded_replay_summary.json"
+  },
+  {
+    "name": "precision_completion_recorded_replay_check",
+    "script": "work/risk_adaptivity_revision/joint_certification/precision_completion_probe/check_recorded_replay.py",
+    "args": [
+      "--results",
+      "outputs/precision_refined_replay"
+    ],
+    "report": "outputs/precision_refined_replay/recorded_replay_check.json"
+  },
+  {
+    "name": "decision_tolerance_saved_endpoint_replay",
+    "script": "work/risk_adaptivity_revision/joint_certification/decision_tolerance_probe/replay_saved.py",
+    "args": [
+      "--out",
+      "outputs/decision_tolerance_replay"
+    ],
+    "report": "outputs/decision_tolerance_replay/report.json"
+  },
+  {
+    "name": "safe_retrieval_gate_and_cost_accounting",
+    "script": "work/risk_adaptivity_revision/practical_retrieval_gate/run.py",
+    "args": [
+      "--out",
+      "outputs/safe_retrieval_gate_replay"
+    ],
+    "report": "outputs/safe_retrieval_gate_replay/run_report.json"
   }
 ]

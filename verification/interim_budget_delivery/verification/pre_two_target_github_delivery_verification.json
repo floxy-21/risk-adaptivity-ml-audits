@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-10-14T02:24:26.558776+00:00",
+  "repository_url": "https://github.com/floxy-21/risk-adaptivity-ml-audits",
+  "private": true,
+  "commit": "f723e41a9971a38f5a2dcbd6bb12cafd21ca0aa8",
+  "release_url": "https://github.com/floxy-21/risk-adaptivity-ml-audits/releases/tag/peerj-cs-2026-10-13-review",
+  "assets": [
+    {
+      "name": "RELEASE_SHA256.txt",
+      "bytes": 455,
+      "sha256": "f79c96538a34cf8f20fb9137bc1af0cad44ada1623075b96be5dc3e2ee6c20df"
+    },
+    {
+      "name": "research_supplement.zip",
+      "bytes": 373393932,
+      "sha256": "940144c6bc2217ebada13a510ac5f17afbd37d359f3e249b0a4c13f48acdf7e6"
+    },
+    {
+      "name": "revised_manuscript.pdf",
+      "bytes": 241226,
+      "sha256": "cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302"
+    },
+    {
+      "name": "revised_manuscript.tex",
+      "bytes": 127360,
+      "sha256": "53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f"
+    },
+    {
+      "name": "Supplemental_Data_S1.zip",
+      "bytes": 17474102,
+      "sha256": "51058e338410447f832d88ef2b50d9832d265e61f690911e4bcdbc68898e9262"
+    },
+    {
+      "name": "Supplemental_Data_S2.zip",
+      "bytes": 23567266,
+      "sha256": "f6138fb01c1d0abd38aebca19cef22badcd299cff9518a86ab6f969739e5e837"
+    }
+  ],
+  "journal_submission_status": "not submitted",
+  "verification": "GitHub server-provided SHA-256 digests match all six local release assets; remote commit equals local prepared commit."
+}

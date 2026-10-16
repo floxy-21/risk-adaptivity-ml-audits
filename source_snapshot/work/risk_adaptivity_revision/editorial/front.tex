@@ -1,19 +1,19 @@
-\title{Risk and Adaptivity in Certifying Machine-Learning Model Comparisons}
+\title{Adaptive Reading Budgets for Joint Forecast Audits with Cumulative Data}
 \author{Jishan Kapoor\\Independent Researcher\\Toronto M4Y 1C9, Canada\\
 Corresponding author: \href{mailto:kapoorjishan19@gmail.com}{kapoorjishan19@gmail.com}}
 \date{}
 \begin{document}
 \maketitle
 \begin{abstract}
-\textbf{Background.} Model audits often share a limited set of verification
-readings across several predictors. We ask whether sharing this budget
-changes the value of choosing later readings after seeing earlier answers.
+\textbf{Background.} Model audits share verification readings across
+predictors. We ask when choosing later readings after earlier answers
+reduces the number needed for precise comparisons.
 
-\textbf{Methods.} We study sharp intervals for affine model-loss contrasts
-on compact convex sets using a fixed finite query dictionary. We prove fixed-budget bounds, supply exact
-certificates, and replay two-reading policies on cumulative-meter data.
+\textbf{Methods.} We combine sharp comparison intervals, adaptive query
+planning and exact randomized-batch certificates, with replay on cumulative meters.
 
-\textbf{Results.} For one comparison, if a deterministic policy guarantees
+\textbf{Results.} Under compact convex uncertainty, for one comparison,
+if a deterministic policy guarantees
 precision with two exact scalar readings, some randomized fixed batch succeeds with
 worst-case probability at least $1/2$. This lower bound disappears with two
 comparisons. For every $m\geq3$, we construct instances where adaptation
@@ -21,17 +21,18 @@ always succeeds but the best randomized batch succeeds with worst-case
 probability exactly $1/m$. All coordinates are queryable, the budget remains
 two, and each comparison is separately certifiable by a fixed batch.
 The separation also holds for all pairwise comparisons among three models.
-In the meter application, 165 of 819 original blocks and 57 of 279 external
-blocks have verified adaptive success one versus optimal batch success $1/2$.
-Recorded gains over fixed worst-width batches are 7.81 and 11.11 percentage
-points; gains over greedy adaptation are 2.20 and 2.15 points.
-Capacity information reduces the advantage, and measured public-API retrieval
-favors bulk.
+On 225 of 1,098 meter blocks across six systems, two adaptive readings
+guarantee joint half-width precision where three fixed readings are necessary.
+In 191 cases, every scalar comparison separately needs at most two fixed
+readings, isolating a shared-budget obstruction. We certify optimal randomized-batch
+precision on all 1,098 blocks. Optional-reading reductions are 6.40\%
+and 7.67\% across the panels. Absolute-precision and capacity analyses
+identify when simpler fixed plans suffice. Unrestricted bulk retrieval
+is faster on the tested public interface.
 
-\textbf{Conclusions.} Sharing a reading budget can make feedback necessary
-for assurance even when separate comparisons need none. The construction
-proves a fixed-budget boundary; the retrospective meter study establishes
-its narrower, instance-specific counterpart under declared access rules.
+\textbf{Conclusions.} Sharing a budget can make feedback necessary even when
+separate comparisons need none. The meter study identifies when feedback
+saves readings and when simpler protocols suffice.
 \end{abstract}
 \noindent\textbf{Keywords:} artificial intelligence; machine learning;
 adaptive information; minimax risk; optimal recovery; robust optimization.
@@ -48,8 +49,10 @@ requirement with the same reading budget.
 
 This is an acquisition problem for fixed predictors. The auditor specifies
 which loss contrasts must be precise, what information is already available,
-and which measurements may be requested. The algorithm then chooses readings
-and checks the resulting intervals. Identifying a better model is a separate
+and which measurements may be requested. We first compute the smallest
+sufficient fixed reading budget, then test whether two adaptive readings
+can reduce it. The algorithm returns a reading plan and checks its intervals.
+Identifying a better model is a separate
 condition: a comparison interval must also exclude zero.
 
 The central result is a boundary between one comparison and a shared
@@ -63,17 +66,20 @@ using two readings. Each contrast separately has a successful fixed batch;
 all coordinates are queryable at equal cost. The same separation holds for
 all pairs among three nonnegative forecast vectors
 (Corollary~\ref{cor:all-pairs-collapse}). The dictionary grows with $m$,
-and three fixed queries suffice. The result isolates a loss of assurance
-when separately sufficient measurements must share a budget.
+and three fixed queries suffice. Moreover, the optimal batch mixture is
+unique: it assigns mass $1/m$ to each of $m$ necessary batches. Even positive
+worst-record success requires all $m$ batches. This exact support requirement
+isolates what fails when separately sufficient measurements share a budget.
 
 We make that distinction computable for cumulative-meter audits. An exact
-two-query planner and matching certificates identify 165 of 819 original
-blocks and 57 of 279 external blocks where feedback guarantees precision
-for all six model pairs, while the best randomized batch succeeds with
-worst-case probability exactly one half. Complete-panel replay then measures
-what the policies achieve on the stored answers. The two-reading limit is
-a declared benchmark contract, not a source-enforced service restriction;
-our measured public-API workload favors bulk retrieval when admissible.
+two-query planner, minimum fixed-budget calculation and matching randomized-batch
+certificates determine when feedback saves a reading. The study uses frozen
+forecasts on 1,098 blocks from six systems. Separate scalar-budget calculations
+isolate the shared-budget mechanism; absolute precision, nearby thresholds
+and capacity controls test its sensitivity on the same records. Replay then
+measures what the policies achieve on stored answers. A public-API control
+distinguishes the mathematical reading budget from the available retrieval
+interface.
 
 The same calculation can rule out an insufficient budget. Explicit adverse
 records show that randomizing an adaptive policy cannot restore certainty
@@ -111,8 +117,13 @@ adaptivity bounds cover linear information on convex symmetric classes
 \citet[Theorems~2--3 and~5]{osipenko}. Modern randomized recovery minimizes
 reconstruction error \citep[Section~2 and Proposition~4.1]{krieg2025}
 \citep[Section~9.1, Eq.~(9.15), author manuscript v2]{krieg2026}.
-Our precision objective instead asks whether the full terminal fiber is
-sufficiently narrow. For supporting mean-width results, the order of the
+Adaptive vector reconstruction also admits high-probability guarantees and
+growing gains over nonadaptive reconstruction
+\citep[Theorems~3.1 and~4.1, author manuscript v1]{kunsch2026}.
+Our precision objective requires the full terminal fiber to be narrow.
+The shared-budget construction keeps the output dimension and hard query
+budget at two as the predeclared coordinate dictionary grows.
+For supporting mean-width results, the order of the
 worst-record and randomization operations also differs from expected global
 radius \citep[Eq.~(2.4), Remark~6.1, author manuscript v2]{krieg2026}.
 Online Resource~1, S11 gives that comparison and the scalar penalty
@@ -120,15 +131,27 @@ classification, whose sufficient direction applies Sion's minimax theorem
 \citep[Theorem~3.4]{sion1958} and Jensen's inequality.
 
 Information-dependent decisions are established in adjustable robust
-optimization \citep{wei2024,ddid}. Our scalar precision bound adapts the
+optimization \citep{wei2024}. \citet[Section~3.2, Eq.~(3) and
+Theorem~3.2, author manuscript v3]{ddid} give equivalent
+observation-consistent recourse and information-fiber formulations.
+Our scalar precision bound adapts the
 sufficient-policy result of \citet[Theorem~2 and Example~5]{kurtz2026}.
 Kurtz's Theorem~11 also permits policy counts to grow with recourse-region
-complexity. The fixed-budget construction here specifies a different
-combination: two affine targets, two unit-cost coordinate queries, separately
-sufficient fixed batches, and exact joint success values $1$ and $1/m$.
-Its observation fibers realize the gap while the measurement dictionary
-grows. These conditions define the contribution beyond the established
-benefits of adaptive vector recovery or information-dependent decisions.
+complexity. His Example~20 gives a particularly close construction: a
+scalar uncertainty coordinate selects an interval on which a recourse
+policy is feasible, and the chosen policies must cover those intervals.
+Our construction shares this interval-cover mechanism. The difference is
+how it arises: we derive the intervals from the sharp widths of actual
+coordinate-observation fibers, with every coordinate available at the same
+cost. Each scalar conditional width is affine, but their joint maximum
+loses the concavity used by the scalar bound. Two
+affine targets and two unit-cost readings have exact success values $1$
+and $1/m$, although each target alone has a sufficient fixed batch.
+The adverse records further force support $m$ for any positive batch
+success and uniquely determine the optimal mixture. The output dimension
+and budget stay fixed while the measurement dictionary grows. This is the
+specific contribution beyond general policy-count bounds and the established
+benefits of adaptive vector recovery.
 
 Adaptive cumulative sampling has close precedents.
 \citet[Section~4.1.1, Corollary~1 and Theorem~3]{gaillard2023} studies
@@ -168,7 +191,7 @@ instead asks for a precision guarantee, regardless of the interval's location.
 The mathematical examples below also describe paired squared-loss widths.
 Given any contrast coefficient $c$, nonnegative predictions
 $a_i=N\max(-c_i,0)/2$ and $b_i=N\max(c_i,0)/2$ realize that coefficient
-in \eqref{eq:linear}. The induced constant changes the interval's position,
-but not its width. Thus the constructions have a model-comparison
-interpretation without being measurements of prediction performance.
+in \eqref{eq:linear}. The induced constant changes the interval's position
+while preserving its width. This gives the constructions a paired
+model-comparison interpretation.
 

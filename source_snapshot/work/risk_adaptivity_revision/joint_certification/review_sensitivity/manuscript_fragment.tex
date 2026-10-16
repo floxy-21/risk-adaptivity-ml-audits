@@ -4,20 +4,17 @@ blocks and 212 of 279 external blocks. On the remaining 351 and 67 blocks,
 the median upper-minus-lower probability gap is respectively $1/3$ and $1/2$.
 The interquartile ranges are $[1/4,1/2]$ and $[1/3,1/2]$; both panels range
 from $1/5$ to $1/2$. Averaged over all blocks, including closed gaps, the gaps
-are 0.1583 and 0.0983. These unresolved gaps are substantial. We therefore
-use the 165 original and 57 external matched-half certificates as the evidence
+are 0.1583 and 0.0983. We use the 165 original and 57 external matched-half certificates as the evidence
 of exact precision superiority; the full-panel cover replay is a comparison
 with a declared policy, not with a globally solved precision optimum.
 
 \paragraph{Sensitivity to the reporting target.}
-Figure~\ref{fig:practical-guarantee-replay}(b) replays the same policies and
-all 1,098 blocks at relative width targets
-$0.40,0.45,0.50,0.55,0.60$. This post-hoc sensitivity analysis is exploratory; we did
-not select new queries, refit models, or tune policy mixtures for the new targets.
+Figure~\ref{fig:practical-guarantee-replay}(b) gives an exploratory post-hoc
+replay of all 1,098 blocks at relative width targets
+$0.40,0.45,0.50,0.55,0.60$, keeping the query policies, fitted models and
+mixture parameters fixed.
 Across these targets, the adaptive policy's recorded advantage over fixed
 batching ranges from 2.08 to 7.81 percentage points on the original panel and
 from 7.89 to 11.11 points on the external panel. The advantages over greedy
 range from 0.37 to 2.69 and from 0.36 to 2.87 points. Some descriptive
-seven-day-block intervals for the greedy comparisons include zero. Thus the
-fixed-batch difference persists around the declared half-width target, while
-the incremental value over greedy remains smaller.
+seven-day-block intervals for the greedy comparisons include zero.

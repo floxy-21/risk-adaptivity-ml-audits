@@ -1,0 +1,100 @@
+{"blocks": 150, "checks": {"exact_fixed_batch_width_equalities": 9600, "endpoint_LPs": 1920, "minimum_fixed_budget_checks": 300, "raw_record_compatibility_checks": 300, "paired_state_checks": 300}, "seconds": 41.446159100014484}
+{"blocks": 300, "checks": {"exact_fixed_batch_width_equalities": 19200, "endpoint_LPs": 3840, "minimum_fixed_budget_checks": 600, "raw_record_compatibility_checks": 600, "paired_state_checks": 600}, "seconds": 68.12505620002048}
+{"blocks": 450, "checks": {"exact_fixed_batch_width_equalities": 28800, "endpoint_LPs": 4224, "minimum_fixed_budget_checks": 900, "raw_record_compatibility_checks": 900, "paired_state_checks": 900}, "seconds": 80.97528070001863}
+{"blocks": 600, "checks": {"exact_fixed_batch_width_equalities": 38400, "endpoint_LPs": 4992, "minimum_fixed_budget_checks": 1200, "raw_record_compatibility_checks": 1200, "paired_state_checks": 1200}, "seconds": 97.85001400002511}
+{"blocks": 750, "checks": {"exact_fixed_batch_width_equalities": 48000, "endpoint_LPs": 5376, "minimum_fixed_budget_checks": 1500, "raw_record_compatibility_checks": 1500, "paired_state_checks": 1500}, "seconds": 112.14516120002372}
+{"blocks": 900, "checks": {"exact_fixed_batch_width_equalities": 57600, "endpoint_LPs": 6144, "minimum_fixed_budget_checks": 1800, "raw_record_compatibility_checks": 1800, "paired_state_checks": 1800}, "seconds": 127.4796892000013}
+{"blocks": 1050, "checks": {"exact_fixed_batch_width_equalities": 67200, "endpoint_LPs": 6528, "minimum_fixed_budget_checks": 2100, "raw_record_compatibility_checks": 2100, "paired_state_checks": 2100}, "seconds": 140.95743870001752}
+{
+  "status": "PASS",
+  "checks": {
+    "exact_fixed_batch_width_equalities": 70272,
+    "endpoint_LPs": 6912,
+    "minimum_fixed_budget_checks": 2196,
+    "raw_record_compatibility_checks": 2196,
+    "paired_state_checks": 2196,
+    "summary_groups": 16
+  },
+  "selected_block_ids": [
+    "external/hpm_1/2025-07-01/00",
+    "external/hpm_1/2025-07-16/06",
+    "external/hpm_1/2025-07-31/12",
+    "external/hpm_2/2025-07-01/00",
+    "external/hpm_2/2025-07-16/06",
+    "external/hpm_2/2025-07-31/12",
+    "external/hpm_7/2025-07-01/00",
+    "external/hpm_7/2025-07-16/06",
+    "external/hpm_7/2025-07-31/12",
+    "original/consumer_00000001/2017-10-01/00",
+    "original/consumer_00000001/2017-11-15/06",
+    "original/consumer_00000001/2017-12-30/12",
+    "original/consumer_00000002/2017-10-01/00",
+    "original/consumer_00000002/2017-11-15/06",
+    "original/consumer_00000002/2017-12-30/12",
+    "original/consumer_00000003/2017-10-01/00",
+    "original/consumer_00000003/2017-11-15/06",
+    "original/consumer_00000003/2017-12-30/12"
+  ],
+  "selection_rule": "First, middle (floor(n/2)), and last sorted block ID in every source/system, without outcomes.",
+  "exact_check_method": "Integral endpoint-pair vertices grouped by equal prefix observations; no marginal-slope formula or producer import.",
+  "endpoint_LP_tolerance": 2e-09,
+  "maximum_endpoint_width_discrepancy": 2.7755575615628914e-16,
+  "maximum_endpoint_equality_residual": 2.220446049250313e-16,
+  "maximum_endpoint_bound_residual": 1.6653345369377348e-16,
+  "maximum_endpoint_duality_gap": 3.3306690738754696e-16,
+  "adaptive_scope": "Existing capped adaptive classifications are joined; their endpoint verification is separate.",
+  "raw_records_verified_in_this_run": true,
+  "compatibility_scope": "Every compatibility flag recomputed from pinned original integer counters or external rational cumulative readings.",
+  "provenance": {
+    "mode": "fresh_both_source_chain",
+    "chain_execution_sha256": "680ac100810efd6c5004f405f9aa916c7dc79dd20e246d06d89ff2b70171f59d",
+    "source_chain_sha256": "29b0400a3584502d9d46620f2c7cbb5250e4c97cbc0bb0e190202a1b8d3be9c6",
+    "source_input_sha256": {
+      "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\train_test_hourly_counters.csv": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+      "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\system_1_train_2025H1.json": "f9f6e91779b2d4045a65f9a4f3017581f6563cf330357ec5bf79da91edac5293",
+      "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\system_1_test_2025July.json": "5ef47a765ae8b86380b16e602814c425710c89a977b1c8600acec893a0580802",
+      "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\system_2_train_2025H1.json": "a1b963786c704a90cae4f2df6979bf60624bc6511acb232b6bf9771b1d82a370",
+      "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\system_2_test_2025July.json": "077991d1f334095d5acb3f8d89b2d8a42598a25261c324d7226e9872986695c4",
+      "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\system_7_train_2025H1.json": "67084479d4f75cde086ebdb60f72fbc9cdf61eecfb5db539f77d3ed72526370f",
+      "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_heatpump\\hourly\\system_7_test_2025July.json": "68fb2b5a83dc382a25cfdee6cbe8c7fa7f4d66e31fea4d72950a6ece602e388a",
+      "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_validation\\operational\\fresh_fits_20261012\\frozen_forecasts.csv": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+      "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_validation\\operational\\fresh_fits_20261012\\training_report.json": "6a21c26ed18f81102e214eec2c56983d69ca4d2705dfa21a33d728923ffb99e5",
+      "<WORKSPACE>\\work\\data_blem_consumer-00000001.csv": "9228795c6369ce144fbb929f9d413397545f86e3a95d2f9a0f27c92f1d55ad8d",
+      "<WORKSPACE>\\work\\data_blem_consumer-00000002.csv": "93d142217c74ab2c12a98035b3ea178ead234fec0b71942e8e90db5b7e6a2ef3",
+      "<WORKSPACE>\\work\\data_blem_consumer-00000003.csv": "db69719d2262ebeb6df39abafffca2805c8a03b1b4777f86eb8aa78acf578b6c",
+      "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\prepared\\data_blem_hourly_endpoints.csv": "2d8a88d83123216d71329c1745a4dbf1d0c47b34ba1a22b6529f348f4e5987eb",
+      "<WORKSPACE>\\outputs\\review_frozen_forecasts.csv": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0",
+      "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\prepared\\data_blem_hourly.csv": "527b1e3a07e2d1b688354796c41cdce5ee27d1ba3503a041461fce6121c9f56a",
+      "<WORKSPACE>\\work\\risk_adaptivity_revision\\external_validation\\replay\\geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0",
+      "<WORKSPACE>\\work\\final_chain_20261014T031901Z\\run\\original_raw\\results\\geometry.json": "d3af9794d9f6fb242b5bd91424f2878a28dc334fbbed97eb39b85685e4aced53"
+    },
+    "source_physical_blocks": {
+      "external": 279,
+      "original": 819
+    },
+    "source_coefficient_cases": {
+      "external": 1674,
+      "original": 4914
+    },
+    "source_maximum_differences": {
+      "coefficient": 1.1102230246251565e-16,
+      "constant": 8.881784197001252e-16,
+      "total": 0.0
+    },
+    "source_chain_runtime_seconds": 925.1283855000001,
+    "plans_sha256": "15cfa445e0a6213494a71ee3e01b87067d1f8169f6b32b7164b38ca48c793f3f",
+    "shared_plans_sha256": "1d52ede2ae5bb741360839da0a5299192f063fee9ec42441c9c2588d30bcff39",
+    "geometry_sha256": {
+      "external_validation/replay/geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0",
+      "../final_chain_20261014T031901Z/run/original_raw/results/geometry.json": "d3af9794d9f6fb242b5bd91424f2878a28dc334fbbed97eb39b85685e4aced53"
+    },
+    "precision_producer_sha256": "77ebd6996964fb49ef579f56ac20589a1381b63dca19754d2e0e6b06292b7338",
+    "exact_coefficient_normalization_checks": 6588,
+    "maximum_exact_normalization_difference": "0"
+  },
+  "checker_sha256": "4ed2cd5d01356604aefb2eecc10348c43a1d726d6480ddc8e861de90c994cbfc",
+  "ledger_sha256": "90ac5e8202f5b3da3156f509c0d14aa0f051901ba5841ecca42f120ec310749a",
+  "report_sha256": "f68fbd95b3a928bc35c6a13d7577cf11450b40cee4985c5d06737a0b2d5b1a64",
+  "endpoint_output_sha256": "522db36902d50432d639eb78ea762b28e59d663352eddc060580bd740b6ce314",
+  "elapsed_seconds": 150.23597639999934
+}

@@ -1,0 +1,338 @@
+{
+  "status": "PASS",
+  "summaries": {
+    "external/cap=1/2": {
+      "all_blocks": 279,
+      "compatible_blocks": 200,
+      "excluded_blocks": 79,
+      "paired_transitions": {
+        "adaptive_only->adaptive_only": 2,
+        "adaptive_only->fixed": 38,
+        "fixed->fixed": 91,
+        "neither->adaptive_only": 2,
+        "neither->fixed": 29,
+        "neither->neither": 38
+      },
+      "uncapped_fixed_budget_histogram_on_compatible": {
+        "1": 3,
+        "2": 88,
+        "3": 80,
+        "4": 21,
+        "5": 8
+      },
+      "capped_fixed_budget_histogram_on_compatible": {
+        "1": 18,
+        "2": 140,
+        "3": 42
+      },
+      "original_reading_saving_cases": 57,
+      "saving_cases_excluded": 17,
+      "saving_cases_compatible": 40,
+      "saving_cases_now_fixed_at_most_two": 38,
+      "saving_cases_still_adaptive_only": 2,
+      "new_adaptive_only_from_uncapped_neither": 2,
+      "uncapped_min_fixed_readings_on_compatible": 543,
+      "capped_min_fixed_readings_on_compatible": 424
+    },
+    "external/cap=1/3": {
+      "all_blocks": 279,
+      "compatible_blocks": 198,
+      "excluded_blocks": 81,
+      "paired_transitions": {
+        "adaptive_only->fixed": 40,
+        "fixed->fixed": 90,
+        "neither->fixed": 62,
+        "neither->neither": 6
+      },
+      "uncapped_fixed_budget_histogram_on_compatible": {
+        "1": 3,
+        "2": 87,
+        "3": 79,
+        "4": 21,
+        "5": 8
+      },
+      "capped_fixed_budget_histogram_on_compatible": {
+        "0": 12,
+        "1": 158,
+        "2": 22,
+        "3": 6
+      },
+      "original_reading_saving_cases": 57,
+      "saving_cases_excluded": 17,
+      "saving_cases_compatible": 40,
+      "saving_cases_now_fixed_at_most_two": 40,
+      "saving_cases_still_adaptive_only": 0,
+      "new_adaptive_only_from_uncapped_neither": 0,
+      "uncapped_min_fixed_readings_on_compatible": 538,
+      "capped_min_fixed_readings_on_compatible": 220
+    },
+    "external/hpm_1/cap=1/2": {
+      "all_blocks": 93,
+      "compatible_blocks": 77,
+      "excluded_blocks": 16,
+      "paired_transitions": {
+        "adaptive_only->adaptive_only": 1,
+        "adaptive_only->fixed": 7,
+        "fixed->fixed": 40,
+        "neither->adaptive_only": 1,
+        "neither->fixed": 12,
+        "neither->neither": 16
+      },
+      "uncapped_fixed_budget_histogram_on_compatible": {
+        "1": 2,
+        "2": 38,
+        "3": 24,
+        "4": 6,
+        "5": 7
+      },
+      "capped_fixed_budget_histogram_on_compatible": {
+        "1": 3,
+        "2": 56,
+        "3": 18
+      },
+      "original_reading_saving_cases": 13,
+      "saving_cases_excluded": 5,
+      "saving_cases_compatible": 8,
+      "saving_cases_now_fixed_at_most_two": 7,
+      "saving_cases_still_adaptive_only": 1,
+      "new_adaptive_only_from_uncapped_neither": 1,
+      "uncapped_min_fixed_readings_on_compatible": 209,
+      "capped_min_fixed_readings_on_compatible": 169
+    },
+    "external/hpm_1/cap=1/3": {
+      "all_blocks": 93,
+      "compatible_blocks": 77,
+      "excluded_blocks": 16,
+      "paired_transitions": {
+        "adaptive_only->fixed": 8,
+        "fixed->fixed": 40,
+        "neither->fixed": 23,
+        "neither->neither": 6
+      },
+      "uncapped_fixed_budget_histogram_on_compatible": {
+        "1": 2,
+        "2": 38,
+        "3": 24,
+        "4": 6,
+        "5": 7
+      },
+      "capped_fixed_budget_histogram_on_compatible": {
+        "0": 4,
+        "1": 57,
+        "2": 10,
+        "3": 6
+      },
+      "original_reading_saving_cases": 13,
+      "saving_cases_excluded": 5,
+      "saving_cases_compatible": 8,
+      "saving_cases_now_fixed_at_most_two": 8,
+      "saving_cases_still_adaptive_only": 0,
+      "new_adaptive_only_from_uncapped_neither": 0,
+      "uncapped_min_fixed_readings_on_compatible": 209,
+      "capped_min_fixed_readings_on_compatible": 95
+    },
+    "external/hpm_2/cap=1/2": {
+      "all_blocks": 93,
+      "compatible_blocks": 37,
+      "excluded_blocks": 56,
+      "paired_transitions": {
+        "adaptive_only->adaptive_only": 1,
+        "adaptive_only->fixed": 7,
+        "fixed->fixed": 16,
+        "neither->adaptive_only": 1,
+        "neither->fixed": 6,
+        "neither->neither": 6
+      },
+      "uncapped_fixed_budget_histogram_on_compatible": {
+        "2": 16,
+        "3": 15,
+        "4": 6
+      },
+      "capped_fixed_budget_histogram_on_compatible": {
+        "1": 6,
+        "2": 23,
+        "3": 8
+      },
+      "original_reading_saving_cases": 18,
+      "saving_cases_excluded": 10,
+      "saving_cases_compatible": 8,
+      "saving_cases_now_fixed_at_most_two": 7,
+      "saving_cases_still_adaptive_only": 1,
+      "new_adaptive_only_from_uncapped_neither": 1,
+      "uncapped_min_fixed_readings_on_compatible": 101,
+      "capped_min_fixed_readings_on_compatible": 76
+    },
+    "external/hpm_2/cap=1/3": {
+      "all_blocks": 93,
+      "compatible_blocks": 35,
+      "excluded_blocks": 58,
+      "paired_transitions": {
+        "adaptive_only->fixed": 8,
+        "fixed->fixed": 15,
+        "neither->fixed": 12
+      },
+      "uncapped_fixed_budget_histogram_on_compatible": {
+        "2": 15,
+        "3": 14,
+        "4": 6
+      },
+      "capped_fixed_budget_histogram_on_compatible": {
+        "0": 2,
+        "1": 33
+      },
+      "original_reading_saving_cases": 18,
+      "saving_cases_excluded": 10,
+      "saving_cases_compatible": 8,
+      "saving_cases_now_fixed_at_most_two": 8,
+      "saving_cases_still_adaptive_only": 0,
+      "new_adaptive_only_from_uncapped_neither": 0,
+      "uncapped_min_fixed_readings_on_compatible": 96,
+      "capped_min_fixed_readings_on_compatible": 33
+    },
+    "external/hpm_7/cap=1/2": {
+      "all_blocks": 93,
+      "compatible_blocks": 86,
+      "excluded_blocks": 7,
+      "paired_transitions": {
+        "adaptive_only->fixed": 24,
+        "fixed->fixed": 35,
+        "neither->fixed": 11,
+        "neither->neither": 16
+      },
+      "uncapped_fixed_budget_histogram_on_compatible": {
+        "1": 1,
+        "2": 34,
+        "3": 41,
+        "4": 9,
+        "5": 1
+      },
+      "capped_fixed_budget_histogram_on_compatible": {
+        "1": 9,
+        "2": 61,
+        "3": 16
+      },
+      "original_reading_saving_cases": 26,
+      "saving_cases_excluded": 2,
+      "saving_cases_compatible": 24,
+      "saving_cases_now_fixed_at_most_two": 24,
+      "saving_cases_still_adaptive_only": 0,
+      "new_adaptive_only_from_uncapped_neither": 0,
+      "uncapped_min_fixed_readings_on_compatible": 233,
+      "capped_min_fixed_readings_on_compatible": 179
+    },
+    "external/hpm_7/cap=1/3": {
+      "all_blocks": 93,
+      "compatible_blocks": 86,
+      "excluded_blocks": 7,
+      "paired_transitions": {
+        "adaptive_only->fixed": 24,
+        "fixed->fixed": 35,
+        "neither->fixed": 27
+      },
+      "uncapped_fixed_budget_histogram_on_compatible": {
+        "1": 1,
+        "2": 34,
+        "3": 41,
+        "4": 9,
+        "5": 1
+      },
+      "capped_fixed_budget_histogram_on_compatible": {
+        "0": 6,
+        "1": 68,
+        "2": 12
+      },
+      "original_reading_saving_cases": 26,
+      "saving_cases_excluded": 2,
+      "saving_cases_compatible": 24,
+      "saving_cases_now_fixed_at_most_two": 24,
+      "saving_cases_still_adaptive_only": 0,
+      "new_adaptive_only_from_uncapped_neither": 0,
+      "uncapped_min_fixed_readings_on_compatible": 233,
+      "capped_min_fixed_readings_on_compatible": 92
+    }
+  },
+  "case_cap_rows": 558,
+  "all_fixed_batches_checked": 17856,
+  "max_saved_batch_discrepancy": 1.1102230246251565e-16,
+  "max_saved_normalization_discrepancy": 2.220446049250313e-16,
+  "fixed_half_boundary_cases": [
+    {
+      "id": "external/hpm_1/2025-07-04/00",
+      "cap": "1/2",
+      "exact_two_width": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-17/00",
+      "cap": "1/2",
+      "exact_two_width": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-19/00",
+      "cap": "1/2",
+      "exact_two_width": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-09/06",
+      "cap": "1/2",
+      "exact_two_width": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-10/06",
+      "cap": "1/2",
+      "exact_two_width": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-17/06",
+      "cap": "1/2",
+      "exact_two_width": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-28/06",
+      "cap": "1/2",
+      "exact_two_width": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-12/12",
+      "cap": "1/2",
+      "exact_two_width": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-22/00",
+      "cap": "1/2",
+      "exact_two_width": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-28/12",
+      "cap": "1/2",
+      "exact_two_width": "1/2"
+    }
+  ],
+  "cohort_filter": "Recorded cap compatibility joined only after computing geometry-only budgets.",
+  "fixed_arithmetic": "exact rational values of source binary64 coefficients",
+  "adaptive_arithmetic": "existing capped piecewise-linear planner; threshold tolerance1e-8; independently checked endpoint LPs",
+  "uncapped_target_unchanged": "W_r <= W_r0/2 with uncapped W_r0",
+  "provenance": {
+    "mode": "bundled_external_only",
+    "source_execution_evidence_sha256": "3c7dbb113beee7547d42ff68c826cc0c96e2e7d91811a37930eb651091fa189d",
+    "source_physical_blocks": {
+      "external": 279
+    },
+    "original_coefficients_verified_in_this_run": false,
+    "plans_sha256": "26b1f10f11680883ea51bafba00e3907c7240a48227190c9da119abf56397d04",
+    "shared_plans_sha256": "9258e3d7508d333c9aaaaf243495d0a459adba8bf075bab1d244ace7f2ae9387",
+    "geometry_sha256": {
+      "external_validation/replay/geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0"
+    },
+    "precision_producer_sha256": "264259ca972a94781f8348cd462381d0d6bfc77b5070dbce0448aef3d84e842a",
+    "exact_coefficient_normalization_checks": 1674,
+    "maximum_exact_normalization_difference": "0"
+  },
+  "source_sha256": "155573b73b37629fbee493a8e1c31d52b9f8f7e158c21a9e8b00aed235e8e322",
+  "binding_sha256": "fa2ac421b17e58afc056f2d7f3e9c4e251f31aba053efbfc37521a5737e2eede",
+  "capacity_report_sha256": "40354c7df4d3e61d5db03668366deb7f5627e7ff210639522ba163f81742ada8",
+  "capacity_cases_sha256": "640207a01128f99982f3eb3d2181809e66fd058fa316bd0298f9181d4d13d84a",
+  "capacity_plans_sha256": "de721cbb25be6b7af4e13991da3d0b2a1b046aced73f88de520f88ed5b95babb",
+  "budget_ledger_sha256": "2e2abca5e5a838f1e61f65b99e11b1954fd069294e2c8e68ad5e7bd1e041b7d3",
+  "ledger_sha256": "ee3869f9df1b59efbe43492b337fd2c63b7a9bf83c0d8c552787c2b5179f34e7",
+  "elapsed_seconds": 14.364131499984069
+}

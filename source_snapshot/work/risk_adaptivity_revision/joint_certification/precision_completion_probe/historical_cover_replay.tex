@@ -1,0 +1,35 @@
+\subsection{Earlier saved cover mixtures}
+These are the original saved-cover replay results, retained as historical controls. The completed full-panel precision challenger replaces them in the main comparison.
+The cover + mean fallback policy uses a guaranteeing fixed batch when
+available, then a certified equal mixture of two batches, and otherwise a
+mean-width fallback.
+Its recorded success is 54.98\% over the original panel and 72.55\% over the
+external panel.
+Matching certificates prove a batch precision optimum of
+$1/2$ on 165 original and 57 external instances. On these instances, adaptive
+succeeds on every stored record, while the optimal batch mixtures succeed
+with expected frequencies 108/165 (65.45\%) and 37/57 (64.91\%). Coefficient
+certificates define these subsets before record replay. The complete fixed-batch and greedy
+comparisons in Table~\ref{tab:joint_shared_replay} remain the broader controls.
+
+\paragraph{A stronger guarantee can score worse on stored records.}
+Table~\ref{tab:guarantee-recorded-tradeoff} makes the distinction visible on
+the same certified subsets. The fixed worst-width batch succeeds more often
+on the stored answers than the optimal randomized cover, yet its worst-case
+precision success is zero. Indeed, a deterministic batch's worst-case
+indicator is either zero or one; a value of one would contradict the
+proved randomized optimum of one half. Feedback attains both certainty
+over compatible records and success on these recorded cases.
+
+\begin{table}[htbp]\centering\small
+\caption{Assurance and replay answer different questions on the matched-half
+subsets. Randomized entries are expected success counts for the saved
+optimal mixtures. All methods use the same two readings and information.}
+\label{tab:guarantee-recorded-tradeoff}
+\begin{tabular}{lrrr}\toprule
+Policy & Worst-case success & Original (165) & External (57)\\\midrule
+Adaptive & $1$ & 165 & 57\\
+Fixed worst-width batch & $0$ & 155 & 51\\
+Optimal randomized cover & $1/2$ & 108 & 37\\
+\bottomrule\end{tabular}\end{table}
+

@@ -1,0 +1,13 @@
+\begin{table}[htbp]\centering\small
+\caption{Absolute tolerance and realized loss scales on the same blocks. All loss columns are in kWh$^2$. Med. MSE pools the four fixed models across blocks; best and spread are blockwise minimum and maximum-minus-minimum MSE, respectively, before taking medians. All four counts blocks whose realized spread is at most $\epsilon$; it is not a certificate count.}
+\label{tab:retrieval-tolerance-scale}
+\begin{tabular}{lrrrrr}\toprule
+System & $\epsilon$ & Med. MSE & Med. best & Med. spread & All four\\\midrule
+BLEM 1 & 0.003575 & 0.02371 & 0.01122 & 0.03286 & 12/273\\
+BLEM 2 & 0.004427 & 0.03981 & 0.01881 & 0.05139 & 15/273\\
+BLEM 3 & 0.003251 & 0.05632 & 0.02384 & 0.08984 & 0/273\\
+HPM 1 & 0.006101 & 0.02327 & $4.292\times10^{-6}$ & 0.1641 & 0/93\\
+HPM 2 & 0.002245 & 0.002964 & 0.000354 & 0.005857 & 25/93\\
+HPM 7 & 0.009255 & 0.0004555 & $7.2\times10^{-5}$ & 0.009809 & 44/93\\
+\bottomrule\end{tabular}\end{table}
+The tolerance has different implications across systems. HPM~7 has all four models within tolerance on 44 of 93 blocks, while HPM~1 has none and has a near-zero median best-model error alongside a much larger model spread. The blockwise best MSE is a hindsight reference, not the performance of one deployable model. These summaries interpret the unchanged tolerance rather than calibrating it to an operational loss.

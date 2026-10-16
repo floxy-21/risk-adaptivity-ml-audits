@@ -1,0 +1,18 @@
+{
+  "analysis": "Retrospective diagnostic of scalar versus joint acquisition difficulty, and fixed absolute precision floors",
+  "prespecified_at_this_revision": true,
+  "already_known": "1098 blocks;225 adaptive-two/fixed-three cases;222 matched-half certificates. No absolute-floor outcomes have been computed before this file.",
+  "new_forecast_fitting": false,
+  "optional_test_reading_answers_used": false,
+  "primary_floor_factor": "1/100",
+  "floor_factor_grid": ["0","1/1000","1/200","1/100","1/40","1/20","1/10"],
+  "floor_units": "squared kWh, matching paired six-hour mean squared loss",
+  "system_scale": "Mean squared hourly consumption over exactly the original training-eligible days, equivalently training hourly RMS squared. This is not squared training mean.",
+  "original_training": "UTC2017Jan1 throughSep30; current and lag1,2,7 complete nonnegative hourly days; expected266 days/system.",
+  "external_training": "UTC2025Jan1 throughJun30; same current and lag1,2,7 complete day eligibility as frozen forecast fitting; expected174/174/167 days forsystems1/2/7.",
+  "floor_rule": "For each contrast r, require W_r <= max(W_r0/2, factor*system_training_second_moment). Initial totals are already observed. Exact fractional source coefficients and known totals determine thresholds.",
+  "outputs": ["all1098 block ledger","all6 scalar minimum fixed budgets","225case partition by scalar difficulty","222matchedhalf join","deletion binding contrasts","raw W_r0 distribution and training-scale ratios","allpanel floor results","retention of original225 cases with fixed denominator","minimum fixed counts and deterministic adaptive<=2 covers under each floor"],
+  "numerical_method": "Rational arithmetic; complete32fixedprefixset enumeration; exact first-answer closed interval covers. Independent shortest-path and line-break enumeration checks.",
+  "scope": "Exact uncapped simplex; noiseless prefixes and exactretainedendpoints. No device-error, capacity, dollar, latency, or deployment claim. Floors are sensitivity reporting choices, not validated operational loss tolerances.",
+  "selection_policy": "Retain all cohorts, systems and cases at everyfactor; report failures and disappearance ofadvantages. Do not switchprimaryfactor after results. Original225subset membership fixed by existingreadingbudget ledger."
+}

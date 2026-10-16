@@ -1,122 +1,37 @@
-LATEST CLAIM-BOUNDARY REVIEW: FOCUSED SHARED-QUERY MANUSCRIPT
-Date: 14 October 2026
-Reviewer: /root/peerj_final_fit_challenge; internal AI-assisted analytic review
-Status: PASS within the scope below
+CURRENT TARGETED INTERNAL DELTA REVIEW
+Date: 2026-10-16 00:22 UTC
+Source SHA256: 91846b862f8f9692da150533947bd75c4a13144eb82d2f02177866b627abbc2b
+PDF SHA256: 5de09b49c3b21289eabe986248080b4545f0af0d85ebc92621b692c1011b3fa7
+32 pages; root confirmed completed built-in compilation and preflight PASS.
+Status: PASS within the targeted delta-review scope.
 
-CURRENT ARTIFACTS
-Source SHA256:
-ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07
-PDF SHA256:
-b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c
-PDF length: 28 pages, checked with pypdf.
-Previous review preserved at pre_focus_20261014/latest_boundary_review.txt.
+Reviewer: /root/final_peerj_challenge; internal AI analytic review, not external human validation.
+This review checks the newly explicit common-slack LP, the within-batch
+dominance rule, and the factual AI-disclosure restoration. It does not claim
+a fresh review of every proof, a fresh computational run, or visual inspection.
+The earlier broad proof review was by /root/final_proof_challenge on source
+381cb52c4923f4499c03f3ac8833d652d2fa6a10b2d917f0fb396899c7b30888;
+its historical scope is not relabeled as a new whole-proof verification.
 
-VERDICT AND REVIEW SCOPE
-No mandatory scientific correction was identified in the current scalar floor,
-two-target construction/corollary, new assurance-feasibility proposition, or
-their abstract/introduction/discussion/conclusion interpretation. I reread
-these current source sections and compared the central theorem against its
-scientific input and prior composed source. This is a source/claim/proof review;
-the PDF hash binds its companion artifact but does not assert a new full visual
-render inspection. It is not external specialist validation, a proof-assistant
-certificate, a new exhaustive literature search, or an acceptance assurance.
+For a nonempty finite set of selected failure rows, maximizing common slack
+delta on the simplex has a positive optimum exactly when one record strictly
+exceeds the threshold for every selected row. Compactness and the finite row
+set justify the optimum. The manuscript retains exact rational acceptance of
+proposed witnesses, so numerical LP status alone does not certify a result.
+The stated LP matches the constraints in complete_precision.py, including an
+unrestricted slack variable and the simplex equality.
+Within a batch, deleting a row dominated componentwise by a retained row
+preserves the union of strict-failure events. The direction of domination is
+correct. The implementation selects maximal rows and keeps one representative
+of exact duplicates; these wording changes do not alter the algorithm.
+Rational convex-combination bounds still exclude simultaneous strict failure,
+and the complete failure-mask argument and matching adverse distributions
+retain their existing roles. No new mathematical correctness issue was found.
 
-UNCHANGED CENTRAL THEOREM (source lines 348-525)
-The theorem and corollary block matches two_target_boundary/main_theorem.tex
-exactly after its section-to-subsection composition transformation. It also
-matches outputs/pre_focus_revised_manuscript.tex. The scientific fragment hash
-is c655594f1e86223c5f8b1f2fd2235b0c45c1f1a53e4be919da232380ef5efd98.
-The verifier hash b84c11b09fd275119478a488c0274b4cc0b428ad77332df417b9847c32cb3ffc
-matches the source hash recorded in the saved numerical report.
-
-The two-target theorem supplies both bounds: an adaptive branch rule and a
-uniform fixed-batch mixture valid on the entire polytope, plus a fixed adverse
-distribution covering all seven types of two-coordinate batches. Monotonicity
-covers shorter/repeated-query executions. It proves exact success 1 versus 1/m
-for every m>=3 with two affine targets and two unit-cost coordinate queries.
-The common nonnegative forecast construction realizes all three model pairs;
-the third contrast already meets its own threshold after the first query.
-The shrinking normalized margin, growing dictionary and sufficient three-query
-fixed alternative remain explicit. No claim of fixed-dimensional divergence,
-fixed-error robustness, unbounded query savings or empirical 1/m advantage is
-made. The exact commands follow the proof at lines 527-550.
-
-I did NOT rerun the 7,131 LPs in this review. Their recorded execution, script
-hash and finite-check scope remain distinguishable from the universal proof.
-The root's current clean-package replay is a separate ongoing verification;
-this review does not assert that it has finished or that an earlier package
-run establishes current-package success.
-
-SCALAR FOUNDATION AND NOVELTY BOUNDARY (lines 251-347; 170-221)
-The scalar theorem assumes a deterministic sure policy, a fixed finite
-answer-independent dictionary and a common hard budget. Conditional scalar
-worst widths are concave, so their strict failure sets are convex. The finite
-one-dimensional Helly argument supplies two covering batches, with equality at
-the precision threshold treated as success. Stopping is included as an action.
-The result is credited to sparse-policy reasoning rather than claimed as a new
-Helly theorem. Local diameters, vector recovery, reconstruction-error criteria,
-Sion/Jensen, adjustable robust optimization and Kurtz Theorem 11 are explicitly
-acknowledged. The precise additional claim is the query-realizable fixed-budget,
-small-output construction with matching probabilities. The supporting penalty
-classification and separate mean-joint-width construction are correctly sent
-to Online Resource 1, S11 and S14; the main result does not depend on an omitted
-uncited theorem. The prior-art scope remains that of the source-linked memo
-in two_target_boundary/novelty_review.txt; no historical first claim is added.
-
-NEW PROPOSITION 2 (lines 663-705)
-The statement specializes to the six-hour, exact-total, noiseless model with
-five permitted internal prefixes. If A>tau, each first query has one feasible
-answer at which all four continuations fail. Twenty endpoint witnesses,
-retaining multiplicities, define one uniform adverse distribution independent
-of the policy and its seed. For each fixed seed, the common first answer forces
-a failing member of the corresponding row; averaging yields failure at least
-1/20. Therefore every randomized adaptive policy has a fixed adverse record
-with success at most 19/20. Legal unused queries justify padding early stops
-and repetitions. This excludes a limiting sequence of success probabilities
-approaching one, not only an attained sure policy.
-
-The proposition meets the padding clarification in my separate
-assurance_feasibility_review_20261014.txt. That review independently checked
-11,660 strict failing fibers for 489 original and 94 external source-bound
-certificates with Fraction arithmetic; its exact input/checker hashes and
-margins are recorded there. The current source reports these counts and scopes
-accurately at lines 1264-1276. The bound is explicitly non-tight, the witnesses
-are synthetic completions, and no transfer to capacity/error models is made.
-The workflow can now say that its three branches exhaust certainty under this
-specific model, including randomized policies. Probabilities below one remain
-a separate problem.
-
-PRACTICAL CLAIMS AND ADVERSE EVIDENCE
-The abstract and opening distinguish the construction from its narrower meter
-counterpart. The shared budget is a declared benchmark contract, not a deployed
-provider restriction. Matching all-completion guarantees remain limited to 165
-original and 57 external blocks, while the 351/67 unresolved batch-precision
-gaps are explicit. Recorded gains of 7.81/11.11 percentage points over fixed
-worst-width batching and 2.20/2.15 over greedy do not become objective-matched
-full-panel optimal-batch claims. The covering challenger can have a stronger
-worst-case guarantee and poorer recorded success; the source preserves that
-tradeoff and its stronger-fallback diagnostic.
-
-Discussion lines 1384-1466 now states the usable audit decision directly:
-choose fixed retrieval, feedback, or more information for a supplied precision
-requirement. External best-model counts 207 versus greedy 208 are prominent,
-as are original counts 123 versus 118. Precision is not model selection.
-Capacity/error sensitivity, exact endpoints, retrospective reused panels and
-three systems per source remain visible. Bulk is the best observed option on
-the measured unrestricted API. The separate declared-cost catalogue is not
-relabeled deployed savings. Conclusion leads with the proved shared-budget
-boundary and then the matched meter certificates, preserving these conditions.
-
-PEERJ COMPUTER SCIENCE FIT
-The focused contribution is an acquisition algorithm, exact query-complexity
-boundary and executable certificate method for fixed ML model audits. That is
-a defensible CS scope. The source supports Basic Reporting through explicit
-success events and assumptions; Experimental Design through common information,
-budgets, objectives and source chronology; and Validity through matching bounds,
-scoped replay and adverse controls. This review relies on the previously
-recorded official-criteria inspection, not a new successful live website read.
-The remaining editorial judgment concerns significance and distinctness within
-the cited literature. No technical correction found here removes that judgment
-or justifies a calibrated greater-than-90-percent acceptance probability.
-
-No manuscript, scientific input, checker or empirical result was changed.
+The disclosure explicitly identifies research-content development and
+manuscript drafting, as well as coding, verification and editing assistance.
+Author responsibility and the internal-versus-external verification distinction
+remain explicit. No manuscript, algorithm or package file was edited by this
+reviewer. Root handles the separate visual review and final package replay.
+The user explicitly authorized submission after final verification. No journal
+submission is established by this review, and no external researcher was contacted.

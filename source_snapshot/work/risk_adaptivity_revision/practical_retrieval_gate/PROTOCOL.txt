@@ -1,0 +1,57 @@
+Cost-gated retrieval research probe; fixed before new HTTP responses.
+
+Use every one of the existing 1,098 public_decision_inputs_coherent.json cases, the four
+saved models and epsilon=1/100 of the saved training-only second moment. No new
+threshold, selected favorable subset, model fitting or hidden-answer selection.
+For each block, compute exact worst-completion excess loss for each candidate.
+This downstream epsilon-model-choice contract differs from the manuscript's
+joint half-initial-width precision requirement. Never attribute its counts to
+the precision optimizer. Verify all six affine contrasts directly from the
+frozen rational model vectors and every simplex vertex before using the gate.
+Skip retrieval iff one candidate is epsilon-optimal for every nonnegative
+completion consistent with the retained exact block total. Otherwise retrieve
+the full five internal hourly counter samples; endpoints are a declared common
+input in warm scenarios. One shared fetch supports all four models/six pairs.
+
+Compare:
+1. Immediate completed-block audits with retained endpoints: unconditional
+   five-internal-sample bulk versus the exact gate, caching every returned value.
+2. Retrospective complete-panel audit: compare per-system whole-period bulk with
+   gated range coalescing. A request returns every hourly sample in its inclusive
+   range, including cached or unnecessary rows. Enumerate the exact frontier of
+   request counts and returned row counts, not artificial monetary prices.
+3. Cold access: charge endpoint acquisition. For immediate auditing, one coarse
+   two-endpoint range/one uncached endpoint request per block precedes the gate;
+   unconditional bulk acquires missing endpoints and internal values together.
+   For retrospective auditing, one 6-hour-grid range per system obtains all
+   endpoints, followed by gated fine ranges. Compare all-inclusive hourly bulk.
+4. Warm cache repeated replay: every acquired coordinate must be returned from
+   cache without additional requests. Track downloaded rows separately from
+   distinct useful rows and cache hits.
+
+Optional actual public API validation is capped at twelve serial unauthenticated
+GET requests, no automatic retries, at least one second between request starts.
+For each existing external system1,2,7 request: whole-panel hourly range,
+whole-panel six-hour coarse range, the one coalesced gated hourly range, and
+the earliest required internal timestamp as a point. Select ranges from the
+gate before receiving any live values. Randomize the twelve requests using
+seed20261016. Do not choose replacement systems/ranges after outcomes. A failed
+request consumes the cap and is retained. No provider cache busting. Record
+response-body bytes and I/O times; these are not TLS bytes, prices, energy,
+deployment savings or a population latency estimate. Compare overlapping
+responses and saved block totals. Require overlapping API values to agree
+exactly as parsed decimal rationals. Report endpoint-total discrepancies; use
+an absolute 1e-9 kWh tolerance only for agreement with frozen binary64-derived
+totals, not as a replacement for exact certificate arithmetic. Stop on
+unexpected timestamps or overlap discrepancies. If the endpoint discrepancy
+exceeds tolerance, retain the failure and do not replace systems or ranges.
+
+Retrospective request costs are conditional interface comparisons. Later saved
+persistence forecasts can reveal targets at no retrieval cost. Check every
+documented available next-day persistence vector first; those copies dominate
+an unnecessary fine-range request. Do not present gated ranges as optimal over
+all legitimate saved archive information.
+
+All computations are exploratory reanalysis of existing sources. This is a
+standard safe early-exit/caching policy, not a new scientific novelty claim.
+Do not edit the manuscript or submit during this research gate.

@@ -1,0 +1,35 @@
+{
+  "checked_utc": "2026-10-14T04:32:58.2472854Z",
+  "browser": "Codex in-app browser",
+  "target": "https://peerj.com/manuscripts/",
+  "runtime_reset": "succeeded",
+  "connection_after_reset": "failed before page creation",
+  "error": "failed to write kernel assets: The system cannot find the path specified. (os error 3)",
+  "journal_form_accessed": false,
+  "submitted": false,
+  "credential_access": false,
+  "previous_attempt": {
+    "checked_utc": "2026-10-14T03:58:56.9964029Z",
+    "browser": "Codex in-app browser",
+    "target": "https://peerj.com/manuscripts/",
+    "runtime_reset": "succeeded",
+    "connection_after_reset": "failed before page creation",
+    "error": "failed to write kernel assets: The system cannot find the path specified. (os error 3)",
+    "journal_form_accessed": false,
+    "submitted": false,
+    "credential_access": false,
+    "previous_attempt": {
+      "checked_utc": "2026-10-14T03:41:42.1449377Z",
+      "browser": "Codex in-app browser",
+      "target": "https://peerj.com/manuscripts/",
+      "runtime_reset": "succeeded",
+      "connection_after_reset": "failed before page creation",
+      "error": "failed to write kernel assets: The system cannot find the path specified. (os error 3)",
+      "native_fallback": "same startup error before import",
+      "temp_directories_exist": true,
+      "journal_form_accessed": false,
+      "submitted": false,
+      "credential_access": false
+    }
+  }
+}

@@ -1,0 +1,69 @@
+PEERJ COMPUTER SCIENCE: REMAINING AUTHOR FACTS
+Prepared 13 October 2026; not a signed declaration or a record of consent.
+
+These items follow the live PeerJ policies read by the lead agent. They
+concern human accountability and retention of evidence, not a request for
+another experiment or external specialist endorsement. Enter statements in
+the portal only when the author can truthfully confirm them. Existing
+permission to prepare and submit the work does not establish that an
+unverified final-content review or record-retention inventory has already happened.
+
+Current manuscript identity
+Source SHA-256:
+ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07
+PDF SHA-256:
+b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c
+
+Suggested factual confirmations, only if true
+
+1. Final content and accountability
+   I have reviewed and approve this final manuscript and its supplementary
+   materials. I accept responsibility for the originality and accuracy of
+   the research, the cited sources, the reported results and conclusions,
+   including material developed with generative-AI assistance.
+
+2. Disclosure accuracy
+   The Acknowledgements accurately describes the assistance used and my
+   role. I understand that exact historical model identifiers were not
+   consistently retained; I am not representing unknown identifiers as
+   known or describing internal automated checks as external human review.
+
+3. Retained records
+   I will preserve and can provide, when requested, the retained original
+   and revised versions, relevant prompts and supporting research records.
+   Any unavailable historical records or metadata will be identified
+   explicitly, rather than represented as a complete archive.
+
+Important record-retention distinction
+The workspace and chat contain extensive histories, but this review has not
+established that every historical prompt and version was exported into a
+complete permanent archive. Before asserting complete availability, verify
+that inventory and preserve the relevant records. The statement above does
+not certify that this inventory has already been completed, or resolve an
+editor's request for a record that was never retained.
+
+Facts already supplied by the author; do not request them again without a
+reason to believe they changed
+- Name: Jishan Kapoor; affiliation: independent researcher, Toronto, Canada.
+- Corresponding email: kapoorjishan19@gmail.com.
+- No external funding; no competing interests.
+- The author personally checked the terms of use of the AI tools used in
+  this work and confirmed that the material is suitable for publication.
+  This is a supplied author confirmation, not an independent legal review
+  or confirmation of unrelated portal terms or fees.
+- The manuscript is unpublished in a peer-reviewed venue and was confirmed
+  not under consideration elsewhere. Carry this forward only while it
+  remains true; submission to a different journal would change that fact.
+
+Release facts for the agent to verify, not extra author questions
+- Both current Supplemental Data S1/S2 files meet the individual and total
+  size limits and extract into the documented common directory.
+- The current 77-step clean-package replay passes and the manuscript,
+  package manifests and uploaded file hashes correspond.
+- Source attribution and included permissive licenses remain in the
+  submission materials; excluded raw BLEM traces are not reintroduced.
+
+Readiness distinction
+The scientific review found no confirmed remaining blocker. These factual
+confirmations do not promise journal acceptance and do not erase the
+editor's discretion concerning the disclosed extent of AI assistance.

@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "C:\Users\floxy\Documents\Codex\2026-10-09\paper-title-proposal-decoupled-low-rank\work\peerj_journal_verified_20261014_012934\work\risk_adaptivity_revision\reproduce.py", line 156, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "C:\Users\floxy\Documents\Codex\2026-10-09\paper-title-proposal-decoupled-low-rank\work\peerj_journal_verified_20261014_012934\work\risk_adaptivity_revision\reproduce.py", line 50, in main
+    shutil.copy2(p, dest)
+  File "C:\Users\floxy\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\shutil.py", line 460, in copy2
+    _winapi.CopyFile2(src_, dst_, flags)
+OSError: [WinError 112] There is not enough space on the disk

@@ -50,7 +50,7 @@ the unqueried $z$ coordinates remain an independent box. The observed
 value of $z_j$ contributes only a constant. The chosen branch gives
 $\max(W_1,W_2)\leq H-1/4$, proving adaptive success one.
 
-For the randomized-batch lower bound, choose $j$ uniformly before any
+For the randomized-batch lower bound, choose $j\in\{1,\ldots,m\}$ uniformly before any
 observations and query $\{t,z_j\}$. Every feasible $t$ belongs to at least
 one branch interval, so success probability is at least $1/m$ for every
 record. This lower bound holds over the full continuum of $F_m$.
@@ -63,7 +63,7 @@ For the upper bound, give equal adverse mass to the $m$ feasible records
 and write $t_i=(i-1/2)/m$. The following table lists the exact terminal
 widths on these records for every type of distinct two-coordinate batch:
 \[
-\begin{array}{c|cc}
+\begin{array}{c|@{\quad}c@{\quad}c}
 \text{queried coordinates}&W_1&W_2\\\hline
 \{t,z_j\}&H+mt_i-a_j&H+m(1-t_i)-b_j\\
 \{t,u\}&H&H+m(1-t_i)\\

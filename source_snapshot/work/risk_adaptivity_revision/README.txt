@@ -1,5 +1,5 @@
 ONLINE RESOURCE 1: EXECUTABLE RESEARCH SUPPLEMENT
-Article: Risk and Adaptivity in Certifying Machine-Learning Model Comparisons
+Article: Adaptive Reading Budgets for Joint Forecast Audits with Cumulative Data
 Journal target: PeerJ Computer Science
 Author/correspondence: Jishan Kapoor, kapoorjishan19@gmail.com
 Affiliation: Independent Researcher, Toronto M4Y 1C9, Canada
@@ -7,13 +7,63 @@ Affiliation: Independent Researcher, Toronto M4Y 1C9, Canada
 CURRENT PAPER -- ONE ENTRY COMMAND
   python work/risk_adaptivity_revision/reproduce.py
 
+CURRENT PRACTICAL ADDITION (16 October 2026)
+The safe retrieval gate tests whether the retained totals already certify
+a model within the unchanged epsilon=0.01M2 tolerance. It avoids 198 of 279
+external and 8 of 819 original immediate block fetches with retained endpoints.
+Cold endpoint setup, whole-period range batching, caching and permitted
+forecast copies are included in the cost comparisons. This is tolerance-based
+model choice, not a gain for the joint half-width objective. The default replay
+reconstructs the complete request ledger and checks all 12 saved public API
+responses without network access. For a focused run:
+  python work/risk_adaptivity_revision/practical_retrieval_gate/run.py --out outputs/retrieval_gate
+Its README documents the separate source-record reconstruction check and the
+recorded timing. The research contribution remains the shared-query theorem
+and certified planner; safe early stopping is an application of the bounds.
+
+CURRENT EMPIRICAL-REVIEW REVISION (15 October 2026)
+The default driver retains the previous checks and adds explicitly named
+review_revision jobs. These reconstruct scalar budgets, the fixed training-
+scaled floor sensitivity,57 floor-aware plans,222 exact threshold intervals,
+and paired capacity attribution. CURRENT_RESULTS_MAP.txt gives the commands.
+New code and exact case ledgers are under joint_certification/review_mechanism,
+review_thresholds, and review_capacity. Original raw-source/training
+regeneration remains a separate documented command; default bundled-input
+checks do not claim a fresh model fit or original raw-data reconstruction.
+All57 external members of the original saving cohort retain assurance at
+the primary absolute floor. The selected plans use70 readings versus88 for
+minimum fixed plans. Eighteen still need feedback;39 use simpler fixed plans.
+The complete external panel reduction is358 versus378 (5.29%). These distinct
+denominators remain explicit in the manuscript and outputs.
+
+The continuum-precision completion now supplies rational matching bounds for
+the previously open randomized-batch games. A coefficient-only secondary rule
+refines expected joint width while preserving the exact precision optimum.
+The default driver verifies every proof before replaying the resulting policies
+on recorded answers. CURRENT_RESULTS_MAP.txt lists the commands, exact scope,
+and generated reports; replay_jobs.json is the authoritative job list.
+
 REVIEWER QUICK START
+The current revision also identifies the unique optimal mixture in the
+two-target construction and computes the least sufficient fixed reading
+budget on all 1,098 source-bound blocks. This is a retrospective resource
+calculation using frozen coefficients, not a new forecasting experiment.
+The 225 three-fixed-versus-two-adaptive cases include the 222 previously
+matched-half cases. Full-panel reading totals include all other blocks,
+using minimum fixed batches as fallback. An adaptive acquisition saves one
+scalar reading on each qualifying block but requires an extra information round.
+
 Extract both publisher ZIP files into the same empty directory. All commands
 below start from that root. Use a disposable extraction for focused commands;
 the full replay creates its own isolated stage.
+The publisher ZIPs use lossless ZIP-LZMA. Python's standard library extracts
+them without requiring a particular native archive application:
+  python -m zipfile -e Supplemental_Data_S1.zip REVIEW_DIRECTORY
+  python -m zipfile -e Supplemental_Data_S2.zip REVIEW_DIRECTORY
 
 1. Inspect the central proof without an optimization solver (Python stdlib):
    python -S work/risk_adaptivity_revision/two_target_boundary/verify_boundary.py --solver-free --output outputs/two_target_exact.json
+   python -S work/risk_adaptivity_revision/two_target_boundary/verify_support.py --output outputs/two_target_support.json
    python work/risk_adaptivity_revision/joint_certification/proof_check_joint.py
    python work/risk_adaptivity_revision/joint_certification/check_main_inspectable_certificate.py
    These check the fixed-budget two-target boundary, the separate shared-prefix
@@ -24,7 +74,8 @@ the full replay creates its own isolated stage.
 2. Reproduce the current paper offline after installing the pinned environment:
    python -m pip install -r requirements.txt
    python work/risk_adaptivity_revision/reproduce.py
-   Allow about 20 minutes on the study host. The driver validates source hashes,
+   Allow approximately 25--30 minutes on the study host; the final delivery
+   verification records the actual elapsed time. The driver validates source hashes,
    replays bundled external inputs and all-panel derived results, and rebuilds
    the manuscript. It does not refit models or download original BLEM inputs.
 3. Reconstruct both source panels with their frozen forecasts:
@@ -41,6 +92,13 @@ the full replay creates its own isolated stage.
 Start with work/risk_adaptivity_revision/CURRENT_RESULTS_MAP.txt for a direct
 table-by-table and claim-by-claim map of the current revision: commands,
 inputs, outputs, validation fields and any raw-source requirements.
+The new joint_certification/reading_budget folder provides the general
+O(R*n) fixed-budget scan, complete fixed-set witnesses, independent
+shortest-path checks and the exact adaptive-two covers. Its README gives
+the default external-only replay and the separate both-panel source route.
+The full replay includes four new checks: the unique-mixture proof,
+external budget reconstruction, its independent endpoint check, and 180
+constructed rational tests of the general partition algorithm.
 The final_challenger_diagnostics folder supplies the exact three-way guarantee
 classification, the greedy-first-query check, and a fixed-fallback comparison.
 Its default replay checks both panels' saved certificates and derives the

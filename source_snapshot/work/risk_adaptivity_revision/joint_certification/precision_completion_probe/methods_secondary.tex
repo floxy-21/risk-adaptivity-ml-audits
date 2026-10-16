@@ -1,0 +1,13 @@
+\paragraph{Choosing among precision-optimal mixtures.}
+We freeze the optimal worst-record precision value before choosing the
+replay policy. Among mixtures with that value, we numerically minimize
+worst expected joint width. This secondary objective needs only the six
+simplex vertices because each batch's joint width is convex in the record.
+We resolve remaining ties lexicographically by batch index, allowing
+$10^{-10}$ in the secondary width objective, rationalize the probabilities,
+and recheck the primary precision guarantee over the full simplex.
+When the precision optimum is zero, every mixture is precision-optimal,
+so we retain the saved coefficient-only mean-width policy. No recorded
+reading enters this selection. Primary precision optimality is exact;
+the secondary width refinement uses numerical LP solutions.
+

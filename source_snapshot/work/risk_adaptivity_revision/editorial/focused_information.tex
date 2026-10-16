@@ -7,6 +7,10 @@ $\mathcal Q$ of legal final query sets is fixed before observing answers
 and is the same for batch and adaptive policies. For example, fixed costs
 $k_j\geq0$ and a hard budget $B$ require $\sum_{j\in Q}k_j\leq B$ on
 every execution. Write $L_Q$ for the matrix of measurements in $Q$.
+The dictionary specifies available measurements; it need not contain the
+target contrasts. Allowing direct queries of two targets within the budget
+would give a fixed solution with zero width. In the meter application,
+available queries return cumulative readings.
 
 For a feasible record $y$, the compatible records and sharp width are
 \begin{equation}
@@ -33,8 +37,7 @@ For either randomized policy class $\mathcal C$, define precision success by
  \label{eq:risk_precision_success}
 \end{equation}
 Probability concerns the policy's seed at a fixed record; equality at the
-threshold counts as success. A narrow interval need not exclude zero and
-therefore need not identify a winning model.
+threshold counts as success.
 
 \begin{proposition}[Width and the transcript fiber]
 \label{prop:risk_concavity_transcript}

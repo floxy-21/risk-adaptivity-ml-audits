@@ -1,0 +1,6672 @@
+{
+  "status": "PASS",
+  "summaries": {
+    "original": {
+      "blocks": 819,
+      "exact_precision_distribution": {
+        "1/2": 165,
+        "0": 434,
+        "1/5": 1,
+        "1": 162,
+        "1/4": 13,
+        "1/3": 44
+      },
+      "previously_open": 351,
+      "closed": 351,
+      "upper_bound_strictly_lowered": 327,
+      "positive_lower_bound_newly_proved": 58
+    },
+    "external": {
+      "blocks": 279,
+      "exact_precision_distribution": {
+        "1": 128,
+        "1/3": 11,
+        "0": 81,
+        "1/2": 57,
+        "1/4": 2
+      },
+      "previously_open": 67,
+      "closed": 67,
+      "upper_bound_strictly_lowered": 63,
+      "positive_lower_bound_newly_proved": 13
+    },
+    "all": {
+      "blocks": 1098,
+      "exact_precision_distribution": {
+        "1": 290,
+        "1/3": 55,
+        "0": 515,
+        "1/2": 222,
+        "1/4": 15,
+        "1/5": 1
+      },
+      "previously_open": 418,
+      "closed": 418,
+      "upper_bound_strictly_lowered": 390,
+      "positive_lower_bound_newly_proved": 71
+    }
+  },
+  "all_1098_exact_values": [
+    {
+      "id": "external/hpm_1/2025-07-01/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-01/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-01/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-02/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "external/hpm_1/2025-07-02/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-02/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-03/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-03/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-03/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "external/hpm_1/2025-07-04/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-04/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-04/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-05/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-05/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-05/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-06/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-06/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-06/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-07/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-07/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-07/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-08/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-08/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-08/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-09/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-09/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-09/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-10/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-10/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-10/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-11/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-11/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-11/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-12/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-12/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-12/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-13/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-13/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-13/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-14/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-14/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-14/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-15/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-15/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-15/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-16/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-16/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-16/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-17/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-17/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-17/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-18/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-18/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-18/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-19/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-19/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-19/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-20/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-20/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-20/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-21/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-21/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "external/hpm_1/2025-07-21/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-22/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-22/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-22/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-23/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-23/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-23/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-24/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-24/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-24/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-25/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-25/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "external/hpm_1/2025-07-25/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-26/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-26/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-26/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-27/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-27/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-27/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-28/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-28/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "external/hpm_1/2025-07-28/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-29/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-29/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-29/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-30/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "external/hpm_1/2025-07-30/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-30/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_1/2025-07-31/00",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_1/2025-07-31/06",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_1/2025-07-31/12",
+      "cohort": "external",
+      "meter": "hpm_1",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-01/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-01/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-01/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-02/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-02/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-02/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-03/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-03/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-03/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-04/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-04/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-04/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-05/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-05/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-05/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-06/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-06/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-06/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-07/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-07/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "external/hpm_2/2025-07-07/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-08/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-08/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-08/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-09/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-09/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-09/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-10/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-10/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "external/hpm_2/2025-07-10/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-11/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-11/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-11/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-12/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-12/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-12/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-13/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-13/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-13/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-14/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-14/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-14/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-15/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-15/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-15/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-16/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-16/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-16/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-17/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-17/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-17/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-18/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-18/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-18/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-19/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-19/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-19/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-20/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-20/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-20/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-21/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-21/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-21/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-22/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-22/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-22/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-23/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-23/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-23/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-24/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-24/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-24/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-25/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-25/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-25/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-26/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-26/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-26/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-27/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-27/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-27/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-28/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-28/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-28/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-29/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-29/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-29/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-30/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-30/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-30/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_2/2025-07-31/00",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_2/2025-07-31/06",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_2/2025-07-31/12",
+      "cohort": "external",
+      "meter": "hpm_2",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-01/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-01/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-01/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-02/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-02/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "external/hpm_7/2025-07-02/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-03/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-03/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-03/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-04/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-04/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-04/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-05/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-05/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-05/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-06/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-06/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-06/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-07/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-07/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-07/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-08/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-08/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-08/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-09/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-09/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-09/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-10/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-10/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-10/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-11/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-11/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-11/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-12/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-12/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-12/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-13/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-13/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-13/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-14/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-14/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-14/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-15/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-15/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-15/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-16/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-16/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-16/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "external/hpm_7/2025-07-17/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-17/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-17/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "external/hpm_7/2025-07-18/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-18/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-18/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-19/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-19/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-19/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-20/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-20/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-20/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-21/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-21/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-21/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-22/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-22/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-22/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-23/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-23/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "external/hpm_7/2025-07-23/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-24/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-24/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-24/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-25/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-25/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-25/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-26/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-26/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-26/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "external/hpm_7/2025-07-27/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-27/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-27/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-28/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-28/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-28/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-29/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-29/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-29/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-30/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-30/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-30/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "external/hpm_7/2025-07-31/00",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "external/hpm_7/2025-07-31/06",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "external/hpm_7/2025-07-31/12",
+      "cohort": "external",
+      "meter": "hpm_7",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-01/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-01/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-01/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-02/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-02/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-02/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-03/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/5"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-03/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-03/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-04/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-04/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-04/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-05/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-05/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-05/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-06/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-06/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-06/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-07/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-07/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-07/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-08/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-08/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-08/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-09/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-09/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-09/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-10/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-10/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-10/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-11/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-11/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-11/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-12/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-12/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-12/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-13/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-13/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-13/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-14/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-14/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-14/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-15/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-15/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-15/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-16/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-16/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-16/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-17/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-17/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-17/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-18/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-18/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-18/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-19/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-19/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-19/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-20/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-20/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-20/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-21/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-21/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-21/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-22/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-22/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-22/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-23/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-23/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-23/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-24/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-24/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-24/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-25/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-25/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-25/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-26/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-26/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-26/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-27/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-27/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-27/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-28/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-28/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-28/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-29/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-29/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-29/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-30/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-30/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-30/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-31/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-31/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-31/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-01/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-01/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-01/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-02/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-02/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-02/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-03/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-03/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-03/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-04/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-04/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-04/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-05/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-05/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-05/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-06/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-06/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-06/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-07/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-07/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-07/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-08/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-08/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-08/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-09/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-09/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-09/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-10/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-10/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-10/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-11/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-11/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-11/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-12/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-12/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-12/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-13/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-13/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-13/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-14/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-14/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-14/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-15/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-15/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-15/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-16/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-16/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-16/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-17/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-17/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-17/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-18/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-18/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-18/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-19/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-19/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-19/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-20/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-20/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-20/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-21/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-21/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-21/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-22/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-22/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-22/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-23/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-23/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-23/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-24/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-24/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-24/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-25/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-25/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-25/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-26/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-26/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-26/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-27/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-27/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-27/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-28/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-28/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-28/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-29/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-29/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-29/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-30/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-30/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-30/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-01/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-01/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-01/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-02/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-02/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-02/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-03/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-03/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-03/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-04/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-04/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-04/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-05/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-05/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-05/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-06/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-06/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-06/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-07/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-07/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-07/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-08/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-08/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-08/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-09/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-09/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-09/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-10/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-10/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-10/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-11/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-11/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-11/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-12/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-12/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-12/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-13/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-13/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-13/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-14/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-14/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-14/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-15/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-15/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-15/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-16/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-16/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-16/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-17/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-17/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-17/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-18/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-18/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-18/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-19/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-19/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-19/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-20/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-20/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-20/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-21/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-21/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-21/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-22/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-22/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-22/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-23/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-23/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-23/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-24/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-24/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-24/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-25/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-25/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-25/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-26/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-26/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-26/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-27/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-27/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-27/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-28/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-28/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-28/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-29/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-29/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-29/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-30/00",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-30/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-30/12",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-01/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-01/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-01/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-02/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-02/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-02/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-03/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-03/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-03/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-04/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-04/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-04/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-05/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-05/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-05/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-06/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-06/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-06/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-07/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-07/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-07/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-08/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-08/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-08/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-09/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-09/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-09/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-10/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-10/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-10/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-11/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-11/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-11/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-12/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-12/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-12/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-13/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-13/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-13/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-14/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-14/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-14/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-15/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-15/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-15/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-16/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-16/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-16/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-17/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-17/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-17/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-18/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-18/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-18/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-19/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-19/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-19/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-20/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-20/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-20/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-21/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-21/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-21/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-22/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-22/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-22/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-23/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-23/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-23/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-24/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-24/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-24/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-25/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-25/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-25/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-26/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-26/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-26/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-27/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-27/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-27/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-28/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-28/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-28/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-29/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-29/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-29/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-30/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-30/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-30/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-31/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-31/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-31/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-01/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-01/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-01/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-02/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-02/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-02/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-03/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-03/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-03/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-04/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-04/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-04/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-05/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-05/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-05/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-06/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-06/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-06/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-07/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-07/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-07/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-08/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-08/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-08/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-09/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-09/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-09/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-10/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-10/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-10/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-11/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-11/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-11/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-12/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-12/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-12/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-13/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-13/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-13/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-14/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-14/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-14/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-15/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-15/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-15/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-16/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-16/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-16/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-17/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-17/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-17/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-18/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-18/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-18/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-19/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-19/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-19/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-20/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-20/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-20/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-21/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-21/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-21/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-22/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-22/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-22/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-23/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-23/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-23/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-24/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-24/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-24/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-25/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-25/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-25/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-26/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-26/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-26/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-27/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-27/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-27/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-28/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-28/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-28/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-29/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-29/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-29/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-30/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-30/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-30/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-01/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-01/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-01/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-02/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-02/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-02/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-03/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-03/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-03/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-04/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-04/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-04/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-05/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-05/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-05/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-06/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-06/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-06/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-07/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-07/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-07/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-08/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-08/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-08/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-09/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-09/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-09/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-10/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-10/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-10/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-11/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-11/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-11/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-12/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-12/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-12/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-13/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-13/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-13/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-14/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-14/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-14/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-15/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-15/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-15/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-16/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-16/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-16/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-17/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-17/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-17/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-18/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-18/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-18/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-19/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-19/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-19/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-20/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-20/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-20/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-21/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-21/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-21/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-22/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-22/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-22/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-23/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-23/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-23/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-24/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-24/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-24/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-25/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-25/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-25/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-26/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-26/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-26/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-27/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-27/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-27/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-28/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-28/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-28/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-29/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-29/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-29/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-30/00",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-30/06",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-30/12",
+      "cohort": "original",
+      "meter": "consumer_00000002",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-01/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-01/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-01/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-02/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-02/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-02/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-03/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-03/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-03/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-04/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-04/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-04/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-05/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-05/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-05/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-06/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-06/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-06/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-07/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-07/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-07/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-08/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-08/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-08/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-09/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-09/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-09/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-10/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-10/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-10/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-11/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-11/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-11/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-12/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-12/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-12/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-13/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-13/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-13/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-14/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-14/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-14/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-15/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-15/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-15/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-16/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-16/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-16/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-17/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-17/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-17/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-18/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-18/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-18/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-19/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-19/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-19/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-20/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-20/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-20/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-21/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-21/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-21/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-22/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-22/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-22/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-23/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-23/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-23/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-24/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-24/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-24/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-25/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-25/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-25/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-26/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-26/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-26/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-27/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-27/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-27/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-28/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-28/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-28/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-29/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-29/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-29/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-30/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-30/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-30/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-31/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-31/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-31/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-01/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-01/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-01/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-02/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-02/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-02/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-03/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-03/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-03/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-04/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-04/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-04/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-05/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-05/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-05/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-06/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-06/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-06/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-07/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-07/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-07/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-08/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-08/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-08/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-09/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-09/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-09/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-10/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-10/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-10/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-11/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-11/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-11/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-12/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-12/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-12/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-13/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-13/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-13/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-14/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-14/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-14/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-15/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-15/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-15/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-16/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-16/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-16/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-17/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-17/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-17/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-18/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-18/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-18/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-19/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-19/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-19/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-20/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-20/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-20/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-21/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-21/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-21/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-22/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-22/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-22/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-23/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-23/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-23/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-24/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-24/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-24/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-25/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-25/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-25/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-26/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-26/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-26/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-27/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-27/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-27/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-28/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-28/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-28/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-29/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-29/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-29/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-30/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-30/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-30/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-01/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-01/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-01/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-02/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-02/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-02/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-03/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-03/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-03/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-04/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-04/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-04/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-05/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-05/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-05/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-06/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-06/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-06/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-07/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-07/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-07/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-08/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-08/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-08/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-09/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-09/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-09/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-10/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-10/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-10/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-11/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-11/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-11/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-12/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-12/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-12/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-13/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-13/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-13/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-14/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-14/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-14/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-15/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-15/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-15/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-16/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-16/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-16/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-17/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-17/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-17/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-18/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-18/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-18/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-19/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-19/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-19/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-20/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-20/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-20/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-21/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-21/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-21/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-22/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-22/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-22/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-23/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-23/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-23/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-24/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-24/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-24/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-25/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-25/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-25/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/2"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-26/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-26/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-26/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-27/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-27/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-27/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-28/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-28/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-28/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-29/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/4"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-29/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-29/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-30/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-30/06",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-30/12",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "0"
+    }
+  ],
+  "reading_saving_cases": 225,
+  "reading_saving_batch_value_half": 222,
+  "additional_reading_saving_cases": [
+    {
+      "id": "original/consumer_00000001/2017-11-26/06",
+      "cohort": "original",
+      "meter": "consumer_00000001",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-23/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-04/00",
+      "cohort": "original",
+      "meter": "consumer_00000003",
+      "precision_optimum": "1/3"
+    }
+  ],
+  "primary_producer_total_seconds": 92.08767889981391,
+  "primary_case_max_seconds": 2.2740549000154715,
+  "total_LPs": 5261,
+  "maximum_case_LPs": 201,
+  "maximum_case_tree_nodes": 208,
+  "maximum_case_certificate_json_bytes": 5434,
+  "producer_report_bytes": 2721067,
+  "producer_report_sha256": "48409fb450fd8d020f8b1476a1c84e028b518ac33035b3b82c8e73c11954f25a",
+  "source_catalog_sha256": "15cfa445e0a6213494a71ee3e01b87067d1f8169f6b32b7164b38ca48c793f3f",
+  "budget_ledger_sha256": "690647b47dd68c96cbc1621e332b1a3629b98a619020b1e3167c1fb9fde07a84",
+  "fine_answers_loaded": false
+}

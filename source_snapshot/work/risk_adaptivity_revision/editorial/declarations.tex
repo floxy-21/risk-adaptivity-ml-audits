@@ -1,41 +1,30 @@
 \section*{Supplementary Materials}
 Online Resource 1 is supplied as Supplemental Data S1 and S2. Extract both
-ZIP files into the same directory. Together they contain the editable
-manuscript, executable methods, frozen forecasts, source identifiers, case
-ledgers, exact witnesses and numerical checks. Start with \texttt{README.txt};
+ZIP files into the same directory using the Python extraction commands in
+the accompanying README. Together they contain the editable manuscript,
+executable methods, frozen forecasts, source identifiers, case ledgers,
+exact witnesses and numerical checks. Start with \texttt{README.txt};
 \texttt{CURRENT\_RESULTS\_MAP.txt} maps each current table and verification
 claim to its command, inputs and outputs. The default verification replays
-saved forecasts and does not train new models. Separate commands cover
-raw-input regeneration and fresh fitting. BLEM-derived traces are reconstructed
-locally; attributed HeatpumpMonitor records are bundled. The indexed extended
-methods retain full proofs, solver scaling, historical controls, forecasting
-protocols and uncertainty checks. Protocol-selection files include all 116
-interface decisions and task-bound readout checks. The separate checker
-compares saved contrasts with frozen geometry, verifies forecast hashes,
-and reconstructs retained endpoints from cached API records. Historical
-reports relevant to this revision are retained; the larger development
-archive is preserved separately.
+saved forecasts. Separate commands cover raw-input regeneration and fresh
+fitting. The indexed extended methods retain full proofs, solver scaling,
+forecasting protocols and historical controls.
 
 \section*{Additional Information and Declarations}
 \subsection*{Data and Code Availability}
 The numerical code and detailed outputs are supplied in Online Resource 1.
-The public source identifiers are given in the references. The package
-separates bundled Portugal/household replay from BLEM raw-source
-regeneration. BLEM counter traces are regenerated from the pinned public
-QuantLet repository (\url{https://github.com/QuantLet/BLEM}), accompanying
-Kostmann and H\"ardle (2019; \url{https://doi.org/10.3390/en12142718}).
-The regeneration commands reject inputs with mismatched hashes.
-These raw traces are not redistributed because redistribution permission
-has not been established.
-Constructed polytopes include their complete inequalities and objectives.
-Dual outputs retain raw multipliers, any numerical mass correction, the
-completed record, and pricing and enumerated lower bounds. LP and endpoint
-cross-checks use floating-point arithmetic with explicit tolerances; the
-counter covering and adverse-profile certificates are additionally checked
-with exact rational arithmetic on their serialized inputs. Shared-query
-checks include all joint outcomes, optimal-batch tie diagnostics, bounded-error
-dual certificates and adverse completions. Reviewers receive the current
-executable materials as Supplemental Data S1 and S2.
+The central study uses BLEM and HeatpumpMonitor. The package bundles the
+attributed HeatpumpMonitor records and frozen forecasts. BLEM counter traces
+are regenerated from the pinned public QuantLet repository
+(\url{https://github.com/QuantLet/BLEM}), accompanying Kostmann and H\"ardle
+(2019; \url{https://doi.org/10.3390/en12142718}). The regeneration commands
+reject inputs with mismatched hashes. These raw traces are not redistributed
+because redistribution permission has not been established. Bundled Portugal
+and household analyses are historical supporting controls, separate from the
+central two-panel study. The complete polytopes, rational certificates,
+numerical tolerances and paired decision outcomes are supplied in Supplemental
+Data S1 and S2; \texttt{CURRENT\_RESULTS\_MAP.txt} identifies the reproduction
+route for each result.
 
 \subsection*{Funding}
 This research received no external funding.
@@ -44,34 +33,24 @@ This research received no external funding.
 The author declares no competing interests.
 
 \subsection*{Author Contributions}
-Jishan Kapoor defined the research objectives and evaluation requirements,
-directed and supervised the analysis and revisions, interpreted the findings,
-and approved the manuscript. The computational and drafting assistance used
-under this supervision is described below.
+Jishan Kapoor conceived and designed the research, developed the methodology,
+conducted the computational analyses, interpreted and verified the results,
+prepared and revised the manuscript, and approved the final version.
 
 \subsection*{Research Transparency}
 This work uses public data and constructed mathematical instances, with
-no newly recruited participants. New measurements concern public API
-response times and payloads, with their small-workload scope reported. Retrospective masks and
-archive-access assumptions are identified explicitly. Comparisons use
-the same information and the same stated hard budgets. The new proofs
-and numerical checks do not change the historical forecast results.
+no newly recruited participants. The shared-query analyses are retrospective
+on both source panels. Separate checker implementations provide within-study
+verification; they are not external independent replication.
 
 \section*{Acknowledgements}
-\paragraph{Generative-AI assistance.}
-Jishan Kapoor provided the topic, set the research objectives and evaluation
-requirements, directed the analyses and tests, and closely supervised all
-use of OpenAI Codex (OpenAI; GPT-6-family assistant for the final revision;
-accessed October 2026; exact model identifiers for earlier sessions were
-not consistently retained). The tool assisted with literature searches,
-development and checking of research content and code, computational
-execution, and manuscript drafting and editing. It supported iterative
-verification and clearer presentation. The author reviewed and revised
-these outputs, checked the tools' terms of use and confirmed their suitability
-for publishing this work. The author retains full responsibility for the
-research decisions, originality and integrity of the work, accuracy of the
-references, interpretation of results, and final manuscript. Separate checker
-implementations within this study are not external independent replication.
-This generative assistance is distinct from the boosted-tree and neural
-forecasting models fitted to the public application data.
-
+\paragraph{Generative AI Disclosure.}
+OpenAI Codex was used as a supporting tool for literature exploration,
+research-content development, coding assistance, computational verification,
+and manuscript drafting and editing.
+The author directed the research, evaluated and verified AI-assisted outputs,
+and retains full responsibility for the methodology, findings, interpretations,
+and final manuscript. The final revision used a GPT-6-family assistant
+(accessed October 2026); exact model identifiers for earlier sessions were
+not consistently retained. The author checked the tools' terms of use and
+confirmed their suitability for publishing this work.

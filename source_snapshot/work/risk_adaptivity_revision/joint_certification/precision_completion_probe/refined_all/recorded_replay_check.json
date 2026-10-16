@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "recorded_blocks": 1098,
+  "case_convention_rows": 2196,
+  "batch_outcome_evaluations": 21960,
+  "paired_summary_groups": 48,
+  "maximum_numeric_summary_discrepancy": 0.0,
+  "summary_tolerance": 1e-09,
+  "exact_scope": "All per-case probabilities and paired expected counts are reconstructed with rational arithmetic.",
+  "bootstrap_scope": "Saved synchronized seven-day draws; independent aggregation, descriptive percentile intervals.",
+  "policy_sha256": "f78709072477f319a2847081ce5e8b44328f564b0d334782bed3dbf1c0c1ef15",
+  "replay_summary_sha256": "94b23ef01680800b9f5b145a1899ea0505774324d17d3d5f4681d9f3852df09d",
+  "replay_ledger_sha256": "22ae1c262f330991cfc28ad4671a6253a737b3d03e824756ea3743d77a550518",
+  "checker_sha256": "94091bbc1b96968b69a68370cde9ddf7718bb306ada170b29394e3d9c823124e",
+  "elapsed_seconds": 3.4368926000024658
+}

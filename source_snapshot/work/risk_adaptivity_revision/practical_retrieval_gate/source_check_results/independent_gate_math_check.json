@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "scope": "Optional independent source, exact-loss and outer-total audit.\n\nDoes not import the coherent-input builder, planner or retrieval gate. Replays\nthe documented CSV parsing, checks the saved model vectors, and evaluates\nsquared loss directly at every simplex vertex. No withheld within-block\ncounter increments or realized model-ranking outcomes enter this check.\nOriginal daily benchmark forecasts are generated from their permitted prior-day\ncounter inputs; they are not claimed to be a preserved production forecast log.\nThe default cached replay does not invoke this raw-source path. Supply a full\nworkspace with the pinned forecast and source files; --chain-dir can redirect\nthe original raw-source regeneration output. This does not refit any models.\n",
+  "cohorts": {
+    "external": {
+      "cases": 279,
+      "zero_retrieval": 198,
+      "retrieval_required": 81
+    },
+    "original": {
+      "cases": 819,
+      "zero_retrieval": 8,
+      "retrieval_required": 811
+    }
+  },
+  "per_system_zero_retrieval": {
+    "external/hpm_1": 75,
+    "external/hpm_2": 37,
+    "external/hpm_7": 86,
+    "original/consumer_00000001": 0,
+    "original/consumer_00000002": 1,
+    "original/consumer_00000003": 7
+  },
+  "forecast_coordinates_checked": 26352,
+  "pair_formulas_checked": 6588,
+  "direct_vertex_loss_differences_checked": 39528,
+  "outer_totals_checked": 1098,
+  "persistence_previous_day_fills": 6552,
+  "seconds": 14.381471200002125,
+  "pins": {
+    "work\\risk_adaptivity_revision\\practical_retrieval_gate\\inputs\\public_decision_inputs_coherent.json": "4dab6420e1a365feb9bd08d21ebb936f347c21b445848a49b898086dd8029230",
+    "outputs\\review_frozen_forecasts.csv": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0",
+    "work\\risk_adaptivity_revision\\external_validation\\operational\\fresh_fits_20261012\\frozen_forecasts.csv": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+    "work\\final_chain_20261014T031901Z\\run\\original_raw\\prepared\\data_blem_hourly_endpoints.csv": "2d8a88d83123216d71329c1745a4dbf1d0c47b34ba1a22b6529f348f4e5987eb",
+    "work\\risk_adaptivity_revision\\external_heatpump\\hourly\\train_test_hourly_counters.csv": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+    "work\\risk_adaptivity_revision\\joint_certification\\review_mechanism\\executed\\training_scales.json": "1491f1850fa06e611cf376dd5872c95a27c20c768584814b8dd38bd812806981",
+    "work\\risk_adaptivity_revision\\joint_certification\\decision_tolerance_probe\\protocol.json": "58d9713cdc9ef72190c432617fa14e663c79d879b55ab3e3ef45e41daaefbe19",
+    "work\\risk_adaptivity_revision\\practical_retrieval_gate\\verify_source_inputs.py": "ba28a7eb77cfb6996d828594ac682f7e277a7879baaff2b2cd6073dfdff81428"
+  }
+}

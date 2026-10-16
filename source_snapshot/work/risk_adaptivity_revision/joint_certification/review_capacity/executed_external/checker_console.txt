@@ -1,0 +1,54 @@
+{"blocks": 150, "checks": {"exact_fixed_batch_width_equalities": 9600, "endpoint_LPs": 1920, "minimum_fixed_budget_checks": 300, "raw_record_compatibility_checks": 300, "paired_state_checks": 300}, "seconds": 33.392681600002106}
+{
+  "status": "PASS",
+  "checks": {
+    "exact_fixed_batch_width_equalities": 17856,
+    "endpoint_LPs": 3456,
+    "minimum_fixed_budget_checks": 558,
+    "raw_record_compatibility_checks": 558,
+    "paired_state_checks": 558,
+    "summary_groups": 8
+  },
+  "selected_block_ids": [
+    "external/hpm_1/2025-07-01/00",
+    "external/hpm_1/2025-07-16/06",
+    "external/hpm_1/2025-07-31/12",
+    "external/hpm_2/2025-07-01/00",
+    "external/hpm_2/2025-07-16/06",
+    "external/hpm_2/2025-07-31/12",
+    "external/hpm_7/2025-07-01/00",
+    "external/hpm_7/2025-07-16/06",
+    "external/hpm_7/2025-07-31/12"
+  ],
+  "selection_rule": "First, middle (floor(n/2)), and last sorted block ID in every source/system, without outcomes.",
+  "exact_check_method": "Integral endpoint-pair vertices grouped by equal prefix observations; no marginal-slope formula or producer import.",
+  "endpoint_LP_tolerance": 2e-09,
+  "maximum_endpoint_width_discrepancy": 2.7755575615628914e-16,
+  "maximum_endpoint_equality_residual": 2.220446049250313e-16,
+  "maximum_endpoint_bound_residual": 1.6653345369377348e-16,
+  "maximum_endpoint_duality_gap": 2.220446049250313e-16,
+  "adaptive_scope": "Existing capped adaptive classifications are joined; their endpoint verification is separate.",
+  "raw_records_verified_in_this_run": true,
+  "compatibility_scope": "Every compatibility flag recomputed from pinned original integer counters or external rational cumulative readings.",
+  "provenance": {
+    "mode": "bundled_external_only",
+    "source_execution_evidence_sha256": "3c7dbb113beee7547d42ff68c826cc0c96e2e7d91811a37930eb651091fa189d",
+    "source_physical_blocks": {
+      "external": 279
+    },
+    "original_coefficients_verified_in_this_run": false,
+    "plans_sha256": "26b1f10f11680883ea51bafba00e3907c7240a48227190c9da119abf56397d04",
+    "shared_plans_sha256": "9258e3d7508d333c9aaaaf243495d0a459adba8bf075bab1d244ace7f2ae9387",
+    "geometry_sha256": {
+      "external_validation/replay/geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0"
+    },
+    "precision_producer_sha256": "264259ca972a94781f8348cd462381d0d6bfc77b5070dbce0448aef3d84e842a",
+    "exact_coefficient_normalization_checks": 1674,
+    "maximum_exact_normalization_difference": "0"
+  },
+  "checker_sha256": "4ed2cd5d01356604aefb2eecc10348c43a1d726d6480ddc8e861de90c994cbfc",
+  "ledger_sha256": "ee3869f9df1b59efbe43492b337fd2c63b7a9bf83c0d8c552787c2b5179f34e7",
+  "report_sha256": "bfa066634bbc1b56d4a97e28252dcf2d3555e9f831f232e2d15f1b628a240355",
+  "endpoint_output_sha256": "bf9fe929ba23958b335e3f4c74a8b9d237e1fef39f79fcd60d2983a84b1b78d8",
+  "elapsed_seconds": 55.167565100011416
+}

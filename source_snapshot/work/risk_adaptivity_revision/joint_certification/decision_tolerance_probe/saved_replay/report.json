@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "mode": "bundled-derived-endpoint-replay",
+  "blocks": 1098,
+  "case_policy_factor_rows": 38430,
+  "oriented_pair_batch_endpoints_checked": 65880,
+  "saved_reference_decision_checks": 57573,
+  "bootstrap_intervals_recomputed": 56,
+  "scope": "Recomputes directed bounds, epsilon decisions, strict winners, all source/system summaries and paired bootstrap intervals from saved derived endpoints. It does not verify source records, reconstruct original answers, refit models or reselect policies. Run analyze.py and check.py with --chain-dir for full pinned-source verification.",
+  "protocol_sha256": "58d9713cdc9ef72190c432617fa14e663c79d879b55ab3e3ef45e41daaefbe19",
+  "input_sha256": "4fbecd7a10986c4e1365570f6f8abbe4ca9816ad8246834f3b45e1968f0d4eea",
+  "producer_report_sha256": "6c7b3eedc40b95a8eb639c6fca84bd8ff35c84957138ad9bd75251c077256932",
+  "checker_sha256": "142c760653d098197ce672be9095b49eeffb785152829a3ea59d673006781772",
+  "case_outcomes_sha256": "636cc420311a903faecce2deee58ac67383cc31c04a39523f522e0a151dffa5a",
+  "elapsed_seconds": 38.417401099985
+}

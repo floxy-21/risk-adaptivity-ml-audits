@@ -1,6 +1,6 @@
-# Risk and Adaptivity in Certifying Machine-Learning Model Comparisons
+# Adaptive Reading Budgets for Joint Forecast Audits with Cumulative Data
 
-Jishan Kapoor · Independent Researcher · Toronto, Canada
+Jishan Kapoor Â· Independent Researcher Â· Toronto, Canada
 
 Research manuscript prepared for PeerJ Computer Science. This private repository
 stores the author's submission materials; it does not indicate journal acceptance.
@@ -9,11 +9,13 @@ stores the author's submission materials; it does not indicate journal acceptanc
 
 - [Read the paper](manuscript/revised_manuscript.pdf).
 - [Editable LaTeX source](manuscript/revised_manuscript.tex).
-- [Complete reproducibility release](https://github.com/floxy-21/risk-adaptivity-ml-audits/releases/tag/peerj-cs-2026-10-14-assurance).
+- [Complete reproducibility release](https://github.com/floxy-21/risk-adaptivity-ml-audits/releases/tag/peerj-cs-2026-10-16-retrieval-gate).
 - [Table-to-command map](source_snapshot/work/risk_adaptivity_revision/CURRENT_RESULTS_MAP.txt).
-- [Fresh execution record](verification/current_clean_package_replay.json).
+- [Source-bound scientific execution record](verification/current_clean_package_replay.json).
 - [Earlier five-point review, retained with its original scope](verification/peerj_five_point_audit.txt).
 - [Current compiled-source review](verification/latest_compiled_review.txt).
+- [Current practical-claim review](verification/final_gate_empirical_review.txt).
+- [Current claim-to-ledger check](verification/current_claims_review/final_claims_report.json).
 - [Earlier first-reader prose review](verification/first_reader_prose_review.txt).
 - [Hash-bound upload-hygiene scan](verification/final_upload_hygiene.json).
 - [Acquisition geometry and replay figure](figures/practical_guarantee_replay.pdf).
@@ -21,6 +23,35 @@ stores the author's submission materials; it does not indicate journal acceptanc
 - [Precise prior-art comparison](verification/two_target_boundary/novelty_review.txt).
 - [Assurance-feasibility proof](verification/assurance_feasibility/proof.txt).
 - [Full source-derived assurance evidence](verification/assurance_feasibility/full_source_report.json).
+- [Unique optimal-mixture argument](verification/budget_revision/two_target_boundary/optimal_mixture.tex).
+- [Minimum fixed-budget proof](verification/budget_revision/reading_budget/proof.txt).
+- [Both-panel reading-budget results](verification/budget_revision/reading_budget/executed_all/report.json).
+- [Independent minimum-budget check](verification/budget_revision/reading_budget/executed_all/independent_check.json).
+- [Joint mechanism and absolute floors](verification/empirical_review_revision/review_mechanism/executed/report.json).
+- [Certified threshold stability](verification/empirical_review_revision/review_thresholds/executed/report.json).
+- [Paired capacity attribution](verification/empirical_review_revision/review_capacity/executed_all/report.json).
+
+The current diagnostics isolate the shared-budget mechanism on 191 of 225
+baseline saving blocks (137 original and 54 external); 34 include a scalar
+obstruction. At the declared training-scale absolute floor, all 57 baseline
+external blocks remain assured. Thirty-nine need no feedback, and the unchanged
+cohort uses 70 readings versus 88 minimum fixed readings. The complete external
+panel uses 358 versus 378 readings: 18 retained and two new feedback-saving cases.
+These are different denominators; the floor is a sensitivity model, not a
+calibrated model-choice threshold.
+All 222 matched-half certificates have nonzero sufficient threshold intervals.
+Entire bands [0.49,0.51], [0.475,0.525] and [0.45,0.55] preserve adaptive certainty
+and randomized-batch worst-record success one half in 179, 119 and 53 cases.
+The frozen-certificate interval is closed below and open above; outside is
+inconclusive, not a failure claim.
+For the 225 baseline saving cases, the E/2 cap excludes 25, makes 191 fixed-
+certifiable and leaves nine requiring feedback. The E/3 cap excludes 75 and
+makes all 150 retained cases fixed-certifiable. Paired transition tables
+separate additional information from cohort selection.
+Eleven new jobs reproduce these diagnostics. Both-panel bundled derived-input
+checks remain distinct from original raw-source and training reconstruction;
+external source checks run by default. Scripts, ledgers and exact certificates
+are in verification/empirical_review_revision/.
 
 The fixed-budget result uses two affine targets and two coordinate queries:
 adaptation guarantees joint precision, while the best randomized fixed batch
@@ -29,6 +60,23 @@ has a fixed two-query guarantee. The same separation holds for all three paired
 contrasts of three constructed nonnegative forecast vectors. Its dictionary
 grows with `m`, its normalized margin shrinks, and three fixed queries suffice.
 It proves a boundary for shared assurance, not an empirical or financial gain.
+
+The new corollary shows that all m specific batches are necessary for any
+positive worst-record success; the unique optimum weights each by 1/m.
+The exact support checker evaluates 126,195 widths across seven family sizes.
+
+For the application, an exact linear scan computes how many fixed readings
+the assurance requirement needs. On 225 blocks across all six systems, the
+minimum is three fixed readings versus two adaptive readings. This is one
+third fewer reserved scalar readings, with one additional feedback round.
+Over the complete original and external panels, using the certified adaptive
+plan and a minimum fixed fallback requires 2,457 instead of 2,625 and 686
+instead of 743 readings (6.40% and 7.67%). Optional answers are not used to
+derive these retrospective guarantees. They concern the exact uncapped
+noiseless model, not HTTP requests or measured deployment costs. Fixed budgets
+are globally minimal, including randomized policies with sure success;
+adaptive budgets above two are not optimized. The actual API bulk result,
+capacity/error controls and external greedy model-selection result remain.
 
 The accompanying assurance-feasibility consequence identifies when the declared
 two-reading protocol cannot provide certainty even with randomized feedback.
@@ -61,10 +109,10 @@ python work/risk_adaptivity_revision/reproduce.py
 
 Run these commands from the extracted package root. The default entry point
 checks all manifested files, creates a new isolated stage, blocks network access
-during scientific replay, executes 77 checks, compares saved
+during scientific replay, executes 101 checks, compares saved
 scientific results and reconstructs the current manuscript byte-for-byte.
 The tested environment and exact scope appear in the verification record.
-The verified run took about 17.1 minutes on
+The recorded full scientific run took about 21.7 minutes on
 the study host, plus extraction/copy time; allow several GB of free disk.
 
 The new `two_target_exact` and `two_target_lp` jobs check the constructed family
@@ -97,11 +145,17 @@ and exact certificates, and reproduced all 1,098 outcome rows. Its commands,
 scope and execution records are in `joint_certification/provenance_chain/`.
 That run uses frozen models; it is not fresh fitting or external human review.
 
-The latest review adds a five-threshold sensitivity over unchanged policies and
-reports the remaining probability-bound gaps. The 28-page main text separates
+The final precision calculation closes all 418 previously open batch games and
+supplies matching rational certificates for all 1,098 instances. Its secondary
+width refinement uses coefficients before recorded-answer replay. Adaptive versus
+precision-optimal batch replay succeeds on 78.27% versus 54.15% of original blocks
+and 90.32% versus 71.83% externally. The unchanged-policy decision-tolerance
+diagnostic reports adaptive/greedy/fixed counts of 189/186/188 and 277/277/263
+at 1% of training mean squared hourly energy; the external greedy tie remains.
+The 28-page main text separates
 the mathematical optima, exact instance guarantees, recorded outcomes and API
 costs. Complete controls remain in the supplement. The current full replay uses
-a newly created isolated Python environment with all 11 runtime packages pinned.
+an isolated Python environment with all 11 runtime packages pinned.
 The assurance consequence completes the exact three-way feasibility decision,
 including all randomized adaptive policies in the no-certainty branch. The saved
 greedy first-query limitation and stronger fixed-fallback control remain visible.
@@ -113,9 +167,9 @@ and extended acquisition under the declared exact-total noiseless model.
 The policy and status tables distinguish optimization objectives, guaranteed
 success and recorded outcomes; fallback is an overlapping label rather than
 another status-partition cell. The final compiled-source review also records
-the workflow and displayed-equation rendering checks. These are presentation
-clarifications accompanying the new assurance consequence; recorded outcomes
-and the scientific producer scripts are unchanged.
+the workflow and displayed-equation rendering checks. The completion and
+decision-diagnostic programs extend the earlier checks; the earlier producer
+outputs and their original provenance remain separately available.
 
 ## Repository and release contents
 
@@ -137,11 +191,16 @@ The `pre_workflow_*` files preserve the preceding successful replay at its
 own source hash. The upload-hygiene record matches the current manuscript and three archives.
 The `pre_two_target_*` files likewise retain the preceding successful release
 as history, not as a substitute for the two new jobs or current source replay.
-The `pre_focus_*` files preserve the immediately preceding manuscript, PDF and
-verification history. The private release `peerj-cs-2026-10-13-two-target` remains available;
-`peerj-cs-2026-10-14-assurance` identifies this focused revision.
+The `pre_budget_*` files preserve the published assurance manuscript, PDF and
+verification history. The private release `peerj-cs-2026-10-14-assurance` remains available;
+`peerj-cs-2026-10-16-retrieval-gate` identifies this focused revision.
 Recorded host-native process failures and subsequent complete successful runs
 remain separate execution history, rather than silently discarded failures.
+The failed current-revision attempt at step83 is preserved in
+`verification/pre_dependency_fix_20261016/`: its error log, preservation manifest,
+selection records and exact old journal-part hashes are distinct from the fresh
+corrected-package replay. The original failed ZIPs remain local. Older successful
+records retained inside that history do not prove the failed attempt succeeded.
 
 The larger `research_supplement.zip` preserves historical development records.
 Its `EXCLUDED_EDITORIAL_NOTES.json` explicitly identifies three internal notes
@@ -151,7 +210,7 @@ The retained `work/randomized_tie_review/theory_review.txt` provides substantive
 historical mathematical rationale used as a hash-pinned checker input. It is
 internal AI-assisted review, not external validation of the current manuscript.
 The publisher package omits unused historical caches and lists those omissions;
-its 77-step execution uses the same scientific files and driver. No browser
+its 101-step execution uses the same scientific files and driver. No browser
 sessions, account credentials, registration forms or private outreach drafts are
 part of this repository.
 
@@ -161,5 +220,6 @@ Author contributions and supervised generative-AI assistance are disclosed in th
 manuscript. Internal checks are not external human peer review. Third-party source
 and data notices remain in the supplement; no blanket relicensing is asserted.
 This repository is private. The manuscript has not been submitted or accepted.
-Submission remains blocked by the recorded browser startup failure before page
-creation. Preparing or verifying this release performs no fresh portal check.
+PeerJ sign-in and draft preparation have been recorded. The author has authorized
+submission after the final verification. Preparing or verifying this release
+performs no fresh portal check and does not submit the manuscript.

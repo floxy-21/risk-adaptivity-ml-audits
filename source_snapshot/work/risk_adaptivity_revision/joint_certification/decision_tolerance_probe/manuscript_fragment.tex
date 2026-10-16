@@ -1,0 +1,40 @@
+\paragraph{Transfer from precision to a model decision.}
+We also replayed the frozen policies against a decision criterion: certify
+a model whose six-hour MSE exceeds that of any other candidate by at most
+$\epsilon$. For each model, we take the maximum of zero and the three directed
+upper loss-difference bounds; reversing a stored comparison uses minus its
+lower endpoint. We certify the model when this maximum is at most $\epsilon$.
+The primary retrospective tolerance is $\epsilon=0.01M_2$, using the same
+training second moment as the absolute-floor diagnostic. The supplement
+reports all seven factors from zero to $0.1$, without changing the acquisition
+policies.
+\begin{table}[ht]
+\centering
+\caption{Recorded model certificates under the same two-reading policies.
+The fixed comparator is the deterministic worst-width batch.
+Strict winners require all directed upper bounds to be negative; tolerance
+certificates use the inclusive bound $\leq0.01M_2$. Counts are blocks.}
+\label{tab:decision-tolerance}
+\begin{tabular}{llrrr}
+\toprule
+Source & Criterion & Adaptive & Greedy & Fixed batch\\
+\midrule
+Original (819) & Strict winner & 123 & 118 & 122\\
+ & Tolerance certificate & 189 & 186 & 188\\
+External (279) & Strict winner & 207 & 208 & 201\\
+ & Tolerance certificate & 277 & 277 & 263\\
+\bottomrule
+\end{tabular}
+\end{table}
+On the external panel, adaptation adds 14 tolerance certificates over the
+fixed batch and loses none: a 5.02-percentage-point gain (descriptive 95\%
+calendar-block bootstrap interval, 2.51--8.60). Twelve of these cases are from
+HPM~2 and two from HPM~1. The original-panel gain is 0.12 points
+($-1.34$--1.71). Adaptive and greedy certify the same 277 external blocks;
+the original difference is 0.37 points ($-0.37$--1.10).
+Thus some precision gains transfer to a model decision, with the clearest
+observed benefit over fixed batching in the external panel. The tolerance
+grid is a sensitivity analysis; it is not a calibrated deployment threshold.
+The intervals use 2,000 synchronized seven-day circular calendar-block
+resamples, with seeds 20261015 and 20261016 for the original and external
+panels, respectively.

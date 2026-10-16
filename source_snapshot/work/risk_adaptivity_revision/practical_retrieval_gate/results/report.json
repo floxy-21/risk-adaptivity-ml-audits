@@ -1,0 +1,239 @@
+{
+  "archive_external_training_sha256": "4f88633d706a3cf131ddfb10cc659f207d997154bd126490cdabe8d4c22721a6",
+  "archive_original_parser_sha256": "722f6262660c1ca559c006d6a3a19316d589a3a2049fd0d6fa631a789dd3591b",
+  "blocks": 1098,
+  "cohorts": {
+    "external": {
+      "blocks": 279,
+      "immediate": {
+        "always_bulk_cold": {
+          "blocks": 279,
+          "cached_hits_during_first_pass": 186,
+          "endpoint_rows_returned": 372,
+          "other_rows_returned": 1395,
+          "policy": "always_bulk_cold",
+          "repeat_audit_additional_requests": 0,
+          "requests": 279,
+          "returned_rows": 1767
+        },
+        "always_bulk_warm": {
+          "blocks": 279,
+          "cached_hits_during_first_pass": 0,
+          "endpoint_rows_returned": 0,
+          "other_rows_returned": 1395,
+          "policy": "always_bulk_warm",
+          "repeat_audit_additional_requests": 0,
+          "requests": 279,
+          "returned_rows": 1395
+        },
+        "gated_cold": {
+          "blocks": 279,
+          "cached_hits_during_first_pass": 0,
+          "endpoint_rows_returned": 372,
+          "other_rows_returned": 405,
+          "policy": "gated_cold",
+          "repeat_audit_additional_requests": 0,
+          "requests": 360,
+          "returned_rows": 777
+        },
+        "gated_warm": {
+          "blocks": 279,
+          "cached_hits_during_first_pass": 0,
+          "endpoint_rows_returned": 0,
+          "other_rows_returned": 405,
+          "policy": "gated_warm",
+          "repeat_audit_additional_requests": 0,
+          "requests": 81,
+          "returned_rows": 405
+        }
+      },
+      "interpretation": "Counts are conditional access accounting for epsilon-model choice; no measured price, deployment delay or joint-precision saving.",
+      "required_fine_fetch_blocks": 81,
+      "retrospective": {
+        "archive_after_gate_remaining_blocks": 3,
+        "archive_first_fine_frontier": [
+          {
+            "requests": 2,
+            "returned_rows": 22
+          },
+          {
+            "requests": 3,
+            "returned_rows": 15
+          }
+        ],
+        "archive_rounding_box_certified_blocks": 270,
+        "cold_coarse_inputs": {
+          "requests": 3,
+          "returned_rows": 372
+        },
+        "cold_whole_period_bulk": {
+          "requests": 3,
+          "returned_rows": 2217
+        },
+        "saved_next_day_target_copy_blocks": 270,
+        "warm_gated_minimum_requests": {
+          "requests": 3,
+          "returned_rows": 2031
+        },
+        "warm_gated_minimum_rows": {
+          "requests": 81,
+          "returned_rows": 405
+        },
+        "warm_ungated_minimum_requests": {
+          "requests": 3,
+          "returned_rows": 2211
+        }
+      },
+      "system_count": 3,
+      "systems": {
+        "hpm_1": {
+          "blocks": 93,
+          "zero_query_certificates": 75
+        },
+        "hpm_2": {
+          "blocks": 93,
+          "zero_query_certificates": 37
+        },
+        "hpm_7": {
+          "blocks": 93,
+          "zero_query_certificates": 86
+        }
+      },
+      "zero_query_certificates": 198
+    },
+    "original": {
+      "blocks": 819,
+      "immediate": {
+        "always_bulk_cold": {
+          "blocks": 819,
+          "cached_hits_during_first_pass": 546,
+          "endpoint_rows_returned": 1092,
+          "other_rows_returned": 4095,
+          "policy": "always_bulk_cold",
+          "repeat_audit_additional_requests": 0,
+          "requests": 819,
+          "returned_rows": 5187
+        },
+        "always_bulk_warm": {
+          "blocks": 819,
+          "cached_hits_during_first_pass": 0,
+          "endpoint_rows_returned": 0,
+          "other_rows_returned": 4095,
+          "policy": "always_bulk_warm",
+          "repeat_audit_additional_requests": 0,
+          "requests": 819,
+          "returned_rows": 4095
+        },
+        "gated_cold": {
+          "blocks": 819,
+          "cached_hits_during_first_pass": 0,
+          "endpoint_rows_returned": 1092,
+          "other_rows_returned": 4055,
+          "policy": "gated_cold",
+          "repeat_audit_additional_requests": 0,
+          "requests": 1630,
+          "returned_rows": 5147
+        },
+        "gated_warm": {
+          "blocks": 819,
+          "cached_hits_during_first_pass": 0,
+          "endpoint_rows_returned": 0,
+          "other_rows_returned": 4055,
+          "policy": "gated_warm",
+          "repeat_audit_additional_requests": 0,
+          "requests": 811,
+          "returned_rows": 4055
+        }
+      },
+      "interpretation": "Counts are conditional access accounting for epsilon-model choice; no measured price, deployment delay or joint-precision saving.",
+      "required_fine_fetch_blocks": 811,
+      "retrospective": {
+        "archive_after_gate_remaining_blocks": 9,
+        "archive_first_fine_frontier": [
+          {
+            "requests": 3,
+            "returned_rows": 51
+          },
+          {
+            "requests": 4,
+            "returned_rows": 50
+          },
+          {
+            "requests": 5,
+            "returned_rows": 49
+          },
+          {
+            "requests": 6,
+            "returned_rows": 48
+          },
+          {
+            "requests": 7,
+            "returned_rows": 47
+          },
+          {
+            "requests": 8,
+            "returned_rows": 46
+          },
+          {
+            "requests": 9,
+            "returned_rows": 45
+          }
+        ],
+        "archive_rounding_box_certified_blocks": 810,
+        "cold_coarse_inputs": {
+          "requests": 3,
+          "returned_rows": 1092
+        },
+        "cold_whole_period_bulk": {
+          "requests": 3,
+          "returned_rows": 6537
+        },
+        "saved_next_day_target_copy_blocks": 810,
+        "warm_gated_minimum_requests": {
+          "requests": 3,
+          "returned_rows": 6531
+        },
+        "warm_gated_minimum_rows": {
+          "requests": 811,
+          "returned_rows": 4055
+        },
+        "warm_ungated_minimum_requests": {
+          "requests": 3,
+          "returned_rows": 6531
+        }
+      },
+      "system_count": 3,
+      "systems": {
+        "consumer_00000001": {
+          "blocks": 273,
+          "zero_query_certificates": 0
+        },
+        "consumer_00000002": {
+          "blocks": 273,
+          "zero_query_certificates": 1
+        },
+        "consumer_00000003": {
+          "blocks": 273,
+          "zero_query_certificates": 7
+        }
+      },
+      "zero_query_certificates": 8
+    }
+  },
+  "epsilon_training_m2_factor": "1/100",
+  "exact_vertex_mse_checks": 39528,
+  "input_sha256": "4dab6420e1a365feb9bd08d21ebb936f347c21b445848a49b898086dd8029230",
+  "limits": [
+    "The endpoint-rich immediate schedule is a specified access replay, not a deployed service.",
+    "The cold and retrospective frontiers retain stronger bulk and free-archive alternatives.",
+    "A zero-query certificate gives epsilon-optimality, not exact best-model identity.",
+    "This is a separate decision objective from joint half-width certification."
+  ],
+  "models_per_shared_audit": 4,
+  "pairs_per_shared_audit": 6,
+  "protocol_sha256": "9b2a7abfba4173a8ba43b86c8ed9b1cedf108a5f324ad358a5155f965d6b9c7d",
+  "reconstruction_source_sha256": "269e868a1bdc143cdbdf6e08e134332ff41f6d7e10373a50cb58f469660eb662",
+  "scope": "Exact decision gate and honest request/row accounting; no hidden targets.\n\nThe contract is epsilon-optimal MODEL CHOICE, not joint half-width precision.\nReturned rows are coordinate values, not bytes, energy, dollars or latency.\n",
+  "source_sha256": "651f3a638fba8d845e4b7dfca70136ec65d60c7e6ea10b8758f0791be6b27ba9",
+  "status": "PASS"
+}

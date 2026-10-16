@@ -1,0 +1,33 @@
+\paragraph{Threshold stability of the matched certificates.}
+We kept the adaptive branches, equal-weight batch mixtures, and adverse-record
+distributions fixed and calculated a rational interval $[L,U)$ for each of
+the 222 matched certificates. Throughout this interval, adaptation guarantees
+success and the optimal randomized batch has worst-record success exactly
+$1/2$. The lower endpoint combines the adaptive branch bound with
+the two-batch covering bound; the upper endpoint is the first threshold at
+which the saved adverse distribution permits success above $1/2$ for a batch.
+All 222 intervals contain $1/2$ in their interior. The complete bands
+$[0.49,0.51]$, $[0.475,0.525]$, and $[0.45,0.55]$ are certified on 179, 119,
+and 53 blocks, respectively. The symmetric margin around $1/2$ has median
+$0.0263$, interquartile range $[0.0134,0.0488]$, and minimum $0.00020$.
+These are sufficient ranges for the frozen certificates; outside them this
+check is inconclusive. Supplement S1 provides the exact endpoints and a
+solver-free checker that reconstructs all branch and covering inequalities.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Blocks retaining adaptive certainty and an exact randomized-batch
+success optimum of $1/2$ at each precision threshold. The same policies and
+adverse distributions are used throughout.}
+\label{tab:threshold-stability}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Threshold $\tau$ & $0.45$ & $0.475$ & $0.49$ & $0.50$ & $0.51$ & $0.525$ & $0.55$\\
+\midrule
+Original ($n=165$) & 73 & 120 & 153 & 165 & 148 & 125 & 91\\
+External ($n=57$) & 19 & 30 & 43 & 57 & 56 & 51 & 35\\
+Total ($n=222$) & 92 & 150 & 196 & 222 & 204 & 176 & 126\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,97 @@
+PeerJ Computer Science submission candidate, 14 October 2026.
+
+Author: Jishan Kapoor. Private research archive; not submitted or accepted.
+Release: peerj-cs-2026-10-14-assurance. The previous release peerj-cs-2026-10-13-two-target remains preserved.
+
+The new central boundary keeps two coordinate queries and two affine targets:
+adaptive precision success is one, while optimal randomized-batch success is
+exactly 1/m for every m>=3. Each target separately has a fixed two-query
+guarantee. The same separation holds for all three paired contrasts of three
+constructed nonnegative forecast vectors. The dictionary grows with m,
+normalized slack shrinks, and three fixed queries suffice; these are exact
+constructed limits rather than newly measured practical gains.
+
+The focused 28-page paper also closes the assurance-feasibility decision under
+the uncapped exact-total noiseless prefix model. On 489 original and 94 external
+blocks with no deterministic two-reading guarantee, every randomized adaptive
+policy has worst-record success at most 19/20. An elementary finite-action
+argument and exact source-bound witnesses establish this consequence; the bound
+is not claimed tight or a novel general impossibility principle.
+The full source-derived check verifies 583 seed-independent adverse distributions
+and 11,660 strictly failing fibers without using recorded answers. The default
+offline replay independently regenerates 94 external distributions and 1,880
+fibers. The original-panel certificates retain their separate pinned-source
+execution provenance. See verification/assurance_feasibility/.
+
+The current replay includes solver-free rational checks and
+7,131 actual LPs at m=3,5,10.
+Maximum observed width discrepancy:
+7.105427357601002e-15
+(comparison tolerance 1e-7; primal/dual solver tolerances 1e-9).
+Current checker and mathematical-input hashes bind both new reports.
+The analytic proof establishes the whole family; finite checks do not replace it.
+See verification/two_target_boundary/ for the internal proof and prior-art memos.
+Earlier empirical results, adverse controls and their chronology are unchanged.
+
+The PDF and editable source correspond to the complete reproducibility supplement.
+The final isolated replay passed all 77 executable steps.
+It ran from Supplemental_Data_S1.zip and Supplemental_Data_S2.zip extracted
+together; each part is under 30 MB and the combined upload is under 50 MB.
+The larger research_supplement.zip separately preserves development history.
+Three internal editorial notes are intentionally excluded from scientific assets.
+EXCLUDED_EDITORIAL_NOTES.json records the inherited omissions; they remain
+in the previous private release/local originals and are not counted recoverable.
+The retained historical tie-policy mathematical rationale is a hash-pinned
+scientific checker input, not external or current-manuscript peer review.
+See verification/current_clean_package_replay.json in the repository for scope,
+runtime and per-step checks. The default run uses saved forecasts and does not
+claim a fresh model-training run, new API measurements or external human review.
+
+The current 28-page manuscript centers the two-target boundary,
+assurance feasibility and source-derived joint certificates. Scalar classification
+and mean-risk developments remain in the supplement. The policy-objective
+table, unresolved batch-probability gaps and five-threshold unchanged-policy checks
+on all 1,098 blocks retain the measured limits.
+The supplement retains both numerical boundary conventions, paired outcomes
+and all full controls. Two command paths and two dependency pins were fixed;
+the complete current publisher package was tested in the isolated pinned venv.
+The final diagnostic reports the full fixed/adaptive/no-guarantee partition,
+the greedy first-query assurance limitation and the fixed-batch fallback.
+The two-panel source-linked figure displays the exact acquisition rule and
+recorded precision curves. Independent exact checks verify its coordinates.
+Earlier internal reviews retain their original source identities; the current
+source/PDF assessment is verification/latest_compiled_review.txt.
+The bounded prose cleanup removes revision-only wording and repeated caveats
+while preserving numerical results, assumptions and unfavorable controls.
+Its fragment-edit record is verification/first_reader_prose_review.txt;
+that earlier edit record is distinct from the final compiled-source review.
+The introductory workflow explains when the declared audit calls for bulk,
+fixed, adaptive or extended acquisition. Policy objectives, exact guarantee
+status and recorded comparisons are now distinguished directly. The current
+compiled-source review covers the workflow and displayed equations. Prior
+successful execution remains separately source-bound in pre_workflow_* records.
+The pre_two_target_* records preserve the successful preceding release; they
+are not presented as execution of the current theorem or current manuscript.
+The pre_focus_* records preserve the immediately preceding manuscript, PDF,
+execution records and private-release verification at their original hashes.
+The upload-hygiene record matches the current manuscript and three archives.
+
+The practical material includes shared-query certification of all model pairs,
+an exact constructed adaptive-versus-batch boundary, complete-panel replay,
+bounded-error certificates, capacity controls and paired-outcome diagnostics.
+The final source-to-table run also regenerated both panels' 165/57 matched
+certificates and all 1,098 outcome rows without numeric discrepancies. The
+main text now includes the planner's algorithm box and absolute loss widths.
+See joint_certification/provenance_chain/README.txt in the extracted package.
+Modeled costs are distinguished from recorded API measurements. Historical
+results and unfavorable controls are retained. Reused sources are not relabeled
+as a newly untouched confirmation.
+On the external panel, exact adaptation certifies a best model on 207 blocks
+and greedy adaptation on 208, despite exact adaptation's higher joint-precision
+success. Capacity information reduces the precision advantage, and measured
+public-API retrieval favors bulk. No deployed selective interface, privacy or
+compliance benefit, financial saving or improved model choice is established.
+Submission remains blocked by the recorded browser startup failure before page
+creation; these delivery steps do not access the portal or submit the manuscript.
+
+Verify downloaded assets using RELEASE_SHA256.txt before extracting the supplement.

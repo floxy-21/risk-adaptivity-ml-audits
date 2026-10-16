@@ -1,0 +1,78 @@
+CURRENT INTERNAL REVIEW -- READING-BUDGET REVISION
+Date: 14 October 2026
+Status: PASS within the reviewed scope
+Source SHA256: 7f131f3e0d8adc3db17ddec0d850333580b834169dd2ddc59ce07059c5a9b669
+PDF SHA256: 5a16ec3f9487816b3c87c6b5000b8529023322ad5ac4d7ba6f101297cc90d53d
+PDF pages: 29
+Abstract: 248 whitespace-delimited words
+
+CONCRETE ORIGINALITY REPAIR
+The central construction remains the two-output, two-coordinate-query
+boundary with optimal success one versus 1/m. Its adverse records additionally
+force support m for any positive batch success and uniquely identify the
+uniform optimal preselected batch distribution. The proof explicitly covers
+the stated three-model extension and threshold interval. A separate checker
+performs 126,195 exact rational width evaluations without importing the
+existing producer. Classical local diameters, vector recovery, sparse-policy
+reasoning and decision-dependent information remain attributed; uniqueness
+does not become a claim to invent those frameworks. The fresh scoped
+literature review is originality_resolution_20261014/REVIEW.txt. It is an
+internal source comparison, not external specialist validation or proof of
+historical priority.
+
+CONCRETE PRACTICAL REPAIR
+The new question is the minimum sufficient fixed reading budget, instead of
+why a provider would impose a two-reading cap. In the uncapped noiseless
+simplex, the worst joint width of a fixed partition is the largest normalized
+coefficient range across its segments and targets. Hereditary segment
+feasibility makes the longest-admissible-prefix scan exact in O(R*n)
+comparisons. This elementary partition calculation is a complete fixed
+comparator, not a claim to invent greedy segmentation.
+
+All 1,098 source-bound geometries were enumerated over all 32 fixed subsets.
+The independent checker uses DAG shortest paths and feasible endpoint pairs,
+without importing the budget producer. It passed 35,136 batch bounds,
+737,856 fixed endpoint checks, 41,400 adaptive endpoint checks and 1,098
+minimum-budget/linear-scan comparisons. A general test covers 180 rational
+instances and 20,440 batches. The default bundled route reconstructs only
+279 external blocks; the both-panel run uses the documented pinned source
+chain. It is retrospective, uses frozen coefficients and does not access
+optional fine answers, fit forecasts or constitute a new independent panel.
+
+Precisely 168 original and 57 external blocks need three fixed readings or
+two adaptive readings. The 225 cases span all six systems; 222 are the
+previously matched-half subset, and those sets are not conflated. Adaptive
+minimality at two follows because a single reading cannot suffice. Fixed
+randomization cannot lower a certainty budget. Minimum fixed totals 2625/743
+become 2457/686 using adaptive two on the qualifying blocks and minimum fixed
+batches elsewhere: 6.40%/7.67% on the complete panels. This fallback is not
+claimed optimal among adaptive policies with budgets above two. Each saving
+trades one scalar reading for an additional information round. Capacity/error
+results and the faster unrestricted bulk API remain explicit, as do 207 versus
+208 external best-model certificates. No financial, latency, deployment,
+privacy or uniformly superior model-selection result is inferred.
+
+COMPILED PRESENTATION
+The root reviewed all 29 final pages as rendered contact sheets and full pages
+7, 13 and 25 for both padded inline tables and the consolidated scope and
+conclusion. Earlier full-page inspection covered the new support proof,
+equation and minimum-budget table. The workflow names the budget test and its constructive
+fallback. The separate theorem table, existing worked certificate and negative
+controls remain visible. Source and rendered text contain the correct 1/m,
+distinct W1/W2 headers, and spacing before the Krieg DOI. PDF annotations
+contain the full clickable HeatpumpMonitor about URL and both cited DOI URLs.
+The title now names cumulative-data forecast audits. Repeated defensive
+prose and duplicate dataset descriptions were removed; important controls,
+comparator scope and chronology remain. The final paper has one concise
+scope subsection. The TeX log contains
+no overfull, underfull, undefined-reference or missing-character warning.
+Desktop compilation succeeded. No new tab or replacement manuscript was opened.
+
+VERIFICATION BOUNDARY
+No blocking error was identified in this internal review. A clean package
+run, source-bound manuscript reconstruction and remote upload checks are
+recorded separately; this review does not assert those unfinished steps.
+The pre_budget records preserve the previous 77-step release at its original
+hashes. No numerical journal-acceptance assurance follows from this review.
+No external person was contacted. The last recorded browser-startup failure
+still precedes page creation; there has been no journal submission.

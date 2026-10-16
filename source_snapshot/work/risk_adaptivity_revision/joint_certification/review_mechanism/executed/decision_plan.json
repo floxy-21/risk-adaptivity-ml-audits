@@ -1,0 +1,1400 @@
+{
+  "status": "PASS",
+  "selection": "All original57 external relative-half-width two-versus-three cases; cohort unchanged.",
+  "criterion": "W_r <= max(W_r0/2, .01*training_second_moment) for every contrast",
+  "online_rule": "For an adaptive plan, observe the first prefix divided by the retained total, then choose the smallest second timestamp among closed intervals containing that answer. All listed intervals are certified.",
+  "ledger_sha256": "54eaff3b38e45e431f328771d316d65fc18bcf443ea2df68b90ce845cf179824",
+  "decisions": [
+    {
+      "id": "external/hpm_1/2025-07-05/12",
+      "coefficient_digest": "75f76e4847bf42b896f267da2b3bcdb96dd7816c1575c9594ca6b50b1bcdb463",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "296831433/48653926400",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "1/2",
+            "upper": "1"
+          },
+          {
+            "second": 4,
+            "lower": "0",
+            "upper": "187325959743003479/339714033306198189"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_1/2025-07-06/00",
+      "coefficient_digest": "96991020b19ee214b93652d204119b1e5ac0ffccae5ffae4755a7e7535f310ca",
+      "kind": "fixed",
+      "readings": 1,
+      "epsilon_exact": "296831433/48653926400",
+      "thresholds_normalized": [
+        "217579741381941788672/65189910256881797475",
+        "1/2",
+        "1740637931055534309376/918588526743512759775",
+        "1/2",
+        "27197467672742723584/14773043761009942625",
+        "1/2"
+      ],
+      "fixed_minimum": 1,
+      "fixed_queries": [
+        3
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_1/2025-07-07/12",
+      "coefficient_digest": "08d7f92641238335f635170fbb8812d9228c01851e764aefb51dca0b2f9f0c6e",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "296831433/48653926400",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "2219923713710254/6786383457789413",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "0",
+            "upper": "7097119705854975/16173595815643111"
+          },
+          {
+            "second": 4,
+            "lower": "0",
+            "upper": "4109666165434137/10592863386711377"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_1/2025-07-09/00",
+      "coefficient_digest": "0076345151397e74307f8a0443a28ab0da0416a1dcc3d5203bf176b3ec2a0471",
+      "kind": "fixed",
+      "readings": 1,
+      "epsilon_exact": "296831433/48653926400",
+      "thresholds_normalized": [
+        "435159482763883577344/137401816493290541775",
+        "54394935345485447168/48407567669546778725",
+        "1740637931055534309376/890501808648920697825",
+        "435159482763883577344/395283478878034865275",
+        "870318965527767154688/417715721261992752575",
+        "870318965527767154688/1168322091773643448175"
+      ],
+      "fixed_minimum": 1,
+      "fixed_queries": [
+        4
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_1/2025-07-09/12",
+      "coefficient_digest": "310e5e7a85fe96bb88ccc817e0a8c2ddd2979a56549a3c37ac8e57e6ebbb7201",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "296831433/48653926400",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "886932506216969/2185456392590949",
+            "upper": "1"
+          },
+          {
+            "second": 4,
+            "lower": "0",
+            "upper": "5004197152969031/14032906717502874"
+          },
+          {
+            "second": 5,
+            "lower": "0",
+            "upper": "6230295331041619/15259004895575462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_1/2025-07-11/06",
+      "coefficient_digest": "096a8f4b50d86be0a9f834ea0907c6a588ed8d6e6b1ba471c44835704b689baa",
+      "kind": "fixed",
+      "readings": 1,
+      "epsilon_exact": "296831433/48653926400",
+      "thresholds_normalized": [
+        "1/2",
+        "652739224145825366016/354525263016719250625",
+        "108789870690970894336/12313818053095836875",
+        "1/2",
+        "1/2",
+        "10443827586333205856256/6571554564778262954375"
+      ],
+      "fixed_minimum": 1,
+      "fixed_queries": [
+        5
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_1/2025-07-12/12",
+      "coefficient_digest": "ade3c9c6569958180ab2aadc520dd4f4b5a5db3c910af06246e0d3323ad60527",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "296831433/48653926400",
+      "thresholds_normalized": [
+        "1/2",
+        "27197467672742723584/50095189930288433175",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "4694711038589587783/18293444874960949575",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "0",
+            "upper": "3533794509295451209/26431516766841160800"
+          },
+          {
+            "second": 4,
+            "lower": "0",
+            "upper": "14274251086268096809/37171973343813806400"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_1/2025-07-14/12",
+      "coefficient_digest": "db7ce4b4f32e1f4d109c57d7e66a7c74b21456848a4e1580806aad7cba23912f",
+      "kind": "fixed",
+      "readings": 2,
+      "epsilon_exact": "296831433/48653926400",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "54394935345485447168/108078506063597942625",
+        "1/2",
+        "108789870690970894336/81044765673716018175",
+        "1/2"
+      ],
+      "fixed_minimum": 2,
+      "fixed_queries": [
+        1,
+        3
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_1/2025-07-20/12",
+      "coefficient_digest": "974d4119b08ee692547330fb4dcd2eceee3065ca2618f6b4101c1c83bdd042cd",
+      "kind": "fixed",
+      "readings": 2,
+      "epsilon_exact": "296831433/48653926400",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "54394935345485447168/73768567614219879975",
+        "1/2"
+      ],
+      "fixed_minimum": 2,
+      "fixed_queries": [
+        1,
+        3
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_1/2025-07-22/06",
+      "coefficient_digest": "a2cb141ee2e097a97fb922956544fbf2b88b5b2da58f9a4341bf0f7bd2c68882",
+      "kind": "fixed",
+      "readings": 2,
+      "epsilon_exact": "296831433/48653926400",
+      "thresholds_normalized": [
+        "217579741381941788672/427959209698536137375",
+        "1/2",
+        "652739224145825366016/69559852797112598375",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 2,
+      "fixed_queries": [
+        2,
+        5
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_1/2025-07-24/12",
+      "coefficient_digest": "081899a716b426129dc96ed5bb26334b3248cf82172ec21839228bf51f475459",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "296831433/48653926400",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "10143883934061371/45929071609213736",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "0",
+            "upper": "6440391214293565/28158690568268474"
+          },
+          {
+            "second": 4,
+            "lower": "0",
+            "upper": "10451646623213525/32169945977188434"
+          },
+          {
+            "second": 5,
+            "lower": "0",
+            "upper": "15189657117877469/36907956471852378"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_1/2025-07-26/12",
+      "coefficient_digest": "c19f040655909edcacad9d06af671634efad277bec40b291e106d6c762eef5ac",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "296831433/48653926400",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "2365605846826285/8417087057623856",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "0",
+            "upper": "31235467390755/6082716678188326"
+          },
+          {
+            "second": 4,
+            "lower": "0",
+            "upper": "3654639896580531/9706121107378102"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_1/2025-07-31/06",
+      "coefficient_digest": "8005e6c4387fed7a7f0b42481d3af0d87afb8c645d35346c822d19974fcf004d",
+      "kind": "fixed",
+      "readings": 1,
+      "epsilon_exact": "296831433/48653926400",
+      "thresholds_normalized": [
+        "217579741381941788672/233180417602581286575",
+        "27197467672742723584/50441669796682546175",
+        "435159482763883577344/41421752083267314575",
+        "91612522687133384704/108291069053208808475",
+        "870318965527767154688/1011009412179579604775",
+        "108789870690970894336/209460935987205933325"
+      ],
+      "fixed_minimum": 1,
+      "fixed_queries": [
+        5
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_2/2025-07-01/00",
+      "coefficient_digest": "842da4279a9a9025de230ad01daf1038f504aa5e98fe3fd99d92f7c197fbf641",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "33109642314174845/86174965526632304",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "0",
+            "upper": "1868374396478275/4492827732740467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_2/2025-07-01/06",
+      "coefficient_digest": "1875bd907bb1408facf216cad285f1aa25318d846cc36f38258c9b6725ea873e",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "69167882840186212581376/17960757535864239217875",
+        "69167882840186212581376/9433286128548029129625",
+        "17291970710046553145344/1377241143506233576875",
+        "1080748169377909571584/362984824357213521375",
+        "138335765680372425162752/24903585923678613703125",
+        "8645985355023276572672/1685174388701956819875"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_2/2025-07-02/06",
+      "coefficient_digest": "034f9022492c046bb1418247d733c1f6e1069b0dd6ed5b75db5a91951e7eb0ff",
+      "kind": "fixed",
+      "readings": 1,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "34583941420093106290688/22531886827863379514325",
+        "1/2",
+        "17291970710046553145344/3467875495919972176575",
+        "1/2",
+        "69167882840186212581376/44377479712310316527475",
+        "1/2"
+      ],
+      "fixed_minimum": 1,
+      "fixed_queries": [
+        2
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_2/2025-07-03/00",
+      "coefficient_digest": "183fa9c9d68209639cf8dfd8bbcc9ebf13698b89ea228cfafe978437ded24d46",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "21741230440993811/52639753216145908",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "0",
+            "upper": "223512276229824109/477865046984179309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_2/2025-07-05/12",
+      "coefficient_digest": "173ca85366717fd3b8c4fd65a092aa54c3739a6b1e9cca10afc13061a1f9b128",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "1/2",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "0",
+            "upper": "6083123736630820/11808011377313729"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_2/2025-07-11/06",
+      "coefficient_digest": "ce1d95048616761ea4b4546e82047fd79ab771a2220161d0620b712b6023aa1b",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "4322992677511638286336/1989617057325693556425",
+        "2161496338755819143168/514254782450368466325",
+        "540374084688954785792/76513309288507326375",
+        "540374084688954785792/120138436553119549425",
+        "8645985355023276572672/2755021166035269479775",
+        "16886690146529837056/1654916875854484725"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_2/2025-07-13/06",
+      "coefficient_digest": "7e5b49228304ceaf1d284f810eccfd17415bfacc2a09440a090bf1ff7fdccc92",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "4322992677511638286336/1325615043458725732125",
+        "34583941420093106290688/7199566954305160309875",
+        "135093521172238696448/12486509975785726125",
+        "2161496338755819143168/298008979395591594375",
+        "17291970710046553145344/3704186896934330669625",
+        "67546760586119348224/10191090045070501875"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_2/2025-07-16/00",
+      "coefficient_digest": "ce299b68130a13c960507a98a833f4f2973d2f1ecbf95dc8c2ecc1509d0608b4",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "14532261022593891/37322386274362480",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "0",
+            "upper": "156544972474081387/363063362746899883"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_2/2025-07-18/00",
+      "coefficient_digest": "51949fe695bfea321f0a184b8a35137d472b1ec3d3f83efba09d3a2aaf31e149",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "1/2",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "0",
+            "upper": "9731231489955147/19045807824637768"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_2/2025-07-20/06",
+      "coefficient_digest": "0db9736d7e98572b11af4f58a89f7983ad3df2969d41618ecbccd955fa3888da",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "1080748169377909571584/165285686177348504625",
+        "491467367/18374400",
+        "33773380293059674112/2284272648533237175",
+        "1080748169377909571584/124879953270533835825",
+        "4322992677511638286336/379273261607346395025",
+        "33773380293059674112/2284272648533237175"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_2/2025-07-22/06",
+      "coefficient_digest": "d44e355026dba433e726b195572a1614214c7f3733706d1a95bb7dd9b1c9570a",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "540374084688954785792/70688180570203415925",
+        "2213372250885958802604032/547143477415874857270125",
+        "4322992677511638286336/328665367970313301575",
+        "1080748169377909571584/305219049340205775825",
+        "2161496338755819143168/143266863712319424675",
+        "2161496338755819143168/560728986242295093075"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_2/2025-07-23/00",
+      "coefficient_digest": "b3adc0ce0e8c12b810b78e205f19cfbdecfba229dad4b65c7645371e951f9661",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "270187042344477392896/466116467424526706625",
+        "138335765680372425162752/252448310588966121301875",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "7273135724131691/23933211415842213",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "0",
+            "upper": "7521446848779435/15851484694634696"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_2/2025-07-23/06",
+      "coefficient_digest": "d25ba30f29475d88ca62a3a3251ad8410d61e47a6703214d8fba8c7cd5c86bad",
+      "kind": "fixed",
+      "readings": 1,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "34583941420093106290688/36814696866811544963625",
+        "1/2",
+        "33773380293059674112/9473172354810364725",
+        "1/2",
+        "69167882840186212581376/74001529111231293608925",
+        "1/2"
+      ],
+      "fixed_minimum": 1,
+      "fixed_queries": [
+        2
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_2/2025-07-24/00",
+      "coefficient_digest": "5630ae837811b7657bc21362f31c99e6a42a77f8745d8eb35edfa4b78ffdb807",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "2347744255998038/4874321771574185",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "0",
+            "upper": "33862081222101547/70060397562174208"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_2/2025-07-25/12",
+      "coefficient_digest": "051171a64fe055eeb3ab69b63c5e7284784166c4b06828ea1608895628a42fbe",
+      "kind": "fixed",
+      "readings": 2,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "1/2",
+        "2161496338755819143168/2292719238424558452375",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 2,
+      "fixed_queries": [
+        1,
+        4
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_2/2025-07-27/00",
+      "coefficient_digest": "bb1ab0b9b1dbdff8d9b53bfc93b287ba03a8b035fafe3d5532da05055454c37a",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "920082242868749/7572419318755065",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "0",
+            "upper": "3137994420324298/11259728183198325"
+          },
+          {
+            "second": 4,
+            "lower": "0",
+            "upper": "925224058891469/33412159110387577"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_2/2025-07-30/00",
+      "coefficient_digest": "7ab2d82d9266a1e0ab93adaa75adee99098288efc1fb2cfd12e51e6ab86002a5",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "25176409652201723/70137472501876382",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "0",
+            "upper": "156760851175402289/312919618219691448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_2/2025-07-31/00",
+      "coefficient_digest": "45cf9efa0958585c86f4408a4057b84e58ba1243139dcd761bd4e153fc54a69a",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "491467367/218942668800",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 2,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "50331188245431653/106954807391455707",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "0",
+            "upper": "15857521801632167/33036100523341050"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_7/2025-07-03/12",
+      "coefficient_digest": "e13e3a541dfa4ae9d8c97ca5043634fd18e314e40d8b2998088a4ccc5f59dbf5",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "68286629794470166528/15180659489712244025",
+        "8535828724308770816/6758982653606236325",
+        "34143314897235083264/7026732840395838575",
+        "4267914362154385408/3217985505894582725",
+        "8535828724308770816/3604201349504371125",
+        "8535828724308770816/8344848705646451375"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-04/12",
+      "coefficient_digest": "dab76941b920b9974f8b1159d0a5628d0732dcb6f71077d5184a37d41c8630ba",
+      "kind": "fixed",
+      "readings": 1,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "273146519177880666112/40980111606489801475",
+        "34143314897235083264/34427562881602803725",
+        "546293038355761332224/50756618949317896975",
+        "1092586076711522664448/940767753263640627525",
+        "273146519177880666112/62153561560543109325",
+        "136573259588940333056/148672749938226633425"
+      ],
+      "fixed_minimum": 1,
+      "fixed_queries": [
+        1
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-05/06",
+      "coefficient_digest": "ad4e047a1e936547fa740c06461249d9329d3d2545d162928b563c8fe5483c29",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "136573259588940333056/235162375233298312275",
+        "273146519177880666112/229451610293852878575",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 4,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "25259155056698637952/48223556476511980715",
+            "upper": "1"
+          },
+          {
+            "second": 2,
+            "lower": "25259155056698637952/48415710060613121963",
+            "upper": "1"
+          },
+          {
+            "second": 3,
+            "lower": "11730490440835672/22870129505144027",
+            "upper": "31963165891322486353/34456093390159698600"
+          },
+          {
+            "second": 5,
+            "lower": "0",
+            "upper": "68286629794470166528/70779557293307378775"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_7/2025-07-05/12",
+      "coefficient_digest": "8820a1c702aee19489194cec8c22277da0d3b33f08d64c6d548a5ea6b115a510",
+      "kind": "fixed",
+      "readings": 2,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "266744647634649088/86904723316994925",
+        "1/2",
+        "1066978590538596352/1457826018196003125",
+        "1/2",
+        "273146519177880666112/426647294042103987225",
+        "1/2"
+      ],
+      "fixed_minimum": 2,
+      "fixed_queries": [
+        2,
+        5
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-08/00",
+      "coefficient_digest": "da942f645234db09f4bf2daeca51762865fb2893564b9935ebbf141afa303a24",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "136573259588940333056/19341046419576171825",
+        "68286629794470166528/2036002331540411475",
+        "136573259588940333056/68136443924765758125",
+        "34143314897235083264/4544404128959698875",
+        "17071657448617541632/6592490502018310275",
+        "34143314897235083264/16306967291355579425"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-08/06",
+      "coefficient_digest": "ab060a02677a9896304fa129edb342cc4abea275f87af2187d14b8b06e98602d",
+      "kind": "fixed",
+      "readings": 1,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "136573259588940333056/59841170470478612075",
+        "17071657448617541632/31305506467065901875",
+        "68286629794470166528/16459494268851423025",
+        "68286629794470166528/109398446187109744125",
+        "68286629794470166528/18070767429490952025",
+        "8535828724308770816/13595316449926522625"
+      ],
+      "fixed_minimum": 1,
+      "fixed_queries": [
+        4
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-10/12",
+      "coefficient_digest": "153cf45231cf91c752651e340b1898dcefd69b5caf17444191f991f82925b6f7",
+      "kind": "fixed",
+      "readings": 1,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "68286629794470166528/20566006852813114925",
+        "17071657448617541632/17702964270216138525",
+        "533489295269298176/138876862684109425",
+        "17071657448617541632/14557285753243923475",
+        "34143314897235083264/17802343679579147125",
+        "17071657448617541632/21169001942019645375"
+      ],
+      "fixed_minimum": 1,
+      "fixed_queries": [
+        3
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-11/00",
+      "coefficient_digest": "95e504faccb8b4ab0323e6f1b9a42a52256011e150862994e05f8335059a1a4e",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "2185172153423045328896/213202189352308107325",
+        "273146519177880666112/15893953684928376475",
+        "273146519177880666112/43719649267763359825",
+        "17071657448617541632/1392300351582118275",
+        "136573259588940333056/30506807353974498525",
+        "68286629794470166528/13768118332106619525"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-11/06",
+      "coefficient_digest": "f42647a04efb0a1fab6e73b5e271232566e1bdaf1efe8858b7b2e83a43adda83",
+      "kind": "adaptive",
+      "readings": 2,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "136573259588940333056/78954566122720000875",
+        "1/2",
+        "34143314897235083264/44849077879861526425",
+        "1/2",
+        "136573259588940333056/109925280036982803375",
+        "1/2"
+      ],
+      "fixed_minimum": 3,
+      "fixed_queries": null,
+      "adaptive_rule": {
+        "first": 4,
+        "intervals": [
+          {
+            "second": 1,
+            "lower": "10705762982626443161/43599019085294272825",
+            "upper": "1"
+          },
+          {
+            "second": 2,
+            "lower": "10705762982626443161/43292969712756829625",
+            "upper": "76082880227296391/97102810981754851"
+          },
+          {
+            "second": 3,
+            "lower": "10705762982626443161/43292969712756829625",
+            "upper": "76082880227296391/97102810981754851"
+          },
+          {
+            "second": 5,
+            "lower": "0",
+            "upper": "20544283588808161/25799266277422776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "external/hpm_7/2025-07-12/00",
+      "coefficient_digest": "420c3325236290b1b70d494faa29a8a74f3d77c19fa609df3012f03e8c49ccbe",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "546293038355761332224/56269593690173765125",
+        "273146519177880666112/11868861517965995625",
+        "136573259588940333056/21108066563538027625",
+        "273146519177880666112/21172170635628903125",
+        "34143314897235083264/7466441746585927875",
+        "2185172153423045328896/432679957160336415625"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-12/06",
+      "coefficient_digest": "497eb554981b2975c6825777a7bf386df838088a6f408f6eda5dd6bd712c1af3",
+      "kind": "fixed",
+      "readings": 2,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "273146519177880666112/60572950739387244875",
+        "1092586076711522664448/1756434271168290473125",
+        "2133957181077192704/507453318448023625",
+        "273146519177880666112/470962214243535220875",
+        "273146519177880666112/79680239768566247125",
+        "1092586076711522664448/1586651085061619405125"
+      ],
+      "fixed_minimum": 2,
+      "fixed_queries": [
+        1,
+        5
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-13/06",
+      "coefficient_digest": "c5a9a7b2c1ae8682ca13363339da7a96a54d86bea19a2fbebd0bb2f6fb2fc7ef",
+      "kind": "fixed",
+      "readings": 1,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "17071657448617541632/3105647050621126825",
+        "1/2",
+        "68286629794470166528/4059058426243451675",
+        "1/2",
+        "34143314897235083264/6287180005771860525",
+        "1/2"
+      ],
+      "fixed_minimum": 1,
+      "fixed_queries": [
+        3
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-13/12",
+      "coefficient_digest": "118a45c1d84e8fb2a8330c217d411051dea65f069e56c140e1481765b5fe95fa",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "273146519177880666112/76390657980367630075",
+        "546293038355761332224/67879823972596160125",
+        "136573259588940333056/37753806377291892275",
+        "136573259588940333056/47101026900572559475",
+        "34143314897235083264/16852888732509351025",
+        "136573259588940333056/42233949756603170125"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-14/12",
+      "coefficient_digest": "231e6e3e4fbd781a2b6ba332089546d8933adc8584950dc09a1b2dfceec0ece5",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "136573259588940333056/23017613544962791925",
+        "136573259588940333056/19374860896916821825",
+        "1092586076711522664448/141556988361787024575",
+        "17071657448617541632/789181679041124525",
+        "68286629794470166528/19587302230191214075",
+        "34143314897235083264/8990587383436238625"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-15/00",
+      "coefficient_digest": "bf104c1e9c3d757c805b3b63bbc5f7f0ac2f9a20655f6627ec9e212eb98b3d85",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "68286629794470166528/8918726853117677375",
+        "136573259588940333056/4878899596318037875",
+        "273146519177880666112/143978148055896968125",
+        "68286629794470166528/9528589302657433125",
+        "34143314897235083264/14970095430271080125",
+        "68286629794470166528/36909330688283870375"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-18/06",
+      "coefficient_digest": "015220bad1db35d670c287e0ff38522d2158a4b7f2d248f6e1c542f80a6987c3",
+      "kind": "fixed",
+      "readings": 2,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "136573259588940333056/36380506796502334375",
+        "1/2",
+        "34143314897235083264/7518106253928330125",
+        "1/2",
+        "68286629794470166528/13441438566735203375",
+        "1/2"
+      ],
+      "fixed_minimum": 2,
+      "fixed_queries": [
+        1,
+        4
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-19/06",
+      "coefficient_digest": "f182c10442906b9a8caa5f719ce0172264c4599c6fa42892308e387c802268c1",
+      "kind": "fixed",
+      "readings": 2,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "273146519177880666112/46132387107131640575",
+        "34143314897235083264/41524565157338259425",
+        "2133957181077192704/157874662584950675",
+        "273146519177880666112/349839164496360701175",
+        "17071657448617541632/3359877089832098875",
+        "34143314897235083264/39216832112577885025"
+      ],
+      "fixed_minimum": 2,
+      "fixed_queries": [
+        1,
+        3
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-19/12",
+      "coefficient_digest": "fa335957daa0022ae6c6cff5301a50e06f616c9e5a27724db9859da31daba850",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "68286629794470166528/11094848996300644125",
+        "8535828724308770816/5271659912069035875",
+        "34143314897235083264/3434859753293839875",
+        "2133957181077192704/971200946882863875",
+        "136573259588940333056/34822017298278853875",
+        "8535828724308770816/6061179868673884125"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-23/12",
+      "coefficient_digest": "045f9a8c1d1e113a3ee53c70168a16986d608e6345f2360b89249f516b7fad0f",
+      "kind": "fixed",
+      "readings": 1,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "17071657448617541632/2104705152546644025",
+        "17071657448617541632/16542598840229855025",
+        "273146519177880666112/63874844905315072725",
+        "1066978590538596352/974926009107997875",
+        "68286629794470166528/22283412155555084025",
+        "68286629794470166528/74818951026784928625"
+      ],
+      "fixed_minimum": 1,
+      "fixed_queries": [
+        4
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-24/00",
+      "coefficient_digest": "9df121a49383adeae2932b8409e67cf6d7196218074811d6b8d4e487448c0674",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "34143314897235083264/2577481642598301775",
+        "17071657448617541632/2762500659279914875",
+        "34143314897235083264/5683509871117627675",
+        "8535828724308770816/1828588256592073725",
+        "8535828724308770816/1773042703585372975",
+        "34143314897235083264/4582384755997544475"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-24/12",
+      "coefficient_digest": "dcdd8a9e63ea5744104dd9995caa4f5291ec50819c63ca855464990b1182f697",
+      "kind": "fixed",
+      "readings": 0,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "4370344306846090657792/725798081531936931875",
+        "34143314897235083264/25917503763630268125",
+        "273146519177880666112/74611668526783355625",
+        "34143314897235083264/26244858864566759375",
+        "273146519177880666112/93703050796201529375",
+        "8535828724308770816/8270300833181533125"
+      ],
+      "fixed_minimum": 0,
+      "fixed_queries": [],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-27/00",
+      "coefficient_digest": "14c06728b097195a111ffd28c14a098dda9adeeff78780528930c8e3724ee7c1",
+      "kind": "fixed",
+      "readings": 1,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "68286629794470166528/12249329866961367125",
+        "68286629794470166528/80093471579091612125",
+        "546293038355761332224/42911200018826068875",
+        "68286629794470166528/90020632888190063125",
+        "136573259588940333056/32775023772492090375",
+        "8535828724308770816/9982203648392100125"
+      ],
+      "fixed_minimum": 1,
+      "fixed_queries": [
+        4
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-27/06",
+      "coefficient_digest": "a13243f32019294cdc0d47ba3ad62bfacca49cd0190975723c85e39838e086a6",
+      "kind": "fixed",
+      "readings": 1,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "546293038355761332224/270960340920753882475",
+        "1/2",
+        "34143314897235083264/31088450311471988275",
+        "1/2",
+        "273146519177880666112/152993236553873760875",
+        "1/2"
+      ],
+      "fixed_minimum": 1,
+      "fixed_queries": [
+        3
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-29/06",
+      "coefficient_digest": "d29cc200c00a5992a15bdcf0ebf1a33c57038c5f30e1f1aaa29b0a357759202e",
+      "kind": "fixed",
+      "readings": 1,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "8535828724308770816/1788311402375428125",
+        "8535828724308770816/10006535746037282625",
+        "533489295269298176/66315503931262875",
+        "34143314897235083264/38396203471378796625",
+        "17071657448617541632/3095962899101564625",
+        "17071657448617541632/17890975366274154375"
+      ],
+      "fixed_minimum": 1,
+      "fixed_queries": [
+        4
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-29/12",
+      "coefficient_digest": "791589f5473644ef86bc5f1bc42fc8992eaab6e544ab4c785b9c867d6bb1a70c",
+      "kind": "fixed",
+      "readings": 2,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "136573259588940333056/157629069179267461875",
+        "1/2",
+        "273146519177880666112/175495068411186705975",
+        "1/2",
+        "34143314897235083264/58646778351559484175",
+        "1/2"
+      ],
+      "fixed_minimum": 2,
+      "fixed_queries": [
+        1,
+        4
+      ],
+      "adaptive_rule": null
+    },
+    {
+      "id": "external/hpm_7/2025-07-30/12",
+      "coefficient_digest": "92a7d7446729fec5fcf39afd5f155ec12b5c19652146ce2a2bf918dca90551b2",
+      "kind": "fixed",
+      "readings": 2,
+      "epsilon_exact": "7763291/838860800",
+      "thresholds_normalized": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "17071657448617541632/14309707120600044225",
+        "136573259588940333056/101092560281423402025",
+        "8535828724308770816/12735357584283815175"
+      ],
+      "fixed_minimum": 2,
+      "fixed_queries": [
+        4,
+        5
+      ],
+      "adaptive_rule": null
+    }
+  ]
+}

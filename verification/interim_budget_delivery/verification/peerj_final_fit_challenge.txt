@@ -1,0 +1,111 @@
+FINAL ADDITIONAL PEERJ COMPUTER SCIENCE FIT CHALLENGE
+Date: 14 October 2026 UTC (13 October local)
+Role: additional read-only internal AI-assisted reviewer; no external person contacted.
+
+Reviewed source: outputs/revised_manuscript.tex
+SHA256: e433e8d492669fab7614ec356f9a269a2eb8c3da83ddf09b534b6185c7da9268
+Reviewed PDF identity supplied by current preflight: 35 pages,
+171414d3b103c5a63d84df8891d3b4780e1ff496eb01c20059cab6a6fdeb8f9a.
+I reviewed the source, latest user critique, current response, mathematical
+review and package audit. Root is independently running the final 71-step
+fresh-virtualenv package replay. I did not duplicate or predeclare its outcome.
+
+VERDICT
+No new mandatory scientific or presentation correction was identified.
+The manuscript is a defensible PeerJ Computer Science Research Article:
+it asks a computer-science information-acquisition question, gives algorithms
+and complete central proofs, demonstrates exact certificates on model
+comparisons, and supplies checkable implementations. Calling it an AI
+Application Article or demanding a new predictor is unnecessary.
+
+BASIC REPORTING
+Source lines 66-145 now state one coherent question and map five different
+claims to their actual objectives and evidence. The abstract explicitly
+separates mean joint width, precision-success guarantees and recorded replay.
+The introduction identifies the exact 165/57 instance certificates as the
+principal application evidence. The article follows Introduction, Methods,
+Results, Discussion and Conclusions. Its length is now 35 rather than 38 pages;
+the reduction retains substantive controls in the indexed supplement.
+Lines 147-240 make the contribution boundary precise using local-diameter,
+reconstruction-error, minimax, sparse-policy, cumulative-sampling and
+shared-label references. Established machinery is credited. The full shared
+construction and both sides of its bounds are in lines 979-1065. The planner
+and tie handling are explicit in lines 1066-1135; the real worked certificate
+and original loss scale are directly inspectable thereafter.
+No additional prose simplification is mandatory. Mathematical notation in
+the proofs is necessary detail, not evidence of poor English.
+
+EXPERIMENTAL DESIGN
+The problem fixes the hidden record before the independent random seed,
+uses equal legal query sets/hard budgets, and states how the terminal
+transcript determines the information fiber (lines 272-377).
+The objective table at lines 1322-1334 prevents a mean-width optimizer
+from being labelled precision-optimal. The full-panel precision status
+table and lines 1488-1499 expose 351/67 unresolved instances, substantial
+gap sizes and their implications. Broad challenger replay is not presented
+as a universal optimum.
+The added threshold analysis (lines 1500-1534) fixes policies and all 1,098
+blocks across five retrospectively chosen thresholds, identifies its
+exploratory chronology, and preserves strict/tolerance sensitivity in the
+supplement. It does not repurpose these outcomes as minimax certificates.
+System-specific discordant counts, synchronized calendar-block resampling,
+small-panel limits, capacity compatibility and exact-endpoint error models
+remain explicit. No independent population sample or actual selective
+retrieval service is inferred.
+
+VALIDITY OF FINDINGS
+The central classification has a coherent stated proof, including the
+zero-endpoint penalty issue and the coordinate-query converse. The explicit
+shared mean-risk construction includes the adaptive hardest record and both
+batch bounds. I found no specific omitted assumption or reversed implication.
+This inspection is not formal proof certification or exhaustive priority review.
+The discussion (lines 1803-1877) correctly distinguishes assurance from model
+choice, forecast accuracy and acquisition costs. It retains the external
+best-model result where greedy obtains one more certificate, small
+mean-risk changes, cap sensitivity, the 0.9738064% historical saving and the
+bulk-API advantage. These do not invalidate the narrower stated claims.
+The 165/57 matched-half subsets support exact precision separation; unresolved
+whole-panel optimization is a scope limit, not a defect in those certificates.
+Bounded-error guarantees remain conditional on fixed latent internal errors
+and exact endpoints, not manufacturer calibration.
+
+REPRODUCIBILITY / DELIVERY CONDITION
+Lines 1878-1912 identify both reviewer ZIPs, README entry, complete result map,
+raw regeneration versus frozen replay versus fresh fitting, and private
+repository independence. The package audit found and corrected real command
+and dependency defects. A fresh final ZIP replay is the remaining completion
+condition, not another experiment.
+At the time of this review, older outputs/PEERJ_CRITERIA_AUDIT.txt and
+SUBMISSION_READINESS.txt still identify the previous 38-page/69-step release.
+Root has already scheduled their refresh after the current replay. They must
+not accompany the new release unchanged. This is release bookkeeping, not a
+new manuscript defect. Verify final source/PDF/ZIP hashes and six GitHub
+assets after that refresh.
+
+PEERJ CRITERIA AND SCOPE
+The supplied current PeerJ criteria explicitly assess Basic Reporting,
+Experimental Design and Validity, with traditional proof standards for
+theory and no novelty/impact-size acceptance threshold. The current paper's
+scope and framing match those research criteria. I attempted the official
+editorial criteria, policies and author-instruction URLs again; all returned
+403, so this report does not claim new live policy verification. It uses the
+provided policy text and prior same-day verified policy record.
+AI assistance is disclosed substantively at lines 1935-1948; human direction,
+supervision and accountability are stated without falsely claiming that
+assistance was only stylistic.
+
+NOT REQUIRED TO CLOSE THIS REVIEW
+A new forecast architecture, a financial savings claim, device-calibrated
+field deployment, another dataset, or solving every open precision instance
+would broaden the paper. None is required to substantiate the claims now
+made, and none should be inserted merely to increase an acceptance estimate.
+
+ACCEPTANCE ASSESSMENT
+The current revision is materially better aligned and suitable for external
+consideration once the final delivery checks pass. Internal review cannot
+calibrate an individual acceptance probability, and I find no evidential
+basis for promising greater than 90% acceptance or acceptance without any
+revision. Do not manufacture a higher percentage from the absence of a
+newly found flaw. Specialist review and editorial judgment remain distinct
+from package execution and internal checks.
+

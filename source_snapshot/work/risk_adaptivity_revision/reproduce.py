@@ -71,8 +71,22 @@ def main():
         logs.append({'script': script, 'arguments': list(map(str, arguments)), 'returncode': result.returncode,
                      'seconds': time.perf_counter()-start, 'log': log.relative_to(stage).as_posix()})
         if result.returncode:
+            # Preserve process diagnostics even when its traceback is incomplete.
+            # A failed step stops this run; no retry can conceal its first result.
+            failure = {'status': 'failed', 'failure_kind': 'nonzero_subprocess_returncode',
+                       'completed_steps': len(logs)-1, 'failed_step_number': number,
+                       'failed_step': logs[-1], 'steps': logs,
+                       'package_root': str(ROOT.resolve()), 'stage': str(stage),
+                       'manifest_sha256': sha(manifest),
+                       'script_sha256': sha(stage / script), 'log_sha256': sha(log),
+                       'elapsed_seconds': time.perf_counter()-started}
+            failure_text = json.dumps(failure, indent=2) + '\n'
+            failure_path = stage / 'outputs/risk_clean_replay_failure.json'
+            failure_path.write_text(failure_text, encoding='utf-8')
+            (ROOT / 'outputs/risk_clean_replay_failure.json').write_text(failure_text, encoding='utf-8')
             print('\n'.join(log.read_text(encoding='utf-8', errors='replace').splitlines()[-30:]), flush=True)
-            raise RuntimeError('Reproduction failed: ' + str(log))
+            raise RuntimeError(f'Reproduction failed at step {number}, returncode {result.returncode}: '
+                               + str(log) + '; diagnostics: ' + str(failure_path))
 
     rd = 'work/risk_adaptivity_revision/'
     run(rd + 'math/check_classification.py')

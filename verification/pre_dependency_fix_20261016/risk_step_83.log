@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\floxy\Documents\Codex\2026-10-09\paper-title-proposal-decoupled-low-rank\work\peerj_journal_verified_20261016_015311\work\rr_015321845299\work\risk_adaptivity_revision\joint_certification\review_mechanism\check_training.py", line 83, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\floxy\Documents\Codex\2026-10-09\paper-title-proposal-decoupled-low-rank\work\peerj_journal_verified_20261016_015311\work\rr_015321845299\work\risk_adaptivity_revision\joint_certification\review_mechanism\check_training.py", line 49, in main
+    metadata=[x.get('meta',x) for x in read(ROOT/'outputs/study_meter_results.json')]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\floxy\Documents\Codex\2026-10-09\paper-title-proposal-decoupled-low-rank\work\peerj_journal_verified_20261016_015311\work\rr_015321845299\work\risk_adaptivity_revision\joint_certification\review_mechanism\check_training.py", line 20, in read
+    def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\floxy\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\floxy\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\peerj_journal_verified_20261016_015311\\work\\rr_015321845299\\outputs\\study_meter_results.json'

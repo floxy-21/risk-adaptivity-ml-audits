@@ -15,7 +15,7 @@
 \node[flowbox,text width=0.20\linewidth] (bulk) at (87,-1.25)
   {\mbox{\textbf{Bulk retrieval}}\\Use the full trace.};
 \node[flowbox,text width=0.63\linewidth] (plan) at (36,-2.80)
-  {\mbox{\textbf{Restricted to two readings}}\\
+  {\mbox{\textbf{Can two readings suffice?}}\\
    Compute $D$ and $A$ before retrieving either reading.};
 \node[flowbox,text width=0.275\linewidth] (fixed) at (16,-5.10)
   {$D\leq\tau$\\\mbox{\textbf{Fixed batch}}\\
@@ -25,7 +25,7 @@
    Choose the second after\\the first answer.};
 \node[flowbox,text width=0.275\linewidth] (escalate) at (84,-5.10)
   {$\tau<A$\\\mbox{\textbf{Extend the audit}}\\
-   No two-reading\\policy guarantees success.};
+   Use the minimum\\sufficient fixed budget.};
 \draw[flowarrow] (inputs.south) -- (50,-0.72) -- (36,-0.72)
   -- (access.north);
 \draw[flowarrow] (access.east) -- node[above,font=\footnotesize]{Yes}
@@ -43,9 +43,11 @@ width. Let $D=\min_Q\sup_y J_Q(y)$ and
 $A=\min_{P\,\mathrm{det.\ adaptive}}\sup_y J_{Q_P(y)}(y)$ under the same
 two-reading budget. We fix the target $\tau$ before retrieval; the main
 application uses $\tau=1/2$. Since $A\leq D$, the three restricted-access
-branches exhaust the possibilities for certainty, including randomized
+branches exhaust the possibilities for two-reading certainty, including randomized
 policies (Proposition~\ref{prop:assurance-feasibility}). Their optimal
-success probabilities below one are assessed separately. Bulk is preferred on the measured public
+success probabilities below one are assessed separately. The fixed-budget
+calculation in Section~\ref{sec:minimum-fixed-budget} supplies an explicit
+fallback when two readings cannot guarantee success. Bulk is preferred on the measured public
 API when its full response is admissible (Section~\ref{sec:actual-api}).}
 \label{fig:audit-workflow}
 \end{figure}

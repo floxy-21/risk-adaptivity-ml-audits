@@ -1,0 +1,18 @@
+\paragraph{The optimal mixture is unique.}
+In the family of Theorem~\ref{thm:two-target-collapse}, any randomized
+batch with positive worst-record success must assign positive probability
+to every batch $\{t,z_j\}$, $j=1,\ldots,m$. The unique optimal distribution
+over preselected unordered batches assigns probability $1/m$ to each of these
+$m$ batches. Both statements also hold for all three model comparisons and
+every threshold in Corollary~\ref{cor:all-pairs-collapse}.
+To see this, at the adverse record $x_i$, only $\{t,z_i\}$ succeeds.
+Thus success there equals its mixture probability $p_i$. A positive
+worst-record value requires every $p_i>0$; achieving $1/m$ requires every
+$p_i\geq1/m$. Since the probabilities sum to at most one, all equal
+$1/m$ and no mass remains for other sets. The uniform mixture already
+provides the matching guarantee on every feasible record.
+Repeated or fewer queries cannot succeed at any $x_i$. Early stopping
+cannot improve the success of a preselected batch, so it does not evade
+the necessary support or mixture weights. Thus fixed output dimension two
+and a scalar first answer do not impose a universal bound on the number
+of batches needed for positive joint assurance.

@@ -1,0 +1,217 @@
+FINAL MATHEMATICAL PEER REVIEW: COMPOSED MANUSCRIPT
+
+Reviewed source: outputs/revised_manuscript.tex
+SHA256: 6ff21873993503ebf5641f325f8313e1d5868ce1e42d53acc4f365422fb5bfbc
+Reviewed extended source: work/risk_adaptivity_revision/editorial/online_extended_methods.tex
+Extended SHA256: e43dc7f249d35c20246f00ae529f227230e9368392f1337ba23fea1acb2f021f
+Associated PDF SHA256: c5e8bda4a813b9c40eaa09d1230cd6154ff0f60c52bd13a6828cd3e7acbcad14
+Scope: central theorem statements/proofs, supplementary retrieval gate,
+selection rule, abstract/conclusions, cross-references and scientific content
+retention in the shortened main article. This is a source review; root owns
+PDF layout inspection. No manuscript or builder edits were made by this reviewer.
+
+Verdict: PASS within this declared internal review scope
+No fatal mathematical error or unresolved theorem/gate defect was found in
+the reviewed material. The supplementary practical section is proportionate as a
+standard safe-stopping application of the established bounds. It does not
+replace the central shared-budget contribution or pretend to establish a
+large benefit of the abandoned decision-cover planner.
+
+Final delta checked: the archive totals of three requests/51 values and two
+requests/22 values now explicitly apply WITH ENDPOINTS RETAINED. This resolves
+the last presentation clarification. The independently verified numbers and
+mathematics are unchanged. No unresolved issue remains within this review's
+declared mathematical and practical-claim scope.
+
+1. Theorem scope and argument
+The scalar half-success theorem correctly specifies nonempty compact convex
+uncertainty, an affine scalar target, exact measurements, a finite dictionary,
+and common legal batches. Conditional worst-width failure sets are convex in
+the scalar first answer; finite one-dimensional Helly reasoning remains valid
+for strict failure sets and preserves equality at the precision threshold.
+The abstract now includes compact convex uncertainty, resolving my earlier
+scope recommendation.
+
+The two-target construction keeps output dimension and budget at two while
+the coordinate dictionary grows. Its endpoint-width table, adaptive branch
+margin, adverse-record bound, scalar sufficient batches and unique optimal
+uniform mixture are consistent. The all-three-model-pairs construction
+realizes the coefficient vectors using nonnegative forecasts; changes in
+additive loss constants do not affect the claimed widths. The theorem does
+not claim an unbounded reading-count reduction, and the corollary explicitly
+states that three fixed queries suffice. The shrinking robustness margin and
+exact-reading scope remain visible.
+
+2. New gate equation and fixed model selection
+For F_E={y>=0:sum y=E}, the sharp upper difference is
+U_mj=d_mj+E max_h c_mj,h. A chosen m is epsilon-optimal for every completion
+iff max(0,max_j U_mj)<=epsilon, since
+L_m(y)-min_j L_j(y)=max_j[L_m(y)-L_j(y)]. The displayed min_m test therefore
+means that one common qualifying model exists; it does not choose different
+models after seeing different hidden completions. Choosing the first
+qualifying model in lexicographic order resolves selection completely and
+matches the executable rule. Epsilon is the pinned 0.01 training SECOND
+MOMENT, not the square of the mean or a fitted test-outcome threshold.
+
+The gate and joint half-width objective are explicitly distinguished. In the
+external validation, 26 of198 selected models are not exact best models, but
+every selected model meets epsilon. The manuscript uses tolerance wording
+and does not claim exact winner identification for these choices.
+
+3. Source and arithmetic verification
+The new gate's inputs are coherent exact rational contrasts constructed from
+the pinned parsed binary64 model vectors. Independent checks matched26,352
+forecast coordinates,6,588 pair formulas,39,528 direct squared-loss vertex
+differences and1,098 totals obtained from permitted outer endpoints.
+The original benchmark persistence vectors are generated from prior-day
+counter inputs; the external vectors use round-trip parsing. The practical
+archive analysis uses conservative binary64 enclosures, not an exact-copy
+assumption. Its810 original and270 external copied-block certificates passed
+independent checking. The existing central precision certificates retain
+their stated scope on stored binary64-derived coefficient instances.
+
+4. Practical controls and claims
+The immediate endpoint-cached result is correctly8/819 original and198/279
+external avoided bulk fetches. Cold endpoint requests reverse the request-
+count benefit, and the table reports that result. Whole-period coarse-plus-
+gated access is compared with the stronger three-request bulk baseline.
+The historical paragraph now reports the later-forecast comparator rather
+than mentioning it only qualitatively. Cached reuse, inclusive range rows
+and all efficient request/row frontier points were independently checked.
+
+The revised paragraph explicitly separates declared-schedule replay from12
+actual API validation requests, which included full-record downloads. Those
+responses support the interface, totals and198 preselected decisions, not a
+claim that the validation experiment actually avoided those downloads.
+Response-body bytes are not presented as financial savings. The router's
+direct-bulk choice is conditioned on request-count pricing, not asserted to
+optimize every unknown mix of CPU, bandwidth, monetary and latency costs.
+
+5. Capacity implication
+Any nonempty capacity-restricted set is a subset of the initial simplex.
+Every existing all-completions no-fetch certificate therefore survives that
+restriction. This does not establish robustness to erroneous retained totals
+or forecasts. The manuscript makes the valid subset claim without inventing
+new empirical filtered-cohort survival counts.
+
+6. Research-article presentation and contribution boundary
+The abstract, introduction and conclusion preserve the specific theorem and
+225 reading-saving cases; the gate appears as a supplementary practical extension,
+not a new novelty claim. Mathematical assurance, recorded success, optional
+readings and API requests remain distinct. The public-meter study is properly
+retrospective, with heterogeneous source results and no claimed population
+generalization. The result is a computational research article, not a pilot
+proposal. No acceptance probability is inferred by this review.
+
+7. Shortened main-article and supplement delta
+The complete scalar theorem/proof and complete two-target theorem/proof are
+byte-retained from their checked source fragments. No universal theorem has
+been replaced by numerical evidence or an unproved headline. The main
+three-model corollary retains its assumptions, threshold interval and a proof
+sketch; its complete unchanged proof is present in S17. The shortened worked
+certificate keeps the concrete block, total, adaptive switch, branch bounds,
+adverse records and matching batch value. The full coefficient enclosures,
+36 cover inequalities, absolute-width table and verifier remain in S17.
+
+The main figure uses the original acquisition envelope, now as one unlettered
+panel. The obsolete '(a)' reference has been removed; the complete original
+two-panel figure and its recorded-outcome details remain in S18. The main
+recorded-policy paragraph explicitly distinguishes worst-record precision
+optimization from recorded outcomes. Secondary randomized replay, decision
+counts and threshold controls are retained in S18; they are not discarded
+because they limit the application claim. The exact gate, request accounting,
+API qualification and new six-system tolerance interpretation are in S16.
+The main discussion points to this separate decision objective and does not
+credit its zero-query savings to the two-query precision theorem.
+
+All main labels are unique. The extended source's four repeated historical
+labels were disambiguated in their S15 repeats; its labels are now unique.
+Every main and extended reference has a target in their combined semantic
+label set. Extended references to main definitions remain intentional; the
+extended file identifies itself as a content fragment, not a standalone PDF.
+The S17 execution paragraph now explicitly attributes the universal argument
+to the main theorem and the corollary proof here. No unsupported universal
+verification is inferred from the finite rational/LP checks.
+
+The six-system tolerance table preserves the fixed training-second-moment
+rule. Its median best-model loss is expressly a blockwise hindsight quantity,
+not the performance of a deployable forecaster. 'All four' is a realized
+spread count, not an all-completions certificate. The default checker uses
+original system aggregates and independently recomputes 279 public external
+blocks; the separate raw-source check covers all 1,098. The distinction stays
+visible. This review does not treat that retrospective context as a new
+confirmation or calibrated economic tolerance.
+
+8. Closest interval-cover precedent
+Directly inspected Kurtz (2026), Example20, in the publisher's primary text:
+https://link.springer.com/article/10.1007/s10107-026-02329-1
+The example makes recourse feasibility depend on intervals of one uncertainty
+coordinate and requires the chosen policies to cover them. The introduction
+now explicitly credits that mechanism. Its narrower claimed difference is
+the realization by actual equal-cost coordinate-observation fibers, with
+two affine targets, fixed two-query budget, exact 1 versus 1/m success, and
+forced optimal mixture support. This comparison is consistent with the
+inspected source; it does not establish exhaustive historical priority.
+
+The full cut and its cross-reference repairs were reviewed on source
+a52a245ad7153c3f8de0408f90eeb46165837aa78c57a1eb3a8e6c0eff3c940a.
+Earlier source70fa012... review
+findings are preserved above where the mathematics and data are unchanged;
+this section records the actual additional assessment, not a relabeling of
+the old verdict as a fresh computational experiment.
+
+9. Final reporting-only delta
+The final source at the top of this report was read at all three changed
+locations. The precision-batch replay now expressly reports expected success
+over its frozen mixture; it does not imply a count from sampled randomized
+trials. Removing repeated comparisons does not remove their underlying results
+or alter the main table. The API paragraph now identifies the measured values
+as incremental I/O excluding client throttle waiting, preserving their stated
+scope. The numerical-convention row now locates the coefficient enclosures
+in S17, where they appear. These are reporting and reference corrections;
+no theorem, policy, measurement, threshold or scientific result changed.
+The extended source hash remains e43dc7f... exactly. No mathematical rerun
+was performed or implied for this final delta. PASS remains scoped to the
+actual reviews and checks described here.
+
+Evidence files
+work/core_research_triage_20261016/cost_gate/independent_gate_math_check.json
+work/core_research_triage_20261016/cost_gate/independent_cost_accounting_check.json
+work/risk_adaptivity_revision/practical_retrieval_gate/source_check_results/independent_gate_math_check.json
+work/risk_adaptivity_revision/practical_retrieval_gate/SOURCE_AND_COST_REVIEW.txt
+
+This is a within-study independently implemented review, not an external
+journal decision or external independent replication. Package integrity,
+rendering and portal declarations have separate checks owned by the root.
+
+FINAL TWO-SENTENCE EDITORIAL DELTA — 2026-10-16
+Status: PASS within the source-only mathematical and claim-scope review.
+Current main source SHA256: 47167e289fe4be679605071b8529ea9294758990640c7bdea3ba6479dfb90bf1
+Current PDF SHA256: 5064e18e7950721612790112605b5046baa821fa49480fddb8e7c2d549536355
+Extended source SHA256: e43dc7f249d35c20246f00ae529f227230e9368392f1337ba23fea1acb2f021f
+Prior complete review SHA256: e4f0047dbd7c635b6611eb8fb2b4edc1ed9f65d6be1e0bf65e81d5f3c62dc81f
+
+I compared the saved 6ff21873993503ebf5641f325f8313e1d5868ce1e42d53acc4f365422fb5bfbc
+main source with the current main source. Applying exactly the two authorized
+text substitutions, each once, reproduces the new main source byte-for-byte.
+The extended methods source is byte-identical; neither changed paragraph occurs
+there. Every other main-source byte, including equations, theorem statements,
+proofs, tables, tolerances, decisions and numerical results, is unchanged.
+
+The first substitution makes the denominator explicit: the 418 cases were the
+subset of 1,098 with differing initial precision bounds. It preserves the
+92.09-second exact-completion statement and does not imply 418 additional cases
+or new data. The second identifies the lexicographic three-consumer case-series
+rule and its pre-fitting source-preparation timing. This changes the explanation
+of cohort selection, not the cohort or a population-generalization claim. The
+historical timing/source evidence is covered by the separate empirical review;
+this mathematical review does not supply a new provenance experiment.
+
+The preceding theorem and gate assessments continue to apply to their unchanged
+content. I found no consequential mathematical issue introduced by these two
+prose clarifications. No numerical experiment, universal verifier, model fitting
+or PDF rendering was rerun as part of this source-only review. The preserved
+101-step scientific execution remains bound to its original source; final archive
+equality and isolated reconstruction of this prose revision require the separate
+editorial-delta check. This is not a claim that a fresh 101-step execution used
+the new source, nor an external peer-review decision or acceptance probability.

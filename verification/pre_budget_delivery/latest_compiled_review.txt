@@ -1,0 +1,39 @@
+CURRENT COMPILED REVIEW -- PASS -- 14 October 2026
+Source SHA256: ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07
+PDF SHA256: b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c
+28 pages; abstract 240 words. Internal AI-assisted review, not external validation.
+
+All-page contact sheets and full-resolution pages 2,7,10,11,12,13,25,26 inspected.
+The only final change after these detailed inspections was the explicit
+for-each-policy/exists-record quantifier on page 11, recompiled and rerendered.
+Workflow boxes, connectors and equation definitions fit; the third branch now
+uses Proposition 2 to exclude randomized adaptive certainty. The planner's
+piecewise equation is aligned. The main theorem's width table has separate
+headers. The six-by-six rational enclosure matrix, upper-bound table and switch
+interval display correctly. No clipped content or collision found on other pages.
+
+The scientific reading order is scalar precision floor, complete two-target
+boundary theorem, shared-prefix planner, insufficient-budget proposition,
+worked certificate, source protocols and complete empirical controls.
+The full penalty classification and historical studies are preserved and
+indexed in the supplement. Main-paper cross-references resolve. IMRAD headings,
+author-year references, corresponding email and declarations remain.
+
+Main new Proposition 2 is stated only for the six-hour/five-prefix exact model.
+It fixes a seed-independent adverse mixture and states a non-tight 19/20
+success upper bound. A separate agent reviewed the proof and repeated all
+11,660 endpoint-witness checks from source-bound coefficients using separate
+Fraction code. The general finite-action caveat about legal padding is met
+by the current dictionary; no capped/noisy extension is asserted.
+
+Current main claims preserve 165/57 matched-half certificates and the 351/67
+open precision gaps. The original/external six-pair cases share two readings;
+they are not counted as independent datasets. Main controls retain the bulk
+API advantage, capacity/error results and 207 adaptive versus 208 greedy
+external model-winner certifications. The practical conclusion is conditional
+protocol selection, not general economic superiority or a deployed service.
+
+No consequential error found in the inspected revision. Package replay and
+server upload identities are separate completion checks. Acceptance and direct
+acceptance remain editorial decisions; no numerical acceptance calibration
+or external specialist validation has been established.

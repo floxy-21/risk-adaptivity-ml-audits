@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "scope": "Reproduce the gate, cost ledger, cached API checks, timing and loss scales offline.",
+  "network_requests": 0,
+  "steps": 4,
+  "commands": [
+    [
+      "analyze.py",
+      "--out",
+      "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\practical_retrieval_gate\\results"
+    ],
+    [
+      "check_saved.py",
+      "--results",
+      "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\practical_retrieval_gate\\results"
+    ],
+    [
+      "time_gate.py",
+      "--results",
+      "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\practical_retrieval_gate\\results"
+    ],
+    [
+      "check_tolerance_scale.py",
+      "--out",
+      "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\risk_adaptivity_revision\\practical_retrieval_gate\\results\\tolerance_scale"
+    ]
+  ],
+  "result_hashes": {
+    "archive_copy_trace.json": "e0e88a70eece62b116b8d0fc4db932542145a29e40750620e97fd37d99123ad9",
+    "case_gate.json": "8afb92cf67dde0f1c5b858385b3cde115c7eea2433b7c00f027c09c9014d01e3",
+    "cost_frontier.csv": "f032829035b0bf10cda52c38ac5be6efdcfb0db44b17923472a10a980af8f916",
+    "gate_timing.json": "de2b77934c634ed2bdce529cb2e0898a045a7226c6ff262e334706f277e89dfc",
+    "independent_check.json": "11352aeeabd48723edb00399a80d3fb73d513a4bebcf53bb7a73395627e9c420",
+    "range_frontiers.json": "33d71998f1a3a587b250f122290387eacc60cfe73c1a03f2f8587b1e369293a3",
+    "report.json": "fa50a78ce2402019858b1ff04386b8674c634fd99886d1f09b77c2da4175a209",
+    "request_plans.json": "b645bb12947bfcc00f05391aa427ac4996e340aa8ab93738e03b53c804a55bd8",
+    "routing_decisions.json": "6a8e89e51ec12146b467c587fdcef262c9ed6588c5650a9c3dc5880077a18750",
+    "tolerance_scale/independent_check.json": "7ffc7b4ac3634af8252cf68125fa26178cb74ca1311ebba76b0bacb300519c90",
+    "tolerance_scale/summary.json": "a8e27b093a4b6dab24e1dff9bc323c7c8b4c4a9dbacd77c065358093b6d60a34",
+    "tolerance_scale/tolerance_scale_fragment.tex": "3d816f87bcedc4174d44b58790536c67bfe115bb3bf1f338d78ed5cd80379408",
+    "tolerance_scale_full_source/independent_check.json": "f5766afbc7cdab4662ae5a5a838673eb67c3f16771bd695bd2a22b1c5b9f6183",
+    "tolerance_scale_full_source/summary.json": "a8e27b093a4b6dab24e1dff9bc323c7c8b4c4a9dbacd77c065358093b6d60a34",
+    "tolerance_scale_full_source/tolerance_scale_fragment.tex": "3d816f87bcedc4174d44b58790536c67bfe115bb3bf1f338d78ed5cd80379408"
+  }
+}

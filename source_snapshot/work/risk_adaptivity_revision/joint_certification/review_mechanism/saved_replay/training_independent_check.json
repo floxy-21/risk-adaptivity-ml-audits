@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "systems": {
+    "external/hpm_1": {
+      "eligible_days": 174,
+      "hourly_values": 4176,
+      "mean_exact": "1974257/4276224",
+      "second_moment_exact": "296831433/486539264",
+      "second_moment_kwh_squared": 0.6100873145563849,
+      "raw_training_reconstructed": true
+    },
+    "external/hpm_2": {
+      "eligible_days": 174,
+      "hourly_values": 4176,
+      "mean_exact": "692693/2138112",
+      "second_moment_exact": "491467367/2189426688",
+      "second_moment_kwh_squared": 0.22447308681020334,
+      "raw_training_reconstructed": true
+    },
+    "external/hpm_7": {
+      "eligible_days": 167,
+      "hourly_values": 4008,
+      "mean_exact": "2291297/4104192",
+      "second_moment_exact": "7763291/8388608",
+      "second_moment_kwh_squared": 0.9254564046859741,
+      "raw_training_reconstructed": true
+    },
+    "original/consumer_00000001": {
+      "eligible_days": 266,
+      "hourly_values": 6384,
+      "mean_exact": "1385241251729/2660000000000",
+      "second_moment_exact": "38040583625622466733661/106400000000000000000000",
+      "raw_training_reconstructed": false,
+      "scope": "Pinned declaration, frozen mean and count checked; use --chain-dir for independent integer-counter reconstruction."
+    },
+    "original/consumer_00000002": {
+      "eligible_days": 266,
+      "hourly_values": 6384,
+      "mean_exact": "9550518137/15960000000",
+      "second_moment_exact": "47099075643337018794547/106400000000000000000000",
+      "raw_training_reconstructed": false,
+      "scope": "Pinned declaration, frozen mean and count checked; use --chain-dir for independent integer-counter reconstruction."
+    },
+    "original/consumer_00000003": {
+      "eligible_days": 266,
+      "hourly_values": 6384,
+      "mean_exact": "3108648924587/7980000000000",
+      "second_moment_exact": "6485654941025697338183/19950000000000000000000",
+      "raw_training_reconstructed": false,
+      "scope": "Pinned declaration, frozen mean and count checked; use --chain-dir for independent integer-counter reconstruction."
+    }
+  },
+  "training_scale_sha256": "1491f1850fa06e611cf376dd5872c95a27c20c768584814b8dd38bd812806981",
+  "checker_sha256": "c89f5841ea399c27a5bb783190b297734f8f1e18bc2be588ec93e0ca5a7573e1",
+  "source_sha256": {
+    "original_integer_endpoints": null,
+    "external_decimal_counters": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da"
+  },
+  "original_training_reconstructed_in_this_run": false,
+  "scope": "Training-only source differences with complete current/lag1/2/7 calendar checks for available source panels. Default uses source-linked declarations for original BLEM moments; --chain-dir additionally reconstructs those from integer counters."
+}

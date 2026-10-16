@@ -1,0 +1,22 @@
+{
+  "checked_utc": "2026-10-16T00:26:36.3778133Z",
+  "target": "https://peerj.com/manuscripts/151201/files/",
+  "connection": "connected",
+  "signed_in": true,
+  "account_email": "kapoorjishan19@gmail.com",
+  "new_password_entered": false,
+  "journal_form_accessed": true,
+  "selected_journal": "PeerJ Computer Science",
+  "article_type": "Research Article",
+  "submitted": false,
+  "manuscript_id": 151201,
+  "uploaded_pdf_sha256": "5de09b49c3b21289eabe986248080b4545f0af0d85ebc92621b692c1011b3fa7",
+  "uploaded_tex_sha256": "91846b862f8f9692da150533947bd75c4a13144eb82d2f02177866b627abbc2b",
+  "downloaded_files_match": true,
+  "reviewer_conflicts_confirmed_absent": true,
+  "conference_presented": false,
+  "pending_legal_declarations": [
+    "CC BY 4.0 license",
+    "publication requirements and policies"
+  ]
+}

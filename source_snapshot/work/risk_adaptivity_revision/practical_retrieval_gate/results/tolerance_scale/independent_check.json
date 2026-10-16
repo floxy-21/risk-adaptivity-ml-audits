@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "Check six-system tolerance context and generate its supplementary table.\n\nDefault: reproduce the table from pinned system aggregates and independently\nrecompute external metrics from bundled public API responses. With --chain-dir,\nalso recompute all original metrics from the pinned original raw-source chain.\nNo original fine-answer arrays or per-block original losses are exported.\n",
+  "systems": 6,
+  "cases": 1098,
+  "independently_recomputed_systems": [
+    "external/hpm_1",
+    "external/hpm_2",
+    "external/hpm_7"
+  ],
+  "independently_recomputed_blocks": 279,
+  "original_system_aggregates_only": true,
+  "original_raw_regeneration_performed": false,
+  "summary_sha256": "a8e27b093a4b6dab24e1dff9bc323c7c8b4c4a9dbacd77c065358093b6d60a34",
+  "checker_sha256": "5f4ef8dc3c12e81c79dfa306b0ed928cf3d5df445e1cce5544e46b17e276cfe2",
+  "input_sha256": "4dab6420e1a365feb9bd08d21ebb936f347c21b445848a49b898086dd8029230",
+  "fragment_sha256": "3d816f87bcedc4174d44b58790536c67bfe115bb3bf1f338d78ed5cd80379408",
+  "limitations": "Default original rows replay pinned system aggregates; optional --chain-dir independently recomputes original reference losses. No new fitting, policy, threshold or inference."
+}

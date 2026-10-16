@@ -1,0 +1,4415 @@
+{
+  "status": "PASS",
+  "scope": "One fixed-order timing pass; input loading and rational preparation separate.",
+  "passes": 1,
+  "cases": 1098,
+  "order": "bundled input order",
+  "input_sha256": "4dab6420e1a365feb9bd08d21ebb936f347c21b445848a49b898086dd8029230",
+  "source_sha256": "9bff1b88520d9ab500b7543735da21bcecd92628eee2bf188bf9c235701608d8",
+  "python": "3.14.6",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "input_loading_seconds": 0.06780780002009124,
+  "rational_preparation_seconds": 0.4218389999878127,
+  "checked_gate_pass_wall_seconds": 0.26750919999904,
+  "checked_gate_pass_cpu_seconds": 0.25,
+  "gate_only_sum_seconds": 0.2652653001714498,
+  "gate_mean_seconds": 0.0002415895265678049,
+  "gate_median_seconds": 0.0002648000081535429,
+  "gate_p95_seconds": 0.00036949999048374593,
+  "gate_max_seconds": 0.0011221000168006867,
+  "limits": "Single local software pass, no population runtime inference; the gate requires the already-declared inputs.",
+  "cases_timing": [
+    {
+      "id": "external/hpm_1/2025-07-01/00",
+      "gate_seconds": 0.0006953999982215464
+    },
+    {
+      "id": "external/hpm_1/2025-07-01/06",
+      "gate_seconds": 0.0004744000034406781
+    },
+    {
+      "id": "external/hpm_1/2025-07-01/12",
+      "gate_seconds": 0.0004454999871086329
+    },
+    {
+      "id": "external/hpm_1/2025-07-02/00",
+      "gate_seconds": 0.0004898000042885542
+    },
+    {
+      "id": "external/hpm_1/2025-07-02/06",
+      "gate_seconds": 0.0004521000082604587
+    },
+    {
+      "id": "external/hpm_1/2025-07-02/12",
+      "gate_seconds": 0.00025209999876096845
+    },
+    {
+      "id": "external/hpm_1/2025-07-03/00",
+      "gate_seconds": 0.0002389000146649778
+    },
+    {
+      "id": "external/hpm_1/2025-07-03/06",
+      "gate_seconds": 0.0002447000006213784
+    },
+    {
+      "id": "external/hpm_1/2025-07-03/12",
+      "gate_seconds": 0.00024240001221187413
+    },
+    {
+      "id": "external/hpm_1/2025-07-04/00",
+      "gate_seconds": 0.00026660002185963094
+    },
+    {
+      "id": "external/hpm_1/2025-07-04/06",
+      "gate_seconds": 0.00025099999038502574
+    },
+    {
+      "id": "external/hpm_1/2025-07-04/12",
+      "gate_seconds": 0.00024969998048618436
+    },
+    {
+      "id": "external/hpm_1/2025-07-05/00",
+      "gate_seconds": 0.00024229998234659433
+    },
+    {
+      "id": "external/hpm_1/2025-07-05/06",
+      "gate_seconds": 0.00024729999131523073
+    },
+    {
+      "id": "external/hpm_1/2025-07-05/12",
+      "gate_seconds": 0.0002479999966453761
+    },
+    {
+      "id": "external/hpm_1/2025-07-06/00",
+      "gate_seconds": 0.0002499000111129135
+    },
+    {
+      "id": "external/hpm_1/2025-07-06/06",
+      "gate_seconds": 0.00024210000992752612
+    },
+    {
+      "id": "external/hpm_1/2025-07-06/12",
+      "gate_seconds": 0.00025889999233186245
+    },
+    {
+      "id": "external/hpm_1/2025-07-07/00",
+      "gate_seconds": 0.0002671999973244965
+    },
+    {
+      "id": "external/hpm_1/2025-07-07/06",
+      "gate_seconds": 0.0002694000140763819
+    },
+    {
+      "id": "external/hpm_1/2025-07-07/12",
+      "gate_seconds": 0.00024560000747442245
+    },
+    {
+      "id": "external/hpm_1/2025-07-08/00",
+      "gate_seconds": 0.00024380002287216485
+    },
+    {
+      "id": "external/hpm_1/2025-07-08/06",
+      "gate_seconds": 0.00024240001221187413
+    },
+    {
+      "id": "external/hpm_1/2025-07-08/12",
+      "gate_seconds": 0.00026020000223070383
+    },
+    {
+      "id": "external/hpm_1/2025-07-09/00",
+      "gate_seconds": 0.00024119997397065163
+    },
+    {
+      "id": "external/hpm_1/2025-07-09/06",
+      "gate_seconds": 0.00027129999944008887
+    },
+    {
+      "id": "external/hpm_1/2025-07-09/12",
+      "gate_seconds": 0.0002443999983370304
+    },
+    {
+      "id": "external/hpm_1/2025-07-10/00",
+      "gate_seconds": 0.00023969999165274203
+    },
+    {
+      "id": "external/hpm_1/2025-07-10/06",
+      "gate_seconds": 0.00025019998429343104
+    },
+    {
+      "id": "external/hpm_1/2025-07-10/12",
+      "gate_seconds": 0.000242499983869493
+    },
+    {
+      "id": "external/hpm_1/2025-07-11/00",
+      "gate_seconds": 0.00023380000493489206
+    },
+    {
+      "id": "external/hpm_1/2025-07-11/06",
+      "gate_seconds": 0.0002403999969828874
+    },
+    {
+      "id": "external/hpm_1/2025-07-11/12",
+      "gate_seconds": 0.00024659998598508537
+    },
+    {
+      "id": "external/hpm_1/2025-07-12/00",
+      "gate_seconds": 0.0002474999928381294
+    },
+    {
+      "id": "external/hpm_1/2025-07-12/06",
+      "gate_seconds": 0.0002429000160191208
+    },
+    {
+      "id": "external/hpm_1/2025-07-12/12",
+      "gate_seconds": 0.00023999999393709004
+    },
+    {
+      "id": "external/hpm_1/2025-07-13/00",
+      "gate_seconds": 0.000235399988014251
+    },
+    {
+      "id": "external/hpm_1/2025-07-13/06",
+      "gate_seconds": 0.0002660999889485538
+    },
+    {
+      "id": "external/hpm_1/2025-07-13/12",
+      "gate_seconds": 0.000238799984799698
+    },
+    {
+      "id": "external/hpm_1/2025-07-14/00",
+      "gate_seconds": 0.00024080000002868474
+    },
+    {
+      "id": "external/hpm_1/2025-07-14/06",
+      "gate_seconds": 0.00024240001221187413
+    },
+    {
+      "id": "external/hpm_1/2025-07-14/12",
+      "gate_seconds": 0.0002812000166159123
+    },
+    {
+      "id": "external/hpm_1/2025-07-15/00",
+      "gate_seconds": 0.00024819999816827476
+    },
+    {
+      "id": "external/hpm_1/2025-07-15/06",
+      "gate_seconds": 0.00024090000079013407
+    },
+    {
+      "id": "external/hpm_1/2025-07-15/12",
+      "gate_seconds": 0.00023900001542642713
+    },
+    {
+      "id": "external/hpm_1/2025-07-16/00",
+      "gate_seconds": 0.00023870001314207911
+    },
+    {
+      "id": "external/hpm_1/2025-07-16/06",
+      "gate_seconds": 0.0002489000034984201
+    },
+    {
+      "id": "external/hpm_1/2025-07-16/12",
+      "gate_seconds": 0.00030800001695752144
+    },
+    {
+      "id": "external/hpm_1/2025-07-17/00",
+      "gate_seconds": 0.0003074999840464443
+    },
+    {
+      "id": "external/hpm_1/2025-07-17/06",
+      "gate_seconds": 0.00026640002033673227
+    },
+    {
+      "id": "external/hpm_1/2025-07-17/12",
+      "gate_seconds": 0.00024610001128166914
+    },
+    {
+      "id": "external/hpm_1/2025-07-18/00",
+      "gate_seconds": 0.00023700000019744039
+    },
+    {
+      "id": "external/hpm_1/2025-07-18/06",
+      "gate_seconds": 0.00024210000992752612
+    },
+    {
+      "id": "external/hpm_1/2025-07-18/12",
+      "gate_seconds": 0.0002722000062931329
+    },
+    {
+      "id": "external/hpm_1/2025-07-19/00",
+      "gate_seconds": 0.0002401999954599887
+    },
+    {
+      "id": "external/hpm_1/2025-07-19/06",
+      "gate_seconds": 0.00024160000612027943
+    },
+    {
+      "id": "external/hpm_1/2025-07-19/12",
+      "gate_seconds": 0.00024220001068897545
+    },
+    {
+      "id": "external/hpm_1/2025-07-20/00",
+      "gate_seconds": 0.0002552999940235168
+    },
+    {
+      "id": "external/hpm_1/2025-07-20/06",
+      "gate_seconds": 0.0003567000094335526
+    },
+    {
+      "id": "external/hpm_1/2025-07-20/12",
+      "gate_seconds": 0.00023979999241419137
+    },
+    {
+      "id": "external/hpm_1/2025-07-21/00",
+      "gate_seconds": 0.00023749997490085661
+    },
+    {
+      "id": "external/hpm_1/2025-07-21/06",
+      "gate_seconds": 0.00024240001221187413
+    },
+    {
+      "id": "external/hpm_1/2025-07-21/12",
+      "gate_seconds": 0.00023969999165274203
+    },
+    {
+      "id": "external/hpm_1/2025-07-22/00",
+      "gate_seconds": 0.00024359999224543571
+    },
+    {
+      "id": "external/hpm_1/2025-07-22/06",
+      "gate_seconds": 0.00024419999681413174
+    },
+    {
+      "id": "external/hpm_1/2025-07-22/12",
+      "gate_seconds": 0.00025939999613910913
+    },
+    {
+      "id": "external/hpm_1/2025-07-23/00",
+      "gate_seconds": 0.00027889999910257757
+    },
+    {
+      "id": "external/hpm_1/2025-07-23/06",
+      "gate_seconds": 0.0002531000063754618
+    },
+    {
+      "id": "external/hpm_1/2025-07-23/12",
+      "gate_seconds": 0.0002945000014733523
+    },
+    {
+      "id": "external/hpm_1/2025-07-24/00",
+      "gate_seconds": 0.00047759999870322645
+    },
+    {
+      "id": "external/hpm_1/2025-07-24/06",
+      "gate_seconds": 0.00025560002541169524
+    },
+    {
+      "id": "external/hpm_1/2025-07-24/12",
+      "gate_seconds": 0.00024950000806711614
+    },
+    {
+      "id": "external/hpm_1/2025-07-25/00",
+      "gate_seconds": 0.00024029999622143805
+    },
+    {
+      "id": "external/hpm_1/2025-07-25/06",
+      "gate_seconds": 0.00024279998615384102
+    },
+    {
+      "id": "external/hpm_1/2025-07-25/12",
+      "gate_seconds": 0.0002714000002015382
+    },
+    {
+      "id": "external/hpm_1/2025-07-26/00",
+      "gate_seconds": 0.0002911000046879053
+    },
+    {
+      "id": "external/hpm_1/2025-07-26/06",
+      "gate_seconds": 0.0002465000143274665
+    },
+    {
+      "id": "external/hpm_1/2025-07-26/12",
+      "gate_seconds": 0.0002462000120431185
+    },
+    {
+      "id": "external/hpm_1/2025-07-27/00",
+      "gate_seconds": 0.00024120000307448208
+    },
+    {
+      "id": "external/hpm_1/2025-07-27/06",
+      "gate_seconds": 0.0002442000259179622
+    },
+    {
+      "id": "external/hpm_1/2025-07-27/12",
+      "gate_seconds": 0.0002410000015515834
+    },
+    {
+      "id": "external/hpm_1/2025-07-28/00",
+      "gate_seconds": 0.0002395999908912927
+    },
+    {
+      "id": "external/hpm_1/2025-07-28/06",
+      "gate_seconds": 0.00026210001669824123
+    },
+    {
+      "id": "external/hpm_1/2025-07-28/12",
+      "gate_seconds": 0.0002437000221107155
+    },
+    {
+      "id": "external/hpm_1/2025-07-29/00",
+      "gate_seconds": 0.0002465000143274665
+    },
+    {
+      "id": "external/hpm_1/2025-07-29/06",
+      "gate_seconds": 0.0002423000114504248
+    },
+    {
+      "id": "external/hpm_1/2025-07-29/12",
+      "gate_seconds": 0.0002562000008765608
+    },
+    {
+      "id": "external/hpm_1/2025-07-30/00",
+      "gate_seconds": 0.00024110000231303275
+    },
+    {
+      "id": "external/hpm_1/2025-07-30/06",
+      "gate_seconds": 0.00024850000045262277
+    },
+    {
+      "id": "external/hpm_1/2025-07-30/12",
+      "gate_seconds": 0.0002447000006213784
+    },
+    {
+      "id": "external/hpm_1/2025-07-31/00",
+      "gate_seconds": 0.0002547000185586512
+    },
+    {
+      "id": "external/hpm_1/2025-07-31/06",
+      "gate_seconds": 0.0002429000160191208
+    },
+    {
+      "id": "external/hpm_1/2025-07-31/12",
+      "gate_seconds": 0.00024170000688172877
+    },
+    {
+      "id": "external/hpm_2/2025-07-01/00",
+      "gate_seconds": 0.00024850000045262277
+    },
+    {
+      "id": "external/hpm_2/2025-07-01/06",
+      "gate_seconds": 0.0002443999983370304
+    },
+    {
+      "id": "external/hpm_2/2025-07-01/12",
+      "gate_seconds": 0.0002442999975755811
+    },
+    {
+      "id": "external/hpm_2/2025-07-02/00",
+      "gate_seconds": 0.0002534999803174287
+    },
+    {
+      "id": "external/hpm_2/2025-07-02/06",
+      "gate_seconds": 0.0002468999882694334
+    },
+    {
+      "id": "external/hpm_2/2025-07-02/12",
+      "gate_seconds": 0.00026099997921846807
+    },
+    {
+      "id": "external/hpm_2/2025-07-03/00",
+      "gate_seconds": 0.0002989000058732927
+    },
+    {
+      "id": "external/hpm_2/2025-07-03/06",
+      "gate_seconds": 0.00024279998615384102
+    },
+    {
+      "id": "external/hpm_2/2025-07-03/12",
+      "gate_seconds": 0.0002437999937683344
+    },
+    {
+      "id": "external/hpm_2/2025-07-04/00",
+      "gate_seconds": 0.0002429999876767397
+    },
+    {
+      "id": "external/hpm_2/2025-07-04/06",
+      "gate_seconds": 0.00023969999165274203
+    },
+    {
+      "id": "external/hpm_2/2025-07-04/12",
+      "gate_seconds": 0.00024410002515651286
+    },
+    {
+      "id": "external/hpm_2/2025-07-05/00",
+      "gate_seconds": 0.0002432999899610877
+    },
+    {
+      "id": "external/hpm_2/2025-07-05/06",
+      "gate_seconds": 0.00026729999808594584
+    },
+    {
+      "id": "external/hpm_2/2025-07-05/12",
+      "gate_seconds": 0.0002437999937683344
+    },
+    {
+      "id": "external/hpm_2/2025-07-06/00",
+      "gate_seconds": 0.0002469999890308827
+    },
+    {
+      "id": "external/hpm_2/2025-07-06/06",
+      "gate_seconds": 0.0002398999931756407
+    },
+    {
+      "id": "external/hpm_2/2025-07-06/12",
+      "gate_seconds": 0.00024210000992752612
+    },
+    {
+      "id": "external/hpm_2/2025-07-07/00",
+      "gate_seconds": 0.0002471999905537814
+    },
+    {
+      "id": "external/hpm_2/2025-07-07/06",
+      "gate_seconds": 0.00023650002549402416
+    },
+    {
+      "id": "external/hpm_2/2025-07-07/12",
+      "gate_seconds": 0.00024580000899732113
+    },
+    {
+      "id": "external/hpm_2/2025-07-08/00",
+      "gate_seconds": 0.00026530001196078956
+    },
+    {
+      "id": "external/hpm_2/2025-07-08/06",
+      "gate_seconds": 0.00029540000832639635
+    },
+    {
+      "id": "external/hpm_2/2025-07-08/12",
+      "gate_seconds": 0.0002449000021442771
+    },
+    {
+      "id": "external/hpm_2/2025-07-09/00",
+      "gate_seconds": 0.00024839999969117343
+    },
+    {
+      "id": "external/hpm_2/2025-07-09/06",
+      "gate_seconds": 0.00024839999969117343
+    },
+    {
+      "id": "external/hpm_2/2025-07-09/12",
+      "gate_seconds": 0.00024399999529123306
+    },
+    {
+      "id": "external/hpm_2/2025-07-10/00",
+      "gate_seconds": 0.0002455000067129731
+    },
+    {
+      "id": "external/hpm_2/2025-07-10/06",
+      "gate_seconds": 0.00024209998082369566
+    },
+    {
+      "id": "external/hpm_2/2025-07-10/12",
+      "gate_seconds": 0.0002615000121295452
+    },
+    {
+      "id": "external/hpm_2/2025-07-11/00",
+      "gate_seconds": 0.00024399999529123306
+    },
+    {
+      "id": "external/hpm_2/2025-07-11/06",
+      "gate_seconds": 0.0002382999809924513
+    },
+    {
+      "id": "external/hpm_2/2025-07-11/12",
+      "gate_seconds": 0.00024239998310804367
+    },
+    {
+      "id": "external/hpm_2/2025-07-12/00",
+      "gate_seconds": 0.00024449999909847975
+    },
+    {
+      "id": "external/hpm_2/2025-07-12/06",
+      "gate_seconds": 0.00023979999241419137
+    },
+    {
+      "id": "external/hpm_2/2025-07-12/12",
+      "gate_seconds": 0.00024250001297332346
+    },
+    {
+      "id": "external/hpm_2/2025-07-13/00",
+      "gate_seconds": 0.00024590000975877047
+    },
+    {
+      "id": "external/hpm_2/2025-07-13/06",
+      "gate_seconds": 0.00025159999495372176
+    },
+    {
+      "id": "external/hpm_2/2025-07-13/12",
+      "gate_seconds": 0.0002437999937683344
+    },
+    {
+      "id": "external/hpm_2/2025-07-14/00",
+      "gate_seconds": 0.00024500000290572643
+    },
+    {
+      "id": "external/hpm_2/2025-07-14/06",
+      "gate_seconds": 0.00023820000933483243
+    },
+    {
+      "id": "external/hpm_2/2025-07-14/12",
+      "gate_seconds": 0.0002410000015515834
+    },
+    {
+      "id": "external/hpm_2/2025-07-15/00",
+      "gate_seconds": 0.0002505999873392284
+    },
+    {
+      "id": "external/hpm_2/2025-07-15/06",
+      "gate_seconds": 0.00024120000307448208
+    },
+    {
+      "id": "external/hpm_2/2025-07-15/12",
+      "gate_seconds": 0.00023590002092532814
+    },
+    {
+      "id": "external/hpm_2/2025-07-16/00",
+      "gate_seconds": 0.00026369999977760017
+    },
+    {
+      "id": "external/hpm_2/2025-07-16/06",
+      "gate_seconds": 0.00029009999707341194
+    },
+    {
+      "id": "external/hpm_2/2025-07-16/12",
+      "gate_seconds": 0.00024610001128166914
+    },
+    {
+      "id": "external/hpm_2/2025-07-17/00",
+      "gate_seconds": 0.0002434000198263675
+    },
+    {
+      "id": "external/hpm_2/2025-07-17/06",
+      "gate_seconds": 0.00023790000705048442
+    },
+    {
+      "id": "external/hpm_2/2025-07-17/12",
+      "gate_seconds": 0.0002460000105202198
+    },
+    {
+      "id": "external/hpm_2/2025-07-18/00",
+      "gate_seconds": 0.00024400002439506352
+    },
+    {
+      "id": "external/hpm_2/2025-07-18/06",
+      "gate_seconds": 0.00023710000095888972
+    },
+    {
+      "id": "external/hpm_2/2025-07-18/12",
+      "gate_seconds": 0.0002598999999463558
+    },
+    {
+      "id": "external/hpm_2/2025-07-19/00",
+      "gate_seconds": 0.0002443999983370304
+    },
+    {
+      "id": "external/hpm_2/2025-07-19/06",
+      "gate_seconds": 0.000239099987084046
+    },
+    {
+      "id": "external/hpm_2/2025-07-19/12",
+      "gate_seconds": 0.00024090000079013407
+    },
+    {
+      "id": "external/hpm_2/2025-07-20/00",
+      "gate_seconds": 0.0004292000085115433
+    },
+    {
+      "id": "external/hpm_2/2025-07-20/06",
+      "gate_seconds": 0.0003198999911546707
+    },
+    {
+      "id": "external/hpm_2/2025-07-20/12",
+      "gate_seconds": 0.0002784999960567802
+    },
+    {
+      "id": "external/hpm_2/2025-07-21/00",
+      "gate_seconds": 0.0005139999848324805
+    },
+    {
+      "id": "external/hpm_2/2025-07-21/06",
+      "gate_seconds": 0.0002570000069681555
+    },
+    {
+      "id": "external/hpm_2/2025-07-21/12",
+      "gate_seconds": 0.0003463999892119318
+    },
+    {
+      "id": "external/hpm_2/2025-07-22/00",
+      "gate_seconds": 0.0002609000075608492
+    },
+    {
+      "id": "external/hpm_2/2025-07-22/06",
+      "gate_seconds": 0.00026780000189319253
+    },
+    {
+      "id": "external/hpm_2/2025-07-22/12",
+      "gate_seconds": 0.0003808000183198601
+    },
+    {
+      "id": "external/hpm_2/2025-07-23/00",
+      "gate_seconds": 0.00031579998903907835
+    },
+    {
+      "id": "external/hpm_2/2025-07-23/06",
+      "gate_seconds": 0.0002536000101827085
+    },
+    {
+      "id": "external/hpm_2/2025-07-23/12",
+      "gate_seconds": 0.0002474999928381294
+    },
+    {
+      "id": "external/hpm_2/2025-07-24/00",
+      "gate_seconds": 0.00025599999935366213
+    },
+    {
+      "id": "external/hpm_2/2025-07-24/06",
+      "gate_seconds": 0.0003932000254280865
+    },
+    {
+      "id": "external/hpm_2/2025-07-24/12",
+      "gate_seconds": 0.00035119999665766954
+    },
+    {
+      "id": "external/hpm_2/2025-07-25/00",
+      "gate_seconds": 0.00036949999048374593
+    },
+    {
+      "id": "external/hpm_2/2025-07-25/06",
+      "gate_seconds": 0.0002773999876808375
+    },
+    {
+      "id": "external/hpm_2/2025-07-25/12",
+      "gate_seconds": 0.00023949999012984335
+    },
+    {
+      "id": "external/hpm_2/2025-07-26/00",
+      "gate_seconds": 0.0002565000031609088
+    },
+    {
+      "id": "external/hpm_2/2025-07-26/06",
+      "gate_seconds": 0.00028089998522773385
+    },
+    {
+      "id": "external/hpm_2/2025-07-26/12",
+      "gate_seconds": 0.00030980000155977905
+    },
+    {
+      "id": "external/hpm_2/2025-07-27/00",
+      "gate_seconds": 0.0002891999902203679
+    },
+    {
+      "id": "external/hpm_2/2025-07-27/06",
+      "gate_seconds": 0.00024400002439506352
+    },
+    {
+      "id": "external/hpm_2/2025-07-27/12",
+      "gate_seconds": 0.0003139999753329903
+    },
+    {
+      "id": "external/hpm_2/2025-07-28/00",
+      "gate_seconds": 0.00024729999131523073
+    },
+    {
+      "id": "external/hpm_2/2025-07-28/06",
+      "gate_seconds": 0.00023979999241419137
+    },
+    {
+      "id": "external/hpm_2/2025-07-28/12",
+      "gate_seconds": 0.00024190000840462744
+    },
+    {
+      "id": "external/hpm_2/2025-07-29/00",
+      "gate_seconds": 0.00024239998310804367
+    },
+    {
+      "id": "external/hpm_2/2025-07-29/06",
+      "gate_seconds": 0.00024739999207668006
+    },
+    {
+      "id": "external/hpm_2/2025-07-29/12",
+      "gate_seconds": 0.00024380002287216485
+    },
+    {
+      "id": "external/hpm_2/2025-07-30/00",
+      "gate_seconds": 0.00026840000646188855
+    },
+    {
+      "id": "external/hpm_2/2025-07-30/06",
+      "gate_seconds": 0.0002516999957151711
+    },
+    {
+      "id": "external/hpm_2/2025-07-30/12",
+      "gate_seconds": 0.000245599978370592
+    },
+    {
+      "id": "external/hpm_2/2025-07-31/00",
+      "gate_seconds": 0.0002479999966453761
+    },
+    {
+      "id": "external/hpm_2/2025-07-31/06",
+      "gate_seconds": 0.00024110000231303275
+    },
+    {
+      "id": "external/hpm_2/2025-07-31/12",
+      "gate_seconds": 0.00024289998691529036
+    },
+    {
+      "id": "external/hpm_7/2025-07-01/00",
+      "gate_seconds": 0.00023849998251534998
+    },
+    {
+      "id": "external/hpm_7/2025-07-01/06",
+      "gate_seconds": 0.00024369999300688505
+    },
+    {
+      "id": "external/hpm_7/2025-07-01/12",
+      "gate_seconds": 0.00024179997853934765
+    },
+    {
+      "id": "external/hpm_7/2025-07-02/00",
+      "gate_seconds": 0.0003096000000368804
+    },
+    {
+      "id": "external/hpm_7/2025-07-02/06",
+      "gate_seconds": 0.00024310001754201949
+    },
+    {
+      "id": "external/hpm_7/2025-07-02/12",
+      "gate_seconds": 0.00024449999909847975
+    },
+    {
+      "id": "external/hpm_7/2025-07-03/00",
+      "gate_seconds": 0.00024059999850578606
+    },
+    {
+      "id": "external/hpm_7/2025-07-03/06",
+      "gate_seconds": 0.00024210000992752612
+    },
+    {
+      "id": "external/hpm_7/2025-07-03/12",
+      "gate_seconds": 0.0002434000198263675
+    },
+    {
+      "id": "external/hpm_7/2025-07-04/00",
+      "gate_seconds": 0.00023520001559518278
+    },
+    {
+      "id": "external/hpm_7/2025-07-04/06",
+      "gate_seconds": 0.00026539998361840844
+    },
+    {
+      "id": "external/hpm_7/2025-07-04/12",
+      "gate_seconds": 0.00024190000840462744
+    },
+    {
+      "id": "external/hpm_7/2025-07-05/00",
+      "gate_seconds": 0.00023720000172033906
+    },
+    {
+      "id": "external/hpm_7/2025-07-05/06",
+      "gate_seconds": 0.0002440999960526824
+    },
+    {
+      "id": "external/hpm_7/2025-07-05/12",
+      "gate_seconds": 0.00024029999622143805
+    },
+    {
+      "id": "external/hpm_7/2025-07-06/00",
+      "gate_seconds": 0.00024610001128166914
+    },
+    {
+      "id": "external/hpm_7/2025-07-06/06",
+      "gate_seconds": 0.00024399999529123306
+    },
+    {
+      "id": "external/hpm_7/2025-07-06/12",
+      "gate_seconds": 0.0002418000076431781
+    },
+    {
+      "id": "external/hpm_7/2025-07-07/00",
+      "gate_seconds": 0.00023770000552758574
+    },
+    {
+      "id": "external/hpm_7/2025-07-07/06",
+      "gate_seconds": 0.0002571999793872237
+    },
+    {
+      "id": "external/hpm_7/2025-07-07/12",
+      "gate_seconds": 0.00023659999715164304
+    },
+    {
+      "id": "external/hpm_7/2025-07-08/00",
+      "gate_seconds": 0.00023930001771077514
+    },
+    {
+      "id": "external/hpm_7/2025-07-08/06",
+      "gate_seconds": 0.0004667000030167401
+    },
+    {
+      "id": "external/hpm_7/2025-07-08/12",
+      "gate_seconds": 0.0002714000002015382
+    },
+    {
+      "id": "external/hpm_7/2025-07-09/00",
+      "gate_seconds": 0.0002486000012140721
+    },
+    {
+      "id": "external/hpm_7/2025-07-09/06",
+      "gate_seconds": 0.0002466999867465347
+    },
+    {
+      "id": "external/hpm_7/2025-07-09/12",
+      "gate_seconds": 0.00024510000366717577
+    },
+    {
+      "id": "external/hpm_7/2025-07-10/00",
+      "gate_seconds": 0.000285400019492954
+    },
+    {
+      "id": "external/hpm_7/2025-07-10/06",
+      "gate_seconds": 0.00026870000874623656
+    },
+    {
+      "id": "external/hpm_7/2025-07-10/12",
+      "gate_seconds": 0.0002468000166118145
+    },
+    {
+      "id": "external/hpm_7/2025-07-11/00",
+      "gate_seconds": 0.0002432999899610877
+    },
+    {
+      "id": "external/hpm_7/2025-07-11/06",
+      "gate_seconds": 0.0002463999844621867
+    },
+    {
+      "id": "external/hpm_7/2025-07-11/12",
+      "gate_seconds": 0.00024480000138282776
+    },
+    {
+      "id": "external/hpm_7/2025-07-12/00",
+      "gate_seconds": 0.0002395000192336738
+    },
+    {
+      "id": "external/hpm_7/2025-07-12/06",
+      "gate_seconds": 0.00024480000138282776
+    },
+    {
+      "id": "external/hpm_7/2025-07-12/12",
+      "gate_seconds": 0.0002416999777778983
+    },
+    {
+      "id": "external/hpm_7/2025-07-13/00",
+      "gate_seconds": 0.00025790001382119954
+    },
+    {
+      "id": "external/hpm_7/2025-07-13/06",
+      "gate_seconds": 0.0002457000082358718
+    },
+    {
+      "id": "external/hpm_7/2025-07-13/12",
+      "gate_seconds": 0.0002410000015515834
+    },
+    {
+      "id": "external/hpm_7/2025-07-14/00",
+      "gate_seconds": 0.00024229998234659433
+    },
+    {
+      "id": "external/hpm_7/2025-07-14/06",
+      "gate_seconds": 0.0002440999960526824
+    },
+    {
+      "id": "external/hpm_7/2025-07-14/12",
+      "gate_seconds": 0.000441100011812523
+    },
+    {
+      "id": "external/hpm_7/2025-07-15/00",
+      "gate_seconds": 0.00024309998843818903
+    },
+    {
+      "id": "external/hpm_7/2025-07-15/06",
+      "gate_seconds": 0.00027359998784959316
+    },
+    {
+      "id": "external/hpm_7/2025-07-15/12",
+      "gate_seconds": 0.00024449999909847975
+    },
+    {
+      "id": "external/hpm_7/2025-07-16/00",
+      "gate_seconds": 0.00024310001754201949
+    },
+    {
+      "id": "external/hpm_7/2025-07-16/06",
+      "gate_seconds": 0.0002415000053588301
+    },
+    {
+      "id": "external/hpm_7/2025-07-16/12",
+      "gate_seconds": 0.00024480000138282776
+    },
+    {
+      "id": "external/hpm_7/2025-07-17/00",
+      "gate_seconds": 0.00025510002160444856
+    },
+    {
+      "id": "external/hpm_7/2025-07-17/06",
+      "gate_seconds": 0.00024530000519007444
+    },
+    {
+      "id": "external/hpm_7/2025-07-17/12",
+      "gate_seconds": 0.00024330001906491816
+    },
+    {
+      "id": "external/hpm_7/2025-07-18/00",
+      "gate_seconds": 0.00025460001779720187
+    },
+    {
+      "id": "external/hpm_7/2025-07-18/06",
+      "gate_seconds": 0.0002525000018067658
+    },
+    {
+      "id": "external/hpm_7/2025-07-18/12",
+      "gate_seconds": 0.0002454000059515238
+    },
+    {
+      "id": "external/hpm_7/2025-07-19/00",
+      "gate_seconds": 0.00023849998251534998
+    },
+    {
+      "id": "external/hpm_7/2025-07-19/06",
+      "gate_seconds": 0.00024659998598508537
+    },
+    {
+      "id": "external/hpm_7/2025-07-19/12",
+      "gate_seconds": 0.0002437999937683344
+    },
+    {
+      "id": "external/hpm_7/2025-07-20/00",
+      "gate_seconds": 0.00024319998919963837
+    },
+    {
+      "id": "external/hpm_7/2025-07-20/06",
+      "gate_seconds": 0.00024360002134926617
+    },
+    {
+      "id": "external/hpm_7/2025-07-20/12",
+      "gate_seconds": 0.00026080000679939985
+    },
+    {
+      "id": "external/hpm_7/2025-07-21/00",
+      "gate_seconds": 0.00024240001221187413
+    },
+    {
+      "id": "external/hpm_7/2025-07-21/06",
+      "gate_seconds": 0.00024160000612027943
+    },
+    {
+      "id": "external/hpm_7/2025-07-21/12",
+      "gate_seconds": 0.00023809997946955264
+    },
+    {
+      "id": "external/hpm_7/2025-07-22/00",
+      "gate_seconds": 0.00023700000019744039
+    },
+    {
+      "id": "external/hpm_7/2025-07-22/06",
+      "gate_seconds": 0.0002468000166118145
+    },
+    {
+      "id": "external/hpm_7/2025-07-22/12",
+      "gate_seconds": 0.00024280001525767148
+    },
+    {
+      "id": "external/hpm_7/2025-07-23/00",
+      "gate_seconds": 0.0002400000230409205
+    },
+    {
+      "id": "external/hpm_7/2025-07-23/06",
+      "gate_seconds": 0.0002429000160191208
+    },
+    {
+      "id": "external/hpm_7/2025-07-23/12",
+      "gate_seconds": 0.0002541000139899552
+    },
+    {
+      "id": "external/hpm_7/2025-07-24/00",
+      "gate_seconds": 0.00024190000840462744
+    },
+    {
+      "id": "external/hpm_7/2025-07-24/06",
+      "gate_seconds": 0.00024530000519007444
+    },
+    {
+      "id": "external/hpm_7/2025-07-24/12",
+      "gate_seconds": 0.0002432999899610877
+    },
+    {
+      "id": "external/hpm_7/2025-07-25/00",
+      "gate_seconds": 0.00024029999622143805
+    },
+    {
+      "id": "external/hpm_7/2025-07-25/06",
+      "gate_seconds": 0.0002455000067129731
+    },
+    {
+      "id": "external/hpm_7/2025-07-25/12",
+      "gate_seconds": 0.000242199981585145
+    },
+    {
+      "id": "external/hpm_7/2025-07-26/00",
+      "gate_seconds": 0.00023819998023100197
+    },
+    {
+      "id": "external/hpm_7/2025-07-26/06",
+      "gate_seconds": 0.00025690000620670617
+    },
+    {
+      "id": "external/hpm_7/2025-07-26/12",
+      "gate_seconds": 0.00024369999300688505
+    },
+    {
+      "id": "external/hpm_7/2025-07-27/00",
+      "gate_seconds": 0.00024319998919963837
+    },
+    {
+      "id": "external/hpm_7/2025-07-27/06",
+      "gate_seconds": 0.00024449999909847975
+    },
+    {
+      "id": "external/hpm_7/2025-07-27/12",
+      "gate_seconds": 0.00024240001221187413
+    },
+    {
+      "id": "external/hpm_7/2025-07-28/00",
+      "gate_seconds": 0.000239099987084046
+    },
+    {
+      "id": "external/hpm_7/2025-07-28/06",
+      "gate_seconds": 0.00024269998539239168
+    },
+    {
+      "id": "external/hpm_7/2025-07-28/12",
+      "gate_seconds": 0.0002403999969828874
+    },
+    {
+      "id": "external/hpm_7/2025-07-29/00",
+      "gate_seconds": 0.0002523000002838671
+    },
+    {
+      "id": "external/hpm_7/2025-07-29/06",
+      "gate_seconds": 0.00024359999224543571
+    },
+    {
+      "id": "external/hpm_7/2025-07-29/12",
+      "gate_seconds": 0.00024289998691529036
+    },
+    {
+      "id": "external/hpm_7/2025-07-30/00",
+      "gate_seconds": 0.0002398999931756407
+    },
+    {
+      "id": "external/hpm_7/2025-07-30/06",
+      "gate_seconds": 0.00024190000840462744
+    },
+    {
+      "id": "external/hpm_7/2025-07-30/12",
+      "gate_seconds": 0.0002452000044286251
+    },
+    {
+      "id": "external/hpm_7/2025-07-31/00",
+      "gate_seconds": 0.00024110000231303275
+    },
+    {
+      "id": "external/hpm_7/2025-07-31/06",
+      "gate_seconds": 0.0002497999812476337
+    },
+    {
+      "id": "external/hpm_7/2025-07-31/12",
+      "gate_seconds": 0.0002565000031609088
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-01/00",
+      "gate_seconds": 0.0002714000002015382
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-01/06",
+      "gate_seconds": 0.00027189997490495443
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-01/12",
+      "gate_seconds": 0.0002696999872568995
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-02/00",
+      "gate_seconds": 0.00026920001255348325
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-02/06",
+      "gate_seconds": 0.0002671999973244965
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-02/12",
+      "gate_seconds": 0.00026259999140165746
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-03/00",
+      "gate_seconds": 0.00028429998201318085
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-03/06",
+      "gate_seconds": 0.0002710999979171902
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-03/12",
+      "gate_seconds": 0.00027049999334849417
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-04/00",
+      "gate_seconds": 0.00033719997736625373
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-04/06",
+      "gate_seconds": 0.00027180000324733555
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-04/12",
+      "gate_seconds": 0.0002629999944474548
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-05/00",
+      "gate_seconds": 0.00026729999808594584
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-05/06",
+      "gate_seconds": 0.00026959998649545014
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-05/12",
+      "gate_seconds": 0.00028670000028796494
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-06/00",
+      "gate_seconds": 0.0002704000216908753
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-06/06",
+      "gate_seconds": 0.0002659000165294856
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-06/12",
+      "gate_seconds": 0.00026649999199435115
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-07/00",
+      "gate_seconds": 0.00027119999867863953
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-07/06",
+      "gate_seconds": 0.0002662999904714525
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-07/12",
+      "gate_seconds": 0.0002652999828569591
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-08/00",
+      "gate_seconds": 0.0002825999981723726
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-08/06",
+      "gate_seconds": 0.0002701000194065273
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-08/12",
+      "gate_seconds": 0.00026710002566687763
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-09/00",
+      "gate_seconds": 0.0002663999912329018
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-09/06",
+      "gate_seconds": 0.0002663999912329018
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-09/12",
+      "gate_seconds": 0.0002682000049389899
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-10/00",
+      "gate_seconds": 0.0002730000123847276
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-10/06",
+      "gate_seconds": 0.0004367999790702015
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-10/12",
+      "gate_seconds": 0.0005130000063218176
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-11/00",
+      "gate_seconds": 0.0004744000034406781
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-11/06",
+      "gate_seconds": 0.0004911999858450145
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-11/12",
+      "gate_seconds": 0.00044639999396167696
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-12/00",
+      "gate_seconds": 0.0002801999798975885
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-12/06",
+      "gate_seconds": 0.0002662999904714525
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-12/12",
+      "gate_seconds": 0.0002716000017244369
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-13/00",
+      "gate_seconds": 0.0003034999826923013
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-13/06",
+      "gate_seconds": 0.00028009997913613915
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-13/12",
+      "gate_seconds": 0.00027910000062547624
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-14/00",
+      "gate_seconds": 0.0003129999968223274
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-14/06",
+      "gate_seconds": 0.0002724000078160316
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-14/12",
+      "gate_seconds": 0.0002733000146690756
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-15/00",
+      "gate_seconds": 0.00027150000096298754
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-15/06",
+      "gate_seconds": 0.0002716000017244369
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-15/12",
+      "gate_seconds": 0.00028860001475550234
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-16/00",
+      "gate_seconds": 0.0002927000168710947
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-16/06",
+      "gate_seconds": 0.00030330001027323306
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-16/12",
+      "gate_seconds": 0.0003355000226292759
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-17/00",
+      "gate_seconds": 0.00027069999487139285
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-17/06",
+      "gate_seconds": 0.0002688000095076859
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-17/12",
+      "gate_seconds": 0.00026509998133406043
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-18/00",
+      "gate_seconds": 0.00026649999199435115
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-18/06",
+      "gate_seconds": 0.0002638000005390495
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-18/12",
+      "gate_seconds": 0.0002784999960567802
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-19/00",
+      "gate_seconds": 0.0002657999866642058
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-19/06",
+      "gate_seconds": 0.0002628999936860055
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-19/12",
+      "gate_seconds": 0.0002710000262595713
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-20/00",
+      "gate_seconds": 0.00026810000417754054
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-20/06",
+      "gate_seconds": 0.00026569998590275645
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-20/12",
+      "gate_seconds": 0.00026569998590275645
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-21/00",
+      "gate_seconds": 0.0002686999796424061
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-21/06",
+      "gate_seconds": 0.00029739999445155263
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-21/12",
+      "gate_seconds": 0.0002663999912329018
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-22/00",
+      "gate_seconds": 0.0002646999782882631
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-22/06",
+      "gate_seconds": 0.0002648000081535429
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-22/12",
+      "gate_seconds": 0.0002665000210981816
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-23/00",
+      "gate_seconds": 0.00026470000739209354
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-23/06",
+      "gate_seconds": 0.00026679999427869916
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-23/12",
+      "gate_seconds": 0.00028160001966170967
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-24/00",
+      "gate_seconds": 0.00026470000739209354
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-24/06",
+      "gate_seconds": 0.00026459997752681375
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-24/12",
+      "gate_seconds": 0.00026450000586919487
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-25/00",
+      "gate_seconds": 0.00026950001483783126
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-25/06",
+      "gate_seconds": 0.0002995000104419887
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-25/12",
+      "gate_seconds": 0.0002733999863266945
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-26/00",
+      "gate_seconds": 0.00028500001644715667
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-26/06",
+      "gate_seconds": 0.00027019999106414616
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-26/12",
+      "gate_seconds": 0.0002648000081535429
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-27/00",
+      "gate_seconds": 0.00045889997272752225
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-27/06",
+      "gate_seconds": 0.00036520001594908535
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-27/12",
+      "gate_seconds": 0.00027409999165683985
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-28/00",
+      "gate_seconds": 0.00026760000037029386
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-28/06",
+      "gate_seconds": 0.0002872000040952116
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-28/12",
+      "gate_seconds": 0.00026740002795122564
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-29/00",
+      "gate_seconds": 0.0002665999927558005
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-29/06",
+      "gate_seconds": 0.00026709999656304717
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-29/12",
+      "gate_seconds": 0.0002798999776132405
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-30/00",
+      "gate_seconds": 0.00026509998133406043
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-30/06",
+      "gate_seconds": 0.00027039999258704484
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-30/12",
+      "gate_seconds": 0.00026679999427869916
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-31/00",
+      "gate_seconds": 0.00026599998818710446
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-31/06",
+      "gate_seconds": 0.0002680999750737101
+    },
+    {
+      "id": "original/consumer_00000001/2017-10-31/12",
+      "gate_seconds": 0.00026780000189319253
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-01/00",
+      "gate_seconds": 0.0002990999782923609
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-01/06",
+      "gate_seconds": 0.00031019997550174594
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-01/12",
+      "gate_seconds": 0.0002677000011317432
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-02/00",
+      "gate_seconds": 0.0002634999982547015
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-02/06",
+      "gate_seconds": 0.00026500000967644155
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-02/12",
+      "gate_seconds": 0.0004723000165540725
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-03/00",
+      "gate_seconds": 0.0003166999958921224
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-03/06",
+      "gate_seconds": 0.0002753000007942319
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-03/12",
+      "gate_seconds": 0.00027099999715574086
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-04/00",
+      "gate_seconds": 0.0002725999802350998
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-04/06",
+      "gate_seconds": 0.00026890001026913524
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-04/12",
+      "gate_seconds": 0.00026790000265464187
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-05/00",
+      "gate_seconds": 0.0002647999790497124
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-05/06",
+      "gate_seconds": 0.0002731999848037958
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-05/12",
+      "gate_seconds": 0.0002817999920807779
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-06/00",
+      "gate_seconds": 0.00026679999427869916
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-06/06",
+      "gate_seconds": 0.00026699999580159783
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-06/12",
+      "gate_seconds": 0.00026890001026913524
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-07/00",
+      "gate_seconds": 0.00026709999656304717
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-07/06",
+      "gate_seconds": 0.0002707999956328422
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-07/12",
+      "gate_seconds": 0.0002689999819267541
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-08/00",
+      "gate_seconds": 0.00033099998836405575
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-08/06",
+      "gate_seconds": 0.000298400002066046
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-08/12",
+      "gate_seconds": 0.0002651000104378909
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-09/00",
+      "gate_seconds": 0.0002696000155992806
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-09/06",
+      "gate_seconds": 0.0002668000233825296
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-09/12",
+      "gate_seconds": 0.0002663999912329018
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-10/00",
+      "gate_seconds": 0.00026780000189319253
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-10/06",
+      "gate_seconds": 0.00028330000350251794
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-10/12",
+      "gate_seconds": 0.00026760000037029386
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-11/00",
+      "gate_seconds": 0.00026709999656304717
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-11/06",
+      "gate_seconds": 0.0002662999904714525
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-11/12",
+      "gate_seconds": 0.00029429999995045364
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-12/00",
+      "gate_seconds": 0.00026679999427869916
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-12/06",
+      "gate_seconds": 0.00026640002033673227
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-12/12",
+      "gate_seconds": 0.00028470001416280866
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-13/00",
+      "gate_seconds": 0.00031820000731386244
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-13/06",
+      "gate_seconds": 0.0002696000155992806
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-13/12",
+      "gate_seconds": 0.0002705999941099435
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-14/00",
+      "gate_seconds": 0.0002673999988473952
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-14/06",
+      "gate_seconds": 0.0002623999898787588
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-14/12",
+      "gate_seconds": 0.0002674999996088445
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-15/00",
+      "gate_seconds": 0.0002659000165294856
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-15/06",
+      "gate_seconds": 0.00028279999969527125
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-15/12",
+      "gate_seconds": 0.00026679999427869916
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-16/00",
+      "gate_seconds": 0.00026420000358484685
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-16/06",
+      "gate_seconds": 0.00026530001196078956
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-16/12",
+      "gate_seconds": 0.0002631999959703535
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-17/00",
+      "gate_seconds": 0.00026780000189319253
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-17/06",
+      "gate_seconds": 0.0002643000043462962
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-17/12",
+      "gate_seconds": 0.00028500001644715667
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-18/00",
+      "gate_seconds": 0.0002648000081535429
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-18/06",
+      "gate_seconds": 0.0002667000226210803
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-18/12",
+      "gate_seconds": 0.00027740001678466797
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-19/00",
+      "gate_seconds": 0.0002651000104378909
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-19/06",
+      "gate_seconds": 0.0002704000216908753
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-19/12",
+      "gate_seconds": 0.0004763000179082155
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-20/00",
+      "gate_seconds": 0.00027710001450031996
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-20/06",
+      "gate_seconds": 0.000270900025498122
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-20/12",
+      "gate_seconds": 0.0002640000020619482
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-21/00",
+      "gate_seconds": 0.00027019999106414616
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-21/06",
+      "gate_seconds": 0.00026870000874623656
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-21/12",
+      "gate_seconds": 0.00029979998362250626
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-22/00",
+      "gate_seconds": 0.000295300007564947
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-22/06",
+      "gate_seconds": 0.00026259999140165746
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-22/12",
+      "gate_seconds": 0.0002652000111993402
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-23/00",
+      "gate_seconds": 0.0002673999988473952
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-23/06",
+      "gate_seconds": 0.00026519998209550977
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-23/12",
+      "gate_seconds": 0.0002671999973244965
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-24/00",
+      "gate_seconds": 0.0002655999851413071
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-24/06",
+      "gate_seconds": 0.00028330000350251794
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-24/12",
+      "gate_seconds": 0.0002680000034160912
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-25/00",
+      "gate_seconds": 0.00026760000037029386
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-25/06",
+      "gate_seconds": 0.0002641000028233975
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-25/12",
+      "gate_seconds": 0.0002662000188138336
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-26/00",
+      "gate_seconds": 0.000281700020423159
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-26/06",
+      "gate_seconds": 0.0002690000110305846
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-26/12",
+      "gate_seconds": 0.0002667000226210803
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-27/00",
+      "gate_seconds": 0.00026630001957528293
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-27/06",
+      "gate_seconds": 0.00027119999867863953
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-27/12",
+      "gate_seconds": 0.0006067999929655343
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-28/00",
+      "gate_seconds": 0.0004937000048812479
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-28/06",
+      "gate_seconds": 0.0004776999994646758
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-28/12",
+      "gate_seconds": 0.0005278000026009977
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-29/00",
+      "gate_seconds": 0.0005406000127550215
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-29/06",
+      "gate_seconds": 0.00034589998540468514
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-29/12",
+      "gate_seconds": 0.0002734999870881438
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-30/00",
+      "gate_seconds": 0.000431500026024878
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-30/06",
+      "gate_seconds": 0.0005220999883022159
+    },
+    {
+      "id": "original/consumer_00000001/2017-11-30/12",
+      "gate_seconds": 0.0004885999951511621
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-01/00",
+      "gate_seconds": 0.0003479000006336719
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-01/06",
+      "gate_seconds": 0.0002683000057004392
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-01/12",
+      "gate_seconds": 0.0002727000101003796
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-02/00",
+      "gate_seconds": 0.00029379999614320695
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-02/06",
+      "gate_seconds": 0.0002612000098451972
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-02/12",
+      "gate_seconds": 0.0002825999981723726
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-03/00",
+      "gate_seconds": 0.00027129999944008887
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-03/06",
+      "gate_seconds": 0.0002800000074785203
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-03/12",
+      "gate_seconds": 0.0002686999796424061
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-04/00",
+      "gate_seconds": 0.00027489999774843454
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-04/06",
+      "gate_seconds": 0.00029680001898668706
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-04/12",
+      "gate_seconds": 0.00027660001069307327
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-05/00",
+      "gate_seconds": 0.0002665000210981816
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-05/06",
+      "gate_seconds": 0.00026369999977760017
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-05/12",
+      "gate_seconds": 0.00026569998590275645
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-06/00",
+      "gate_seconds": 0.0002624999906402081
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-06/06",
+      "gate_seconds": 0.00026339999749325216
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-06/12",
+      "gate_seconds": 0.0002634999982547015
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-07/00",
+      "gate_seconds": 0.0002818999928422272
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-07/06",
+      "gate_seconds": 0.0002666999935172498
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-07/12",
+      "gate_seconds": 0.0002649999805726111
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-08/00",
+      "gate_seconds": 0.0002640000020619482
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-08/06",
+      "gate_seconds": 0.0002673000271897763
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-08/12",
+      "gate_seconds": 0.0002666999935172498
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-09/00",
+      "gate_seconds": 0.00026390000130049884
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-09/06",
+      "gate_seconds": 0.00027760001830756664
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-09/12",
+      "gate_seconds": 0.0002685000072233379
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-10/00",
+      "gate_seconds": 0.0002772999869193882
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-10/06",
+      "gate_seconds": 0.00026810000417754054
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-10/12",
+      "gate_seconds": 0.00026920001255348325
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-11/00",
+      "gate_seconds": 0.00043829999049194157
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-11/06",
+      "gate_seconds": 0.0002728000108618289
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-11/12",
+      "gate_seconds": 0.00028279999969527125
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-12/00",
+      "gate_seconds": 0.0002724000078160316
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-12/06",
+      "gate_seconds": 0.0002648000081535429
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-12/12",
+      "gate_seconds": 0.0002665000210981816
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-13/00",
+      "gate_seconds": 0.0002668999950401485
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-13/06",
+      "gate_seconds": 0.0002730999840423465
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-13/12",
+      "gate_seconds": 0.00026420000358484685
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-14/00",
+      "gate_seconds": 0.0002789999998640269
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-14/06",
+      "gate_seconds": 0.00026420000358484685
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-14/12",
+      "gate_seconds": 0.0002649000089149922
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-15/00",
+      "gate_seconds": 0.0002668000233825296
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-15/06",
+      "gate_seconds": 0.00026440000510774553
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-15/12",
+      "gate_seconds": 0.00029510000604204834
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-16/00",
+      "gate_seconds": 0.0002654000127222389
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-16/06",
+      "gate_seconds": 0.00026530001196078956
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-16/12",
+      "gate_seconds": 0.00028169999131932855
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-17/00",
+      "gate_seconds": 0.00026450000586919487
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-17/06",
+      "gate_seconds": 0.0002638000005390495
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-17/12",
+      "gate_seconds": 0.00026220001745969057
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-18/00",
+      "gate_seconds": 0.00026780000189319253
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-18/06",
+      "gate_seconds": 0.00026390000130049884
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-18/12",
+      "gate_seconds": 0.00026790000265464187
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-19/00",
+      "gate_seconds": 0.00028050001128576696
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-19/06",
+      "gate_seconds": 0.0002624999906402081
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-19/12",
+      "gate_seconds": 0.0002680000034160912
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-20/00",
+      "gate_seconds": 0.00026569998590275645
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-20/06",
+      "gate_seconds": 0.000606999994488433
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-20/12",
+      "gate_seconds": 0.00028639999800361693
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-21/00",
+      "gate_seconds": 0.0002730000123847276
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-21/06",
+      "gate_seconds": 0.00026760000037029386
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-21/12",
+      "gate_seconds": 0.0002678999735508114
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-22/00",
+      "gate_seconds": 0.00027340001543052495
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-22/06",
+      "gate_seconds": 0.000295600009849295
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-22/12",
+      "gate_seconds": 0.00027049999334849417
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-23/00",
+      "gate_seconds": 0.00026840000646188855
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-23/06",
+      "gate_seconds": 0.00032410002313554287
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-23/12",
+      "gate_seconds": 0.00027180000324733555
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-24/00",
+      "gate_seconds": 0.00030440001864917576
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-24/06",
+      "gate_seconds": 0.0002734999870881438
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-24/12",
+      "gate_seconds": 0.0002902999985963106
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-25/00",
+      "gate_seconds": 0.0002668000233825296
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-25/06",
+      "gate_seconds": 0.00026980001712217927
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-25/12",
+      "gate_seconds": 0.0002704000216908753
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-26/00",
+      "gate_seconds": 0.0002665999927558005
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-26/06",
+      "gate_seconds": 0.0002673999988473952
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-26/12",
+      "gate_seconds": 0.0002658999874256551
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-27/00",
+      "gate_seconds": 0.0002838999789673835
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-27/06",
+      "gate_seconds": 0.0002648000081535429
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-27/12",
+      "gate_seconds": 0.00026560001424513757
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-28/00",
+      "gate_seconds": 0.00028550002025440335
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-28/06",
+      "gate_seconds": 0.000298400002066046
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-28/12",
+      "gate_seconds": 0.0002696000155992806
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-29/00",
+      "gate_seconds": 0.0002688000095076859
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-29/06",
+      "gate_seconds": 0.0002620999875944108
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-29/12",
+      "gate_seconds": 0.00034389999927952886
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-30/00",
+      "gate_seconds": 0.0002671999973244965
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-30/06",
+      "gate_seconds": 0.0002658999874256551
+    },
+    {
+      "id": "original/consumer_00000001/2017-12-30/12",
+      "gate_seconds": 0.00026519998209550977
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-01/00",
+      "gate_seconds": 0.00027669998235069215
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-01/06",
+      "gate_seconds": 0.0002640000020619482
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-01/12",
+      "gate_seconds": 0.00026069997693412006
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-02/00",
+      "gate_seconds": 0.0002846999850589782
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-02/06",
+      "gate_seconds": 0.00026050000451505184
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-02/12",
+      "gate_seconds": 0.0002648000081535429
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-03/00",
+      "gate_seconds": 0.00026439997600391507
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-03/06",
+      "gate_seconds": 0.0002655999851413071
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-03/12",
+      "gate_seconds": 0.00026500000967644155
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-04/00",
+      "gate_seconds": 0.00026359999901615083
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-04/06",
+      "gate_seconds": 0.0002829000004567206
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-04/12",
+      "gate_seconds": 0.0002691000117920339
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-05/00",
+      "gate_seconds": 0.0002644999767653644
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-05/06",
+      "gate_seconds": 0.00031820000731386244
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-05/12",
+      "gate_seconds": 0.0002694000140763819
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-06/00",
+      "gate_seconds": 0.00026450000586919487
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-06/06",
+      "gate_seconds": 0.00026690002414397895
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-06/12",
+      "gate_seconds": 0.0002654000127222389
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-07/00",
+      "gate_seconds": 0.0002837000065483153
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-07/06",
+      "gate_seconds": 0.00026369999977760017
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-07/12",
+      "gate_seconds": 0.0002648000081535429
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-08/00",
+      "gate_seconds": 0.0002659000165294856
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-08/06",
+      "gate_seconds": 0.0002640000020619482
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-08/12",
+      "gate_seconds": 0.00026699999580159783
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-09/00",
+      "gate_seconds": 0.00026780000189319253
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-09/06",
+      "gate_seconds": 0.00028249999741092324
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-09/12",
+      "gate_seconds": 0.00026610001805238426
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-10/00",
+      "gate_seconds": 0.0002634999982547015
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-10/06",
+      "gate_seconds": 0.00031609999132342637
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-10/12",
+      "gate_seconds": 0.0002663999912329018
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-11/00",
+      "gate_seconds": 0.0002702999918255955
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-11/06",
+      "gate_seconds": 0.0002628999936860055
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-11/12",
+      "gate_seconds": 0.00027779999072663486
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-12/00",
+      "gate_seconds": 0.00028300000121816993
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-12/06",
+      "gate_seconds": 0.00045039999531582
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-12/12",
+      "gate_seconds": 0.000464599987026304
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-13/00",
+      "gate_seconds": 0.00037379999412223697
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-13/06",
+      "gate_seconds": 0.0002764000091701746
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-13/12",
+      "gate_seconds": 0.00030189999961294234
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-14/00",
+      "gate_seconds": 0.0008940999978221953
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-14/06",
+      "gate_seconds": 0.0004744000034406781
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-14/12",
+      "gate_seconds": 0.000594300014199689
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-15/00",
+      "gate_seconds": 0.0004889999981969595
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-15/06",
+      "gate_seconds": 0.0004950999864377081
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-15/12",
+      "gate_seconds": 0.0005304999940562993
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-16/00",
+      "gate_seconds": 0.0004130000015720725
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-16/06",
+      "gate_seconds": 0.00027790002059191465
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-16/12",
+      "gate_seconds": 0.0003792000061366707
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-17/00",
+      "gate_seconds": 0.00027699998463504016
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-17/06",
+      "gate_seconds": 0.00048340001376345754
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-17/12",
+      "gate_seconds": 0.00035390001721680164
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-18/00",
+      "gate_seconds": 0.00032110000029206276
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-18/06",
+      "gate_seconds": 0.00030929999775253236
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-18/12",
+      "gate_seconds": 0.0002899000246543437
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-19/00",
+      "gate_seconds": 0.00028750000637955964
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-19/06",
+      "gate_seconds": 0.0003169999981764704
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-19/12",
+      "gate_seconds": 0.0003040999872609973
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-20/00",
+      "gate_seconds": 0.00028279999969527125
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-20/06",
+      "gate_seconds": 0.00028830001247115433
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-20/12",
+      "gate_seconds": 0.00028360000578686595
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-21/00",
+      "gate_seconds": 0.0002803000097628683
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-21/06",
+      "gate_seconds": 0.0002820999943651259
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-21/12",
+      "gate_seconds": 0.0002725000085774809
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-22/00",
+      "gate_seconds": 0.0002818999928422272
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-22/06",
+      "gate_seconds": 0.0002728000108618289
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-22/12",
+      "gate_seconds": 0.0002665000210981816
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-23/00",
+      "gate_seconds": 0.00026599998818710446
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-23/06",
+      "gate_seconds": 0.0002673999988473952
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-23/12",
+      "gate_seconds": 0.0002597000275272876
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-24/00",
+      "gate_seconds": 0.00026760000037029386
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-24/06",
+      "gate_seconds": 0.00028029998065903783
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-24/12",
+      "gate_seconds": 0.00027049999334849417
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-25/00",
+      "gate_seconds": 0.0002741999924182892
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-25/06",
+      "gate_seconds": 0.0002659000165294856
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-25/12",
+      "gate_seconds": 0.0002756000030785799
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-26/00",
+      "gate_seconds": 0.00026760000037029386
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-26/06",
+      "gate_seconds": 0.0002683999773580581
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-26/12",
+      "gate_seconds": 0.0002668999950401485
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-27/00",
+      "gate_seconds": 0.00028399997972883284
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-27/06",
+      "gate_seconds": 0.0002686999796424061
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-27/12",
+      "gate_seconds": 0.00026440000510774553
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-28/00",
+      "gate_seconds": 0.00026840000646188855
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-28/06",
+      "gate_seconds": 0.00026729999808594584
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-28/12",
+      "gate_seconds": 0.00026210001669824123
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-29/00",
+      "gate_seconds": 0.00026110000908374786
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-29/06",
+      "gate_seconds": 0.00028589999419637024
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-29/12",
+      "gate_seconds": 0.00026450000586919487
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-30/00",
+      "gate_seconds": 0.0002683000057004392
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-30/06",
+      "gate_seconds": 0.0002612000098451972
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-30/12",
+      "gate_seconds": 0.0002654000127222389
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-31/00",
+      "gate_seconds": 0.0002680000034160912
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-31/06",
+      "gate_seconds": 0.00026500000967644155
+    },
+    {
+      "id": "original/consumer_00000002/2017-10-31/12",
+      "gate_seconds": 0.00026550001348368824
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-01/00",
+      "gate_seconds": 0.0002809999859891832
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-01/06",
+      "gate_seconds": 0.0002671999973244965
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-01/12",
+      "gate_seconds": 0.00026339999749325216
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-02/00",
+      "gate_seconds": 0.0002673999988473952
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-02/06",
+      "gate_seconds": 0.0002982000005431473
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-02/12",
+      "gate_seconds": 0.0002651000104378909
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-03/00",
+      "gate_seconds": 0.00026630001957528293
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-03/06",
+      "gate_seconds": 0.0002800000074785203
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-03/12",
+      "gate_seconds": 0.00026580001576803625
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-04/00",
+      "gate_seconds": 0.00026320002507418394
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-04/06",
+      "gate_seconds": 0.000301799998851493
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-04/12",
+      "gate_seconds": 0.00026929998421110213
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-05/00",
+      "gate_seconds": 0.0002674999996088445
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-05/06",
+      "gate_seconds": 0.00028390000807121396
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-05/12",
+      "gate_seconds": 0.0004890999989584088
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-06/00",
+      "gate_seconds": 0.0002778999914880842
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-06/06",
+      "gate_seconds": 0.0002734999870881438
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-06/12",
+      "gate_seconds": 0.0002933999930974096
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-07/00",
+      "gate_seconds": 0.0002663999912329018
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-07/06",
+      "gate_seconds": 0.00029349999385885894
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-07/12",
+      "gate_seconds": 0.0002694999857340008
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-08/00",
+      "gate_seconds": 0.0002673999988473952
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-08/06",
+      "gate_seconds": 0.00026610001805238426
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-08/12",
+      "gate_seconds": 0.0002691000117920339
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-09/00",
+      "gate_seconds": 0.0002665999927558005
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-09/06",
+      "gate_seconds": 0.0002657000150065869
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-09/12",
+      "gate_seconds": 0.000281400018138811
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-10/00",
+      "gate_seconds": 0.0002733000146690756
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-10/06",
+      "gate_seconds": 0.0002673999988473952
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-10/12",
+      "gate_seconds": 0.00026810000417754054
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-11/00",
+      "gate_seconds": 0.0002665999927558005
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-11/06",
+      "gate_seconds": 0.0002673999988473952
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-11/12",
+      "gate_seconds": 0.0002674999996088445
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-12/00",
+      "gate_seconds": 0.00027060002321377397
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-12/06",
+      "gate_seconds": 0.0002744999947026372
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-12/12",
+      "gate_seconds": 0.00028050001128576696
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-13/00",
+      "gate_seconds": 0.00027019999106414616
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-13/06",
+      "gate_seconds": 0.0002629999944474548
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-13/12",
+      "gate_seconds": 0.0002657999866642058
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-14/00",
+      "gate_seconds": 0.0002665999927558005
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-14/06",
+      "gate_seconds": 0.00026500000967644155
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-14/12",
+      "gate_seconds": 0.0002830999728757888
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-15/00",
+      "gate_seconds": 0.0002657999866642058
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-15/06",
+      "gate_seconds": 0.0002688000095076859
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-15/12",
+      "gate_seconds": 0.00027600000612437725
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-16/00",
+      "gate_seconds": 0.00026959998649545014
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-16/06",
+      "gate_seconds": 0.0002702999918255955
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-16/12",
+      "gate_seconds": 0.0002666999935172498
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-17/00",
+      "gate_seconds": 0.0002638000005390495
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-17/06",
+      "gate_seconds": 0.00028130001737736166
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-17/12",
+      "gate_seconds": 0.00027080002473667264
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-18/00",
+      "gate_seconds": 0.00032580000697635114
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-18/06",
+      "gate_seconds": 0.00032699998700991273
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-18/12",
+      "gate_seconds": 0.00027060002321377397
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-19/00",
+      "gate_seconds": 0.0002680000034160912
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-19/06",
+      "gate_seconds": 0.0002649999805726111
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-19/12",
+      "gate_seconds": 0.0002851999888662249
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-20/00",
+      "gate_seconds": 0.00026699999580159783
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-20/06",
+      "gate_seconds": 0.0002662000188138336
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-20/12",
+      "gate_seconds": 0.00026699999580159783
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-21/00",
+      "gate_seconds": 0.0002623999898787588
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-21/06",
+      "gate_seconds": 0.0002681999758351594
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-21/12",
+      "gate_seconds": 0.0002632999967318028
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-22/00",
+      "gate_seconds": 0.00028199999360367656
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-22/06",
+      "gate_seconds": 0.0002680999750737101
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-22/12",
+      "gate_seconds": 0.00026470000739209354
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-23/00",
+      "gate_seconds": 0.00026500000967644155
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-23/06",
+      "gate_seconds": 0.0002686999796424061
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-23/12",
+      "gate_seconds": 0.0002680000034160912
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-24/00",
+      "gate_seconds": 0.0002659000165294856
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-24/06",
+      "gate_seconds": 0.00027940000290982425
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-24/12",
+      "gate_seconds": 0.0002658999874256551
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-25/00",
+      "gate_seconds": 0.00026849997811950743
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-25/06",
+      "gate_seconds": 0.0002665999927558005
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-25/12",
+      "gate_seconds": 0.0002688000095076859
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-26/00",
+      "gate_seconds": 0.0002638000005390495
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-26/06",
+      "gate_seconds": 0.0002800000074785203
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-26/12",
+      "gate_seconds": 0.00026259999140165746
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-27/00",
+      "gate_seconds": 0.00028039998142048717
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-27/06",
+      "gate_seconds": 0.00026729999808594584
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-27/12",
+      "gate_seconds": 0.00026489997981116176
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-28/00",
+      "gate_seconds": 0.0002673999988473952
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-28/06",
+      "gate_seconds": 0.0002660999889485538
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-28/12",
+      "gate_seconds": 0.0002646000066306442
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-29/00",
+      "gate_seconds": 0.0002689999819267541
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-29/06",
+      "gate_seconds": 0.0002781999937724322
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-29/12",
+      "gate_seconds": 0.00026780000189319253
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-30/00",
+      "gate_seconds": 0.0003711000026669353
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-30/06",
+      "gate_seconds": 0.0007107999990694225
+    },
+    {
+      "id": "original/consumer_00000002/2017-11-30/12",
+      "gate_seconds": 0.000364800012903288
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-01/00",
+      "gate_seconds": 0.00036040000850334764
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-01/06",
+      "gate_seconds": 0.00027199997566640377
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-01/12",
+      "gate_seconds": 0.0002705999941099435
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-02/00",
+      "gate_seconds": 0.00026989998877979815
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-02/06",
+      "gate_seconds": 0.00030070001957938075
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-02/12",
+      "gate_seconds": 0.0002809000143315643
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-03/00",
+      "gate_seconds": 0.000281100015854463
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-03/06",
+      "gate_seconds": 0.0003100000030826777
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-03/12",
+      "gate_seconds": 0.0002834000042639673
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-04/00",
+      "gate_seconds": 0.00030559999868273735
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-04/06",
+      "gate_seconds": 0.0003124999930150807
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-04/12",
+      "gate_seconds": 0.00027910000062547624
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-05/00",
+      "gate_seconds": 0.0003905000048689544
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-05/06",
+      "gate_seconds": 0.0002714000002015382
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-05/12",
+      "gate_seconds": 0.00029830000130459666
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-06/00",
+      "gate_seconds": 0.0003038999857380986
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-06/06",
+      "gate_seconds": 0.0002720999764278531
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-06/12",
+      "gate_seconds": 0.0003038999857380986
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-07/00",
+      "gate_seconds": 0.0003797999816015363
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-07/06",
+      "gate_seconds": 0.00029940000968053937
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-07/12",
+      "gate_seconds": 0.0003352000203449279
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-08/00",
+      "gate_seconds": 0.00028559999191202223
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-08/06",
+      "gate_seconds": 0.00036180001916363835
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-08/12",
+      "gate_seconds": 0.0002734999870881438
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-09/00",
+      "gate_seconds": 0.00026020000223070383
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-09/06",
+      "gate_seconds": 0.00026420000358484685
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-09/12",
+      "gate_seconds": 0.0004230999911669642
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-10/00",
+      "gate_seconds": 0.00045449999743141234
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-10/06",
+      "gate_seconds": 0.0003510999958962202
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-10/12",
+      "gate_seconds": 0.0003330000035930425
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-11/00",
+      "gate_seconds": 0.0003530000103637576
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-11/06",
+      "gate_seconds": 0.00032380002085119486
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-11/12",
+      "gate_seconds": 0.0002925999870058149
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-12/00",
+      "gate_seconds": 0.00026679999427869916
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-12/06",
+      "gate_seconds": 0.0002643000043462962
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-12/12",
+      "gate_seconds": 0.0002655999851413071
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-13/00",
+      "gate_seconds": 0.00026729999808594584
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-13/06",
+      "gate_seconds": 0.00026679999427869916
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-13/12",
+      "gate_seconds": 0.0002662000188138336
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-14/00",
+      "gate_seconds": 0.0002818999928422272
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-14/06",
+      "gate_seconds": 0.0002663999912329018
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-14/12",
+      "gate_seconds": 0.00026769997202791274
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-15/00",
+      "gate_seconds": 0.00026679999427869916
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-15/06",
+      "gate_seconds": 0.0002631999959703535
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-15/12",
+      "gate_seconds": 0.00031510001281276345
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-16/00",
+      "gate_seconds": 0.0002649000089149922
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-16/06",
+      "gate_seconds": 0.00026619998971000314
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-16/12",
+      "gate_seconds": 0.0002832000027410686
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-17/00",
+      "gate_seconds": 0.0002668999950401485
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-17/06",
+      "gate_seconds": 0.00026939998497255147
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-17/12",
+      "gate_seconds": 0.00028310000197961926
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-18/00",
+      "gate_seconds": 0.00026790000265464187
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-18/06",
+      "gate_seconds": 0.0002632999967318028
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-18/12",
+      "gate_seconds": 0.0002694999857340008
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-19/00",
+      "gate_seconds": 0.00028029998065903783
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-19/06",
+      "gate_seconds": 0.00027809999301098287
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-19/12",
+      "gate_seconds": 0.0002969999914057553
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-20/00",
+      "gate_seconds": 0.00026810000417754054
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-20/06",
+      "gate_seconds": 0.0004973000031895936
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-20/12",
+      "gate_seconds": 0.00034169998252764344
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-21/00",
+      "gate_seconds": 0.00026729999808594584
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-21/06",
+      "gate_seconds": 0.00027150000096298754
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-21/12",
+      "gate_seconds": 0.0002662999904714525
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-22/00",
+      "gate_seconds": 0.0003056000277865678
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-22/06",
+      "gate_seconds": 0.00027199997566640377
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-22/12",
+      "gate_seconds": 0.0002665999927558005
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-23/00",
+      "gate_seconds": 0.0007009999826550484
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-23/06",
+      "gate_seconds": 0.00041459998465143144
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-23/12",
+      "gate_seconds": 0.0002955000090878457
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-24/00",
+      "gate_seconds": 0.0002694999857340008
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-24/06",
+      "gate_seconds": 0.00029429999995045364
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-24/12",
+      "gate_seconds": 0.0002857999934349209
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-25/00",
+      "gate_seconds": 0.0002801000082399696
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-25/06",
+      "gate_seconds": 0.0002694999857340008
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-25/12",
+      "gate_seconds": 0.0002674999996088445
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-26/00",
+      "gate_seconds": 0.00026699999580159783
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-26/06",
+      "gate_seconds": 0.00026519998209550977
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-26/12",
+      "gate_seconds": 0.0003380000125616789
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-27/00",
+      "gate_seconds": 0.00026780000189319253
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-27/06",
+      "gate_seconds": 0.00026870000874623656
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-27/12",
+      "gate_seconds": 0.0002621999883558601
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-28/00",
+      "gate_seconds": 0.0002719000040087849
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-28/06",
+      "gate_seconds": 0.00026210001669824123
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-28/12",
+      "gate_seconds": 0.00026679999427869916
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-29/00",
+      "gate_seconds": 0.00026810000417754054
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-29/06",
+      "gate_seconds": 0.00028440001187846065
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-29/12",
+      "gate_seconds": 0.0002651000104378909
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-30/00",
+      "gate_seconds": 0.00026679999427869916
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-30/06",
+      "gate_seconds": 0.00026580001576803625
+    },
+    {
+      "id": "original/consumer_00000002/2017-12-30/12",
+      "gate_seconds": 0.00026450000586919487
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-01/00",
+      "gate_seconds": 0.0002668999950401485
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-01/06",
+      "gate_seconds": 0.0002683999773580581
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-01/12",
+      "gate_seconds": 0.0002772999869193882
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-02/00",
+      "gate_seconds": 0.0002665999927558005
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-02/06",
+      "gate_seconds": 0.0003318999952170998
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-02/12",
+      "gate_seconds": 0.0003863000019919127
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-03/00",
+      "gate_seconds": 0.0011221000168006867
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-03/06",
+      "gate_seconds": 0.0004757999849971384
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-03/12",
+      "gate_seconds": 0.0003504999913275242
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-04/00",
+      "gate_seconds": 0.00027359998784959316
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-04/06",
+      "gate_seconds": 0.00026870000874623656
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-04/12",
+      "gate_seconds": 0.0002722000062931329
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-05/00",
+      "gate_seconds": 0.0002717000024858862
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-05/06",
+      "gate_seconds": 0.00026810000417754054
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-05/12",
+      "gate_seconds": 0.00027200000477023423
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-06/00",
+      "gate_seconds": 0.00027269998099654913
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-06/06",
+      "gate_seconds": 0.0002843000111170113
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-06/12",
+      "gate_seconds": 0.00026790000265464187
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-07/00",
+      "gate_seconds": 0.0002888999879360199
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-07/06",
+      "gate_seconds": 0.00028300000121816993
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-07/12",
+      "gate_seconds": 0.00033019998227246106
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-08/00",
+      "gate_seconds": 0.00027219997718930244
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-08/06",
+      "gate_seconds": 0.00033019998227246106
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-08/12",
+      "gate_seconds": 0.0003443000023253262
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-09/00",
+      "gate_seconds": 0.00010579999070614576
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-09/06",
+      "gate_seconds": 0.00010320000001229346
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-09/12",
+      "gate_seconds": 8.679999154992402e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-10/00",
+      "gate_seconds": 8.81000014487654e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-10/06",
+      "gate_seconds": 0.00012000001152046025
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-10/12",
+      "gate_seconds": 8.81000014487654e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-11/00",
+      "gate_seconds": 8.769999840296805e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-11/06",
+      "gate_seconds": 0.0001480999926570803
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-11/12",
+      "gate_seconds": 0.00010219999239780009
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-12/00",
+      "gate_seconds": 0.00012050001532770693
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-12/06",
+      "gate_seconds": 0.00010610002209432423
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-12/12",
+      "gate_seconds": 0.00012730000889860094
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-13/00",
+      "gate_seconds": 0.0001230000052601099
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-13/06",
+      "gate_seconds": 0.00015529998927377164
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-13/12",
+      "gate_seconds": 0.00013130001025274396
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-14/00",
+      "gate_seconds": 0.0001060000213328749
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-14/06",
+      "gate_seconds": 0.00012099999003112316
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-14/12",
+      "gate_seconds": 8.639998850412667e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-15/00",
+      "gate_seconds": 8.6499989265576e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-15/06",
+      "gate_seconds": 8.719999459572136e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-15/12",
+      "gate_seconds": 0.00010760000441223383
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-16/00",
+      "gate_seconds": 0.0001024999946821481
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-16/06",
+      "gate_seconds": 9.339998359791934e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-16/12",
+      "gate_seconds": 8.719999459572136e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-17/00",
+      "gate_seconds": 8.630001684650779e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-17/06",
+      "gate_seconds": 8.749999688006938e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-17/12",
+      "gate_seconds": 8.830000297166407e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-18/00",
+      "gate_seconds": 8.719999459572136e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-18/06",
+      "gate_seconds": 8.930001058615744e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-18/12",
+      "gate_seconds": 8.750002598389983e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-19/00",
+      "gate_seconds": 8.769999840296805e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-19/06",
+      "gate_seconds": 9.26000066101551e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-19/12",
+      "gate_seconds": 8.679999154992402e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-20/00",
+      "gate_seconds": 8.659999002702534e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-20/06",
+      "gate_seconds": 0.00010430000838823617
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-20/12",
+      "gate_seconds": 0.0001066999975591898
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-21/00",
+      "gate_seconds": 8.830000297166407e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-21/06",
+      "gate_seconds": 8.789999992586672e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-21/12",
+      "gate_seconds": 8.81000014487654e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-22/00",
+      "gate_seconds": 8.669999078847468e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-22/06",
+      "gate_seconds": 8.689999231137335e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-22/12",
+      "gate_seconds": 8.6199986981228e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-23/00",
+      "gate_seconds": 0.00012959999730810523
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-23/06",
+      "gate_seconds": 0.00010829998063854873
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-23/12",
+      "gate_seconds": 8.92000098247081e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-24/00",
+      "gate_seconds": 9.039998985826969e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-24/06",
+      "gate_seconds": 8.840000373311341e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-24/12",
+      "gate_seconds": 0.00010959999053739011
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-25/00",
+      "gate_seconds": 0.00010549998842179775
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-25/06",
+      "gate_seconds": 9.049999061971903e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-25/12",
+      "gate_seconds": 9.019998833537102e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-26/00",
+      "gate_seconds": 8.980001439340413e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-26/06",
+      "gate_seconds": 9.019998833537102e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-26/12",
+      "gate_seconds": 8.890000754036009e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-27/00",
+      "gate_seconds": 0.00011409999569877982
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-27/06",
+      "gate_seconds": 0.0001629000180400908
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-27/12",
+      "gate_seconds": 0.000166199984960258
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-28/00",
+      "gate_seconds": 0.00010139998630620539
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-28/06",
+      "gate_seconds": 9.90999978967011e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-28/12",
+      "gate_seconds": 9.750001481734216e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-29/00",
+      "gate_seconds": 0.00010129998554475605
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-29/06",
+      "gate_seconds": 0.0001033000007737428
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-29/12",
+      "gate_seconds": 0.00010910001583397388
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-30/00",
+      "gate_seconds": 0.00012409998453222215
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-30/06",
+      "gate_seconds": 0.00011110000195913017
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-30/12",
+      "gate_seconds": 0.00015150001854635775
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-31/00",
+      "gate_seconds": 0.0001218999968841672
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-31/06",
+      "gate_seconds": 0.00011580000864341855
+    },
+    {
+      "id": "original/consumer_00000003/2017-10-31/12",
+      "gate_seconds": 0.00010730000212788582
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-01/00",
+      "gate_seconds": 0.00014330001431517303
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-01/06",
+      "gate_seconds": 0.00010689999908208847
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-01/12",
+      "gate_seconds": 0.00010499998461455107
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-02/00",
+      "gate_seconds": 0.0001908999984152615
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-02/06",
+      "gate_seconds": 0.00018740000086836517
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-02/12",
+      "gate_seconds": 0.00020370000856928527
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-03/00",
+      "gate_seconds": 0.00020439998479560018
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-03/06",
+      "gate_seconds": 0.00026030000299215317
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-03/12",
+      "gate_seconds": 0.0002128999913111329
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-04/00",
+      "gate_seconds": 0.0001647000026423484
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-04/06",
+      "gate_seconds": 0.00013539998326450586
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-04/12",
+      "gate_seconds": 0.00012989999959245324
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-05/00",
+      "gate_seconds": 0.00013349999790079892
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-05/06",
+      "gate_seconds": 0.00013910001143813133
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-05/12",
+      "gate_seconds": 0.0001343000039923936
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-06/00",
+      "gate_seconds": 0.00015479998546652496
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-06/06",
+      "gate_seconds": 0.0001162000116892159
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-06/12",
+      "gate_seconds": 0.0001230000052601099
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-07/00",
+      "gate_seconds": 0.00011230001109652221
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-07/06",
+      "gate_seconds": 0.00011069999891333282
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-07/12",
+      "gate_seconds": 0.00011130000348202884
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-08/00",
+      "gate_seconds": 0.00011150000500492752
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-08/06",
+      "gate_seconds": 0.00011260001338087022
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-08/12",
+      "gate_seconds": 0.00011819999781437218
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-09/00",
+      "gate_seconds": 8.859997615218163e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-09/06",
+      "gate_seconds": 9.180000051856041e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-09/12",
+      "gate_seconds": 8.999998681247234e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-10/00",
+      "gate_seconds": 8.980001439340413e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-10/06",
+      "gate_seconds": 8.900000830180943e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-10/12",
+      "gate_seconds": 8.930001058615744e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-11/00",
+      "gate_seconds": 8.900000830180943e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-11/06",
+      "gate_seconds": 8.820000221021473e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-11/12",
+      "gate_seconds": 8.929998148232698e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-12/00",
+      "gate_seconds": 8.940001134760678e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-12/06",
+      "gate_seconds": 9.460002183914185e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-12/12",
+      "gate_seconds": 8.869997691363096e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-13/00",
+      "gate_seconds": 8.950001210905612e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-13/06",
+      "gate_seconds": 9.00000159163028e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-13/12",
+      "gate_seconds": 8.969998452812433e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-14/00",
+      "gate_seconds": 9.010001667775214e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-14/06",
+      "gate_seconds": 8.890000754036009e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-14/12",
+      "gate_seconds": 9.019998833537102e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-15/00",
+      "gate_seconds": 8.870000601746142e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-15/06",
+      "gate_seconds": 9.019998833537102e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-15/12",
+      "gate_seconds": 8.9899986051023e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-16/00",
+      "gate_seconds": 8.900000830180943e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-16/06",
+      "gate_seconds": 8.849997539073229e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-16/12",
+      "gate_seconds": 9.00000159163028e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-17/00",
+      "gate_seconds": 9.059999138116837e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-17/06",
+      "gate_seconds": 8.840000373311341e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-17/12",
+      "gate_seconds": 8.92000098247081e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-18/00",
+      "gate_seconds": 8.890000754036009e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-18/06",
+      "gate_seconds": 8.960001287050545e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-18/12",
+      "gate_seconds": 8.9599983766675e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-19/00",
+      "gate_seconds": 8.840000373311341e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-19/06",
+      "gate_seconds": 9.019998833537102e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-19/12",
+      "gate_seconds": 9.48999950196594e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-20/00",
+      "gate_seconds": 9.00000159163028e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-20/06",
+      "gate_seconds": 9.839999256655574e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-20/12",
+      "gate_seconds": 8.929998148232698e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-21/00",
+      "gate_seconds": 8.92000098247081e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-21/06",
+      "gate_seconds": 8.889997843652964e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-21/12",
+      "gate_seconds": 9.059999138116837e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-22/00",
+      "gate_seconds": 8.940001134760678e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-22/06",
+      "gate_seconds": 8.899997919797897e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-22/12",
+      "gate_seconds": 8.910000906325877e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-23/00",
+      "gate_seconds": 9.009998757392168e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-23/06",
+      "gate_seconds": 0.00012730000889860094
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-23/12",
+      "gate_seconds": 8.899997919797897e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-24/00",
+      "gate_seconds": 8.870000601746142e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-24/06",
+      "gate_seconds": 8.949998300522566e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-24/12",
+      "gate_seconds": 8.900000830180943e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-25/00",
+      "gate_seconds": 8.949998300522566e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-25/06",
+      "gate_seconds": 8.860000525601208e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-25/12",
+      "gate_seconds": 8.929998148232698e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-26/00",
+      "gate_seconds": 8.92000098247081e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-26/06",
+      "gate_seconds": 8.87999776750803e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-26/12",
+      "gate_seconds": 8.92000098247081e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-27/00",
+      "gate_seconds": 9.48999950196594e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-27/06",
+      "gate_seconds": 8.819997310638428e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-27/12",
+      "gate_seconds": 8.950001210905612e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-28/00",
+      "gate_seconds": 9.269997826777399e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-28/06",
+      "gate_seconds": 9.030001820065081e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-28/12",
+      "gate_seconds": 8.910000906325877e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-29/00",
+      "gate_seconds": 8.9599983766675e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-29/06",
+      "gate_seconds": 8.769999840296805e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-29/12",
+      "gate_seconds": 8.900000830180943e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-30/00",
+      "gate_seconds": 8.949998300522566e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-30/06",
+      "gate_seconds": 9.029998909682035e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-11-30/12",
+      "gate_seconds": 9.010001667775214e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-01/00",
+      "gate_seconds": 8.970001363195479e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-01/06",
+      "gate_seconds": 8.869997691363096e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-01/12",
+      "gate_seconds": 8.900000830180943e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-02/00",
+      "gate_seconds": 8.9899986051023e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-02/06",
+      "gate_seconds": 8.960001287050545e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-02/12",
+      "gate_seconds": 8.850000449456275e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-03/00",
+      "gate_seconds": 8.92000098247081e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-03/06",
+      "gate_seconds": 9.029998909682035e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-03/12",
+      "gate_seconds": 8.679999154992402e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-04/00",
+      "gate_seconds": 8.979998528957367e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-04/06",
+      "gate_seconds": 9.539999882690609e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-04/12",
+      "gate_seconds": 8.880000677891076e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-05/00",
+      "gate_seconds": 8.949998300522566e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-05/06",
+      "gate_seconds": 8.970001363195479e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-05/12",
+      "gate_seconds": 9.070002124644816e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-06/00",
+      "gate_seconds": 8.87999776750803e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-06/06",
+      "gate_seconds": 8.990001515485346e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-06/12",
+      "gate_seconds": 8.92000098247081e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-07/00",
+      "gate_seconds": 0.00011079999967478216
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-07/06",
+      "gate_seconds": 0.0001399999891873449
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-07/12",
+      "gate_seconds": 8.860000525601208e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-08/00",
+      "gate_seconds": 9.079999290406704e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-08/06",
+      "gate_seconds": 8.909997995942831e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-08/12",
+      "gate_seconds": 8.900000830180943e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-09/00",
+      "gate_seconds": 8.789999992586672e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-09/06",
+      "gate_seconds": 8.970001363195479e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-09/12",
+      "gate_seconds": 8.820000221021473e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-10/00",
+      "gate_seconds": 8.970001363195479e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-10/06",
+      "gate_seconds": 8.999998681247234e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-10/12",
+      "gate_seconds": 8.689999231137335e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-11/00",
+      "gate_seconds": 8.980001439340413e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-11/06",
+      "gate_seconds": 9.529999806545675e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-11/12",
+      "gate_seconds": 9.020001743920147e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-12/00",
+      "gate_seconds": 8.980001439340413e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-12/06",
+      "gate_seconds": 8.969998452812433e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-12/12",
+      "gate_seconds": 8.990001515485346e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-13/00",
+      "gate_seconds": 9.010001667775214e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-13/06",
+      "gate_seconds": 8.9599983766675e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-13/12",
+      "gate_seconds": 9.469999349676073e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-14/00",
+      "gate_seconds": 8.910000906325877e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-14/06",
+      "gate_seconds": 8.969998452812433e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-14/12",
+      "gate_seconds": 0.00011640001321211457
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-15/00",
+      "gate_seconds": 8.980001439340413e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-15/06",
+      "gate_seconds": 8.969998452812433e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-15/12",
+      "gate_seconds": 8.960001287050545e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-16/00",
+      "gate_seconds": 9.020001743920147e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-16/06",
+      "gate_seconds": 8.939998224377632e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-16/12",
+      "gate_seconds": 8.900000830180943e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-17/00",
+      "gate_seconds": 8.940001134760678e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-17/06",
+      "gate_seconds": 8.910000906325877e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-17/12",
+      "gate_seconds": 9.330001194030046e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-18/00",
+      "gate_seconds": 9.039998985826969e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-18/06",
+      "gate_seconds": 8.969998452812433e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-18/12",
+      "gate_seconds": 9.030001820065081e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-19/00",
+      "gate_seconds": 9.390001650899649e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-19/06",
+      "gate_seconds": 8.839997462928295e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-19/12",
+      "gate_seconds": 9.020001743920147e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-20/00",
+      "gate_seconds": 8.910000906325877e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-20/06",
+      "gate_seconds": 9.019998833537102e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-20/12",
+      "gate_seconds": 8.980001439340413e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-21/00",
+      "gate_seconds": 9.00000159163028e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-21/06",
+      "gate_seconds": 0.00012959999730810523
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-21/12",
+      "gate_seconds": 0.0001320999872405082
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-22/00",
+      "gate_seconds": 9.919999865815043e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-22/06",
+      "gate_seconds": 0.00010370000381954014
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-22/12",
+      "gate_seconds": 8.92000098247081e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-23/00",
+      "gate_seconds": 8.860000525601208e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-23/06",
+      "gate_seconds": 9.00000159163028e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-23/12",
+      "gate_seconds": 9.690001024864614e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-24/00",
+      "gate_seconds": 8.910000906325877e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-24/06",
+      "gate_seconds": 8.769999840296805e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-24/12",
+      "gate_seconds": 8.820000221021473e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-25/00",
+      "gate_seconds": 9.019998833537102e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-25/06",
+      "gate_seconds": 8.960001287050545e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-25/12",
+      "gate_seconds": 8.87999776750803e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-26/00",
+      "gate_seconds": 8.930001058615744e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-26/06",
+      "gate_seconds": 8.849997539073229e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-26/12",
+      "gate_seconds": 8.850000449456275e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-27/00",
+      "gate_seconds": 8.789999992586672e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-27/06",
+      "gate_seconds": 8.9599983766675e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-27/12",
+      "gate_seconds": 8.92000098247081e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-28/00",
+      "gate_seconds": 8.92000098247081e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-28/06",
+      "gate_seconds": 8.9599983766675e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-28/12",
+      "gate_seconds": 8.990001515485346e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-29/00",
+      "gate_seconds": 9.109999518841505e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-29/06",
+      "gate_seconds": 0.00011279998579993844
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-29/12",
+      "gate_seconds": 0.00010609999299049377
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-30/00",
+      "gate_seconds": 8.850000449456275e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-30/06",
+      "gate_seconds": 8.870000601746142e-05
+    },
+    {
+      "id": "original/consumer_00000003/2017-12-30/12",
+      "gate_seconds": 8.820000221021473e-05
+    }
+  ]
+}

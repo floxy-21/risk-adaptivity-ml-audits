@@ -1,0 +1,53 @@
+Dear Academic Editor,
+
+Please consider "Adaptive Reading Budgets for Joint Forecast Audits with Cumulative Data" as a Research Article in PeerJ Computer Science.
+
+We study a concrete acquisition decision: how many cumulative readings an auditor
+must retrieve to guarantee the precision of several forecast comparisons, and
+when feedback reduces that requirement. The computer-science contribution
+combines exact acquisition algorithms, matching lower bounds and executable
+certificates.
+
+The central construction keeps two affine targets and two coordinate queries
+fixed. For every integer m >= 3, adaptation guarantees precision while the
+optimal randomized batch succeeds with worst-case probability exactly 1/m.
+Every one of m specified batches is necessary for positive worst-case success,
+and their uniform mixture is uniquely optimal. We distinguish this joint
+boundary from the scalar half-success guarantee and established vector-recovery
+results. The main text provides the construction and proof; the query dictionary
+grows with m, and three fixed readings suffice.
+
+The application uses frozen forecasts and cumulative-meter data from six systems.
+An exact linear scan finds the minimum fixed reading budget. On 225 of 1,098
+blocks, two adaptive readings replace three necessary and sufficient fixed
+readings, saving one third of the reserved readings in exchange for one additional
+feedback round. Across the complete original and external panels, certified
+adaptation with a minimum fixed fallback reduces reserved readings by 6.40% and
+7.67%. On 222 blocks, matching certificates also establish adaptive precision
+success one versus an optimal randomized-batch value of one half.
+
+All policies receive the same information and permitted queries; the retrospective
+analysis retains capacity and reading-error controls and the measured API result
+favoring unrestricted bulk retrieval.
+
+Supplemental Data S1 and S2 (42.01 MB combined) provide
+code, frozen inputs, per-case ledgers, exact witnesses and a results-to-command
+map. All 81 steps passed in an isolated offline run from these files.
+The package distinguishes saved-forecast replay, pinned raw-source regeneration
+and fresh model fitting. The editable 29-page manuscript and a worked
+source-derived certificate accompany the materials.
+
+We suggest handling expertise in algorithms, exact optimization, optimal recovery,
+information-based complexity or robust optimization. These areas match the
+methodological contribution; the forecasting models supply its application.
+
+This manuscript is unpublished and is not under consideration elsewhere. I
+received no external funding and declare no competing interests. The manuscript
+discloses supervised generative-AI assistance. I am the sole corresponding author.
+
+Sincerely,
+Jishan Kapoor
+Independent Researcher, Toronto M4Y 1C9, Canada
+kapoorjishan19@gmail.com
+
+[Prepared locally; not sent or submitted.]

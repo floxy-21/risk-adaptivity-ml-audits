@@ -1,0 +1,36 @@
+\paragraph{How many readings does assurance require?}
+The minimum fixed budget is three on every block where two adaptive
+readings suffice but two fixed readings do not: 168 original and 57 external
+blocks, spanning all six systems. Thus two adaptive readings replace three
+necessary and sufficient fixed readings on 225 blocks, a one-third reduction.
+Each replacement saves one reading in exchange for an additional information
+round: the three fixed readings can be chosen together.
+The original count includes the 165 matched-half cases and three further
+blocks; only the matched cases establish exact batch success one half.
+Using adaptive two on these blocks and the minimum fixed batch elsewhere
+gives the complete-panel reading totals in Table~\ref{tab:minimum-reading-budget}.
+
+\begin{table}[htbp]\centering\small
+\caption{Reserved optional scalar readings for guaranteed joint half-width
+precision. Each plan succeeds for every completion in the declared exact
+model. Counts exclude the two common retained endpoints. The adaptive plan
+uses a fixed fallback where no two-reading guarantee is available.}
+\label{tab:minimum-reading-budget}
+\begin{tabular}{lrr}\toprule
+Quantity & Original & External\\\midrule
+Blocks & 819 & 279\\
+Three fixed versus two adaptive & 168 & 57\\
+Minimum fixed readings, summed & 2625 & 743\\
+Adaptive with fixed fallback, summed & 2457 & 686\\
+Reading reduction across full panel & 6.40\% & 7.67\%\\\bottomrule
+\end{tabular}
+\end{table}
+
+We calculated these budgets from the frozen coefficients before using any
+optional reading answers.
+Enumeration of all 32 fixed subsets per block agrees with the linear scan.
+A separately implemented shortest-path checker verifies minimality and
+checks feasible endpoint witnesses and the adaptive interval covers.
+Online Resource~1 supplies each concrete fallback batch, source and system
+summaries, and the fixed-budget histogram. The capacity and error controls
+test how additional information changes the acquisition requirement.

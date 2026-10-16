@@ -1,0 +1,172 @@
+LATEST CLAIM-BOUNDARY REVIEW: EXACT READING BUDGET AND SHARED PRECISION
+Date: 14 October 2026
+Reviewer: /root/originality_resolution; internal AI-assisted analytic review
+Status: PASS within the scope below
+
+CURRENT ARTIFACTS
+Source SHA256:
+7f131f3e0d8adc3db17ddec0d850333580b834169dd2ddc59ce07059c5a9b669
+PDF SHA256:
+5a16ec3f9487816b3c87c6b5000b8529023322ad5ac4d7ba6f101297cc90d53d
+PDF length: 29 pages, reported by the root's current compile/render checks.
+Title: Adaptive Reading Budgets for Joint Forecast Audits with Cumulative Data
+Earlier review preserved at pre_budget_20261014/latest_boundary_review.txt.
+
+VERDICT AND SCOPE
+No mandatory mathematical or claim correction remains in the reviewed
+addition. I reread the current two-target theorem, optimal-mixture statement,
+minimum-reading-budget methods and results, abstract, introduction, related
+work, discussion and conclusion. I checked their hypotheses, proof arguments,
+denominators and source-bound numerical evidence. The complete theorem,
+uniqueness paragraph and new budget fragments match the composed source
+after the documented section-heading conversion.
+
+This is an internal analytic and source/claim review. The PDF hash binds its
+companion artifact; it does not assert that this reviewer independently
+inspected every rendered page. The root separately reports inspection of all
+contact sheets and representative full pages. This is not external specialist
+validation, formal proof-assistant certification, historical-priority proof
+or an acceptance assurance. The current clean-package replay is a separate
+verification and must supply its own completion status.
+
+MINIMUM FIXED READING BUDGET
+The new subsection explicitly defines the unit simplex F and tau>=0.
+Every fixed prefix set partitions the intervals into consecutive segments.
+Worst joint width equals the maximum segment coefficient range across the
+requested contrasts: the upper bound follows from nonnegative segment masses
+summing to one, and a concentration completion attains it. This identity is
+not extended to additional capacity or bounded-error constraints.
+
+The longest-admissible-prefix scan is exact. Its first segment ends no earlier
+than an optimal first segment; deleting that greedy prefix from the optimal
+partition leaves a feasible suffix partition with at most one fewer segment.
+Every truncated segment remains feasible because its ranges cannot increase.
+Induction proves minimum segments and therefore minimum prefix queries.
+Maintaining row extrema gives O(R*n) comparisons. The supporting proof
+distinguishes comparison count from rational bit complexity and does not
+claim a new general segmentation principle.
+
+There are finitely many legal batches. For randomized fixed success one,
+every batch with positive mass must be individually sufficient; otherwise
+its failing record disproves certainty. Thus randomization cannot reduce
+the fixed minimum under this exact requirement. A policy using at most one
+query cannot condition its only choice on an answer, so it is a randomized
+fixed policy. Fixed minimum three plus a verified two-query adaptive cover
+therefore establishes adaptive minimum exactly two, including randomized
+adaptive policies. The source correctly leaves adaptive minima above two
+unsolved and uses an explicitly sufficient fixed fallback instead.
+
+READING COUNTS AND EXACT-SUCCESS SUBSETS
+The refreshed originality_resolution_20261014/final_claims_report.json binds
+the current source/PDF, ten reviewed source fragments, complete budget ledger
+and independent-check report. Its read-only checker joined every block to
+the pinned precision-plan file and recalculated the following quantities:
+
+Original: 819 blocks, 168 fixed-three/adaptive-two cases, including all 165
+matched-half cases and exactly three additional cases. Fixed total 2,625;
+adaptive with fixed fallback 2,457; reduction 168/2,625=6.40 percent.
+Case counts by system are 63, 40 and 65.
+
+External: 279 blocks, 57 fixed-three/adaptive-two cases, all matched at batch
+success one half. Fixed total 743; adaptive with fixed fallback 686;
+reduction 57/743=7.6716016... percent, correctly rounded to 7.67 percent.
+Case counts by system are 13, 18 and 26.
+
+Thus 225 is the resource-saving subset and 222 is the matched-half subset.
+The source keeps these counts distinct. Each qualifying block saves one of
+three necessary and sufficient fixed readings. The complete-panel percentage
+uses summed minimum fixed readings, not a changed denominator or an average
+of selected case-level ratios. Default external results exactly match the
+external rows of the complete ledger; they do not independently reproduce
+the original panel. Producer/checker bytes match their execution hashes.
+
+The recorded independent check contains 1,098 shortest-path minima, 35,136
+fixed-batch widths, 737,856 feasible endpoint pairs, 18,093 strict insufficient
+batch checks and 41,400 adaptive endpoint pairs for 500 covers. The remaining
+15 cases with a minimum of at most two require one reading. This reviewer
+checked source hashes and reconstructed table arithmetic rather than rerunning
+all those endpoint calculations. The mathematical checker is separately
+implemented while sharing disclosed source-binding code.
+
+ORIGINALITY AND THE UNIQUE OPTIMAL MIXTURE
+The unchanged theorem retains matching bounds for adaptive success one and
+optimal randomized-batch success 1/m, with two affine targets, two unit-cost
+coordinate queries, and m>=3. The corollary realizes all pairs among three
+nonnegative predictors and preserves the threshold range. The growing query
+dictionary, shrinking normalized margin and sufficient three-query fixed
+alternative remain explicit.
+
+The new support consequence is exact. At adverse record x_i only {t,z_i}
+succeeds. Therefore positive worst-record success requires every designated
+batch to have positive mixture probability. Attaining 1/m forces every mass
+to equal 1/m and leaves no probability for other batches. This is uniqueness
+of the distribution of preselected unordered batches, not query order or
+implementation. Early stopping cannot improve a preselected batch's success
+and cannot evade these necessary weights. The continuum cover establishes
+attainment. The independent rational checker completed 126,195 width
+evaluations over seven finite family sizes without producer imports or LP
+solvers; its finite scope remains distinct from the all-m proof.
+
+A fresh primary-source comparison in this turn inspected Kurtz (2026),
+Theorem 2/Example 5 and Theorem 11, and Krieg, Novak and Ullrich (2025),
+Section 2, Proposition 4.1 and Section 6.3. The earlier attribution to local
+diameters, vector recovery, minimax reasoning and adjustable robust
+optimization remains intact. The revised paragraph precisely identifies
+the lost concavity when scalar conditional widths are combined by a maximum.
+Kurtz's region-dependent policy counts permit increasing complexity; the
+claim here is the explicit coordinate-query realization and matching exact
+probability/support result, not a new generic sparse-policy principle.
+The source-specific comparison and verified publication detail for
+Kunsch--Wnuk are retained in originality_resolution_20261014/REVIEW.txt.
+No exact duplicate of the stated combination was identified in the inspected
+statements. This bounded assessment is not an exhaustive priority claim.
+
+PRACTICAL SCOPE AND PREVIOUS NEGATIVE CONTROLS
+The application now computes the least sufficient fixed reading count
+instead of relying only on an assumed two-reading cap. It establishes a
+specific information-resource advantage: one fewer scalar reading while
+preserving all-completions joint assurance. The result immediately states
+its tradeoff: an answer-dependent second acquisition round replaces three
+readings that could have been selected together.
+
+The source does not translate this result into measured money, latency,
+device-calibrated robustness or a source-enforced access restriction. Bulk
+retrieval remains preferable on the measured unrestricted API. The exact
+uncapped model is distinguished from the capacity and error controls.
+The 351/67 open full-panel precision gaps remain visible and do not become
+claims of globally solved precision-optimal batching. External best-model
+certification remains 207 adaptive versus 208 greedy; interval precision
+is not presented as uniform model-selection superiority.
+
+The retained finite-witness proposition still concerns five exact prefix
+queries with budget at most two. Its 19/20 bound is non-tight and its 583
+no-certainty cases are not assigned fabricated optimal adaptive budgets.
+The new complete fallback guarantees half-width using sufficient fixed
+plans; it does not claim global optimality over arbitrary adaptive budgets.
+The abstract, introduction and conclusion preserve these boundaries.
+
+RESOLVED MINOR POINTS
+The unit-simplex and nonnegative-threshold definition is now explicit in
+the main minimum-budget method. The extra acquisition round is now stated
+beside the one-third reading reduction. No further correction was identified
+within this review's scope. No external person was contacted.
+
+FINAL PROSE SCOPE AUDIT
+The final revision removes repeated descriptions of panel sizes, forecasts,
+normalization and planning objectives. The method/table definitions preserve
+those facts. The source protocol retains the retrospective chronology and
+the benchmark access contract; the measured API control retains full-range
+capability, seven returned samples including five internal readings, exact
+request counts, timings and bulk's observed advantage. Essential uncertainty
+qualifications remain in the measurement-model table and source-variation
+paragraph. Cap-compatible subsets, fixed endpoints, uncalibrated errors,
+the uncapped greedy comparator and globally unresolved precision cases all
+remain explicit. Subjective evaluations of the size of a gain or gap were
+removed while their numerical values and intervals were preserved.
+
+The discussion now proposes scalable planning for larger adaptive budgets
+as future work, rather than claiming literature-wide openness. The revised
+title names the reading-budget and cumulative-data contribution without
+asserting deployment savings. These prose edits do not change the theorem,
+optimization objectives, uncertainty models, empirical results or scope of
+the exact matched certificates. No consequential scope loss was identified.

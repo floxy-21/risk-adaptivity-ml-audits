@@ -1,0 +1,65 @@
+FIRST-READER PROSE REVIEW AND BOUNDED FRAGMENT EDITS
+Date: 14 October 2026 UTC
+Internal AI reviewer: /root/review_pdf_claims
+User attachment: 6bbd8b76-b01f-452b-829b-9a95f12068c9
+
+I edited source fragments only. I did not edit outputs/revised_manuscript.tex,
+compile, build or freeze the manuscript. Before integration its SHA256 remains
+50c931901f559c7efa0ce79a6b1f7cf854bd61548b0d78b3c59f90c7acf8d2d2.
+
+Files changed under work/risk_adaptivity_revision:
+1. counter_adaptive/literature/counter_methods.tex
+2. joint_certification/main_worked_precision_certificate.tex
+3. joint_certification/absolute_width_fragment.tex
+4. joint_certification/noise_manuscript_fragment.tex
+5. joint_certification/review_sensitivity/manuscript_fragment.tex
+6. joint_certification/final_challenger_diagnostics/manuscript_fragment.tex
+7. editorial/front.tex
+8. editorial/pairwise_controls_short.tex
+9. editorial/historical_control_short.tex
+10. editorial/operational_api_results.tex
+11. editorial/discussion_short.tex
+
+Main changes
+- Introduced the coordinate-increment controls by a direct Online Resource 1,
+  S2-S4 reference, replacing an unexplained 'earlier recovery experiment'.
+- Removed 'existing' from the worked example and cut the revision-only sentence
+  that its proof bounds do not replace the evaluated policy or ledger.
+- Defined the fallback replay threshold explicitly as J<=1/2, replacing
+  'original strict-threshold replay'. Kept retrospective reuse and both
+  reporting conventions explicit.
+- Recast the historical experiment as a completed-archive control and report
+  the 0.9738064% mean acquisition saving with its denominator referenced in
+  the supplement, rather than describing a value preserved from a draft.
+- Replaced ambiguous 'unchanged original widths' in the noisy shared analysis
+  by 'uncapped noiseless initial widths', preserving the normalization exactly.
+- Shortened the absolute-width paragraph and repeated no-financial/no-winner
+  caveats. The measurement-assumptions table, initial definitions and discussion
+  retain these boundaries. The API paragraph still reports bulk as the preferred
+  admissible interface and preserves all actual measurements and their limits.
+- Retained training gates/chronology, post-hoc status, small-panel dependence,
+  unfavorable comparisons, threshold definitions and original-source limits.
+
+Approximately 180 words of duplicated or revision-specific language were
+removed. No scientific number, inequality, query budget, source selector,
+method, ledger or numerical test changed.
+
+False typographical allegations checked
+The current actual PDF page 19 and corresponding fragment already say
+'coordinate 2 in a segment containing coordinate 1 or 3'. No missing number
+was found. Actual page 29 and operational_api_results.tex already close
+'(maximum discrepancy 1.74 x 10^-18)'. No missing parenthesis was found.
+The working cd work/risk_adaptivity_revision command is preserved.
+
+Separate integration ownership
+Root handles declarations, confirmed author attestations, source-data
+availability wording and builder-owned prose. The absolute-width table
+caption is emitted by absolute_widths.py; root will revise that generator
+and regenerate instead of editing only a generated output. The figure
+agent/root handles the generated figure caption. This reviewer did not
+change generative-AI history, terms wording, numerical code or bibliography.
+
+Conclusion
+These are editorial clarity improvements, not evidence that the proofs or
+results were defective. Integrate once, compile the resulting saved source,
+and visually inspect the affected pages before recording final artifact hashes.

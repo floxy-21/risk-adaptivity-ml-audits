@@ -1,8 +1,14 @@
 \section{Results}\label{sec:evaluation}
-The application asks which admissible retrieval method meets a required
-precision. It separates information available before a query, guarantees
-over all compatible records, replay on recorded answers, and actual API
-measurements. All policies in each comparison share the same initial
-information and measurement model. Scalar readings, network requests and
-feedback rounds are different resources. The protocol must identify which
-resource is limited before comparing methods.
+We report precision guarantees, recorded outcomes and the reading budgets
+needed to meet the half-width target. All methods use the same initial
+information and permitted queries.
+The exact-reading panel divides into three acquisition decisions:
+\[
+1{,}098=
+\underbrace{290}_{\text{fixed two suffice}}+
+\underbrace{225}_{\text{feedback saves one}}+
+\underbrace{583}_{\text{more than two required}}.
+\]
+Within the 225 reading-saving blocks, 191 isolate the joint-only mechanism.
+Of the 222 matched-half certificates, 179 remain valid throughout
+$[0.49,0.51]$. The following analyses use these fixed subsets.

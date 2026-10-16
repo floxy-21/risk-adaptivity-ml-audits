@@ -1,0 +1,26 @@
+\paragraph{Capacity information versus cohort selection.}
+We recomputed minimum fixed budgets on the same compatible records, retaining
+the uncapped width target. Table~\ref{tab:paired-capacity} separates excluded
+members of the original 225 reading-saving blocks from those for which the
+cap makes a fixed batch sufficient. At $E/2$, only 7 original and 2 external
+members still require feedback. The full capped counts of 56 and 4 also
+include 49 and 2 previously unguaranteed blocks that become adaptive-certifiable.
+At $E/3$, every compatible member of the original 225 becomes fixed-certifiable.
+The minimum fixed totals on identical compatible subsets fall from 2,509 to
+1,840 and from 543 to 424 at $E/2$, and from 2,003 to 768 and from 538 to 220
+at $E/3$, for the original and external panels respectively. This attributes
+the change to both exclusions and genuinely stronger information.
+
+\begin{table}[htbp]\centering\small
+\caption{Capacity transitions within the original 225 reading-saving blocks.
+The last two columns partition compatible members. The cap and precision
+target are the same for both acquisition policies.}
+\label{tab:paired-capacity}
+\begin{tabular}{llrrrr}\toprule
+Panel & Cap & Reference & Excluded & Fixed $\leq2$ & Still needs feedback\\\midrule
+Original & $E/2$ & 168 & 8 & 153 & 7\\
+External & $E/2$ & 57 & 17 & 38 & 2\\
+Original & $E/3$ & 168 & 58 & 110 & 0\\
+External & $E/3$ & 57 & 17 & 40 & 0\\\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "title": "Adaptive Reading Budgets for Joint Forecast Audits with Cumulative Data",
+  "target": "PeerJ Computer Science",
+  "output_sha256": "47167e289fe4be679605071b8529ea9294758990640c7bdea3ba6479dfb90bf1",
+  "abstract_words_whitespace": 233,
+  "online_extended_methods_sha256": "e43dc7f249d35c20246f00ae529f227230e9368392f1337ba23fea1acb2f021f",
+  "labels": 34,
+  "references": 27,
+  "citation_style": "author-year; alphabetized first-author surnames",
+  "historical_empirical_result_changes": false
+}

@@ -1,0 +1,26 @@
+\paragraph{Separating shared-budget difficulty from absolute loss scale.}
+We compute the minimum fixed budget for each contrast separately and for the
+six contrasts together. A block has a \emph{joint-only obstruction} when every
+scalar contrast needs at most two fixed readings, but their joint requirement
+needs three. We also enumerate contrast subsets to identify the smallest
+number that causes this obstruction. A contrast is individually binding when
+deleting it lowers the joint minimum fixed budget; redundant constraints can
+make several contrasts collectively binding without any single one passing
+this deletion test.
+
+We recorded an absolute-floor sensitivity protocol before computing its
+outcomes. For each system, let $M_2$ be mean squared hourly consumption over
+the days used for its frozen model fits. We replace the relative requirement
+by
+\[
+ W_r\leq \max\{W_{r,0}/2,\epsilon\},\qquad \epsilon=\gamma M_2,
+\]
+using $\gamma=0.01$ as the primary sensitivity and
+$\gamma\in\{0,0.001,0.005,0.01,0.025,0.05,0.1\}$ as the full grid.
+Both sides have squared-kWh units. We reconstruct $M_2$ from training
+counter differences with the original complete-day and lag-1,2,7 eligibility
+rules, and verify the frozen training means. No withheld evaluation answer
+determines the floor. The fixed-budget and two-query algorithms use the
+resulting contrast-specific thresholds $\max\{1/2,\epsilon/W_{r,0}\}$.
+This is a retrospective sensitivity analysis of precision requirements.
+

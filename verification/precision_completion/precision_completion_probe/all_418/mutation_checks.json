@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "mutation": "altered_coefficients",
+      "rejected": true
+    },
+    {
+      "mutation": "infeasible_profile",
+      "rejected": true
+    },
+    {
+      "mutation": "missing_cover_branch",
+      "rejected": true
+    },
+    {
+      "mutation": "invalid_batch_probability",
+      "rejected": true
+    },
+    {
+      "mutation": "invalid_adverse_probability",
+      "rejected": true
+    },
+    {
+      "mutation": "inflated_claimed_lower_bound",
+      "rejected": true
+    },
+    {
+      "mutation": "empty_case_selection",
+      "rejected": true
+    },
+    {
+      "mutation": "truncated_case_selection",
+      "rejected": true
+    }
+  ],
+  "tests": 8,
+  "source_case": "external/hpm_1/2025-07-02/00",
+  "checker_sha256": "3897dc12b5927acaca5c926c0c7eb8cb34e2c9e4aa05d337d396dfc6ced0a345",
+  "report_sha256": "48409fb450fd8d020f8b1476a1c84e028b518ac33035b3b82c8e73c11954f25a"
+}

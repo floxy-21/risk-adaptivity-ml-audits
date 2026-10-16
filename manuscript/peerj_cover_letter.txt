@@ -1,27 +1,57 @@
 Dear Academic Editor,
 
-Please consider "Risk and Adaptivity in Certifying Machine-Learning Model Comparisons" as a Research Article in PeerJ Computer Science.
+Please consider "Adaptive Reading Budgets for Joint Forecast Audits with Cumulative Data" as a Research Article in PeerJ Computer Science.
 
-We request a handling editor and reviewers with expertise in exact optimization, optimal recovery, information-based complexity, robust optimization, or the mathematical foundations of machine learning. The main contribution is an acquisition algorithm and its proof of assurance; the forecasting models supply the application.
+We study how many cumulative readings an auditor needs to guarantee the
+precision of several forecast comparisons, and when feedback reduces this
+requirement. The contribution combines exact acquisition algorithms, matching
+lower bounds and executable certificates.
 
-The paper studies when feedback helps certify machine-learning comparisons under a fixed measurement budget. Its new central boundary uses only two affine targets and two unit-cost coordinate queries. For every integer m >= 3, adaptation guarantees the required precision while the optimal randomized fixed batch has worst-case success exactly 1/m. Each target separately admits a fixed two-query guarantee. The separation also holds for all three paired squared-loss contrasts of three constructed nonnegative forecast vectors. The main text supplies the feasible set, policies and matching bounds against every admissible randomized batch.
+The central construction uses two affine targets and two coordinate queries.
+For every integer m >= 3, adaptation guarantees precision while optimal
+randomized batching has worst-record success exactly 1/m. Every one of m
+specified batches is necessary for positive worst-record success, and their
+uniform mixture is uniquely optimal. Each scalar target separately has a fixed
+two-query guarantee. We distinguish this joint obstruction from established
+vector recovery and minimax reasoning. The main text supplies the proof.
 
-A scalar risk classification and a separate sparse-policy bound provide the foundation. The latter gives the one-half batch floor for a single target. The new construction keeps the budget and number of targets fixed while its measurement dictionary grows; its normalized margin shrinks, and three fixed queries suffice. We distinguish this exact assurance boundary from established vector recovery, minimax and sparse-policy results. The earlier 1/2-versus-2/3 joint mean-width separation and worked real-data certificate remain as complementary results.
+The application uses frozen forecasts and cumulative-meter records from six
+systems. On 225 of 1,098 blocks, two adaptive readings replace three necessary
+and sufficient fixed readings. Separate scalar-budget checks identify the
+joint-only mechanism on 191 of those blocks. On 222 blocks, matching certificates
+establish adaptive certainty versus randomized-batch worst-record success one
+half; 179 retain this exact separation throughout thresholds [0.49,0.51].
 
-The application compares four frozen forecasting models using two cumulative-meter readings shared across all six model pairs. On 165 original and 57 external blocks, adaptation guarantees the required precision while the best randomized batch has exactly 50% worst-case success. Recorded success on these mathematically identified subsets is 100% for adaptation, compared with batch expectations of 65.45% and 64.91%. The complete panels retain the fixed-batch and greedy controls: adaptive precision gains over them are 7.81/11.11 and 2.20/2.15 percentage points, respectively.
+We solve the batch-precision game on all 1,098 blocks, closing every previous
+optimization gap. Rational branch covers and adverse distributions make the
+optima verifiable without trusting the LP solver. A common coefficient-only
+secondary rule chooses the policy before recorded replay.
 
-A declared 1% reading-error sensitivity gives 45 external blocks with verified adaptive guarantees that no randomized batch can match. Capacity constraints reduce this advantage, and unrestricted bulk retrieval remains preferable on the measured API. We report these controls, paired block outcomes and dependence-aware descriptive intervals. The shared-budget analysis reuses existing sources and is labeled retrospective.
+A training-scale absolute precision floor preserves assurance for all 57 baseline
+external blocks; 39 now need no feedback. Matched capacity controls also identify
+when fixed acquisition suffices. The study is retrospective.
 
-The contribution concerns algorithms for acquiring verification data and certifying ML comparisons. Supplemental Data S1 and S2 supply proofs, executable checks, frozen inputs, per-case witnesses and a table-to-command map. The new construction has solver-free rational certificates and a separate 7,131-LP check at m = 3, 5 and 10; the universal statement follows from the analytic proof. Together the supplemental files occupy 41.59 MB and use one documented reproduction command after extraction into the same directory. The package separates offline replay, source regeneration and model refitting. A completed source-to-table run also reproduced both empirical panels and all 1,098 outcome rows. The new theorem does not relabel those panels as a new experiment. The main text gives the planner and absolute-width example. A completed source-to-table run also reproduced both panels and all 1,098 outcome rows. The main text gives the planner and absolute-width example. The focused 28-page manuscript pairs the fixed-two-query joint-precision boundary with an assurance-feasibility consequence: on 489 original and 94 external cases, no randomized adaptive two-reading policy can guarantee precision under the declared uncapped exact-total noiseless prefix model. The 19/20 upper bound is not claimed optimal. Exact source-bound witnesses use no recorded answers; the default offline replay independently regenerates the external certificates.
+Supplementary analyses also document tolerance-based model-choice fetches avoided
+with retained endpoints (8/819
+original; 198/279 external),
+while cold and historical access favor direct bulk or archive-aware range batching;
+these conditional replay counts are not monetary savings.
 
-The editable manuscript and both supplemental files accompany the submission materials.
+Supplemental Data S1 and S2 (49.42 MB combined) contain
+code, frozen inputs, per-case ledgers, exact witnesses and a results-to-command
+map. All 101 scientific replay steps passed before two final prose clarifications. The final package preserves identical scientific code, inputs and results; a separate editorial check rebuilt the revised manuscript. The package
+separates bundled certificate replay, raw-source reconstruction and fresh model
+fitting. Editable source accompanies the 28-page manuscript.
 
-This manuscript is unpublished and is not under consideration elsewhere. I received no external funding and declare no competing interests. The manuscript discloses generative-AI assistance under my supervision. I am the sole author and corresponding author.
+We request handling expertise in algorithms, exact optimization, optimal recovery,
+information-based complexity or robust optimization. These match the methods;
+the forecasting models provide the application.
+
+This manuscript is unpublished and is not under consideration elsewhere. I
+received no external funding and declare no competing interests. The paper
+discloses supervised generative-AI assistance. I am the sole corresponding author.
 
 Sincerely,
 Jishan Kapoor
-Independent Researcher
-Toronto M4Y 1C9, Canada
+Independent Researcher, Toronto M4Y 1C9, Canada
 kapoorjishan19@gmail.com
-
-[Prepared locally; not sent or submitted.]

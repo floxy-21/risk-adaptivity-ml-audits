@@ -1,0 +1,63 @@
+THRESHOLD-INTERVAL CERTIFICATE
+
+Let F={x>=0:sum_h x_h=1}. For fixed prefix batch Q and normalized contrast r,
+write its normalized interval width as v_Qr.x, where v_Qr,h is the range of
+contrast r's coefficients in the segment of Q containing hour h. Thus
+J_Q(x)=max_r v_Qr.x. All inputs below are exact rational numbers.
+
+1. Frozen adaptive policy
+For each stored branch t in [a,b], the first query is k, the second is j, and
+sum_{h<=k} x_h=t. For a fixed contrast, the maximum width is the largest
+coefficient v_Qr,h in the first region times t plus the largest coefficient
+in the second region times (1-t). The maximum over contrasts is convex
+piecewise affine in t, so its maximum on [a,b] is attained at an endpoint.
+Check contiguous coverage of [0,1], evaluate both endpoints of every branch,
+and let A be the largest value. Then the frozen adaptive policy guarantees
+J<=A for every x in F. Endpoint ties are harmless because both adjacent
+branch choices are checked at their common endpoint.
+
+2. Frozen uniform mixture of two batches Q1,Q2
+For every contrast pair r,s, set
+  p_rs = min_{lambda in [0,1]} max_h {
+                 lambda v_Q1r,h + (1-lambda) v_Q2s,h }.
+This is computed exactly at endpoints or pairwise intersections of the six
+affine functions of lambda. A multiplier attaining p_rs certifies that both
+v_Q1r.x and v_Q2s.x cannot exceed p_rs simultaneously. Set P=max_rs p_rs.
+If both J_Q1(x)>P and J_Q2(x)>P, choose their maximizing r,s, contradicting
+the multiplier inequality. Therefore at least one selected batch succeeds
+at every x whenever tau>=P. Their fixed equal mixture has success >=1/2.
+
+The independent checker derives p_rs from the primal problem
+  max_{x in F} min(v_Q1r.x,v_Q2s.x).
+A hypograph vertex projects either to a simplex vertex or to a two-coordinate
+edge point where the two forms agree. Enumerating these points produces a
+matching rational value without using the producer's dual calculation.
+
+3. Frozen adverse distribution
+Let mu be the stored probability distribution over feasible adverse records.
+For each of the ten two-prefix batches Q define
+  U_Q = min { z in {J_Q(v):mu_v>0} :
+                        sum_v mu_v 1{J_Q(v)<=z} > 1/2 }.
+Such a value exists because eventually every record succeeds. Put U=min_Q U_Q.
+For every tau<U and every fixed batch Q, its success averaged over mu is at
+most 1/2. The same holds for every randomized mixture of fixed batches.
+Consequently some feasible record has success at most 1/2 for that mixture,
+giving an upper bound of 1/2 on the full continuum minimax success. A finite
+adverse set is sufficient for this upper bound. Fewer than two readings cannot
+improve this value: adding a prefix observation only narrows all intervals,
+so every smaller batch is dominated by one of the enumerated two-query batches.
+
+4. Matching bounds
+Set L=max(A,P). For every tau in [L,U), adaptive success is 1, the uniform
+fixed mixture gives a lower guarantee 1/2, and the adverse distribution gives
+the upper bound 1/2. Thus the optimal randomized batch success is exactly 1/2.
+Success uses the closed event J<=tau, which makes U an excluded endpoint.
+The complete upper-endpoint behavior is retained as each batch's success
+strictly below and at its first crossover.
+
+Scope
+The interval is sufficient for these frozen policies and adverse weights.
+The method does not decide what happens outside it after choosing different
+policies or adverse distributions. The calculation is an exact-total,
+uncapped, noiseless guarantee; physical capacity and error models are separate.
+No recorded energy allocation is used to select the threshold or the policy.

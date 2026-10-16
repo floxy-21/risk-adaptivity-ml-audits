@@ -1,0 +1,98 @@
+PRACTICAL-VALUE CHALLENGE -- 14 October 2026 UTC
+Current source: outputs/revised_manuscript.tex
+SHA256 e433e8d492669fab7614ec356f9a269a2eb8c3da83ddf09b534b6185c7da9268
+Read-only internal review. No manuscript or scientific result changed.
+
+VERDICT
+No main-source correction is warranted. The paper already connects its
+guarantees to an executable acquisition decision. The remaining limitation
+is evidence of deployed value under a real restricted-reading contract,
+not an omitted algorithm step or code defect that an editorial change
+would resolve. Adding another generic practical-benefit paragraph would
+repeat existing material. Do not invent a deployment to fill that boundary.
+
+WHAT THE USER OF THE METHOD CAN ACTUALLY DO
+Who: an analyst or model-evaluation engineer preparing a comparison from
+saved forecasts and incomplete verification records.
+When: after a declared evaluation block has ended and its retained counter
+endpoints are available, before retrieving optional internal values.
+Inputs: forecast contrasts, valid record constraints and endpoints, a
+precision requirement, permitted query dictionary, reading/round limits,
+and admissibility of bulk access.
+Output: a checked acquisition prescription and conditional width guarantee.
+On the 222 matched-half shared-query instances, feedback guarantees all
+six comparisons reach half-width with two readings. No randomized fixed
+two-reading batch can promise more than 50% worst-case success. Thus a
+requirement for guaranteed precision changes the protocol choice before
+the withheld answers are read. This is an assurance benefit under equal
+budgets, not a new forecasting accuracy or downstream model-choice result.
+
+The current main text already communicates this chain:
+- Introduction lines 66-113: retrieval alternatives, precision requirement,
+  fixed forecasts, 165/57 matching certificates and complete-panel scope.
+- Shared planner lines 1066-1135: coefficients, first-query selection,
+  online successor and terminal certificate.
+- Worked certificate lines 1138-1266: HPM1, a specific six-hour block,
+  boundary2 then4/1 switch, all-completions bounds, exact batch limitation
+  and original loss units.
+- Results lines 1681-1757: the actual range API, measured bulk advantage,
+  admissible protocol selection, task binding and declared cost frontier.
+- Discussion lines 1803-1863: no-query/bulk/fixed/adaptive decision,
+  assurance interpretation, model-choice control and implementation breadth.
+
+EXECUTABLE ROUTES CHECKED BY READING THE CODE
+1. joint_certification/empirical_shared_audit.py
+   geometry(c) computes the fixed and adaptive shared-query plans from
+   coefficients before load_replay_inputs/replay opens the optional
+   answers. It exports first boundaries, conditional affine lines,
+   successor dictionaries and batch mixtures. Companion exact certificate
+   programs prove the165/57 matched precision instances.
+2. protocol_selection/bound_workflow.py
+   BoundWorkflow validates saved task identities, forecast/contrast hashes,
+   retained endpoints and units. plan(task, interface) chooses among
+   supplied certificates; execute(...) passes complete task-bound requests
+   to caller-provided acquisition adapters and validates response metadata.
+3. protocol_selection/selector.py
+   select(...) checks permitted boundaries, bulk/fixed/adaptive permissions,
+   reading/round caps, transport metadata and requested priority.
+   execute(...) dispatches the chosen recipe, checks feasible transcripts,
+   and returns a certified width upper bound and recorded answers.
+   It does not pretend to implement a provider network service.
+4. protocol_selection/APPLICATION_WORKFLOW.txt
+   Documents inputs, acquisition decisions, dispatch envelopes and
+   three concrete saved task examples.
+5. protocol_selection/results/report.json
+   Records116 case/scenario choices. Public bulk selects29/29.
+   Restricted-three uses22 adaptive-two and7 fixed-three,65 readings/51 rounds.
+   Restricted-one-round uses29 fixed-three,87 readings/29 rounds.
+   Restricted-two-reading accepts22 and escalates7 without callbacks.
+6. protocol_selection/independent_binding_results/report.json
+   Checks29 descriptors,58 endpoints, forecast hashes,109 constructed
+   dispatches,7 blocked cases and malformed/stale task-response rejection.
+   These are implementation checks, not109 field deployments.
+7. protocol_selection/cost_frontier_results/report.json
+   Gives exactly87+29r versus65+51r and the switching conditionr=1.
+   These are declared costs; actual API data favor bulk.
+
+IMPORTANT SCOPE DISTINCTIONS TO PRESERVE
+The task-bound protocol wrapper currently supports the29 pairwise
+bounded-error tasks. It is not a deployment wrapper for all222 joint
+certificates. The main manuscript explicitly says29 external pairwise cases,
+while the general joint planner and proof/replay pipeline remain separate.
+The wrapper returns a guaranteed width upper bound, not a claim that it has
+selected the best model or supplied a complete production reporting system.
+New tasks require new verified certificates; unsupported tasks are rejected.
+A catalogue exclusion alone is not an impossibility proof.
+The actual API supplies bulk access. No observed restricted contract,
+measured financial saving, calibrated physical error bound or production
+latency reduction is established. The paper already retains these facts.
+
+REVIEW IMPLICATION
+Practical value is defensible as an assurance-compatible protocol choice
+with inspectable outcomes, particularly the222 exact shared-query cases.
+Its operational-economic magnitude remains unmeasured. PeerJ's validity
+criteria do not require invented financial impact. The paper should be
+judged on the concrete conditional claim it proves and implements, not
+on a stronger deployment claim that the data do not support.
+No new study or cosmetic practical pitch is required to close this review.
+

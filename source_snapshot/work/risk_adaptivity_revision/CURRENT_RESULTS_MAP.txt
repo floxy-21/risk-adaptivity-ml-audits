@@ -1,6 +1,86 @@
 CURRENT FOCUSED MANUSCRIPT: TABLE AND VERIFICATION CORRESPONDENCE
-Risk and Adaptivity in Certifying Machine-Learning Model Comparisons
+Adaptive Reading Budgets for Joint Forecast Audits with Cumulative Data
 Source: outputs/revised_manuscript.tex
+CURRENT ADDITION (16 October 2026, safe retrieval gate)
+
+Avoiding retrieval when tolerance-based model choice is already certified:
+  python work/risk_adaptivity_revision/practical_retrieval_gate/run.py --out outputs/retrieval_gate
+  Main retrieval-gate table: immediate warm requests 819 -> 811 original,
+  279 -> 81 external; cold endpoint setup and whole-period batching shown
+  alongside. The tolerance remains 0.01 of the fixed training second moment.
+  This contract differs from joint half-width precision. All four models
+  share each fetch. The exact checker independently reconstructs 1,098 gates
+  from saved model vectors and checks 39,528 simplex-vertex loss differences,
+  request/cache ledgers, range frontiers and all 12 saved API responses.
+  It issues no network requests and validates all 279 external decisions.
+  The actual source-record audit is a separate command documented in
+  practical_retrieval_gate/README.txt; it does not refit any model.
+  inputs/reported_gate_timing.json retains the printed measured timing;
+  a fresh run records its own timing separately. Full default replay includes
+  this extension. Exploratory decision-planner prototypes are not part of
+  the manuscript or this scientific package.
+
+CURRENT ADDITIONS (15 October 2026, empirical review)
+
+Scalar versus shared budgets and absolute precision:
+  python work/risk_adaptivity_revision/joint_certification/review_mechanism/analyze.py --output-dir outputs/review_mechanism
+  python work/risk_adaptivity_revision/joint_certification/review_mechanism/check.py --results outputs/review_mechanism
+  python work/risk_adaptivity_revision/joint_certification/review_mechanism/check_training.py --results outputs/review_mechanism
+  python work/risk_adaptivity_revision/joint_certification/review_mechanism/diagnose_floor.py --results outputs/review_mechanism
+  python work/risk_adaptivity_revision/joint_certification/review_mechanism/decision_plan.py --results outputs/review_mechanism
+  Main methods paragraph and results paragraph:191/225 joint-only; all57
+  external original cases remain assured;70/88 selected/minimumfixed readings.
+  Outputs include all1098 blocks, all6 scalar budgets, binding widths in
+  kWh^2, the complete seven-floor grid, actual fixed/branch plans, exact checks.
+  Default reuses pinned derived original training moments, and independently
+  reconstructs external training. See review_mechanism/README.txt for both-
+  source training/counter regeneration and its completed hash-bound report.
+
+Certified threshold intervals, not recorded-policy replay rates:
+  python work/risk_adaptivity_revision/joint_certification/review_thresholds/threshold_stability.py --output-dir outputs/review_thresholds
+  python work/risk_adaptivity_revision/joint_certification/review_thresholds/check_threshold_stability.py --results outputs/review_thresholds
+  Main threshold table:222 [L,U) intervals;179 cover the whole[.49,.51] band.
+  These default commands verify frozen rational certificate inputs. Pass
+  --chain-dir to additionally verify their full source-record derivation.
+
+Capacity information versus cohort selection:
+  python work/risk_adaptivity_revision/joint_certification/review_capacity/analyze_capacity.py --output-dir outputs/review_capacity
+  python work/risk_adaptivity_revision/joint_certification/review_capacity/check_capacity.py --results outputs/review_capacity
+  Default source-bound route covers279 external blocks and both caps.
+  python work/risk_adaptivity_revision/joint_certification/review_capacity/check_capacity.py --results work/risk_adaptivity_revision/joint_certification/review_capacity/executed_all --certificate-inputs work/risk_adaptivity_revision/joint_certification/review_capacity/executed_all/checker_inputs.json
+  The latter independently verifies all70272 both-panel fixed bounds using
+  supplied normalized coefficients; raw compatibility is carried metadata.
+  The completed full-source run checks all2196 compatibility flags directly;
+  its separate regeneration commands are in review_capacity/README.txt.
+
+All default fresh outputs are compared with the frozen manuscript inputs by
+  python work/risk_adaptivity_revision/joint_certification/check_review_revision.py
+
+CURRENT ADDITIONS (14 October 2026, reading-budget revision)
+
+Theorem 2 optimal-mixture paragraph:
+  python -S work/risk_adaptivity_revision/two_target_boundary/verify_support.py --output outputs/two_target_support.json
+  Compares seven explicit family sizes using 126,195 exact rational width
+  evaluations. two_target_boundary/optimal_mixture.tex supplies the all-m
+  argument. This identifies necessary support m and unique uniform optimal
+  mixture; it does not relabel prior sparse-policy theory as newly invented.
+
+Section label sec:minimum-fixed-budget; table tab:minimum-reading-budget:
+  python -S work/risk_adaptivity_revision/joint_certification/reading_budget/reading_budget.py --output-dir outputs/reading_budget_external
+  python -S work/risk_adaptivity_revision/joint_certification/reading_budget/check_reading_budget.py --results outputs/reading_budget_external
+  python -S work/risk_adaptivity_revision/joint_certification/reading_budget/check_partition_general.py --output outputs/reading_budget_general.json
+  Inputs: source-bound normalized forecast contrasts and unchanged half-width
+  threshold. No withheld optional answers are used. Default derives 279
+  external blocks only. The reading_budget/README.txt gives the exact
+  --chain-dir commands for all 1,098 blocks after the pinned original raw route.
+  Saved executed_all/report.json and ledger.json support 225 cases needing
+  three fixed or two adaptive readings; executed_all/independent_check.json
+  verifies 35,136 fixed-batch bounds with feasible endpoint witnesses and an
+  independent shortest-path minimum. The linear scan is also compared with
+  enumeration on 180 constructed rational instances. The exact two-source
+  reading totals are 2625 to 2457 and 743 to 686. These are sufficient optional
+  reading counts, not HTTP requests, stopping times, or measured money.
+
 Use semantic LaTeX labels below; table numbers change when new evidence is inserted.
 The focused main paper contains the scalar two-query precision floor, the
 complete fixed-budget two-target boundary and all-three-pair corollary, the
@@ -1078,6 +1158,9 @@ outputs/final_review_independent.json. The main system table is
 tab:joint_system_effects; S8 reports tab:joint_long_dependence.
 Full-panel precision counts classify closed-zero, closed-half, closed-one and
 open-gap bounds separately from the overlapping fallback-policy classification.
+These are the retained pre-completion comparator results. The current
+continuum completion and coefficient-only secondary policy are documented
+below; they supersede the open-gap claim without changing this older replay.
 The independent checker recounts all 1,098 derived precision records and checks
 116 temporal/system-omission comparisons. Archived full coefficient-only plans
 were matched before these derived summaries were frozen; public replay does
@@ -1155,3 +1238,62 @@ exact conditional curves with the unchanged five-target recorded replay.
 Default job final_practical_figure checks 735 exact envelope equalities and
 30 recorded success points. TikZ is embedded in the main editable source;
 standalone PDF/PNG, generation source and rational figure_data.json are bundled.
+
+CONTINUUM PRECISION COMPLETION AND OBJECTIVE-MATCHED BATCH REPLAY
+The original coefficient catalog is bundled at:
+  joint_certification/precision_completion_probe/inputs/precision_catalog.json
+It is byte-identical to the completed full source-to-table chain's precision
+catalog. The default route checks saved forecast-derived coefficients; it does
+not refit models or regenerate the original BLEM source records.
+
+From the extracted root, reconstruct and verify every previously open case:
+  python work/risk_adaptivity_revision/joint_certification/precision_completion_probe/complete_precision.py --plans work/risk_adaptivity_revision/joint_certification/precision_completion_probe/inputs/precision_catalog.json --selection all --output-dir outputs/precision_completion_replay
+  python work/risk_adaptivity_revision/joint_certification/precision_completion_probe/check_completion.py --plans work/risk_adaptivity_revision/joint_certification/precision_completion_probe/inputs/precision_catalog.json --results outputs/precision_completion_replay
+  python work/risk_adaptivity_revision/joint_certification/precision_completion_probe/test_rejection.py --results outputs/precision_completion_replay
+Default jobs: precision_completion_all_open_cases,
+precision_completion_exact_verifier, precision_completion_corruption_tests.
+Outputs: report.json, independent_check.json, mutation_checks.json in the
+declared output directory. Rational branch covers prove the lower guarantee
+for every feasible simplex record; feasible adverse distributions give the
+upper guarantee. The checker enumerates all 1,024 failure masks and enforces
+the complete declared source-catalog selection.
+
+Apply the same coefficient-only secondary rule to the full panel:
+  python work/risk_adaptivity_revision/joint_certification/precision_completion_probe/refine_secondary.py --catalog work/risk_adaptivity_revision/joint_certification/precision_completion_probe/inputs/precision_catalog.json --completed outputs/precision_completion_replay/report.json --output-dir outputs/precision_refined_replay
+  python work/risk_adaptivity_revision/joint_certification/precision_completion_probe/check_completion.py --plans work/risk_adaptivity_revision/joint_certification/precision_completion_probe/inputs/precision_catalog.json --completed outputs/precision_completion_replay/report.json --results outputs/precision_refined_replay
+  python work/risk_adaptivity_revision/joint_certification/precision_completion_probe/replay_completed.py --results outputs/precision_refined_replay
+  python work/risk_adaptivity_revision/joint_certification/precision_completion_probe/check_recorded_replay.py --results outputs/precision_refined_replay
+Default jobs: precision_completion_secondary_full_panel,
+precision_completion_secondary_exact_verifier,
+precision_completion_recorded_replay, precision_completion_recorded_replay_check.
+The secondary LP reduces worst expected joint width on the precision-optimal
+face. Its numerical tie/slack convention and any safe primary fallback remain
+explicit; exact primary precision is reverified before recorded answers are
+read. Recorded replay uses unchanged saved seven-day synchronized calendar
+bootstrap draws. Outputs include report.json, independent_check.json,
+recorded_replay_cases.json, recorded_replay_summary.json and
+recorded_replay_check.json. Exact precision
+optimality does not assert optimal recorded performance or model selection.
+
+DECISION-TOLERANCE DIAGNOSTIC WITH UNCHANGED POLICIES
+  python work/risk_adaptivity_revision/joint_certification/decision_tolerance_probe/replay_saved.py --out outputs/decision_tolerance_replay
+Default job: decision_tolerance_saved_endpoint_replay. This standard-library
+entry reconstructs all 1,098 blocks' epsilon-decision outcomes from bundled
+derived pair endpoints, orientations, training moments, and frozen policy
+mixtures. It checks 38,430 block/policy/factor rows, 65,880 directed endpoint
+records, the four paired outcome cells, system summaries, and 56 synchronized
+seven-day bootstrap intervals. The primary tolerance is 0.01 times the
+training-only hourly second moment; the full declared factor grid is retained.
+It is a retrospective diagnostic of the unchanged precision policies, not a
+new decision-optimized policy or a calibrated financial decision threshold.
+
+Inputs: decision_tolerance_probe/results/{saved_endpoint_inputs.json,
+case_outcomes.csv,report.json}, protocol.json, and the pinned analysis source.
+Output: outputs/decision_tolerance_replay/report.json plus regenerated outcomes
+and summaries. Original BLEM fine-answer vectors are not distributed.
+The default command checks derived endpoints and does not reconstruct raw data.
+For source-linked regeneration after the separately documented full chain:
+  python work/risk_adaptivity_revision/joint_certification/decision_tolerance_probe/analyze.py --chain-dir COMPLETE_SOURCE_CHAIN
+  python work/risk_adaptivity_revision/joint_certification/decision_tolerance_probe/check.py --chain-dir COMPLETE_SOURCE_CHAIN
+The optional local source run creates its fine-answer certificate file; that
+file is explicitly excluded from both full and publisher distribution ZIPs.

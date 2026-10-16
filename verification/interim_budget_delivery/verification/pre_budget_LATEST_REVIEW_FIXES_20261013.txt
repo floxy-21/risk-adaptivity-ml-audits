@@ -1,0 +1,66 @@
+CURRENT INTERNAL REVIEW -- 14 October 2026
+Source SHA256: ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07
+PDF SHA256: b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c
+Pages: 28
+Recorded UTC: 2026-10-14T04:31:42.168499+00:00
+
+FOCUSED REVISION AND CURRENT REVIEW
+
+The main manuscript is reduced from 39 to 28 pages while retaining the full
+two-target theorem, its matching lower and upper bounds, the shared-query
+algorithm, a worked real-data certificate and the adverse application controls.
+The scalar penalty classification and older mean-width construction are indexed
+in Online Resource 1, S11 and S14. Historical experiments remain in S1-S15.
+This is a change in presentation, not deletion of unfavorable scientific results.
+
+The new current-model Proposition 2 provides a checkable upper bound against
+every randomized adaptive two-reading policy where deterministic certainty
+is impossible. Each first query has four failing records with one common first
+answer. Uniform mass on all twenty records is independent of the policy seed.
+All 489 original and 94 external excluded blocks have exact certificates;
+11,660 failing-fiber endpoint pairs passed direct rational checks. Separate
+internal code repeated these checks without importing the producer. The 19/20
+bound is conservative, not the optimized randomized-adaptive success value.
+The main proof explicitly scopes this to five permitted internal prefixes and
+the exact, noiseless six-hour model. The quantifiers are for each policy,
+there exists a fixed adverse record, not one universal adverse record.
+
+The practical decision is now complete within that model: use a fixed batch,
+use feedback, or extend an insufficient acquisition contract. This does not
+establish why a real service would enforce two-reading access. The measured
+public API favors bulk; external greedy certifies 208 model winners versus
+207 for adaptation. Capacity/error controls and 351/67 open batch-precision
+gaps remain explicit. Assurance is not equivalent to forecasting accuracy,
+model selection, measured cost savings or deployment validation.
+
+The abstract remains 240 words and the paper follows Introduction, Methods,
+Results, Discussion and Conclusions. The early workflow, exact theorem table,
+algorithm box, coefficient matrix, switch interval and enclosure headers were
+inspected in the rendered PDF. No overflow, underflow or undefined-reference
+warning remains in the final TeX log. A successful desktop compilation is
+recorded separately from the scientific checks.
+
+All previous empirical values and the pinned scientific producer scripts are
+unchanged. Both-source regeneration previously reproduced all 1,098 ledger
+rows and 165/57 matched-half counts exactly, without producer reuse. The new
+assurance output is tied to that source chain. Its default solver-free command
+checks the bundled external panel; original coefficients require the documented
+pinned raw-source route. Current publisher ZIP execution is recorded separately
+in current_clean_package_replay.json; historical successful runs are not
+relabeled as checks of the new source. No new model fitting is claimed.
+
+Current fit assessment: suitable for PeerJ Computer Science consideration as
+a theoretical/computational audit method with conditional application evidence.
+No blocking proof or numeric error was identified in this internal review.
+Reviewers can still judge significance, practical scope and presentation.
+These corrections do not establish a calibrated 90% individual acceptance
+probability or direct-acceptance probability. No external specialist was
+contacted. Journal submission has not occurred; the recorded supported browser
+startup failed before any page or form was reached.
+
+Earlier source-bound reviews and failed/successful reproduction attempts remain
+in history. This memo records current scope without treating AI-assisted checks
+as independent external validation.
+
+FINAL ARTIFACT VERIFICATION
+PASS: 77 steps in a fresh network-disabled stage from the two publisher ZIP files, 1096 manifested members, 1026.08 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 41.59 MB. Full historical archive integrity also passed.

@@ -1,0 +1,913 @@
+{
+  "status": "failed",
+  "failure_kind": "nonzero_subprocess_returncode",
+  "completed_steps": 82,
+  "failed_step_number": 83,
+  "failed_step": {
+    "script": "work/risk_adaptivity_revision/joint_certification/review_mechanism/check_training.py",
+    "arguments": [
+      "--results",
+      "outputs/review_mechanism"
+    ],
+    "returncode": 1,
+    "seconds": 0.8021637999918312,
+    "log": "outputs/risk_step_83.log"
+  },
+  "steps": [
+    {
+      "script": "work/risk_adaptivity_revision/math/check_classification.py",
+      "arguments": [],
+      "returncode": 0,
+      "seconds": 10.215879399998812,
+      "log": "outputs/risk_step_01.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/general/check_general_lp.py",
+      "arguments": [
+        "--output",
+        "outputs/risk_general_replay.json"
+      ],
+      "returncode": 0,
+      "seconds": 1.8878999000007752,
+      "log": "outputs/risk_step_02.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/dual/verify_dual.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/risk_dual_replay"
+      ],
+      "returncode": 0,
+      "seconds": 35.354953200003365,
+      "log": "outputs/risk_step_03.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/dual/summarize_solver_comparison.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/risk_solver_replay"
+      ],
+      "returncode": 0,
+      "seconds": 0.16547629999695346,
+      "log": "outputs/risk_step_04.log"
+    },
+    {
+      "script": "work/certificate_grid_review/summarize_certificates.py",
+      "arguments": [
+        "--source",
+        "public",
+        "--output-dir",
+        "outputs/risk_grid_replay"
+      ],
+      "returncode": 0,
+      "seconds": 3.274862399994163,
+      "log": "outputs/risk_step_05.log"
+    },
+    {
+      "script": "work/randomized_tie_review/verify_ties.py",
+      "arguments": [],
+      "returncode": 0,
+      "seconds": 30.797996200009948,
+      "log": "outputs/risk_step_06.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/two_target_boundary/verify_boundary.py",
+      "arguments": [
+        "--solver-free",
+        "--output",
+        "outputs/two_target_exact.json"
+      ],
+      "returncode": 0,
+      "seconds": 1.047005700005684,
+      "log": "outputs/risk_step_07.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/two_target_boundary/verify_boundary.py",
+      "arguments": [
+        "--output",
+        "outputs/two_target_lp.json"
+      ],
+      "returncode": 0,
+      "seconds": 38.05184529998223,
+      "log": "outputs/risk_step_08.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/two_target_boundary/verify_support.py",
+      "arguments": [
+        "--output",
+        "outputs/two_target_support.json"
+      ],
+      "returncode": 0,
+      "seconds": 22.889673099998618,
+      "log": "outputs/risk_step_09.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/reading_budget/reading_budget.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/reading_budget_external"
+      ],
+      "returncode": 0,
+      "seconds": 3.3271711000124924,
+      "log": "outputs/risk_step_10.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/reading_budget/check_reading_budget.py",
+      "arguments": [
+        "--results",
+        "outputs/reading_budget_external"
+      ],
+      "returncode": 0,
+      "seconds": 25.651568399975076,
+      "log": "outputs/risk_step_11.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/reading_budget/check_partition_general.py",
+      "arguments": [
+        "--output",
+        "outputs/reading_budget_general.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.570271300006425,
+      "log": "outputs/risk_step_12.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/assurance_feasibility/verify_assurance.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/joint_assurance_feasibility"
+      ],
+      "returncode": 0,
+      "seconds": 4.1737074999837205,
+      "log": "outputs/risk_step_13.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/provenance_chain/check_source_guards.py",
+      "arguments": [
+        "--output",
+        "outputs/source_identity_guards.json"
+      ],
+      "returncode": 0,
+      "seconds": 3.228303000010783,
+      "log": "outputs/risk_step_14.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/provenance_chain/check_source_chain.py",
+      "arguments": [
+        "--cohort",
+        "external",
+        "--output",
+        "outputs/source_chain_external.json"
+      ],
+      "returncode": 0,
+      "seconds": 1.4766449999879114,
+      "log": "outputs/risk_step_15.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/absolute_widths.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/joint_absolute_widths"
+      ],
+      "returncode": 0,
+      "seconds": 2.306078499997966,
+      "log": "outputs/risk_step_16.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/review_sensitivity/analyze.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/joint_threshold_sensitivity"
+      ],
+      "returncode": 0,
+      "seconds": 8.498694000008982,
+      "log": "outputs/risk_step_17.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/review_sensitivity/check.py",
+      "arguments": [
+        "--results",
+        "outputs/joint_threshold_sensitivity",
+        "--output",
+        "outputs/joint_threshold_independent.json"
+      ],
+      "returncode": 0,
+      "seconds": 20.786326399975223,
+      "log": "outputs/risk_step_18.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/final_challenger_diagnostics/analyze.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/final_challenger_diagnostics"
+      ],
+      "returncode": 0,
+      "seconds": 9.193238800013205,
+      "log": "outputs/risk_step_19.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/final_challenger_diagnostics/check.py",
+      "arguments": [
+        "--results",
+        "outputs/final_challenger_diagnostics",
+        "--output",
+        "outputs/final_challenger_independent.json"
+      ],
+      "returncode": 0,
+      "seconds": 6.441923600010341,
+      "log": "outputs/risk_step_20.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/final_practical_figure/check_figure.py",
+      "arguments": [
+        "--output",
+        "outputs/final_practical_figure_check.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.6561166000028607,
+      "log": "outputs/risk_step_21.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/proof_check_joint.py",
+      "arguments": [
+        "--output",
+        "outputs/joint_proof.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.8328823000192642,
+      "log": "outputs/risk_step_22.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/empirical_regression.py",
+      "arguments": [
+        "--output",
+        "outputs/joint_regressions.json"
+      ],
+      "returncode": 0,
+      "seconds": 1.1245968999865,
+      "log": "outputs/risk_step_23.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/empirical_shared_audit.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/joint_external_replay"
+      ],
+      "returncode": 0,
+      "seconds": 5.743049500015331,
+      "log": "outputs/risk_step_24.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/empirical_check.py",
+      "arguments": [
+        "--results-dir",
+        "outputs/joint_external_replay",
+        "--output",
+        "outputs/joint_endpoint_check.json"
+      ],
+      "returncode": 0,
+      "seconds": 10.238044600002468,
+      "log": "outputs/risk_step_25.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/independent_shared_review.py",
+      "arguments": [
+        "--results-dir",
+        "outputs/joint_external_replay",
+        "--output",
+        "outputs/joint_full_independent.json"
+      ],
+      "returncode": 0,
+      "seconds": 59.18099120000261,
+      "log": "outputs/risk_step_26.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/independent_model_coherence.py",
+      "arguments": [
+        "--results-dir",
+        "outputs/joint_external_replay",
+        "--output",
+        "outputs/joint_model_coherence.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.5194719999853987,
+      "log": "outputs/risk_step_27.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/decision_replay.py",
+      "arguments": [
+        "--plans",
+        "outputs/joint_external_replay/empirical_plans.json",
+        "--ledger",
+        "outputs/joint_external_replay/empirical_cases.csv",
+        "--output-dir",
+        "outputs/joint_decision_replay"
+      ],
+      "returncode": 0,
+      "seconds": 3.9810501000029035,
+      "log": "outputs/risk_step_28.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/independent_decision_check.py",
+      "arguments": [
+        "--results-dir",
+        "outputs/joint_external_replay",
+        "--decision-dir",
+        "outputs/joint_decision_replay",
+        "--output",
+        "outputs/joint_decision_check.json"
+      ],
+      "returncode": 0,
+      "seconds": 6.409187299985206,
+      "log": "outputs/risk_step_29.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/precision_batch.py",
+      "arguments": [
+        "--plans",
+        "outputs/joint_external_replay/empirical_plans.json",
+        "--output-dir",
+        "outputs/joint_precision_catalog"
+      ],
+      "returncode": 0,
+      "seconds": 13.922741800022777,
+      "log": "outputs/risk_step_30.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/precision_batch_check.py",
+      "arguments": [
+        "--directory",
+        "outputs/joint_precision_catalog"
+      ],
+      "returncode": 0,
+      "seconds": 9.717946299992036,
+      "log": "outputs/risk_step_31.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/precision_adaptive_link.py",
+      "arguments": [
+        "--directory",
+        "outputs/joint_precision_catalog",
+        "--base-plans",
+        "outputs/joint_external_replay/empirical_plans.json"
+      ],
+      "returncode": 0,
+      "seconds": 2.6163667000073474,
+      "log": "outputs/risk_step_32.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/check_main_inspectable_certificate.py",
+      "arguments": [],
+      "returncode": 0,
+      "seconds": 0.4793643000011798,
+      "log": "outputs/risk_step_33.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/empirical_precision_replay.py",
+      "arguments": [
+        "--precision-plans",
+        "outputs/joint_precision_catalog/plans.json",
+        "--plans",
+        "outputs/joint_external_replay/empirical_plans.json",
+        "--ledger",
+        "outputs/joint_external_replay/empirical_cases.csv",
+        "--output-dir",
+        "outputs/joint_precision_replay"
+      ],
+      "returncode": 0,
+      "seconds": 5.447085599997081,
+      "log": "outputs/risk_step_34.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/independent_precision_replay_check.py",
+      "arguments": [
+        "--replay-dir",
+        "outputs/joint_precision_replay",
+        "--output",
+        "outputs/joint_precision_replay_check.json"
+      ],
+      "returncode": 0,
+      "seconds": 6.331866900000023,
+      "log": "outputs/risk_step_35.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/empirical_capacity.py",
+      "arguments": [
+        "--plans",
+        "outputs/joint_external_replay/empirical_plans.json",
+        "--output-dir",
+        "outputs/joint_capacity_replay"
+      ],
+      "returncode": 0,
+      "seconds": 10.487955200020224,
+      "log": "outputs/risk_step_36.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/empirical_capacity_check.py",
+      "arguments": [
+        "--results-dir",
+        "outputs/joint_capacity_replay",
+        "--output",
+        "outputs/joint_capacity_independent.json"
+      ],
+      "returncode": 0,
+      "seconds": 50.16970009999932,
+      "log": "outputs/risk_step_37.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/noise_independent_check.py",
+      "arguments": [
+        "--directory",
+        "work/risk_adaptivity_revision/joint_certification/noise_external_results"
+      ],
+      "returncode": 0,
+      "seconds": 13.8799602999934,
+      "log": "outputs/risk_step_38.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/noise_independent_check.py",
+      "arguments": [
+        "--directory",
+        "work/risk_adaptivity_revision/joint_certification/noise_external_capacity_results"
+      ],
+      "returncode": 0,
+      "seconds": 4.78669209999498,
+      "log": "outputs/risk_step_39.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/empirical_noise_replay.py",
+      "arguments": [
+        "--plans",
+        "outputs/joint_external_replay/empirical_plans.json",
+        "--certification-dir",
+        "work/risk_adaptivity_revision/joint_certification/noise_external_results",
+        "--output-dir",
+        "outputs/joint_noise_replay"
+      ],
+      "returncode": 0,
+      "seconds": 102.53954130000784,
+      "log": "outputs/risk_step_40.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/empirical_noise_check.py",
+      "arguments": [
+        "--results-dir",
+        "outputs/joint_noise_replay",
+        "--output",
+        "outputs/joint_noisy_independent.json"
+      ],
+      "returncode": 0,
+      "seconds": 3.1328349000250455,
+      "log": "outputs/risk_step_41.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/empirical_noise_replay.py",
+      "arguments": [
+        "--plans",
+        "outputs/joint_external_replay/empirical_plans.json",
+        "--certification-dir",
+        "work/risk_adaptivity_revision/joint_certification/noise_external_capacity_results",
+        "--output-dir",
+        "outputs/joint_capacity_noise_replay"
+      ],
+      "returncode": 0,
+      "seconds": 39.38375300000189,
+      "log": "outputs/risk_step_42.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/empirical_noise_check.py",
+      "arguments": [
+        "--results-dir",
+        "outputs/joint_capacity_noise_replay",
+        "--output",
+        "outputs/joint_capacity_noisy_independent.json"
+      ],
+      "returncode": 0,
+      "seconds": 1.3308492999931332,
+      "log": "outputs/risk_step_43.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/empirical_pair_summary.py",
+      "arguments": [
+        "--exact-cases",
+        "outputs/joint_external_replay/empirical_cases.csv",
+        "--capacity-cases",
+        "outputs/joint_capacity_replay/empirical_capacity_cases.csv",
+        "--precision-replay-dir",
+        "outputs/joint_precision_replay",
+        "--noise-dir",
+        "outputs/joint_noise_replay",
+        "--capacity-noise-dir",
+        "outputs/joint_capacity_noise_replay",
+        "--output-dir",
+        "outputs/joint_paired_replay"
+      ],
+      "returncode": 0,
+      "seconds": 0.9873795000021346,
+      "log": "outputs/risk_step_44.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/empirical_pair_check.py",
+      "arguments": [
+        "--results-dir",
+        "outputs/joint_paired_replay",
+        "--output",
+        "outputs/joint_paired_independent.json"
+      ],
+      "returncode": 0,
+      "seconds": 1.8650874000159092,
+      "log": "outputs/risk_step_45.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/empirical_release_check.py",
+      "arguments": [
+        "--exact-dir",
+        "outputs/joint_external_replay",
+        "--capacity-dir",
+        "outputs/joint_capacity_replay",
+        "--noise-dir",
+        "outputs/joint_noise_replay",
+        "--capacity-noise-dir",
+        "outputs/joint_capacity_noise_replay",
+        "--precision-dir",
+        "outputs/joint_precision_replay",
+        "--output",
+        "outputs/joint_scientific_match.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.2410962000139989,
+      "log": "outputs/risk_step_46.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/final_review_analysis.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/final_review_dependence"
+      ],
+      "returncode": 0,
+      "seconds": 1.257911900000181,
+      "log": "outputs/risk_step_47.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/final_review_check.py",
+      "arguments": [
+        "--results-dir",
+        "outputs/final_review_dependence",
+        "--output",
+        "outputs/final_review_independent.json"
+      ],
+      "returncode": 0,
+      "seconds": 10.964837900013663,
+      "log": "outputs/risk_step_48.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/protocol_selection/check_bound_workflow.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/bound_workflow_check"
+      ],
+      "returncode": 0,
+      "seconds": 1.80399290000787,
+      "log": "outputs/risk_step_49.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_BINDING_CHECK.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/independent_binding_check"
+      ],
+      "returncode": 0,
+      "seconds": 1.1002043999906164,
+      "log": "outputs/risk_step_50.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/practical/audit_decision_gate.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/risk_gate_replay"
+      ],
+      "returncode": 0,
+      "seconds": 4.473123299976578,
+      "log": "outputs/risk_step_51.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/practical_multi/evaluate_model_selection.py",
+      "arguments": [
+        "--source",
+        "public",
+        "--output-dir",
+        "outputs/risk_selection_replay"
+      ],
+      "returncode": 0,
+      "seconds": 5.378477799997199,
+      "log": "outputs/risk_step_52.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/practical/replicate_archive_grid.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/risk_replication_replay"
+      ],
+      "returncode": 0,
+      "seconds": 24.777510100015206,
+      "log": "outputs/risk_step_53.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/practical/check_replication_lp.py",
+      "arguments": [
+        "--replication-dir",
+        "outputs/risk_replication_replay",
+        "--output-dir",
+        "outputs/risk_replication_lp_replay"
+      ],
+      "returncode": 0,
+      "seconds": 15.465049399994314,
+      "log": "outputs/risk_step_54.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/practical_api/replication_independent_check.py",
+      "arguments": [
+        "--replication-dir",
+        "outputs/risk_replication_replay",
+        "--output",
+        "outputs/risk_replication_independent.json"
+      ],
+      "returncode": 0,
+      "seconds": 14.972145599982468,
+      "log": "outputs/risk_step_55.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/practical_api/prepare_and_verify.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/risk_api_replay"
+      ],
+      "returncode": 0,
+      "seconds": 1.7088365000090562,
+      "log": "outputs/risk_step_56.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/counter_adaptive/math_review/check_counter_adaptive.py",
+      "arguments": [],
+      "returncode": 0,
+      "seconds": 5.210734699998284,
+      "log": "outputs/risk_step_57.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/counter_adaptive/verify_packaged.py",
+      "arguments": [
+        "--output",
+        "outputs/counter_packaged_check.json"
+      ],
+      "returncode": 0,
+      "seconds": 9.26728010000079,
+      "log": "outputs/risk_step_58.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/counter_adaptive/feedback_triage/verify_bundled.py",
+      "arguments": [
+        "--output",
+        "outputs/counter_feedback_triage_check.json"
+      ],
+      "returncode": 0,
+      "seconds": 3.097469899978023,
+      "log": "outputs/risk_step_59.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/counter_adaptive/reviewer_diagnostics/verify_bundled.py",
+      "arguments": [
+        "--output",
+        "outputs/reviewer_counter_diagnostics.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.20058370000333525,
+      "log": "outputs/risk_step_60.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/math/robust_two_query.py",
+      "arguments": [
+        "--output",
+        "outputs/bounded_uncertainty_prototype.json"
+      ],
+      "returncode": 0,
+      "seconds": 3.7517592000076547,
+      "log": "outputs/risk_step_61.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/math/INTERNAL_EDGE_CHECK.py",
+      "arguments": [
+        "--output",
+        "outputs/bounded_uncertainty_edges.json"
+      ],
+      "returncode": 0,
+      "seconds": 1.795054899994284,
+      "log": "outputs/risk_step_62.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/math/check_cap_package.py",
+      "arguments": [
+        "--output",
+        "outputs/cap_sensitivity_check.json"
+      ],
+      "returncode": 0,
+      "seconds": 32.37648310000077,
+      "log": "outputs/risk_step_63.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/check_exact_certificates.py",
+      "arguments": [
+        "--output",
+        "outputs/stored_error_exact_certificates.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.8860784000135027,
+      "log": "outputs/risk_step_64.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/INDEPENDENT_EXACT_CHECK.py",
+      "arguments": [],
+      "returncode": 0,
+      "seconds": 0.7900886000134051,
+      "log": "outputs/risk_step_65.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/check_lower_witnesses.py",
+      "arguments": [
+        "--output",
+        "outputs/stored_error_lower_certificates.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.5936597999825608,
+      "log": "outputs/risk_step_66.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/failure_diagnostics/INDEPENDENT_LOWER_CHECK.py",
+      "arguments": [],
+      "returncode": 0,
+      "seconds": 0.8395464999775868,
+      "log": "outputs/risk_step_67.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/stored_error_fallback/INDEPENDENT_CERTIFICATE_CHECK.py",
+      "arguments": [
+        "--output",
+        "outputs/stored_error_fallback_fixed.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.7922856999794021,
+      "log": "outputs/risk_step_68.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/stored_error_fallback/INDEPENDENT_BRANCH_CHECK.py",
+      "arguments": [
+        "--output",
+        "outputs/stored_error_fallback_branches.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.8421127999899909,
+      "log": "outputs/risk_step_69.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/stored_error_fallback/policy.py",
+      "arguments": [
+        "--self-test",
+        "--output",
+        "outputs/stored_error_fallback_execution.json"
+      ],
+      "returncode": 0,
+      "seconds": 2.087952200003201,
+      "log": "outputs/risk_step_70.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/stored_error_sensitivity/run_sensitivity.py",
+      "arguments": [],
+      "returncode": 0,
+      "seconds": 33.395304899982875,
+      "log": "outputs/risk_step_71.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/operational/check_source_qualification.py",
+      "arguments": [
+        "--output",
+        "outputs/external_source_qualification.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.404285800002981,
+      "log": "outputs/risk_step_72.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/replay/run_external.py",
+      "arguments": [],
+      "returncode": 0,
+      "seconds": 91.56542840000475,
+      "log": "outputs/risk_step_73.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/replay/check_external.py",
+      "arguments": [],
+      "returncode": 0,
+      "seconds": 7.832838800008176,
+      "log": "outputs/risk_step_74.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/external_validation/operational/verify_http.py",
+      "arguments": [
+        "--benchmark-dir",
+        "work/risk_adaptivity_revision/external_validation/operational/http_benchmark_20261012"
+      ],
+      "returncode": 0,
+      "seconds": 0.15592419999302365,
+      "log": "outputs/risk_step_75.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/protocol_selection/selector.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/protocol_selection_replay"
+      ],
+      "returncode": 0,
+      "seconds": 0.24458979998598807,
+      "log": "outputs/risk_step_76.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_CHECK.py",
+      "arguments": [
+        "--results-dir",
+        "outputs/protocol_selection_replay",
+        "--output-dir",
+        "outputs/protocol_selection_check"
+      ],
+      "returncode": 0,
+      "seconds": 0.5781581999908667,
+      "log": "outputs/risk_step_77.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/protocol_selection/cost_frontier.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/cost_frontier_replay"
+      ],
+      "returncode": 0,
+      "seconds": 0.28538499999558553,
+      "log": "outputs/risk_step_78.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/protocol_selection/INDEPENDENT_COST_CHECK.py",
+      "arguments": [
+        "--results-dir",
+        "outputs/cost_frontier_replay",
+        "--output",
+        "outputs/cost_frontier_check.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.38073049997910857,
+      "log": "outputs/risk_step_79.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/counter_adaptive/reviewer_diagnostics/check_worked_example.py",
+      "arguments": [
+        "--output",
+        "outputs/printed_worked_example_check.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.18485260001034476,
+      "log": "outputs/risk_step_80.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/review_mechanism/analyze.py",
+      "arguments": [
+        "--output-dir",
+        "outputs/review_mechanism"
+      ],
+      "returncode": 0,
+      "seconds": 43.13821319999988,
+      "log": "outputs/risk_step_81.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/review_mechanism/check.py",
+      "arguments": [
+        "--results",
+        "outputs/review_mechanism"
+      ],
+      "returncode": 0,
+      "seconds": 55.56926899999962,
+      "log": "outputs/risk_step_82.log"
+    },
+    {
+      "script": "work/risk_adaptivity_revision/joint_certification/review_mechanism/check_training.py",
+      "arguments": [
+        "--results",
+        "outputs/review_mechanism"
+      ],
+      "returncode": 1,
+      "seconds": 0.8021637999918312,
+      "log": "outputs/risk_step_83.log"
+    }
+  ],
+  "package_root": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\peerj_journal_verified_20261016_015311",
+  "stage": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\peerj_journal_verified_20261016_015311\\work\\rr_015321845299",
+  "manifest_sha256": "a2e69e9a0cbaade612ce8fc5e2d83fcb1490c7488265e575f48098e0bb40f8c7",
+  "script_sha256": "c89f5841ea399c27a5bb783190b297734f8f1e18bc2be588ec93e0ca5a7573e1",
+  "log_sha256": "fcf44389c729a7eaa9b871eea494fffa10f24aff9d6ad19182b27a579766fdc3",
+  "elapsed_seconds": 977.5324952999945
+}

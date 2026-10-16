@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-10-14T04:08:08.892335+00:00",
+  "repository_url": "https://github.com/floxy-21/risk-adaptivity-ml-audits",
+  "private": true,
+  "commit": "18ea2c6a6f3ddd0cc7751854b15126caa1939b91",
+  "tag": "peerj-cs-2026-10-13-two-target",
+  "manuscript_sha256": "a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf",
+  "pdf_sha256": "59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9",
+  "replay_steps": 76,
+  "two_target_proof_input_sha256": "5f08ca8fbf76454ca18a12185476579dbcec13e6e9a22ed709156dada60d5e9f",
+  "historical_members_recoverable": 583,
+  "historical_editorial_notes_omitted": [
+    {
+      "path": "work/external_deadline/editorial/pretest_scientific_review.txt",
+      "bytes": 5181,
+      "sha256": "268734a09a62abd00506d83d0eff5bc12ca96d039083434ea45fdbfe87d3c350"
+    },
+    {
+      "path": "work/external_deadline/editorial/provisional_numerical_review.txt",
+      "bytes": 3313,
+      "sha256": "6745ae32d839bb06e866157f795964ee58da629b7181af108a1ce813855a9e78"
+    }
+  ],
+  "release_url": "https://github.com/floxy-21/risk-adaptivity-ml-audits/releases/tag/peerj-cs-2026-10-13-two-target",
+  "assets": [
+    {
+      "name": "RELEASE_SHA256.txt",
+      "bytes": 455,
+      "sha256": "071f6b2668bfc286912562d8ff473c07584dd1146df365fdaf87212e439dd48b"
+    },
+    {
+      "name": "research_supplement.zip",
+      "bytes": 373442210,
+      "sha256": "75da51dd70387635b12f1cdbff2e23ca32cebf99aaf1ac2509c70334aa082b0e"
+    },
+    {
+      "name": "revised_manuscript.pdf",
+      "bytes": 251987,
+      "sha256": "59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9"
+    },
+    {
+      "name": "revised_manuscript.tex",
+      "bytes": 133571,
+      "sha256": "a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf"
+    },
+    {
+      "name": "Supplemental_Data_S1.zip",
+      "bytes": 17513047,
+      "sha256": "be7ee4c807b29796f3b596edbfb57281c37305119e4506d4ede8e948d1723a48"
+    },
+    {
+      "name": "Supplemental_Data_S2.zip",
+      "bytes": 23568606,
+      "sha256": "7b07f9558fc13bb12c4b9fd16a1901657f90cd998c3456574f1aa5e504c35fd2"
+    }
+  ],
+  "journal_submission_status": "not submitted",
+  "verification": "GitHub server-provided SHA-256 digests match all six local release assets; remote commit equals local prepared commit."
+}

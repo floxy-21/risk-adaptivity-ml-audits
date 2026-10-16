@@ -1,0 +1,31 @@
+\paragraph{Which cases isolate sharing, and which depend on absolute precision?}
+Of the 225 two-versus-three reading separations, 191 are joint-only:
+137 original and 54 external blocks have scalar minimum fixed budgets of at
+most two for every contrast. Within these 191 blocks, two contrasts suffice
+to cause the obstruction in 168, while 23 require at least three. The other
+34 blocks contain a scalar contrast that already needs three fixed readings.
+Among the 222 matched-half certificates, 188 are joint-only.
+
+The absolute-floor calculation at the primary setting identifies 186 of the 225 baseline
+reading-saving blocks where feedback remains necessary: all 168 original
+blocks and 18 external blocks. The other 39 external blocks meet the
+requirement with a fixed budget of zero (15 blocks), one (14), or two (10)
+readings. Two further external blocks become
+two-versus-three separations, giving 20 across the complete external panel.
+The all-block fixed/adaptive-fallback totals are 2625/2457 original and
+378/358 external, or 6.40\% and 5.29\% fewer readings, respectively.
+The floor-aware planner certifies the unchanged 57-block external subset
+with 70 readings, compared with the minimum fixed total of 88 (20.45\%
+fewer). Its exported plans specify all fixed timestamps and adaptive
+branches; the verifier checks every block's guarantee directly.
+
+Initial loss-scale widths explain the different responses. Among the
+individually binding contrasts in the 225 blocks, the original median
+$W_{r,0}$ is 0.12536 squared kWh (interquartile range 0.07424--0.27658);
+the external median is 0.001905 (0.000741--0.008365).
+There are 136 and 47 such contrasts, respectively; 69 blocks have no single
+deletion-binding contrast because of redundant constraints.
+Online Resource~1 gives every scalar budget, binding contrast and initial
+width, all seven floor settings, and system-specific acquisition counts.
+
+

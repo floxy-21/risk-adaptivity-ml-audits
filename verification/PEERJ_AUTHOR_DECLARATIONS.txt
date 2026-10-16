@@ -10,9 +10,9 @@ unverified final-content review or record-retention inventory has already happen
 
 Current manuscript identity
 Source SHA-256:
-ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07
+47167e289fe4be679605071b8529ea9294758990640c7bdea3ba6479dfb90bf1
 PDF SHA-256:
-b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c
+5064e18e7950721612790112605b5046baa821fa49480fddb8e7c2d549536355
 
 Suggested factual confirmations, only if true
 
@@ -58,8 +58,8 @@ reason to believe they changed
 Release facts for the agent to verify, not extra author questions
 - Both current Supplemental Data S1/S2 files meet the individual and total
   size limits and extract into the documented common directory.
-- The current 77-step clean-package replay passes and the manuscript,
-  package manifests and uploaded file hashes correspond.
+- Scientific verification: the preserved 101-step clean replay passed on source 6ff21873993503ebf5641f325f8313e1d5868ce1e42d53acc4f365422fb5bfbc. All scientific code, inputs and results in the final package are byte-identical. A subsequent, explicitly reviewed prose-only delta passed a fresh isolated manuscript rebuild and document checks. No second full scientific execution is claimed for the final prose revision.
+- The final manuscript, package manifests and uploaded file hashes must correspond.
 - Source attribution and included permissive licenses remain in the
   submission materials; excluded raw BLEM traces are not reintroduced.
 

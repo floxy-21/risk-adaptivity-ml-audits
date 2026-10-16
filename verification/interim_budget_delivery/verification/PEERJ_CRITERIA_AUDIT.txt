@@ -1,0 +1,150 @@
+FINAL PEERJ COMPUTER SCIENCE REVIEW -- 14 October 2026
+Source SHA256: 7f131f3e0d8adc3db17ddec0d850333580b834169dd2ddc59ce07059c5a9b669
+PDF SHA256: 5a16ec3f9487816b3c87c6b5000b8529023322ad5ac4d7ba6f101297cc90d53d
+Pages: 29
+
+Policy evidence includes live checks on 13 October 2026 at:
+https://peerj.com/journals/computer-science/editorial-criteria
+https://peerj.com/journals/computer-science/policies/
+https://peerj.com/journals/computer-science/author-instructions
+Target article type: Research Article. PeerJ's research criteria assess
+reporting, design and validity rather than promised importance or impact.
+
+1. BASIC REPORTING -- addressed in the reviewed files.
+The structured abstract, introduction, methods, results, discussion and
+conclusions identify the computer-science acquisition/certification problem.
+The focused main text gives the two-target boundary with both optimality bounds,
+the assurance-feasibility consequence, a worked source-derived certificate and
+the complete two-query planner with its tie convention. Scalar classification
+and mean-risk developments remain in the supplement.
+The new fixed-budget family shows adaptive precision success one versus
+optimal randomized-batch success 1/m with two affine targets and two coordinate
+queries; all three pairs of three constructed nonnegative forecast vectors
+retain the separation. Its growing dictionary, shrinking normalized margin
+and three-query fixed alternative are stated. The contribution is separated
+from established vector recovery, minimax reasoning and sparse-policy bounds.
+The support argument identifies the precise additional obstruction: all m
+specific batches are necessary for positive worst-record success and their
+uniform mixture is uniquely optimal. This is a consequence of the constructed
+adverse records, not a claim to have introduced minimax theory.
+The absolute-width example distinguishes original loss units from normalized
+precision. Prior work is credited by objective and precise statement.
+The policy table and worked certificate distinguish mean risk, precision
+guarantees, recorded success and retrieval costs. An unchanged-policy exploratory sweep
+uses all five targets from 0.40 to 0.60; unresolved batch-probability gaps are
+quantified. Older separate-pair controls remain in S6. Active prose replaces repeated framing; mathematical notation remains where
+needed for reproducibility. Tables and references are readable in the rendered
+29-page PDF. Letter paper, one-inch margins, 12-point Times-family text,
+left alignment and line numbers follow the instructions. The 248-word
+abstract is below the journal limit. Editable LaTeX and PDF are supplied.
+The two-panel figure exposes the exact conditional geometry and source-specific
+threshold curves. The scalar precision bound's premises are explicitly
+distinguished from the joint objective; curvature alone proves no separation.
+An introductory workflow exposes the admissible bulk, fixed, adaptive and
+extended-audit routes within the exact-total noiseless model. Policy objectives
+are separated from guarantees and recorded outcomes. The certificate-status
+table makes its closed/open partition and overlapping fallback label explicit.
+The current compiled-source review covers the workflow and displayed equations.
+The elementary finite-action consequence closes the no-certainty branch for
+all randomized adaptive policies under the declared uncapped exact-total
+noiseless prefix model. Its 19/20 bound is explicitly not claimed optimal.
+
+2. EXPERIMENTAL DESIGN -- addressed within the stated research scope.
+Models, chronological splits, information cutoffs, source versions, query
+dictionaries, costs, budgets, thresholds and tie rules are documented.
+Comparators receive identical information and two shared readings. The
+precision-matched batch challenger is distinguished from mean-width and
+deterministic worst-width baselines; unresolved optimization gaps are retained.
+The complete three-way assurance partition, saved greedy-first-query limitation
+and deterministic-fallback diagnostic expose the practical decision and stronger
+controls. Their post-hoc chronology and source-reconstruction scopes are explicit.
+On the external panel, exact adaptation certifies a best model on 207 blocks
+and greedy adaptation on 208, despite exact adaptation's higher joint-precision
+success. Capacity information reduces the precision advantage and measured API
+retrieval favors bulk. Protocol feasibility follows from the stated model,
+without an empirically validated selective-access deployment or privacy benefit.
+Retrospective extensions are not called untouched confirmation. Six pairwise
+comparisons within one block are not treated as six independent observations.
+Paired outcomes, per-system effects, synchronized calendar-block resampling
+and sensitivity intervals are reported. There are only three systems per
+source. Unit costs, caps and error allowances are declared models, not
+validated tariffs or device specifications. Bulk retrieval remains a control.
+
+3. VALIDITY OF FINDINGS -- addressed by separate proof and execution evidence.
+Analytic proofs establish the general and constructed guarantees. Numerical
+checks do not purport to prove a universal theorem. Exact rational branch,
+covering and adverse-record witnesses support the central assurance claims.
+The current replay checks the new construction by exact rational certificates
+and 7,131 endpoint/whole-branch
+LPs at m=3,5,10. The maximum width discrepancy is
+7.105427357601002e-15; comparison
+tolerance is 1e-7 and primal/dual solver tolerances are 1e-9. These finite
+checks support implementation; the universal family claim follows from the
+analytic proof. The empirical studies remain separate and unchanged.
+The assurance checker verifies 583 seed-independent adverse distributions and
+11,660 strictly failing fibers on all 489 original and 94 external no-certainty
+cases. All coefficient normalizations agree exactly. These source-bound checks
+use no recorded answers or outcomes. The default offline job independently
+regenerates the 94 external distributions and 1,880 fibers; original coefficients
+are checked by the separate pinned-source route and are not redistributed.
+The proof and current checker, reports and witnesses are hash-bound in the
+delivery record. This is an elementary certainty consequence rather than a
+claimed new general theorem or optimized randomized-adaptive success value.
+The latest source-to-table run actually regenerates both panels from pinned
+original inputs and frozen forecasts, then reconciles policies, certificates
+and all 1,098 outcome rows. Source mismatch tests fail as intended. Default
+offline reproduction is explicitly distinct from original raw regeneration
+and fresh fitting. Practical conclusions concern certificate precision under
+the declared interface. Monetary savings, deployed superiority and improved
+downstream model choice are not established or claimed. Negative controls
+and combined-capacity/error limitations remain visible.
+
+The minimum fixed-budget addition makes the readout constraint an output of
+the assurance requirement. A general O(R*n) range scan computes the exact
+minimum fixed prefix budget, including randomized sure-success batches.
+Across all 1,098 blocks, 35,136 subset checks and a separate shortest-path
+checker agree. The independent run checks 737,856 fixed endpoint pairs,
+41,400 adaptive endpoint pairs and 500 adaptive interval covers. General
+constructed instances cover 180 inputs and 20,440 enumerated batches.
+On 168 original and 57 external blocks spanning all six systems, the exact
+comparison is three fixed versus two adaptive readings: one third fewer
+reserved readouts with one extra feedback round per qualifying block.
+Certified adaptation with a minimum fixed fallback reduces full-panel totals
+from 2,625 to 2,457 and 743 to 686 (6.40% and 7.67%). No optional answers were
+used to derive these retrospective counts. The scope is the uncapped,
+noiseless exact-total model. Adaptive budgets above two remain unsolved.
+The 126,195 exact support evaluations and four added replay jobs are bound to
+the current scripts, reports and archive manifest. Default budget replay
+covers the external panel; both-source evidence retains its separate chain.
+
+DATA, CODE AND PUBLICATION PREPARATION
+Reviewers receive complete current code, proofs, case ledgers, attributed
+bundled data and regeneration instructions in Supplemental Data S1 and S2.
+Original BLEM raw data are regenerated locally under pinned source hashes;
+no unsupported redistribution license is asserted. The two files comply
+with the 30 MB individual and 50 MB combined upload limits. The larger
+private development archive preserves history separately.
+
+The manuscript acknowledges supervised generative-AI assistance and identifies
+unknown historical model-version details as unknown. Existing funding,
+conflict and exclusivity facts come from the author. The author has personally
+confirmed checking the AI tools' terms of use and publication suitability.
+Final content accountability, disclosure accuracy, record retention, portal
+declarations and fees remain separate author matters; see
+PEERJ_AUTHOR_DECLARATIONS.txt. The confirmed tools-terms check does not establish
+that every other submission term has been satisfied.
+
+VERDICT
+No unresolved blocking scientific or presentation flaw was identified by
+the internal reviews and current compiled-source follow-up. Earlier reviews
+retain their original source hashes; latest_compiled_review.txt identifies the
+current source/PDF review. The paper is suitable for PeerJ CS consideration;
+acceptance remains an editorial decision. This is not external human peer
+review, a formal proof certificate for the universal theorem, or a calibrated
+greater-than-80% probability. No external person was contacted. Nothing was
+submitted to a journal.
+Submission remains blocked by the recorded browser startup failure before page
+creation. These delivery checks do not constitute a fresh portal attempt.
+
+FINAL ARTIFACT VERIFICATION
+PASS: 81 steps in a fresh network-disabled stage from the two publisher ZIP files, 1113 manifested members, 1417.12 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 42.01 MB. Full historical archive integrity also passed.

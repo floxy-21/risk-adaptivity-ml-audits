@@ -1,0 +1,1293 @@
+{
+  "error": null,
+  "limits": [
+    "Twelve serial requests do not establish a population latency effect.",
+    "Whole-range reads validate the counterfactual gate; they were not avoided during this validation experiment.",
+    "Body bytes exclude headers and TLS traffic. Cached future forecasts can remove retrieval entirely.",
+    "The source API does not enforce a two-reading restriction or a paid per-reading service."
+  ],
+  "log_sha256": "3e9b1c8617034e48ed3e5577e2a0f7817408af2893b6874d961776d3e8dc7df1",
+  "plan_sha256": "f22a807180d2ab5138225168df710ab461d563d35ce519c7ee3a3f028db1d695",
+  "requests_attempted": 12,
+  "status": "PASS",
+  "systems": {
+    "hpm_1": {
+      "actual_certified_decision_checks": [
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-01/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-01/06",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-01/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-02/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-02/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-02/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-03/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-04/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-04/06",
+          "model": "mlp"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-04/12",
+          "model": "ridge"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-05/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-05/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-06/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-06/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-07/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-07/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-08/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-08/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-08/12",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-09/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-09/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-10/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-10/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-11/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-11/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-11/12",
+          "model": "ridge"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-12/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-12/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-12/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-13/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-13/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-14/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-14/06",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-14/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-15/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-15/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-15/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-16/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-16/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-17/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-17/06",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-17/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-18/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-18/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-19/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-19/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-19/12",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-20/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-20/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-20/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-21/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-21/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-22/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-22/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-22/12",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-23/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-23/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-24/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-24/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-25/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-25/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-25/12",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-26/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-26/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-27/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-27/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-27/12",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-28/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-29/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-29/06",
+          "model": "ridge"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-29/12",
+          "model": "ridge"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-30/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-30/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-31/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "296831433/48653926400",
+          "id": "external/hpm_1/2025-07-31/06",
+          "model": "daily"
+        }
+      ],
+      "blocks": 93,
+      "costs": {
+        "first_needed_point": {
+          "api_io_seconds": 0.822996000002604,
+          "response_body_bytes": 53,
+          "returned_rows": 1
+        },
+        "gated_coalesced": {
+          "api_io_seconds": 0.3264060999790672,
+          "response_body_bytes": 19854,
+          "returned_rows": 683
+        },
+        "whole_coarse": {
+          "api_io_seconds": 0.1902758999785874,
+          "response_body_bytes": 3609,
+          "returned_rows": 124
+        },
+        "whole_hourly": {
+          "api_io_seconds": 0.33389249999891035,
+          "response_body_bytes": 21483,
+          "returned_rows": 739
+        }
+      },
+      "gate_skips": 75,
+      "max_absolute_frozen_total_discrepancy": "0",
+      "overlap_checks": "exact decimal-rational equality"
+    },
+    "hpm_2": {
+      "actual_certified_decision_checks": [
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-01/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-02/06",
+          "model": "ridge"
+        },
+        {
+          "actual_excess_mse": "223247177890883607563400278274763/664613997892457936451903530140172288",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-03/06",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-04/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-05/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-06/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-07/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-08/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-09/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-10/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-11/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-12/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-13/00",
+          "model": "mlp"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-13/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-14/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-14/12",
+          "model": "mlp"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-15/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-16/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-17/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "856793534800652911856851052275675/1993841993677373809355710590420516864",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-17/12",
+          "model": "ridge"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-18/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-19/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-20/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-21/00",
+          "model": "mlp"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-21/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-21/12",
+          "model": "mlp"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-22/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-23/00",
+          "model": "ridge"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-23/06",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-24/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-25/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-26/06",
+          "model": "mlp"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-27/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-28/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-29/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-30/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "491467367/218942668800",
+          "id": "external/hpm_2/2025-07-31/06",
+          "model": "daily"
+        }
+      ],
+      "blocks": 93,
+      "costs": {
+        "first_needed_point": {
+          "api_io_seconds": 0.6863629999861587,
+          "response_body_bytes": 50,
+          "returned_rows": 1
+        },
+        "gated_coalesced": {
+          "api_io_seconds": 0.2964139000105206,
+          "response_body_bytes": 21350,
+          "returned_rows": 737
+        },
+        "whole_coarse": {
+          "api_io_seconds": 0.23864560000947677,
+          "response_body_bytes": 3619,
+          "returned_rows": 124
+        },
+        "whole_hourly": {
+          "api_io_seconds": 0.2780534999910742,
+          "response_body_bytes": 21410,
+          "returned_rows": 739
+        }
+      },
+      "gate_skips": 37,
+      "max_absolute_frozen_total_discrepancy": "0",
+      "overlap_checks": "exact decimal-rational equality"
+    },
+    "hpm_7": {
+      "actual_certified_decision_checks": [
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-01/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-01/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-01/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-02/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "3040547700380471346564484202867/124615124604835863084731911901282304",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-02/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-02/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-03/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "88942255239787861096670937823/124615124604835863084731911901282304",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-03/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-03/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-04/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-04/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "7090979680442749664911052957525/41538374868278621028243970633760768",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-05/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-05/06",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-06/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "66106822655041545827123028857227/124615124604835863084731911901282304",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-06/12",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "124200279815581127543414362575605/124615124604835863084731911901282304",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-07/00",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-07/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-07/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-08/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "4312959175013726707392091313617/41538374868278621028243970633760768",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-08/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-08/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-09/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-09/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-09/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-10/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-10/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-10/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-11/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-11/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-11/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-12/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-12/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-12/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "8929685383316142206075370193631/124615124604835863084731911901282304",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-13/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "14023349842528387084197810745/243388915243820045087367015432192",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-13/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "120871061139756343405885654657841/124615124604835863084731911901282304",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-14/00",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "1582576633597581905851301792971/15576890575604482885591488987660288",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-14/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "1414117442735099024032296914993/31153781151208965771182977975320576",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-14/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-15/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-15/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-15/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-16/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "9033441010468329863753322365299/124615124604835863084731911901282304",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-16/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-16/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-17/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "2454744750147846045141983641845/41538374868278621028243970633760768",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-17/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-17/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-18/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "12843135085718780034476302385887/124615124604835863084731911901282304",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-18/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "15675559694138623606215915151/486777830487640090174734030864384",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-18/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-19/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "7751812517997965846688586309615/124615124604835863084731911901282304",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-19/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-19/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-20/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-20/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-20/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-21/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-21/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-21/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-22/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "433353980725491004493803650859/15576890575604482885591488987660288",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-22/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-22/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-23/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-23/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-23/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-24/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "8175228788624284227401717465333/41538374868278621028243970633760768",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-24/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "2221200635253585460782538987/81129638414606681695789005144064",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-24/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-25/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-25/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "75925940578509671325920477027/243388915243820045087367015432192",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-26/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-26/06",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-27/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-27/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "16916022648593353525395037166009/15576890575604482885591488987660288",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-27/12",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-28/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-28/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-28/12",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-29/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "12582857977421331647220858913139/124615124604835863084731911901282304",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-29/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-30/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "27115576220637892241733747376499/124615124604835863084731911901282304",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-30/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-30/12",
+          "model": "hist_gradient_boosting"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-31/00",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "16524139940916122282120266105567/124615124604835863084731911901282304",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-31/06",
+          "model": "daily"
+        },
+        {
+          "actual_excess_mse": "0",
+          "epsilon": "7763291/838860800",
+          "id": "external/hpm_7/2025-07-31/12",
+          "model": "daily"
+        }
+      ],
+      "blocks": 93,
+      "costs": {
+        "first_needed_point": {
+          "api_io_seconds": 0.16679889999795705,
+          "response_body_bytes": 53,
+          "returned_rows": 1
+        },
+        "gated_coalesced": {
+          "api_io_seconds": 0.2844364000193309,
+          "response_body_bytes": 17761,
+          "returned_rows": 611
+        },
+        "whole_coarse": {
+          "api_io_seconds": 0.2255719999957364,
+          "response_body_bytes": 3616,
+          "returned_rows": 124
+        },
+        "whole_hourly": {
+          "api_io_seconds": 0.26012670001364313,
+          "response_body_bytes": 21464,
+          "returned_rows": 739
+        }
+      },
+      "gate_skips": 86,
+      "max_absolute_frozen_total_discrepancy": "0",
+      "overlap_checks": "exact decimal-rational equality"
+    }
+  }
+}

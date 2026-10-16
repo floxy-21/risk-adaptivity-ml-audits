@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "zip_sha256": "9cf8d57bf3acaf52d273b8c5c6dc7cc84ff3ad80aac7517c4b084ed0c88b4495",
-  "zip_bytes": 374309458,
-  "manifested_members": 1198,
+  "zip_sha256": "2d63e125ae566edb72d98ace34431f3a06e2bdbfd144cbb2e8640bf168357b1e",
+  "zip_bytes": 404335862,
+  "manifested_members": 1381,
   "old_members_preserved_in_place": 579,
   "old_members_exactly_recoverable": 583,
   "replaced_paths": [
@@ -24,6 +24,6 @@
     }
   ],
   "editorial_omission_manifest": "EXCLUDED_EDITORIAL_NOTES.json",
-  "new_manuscript_sha256": "ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07",
+  "new_manuscript_sha256": "47167e289fe4be679605071b8529ea9294758990640c7bdea3ba6479dfb90bf1",
   "scope": "Complete member integrity and scientific historical preservation, excluding the explicitly listed internal editorial notes retained only in the prior private archive/local files; executable clean replay reported separately."
 }

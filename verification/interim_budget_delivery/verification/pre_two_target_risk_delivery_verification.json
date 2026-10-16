@@ -1,0 +1,143 @@
+{
+  "status": "PASS",
+  "review_date": "2026-10-13",
+  "completed_utc": "2026-10-14T02:21:29.832573+00:00",
+  "target": "PeerJ Computer Science",
+  "manuscript_sha256": "53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f",
+  "pdf_sha256": "cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302",
+  "zip_sha256": "940144c6bc2217ebada13a510ac5f17afbd37d359f3e249b0a4c13f48acdf7e6",
+  "pdf_pages": 36,
+  "abstract_words": 246,
+  "full_current_package_replay": "outputs/current_clean_package_replay.json",
+  "replay_steps": 74,
+  "complete_source_to_table_chain": "work/risk_adaptivity_revision/joint_certification/provenance_chain/executed/",
+  "complete_source_to_table_rows": 1098,
+  "complete_source_to_table_difference": 0.0,
+  "fresh_virtual_environment": "outputs/fresh_environment_setup_20261013.json",
+  "threshold_case_rows_both_conventions": 10980,
+  "threshold_paired_summaries": 320,
+  "threshold_scope": "Exploratory unchanged-policy replay at five width targets; not new optimal precision policies or calibrated downstream decisions.",
+  "final_challenger_diagnostics": {
+    "regime_rows": 1098,
+    "replay_rows": 2196,
+    "paired_summary_rows": 64,
+    "scope": "Retrospective diagnostic and fixed-fallback extension on the existing panels, not a locked confirmation.",
+    "regimes": [
+      {
+        "cohort": "original",
+        "meter": "ALL",
+        "blocks": 819,
+        "adaptive_only_guarantee": 168,
+        "no_deterministic_adaptive_guarantee": 489,
+        "fixed_guarantee": 162,
+        "matched_half": 165,
+        "matched_half_greedy_first_failure": 25,
+        "adaptive_guarantees_but_greedy_first_does_not": 28,
+        "greedy_recorded_success_among_matched_first_failures": 20
+      },
+      {
+        "cohort": "external",
+        "meter": "ALL",
+        "blocks": 279,
+        "fixed_guarantee": 128,
+        "no_deterministic_adaptive_guarantee": 94,
+        "adaptive_only_guarantee": 57,
+        "matched_half": 57,
+        "matched_half_greedy_first_failure": 13,
+        "adaptive_guarantees_but_greedy_first_does_not": 16,
+        "greedy_recorded_success_among_matched_first_failures": 11
+      }
+    ]
+  },
+  "practical_figure": {
+    "source_contrasts_checked": 6,
+    "conditional_lines_checked": 24,
+    "exact_envelope_points_checked": 147,
+    "envelope_equalities": 735,
+    "replay_points_checked": 30,
+    "exact_switch": "402983999413455277/771030112647101785",
+    "exact_maximum": "368046113233646508/771030112647101785"
+  },
+  "latest_review_response": "outputs/LATEST_REVIEW_FIXES_20261013.txt",
+  "manifested_members": 1176,
+  "journal_manifested_members": 1074,
+  "journal_parts": [
+    {
+      "path": "Supplemental_Data_S1.zip",
+      "bytes": 17474102,
+      "sha256": "51058e338410447f832d88ef2b50d9832d265e61f690911e4bcdbc68898e9262"
+    },
+    {
+      "path": "Supplemental_Data_S2.zip",
+      "bytes": 23567266,
+      "sha256": "f6138fb01c1d0abd38aebca19cef22badcd299cff9518a86ab6f969739e5e837"
+    }
+  ],
+  "journal_total_zip_bytes": 41041368,
+  "replay_distribution": "Publisher Supplemental Data S1 and S2, extracted together; full historical archive separately hash-verified.",
+  "historical_members_recoverable": 585,
+  "elapsed_replay_seconds": 1250.8333192999999,
+  "review_report": "outputs/PEERJ_REVIEW_AND_RESPONSE_20261013.txt",
+  "visual_review": "outputs/peerj_final_visual_review.txt",
+  "review_kind": "Three separate AI-assisted internal reviews, an additional PeerJ criteria challenge, and final regression/layout review; no external specialist contact or formal proof-assistant certification.",
+  "current_source_review": {
+    "path": "work\\risk_adaptivity_revision\\peerj_revision\\latest_compiled_review.txt",
+    "sha256": "b64115e5da32c96a04fd39c01bfd18483999137f0a660eadfe6152d7f2b2ba3e",
+    "manuscript_sha256": "53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f",
+    "pdf_sha256": "cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302"
+  },
+  "workflow_editorial_revision": {
+    "scope": "Exact-total noiseless audit routing; policy objectives versus achieved guarantees; closed/open status partition versus overlapping fallback classification. No new scientific outcomes.",
+    "render_evidence": "work\\risk_adaptivity_revision\\peerj_revision\\latest_compiled_review.txt",
+    "checks": "Workflow and displayed-equation rendering explicitly assessed in the current source/PDF review.",
+    "prior_execution_history": "outputs/pre_workflow_* retain the preceding source-specific successful replay; the current replay is separately executed."
+  },
+  "current_boundary_review": {
+    "path": "work\\risk_adaptivity_revision\\peerj_revision\\latest_boundary_review.txt",
+    "sha256": "2bd4eea7a08180d538866157952c8aa17a0bca0b5d893582720a4edd6aa4398c",
+    "manuscript_sha256": "53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f",
+    "pdf_sha256": "cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302"
+  },
+  "prior_review_reports": {
+    "new_core_theory_review.txt": {
+      "sha256": "c9f627542ea96dfc1ba253f7a0d56560ce749fb17a97be89106777ab99f99d2a",
+      "scope": "Earlier source-specific review retained as history; not a new review of current artifacts."
+    },
+    "new_package_review.txt": {
+      "sha256": "048234f8bfc6ca4a83f3f42284106e37c50192def75810d44d860cc1b618423d",
+      "scope": "Earlier source-specific review retained as history; not a new review of current artifacts."
+    },
+    "peerj_final_fit_challenge.txt": {
+      "sha256": "23c4d63ccc564df405ecf889d24c081c61805f26cc7c21927fdf6fc70c4f640a",
+      "scope": "Earlier source-specific review retained as history; not a new review of current artifacts."
+    },
+    "peerj_practical_value_challenge.txt": {
+      "sha256": "0aeb25976f6420fb77ce1ad2322bfbe7dffcd6c58085d0d4342cec370773f8e6",
+      "scope": "Earlier source-specific review retained as history; not a new review of current artifacts."
+    }
+  },
+  "full_current_package_replay_scope": "Fresh isolated executable replay from bundled inputs with network disabled; includes cached new-source counter replay and archived HTTP-trace checks, but no model fitting, private BLEM raw regeneration, new HTTP measurements, repeated scaling measurements, or external independent replication.",
+  "study_environment": "Python3.12.14; requirements-study.txt versions, including SciPy1.18.1",
+  "setup_failure_resolved": "Initial bundled-runtime attempt lacked SciPy and stopped at import before scientific checks; rerun used documented study environment. Log retained in peerj_runtime_setup_failure_20261013.log.",
+  "native_process_failure": "A run of the preceding 71-step revision stopped at historical checker48 with an empty log. Windows Application Error1000 recorded a Python/ntdll.dll exception0xc000070a. The unchanged checker then passed, and a complete unchanged 71-step rerun passed. That source-specific history, event, failed-run log and invocation remain separately retained as peerj_native_crash_*_20261013 and pre_additional_review* files. The current final replay validates the later revision with the added diagnostics and figure; no automatic scientific-failure retries were added.",
+  "integration_failure_resolved": "Initial integration scheduled frozen task-binding checks after geometry regeneration. Reordered them before regeneration and added an upfront dependency guard, tested on the actual driver. Old failure log: peerj_replay_order_failure_20261013.log. Scientific geometry entries matched; only its manifest differed.",
+  "storage_setup_failure_resolved": "Staging attempts exhausted disk space before scientific checks. Temporary-copy deletion was previously blocked by automatic policy review; lossless NTFS compression of generated copies preserved their contents and recovered space. Logs: peerj_disk_setup_failure_20261013.log and peerj_disk_setup_failure_20261014.log. The latest compression additionally checked SHA-256 equality for twelve old generated trajectory copies; peerj_storage_compression_20261014.log records compression. The final unchanged replay passed after space was recovered.",
+  "protocol_selection_case_interfaces": 116,
+  "task_bindings_checked": 29,
+  "retained_endpoints_checked": 58,
+  "valid_scientific_ledger_unchanged": true,
+  "practical_cost_analysis": "Exact supplied-catalogue frontier; 174 case-ratio decisions and 306 independently evaluated candidates. Declared costs, not new field savings.",
+  "printed_worked_example": "Exact rational check of all displayed coefficient enclosures, both continuum branches and all ten adverse batch columns; optional regenerated geometry check recorded separately.",
+  "fallback_guaranteed_cases": 29,
+  "fallback_budget_counts": {
+    "2": 22,
+    "3": 7
+  },
+  "peerj_alignment": "Structured abstract; CS algorithmic contribution; complete central proof and worked certificate; 12-point Times-style text; Letter paper and one-inch margins; left alignment; line numbers; references; explicit Acknowledgements; editable source; size-compliant current supplement and cover letter.",
+  "policy_verification_limit": "Live preparation, code/data, authorship, AI and copyright policies inspected on 2026-10-13. The author confirmed checking AI-tool terms and publication suitability. Separate final-content/record-retention attestations and precise historical AI-version identifiers remain unverified; final portal declarations and fees have not been accepted. Supplement upload limits require the separately checked S1/S2 package, not the larger private development archive.",
+  "scientific_verdict": "No unresolved blocking scientific flaw identified in this internal review; suitable for journal consideration.",
+  "acceptance_probability": "Not calibrated. No evidence-based greater-than80% threshold established.",
+  "author_ai_tools_terms_confirmation": "The author personally confirmed checking the AI tools' terms of use and publication suitability. This records the author statement; other final author and portal facts remain separate.",
+  "submission_status": "not submitted",
+  "external_contact": false
+}

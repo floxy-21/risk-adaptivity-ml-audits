@@ -1,0 +1,76 @@
+\subsection{Avoiding retrieval when the decision is already certified}
+\label{sec:retrieval-gate}
+The same affine loss bounds can provide a stopping rule for a downstream
+model-choice request. Here the request is to return a model whose block MSE is
+within $\epsilon=0.01M_2$ of the best candidate, where $M_2$ is the previously
+fixed training-period second moment. This differs from the joint half-width
+requirement. With retained block energy $E$, we stop before retrieval whenever
+\[
+ \min_m\max\left\{0,\max_{j\ne m}
+ \left[d_{mj}+E\max_h c_{mj,h}\right]\right\}\leq\epsilon.
+\]
+Every permitted completion then satisfies the requested tolerance for a
+qualifying model. Otherwise, one bulk fetch supplies the five internal counter
+values used by all four models. We use the first qualifying model in
+lexicographic order and cache every returned value.
+
+On the existing panels, this rule avoids 8 of 819 original and 198 of 279
+external block fetches when endpoints are already retained: request reductions
+of 0.98\% and 70.97\%, respectively. The per-system counts are $0,1,7$ of
+273 original blocks and $75,37,86$ of 93 external blocks. Exact arithmetic
+checks all 39,528 loss differences at the simplex vertices. A fixed-order
+timing pass takes 0.265\,s for the 1,098 gates after input preparation
+(median 0.265\,ms per block); loading and rational conversion take a further
+0.490\,s on the reported machine.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Range-access replay without later forecast copies:
+requests/returned counter values. One fetch is
+shared across all models. Cold access charges endpoint acquisition; period
+access coalesces ranges per system.}
+\label{tab:retrieval-gate-cost}
+\begin{tabular}{llrr}
+\toprule
+Access & Policy & Original & External\\
+\midrule
+Immediate, endpoints held & Always bulk & 819/4095 & 279/1395\\
+                         & Certificate gate & 811/4055 & 81/405\\
+Immediate, cold          & Direct bulk & 819/5187 & 279/1767\\
+                         & Endpoints, then gate & 1630/5147 & 360/777\\
+Whole period, cold       & Direct bulk & 3/6537 & 3/2217\\
+                         & Coarse grid, then gated ranges & 6/7623 & 6/2403\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For a cold audit priced per request, the router selects direct bulk. In a
+historical audit it first uses permitted forecast copies, with binary64
+rounding enclosures: these certify 810 original and 270 external blocks.
+With endpoints retained, after the initial gate only nine original and three external blocks need
+fine retrieval, covered by three requests/51 values and two requests/22 values.
+
+Table~\ref{tab:retrieval-gate-cost} replays the declared access schedules.
+We separately validated the interface with 12 predeclared public API requests,
+including full-record downloads. They confirm the range semantics, all 279
+external totals, and the tolerance of all 198 decisions selected before
+retrieval. The measured period-wide coarse-plus-gated requests receive 69,809
+response-body bytes in six requests, versus 64,357 in three bulk requests.
+The 70.97\% request reduction therefore belongs to immediate audits with
+retained endpoints. The comparison measures requests and returned data under
+one fixed decision tolerance; it supplies a concrete stopping rule rather
+than a price or latency estimate.
+
+\begin{table}[htbp]\centering\small
+\caption{Absolute tolerance and realized loss scales on the same blocks. All loss columns are in kWh$^2$. Med. MSE pools the four fixed models across blocks; best and spread are blockwise minimum and maximum-minus-minimum MSE, respectively, before taking medians. All four counts blocks whose realized spread is at most $\epsilon$; it is not a certificate count.}
+\label{tab:retrieval-tolerance-scale}
+\begin{tabular}{lrrrrr}\toprule
+System & $\epsilon$ & Med. MSE & Med. best & Med. spread & All four\\\midrule
+BLEM 1 & 0.003575 & 0.02371 & 0.01122 & 0.03286 & 12/273\\
+BLEM 2 & 0.004427 & 0.03981 & 0.01881 & 0.05139 & 15/273\\
+BLEM 3 & 0.003251 & 0.05632 & 0.02384 & 0.08984 & 0/273\\
+HPM 1 & 0.006101 & 0.02327 & $4.292\times10^{-6}$ & 0.1641 & 0/93\\
+HPM 2 & 0.002245 & 0.002964 & 0.000354 & 0.005857 & 25/93\\
+HPM 7 & 0.009255 & 0.0004555 & $7.2\times10^{-5}$ & 0.009809 & 44/93\\
+\bottomrule\end{tabular}\end{table}
+The tolerance has different implications across systems. HPM~7 has all four models within tolerance on 44 of 93 blocks, while HPM~1 has none and has a near-zero median best-model error alongside a much larger model spread. The blockwise best MSE is a hindsight reference, not the performance of one deployable model. These summaries interpret the unchanged tolerance rather than calibrating it to an operational loss.

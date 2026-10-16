@@ -1,0 +1,67 @@
+{
+  "recorded_utc": "2026-10-15T23:21:42.474324+00:00",
+  "inputs": {
+    "work/final_chain_20261014T031901Z/run/shared/empirical_plans.json": "1d52ede2ae5bb741360839da0a5299192f063fee9ec42441c9c2588d30bcff39",
+    "work/final_chain_20261014T031901Z/run/shared/empirical_cases.csv": "b46ee0fbe202ad11a7e904279317f693ee77c56eff74084345f7897d9802d9c8",
+    "work/final_chain_20261014T031901Z/run/original_raw/results/geometry.json": "d3af9794d9f6fb242b5bd91424f2878a28dc334fbbed97eb39b85685e4aced53",
+    "work/risk_adaptivity_revision/external_validation/replay/geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0",
+    "work/final_chain_20261014T031901Z/run/original_raw/prepared/data_blem_hourly_endpoints.csv": "2d8a88d83123216d71329c1745a4dbf1d0c47b34ba1a22b6529f348f4e5987eb",
+    "work/risk_adaptivity_revision/external_heatpump/hourly/train_test_hourly_counters.csv": "b66ed33d2b1b00ac680bf564c3329231317b8176b7e88ac318ee0714494077da",
+    "work/risk_adaptivity_revision/joint_certification/review_mechanism/executed/training_scales.json": "1491f1850fa06e611cf376dd5872c95a27c20c768584814b8dd38bd812806981",
+    "work/risk_adaptivity_revision/joint_certification/decision_replay.py": "22697e17c7fdf7e1b0b3662e67bb5ff546e2bec5e2169e83a04e5947d523f402",
+    "work/risk_adaptivity_revision/joint_certification/decision_results/report.json": "49c438b80fb69b851457d1aa3e707e6c4695cc28962d2a5a3e4bbc2d8fb25afb"
+  },
+  "name": "Retrospective decision-tolerance diagnostic of frozen shared precision policies",
+  "stage": "Protocol fixed before this diagnostic's epsilon outcomes are computed.",
+  "status": "FROZEN",
+  "scope": "Private isolated probe; no main manuscript changes, refitting, new policy optimization, or policy selection from evaluation answers.",
+  "cohort": {
+    "original": 819,
+    "external": 279,
+    "unit": "six-hour block; six paired contrasts sharing four models and one two-reading policy"
+  },
+  "information_model": "Uncapped nonnegative hourly allocations with exact retained endpoints and exact queried cumulative readings. Forecast contrasts and query policies are frozen.",
+  "policies": [
+    "adaptive",
+    "greedy",
+    "deterministic_batch",
+    "randomized_mean_batch",
+    "uniform_batch"
+  ],
+  "thresholds": {
+    "factor_grid": [
+      "0",
+      "0.001",
+      "0.005",
+      "0.01",
+      "0.025",
+      "0.05",
+      "0.1"
+    ],
+    "primary_factor": "0.01",
+    "formula": "epsilon = factor * preexisting system training second moment M2",
+    "units": "squared kWh; six-target mean squared loss",
+    "status": "Retrospective sensitivity target; not operationally calibrated."
+  },
+  "outcomes": {
+    "epsilon_best": "A model m is certified epsilon-optimal iff upper(loss_m-loss_j)<=epsilon for every j!=m. Reversed pair uses -lower. Select lexicographically if multiple qualify.",
+    "strict_best": "Separately use upper(loss_m-loss_j)<0 for every j!=m; reconcile existing 123/207 adaptive,118/208 greedy,122/201 fixed counts.",
+    "upper_regret": "max(0, upper(loss_m-loss_j) over j!=m); report minimum across models with lexicographic ties.",
+    "actual_record": "Check every claimed certificate against the exact stored affine contrast at the actual source record; retain any numerical model-loss representation limitations.",
+    "randomized": "Compute expected decision success across every saved batch outcome. Convert binary64 weights to exact rationals, clip only negative roundoff >=-1e-12 and normalize to unit mass; report maximum correction. Do not optimize weights."
+  },
+  "replay": "Reconstruct each adaptive/greedy second query from the saved conditional lines and the first queried prefix answer using the original 1e-12 tie convention. Require equality with the saved ledger.",
+  "summaries": [
+    "all seven factors for each source",
+    "system-specific counts and differences",
+    "paired both/adaptive-only/comparator-only/neither outcomes",
+    "minimum upper-regret summaries",
+    "strict winner reconciliation"
+  ],
+  "uncertainty": {
+    "method": "Descriptive synchronized seven-day circular calendar-block percentile bootstrap,2000 draws, within each source; all intraday blocks and systems share day indices.",
+    "seed": 20261015,
+    "interpretation": "Repeated blocks are not independent systems; no population inference or threshold optimization."
+  },
+  "verification": "Independent checker must not import the producer or its bound helper. Rebind inputs, independently reconstruct all pairwise decisions and summaries, verify exact endpoint vertices on first/middle/last block of every system, check source truth validity, and reconcile strict winners."
+}

@@ -1,0 +1,36 @@
+FINAL READ-ONLY UPLOAD HYGIENE CHECK
+Status: PASS within the stated scan scope.
+
+Current manuscript source SHA-256: 6e32a08d8a054fcac5dd32554a010121aa0a6388ebd0efe6b270680ed2ef329d
+Current PDF SHA-256: 841a0c1bd7b71bc37aa76306b889fb06f12d6eb3be1318ebbae533954d5e8eb3
+
+The full historical supplement (1,176 members), Supplemental Data S1 (821
+members), and S2 (253 members) were scanned, including decompressed gzip
+contents. Across 3,009,768,880 expanded bytes there were no matches for the
+checked credential signatures, private-key markers, quoted credential
+assignments, supplied registration password/street/telephone identifiers,
+or outdated author email. No potential values were printed. No private
+review, browser-session, registration, outreach or raw-cache folders occurred.
+The additional 36 intended manuscript/report files produced no matches.
+This signature scan is not a proof that every possible secret is absent.
+
+Original BLEM exclusion remains intact: all 6,552 rows have blank original
+truth and direct-copy persistence fields. The original pilot/continuation,
+joint_review and named raw-counter trace paths are absent. Current original
+panel additions inspected are derived guarantee/outcome ledgers. The public
+external source caches are intentionally bundled under documented attribution.
+
+The existing source snapshot contains 980 files, all admitted by the current
+archive filter, with no stale extras. Preparing the current payload adds 49
+files. The six intended release assets match verify_github.py's allowlist;
+that verifier checks private visibility, exact remote commit and server SHA-256
+digests. A read-only live repository check returned PRIVATE. No repository
+settings, upload, package, scientific file or manuscript was changed here.
+
+The current manuscript source has no private repository or release identifier.
+Its three GitHub URLs are primary-source references. Current output/report
+hashes will still be refreshed by the normal finalization after actual replay.
+
+Exact archive hashes, scan byte counts and scope are in final_upload_hygiene.json.
+The first slower read-only scan was deliberately stopped; the replacement full
+scan completed in 111.90 seconds. No scientific process was stopped.

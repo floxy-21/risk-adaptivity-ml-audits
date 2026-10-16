@@ -32,6 +32,12 @@ case identifiers, source/script hashes and commands rather than those data.
 What each stage verifies
 1. Original: QuantLet/BLEM commit 756b2c1265f964b70f72625a95d98413cdfb78bd,
    three mandatory source SHA-256 values in work/data_prepare_blem.py.
+   Repository paths: data/consumer/consumer-00000001.csv,
+   data/consumer/consumer-00000002.csv and data/consumer/consumer-00000003.csv.
+   The downloader uses https://raw.githubusercontent.com/QuantLet/BLEM/
+   followed by the commit and repository path (without line breaks).
+   The three live downloads were rechecked before this revision: every byte
+   matched the pinned SHA-256. A changed source causes an explicit failure.
    Integer subtraction precedes division by 10^10 to kWh. Every valid hourly
    endpoint agrees with original snapshots and its 21 nondecreasing samples.
 2. Original frozen forecasts: the lossless export hash is pinned. Rebuilding

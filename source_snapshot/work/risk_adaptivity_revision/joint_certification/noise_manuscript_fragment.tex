@@ -7,8 +7,8 @@ feasible fixed-record certificates prove that every randomized batch has
 worst-case precision success below one.  The certified batch success
 upper bound has minimum and median $1/2$, interquartile range
 $[1/2,2/3]$, and maximum $4/5$; 26 bounds are at most $1/2$ and 37 are
-at most $0.7$.  These are upper bounds on the unrestricted batch optimum,
-not claims that each bound is attained.  The 45 blocks span all three
+at most $0.7$. These one-sided certificates bound the unrestricted batch
+optimum. The 45 blocks span all three
 external systems (11, 11, and 23 blocks).
 
 Capacity information reduces the benefit.  With a per-hour cap of half
@@ -20,8 +20,9 @@ between $2/3$ and $7/8$.  Only 200 recorded profiles satisfy this illustrative
 cap.  Within that compatible subset the counts are 153 versus 147, with
 six separations.  The original uncapped policy certifies only 191 of the
 279 capped instances, which motivates using declared capacity information
-when planning.  Both policies are fixed before the fine readings are
-opened; neither is claimed optimal for bounded-error acquisition.
+when planning. We evaluate adaptive policies frozen from the respective
+noiseless planners; the fixed-batch comparator is optimized for the error
+model. All policies are fixed before the fine readings are opened.
 
 The comparison uses two shared readings, uncapped noiseless initial widths for
 normalization, exact block endpoints, and the same permitted queries for

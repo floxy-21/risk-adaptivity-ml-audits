@@ -1,22 +1,24 @@
 \section{Source panels and audit protocol}
 \label{sec:joint-protocol-summary}
-The original panel uses the first three consumer IDs in the pinned BLEM
-cumulative-counter source \citep{blem}. Training covers January--September
+We use a prespecified three-consumer case series: the lexicographically first
+three IDs in the pinned BLEM cumulative-counter source \citep{blem}. The
+source-preparation protocol fixed this ID rule before model fitting and
+evaluation. Training covers January--September
 2017 and testing October--December 2017. Complete-day and feature filters
 leave 91 test days per meter. Hourly energy uses integer counter differences
 at exact UTC endpoints, converted to kWh without interpolation; partial days
 are excluded. Online Resource~1, S3 records source hashes and fitting details.
 
 The external panel uses HeatpumpMonitor systems 1, 2 and 7
-\citep{hpmabout,hpmapi}. The ascending-ID source screen required public MID
+\citep{hpmabout,hpmapi}. We screened ascending IDs for public MID
 status, Class-1 electrical-meter metadata and cumulative coverage of
-January--July 2025, before hourly retrieval. After training-only inspection
-but before July retrieval, the gates required 95\% valid hourly intervals
+January--July 2025 before hourly retrieval. Training-only gates, fixed
+before July retrieval, required 95\% valid hourly intervals
 and 90 complete training days. All three passed without replacement.
 January--June supplied training; July supplied 31 test days per system.
-Stored API-grid increments are converted to kWh. Native acquisition and
-historical delivery times are unavailable; meter-class metadata does not
-supply a pointwise error bound \citep{hpmcode}. S6 retains the chronology.
+We convert stored API-grid increments to kWh. Native acquisition and
+historical delivery times are unavailable \citep{hpmcode}; S6 records the
+source-selection chronology.
 
 Both panels reuse frozen daily-persistence, ridge, boosted-tree and MLP
 forecasts. Each external model specification was fitted once without
@@ -27,7 +29,7 @@ persistence copies are not yet available under this benchmark schedule.
 Two internal readings serve all six pairs of the four models. This is a
 benchmark access contract, not a verified restriction of either source's service;
 the public-API experiment also evaluates unrestricted bulk retrieval.
-The shared-query analysis is retrospective on both panels. Query selection
-uses frozen forecasts and prior query answers; withheld answers are opened
-only for replay. We require $W_r\leq W_{r,0}/2$ for every pair, using the
+The shared-query analysis is retrospective on both panels. Policies use
+frozen forecasts and, for adaptation, previously queried answers. We open
+withheld readings only for replay and require $W_r\leq W_{r,0}/2$ for every pair, using the
 uncapped exact-total initial widths throughout the shared-query sensitivity controls.

@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "method": "Independent DAG shortest-path minima plus exact extremal endpoint and interval-cover inequalities; producer not imported.",
+  "checks": {
+    "independent_shortest_path_minima": 279,
+    "feasible_fixed_endpoint_pairs": 187488,
+    "independent_all_batch_widths": 8928,
+    "strict_insufficient_batch_checks": 3529,
+    "linear_scan_vs_independent_shortest_path": 279,
+    "adaptive_conditional_endpoint_pairs": 15360,
+    "adaptive_closed_interval_covers": 176
+  },
+  "fixed_budget_histograms": {
+    "external": {
+      "2": 119,
+      "3": 116,
+      "5": 8,
+      "1": 9,
+      "4": 27
+    }
+  },
+  "results_ledger_sha256": "2e2abca5e5a838f1e61f65b99e11b1954fd069294e2c8e68ad5e7bd1e041b7d3",
+  "producer_report_sha256": "09f47f922be08980fe07c76a0106ed2ff16cd9fcc02d08e64928f9bf44c63f71",
+  "checker_sha256": "090eaa1c3b2a479d46ce7522d52019c0d91c78371ea289722f92548f37ed017a",
+  "source_binding_sha256": "fa2ac421b17e58afc056f2d7f3e9c4e251f31aba053efbfc37521a5737e2eede",
+  "source_input_hashes": {
+    "mode": "bundled_external_only",
+    "source_execution_evidence_sha256": "3c7dbb113beee7547d42ff68c826cc0c96e2e7d91811a37930eb651091fa189d",
+    "source_physical_blocks": {
+      "external": 279
+    },
+    "original_coefficients_verified_in_this_run": false,
+    "plans_sha256": "26b1f10f11680883ea51bafba00e3907c7240a48227190c9da119abf56397d04",
+    "shared_plans_sha256": "9258e3d7508d333c9aaaaf243495d0a459adba8bf075bab1d244ace7f2ae9387",
+    "geometry_sha256": {
+      "external_validation/replay/geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0"
+    },
+    "precision_producer_sha256": "264259ca972a94781f8348cd462381d0d6bfc77b5070dbce0448aef3d84e842a",
+    "exact_coefficient_normalization_checks": 1674,
+    "maximum_exact_normalization_difference": "0"
+  },
+  "elapsed_seconds": 48.23990820000108,
+  "recorded_answers_or_replay_outcomes_used": false,
+  "scope": "All fixed cardinalities exact; adaptive minimum only for certificates using at most two. Input-binding code shared; mathematical verification separately implemented."
+}

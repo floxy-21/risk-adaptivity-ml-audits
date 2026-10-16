@@ -1,0 +1,147 @@
+CURRENT INTERNAL REVIEW -- 13 October 2026
+Source SHA256: a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf
+PDF SHA256: 59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9
+Pages: 39
+
+The current compiled-source review below is explicitly bound to these hashes.
+Earlier source-specific reviews are retained separately as historical records.
+This is an internal AI-assisted review, not external human validation.
+
+FINAL COMPILED MANUSCRIPT REVIEW: PRESENTATION REORDER
+Date: 14 October 2026 UTC
+Reviewer: /root/review_pdf_claims, internal AI-assisted review
+Target: PeerJ Computer Science, Research Article
+
+CURRENT ARTIFACTS
+Source: outputs/revised_manuscript.tex
+SHA256: a8f7f508010e26acae594edd41eea06654693e0122f02ccb872b95c5a90e7fcf
+PDF: outputs/revised_manuscript.pdf
+SHA256: 59975832b62b21c17f60ad25b210e10d8d39f9e1228f77d150ea70bb0720e7a9
+Length: 39 pages; structured abstract: 240 whitespace words.
+Render manifest: work/pdf_export/decision_rendered/pages.json
+Manifest and filesystem hashes match. Only current pages 1-39 were reviewed;
+higher-numbered stale render files were ignored. Previous reports are
+preserved as pre_presentation_reorder_latest_*.txt.
+
+VERDICT
+PASS within the content, proof-dependency, equation and visual scope below.
+No further mandatory manuscript correction was identified. This is internal
+review, not external specialist validation, formal proof-assistant checking,
+an exhaustive priority search or an acceptance prediction. Current-package
+execution, final archive delivery and submission attestations are separate.
+
+REVIEW SCOPE
+Read the assembled abstract, introduction, setup, scalar sparse floor,
+complete two-target theorem/corollary, cumulative-counter development,
+shared planner, worked certificate, classification and application protocol.
+Checked main labels/references for missing and duplicate labels. Read the
+relocated S9/S10 sections and references. Inspected all 39 page layouts
+through current contact sheets. Full-size inspection covered the workflow,
+central proof and commands (pages 2, 9-12), piecewise planner equation (16),
+worked matrix/multiplier rule (18), certificate commands (19), loss-scale
+table/figure (20), full classification and application hierarchy (21-24).
+The parent independently inspected additional hotspots. Built-in compilation
+and editorial preflight passed; the export log has no overfull, underfull,
+undefined-reference or missing-character warnings.
+
+1. LOGICAL DEPENDENCIES AND PRESENTATION
+The chain is now setup/transcript proposition, scalar precision floor,
+fixed-budget two-target boundary, cumulative-prefix model, shared planner
+and application certificate. The full scalar classification remains in main
+after that chain. The complete new theorem starts on page 9, four pages
+earlier than the preceding release. The older scalar example/growing family
+are in S9; general-polytope algorithms are in S10.
+
+Neither the scalar sparse-cover proof nor the new two-target construction
+needs the relocated general-polytope algorithm. The sparse-cover tail now
+points explicitly to S9/S10. S10 defines its hardest-record value rho.
+Main labels have no missing or duplicate targets. The roadmap, claim table
+and semantic theorem references follow the changed order.
+
+Two presentation defects were identified and fixed. Application assumptions
+now have sibling Methods subsection 2.8, with the protocol beneath it,
+rather than appearing inside the classification. A float barrier places the
+worked table/figure before the classification heading. Its entire theorem
+statement is together on page 21, with no intervening application float;
+the proof continues normally on page 22.
+
+2. CENTRAL THEOREM AND EXECUTABLE CHECK
+The complete two-target proof still specifies the feasible set, every query,
+the two contrasts, seven batch types, continuum-cover policy, adverse
+records and matching success values 1 and 1/m. Shorter/repeated queries
+are covered by monotonic extension. The all-three-pair corollary retains
+common nonnegative forecasts, a half-open threshold band and the shrinking
+normalized margin. Three fixed queries suffice. This is a probability
+separation at a common two-query budget, not unbounded query savings or
+robustness to a fixed measurement-error percentage.
+
+The proof's check paragraph prints actual commands. From the extracted
+supplement root, enter work/risk_adaptivity_revision/two_target_boundary,
+then run:
+python -S verify_boundary.py --solver-free --output replay_exact.json
+python verify_boundary.py --output replay_numeric.json
+The exact route uses the standard library and encoded construction; the
+numerical route also needs the pinned NumPy/SciPy environment. Expected
+JSON status, input/source hashes, witnesses and scope are stated. These
+commands do not claim to reproduce meter panels.
+
+Retained verifier SHA256:
+b84c11b09fd275119478a488c0274b4cc0b428ad77332df417b9847c32cb3ffc
+Both saved reports pass and use proof-input SHA256:
+5f08ca8fbf76454ca18a12185476579dbcec13e6e9a22ed709156dada60d5e9f
+For m=3,5,10, the printed 1,171 adverse/query checks and 7,131 LPs agree
+with those reports. Maximum discrepancy 7.105427357601002e-15 rounds to
+7.11e-15; comparison tolerance is 1e-7, primal/dual feasibility 1e-9.
+This review inspected these records; it did not perform a new full replay.
+
+3. VISUAL EQUATION AND WORKFLOW REVIEW
+The workflow is readable and puts admissible bulk retrieval first. Its D/A
+branches concern deterministic guarantees in the exact prefix model.
+The paired MSE equation, adverse-record table, third-target inequality,
+forecast vectors, piecewise alpha/beta equation, worked six-by-six matrix
+and lambda rule display the required symbols. Printed coefficient
+enclosures are distinct from exact inputs. Commands fit the text width.
+No clipping, overlap, missing page or damaged mathematical glyph was found.
+
+4. EVIDENCE BOUNDARIES
+The abstract retains 165/819 and 57/279 matched-half blocks, gains of
+7.81/11.11 percentage points over fixed worst-width batches and 2.20/2.15
+over greedy, capacity sensitivity and the bulk-API advantage. The constructed
+1/m family is not presented as a newly measured meter effect. Full-panel
+open precision gaps, adverse cover replay, capacity/error controls and the
+historical 0.9738064% acquisition saving remain visible. Chronology stays
+retrospective on both sources; frozen forecasts do not imply untouched
+confirmation.
+
+The source-to-table description still distinguishes default external
+certificate checking from original-panel raw regeneration, and saved
+forecast replay from fresh fitting. The new theorem command is a component
+check, not a replacement for those routes. A final clean package result
+must be reported against the package actually delivered. No external
+person was contacted by this review.
+
+CHECKLIST FOLLOW-UP: FINAL SOURCE LINKS AND ROADMAP
+The current hash above also includes the subsequent two editorial edits:
+the introduction now says the scalar precision bound starts the comparison
+and the later classification explains the wider risk objective; Data and
+Code Availability now names https://github.com/QuantLet/BLEM and the
+accompanying paper DOI https://doi.org/10.3390/en12142718 directly.
+The pinned-source/hash-mismatch check and redistribution distinction remain.
+
+Full-size inspection of updated pages 3, 35 and 36 confirms the revised
+roadmap and source links fit, remain legible, and introduce no clipping.
+The mathematical content is unchanged. Current built-in compile and
+preflight pass, and the PDF remains 39 pages.
+
+The five new typesetting allegations were checked item by item:
+1. Page 19: the switch interval visibly contains its closing square bracket.
+2. Page 10: queried coordinates, W_1 and W_2 are separate table headers.
+3. Page 16: the alpha/beta cases and j<k / j>k conditions are aligned.
+4. Page 18: the HPM coefficient-enclosure table has five separate headers.
+5. Pages 37-39: DOI links have normal spaces or line breaks after preceding
+   text; no merged bibliographic sentence/link was found.
+These are extraction/reading artifacts, not current PDF defects.
+See typesetting_checklist_20261014.txt for the preceding artifact's exact
+page and source pointers; the inspected formulas did not change in this
+two-edit follow-up. No cosmetic math edit was made to repair a nonexistent
+defect. The component/full-package verification distinction remains.

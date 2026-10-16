@@ -1,0 +1,70 @@
+{
+  "status": "PRESERVED_FAILED_EXECUTION",
+  "scope": "Current 101-step attempt failed at step83 because a required saved aggregate was absent. Existing current_clean_package_replay.json and journal_supplement_verification.json are older successful records, retained with original bytes and not evidence of this run. Failed extraction/stage retained in place; no science rerun performed by preservation.",
+  "failure_report_source": "work/peerj_journal_verified_20261016_015311/outputs/risk_clean_replay_failure.json",
+  "failed_stage_retained": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\work\\peerj_journal_verified_20261016_015311\\work\\rr_015321845299",
+  "full_scientific_zip_sha256": "6fc5ac464b0c06f36708cc8ea3ab658cd618c80087c6b6e9069a669b1ae4b338",
+  "source_sha256": "6ff21873993503ebf5641f325f8313e1d5868ce1e42d53acc4f365422fb5bfbc",
+  "files": [
+    {
+      "source": "outputs/Supplemental_Data_S1.zip",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/journal_delivery/pre_dependency_fix_20261016/outputs/Supplemental_Data_S1.zip",
+      "sha256": "8163a6d70d19803d379b1b9da709909b45934d5cd3e336c9c281a406f8034e1f",
+      "bytes": 27527615
+    },
+    {
+      "source": "outputs/Supplemental_Data_S2.zip",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/journal_delivery/pre_dependency_fix_20261016/outputs/Supplemental_Data_S2.zip",
+      "sha256": "36a4f7bec09a8fae1a301b52a9e6dc69b00e4cb4832fd67ba93cecb128aec6a7",
+      "bytes": 21822989
+    },
+    {
+      "source": "work/risk_adaptivity_revision/peerj_revision/journal_delivery/assembly_report.json",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/journal_delivery/pre_dependency_fix_20261016/work/risk_adaptivity_revision/peerj_revision/journal_delivery/assembly_report.json",
+      "sha256": "8b777f49d15321e78b27c861c57739b86054a0928dd52028d92ad99b4358883e",
+      "bytes": 314580
+    },
+    {
+      "source": "work/risk_adaptivity_revision/peerj_revision/journal_delivery/selection_plan.json",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/journal_delivery/pre_dependency_fix_20261016/work/risk_adaptivity_revision/peerj_revision/journal_delivery/selection_plan.json",
+      "sha256": "fbe34bdd6c0f6ba78c9f02d57dae684aff1a4dd569ddf1c2587049c16258f82c",
+      "bytes": 313866
+    },
+    {
+      "source": "outputs/peerj_replay_invocation_20261013.json",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/journal_delivery/pre_dependency_fix_20261016/outputs/peerj_replay_invocation_20261013.json",
+      "sha256": "521d55cab4f3fafd66d1b49eeba4349dd33a4763b121c42dfd0bd9cf75faa479",
+      "bytes": 332204
+    },
+    {
+      "source": "outputs/peerj_clean_replay_20261013.log",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/journal_delivery/pre_dependency_fix_20261016/outputs/peerj_clean_replay_20261013.log",
+      "sha256": "b437f4d902be0e8890bc1adf282c3b8901b5ed2127045ee435fa372e93ed5434",
+      "bytes": 16424
+    },
+    {
+      "source": "outputs/current_clean_package_replay.json",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/journal_delivery/pre_dependency_fix_20261016/outputs/current_clean_package_replay.json",
+      "sha256": "91df013e79ae111be630e861853163e4a0f50786249695ceab4dee9e209251af",
+      "bytes": 1199373
+    },
+    {
+      "source": "outputs/journal_supplement_verification.json",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/journal_delivery/pre_dependency_fix_20261016/outputs/journal_supplement_verification.json",
+      "sha256": "2cc533db44951b96eef7f8bbc4d601a94f8ed7a45375e6206f4306bff53be01c",
+      "bytes": 273567
+    },
+    {
+      "source": "work/peerj_journal_verified_20261016_015311/outputs/risk_clean_replay_failure.json",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/journal_delivery/pre_dependency_fix_20261016/work/peerj_journal_verified_20261016_015311/outputs/risk_clean_replay_failure.json",
+      "sha256": "096d2bc118119c4a9e192cf3a9318642f4681d2947fe87fc757f1866bbc6279d",
+      "bytes": 29954
+    },
+    {
+      "source": "work/peerj_journal_verified_20261016_015311/work/rr_015321845299/outputs/risk_step_83.log",
+      "retained": "work/risk_adaptivity_revision/peerj_revision/journal_delivery/pre_dependency_fix_20261016/work/peerj_journal_verified_20261016_015311/work/rr_015321845299/outputs/risk_step_83.log",
+      "sha256": "fcf44389c729a7eaa9b871eea494fffa10f24aff9d6ad19182b27a579766fdc3",
+      "bytes": 2185
+    }
+  ]
+}

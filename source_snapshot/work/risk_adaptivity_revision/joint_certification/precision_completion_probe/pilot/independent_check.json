@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checks": {
+    "source_coefficients": 216,
+    "adverse_point_batch_evaluations": 1400,
+    "proof_tree_nodes": 22,
+    "exact_dual_inequalities": 78,
+    "dominated_row_cover_checks": 54,
+    "failure_mass_patterns": 6144,
+    "matched_continuum_optima": 6
+  },
+  "total_cases": 6,
+  "unresolved_cases": 0,
+  "scope": "Exact rational verification relative to the pinned normalized binary64-derived coefficients. No optimizer verdict is used. Upper profiles are feasible in the complete simplex; cover trees prove lower guarantees for every feasible record. Raw-source provenance is inherited from the pinned source catalog, not independently regenerated here.",
+  "arithmetic": "Python fractions; zero numerical tolerance",
+  "fine_answers_loaded": false,
+  "input_catalog_sha256": "15cfa445e0a6213494a71ee3e01b87067d1f8169f6b32b7164b38ca48c793f3f",
+  "producer_report_sha256": "9d2272f7b0c8f18b40176ecd25b6af0aea7f566d6409e109efdf02de8dbe8642",
+  "checker_sha256": "6a5abbaa92fe61a57d7e57497604032835d29d3c5f2f555c1b909cfde24c52c9",
+  "elapsed_seconds": 0.8736214000091422
+}

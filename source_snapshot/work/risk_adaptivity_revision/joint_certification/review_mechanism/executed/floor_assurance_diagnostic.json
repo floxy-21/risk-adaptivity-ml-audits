@@ -1,0 +1,913 @@
+{
+  "status": "PASS",
+  "ledger_sha256": "54eaff3b38e45e431f328771d316d65fc18bcf443ea2df68b90ce845cf179824",
+  "checker_sha256": "f41058b6e7352249ec72dee52de6c150f5a7c8ed871b82e2f14f09bde19919da",
+  "monotonic_budget_checks": 7686,
+  "summaries": {
+    "all": {
+      "0": {
+        "original_saving_cohort": 225,
+        "assured_with_at_most_two": 225,
+        "still_need_feedback": 225,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 225
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 225
+        }
+      },
+      "1/1000": {
+        "original_saving_cohort": 225,
+        "assured_with_at_most_two": 225,
+        "still_need_feedback": 207,
+        "fixed_suffices": 18,
+        "fixed_minimum_budget_histogram": {
+          "1": 4,
+          "2": 14,
+          "3": 207
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "1": 4,
+          "2": 221
+        }
+      },
+      "1/200": {
+        "original_saving_cohort": 225,
+        "assured_with_at_most_two": 225,
+        "still_need_feedback": 191,
+        "fixed_suffices": 34,
+        "fixed_minimum_budget_histogram": {
+          "0": 11,
+          "1": 14,
+          "2": 9,
+          "3": 191
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 11,
+          "1": 14,
+          "2": 200
+        }
+      },
+      "1/100": {
+        "original_saving_cohort": 225,
+        "assured_with_at_most_two": 225,
+        "still_need_feedback": 186,
+        "fixed_suffices": 39,
+        "fixed_minimum_budget_histogram": {
+          "0": 15,
+          "1": 14,
+          "2": 10,
+          "3": 186
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 15,
+          "1": 14,
+          "2": 196
+        }
+      },
+      "1/40": {
+        "original_saving_cohort": 225,
+        "assured_with_at_most_two": 225,
+        "still_need_feedback": 183,
+        "fixed_suffices": 42,
+        "fixed_minimum_budget_histogram": {
+          "0": 27,
+          "1": 10,
+          "2": 5,
+          "3": 183
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 27,
+          "1": 10,
+          "2": 188
+        }
+      },
+      "1/20": {
+        "original_saving_cohort": 225,
+        "assured_with_at_most_two": 225,
+        "still_need_feedback": 174,
+        "fixed_suffices": 51,
+        "fixed_minimum_budget_histogram": {
+          "0": 36,
+          "1": 5,
+          "2": 10,
+          "3": 174
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 36,
+          "1": 5,
+          "2": 184
+        }
+      },
+      "1/10": {
+        "original_saving_cohort": 225,
+        "assured_with_at_most_two": 225,
+        "still_need_feedback": 148,
+        "fixed_suffices": 77,
+        "fixed_minimum_budget_histogram": {
+          "0": 42,
+          "1": 4,
+          "2": 31,
+          "3": 148
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 42,
+          "1": 4,
+          "2": 179
+        }
+      }
+    },
+    "original": {
+      "0": {
+        "original_saving_cohort": 168,
+        "assured_with_at_most_two": 168,
+        "still_need_feedback": 168,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 168
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 168
+        }
+      },
+      "1/1000": {
+        "original_saving_cohort": 168,
+        "assured_with_at_most_two": 168,
+        "still_need_feedback": 168,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 168
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 168
+        }
+      },
+      "1/200": {
+        "original_saving_cohort": 168,
+        "assured_with_at_most_two": 168,
+        "still_need_feedback": 168,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 168
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 168
+        }
+      },
+      "1/100": {
+        "original_saving_cohort": 168,
+        "assured_with_at_most_two": 168,
+        "still_need_feedback": 168,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 168
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 168
+        }
+      },
+      "1/40": {
+        "original_saving_cohort": 168,
+        "assured_with_at_most_two": 168,
+        "still_need_feedback": 168,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 168
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 168
+        }
+      },
+      "1/20": {
+        "original_saving_cohort": 168,
+        "assured_with_at_most_two": 168,
+        "still_need_feedback": 161,
+        "fixed_suffices": 7,
+        "fixed_minimum_budget_histogram": {
+          "2": 7,
+          "3": 161
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 168
+        }
+      },
+      "1/10": {
+        "original_saving_cohort": 168,
+        "assured_with_at_most_two": 168,
+        "still_need_feedback": 141,
+        "fixed_suffices": 27,
+        "fixed_minimum_budget_histogram": {
+          "1": 2,
+          "2": 25,
+          "3": 141
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "1": 2,
+          "2": 166
+        }
+      }
+    },
+    "external": {
+      "0": {
+        "original_saving_cohort": 57,
+        "assured_with_at_most_two": 57,
+        "still_need_feedback": 57,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 57
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 57
+        }
+      },
+      "1/1000": {
+        "original_saving_cohort": 57,
+        "assured_with_at_most_two": 57,
+        "still_need_feedback": 39,
+        "fixed_suffices": 18,
+        "fixed_minimum_budget_histogram": {
+          "1": 4,
+          "2": 14,
+          "3": 39
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "1": 4,
+          "2": 53
+        }
+      },
+      "1/200": {
+        "original_saving_cohort": 57,
+        "assured_with_at_most_two": 57,
+        "still_need_feedback": 23,
+        "fixed_suffices": 34,
+        "fixed_minimum_budget_histogram": {
+          "0": 11,
+          "1": 14,
+          "2": 9,
+          "3": 23
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 11,
+          "1": 14,
+          "2": 32
+        }
+      },
+      "1/100": {
+        "original_saving_cohort": 57,
+        "assured_with_at_most_two": 57,
+        "still_need_feedback": 18,
+        "fixed_suffices": 39,
+        "fixed_minimum_budget_histogram": {
+          "0": 15,
+          "1": 14,
+          "2": 10,
+          "3": 18
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 15,
+          "1": 14,
+          "2": 28
+        }
+      },
+      "1/40": {
+        "original_saving_cohort": 57,
+        "assured_with_at_most_two": 57,
+        "still_need_feedback": 15,
+        "fixed_suffices": 42,
+        "fixed_minimum_budget_histogram": {
+          "0": 27,
+          "1": 10,
+          "2": 5,
+          "3": 15
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 27,
+          "1": 10,
+          "2": 20
+        }
+      },
+      "1/20": {
+        "original_saving_cohort": 57,
+        "assured_with_at_most_two": 57,
+        "still_need_feedback": 13,
+        "fixed_suffices": 44,
+        "fixed_minimum_budget_histogram": {
+          "0": 36,
+          "1": 5,
+          "2": 3,
+          "3": 13
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 36,
+          "1": 5,
+          "2": 16
+        }
+      },
+      "1/10": {
+        "original_saving_cohort": 57,
+        "assured_with_at_most_two": 57,
+        "still_need_feedback": 7,
+        "fixed_suffices": 50,
+        "fixed_minimum_budget_histogram": {
+          "0": 42,
+          "1": 2,
+          "2": 6,
+          "3": 7
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 42,
+          "1": 2,
+          "2": 13
+        }
+      }
+    },
+    "external/hpm_1": {
+      "0": {
+        "original_saving_cohort": 13,
+        "assured_with_at_most_two": 13,
+        "still_need_feedback": 13,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 13
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 13
+        }
+      },
+      "1/1000": {
+        "original_saving_cohort": 13,
+        "assured_with_at_most_two": 13,
+        "still_need_feedback": 10,
+        "fixed_suffices": 3,
+        "fixed_minimum_budget_histogram": {
+          "2": 3,
+          "3": 10
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 13
+        }
+      },
+      "1/200": {
+        "original_saving_cohort": 13,
+        "assured_with_at_most_two": 13,
+        "still_need_feedback": 8,
+        "fixed_suffices": 5,
+        "fixed_minimum_budget_histogram": {
+          "1": 3,
+          "2": 2,
+          "3": 8
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "1": 3,
+          "2": 10
+        }
+      },
+      "1/100": {
+        "original_saving_cohort": 13,
+        "assured_with_at_most_two": 13,
+        "still_need_feedback": 6,
+        "fixed_suffices": 7,
+        "fixed_minimum_budget_histogram": {
+          "1": 4,
+          "2": 3,
+          "3": 6
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "1": 4,
+          "2": 9
+        }
+      },
+      "1/40": {
+        "original_saving_cohort": 13,
+        "assured_with_at_most_two": 13,
+        "still_need_feedback": 5,
+        "fixed_suffices": 8,
+        "fixed_minimum_budget_histogram": {
+          "0": 2,
+          "1": 4,
+          "2": 2,
+          "3": 5
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 2,
+          "1": 4,
+          "2": 7
+        }
+      },
+      "1/20": {
+        "original_saving_cohort": 13,
+        "assured_with_at_most_two": 13,
+        "still_need_feedback": 5,
+        "fixed_suffices": 8,
+        "fixed_minimum_budget_histogram": {
+          "0": 4,
+          "1": 4,
+          "3": 5
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 4,
+          "1": 4,
+          "2": 5
+        }
+      },
+      "1/10": {
+        "original_saving_cohort": 13,
+        "assured_with_at_most_two": 13,
+        "still_need_feedback": 5,
+        "fixed_suffices": 8,
+        "fixed_minimum_budget_histogram": {
+          "0": 8,
+          "3": 5
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 8,
+          "2": 5
+        }
+      }
+    },
+    "external/hpm_2": {
+      "0": {
+        "original_saving_cohort": 18,
+        "assured_with_at_most_two": 18,
+        "still_need_feedback": 18,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 18
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 18
+        }
+      },
+      "1/1000": {
+        "original_saving_cohort": 18,
+        "assured_with_at_most_two": 18,
+        "still_need_feedback": 14,
+        "fixed_suffices": 4,
+        "fixed_minimum_budget_histogram": {
+          "1": 2,
+          "2": 2,
+          "3": 14
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "1": 2,
+          "2": 16
+        }
+      },
+      "1/200": {
+        "original_saving_cohort": 18,
+        "assured_with_at_most_two": 18,
+        "still_need_feedback": 12,
+        "fixed_suffices": 6,
+        "fixed_minimum_budget_histogram": {
+          "0": 5,
+          "2": 1,
+          "3": 12
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 5,
+          "2": 13
+        }
+      },
+      "1/100": {
+        "original_saving_cohort": 18,
+        "assured_with_at_most_two": 18,
+        "still_need_feedback": 10,
+        "fixed_suffices": 8,
+        "fixed_minimum_budget_histogram": {
+          "0": 5,
+          "1": 2,
+          "2": 1,
+          "3": 10
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 5,
+          "1": 2,
+          "2": 11
+        }
+      },
+      "1/40": {
+        "original_saving_cohort": 18,
+        "assured_with_at_most_two": 18,
+        "still_need_feedback": 10,
+        "fixed_suffices": 8,
+        "fixed_minimum_budget_histogram": {
+          "0": 6,
+          "1": 1,
+          "2": 1,
+          "3": 10
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 6,
+          "1": 1,
+          "2": 11
+        }
+      },
+      "1/20": {
+        "original_saving_cohort": 18,
+        "assured_with_at_most_two": 18,
+        "still_need_feedback": 8,
+        "fixed_suffices": 10,
+        "fixed_minimum_budget_histogram": {
+          "0": 7,
+          "2": 3,
+          "3": 8
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 7,
+          "2": 11
+        }
+      },
+      "1/10": {
+        "original_saving_cohort": 18,
+        "assured_with_at_most_two": 18,
+        "still_need_feedback": 2,
+        "fixed_suffices": 16,
+        "fixed_minimum_budget_histogram": {
+          "0": 8,
+          "1": 2,
+          "2": 6,
+          "3": 2
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 8,
+          "1": 2,
+          "2": 8
+        }
+      }
+    },
+    "external/hpm_7": {
+      "0": {
+        "original_saving_cohort": 26,
+        "assured_with_at_most_two": 26,
+        "still_need_feedback": 26,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 26
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 26
+        }
+      },
+      "1/1000": {
+        "original_saving_cohort": 26,
+        "assured_with_at_most_two": 26,
+        "still_need_feedback": 15,
+        "fixed_suffices": 11,
+        "fixed_minimum_budget_histogram": {
+          "1": 2,
+          "2": 9,
+          "3": 15
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "1": 2,
+          "2": 24
+        }
+      },
+      "1/200": {
+        "original_saving_cohort": 26,
+        "assured_with_at_most_two": 26,
+        "still_need_feedback": 3,
+        "fixed_suffices": 23,
+        "fixed_minimum_budget_histogram": {
+          "0": 6,
+          "1": 11,
+          "2": 6,
+          "3": 3
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 6,
+          "1": 11,
+          "2": 9
+        }
+      },
+      "1/100": {
+        "original_saving_cohort": 26,
+        "assured_with_at_most_two": 26,
+        "still_need_feedback": 2,
+        "fixed_suffices": 24,
+        "fixed_minimum_budget_histogram": {
+          "0": 10,
+          "1": 8,
+          "2": 6,
+          "3": 2
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 10,
+          "1": 8,
+          "2": 8
+        }
+      },
+      "1/40": {
+        "original_saving_cohort": 26,
+        "assured_with_at_most_two": 26,
+        "still_need_feedback": 0,
+        "fixed_suffices": 26,
+        "fixed_minimum_budget_histogram": {
+          "0": 19,
+          "1": 5,
+          "2": 2
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 19,
+          "1": 5,
+          "2": 2
+        }
+      },
+      "1/20": {
+        "original_saving_cohort": 26,
+        "assured_with_at_most_two": 26,
+        "still_need_feedback": 0,
+        "fixed_suffices": 26,
+        "fixed_minimum_budget_histogram": {
+          "0": 25,
+          "1": 1
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 25,
+          "1": 1
+        }
+      },
+      "1/10": {
+        "original_saving_cohort": 26,
+        "assured_with_at_most_two": 26,
+        "still_need_feedback": 0,
+        "fixed_suffices": 26,
+        "fixed_minimum_budget_histogram": {
+          "0": 26
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "0": 26
+        }
+      }
+    },
+    "original/consumer_00000001": {
+      "0": {
+        "original_saving_cohort": 63,
+        "assured_with_at_most_two": 63,
+        "still_need_feedback": 63,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 63
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 63
+        }
+      },
+      "1/1000": {
+        "original_saving_cohort": 63,
+        "assured_with_at_most_two": 63,
+        "still_need_feedback": 63,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 63
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 63
+        }
+      },
+      "1/200": {
+        "original_saving_cohort": 63,
+        "assured_with_at_most_two": 63,
+        "still_need_feedback": 63,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 63
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 63
+        }
+      },
+      "1/100": {
+        "original_saving_cohort": 63,
+        "assured_with_at_most_two": 63,
+        "still_need_feedback": 63,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 63
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 63
+        }
+      },
+      "1/40": {
+        "original_saving_cohort": 63,
+        "assured_with_at_most_two": 63,
+        "still_need_feedback": 63,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 63
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 63
+        }
+      },
+      "1/20": {
+        "original_saving_cohort": 63,
+        "assured_with_at_most_two": 63,
+        "still_need_feedback": 61,
+        "fixed_suffices": 2,
+        "fixed_minimum_budget_histogram": {
+          "2": 2,
+          "3": 61
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 63
+        }
+      },
+      "1/10": {
+        "original_saving_cohort": 63,
+        "assured_with_at_most_two": 63,
+        "still_need_feedback": 54,
+        "fixed_suffices": 9,
+        "fixed_minimum_budget_histogram": {
+          "2": 9,
+          "3": 54
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 63
+        }
+      }
+    },
+    "original/consumer_00000002": {
+      "0": {
+        "original_saving_cohort": 40,
+        "assured_with_at_most_two": 40,
+        "still_need_feedback": 40,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 40
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 40
+        }
+      },
+      "1/1000": {
+        "original_saving_cohort": 40,
+        "assured_with_at_most_two": 40,
+        "still_need_feedback": 40,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 40
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 40
+        }
+      },
+      "1/200": {
+        "original_saving_cohort": 40,
+        "assured_with_at_most_two": 40,
+        "still_need_feedback": 40,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 40
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 40
+        }
+      },
+      "1/100": {
+        "original_saving_cohort": 40,
+        "assured_with_at_most_two": 40,
+        "still_need_feedback": 40,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 40
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 40
+        }
+      },
+      "1/40": {
+        "original_saving_cohort": 40,
+        "assured_with_at_most_two": 40,
+        "still_need_feedback": 40,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 40
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 40
+        }
+      },
+      "1/20": {
+        "original_saving_cohort": 40,
+        "assured_with_at_most_two": 40,
+        "still_need_feedback": 37,
+        "fixed_suffices": 3,
+        "fixed_minimum_budget_histogram": {
+          "2": 3,
+          "3": 37
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 40
+        }
+      },
+      "1/10": {
+        "original_saving_cohort": 40,
+        "assured_with_at_most_two": 40,
+        "still_need_feedback": 31,
+        "fixed_suffices": 9,
+        "fixed_minimum_budget_histogram": {
+          "2": 9,
+          "3": 31
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 40
+        }
+      }
+    },
+    "original/consumer_00000003": {
+      "0": {
+        "original_saving_cohort": 65,
+        "assured_with_at_most_two": 65,
+        "still_need_feedback": 65,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 65
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 65
+        }
+      },
+      "1/1000": {
+        "original_saving_cohort": 65,
+        "assured_with_at_most_two": 65,
+        "still_need_feedback": 65,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 65
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 65
+        }
+      },
+      "1/200": {
+        "original_saving_cohort": 65,
+        "assured_with_at_most_two": 65,
+        "still_need_feedback": 65,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 65
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 65
+        }
+      },
+      "1/100": {
+        "original_saving_cohort": 65,
+        "assured_with_at_most_two": 65,
+        "still_need_feedback": 65,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 65
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 65
+        }
+      },
+      "1/40": {
+        "original_saving_cohort": 65,
+        "assured_with_at_most_two": 65,
+        "still_need_feedback": 65,
+        "fixed_suffices": 0,
+        "fixed_minimum_budget_histogram": {
+          "3": 65
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 65
+        }
+      },
+      "1/20": {
+        "original_saving_cohort": 65,
+        "assured_with_at_most_two": 65,
+        "still_need_feedback": 63,
+        "fixed_suffices": 2,
+        "fixed_minimum_budget_histogram": {
+          "2": 2,
+          "3": 63
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "2": 65
+        }
+      },
+      "1/10": {
+        "original_saving_cohort": 65,
+        "assured_with_at_most_two": 65,
+        "still_need_feedback": 56,
+        "fixed_suffices": 9,
+        "fixed_minimum_budget_histogram": {
+          "1": 2,
+          "2": 7,
+          "3": 56
+        },
+        "best_identified_adaptive_minimum_budget_histogram": {
+          "1": 2,
+          "2": 63
+        }
+      }
+    }
+  },
+  "interpretation": "The absolute floor relaxes each precision constraint. Every original adaptive guarantee remains valid. Cases moving to fixed budgets zero, one or two require less acquisition; they are not adaptive-certificate failures.",
+  "unit_identity": "Initial paired six-hour MSE width = retained block energy(kWh) times range of 2*(b-a)/6(kWh). Floor = factor times training mean squared hourly energy(kWh^2)."
+}

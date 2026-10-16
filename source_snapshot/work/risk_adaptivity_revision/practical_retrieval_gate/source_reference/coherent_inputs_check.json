@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "cases": 1098,
+  "reproduced_original_pair_calculations": 6588,
+  "exact_pair_cycle_consistency": true,
+  "maximum_original_roundoff_bound": "99554640305148912918598429/60847228810955011271841753858048000000000",
+  "maximum_original_roundoff_bound_float": 1.6361409097931666e-15,
+  "source_sha256": {
+    "work\\core_research_triage_20261016\\public_decision_inputs.json": "bf663a298b721f11008ab603072924feacc8ca33c25e81c2d6371472faf2b849",
+    "outputs\\review_frozen_forecasts.csv": "fc7a7f6097e4b65b34ec297ee6e73b02420a0481d82636c984bb0155b38123e0",
+    "work\\risk_adaptivity_revision\\external_validation\\operational\\fresh_fits_20261012\\frozen_forecasts.csv": "04dc64193fbcf00879e4f7ba5224d5626def79a8caad474fb3242d3d8d69b12f",
+    "work\\final_chain_20261014T031901Z\\run\\original_raw\\prepared\\data_blem_hourly_endpoints.csv": "2d8a88d83123216d71329c1745a4dbf1d0c47b34ba1a22b6529f348f4e5987eb",
+    "work\\core_research_triage_20261016\\reconstruct_coherent_inputs.py": "269e868a1bdc143cdbdf6e08e134332ff41f6d7e10373a50cb58f469660eb662"
+  },
+  "coherent_input_sha256": "4dab6420e1a365feb9bd08d21ebb936f347c21b445848a49b898086dd8029230",
+  "scope": "Preparation only; no claim that old policies remain universally valid after coefficient replacement."
+}

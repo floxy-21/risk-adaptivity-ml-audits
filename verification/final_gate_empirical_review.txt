@@ -1,0 +1,184 @@
+FINAL COMPOSED-MANUSCRIPT EMPIRICAL REVIEW
+========================================
+Status: PASS within the stated scope; final package replay remains a separate gate.
+
+Main source: outputs/revised_manuscript.tex
+SHA256: 6ff21873993503ebf5641f325f8313e1d5868ce1e42d53acc4f365422fb5bfbc
+Main PDF: outputs/revised_manuscript.pdf
+SHA256: c5e8bda4a813b9c40eaa09d1230cd6154ff0f60c52bd13a6828cd3e7acbcad14
+Extended methods: work/risk_adaptivity_revision/editorial/online_extended_methods.tex
+SHA256: e43dc7f249d35c20246f00ae529f227230e9368392f1337ba23fea1acb2f021f
+
+Scope
+-----
+I reread the final main-text empirical comparison and Discussion, the complete
+S16 retrieval-gate and tolerance-scale analysis, and the source/checker evidence.
+The PDF hash identifies the delivered PDF; this scoped review does not replace
+the separate rendered-layout inspection. The main abstract has 233 words.
+The S16 gate fragment is present verbatim in the extended methods, and its two
+tables are absent from the main source. No production file was edited.
+
+Reporting-only delta review
+---------------------------
+The two result fragments and the numerical-conventions table from the third
+edited fragment were checked verbatim against the composed source. The 54.15%
+and 71.83% rates are now explicitly expected success over the frozen randomized
+mixtures, agreeing with S18; they are not described as single sampled policy
+outcomes. Removing the duplicate gain sentence leaves the stronger fixed-width
+and greedy comparisons in the preceding paragraph. The 0.331/0.497-second
+quantities are now identified as measured incremental I/O excluding client
+throttle waiting, agreeing with S15 and distinct from completion time. The
+numerical-conventions row now locates the displayed-coefficient enclosures in
+S17. These are correct reporting clarifications; no result, threshold, forecast
+or empirical comparison was changed. The extended methods hash is unchanged.
+This delta review found no new issue. The PDF hash is checked, without claiming
+a new independent visual inspection.
+
+Verdict
+-------
+No blocking empirical, arithmetic or interpretation defect was found in this
+cut. The paper's central claim remains exact worst-case assurance and its
+shared-query obstruction. Moving the simple stopping application and its large
+conditional percentage to S16 improves focus. The supplementary analysis is
+properly scoped and useful; it is not advertised as a new acquisition theorem
+or a replacement for the exact-precision evidence.
+
+The final main text does not put 198/279 or 70.97% in the abstract. It reports
+the two panels' full reserved-reading reductions of 6.40% and 7.67%, identifies
+six systems rather than 1,098 independent systems, and says unrestricted bulk
+retrieval is faster on the tested interface. The short Discussion points to
+S16 and preserves both 8/819 original and 198/279 external warm-access counts.
+
+Matched objectives and unfavorable results remain visible
+---------------------------------------------------------
+The paragraph preceding the precision-optimal randomized replay gives the
+stronger practical comparisons: 7.81/11.11 percentage-point gains
+over deterministic worst-width batching, and 2.20/2.15 over greedy adaptation.
+The larger gap against a worst-record-precision optimizer is not called
+superiority over all practical fixed policies. Exact assurance and success on
+recorded answers are explicitly distinguished.
+
+The source-level paired table remains in the main text. HPM 2 supplies 25 of
+31 net additional external successes over fixed batching, and HPM 7 loses one
+success to greedy. The external tolerance-based decision tie at 277/279 and
+greedy's additional strict winner, 208 versus 207, remain explicit. Capacity
+and bounded-error controls retain adverse or uncertain effects. There is no
+contradictory largest-effect headline overriding these results.
+
+S16 cost and information accounting
+----------------------------------
+The gate chooses one fixed candidate whose worst feasible excess MSE is at
+most epsilon=0.01*M2. It does not require the selected model to be the exact
+empirical winner. The four models share one fallback full-block acquisition.
+The retained-endpoint reduction of 70.97% is exactly 198/279 relative to
+unconditional immediate per-block bulk, while the original reduction is 0.98%.
+
+Cold request accounting is unfavorable to endpoint probing: 360 versus 279
+external requests and 1,630 versus 819 original requests. Whole-period bulk
+and coalesced ranges are compared explicitly. The table states that its range
+comparison excludes later forecast copies; the following paragraph separately
+uses those copies first, with conservative binary64 boxes. They certify
+810/270 original/external blocks; the initial gate leaves 9/3 requiring fine
+retrieval, with retained endpoints and minimum-request plans of 3/51 and 2/22
+requests/values. These figures match checked outputs.
+
+The table is declared access-schedule replay. The twelve public requests
+separately validate range semantics and recorded decisions and explicitly
+include full-record downloads. The unfavorable 69,809 versus 64,357 response-
+body bytes and six versus three requests are retained. No deployment latency,
+money or general total-cost dominance is claimed. Certificate compute time is
+separated from loading/preparation; gate-plus-bulk is not said to cost at most
+bulk after including computation. The separate c_round<c_read inequality is
+correct only for the two specified reserved-reading plans, as stated.
+
+Tolerance-scale table
+--------------------
+The six rows retain every existing block and unchanged training M2. Epsilon,
+pooled realized MSE, blockwise-best MSE and within-block MSE spread all have
+units kWh squared. Medians are precisely defined; blockwise-best MSE is
+explicitly a hindsight reference rather than one deployable model. The count
+where all four realized models satisfy epsilon is explicitly not a no-query
+certificate count.
+
+The original all-four counts are 12/273, 15/273 and 0/273. External counts are
+0/93, 25/93 and 44/93. S16 does not generalize that all external models are
+similar: HPM 1 has a near-zero median best-model error with a much larger
+spread, while HPM 7 often has all four within tolerance. This distinction is
+supported by the computed values. The table interprets a fixed reporting
+tolerance and does not calibrate an operational loss or select a new threshold.
+
+Execution and reproducibility boundaries
+---------------------------------------
+The integrated practical gate command passed its four internal steps without
+network access. Its gate checker independently reconstructs 1,098 gates,
+39,528 vertex loss differences, cache/range accounting and all 279 external
+decisions from the saved public-response evidence.
+
+For the new scale table, the builder evaluates 4,392 exact model losses and
+checks 6,588 paired-loss identities. A separate checker reconstructs cumulative
+samples and uses expanded quadratic loss rather than the builder's squared
+residual expression. The optional pinned raw-source run independently passed
+all 1,098 blocks and exactly reproduced every system statistic. The default
+command independently recomputes 279 external blocks and formats/checks the
+pinned original system aggregates. This distinction is explicit.
+
+Only six-system aggregates are exported. No original fine-answer vectors or
+per-block original losses are bundled. Original raw regeneration is separate,
+hash-pinned, and does not refit models. The production README and results map
+identify default replay, optional original-source reconstruction and fresh
+forecast fitting as different levels. Within-study separate checkers are not
+described as external independent replication.
+
+Final disposition
+-----------------
+The unsuccessful decision-cover prototype remains outside the manuscript and
+scientific submission package. This avoids adding a weak method merely to
+chase a favorable endpoint. The present submission retains honest results
+and a focused methodological claim.
+
+This review supports submission of the scoped paper once the final compile,
+archive-integrity checks and 101-step clean-package replay pass. It does not
+pre-empt that replay, assess portal declarations, or establish a numerical
+acceptance probability. No greater-than-90% acceptance claim is justified by
+this internal review.
+
+
+CURRENT PROSE-ONLY DELTA AND RENDERED-LAYOUT REVIEW
+=================================================
+Status: PASS within the narrow scope below. The earlier review is preserved
+verbatim above; this is not a new scientific experiment or full scientific
+re-review, and it does not pre-empt the clean-package execution gate.
+
+Current main source SHA256:
+47167e289fe4be679605071b8529ea9294758990640c7bdea3ba6479dfb90bf1
+Current main PDF SHA256:
+5064e18e7950721612790112605b5046baa821fa49480fddb8e7c2d549536355
+Extended-methods source remains:
+e43dc7f249d35c20246f00ae529f227230e9368392f1337ba23fea1acb2f021f
+
+Two wording changes were checked against the recorded evidence:
+1. The BLEM paragraph identifies a prespecified three-consumer case series
+   and the lexicographically first IDs. work/study_protocol_blem.txt is
+   dated before fitting/outcomes; work/data_blem_source_notes.json records
+   the lexicographic first-three rule, and data_prepare_blem.py pins those
+   three source IDs. No sample-size justification such as tractability,
+   representativeness or matching a later cohort has been invented.
+2. The 418-game runtime paragraph now defines the subset explicitly.
+   Read-only arithmetic on the pinned precision catalog found exactly 418
+   of 1,098 rows with initially distinct lower and upper bounds, and 680
+   already matching. The 92.09-second report remains limited to completion
+   of the former subset. No new cases, outcomes or runtime were implied.
+
+Visual review used the current PDF's verified rendering metadata, not the
+stale extra page images left from earlier documents in the render directory.
+I inspected all 28 current pages on contact sheets contact-01.png,
+contact-13.png and contact-25.png, then full-resolution page images 14, 15,
+16, 17, 18 and 22. Both changed paragraphs are readable. Figure 2, the nearby
+source protocol, Tables 1--6, the numerical-conventions row and the page-22
+reproduction/API transition show no clipping, overlap or broken symbols.
+Contact-sheet inspection found no obvious pagination or margin defect.
+The remaining 22 pages were reviewed at contact-sheet resolution only.
+
+This limited review finds the two clarifications accurate and the affected
+layout suitable. No scientific source, manuscript or PDF was edited during
+this review. Acceptance probability is not assessed by this delta check.

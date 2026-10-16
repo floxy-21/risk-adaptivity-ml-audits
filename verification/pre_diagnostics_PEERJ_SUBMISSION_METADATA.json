@@ -1,0 +1,72 @@
+{
+  "journal": "PeerJ Computer Science",
+  "article_type": "Research Article",
+  "release_tag": "peerj-cs-2026-10-14-budget",
+  "release_focus": "Sharp shared-query guarantees and source-derived minimum fixed reading budgets.",
+  "title": "Adaptive Reading Budgets for Joint Forecast Audits with Cumulative Data",
+  "author": {
+    "given_name": "Jishan",
+    "family_name": "Kapoor",
+    "affiliation": "Independent Researcher, Toronto M4Y 1C9, Canada",
+    "corresponding_email": "kapoorjishan19@gmail.com"
+  },
+  "abstract": "Background. Model audits share verification readings across several predictors. We ask how many readings suffice for precise comparisons and when choosing later readings after earlier answers reduces this requirement.\n\nMethods. We study sharp intervals for affine model-loss contrasts on compact convex sets using a finite query dictionary. We prove fixed-budget bounds, compute minimum fixed reading budgets, and replay certified policies on cumulative-meter data.\n\nResults. For one comparison, if a deterministic policy guarantees precision with two exact scalar readings, some randomized fixed batch succeeds with worst-case probability at least 1/2. This lower bound disappears with two comparisons. For every m>=3, we construct instances where adaptation always succeeds but the best randomized batch succeeds with worst-case probability exactly 1/m. All coordinates are queryable, the budget remains two, and each comparison is separately certifiable by a fixed batch. The separation also holds for all pairwise comparisons among three models. On 225 of 1,098 meter blocks across six systems, two adaptive readings guarantee halving every comparison's width, while the minimum fixed budget is three. Of these, 222 have optimal randomized two-reading batch success exactly 1/2. The one-third reading reduction on qualifying blocks becomes 6.40% and 7.67% across the complete original and external panels. Capacity information reduces the advantage, and measured public-API retrieval favors bulk.\n\nConclusions. Sharing a reading budget can make feedback necessary for assurance even when separate comparisons need none. The construction proves a fixed-budget boundary; the retrospective meter study quantifies its narrower benefit in required readings, separately from retrieval cost.",
+  "keywords": [
+    "artificial intelligence",
+    "machine learning",
+    "adaptive information",
+    "minimax risk",
+    "optimal recovery",
+    "robust optimization"
+  ],
+  "preferred_subject_areas": [
+    "Optimization Theory and Computation",
+    "Algorithms and Analysis of Algorithms",
+    "Theory and Formal Methods"
+  ],
+  "reviewer_expertise_request": [
+    "exact optimization",
+    "optimal recovery",
+    "information-based complexity",
+    "robust optimization",
+    "mathematical foundations of machine learning"
+  ],
+  "reviewer_matching_status": "Expertise request prepared in cover letter; portal selection and individual conflict checks have not occurred. No reviewers contacted.",
+  "manuscript_sha256": "7f131f3e0d8adc3db17ddec0d850333580b834169dd2ddc59ce07059c5a9b669",
+  "pdf_sha256": "5a16ec3f9487816b3c87c6b5000b8529023322ad5ac4d7ba6f101297cc90d53d",
+  "files": [
+    "revised_manuscript.pdf",
+    "revised_manuscript.tex",
+    "Supplemental_Data_S1.zip",
+    "Supplemental_Data_S2.zip",
+    "peerj_cover_letter.txt"
+  ],
+  "status": "Prepared, not submitted. The author has authorized submission after final package verification.",
+  "last_recorded_browser_attempt": {
+    "checked_utc": "2026-10-16T00:06:16.022151+00:00",
+    "target": "https://peerj.com/manuscripts/151201/declarations/#other",
+    "journal_form_accessed": true,
+    "signed_in": true,
+    "submitted": false,
+    "credential_access": false,
+    "scope": "Observed signed-in author draft151201; current data and study declarations saved. Files and final submission not yet completed."
+  },
+  "author_declarations": "The author confirmed the AI-tools terms check and publication suitability. See PEERJ_AUTHOR_DECLARATIONS.txt for separate remaining personal facts, which are not represented as verified.",
+  "budget_result_summary": {
+    "fixed_three_vs_adaptive_two_blocks": 225,
+    "systems": 6,
+    "qualifying_reserved_readout_reduction": "1/3",
+    "one_additional_feedback_round_per_qualifying_block": true,
+    "full_panel_fixed_to_adaptive_with_fixed_fallback": {
+      "original": [
+        2625,
+        2457
+      ],
+      "external": [
+        743,
+        686
+      ]
+    },
+    "scope": "Retrospective exact uncapped noiseless joint half-width assurance. Counts reserve scalar readouts, not HTTP calls, latency, dollars or model-selection gains. Optional answers and outcomes are not used. Adaptive budgets above two remain unsolved; bulk, capacity, measurement-error and greedy controls remain unchanged."
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "analysis": "Post-analysis exact least sufficient fixed readout authorization under unchanged noiseless uncapped half-width model.",
+  "summaries": {
+    "external": {
+      "blocks": 279,
+      "minimum_fixed_budget_histogram": {
+        "1": 9,
+        "2": 119,
+        "3": 116,
+        "4": 27,
+        "5": 8
+      },
+      "minimum_adaptive_budget_identified_at_most_two": 185,
+      "adaptive_two_vs_minimum_fixed_histogram": {
+        "3": 57
+      },
+      "strict_readout_saving_cases": 57,
+      "fixed_readings_on_saving_subset": 171,
+      "adaptive_readings_on_saving_subset": 114,
+      "fixed_total_readings_all_blocks": 743,
+      "adaptive_where_certified_otherwise_minimum_fixed_total": 686,
+      "minimum_adaptive_budget_above_two_not_solved": 94
+    },
+    "external/hpm_1": {
+      "blocks": 93,
+      "minimum_fixed_budget_histogram": {
+        "1": 2,
+        "2": 45,
+        "3": 32,
+        "4": 7,
+        "5": 7
+      },
+      "minimum_adaptive_budget_identified_at_most_two": 60,
+      "adaptive_two_vs_minimum_fixed_histogram": {
+        "3": 13
+      },
+      "strict_readout_saving_cases": 13,
+      "fixed_readings_on_saving_subset": 39,
+      "adaptive_readings_on_saving_subset": 26,
+      "fixed_total_readings_all_blocks": 251,
+      "adaptive_where_certified_otherwise_minimum_fixed_total": 238,
+      "minimum_adaptive_budget_above_two_not_solved": 33
+    },
+    "external/hpm_2": {
+      "blocks": 93,
+      "minimum_fixed_budget_histogram": {
+        "1": 6,
+        "2": 38,
+        "3": 38,
+        "4": 11
+      },
+      "minimum_adaptive_budget_identified_at_most_two": 62,
+      "adaptive_two_vs_minimum_fixed_histogram": {
+        "3": 18
+      },
+      "strict_readout_saving_cases": 18,
+      "fixed_readings_on_saving_subset": 54,
+      "adaptive_readings_on_saving_subset": 36,
+      "fixed_total_readings_all_blocks": 240,
+      "adaptive_where_certified_otherwise_minimum_fixed_total": 222,
+      "minimum_adaptive_budget_above_two_not_solved": 31
+    },
+    "external/hpm_7": {
+      "blocks": 93,
+      "minimum_fixed_budget_histogram": {
+        "1": 1,
+        "2": 36,
+        "3": 46,
+        "4": 9,
+        "5": 1
+      },
+      "minimum_adaptive_budget_identified_at_most_two": 63,
+      "adaptive_two_vs_minimum_fixed_histogram": {
+        "3": 26
+      },
+      "strict_readout_saving_cases": 26,
+      "fixed_readings_on_saving_subset": 78,
+      "adaptive_readings_on_saving_subset": 52,
+      "fixed_total_readings_all_blocks": 252,
+      "adaptive_where_certified_otherwise_minimum_fixed_total": 226,
+      "minimum_adaptive_budget_above_two_not_solved": 30
+    }
+  },
+  "subset_checks": 8928,
+  "linear_scan_vs_enumeration_checks": 279,
+  "recorded_answers_or_replay_outcomes_used": false,
+  "forecast_training_runs": 0,
+  "fixed_optimum_includes_randomized_sure_policies": true,
+  "adaptive_minimum_identified_only_when_at_most_two": true,
+  "provenance": {
+    "mode": "bundled_external_only",
+    "source_execution_evidence_sha256": "3c7dbb113beee7547d42ff68c826cc0c96e2e7d91811a37930eb651091fa189d",
+    "source_physical_blocks": {
+      "external": 279
+    },
+    "original_coefficients_verified_in_this_run": false,
+    "plans_sha256": "26b1f10f11680883ea51bafba00e3907c7240a48227190c9da119abf56397d04",
+    "shared_plans_sha256": "9258e3d7508d333c9aaaaf243495d0a459adba8bf075bab1d244ace7f2ae9387",
+    "geometry_sha256": {
+      "external_validation/replay/geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0"
+    },
+    "precision_producer_sha256": "264259ca972a94781f8348cd462381d0d6bfc77b5070dbce0448aef3d84e842a",
+    "exact_coefficient_normalization_checks": 1674,
+    "maximum_exact_normalization_difference": "0"
+  },
+  "source_sha256": "ec05b9acc2aff2277168a932d2daa15d83de88833ef39315dfbb9376032f829c",
+  "binding_sha256": "fa2ac421b17e58afc056f2d7f3e9c4e251f31aba053efbfc37521a5737e2eede",
+  "ledger_sha256": "2e2abca5e5a838f1e61f65b99e11b1954fd069294e2c8e68ad5e7bd1e041b7d3",
+  "elapsed_seconds": 15.950152600002184,
+  "limitations": "Readouts, not HTTP requests, actual latency, dollars, calibrated sensor error, or a source-enforced contract. The API permits bulk. No claim that adaptive budgets above two are optimized."
+}

@@ -1,0 +1,37 @@
+\paragraph{Replay against the precision-optimal challenger.}
+The frozen precision-optimal batch policy succeeds on 54.15\% of original
+blocks and 71.83\% of external blocks in expectation, compared with
+78.27\% and 90.32\% for adaptation (Table~\ref{tab:complete-precision-replay}).
+The adaptive advantage is positive in each of the six systems.
+On the matched-half blocks, adaptation succeeds on every recorded block;
+the batch policy succeeds on 65.75\% and 65.08\% in expectation.
+This challenger optimizes worst-record precision success; the replay
+measures success on the recorded trace. The gains over deterministic
+worst-width batching are 7.81 and 11.11 percentage points, and those over
+greedy adaptation are 2.20 and 2.15 points. These comparisons answer
+different questions: the exact certificates establish the assurance
+separation, while the replay compares the specified policies on these six
+systems.
+
+\begin{table}[htbp]\centering\small
+\caption{Recorded half-width success against the precision-optimal randomized
+batch. Batch rates are exact expectations over its frozen mixture.
+Success uses the existing $10^{-8}$ replay allowance.
+The difference is adaptive minus batch, in percentage points.
+Intervals are descriptive 95\% percentile intervals from the unchanged
+2,000 synchronized seven-day calendar-block bootstrap draws.}
+\label{tab:complete-precision-replay}
+\begin{tabular}{lrrrr}\toprule
+Panel and subset & Blocks & Adaptive (\%) & Batch (\%) & Difference [95\% interval]\\\midrule
+Original, complete & 819 & 78.27 & 54.15 & 24.12 [22.03, 26.18]\\
+External, complete & 279 & 90.32 & 71.83 & 18.49 [16.53, 20.99]\\
+Original, matched half & 165 & 100.00 & 65.75 & 34.25 [31.68, 37.00]\\
+External, matched half & 57 & 100.00 & 65.08 & 34.92 [29.25, 40.18]\\\bottomrule
+\end{tabular}\end{table}
+
+For comparison, the deterministic worst-width batch succeeds on 155 of
+the 165 original matched-half blocks and 51 of the 57 external blocks.
+Removing the existing $10^{-8}$ replay allowance changes only the external
+complete-panel batch rate in this table, from 71.83\% to 71.76\%
+(difference 18.57 points; descriptive interval [16.60, 21.04]).
+

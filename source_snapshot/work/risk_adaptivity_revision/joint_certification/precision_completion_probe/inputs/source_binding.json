@@ -1,0 +1,57 @@
+{
+  "protocol_date": "2026-10-15",
+  "purpose": "Pinned coefficient-only catalog for continuum completion; no fine-resolution answers.",
+  "catalog_sha256": "15cfa445e0a6213494a71ee3e01b87067d1f8169f6b32b7164b38ca48c793f3f",
+  "source_catalog": "work/final_chain_20261014T031901Z/run/precision/plans.json",
+  "source_plan_sha256": "1d52ede2ae5bb741360839da0a5299192f063fee9ec42441c9c2588d30bcff39",
+  "source_hashes": {
+    "external_validation/replay/geometry.json": "ab6ebcb5f64de3a80ea48e5662c9607ce4cb6544eea7ead35361fbd7e8bac1f0",
+    "../final_chain_20261014T031901Z/run/original_raw/results/geometry.json": "d3af9794d9f6fb242b5bd91424f2878a28dc334fbbed97eb39b85685e4aced53"
+  },
+  "query_batches": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      4,
+      5
+    ]
+  ],
+  "threshold": "1/2",
+  "cases": 1098,
+  "open_cases": 418,
+  "fine_answers_loaded": false
+}

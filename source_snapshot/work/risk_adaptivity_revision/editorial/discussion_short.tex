@@ -1,81 +1,92 @@
 \section{Discussion}
-\subsection{The decision supported by a precision certificate}
-The practical output is a choice of acquisition protocol for a specified
-uncertainty budget. The auditor supplies the model contrasts, available
-information, permissible measurements and precision target. A sufficient
-initial interval needs no query; otherwise the certificate identifies a
-fixed or adaptive route, or the need for more information.
+\subsection{Planning the readings needed for assurance}
+The auditor supplies the comparisons, available information and permissible
+measurements. Our method returns the minimum sufficient fixed reading budget
+and checks whether feedback reduces it. The reading budget is an output of this calculation, so the auditor need
+not first impose a two-reading quota. Each saving exchanges one scalar
+reading for an additional information round. With declared charges
+$c_{\rm read}>0$ per reserved reading and $c_{\rm round}\geq0$ per
+round, the two assured plans cost $3c_{\rm read}+c_{\rm round}$ and
+$2c_{\rm read}+2c_{\rm round}$. Feedback is preferable exactly when
+$c_{\rm round}<c_{\rm read}$; ties favor the one-round fixed plan.
+This is an analytic choice between these plans under the same exact
+information model. An admissible bulk action is compared separately.
 
-Precision and model selection answer different questions. On the external
-panel, adaptation certifies a best model on 207 blocks and greedy on 208,
-despite adaptation's higher joint-precision success. The original-panel
-counts are 123 and 118; fixed batches certify 122 original and 201 external
-blocks. Narrowing every comparison therefore need not identify more winners.
-The half-width target is a declared reporting requirement, not a validated
-threshold for model replacement or financial action. Requests until a winner
-is identified require a different optimization objective.
+Theorem~\ref{thm:two-target-collapse} explains why sharing readings matters.
+Two simultaneous comparisons can remove the scalar two-query success floor:
+adaptive certainty coexists with optimal batch success $1/m$, although each
+contrast separately admits a sufficient fixed batch. The adverse records
+force all $m$ batches even for positive worst-record success and identify the
+unique optimal mixture. The output dimension and query budget stay fixed as
+the dictionary grows; three fixed readings suffice in this construction.
 
-\subsection{What sharing the budget changes}
-Theorem~\ref{thm:two-target-collapse} shows that two simultaneous comparisons
-can remove the scalar two-query success floor. Adaptive certainty coexists
-with optimal batch success $1/m$, although each contrast separately admits
-a sufficient fixed batch. The dictionary grows, the normalized threshold
-margin shrinks, and three fixed readings suffice. The result concerns
-assurance at the same budget, not an unbounded reduction in readings.
+The scalar-budget checks connect this construction to real forecast
+coefficients: most reading-saving blocks are already certifiable pair by
+pair, but require feedback when the readings must serve every pair.
+The exact threshold intervals establish where this conclusion remains
+stable. Recorded gains are larger over fixed batching than over greedy
+adaptation; they describe performance on these panels rather than the
+worst-case separation proved by the certificates.
 
-The meter certificates establish a narrower counterpart on actual frozen
-forecast geometries: with two readings shared across six comparisons,
-adaptation guarantees precision on 165 original and 57 external blocks
-where the best randomized batch has worst-case success exactly one half.
-The worked example gives both normalized and original loss-unit widths
-(Table~\ref{tab:absolute_joint_widths}). Across all blocks, recorded gains
-over fixed worst-width batching are 7.81 and 11.11 percentage points, versus
-2.20 and 2.15 over greedy adaptation. The separate-pair gains are only
-0.407 and 0.119 points. Each source contains three systems, and the
-shared-budget extension reuses these panels retrospectively.
+Absolute precision changes which readings are worth acquiring. At the
+declared training-scaled floor, all 57 external cases retain assurance with
+at most two readings, but 39 can use a simpler fixed plan. The floor-aware
+planner therefore reserves 70 readings rather than the minimum fixed total
+of 88 within this unchanged cohort. Across the complete external panel the
+reduction is 5.29\%. The half-width fraction and absolute floor are
+reporting targets. Relating them to a financial materiality threshold
+requires application-specific calibration.
 
-Additional information changes the acquisition decision. Capacity bounds
-can remove the need for feedback; errors can increase the sufficient budget.
-These controls use declared sensitivity models, with exact retained
-endpoints, rather than calibrated physical measurement bounds
-(Table~\ref{tab:measurement-assumptions}). Recorded performance also differs
-from worst-case assurance: a covering mixture can have a better guarantee
-yet succeed less often on the stored traces. The 351 original and 67 external
-open batch-precision gaps restrict exact superiority claims to the instances
-with matching certificates.
+\subsection{Scope and protocol choice}
+The main planner uses two cumulative-prefix queries and an exact
+nonnegative total. Its reading budget measures disclosed scalar values;
+the API control measures requests and I/O time. An unrestricted range
+request returns the complete record faster on the tested interface, so
+bulk is preferable when admissible. Online Resource~1, S16 evaluates a
+separate stopping rule for tolerance-based model choice. With endpoints
+already retained, it certifies an acceptable model before fetching finer
+data on 8/819 original and 198/279 external blocks. Its system-level
+loss-scale table explains the tolerance; cold-start and whole-period
+comparisons account for endpoint setup and range batching. This is a
+supplementary acquisition option, distinct from joint-precision planning.
 
-\subsection{When the retrieval interface favors another policy}
-Bulk retrieval is the best observed option on the measured three-task
-public-API workload: it uses one request, takes less I/O time and removes
-all remaining width. The two-reading contract defines a different,
-restricted benchmark. The protocol selector chooses among supplied
-certificates using reading and feedback-round limits; it does not infer
-that an unlisted protocol is impossible. The separate 29-case cost study
-also exposes the tradeoff: 65 reserved readings and 51 rounds for adaptation
-with fixed fallback, versus 87 readings and 29 rounds for fixed retrieval.
-That is a declared-cost comparison, not measured deployment savings.
+Additional information can change the plan. Of the 225 baseline saving
+blocks, 75 are excluded by the stronger $E/3$ cap and all 150 compatible
+blocks become fixed-certifiable. Thus capacity removes the feedback
+requirement on those same records, independently of the exclusion effect.
+Bounded errors can increase the sufficient reading budget.
+Table~\ref{tab:measurement-assumptions} states these sensitivity models,
+including exact retained endpoints and uncalibrated error allowances.
+The source panels each contain three systems and were reused retrospectively.
+The descriptive intervals summarize these panels; dependence beyond the
+resampled calendar blocks remains unmodeled. Population generalization
+requires additional systems.
 
-The finite measurement dictionary is essential. If every linear functional
-were available at unit cost, one could query a scalar target directly.
-The main exact planner covers two cumulative-prefix queries with a known
-nonnegative total. General convex-set results, unequal fixed costs and
-bounded-error extensions have wider mathematical scope, but do not provide
-an efficient arbitrary-budget precision optimizer. Online Resource~1 retains
-the scalar penalty classification (S11), the separate mean-joint-width
-construction (S14) and the specialized coordinate-recovery solver (S5/S7).
+Precision limits how much an audit's reported loss difference can change
+when the missing readings arrive. A model decision also depends on the
+intervals' positions. At the training-scaled tolerance, adaptive and greedy
+querying each certify an acceptable model on 277 external blocks, versus
+263 for fixed batching. The strict-winner counts favor greedy by one block.
+These outcomes distinguish the benefit
+of feedback from the value of exact planning for the precision requirement.
+The tolerance and charges remain choices for an audit service; the study
+measures data requirements and API behavior, not a deployed financial return.
+Online Resource~1 contains the
+broader scalar theory, coordinate-recovery solver and protocol-selection
+cost sensitivity. A next step is to develop scalable planners for larger
+adaptive reading budgets.
 
 \section{Conclusions}
 Sharing a reading budget can make feedback necessary for an assurance
-requirement that each comparison could meet separately. With two affine
+requirement that each comparison can meet separately. With two affine
 targets and two coordinate queries, adaptive success can be one while
 optimal randomized-batch success is $1/m$. The same construction covers
 all pairs among three models.
 
-An exact prefix-query planner and checkable certificates connect this
-boundary to model auditing: 165 original and 57 external meter blocks admit
-adaptive assurance one and optimal batch assurance one half under the
-specified two-reading contract. Recorded gains, uncertainty controls and
-the bulk-retrieval comparison delimit that benefit. The implementation
-supports a conditional acquisition decision; bulk is preferable on the
-measured unrestricted API, and precision alone does not establish a model
-winner.
+Our exact planner and verifiable certificates turn this boundary into a
+reading-budget decision. The meter study establishes where two adaptive
+readings replace the minimum three fixed readings and isolates the
+shared-budget mechanism through separate scalar checks. Absolute-scale
+and capacity analyses identify where fixed readings suffice instead.
+The resulting plans specify the readings and feedback required for a stated
+assurance level, alongside the option of an admissible bulk export.

@@ -58,6 +58,27 @@ def main():
     assert boundary['proof_input_sha256'] == boundary_exact['proof_input_sha256']
     assert boundary['numerical_verification']['actual_total_LPs'] == 7131
     assert boundary['numerical_verification']['maximum_width_discrepancy'] < 1e-7
+    support = json_source('work/risk_adaptivity_revision/two_target_boundary/support_report.json')
+    support_checker = BASE / 'two_target_boundary/verify_support.py'
+    READ.add(support_checker)
+    assert support['status'] == 'PASS' and support['checker_sha256'] == sha(support_checker)
+    assert support['actual_width_evaluations'] == 126195
+    budget_dir = 'work/risk_adaptivity_revision/joint_certification/reading_budget/'
+    budgets = json_source(budget_dir + 'executed_all/report.json')
+    budget_check = json_source(budget_dir + 'executed_all/independent_check.json')
+    budget_source = ROOT / (budget_dir + 'reading_budget.py')
+    budget_checker = ROOT / (budget_dir + 'check_reading_budget.py')
+    READ.update([budget_source, budget_checker])
+    assert budgets['status'] == budget_check['status'] == 'PASS'
+    assert budgets['source_sha256'] == sha(budget_source)
+    assert budget_check['checker_sha256'] == sha(budget_checker)
+    assert budget_check['producer_report_sha256'] == sha(ROOT / (budget_dir + 'executed_all/report.json'))
+    for cohort, values in [('original', (819,168,2625,2457)), ('external', (279,57,743,686))]:
+        row = budgets['summaries'][cohort]
+        assert (row['blocks'], row['strict_readout_saving_cases'],
+                row['fixed_total_readings_all_blocks'],
+                row['adaptive_where_certified_otherwise_minimum_fixed_total']) == values
+        assert row['adaptive_two_vs_minimum_fixed_histogram'] == {'3': values[1]}
 
     preamble = r'''% Self-contained source composed from pinned proofs and measured outputs.
 \documentclass[12pt]{article}
@@ -111,8 +132,24 @@ def main():
     text += local('editorial/helly_precision_short.tex').replace(
         r'\subsection{A precision consequence of sparse-policy bounds}',
         r'\section{A precision consequence of sparse-policy bounds}', 1)
-    text += local('two_target_boundary/main_theorem.tex')
-    text += r'''
+    boundary_full = local('two_target_boundary/main_theorem.tex')
+    corollary_start = boundary_full.index(r'\begin{corollary}')
+    corollary_proof_start = boundary_full.index(r'\begin{proof}', corollary_start)
+    corollary_proof_end = boundary_full.index(r'\end{proof}', corollary_proof_start) + len(r'\end{proof}')
+    corollary_proof = boundary_full[corollary_proof_start:corollary_proof_end]
+    text += (boundary_full[:corollary_proof_start] + r'''
+\begin{proof}[Proof sketch]
+Add the third contrast $T_3=T_1-T_2$. Querying $t$ alone makes its normalized
+width smaller than the lower endpoint of the stated threshold interval.
+The first two contrasts retain their adaptive and uniform-batch guarantees;
+the theorem's adverse records retain the matching batch upper bound.
+The fixed batch $\{t,z_1,z_m\}$ certifies all three. Explicit nonnegative
+prediction vectors and the threshold inequalities appear in Online
+Resource~1, S17.
+\end{proof}
+''' + boundary_full[corollary_proof_end:])
+    text += local('two_target_boundary/optimal_mixture.tex')
+    boundary_execution = r'''
 \paragraph{Executable checks.}
 Online Resource~1 includes a standard-library rational verifier and a
 separate LP calculation for $m=3,5,10$. The rational checks enumerate
@@ -120,22 +157,20 @@ separate LP calculation for $m=3,5,10$. The rational checks enumerate
 coverage. The 7,131 endpoint and whole-branch LPs agree with the exact
 formulas to at most $7.11\times10^{-15}$; the absolute comparison tolerance
 is $10^{-7}$ and the primal/dual feasibility tolerances are $10^{-9}$.
-The proof above establishes the result for every $m\geq3$; these finite
+The main theorem and the corollary proof here establish the result for
+every $m\geq3$; these finite
 checks test its implementation, including the third contrast and the
-threshold interval. From the extracted supplement root, run:
-\begin{verbatim}
-cd work/risk_adaptivity_revision/two_target_boundary
-python -S verify_boundary.py --solver-free --output replay_exact.json
-python verify_boundary.py --output replay_numeric.json
-\end{verbatim}
-The first command needs only Python's standard library; the second also
-needs the pinned NumPy/SciPy environment. Both use the rational construction
-encoded in \texttt{verify\_boundary.py}, with default sizes $m=3,5,10$;
-no meter data are required. Successful reports contain
-\texttt{status: PASS}, \texttt{all\_checks\_passed: true}, input and script
-hashes, and the checked witnesses. The numerical report additionally records
-the 7,131 LPs and their discrepancies. These commands verify the construction;
-the complete source-to-table replay is documented in Supplementary Materials.
+threshold interval. Online Resource~1 provides the commands, pinned environment and exact
+input/output hashes in \texttt{CURRENT\_RESULTS\_MAP.txt}. Its solver-free
+support check additionally evaluates 126,195 rational widths for seven
+family sizes from $m=3$ to $24$.
+'''
+    text += r'''
+\paragraph{Executable checks.}
+Online Resource~1, S17 supplies the rational verifier, a separately assembled
+LP check, numerical tolerances and exact input/output hashes. The complete
+proof of Theorem~\ref{thm:two-target-collapse} above establishes its universal
+claim; these finite calculations check the implementation.
 '''
     counter_full = (local('counter_adaptive/literature/counter_methods.tex')
                     + local('editorial/counter_half_corollary.tex')
@@ -151,17 +186,38 @@ the complete source-to-table replay is documented in Supplementary Materials.
                                      joint_definition + r'\begin{theorem}', 1)
     text += joint_definition
     text += local('joint_certification/main_planner_algorithm.tex')
+    text += local('joint_certification/precision_completion_probe/methods.tex')
+    text += local('joint_certification/precision_completion_probe/methods_secondary.tex')
+    text += local('joint_certification/reading_budget/methods.tex')
+    text += local('joint_certification/review_mechanism/methods.tex')
     text += local('editorial/assurance_feasibility.tex')
-    text += local('joint_certification/final_practical_figure/clarification.tex')
-    text += local('joint_certification/main_worked_precision_certificate.tex')
-    text += local('joint_certification/absolute_width_fragment.tex')
-    text += local('joint_certification/absolute_width_results/main_table.tex')
+    text += local('joint_certification/final_practical_figure/clarification.tex').replace(
+        r'Figure~\ref{fig:practical-guarantee-replay}(a)',
+        r'Figure~\ref{fig:practical-guarantee-replay}')
+    worked_full = local('joint_certification/main_worked_precision_certificate.tex')
+    worked_absolute = (local('joint_certification/absolute_width_fragment.tex')
+                       + local('joint_certification/absolute_width_results/main_table.tex'))
+    text += local('editorial/worked_certificate_short.tex')
     figure_check = json_source('work/risk_adaptivity_revision/joint_certification/final_practical_figure/independent_check.json')
     figure_data = json_source('work/risk_adaptivity_revision/joint_certification/final_practical_figure/figure_data.json')
     assert figure_check['status'] == 'PASS'
     assert figure_check['envelope_equalities'] == 735 and figure_check['replay_points_checked'] == 30
     assert figure_check['figure_data_sha256'] == sha(BASE / 'joint_certification/final_practical_figure/figure_data.json')
-    text += local('joint_certification/final_practical_figure/figure_fragment.tex')
+    full_figure = local('joint_certification/final_practical_figure/figure_fragment.tex')
+    first_panel = full_figure[:full_figure.index(r'\draw[black!12] (59,')]
+    first_panel = first_panel.replace(r'\node[anchor=west,font=\small\bfseries] at (53,47) {(b) Recorded precision success};', '')
+    first_panel = first_panel.replace('{(a) Choosing the second reading}', '{Choosing the second reading}')
+    first_panel = first_panel.replace(r'x=0.0098\linewidth', r'x=0.0140\linewidth').replace(
+        r'font=\scriptsize', r'font=\footnotesize')
+    text += first_panel + r'''
+\end{tikzpicture}
+\caption{Choosing the second reading in the HPM~1 worked case. The black
+lower envelope selects boundary~4 below the switch and boundary~1 above it.
+Its maximum, about $0.47734$, is below the half-width target for every first
+answer. Gray curves show the other permitted second readings.}
+\label{fig:practical-guarantee-replay}
+\end{figure}
+'''
     text += '\n\\FloatBarrier\n'
     text += local('editorial/source_protocols_short.tex')
     text += local('editorial/measurement_assumptions.tex')
@@ -268,6 +324,13 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
 \FloatBarrier
 '''
     text += local('editorial/results_start.tex')
+    text += '\n\\subsection{Reading budgets and the shared-query mechanism}\n'
+    text += local('joint_certification/reading_budget/results.tex')
+    mechanism_prose = local('joint_certification/review_mechanism/results.tex')
+    mechanism_split = mechanism_prose.index('The absolute-floor calculation')
+    text += mechanism_prose[:mechanism_split].replace(
+        r'\paragraph{Which cases isolate sharing, and which depend on absolute precision?}',
+        r'\paragraph{Which cases isolate the shared-query mechanism?}')
     joint = json_source('work/risk_adaptivity_revision/joint_certification/empirical_all_panel_report.json')
     assert joint['status'] == 'PASS'
     assert [(joint[c]['blocks'], round(joint[c]['blocks'] * joint[c]['means']['adaptive_recorded_success'])) for c in ('original','external')] == [(819,641),(279,252)]
@@ -281,23 +344,56 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
     paired = json_source('work/risk_adaptivity_revision/joint_certification/empirical_paired_all_results/report.json')
     assert paired['status'] == 'PASS' and paired['draws'] == 2000 and paired['base_seed'] == 20261013
     text += '\n\\subsection{Joint precision with two shared readings}\\label{sec:joint-results}\n'
-    text += ('Table~\\ref{tab:joint_objectives} separates the planning objectives from\n'
-             'recorded precision success. Table~\\ref{tab:joint_precision_status}\n'
-             'identifies where the precision challenger has matching bounds.\n')
+    completion_root = 'joint_certification/precision_completion_probe/'
+    completion = json_source('work/risk_adaptivity_revision/' + completion_root + 'all_418/report.json')
+    completion_check = json_source('work/risk_adaptivity_revision/' + completion_root + 'all_418/independent_check.json')
+    assert completion['status'] == completion_check['status'] == 'PASS'
+    assert completion['closed'] == completion_check['checks']['matched_continuum_optima'] == 418
+    assert completion_check['producer_report_sha256'] == sha(BASE / (completion_root + 'all_418/report.json'))
+    READ.add(BASE / (completion_root + 'check_completion.py'))
+    assert completion_check['checker_sha256'] == sha(BASE / (completion_root + 'check_completion.py'))
+    refined = json_source('work/risk_adaptivity_revision/' + completion_root + 'refined_all/independent_check.json')
+    replay = json_source('work/risk_adaptivity_revision/' + completion_root + 'refined_all/recorded_replay_summary.json')
+    replay_check = json_source('work/risk_adaptivity_revision/' + completion_root + 'refined_all/recorded_replay_check.json')
+    READ.add(BASE / (completion_root + 'refined_all/report.json'))
+    assert refined['status'] == replay['status'] == replay_check['status'] == 'PASS'
+    assert refined['total_cases'] == refined['checks']['matched_continuum_optima'] == replay['cases'] == replay_check['recorded_blocks'] == 1098
+    assert refined['unresolved_cases'] == 0 and replay['policies_changed'] is False
+    assert refined['producer_report_sha256'] == replay['policy_sha256_before_recorded_read'] == replay_check['policy_sha256'] == sha(BASE / (completion_root + 'refined_all/report.json'))
+    assert replay_check['replay_summary_sha256'] == sha(BASE / (completion_root + 'refined_all/recorded_replay_summary.json'))
+    assert replay_check['maximum_numeric_summary_discrepancy'] == 0
+    READ.add(BASE / (completion_root + 'check_recorded_replay.py'))
+    assert replay_check['checker_sha256'] == sha(BASE / (completion_root + 'check_recorded_replay.py'))
+    text += local(completion_root + 'results_exact.tex')
     text += local('joint_certification/final_review_comparators.tex')
     text += local('joint_certification/empirical_manuscript_fragment.tex').replace(
         r'Sections~\ref{sec:external-hpm} and~\ref{sec:counter-precision-results}',
-        r'Section~\ref{sec:joint-protocol-summary}')
+        r'Section~\ref{sec:joint-protocol-summary}').replace('% INSERT COMPLETED PRECISION REPLAY', local('editorial/replay_precision_short.tex'))
     text += local('joint_certification/final_review_results/main_system_table.tex')
     text += local('joint_certification/final_review_dependence_paragraph.tex')
-    text += local('joint_certification/precision_manuscript_fragment.tex')
+    decision_root = 'joint_certification/decision_tolerance_probe/'
+    decision = json_source('work/risk_adaptivity_revision/' + decision_root + 'results/report.json')
+    decision_check = json_source('work/risk_adaptivity_revision/' + decision_root + 'results/independent_check.json')
+    decision_saved = json_source('work/risk_adaptivity_revision/' + decision_root + 'saved_replay/report.json')
+    assert decision['status'] == decision_check['status'] == decision_saved['status'] == 'PASS'
+    assert decision['cases'] == decision_check['source_bound_blocks'] == decision_saved['blocks'] == 1098
+    assert decision_check['producer_report_sha256'] == decision_saved['producer_report_sha256'] == sha(BASE / (decision_root + 'results/report.json'))
+    for name, check in [('check.py', decision_check), ('replay_saved.py', decision_saved)]:
+        READ.add(BASE / (decision_root + name))
+        assert check['checker_sha256'] == sha(BASE / (decision_root + name))
+    assert [[decision['cohorts'][c]['factors']['1/100']['policies'][p]['certified_expected_count']
+             for p in ('adaptive','greedy','deterministic_batch')]
+            for c in ('original','external')] == [['189','186','188'],['277','277','263']]
+    decision_full = local(decision_root + 'manuscript_fragment.tex')
+    text += local('editorial/decision_results_short.tex')
     diagnostics = json_source('work/risk_adaptivity_revision/joint_certification/final_challenger_diagnostics/results/report.json')
     diagnostics_check = json_source('work/risk_adaptivity_revision/joint_certification/final_challenger_diagnostics/independent_check.json')
     assert diagnostics['status'] == diagnostics_check['status'] == 'PASS'
     assert diagnostics['blocks'] == diagnostics_check['exact_regime_cases'] == 1098
     assert diagnostics_check['coefficient_derived_cases'] == 279
     assert [(r['fixed_guarantee'], r['adaptive_only_guarantee'], r['no_deterministic_adaptive_guarantee']) for r in diagnostics['regimes']] == [(162,168,489),(128,57,94)]
-    text += local('joint_certification/final_challenger_diagnostics/manuscript_fragment.tex')
+    challenger_history = local('joint_certification/final_challenger_diagnostics/manuscript_fragment.tex')
+    text += challenger_history[:challenger_history.index(r'\paragraph{A stronger fallback check.}')]
     assurance = json_source('work/risk_adaptivity_revision/joint_certification/assurance_feasibility/executed_all/report.json')
     assert assurance['status'] == 'PASS'
     assert assurance['randomized_adaptive_success_upper_bound_on_no_guarantee_cases'] == '19/20'
@@ -305,12 +401,48 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
     for cohort, count in [('original', 489), ('external', 94)]:
         assert assurance['regimes'][cohort]['no_deterministic_adaptive_guarantee'] == count
     text += local('editorial/assurance_results.tex')
+    mechanism = json_source('work/risk_adaptivity_revision/joint_certification/review_mechanism/executed/report.json')
+    mechanism_check = json_source('work/risk_adaptivity_revision/joint_certification/review_mechanism/executed/independent_check.json')
+    assert mechanism['status'] == mechanism_check['status'] == 'PASS'
+    assert mechanism_check['producer_report_sha256'] == sha(BASE / 'joint_certification/review_mechanism/executed/report.json')
+    assert mechanism_check['checker_sha256'] == sha(BASE / 'joint_certification/review_mechanism/check.py')
+    assert mechanism['summaries']['all']['joint_only'] == 191
+    assert mechanism['summaries']['all']['scalar_obstruction'] == 34
+    for name in ['analyze.py', 'check.py', 'check_training.py', 'input_binding.py', 'decision_plan.py']:
+        READ.add(BASE / 'joint_certification/review_mechanism' / name)
+    assert mechanism['producer_sha256'] == sha(BASE / 'joint_certification/review_mechanism/analyze.py')
+    threshold = json_source('work/risk_adaptivity_revision/joint_certification/review_thresholds/executed/report.json')
+    threshold_check = json_source('work/risk_adaptivity_revision/joint_certification/review_thresholds/executed/independent_check.json')
+    assert threshold['status'] == threshold_check['status'] == 'PASS'
+    assert threshold['case_count'] == 222
+    assert threshold_check['report_sha256'] == sha(BASE / 'joint_certification/review_thresholds/executed/report.json')
+    for name in ['threshold_stability.py', 'check_threshold_stability.py']:
+        READ.add(BASE / 'joint_certification/review_thresholds' / name)
+    assert threshold['producer_sha256'] == sha(BASE / 'joint_certification/review_thresholds/threshold_stability.py')
+    capacity = json_source('work/risk_adaptivity_revision/joint_certification/review_capacity/executed_all/report.json')
+    capacity_lp = json_source('work/risk_adaptivity_revision/joint_certification/review_capacity/fresh_capacity_independent.json')
+    assert capacity['status'] == capacity_lp['status'] == 'PASS'
+    capacity_check = json_source('work/risk_adaptivity_revision/joint_certification/review_capacity/executed_all/independent_check.json')
+    assert capacity_check['status'] == 'PASS'
+    assert capacity_check['report_sha256'] == sha(BASE / 'joint_certification/review_capacity/executed_all/report.json')
+    assert capacity_check['checker_sha256'] == sha(BASE / 'joint_certification/review_capacity/check_capacity.py')
+    assert capacity['all_fixed_batches_checked'] == 70272
+    assert capacity_lp['endpoint_LP_count'] == 21168
+    assert capacity_lp['max_conditional_line_discrepancy'] < 1e-8
+    READ.add(BASE / 'joint_certification/review_capacity/analyze_capacity.py')
+    READ.add(BASE / 'joint_certification/review_capacity/check_capacity.py')
+    assert capacity['source_sha256'] == sha(BASE / 'joint_certification/review_capacity/analyze_capacity.py')
+    text += '\n\\subsection{Additional information and precision requirements}\n'
+    text += '\\paragraph{Absolute precision.}\n' + mechanism_prose[mechanism_split:]
+    text += local('joint_certification/review_thresholds/manuscript_fragment.tex')
+    text += local('joint_certification/review_capacity/manuscript_fragment.tex')
     sensitivity_report = json_source('work/risk_adaptivity_revision/joint_certification/review_sensitivity/results/report.json')
     sensitivity_check = json_source('work/risk_adaptivity_revision/joint_certification/review_sensitivity/independent_check.json')
     assert sensitivity_report['status'] == sensitivity_check['status'] == 'PASS'
     assert sensitivity_report['blocks'] == 1098 and sensitivity_report['outcome_rows'] == 5490
     assert sensitivity_report['new_forecast_fits'] == sensitivity_report['new_policy_optimizations'] == 0
-    text += local('joint_certification/review_sensitivity/manuscript_fragment.tex')
+    sensitivity_history = local('joint_certification/review_sensitivity/manuscript_fragment.tex')
+    sensitivity_replay = sensitivity_history[sensitivity_history.index(r'\paragraph{Sensitivity to the reporting target.}'):]
     # The geometry/replay figure presents these counts; retain the numeric table in S8.
     text += '\n\\FloatBarrier\n'
     text += local('joint_certification/noise_manuscript_fragment.tex')
@@ -352,7 +484,35 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
     end_sensitivity = '% END MANUSCRIPT BODY'
     if begin_sensitivity in sensitivity:
         sensitivity = between(sensitivity, begin_sensitivity, end_sensitivity).replace(begin_sensitivity, '', 1)
-    text += local('editorial/access_controls_focused.tex')
+    text += local('editorial/api_results_short.tex')
+    gate_root = 'work/risk_adaptivity_revision/practical_retrieval_gate/'
+    gate = json_source(gate_root + 'results/report.json')
+    gate_check = json_source(gate_root + 'results/independent_check.json')
+    gate_timing = json_source(gate_root + 'inputs/reported_gate_timing.json')
+    assert gate['status'] == gate_check['status'] == gate_timing['status'] == 'PASS'
+    assert gate['blocks'] == gate_check['exact_gates_checked'] == 1098
+    assert gate_check['direct_vertex_loss_checks'] == 39528
+    assert gate_check['exact_live_total_checks'] == 279
+    assert gate_check['saved_HTTP_requests_checked'] == 12
+    assert gate_check['external_zero_query_decisions_validated'] == 198
+    assert gate_check['external_bulk_selected_decisions_validated'] == 81
+    for cohort, count, skipped, warm, cold in [
+            ('original', 819, 8, 811, 1630), ('external', 279, 198, 81, 360)]:
+        row = gate['cohorts'][cohort]
+        assert (row['blocks'], row['zero_query_certificates']) == (count, skipped)
+        assert row['immediate']['gated_warm']['requests'] == warm
+        assert row['immediate']['gated_cold']['requests'] == cold
+        assert row['retrospective']['cold_whole_period_bulk']['requests'] == 3
+    for script in ['analyze.py', 'check_saved.py', 'time_gate.py', 'run.py',
+                   'verify_source_inputs.py']:
+        READ.add(ROOT / (gate_root + script))
+    READ.add(ROOT / (gate_root + 'inputs/public_decision_inputs_coherent.json'))
+    assert gate['source_sha256'] == sha(ROOT / (gate_root + 'analyze.py'))
+    assert gate_check['source_sha256'] == sha(ROOT / (gate_root + 'check_saved.py'))
+    assert gate_check['analyzed_report_sha256'] == sha(ROOT / (gate_root + 'results/report.json'))
+    assert gate['input_sha256'] == gate_check['input_sha256'] == sha(ROOT / (gate_root + 'inputs/public_decision_inputs_coherent.json'))
+    assert gate_timing['source_sha256'] == sha(ROOT / (gate_root + 'time_gate.py'))
+    gate_full = local('practical_retrieval_gate/manuscript_fragment.tex')
     selector_report = json_source('work/risk_adaptivity_revision/protocol_selection/results/report.json')
     selector_check = json_source('work/risk_adaptivity_revision/protocol_selection/independent_results/report.json')
     assert selector_report['status'] == selector_check['status'] == 'PASS'
@@ -419,6 +579,11 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
                 + local('joint_certification/review_sensitivity/results/threshold_table.tex')
                 + local('joint_certification/noise_proof_fragment.tex')
                 + local('joint_certification/precision_proof_fragment.tex')
+                + '\\subsection{Earlier restricted-cover comparator diagnostics}\n'
+                + challenger_history[challenger_history.index(r'\paragraph{A stronger fallback check.}'):]
+                + sensitivity_history[:sensitivity_history.index(r'\paragraph{Sensitivity to the reporting target.}')]
+                + '\nThe full precision-game completion in the main paper supersedes these earlier open bounds.\n'
+                + local(completion_root + 'historical_cover_replay.tex')
                 + local('protocol_selection/manuscript_fragment.tex')
                 + local('protocol_selection/manuscript_fragment_cost.tex')
                 + '\\section{S9. Scalar examples and growing separations}\n'
@@ -448,7 +613,32 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
                 + local('editorial/historical_control_short.tex')
                 + '\\subsection{Full implementation and source-to-table checks}\n'
                 + local('joint_certification/verification_main.tex')
-                + local('joint_certification/provenance_chain/manuscript_fragment.tex'))
+                + local('joint_certification/provenance_chain/manuscript_fragment.tex')
+                + '\\section{S16. Certificate-gated retrieval for a model tolerance}\n'
+                + gate_full
+                + '\\section{S17. Worked certificate and supporting proof details}\n'
+                + '\\subsection{Complete proof of the three-model corollary}\n'
+                + corollary_proof + boundary_execution
+                + worked_full + worked_absolute
+                + '\\section{S18. Secondary recorded-policy and model-decision results}\n'
+                + local(completion_root + 'results_replay.tex') + decision_full
+                + sensitivity_replay + full_figure)
+    # Historical S15 extracts repeat four section declarations. Keep the
+    # original semantic targets and give only the later declarations unique IDs.
+    repeated_labels = {'sec:historical-application', 'sec:counter-precision-results',
+                       'sec:stored-error-sensitivity', 'sec:external-hpm'}
+    seen_extended_labels = set()
+    def unique_extended_label(match):
+        label = match.group(1)
+        if label in seen_extended_labels:
+            assert label in repeated_labels, 'Unexpected duplicate extended label: ' + label
+            replacement = label + ':s15'
+            assert replacement not in seen_extended_labels
+            seen_extended_labels.add(replacement)
+            return r'\label{' + replacement + '}'
+        seen_extended_labels.add(label)
+        return match.group(0)
+    extended = re.sub(r'\\label\{([^}]+)\}', unique_extended_label, extended)
     # References to relocated appendices now identify the indexed resource.
     for label, section in [('app:stored-error', 'S6'),
                            ('app:complete-counter-witness', 'S6'),
@@ -505,7 +695,7 @@ $K$ & Budget & Mean, both & Squared, batch/adaptive & Success, batch & Success, 
     output = ROOT / 'outputs/revised_manuscript.tex'
     manifest_path = ROOT / 'outputs/risk_release_manifest.json'
     READ.add(Path(__file__))
-    record = {'status': 'passed', 'title': 'Risk and Adaptivity in Certifying Machine-Learning Model Comparisons',
+    record = {'status': 'passed', 'title': 'Adaptive Reading Budgets for Joint Forecast Audits with Cumulative Data',
               'target': 'PeerJ Computer Science', 'input_sha256': {str(p.relative_to(ROOT)).replace('\\', '/'): sha(p) for p in sorted(READ)},
               'output_sha256': hashlib.sha256(payload).hexdigest(), 'abstract_words_whitespace': words,
               'online_extended_methods_sha256': hashlib.sha256(extended_bytes).hexdigest(),

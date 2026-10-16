@@ -1,6 +1,6 @@
 """Add current theory/code to the complete preceding scientific supplement."""
 from pathlib import Path
-import hashlib, json, zipfile
+import copy, hashlib, json, zipfile
 ROOT=Path(__file__).resolve().parents[2]
 BASE=ROOT/'work/risk_adaptivity_revision'
 PRIOR=BASE/'prior_release/research_supplement.zip'
@@ -16,6 +16,14 @@ def sha(p):
         for b in iter(lambda:f.read(8<<20),b''): h.update(b)
     return h.hexdigest()
 
+def stream_hash(source, destination=None):
+    """Copy/hash large scientific members with bounded memory."""
+    h=hashlib.sha256()
+    for block in iter(lambda: source.read(1 << 20), b''):
+        h.update(block)
+        if destination is not None: destination.write(block)
+    return h.hexdigest()
+
 def include_current_path(p):
     """Single reviewable filter for current additions; no private review notes.
 
@@ -27,6 +35,8 @@ def include_current_path(p):
     rel=p.relative_to(BASE).as_posix()
     if rel.startswith('peerj_revision/'): return False  # private editorial/reviewer working notes
     if rel.startswith('joint_review/'): return False  # reviewed production copies are in joint_certification
+    if rel == 'joint_certification/decision_tolerance_probe/results/block_certificates.json':
+        return False  # original BLEM fine answers; sanitized derived endpoint inputs are bundled
     if rel.startswith(('counter_adaptive/pilot/','counter_adaptive/continuation/')): return False
     if rel.startswith('prior_release/') and p.name not in {'revised_manuscript.tex','README_prior.txt','MANIFEST_prior.sha256','requirements_prior.txt'}: return False
     if p.name.endswith('_review.txt') or p.name.startswith('final_pdf_visual_review') or p.name in {'final_review.txt','math_review_notes.txt','proof_review_memo.txt'}: return False
@@ -75,11 +85,12 @@ def main():
                 continue
             if info.filename in additions:
                 replaced.append(info.filename); continue
-            data=old.read(info.filename)
-            hashes[info.filename]=hashlib.sha256(data).hexdigest()
-            new.writestr(info,data);preserved+=1
+            with old.open(info) as source, new.open(copy.copy(info),'w',force_zip64=True) as dest:
+                hashes[info.filename]=stream_hash(source,dest)
+            preserved+=1
         for name,p in sorted(additions.items()):
-            data=p.read_bytes();hashes[name]=hashlib.sha256(data).hexdigest();new.writestr(name,data)
+            with p.open('rb') as source, new.open(name,'w',force_zip64=True) as dest:
+                hashes[name]=stream_hash(source,dest)
         omission_note={'prior_archive_sha256':OLD_SHA,
             'configured_paths':sorted(EXCLUDED_EDITORIAL_NOTES),
             'omitted_inherited_editorial_notes':sorted(omitted_inherited,key=lambda item:item['path']),
@@ -103,7 +114,8 @@ def main():
         assert len(z.namelist())==len(set(z.namelist()))==len(hashes)+1
         assert not (set(z.namelist())&EXCLUDED_EDITORIAL_NOTES)
         # read() checks each member CRC as well as the explicit SHA256 below.
-        for name,expected in hashes.items(): assert hashlib.sha256(z.read(name)).hexdigest()==expected,name
+        for name,expected in hashes.items():
+            with z.open(name) as source: assert stream_hash(source)==expected,name
         old_manifest=(BASE/'prior_release/MANIFEST_prior.sha256').read_text().splitlines()
         historical=0
         specials={'README.txt':'work/risk_adaptivity_revision/prior_release/README_prior.txt',

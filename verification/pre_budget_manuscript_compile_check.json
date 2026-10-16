@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "compiler": "Codex built-in LaTeX document compiler",
+  "path": "C:\\Users\\floxy\\Documents\\Codex\\2026-10-09\\paper-title-proposal-decoupled-low-rank\\outputs\\revised_manuscript.tex",
+  "source_sha256": "3d8ece5b7d2af6447e197d9c27cd2edbf5f4c4210dec81b8b423b8cf9ca70845",
+  "checked_utc": "2026-10-11T01:24:17.805626+00:00",
+  "compiler_message": "The current source compiled successfully with the desktop editor's compiler.",
+  "pdf_visual_inspection_performed": true,
+  "exported_pdf_sha256": "bbd0997b3d4e158375e6fecd105f7d36f49f4c0bdd2ea131b649d130d096fd44",
+  "visual_scope_report": "pdf_export_check.json"
+}

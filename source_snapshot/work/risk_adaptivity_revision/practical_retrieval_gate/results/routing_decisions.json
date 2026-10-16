@@ -1,0 +1,70 @@
+{
+  "cold_immediate_request_objective": {
+    "action": "bulk directly; do not spend a separate request learning the endpoints first",
+    "cohorts": {
+      "external": {
+        "blocks": 279,
+        "cached_hits_during_first_pass": 186,
+        "endpoint_rows_returned": 372,
+        "other_rows_returned": 1395,
+        "policy": "always_bulk_cold",
+        "repeat_audit_additional_requests": 0,
+        "requests": 279,
+        "returned_rows": 1767
+      },
+      "original": {
+        "blocks": 819,
+        "cached_hits_during_first_pass": 546,
+        "endpoint_rows_returned": 1092,
+        "other_rows_returned": 4095,
+        "policy": "always_bulk_cold",
+        "repeat_audit_additional_requests": 0,
+        "requests": 819,
+        "returned_rows": 5187
+      }
+    }
+  },
+  "complete_cache": {
+    "action": "return cached certificate or evaluate cached complete trace",
+    "additional_requests": 0
+  },
+  "retained_endpoints": {
+    "action": "exact epsilon gate then bulk for unresolved blocks",
+    "cohorts": {
+      "external": {
+        "blocks": 279,
+        "cached_hits_during_first_pass": 0,
+        "endpoint_rows_returned": 0,
+        "other_rows_returned": 405,
+        "policy": "gated_warm",
+        "repeat_audit_additional_requests": 0,
+        "requests": 81,
+        "returned_rows": 405
+      },
+      "original": {
+        "blocks": 819,
+        "cached_hits_during_first_pass": 0,
+        "endpoint_rows_returned": 0,
+        "other_rows_returned": 4055,
+        "policy": "gated_warm",
+        "repeat_audit_additional_requests": 0,
+        "requests": 811,
+        "returned_rows": 4055
+      }
+    }
+  },
+  "retrospective": {
+    "action": "use all permitted later forecast records with rounding envelopes, then coalesce unresolved fine ranges",
+    "cohorts": {
+      "external": {
+        "requests": 2,
+        "returned_rows": 22
+      },
+      "original": {
+        "requests": 3,
+        "returned_rows": 51
+      }
+    }
+  },
+  "scope": "Request-oriented guard for the evaluated interfaces, not a globally optimal acquisition theorem."
+}

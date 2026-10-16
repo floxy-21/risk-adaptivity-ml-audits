@@ -1,7 +1,6 @@
 \paragraph{What the measurement model certifies.}
-Table~\ref{tab:measurement-assumptions} separates stored-record guarantees
-from claims about physical energy. In each mathematical model, the guarantee
-requires the unknown record to satisfy the declared constraints.
+Table~\ref{tab:measurement-assumptions} defines the stored-record and
+bounded-error models used below.
 
 \begin{table}[htbp]
 \centering\small
@@ -15,14 +14,12 @@ Model & Target and observations & Scope of the guarantee\\
 Exact stored samples
 & Targets are increments of stored cumulative samples. Retained endpoints
 and queried internal samples are exact in this record model.
-& Certificates concern loss contrasts on the stored grid. They do not
-establish exact physical energy or historical delivery times.\\
+& Loss-contrast intervals on the stored sample grid.\\
 Bounded internal errors
 & The latent record includes one fixed internal-error vector with
 $|e_k|\leq\delta E$, where $E$ is the retained block total. Endpoints, and hence the
 retained total, remain exact. Errors are fixed before policy randomization.
-& Certificates cover every record and error vector within these bounds.
-The $1\%$ allowance is illustrative; it is not sampled noise or device calibration.\\
+& All records and fixed error vectors within these bounds.\\
 Physical energy
 & Actual energy and meter readings would require defensible bounds for
 internal measurements, endpoints and any physical capacity constraints.
@@ -33,10 +30,7 @@ alone does not establish the pointwise error model or exact endpoints.\\
 \end{table}
 
 \paragraph{Unchanged precision under capacity controls.}
-For each shared contrast $r$, $W_{r,0}$ remains its initial width under the
-original uncapped exact-total model. The shared cap controls retain
-$W_r\leq W_{r,0}/2$: they test the same absolute uncertainty budget after
-adding hourly information. They do not test halving the new capped initial
-width. The scalar control in Online Resource~1, S6 reports both
-questions separately. We use the half-width fraction as a declared audit
-requirement; it is not a calibrated threshold for a downstream decision.
+We retain the uncapped exact-total initial width $W_{r,0}$ and the target
+$W_r\leq W_{r,0}/2$, so every shared capacity control tests the same
+absolute uncertainty budget. The scalar control in Online Resource~1, S6
+also reports results relative to the capped initial widths.

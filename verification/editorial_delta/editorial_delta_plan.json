@@ -1,0 +1,130 @@
+{
+  "schema": 1,
+  "scope": "reviewed_prose_only",
+  "baseline": {
+    "full_zip": {
+      "path": "work/risk_adaptivity_revision/peerj_revision/pre_editorial_delta_20261016/research_supplement.zip",
+      "sha256": "b4d466ddfa82f846ea2a1e57e479f73050defbed02b60414aa54d673a2f3e2e1"
+    },
+    "parts": [
+      {
+        "path": "work/risk_adaptivity_revision/peerj_revision/pre_editorial_delta_20261016/Supplemental_Data_S1.zip",
+        "sha256": "029d92369bef9eaf750a66c5d4f7220d9e8c3a1280d784e11ce40cdc3abae704"
+      },
+      {
+        "path": "work/risk_adaptivity_revision/peerj_revision/pre_editorial_delta_20261016/Supplemental_Data_S2.zip",
+        "sha256": "35090966a62d2323fccaa8735aa1e80c6d8fb68fa282c2013411b770194a42b2"
+      }
+    ],
+    "replay": {
+      "path": "work/risk_adaptivity_revision/peerj_revision/pre_editorial_delta_20261016/current_clean_package_replay.json",
+      "sha256": "6a77973ae18d2e4170eb51381929e539bf34bb77453228e77ee07e4221910c2f"
+    },
+    "invocation": {
+      "path": "work/risk_adaptivity_revision/peerj_revision/pre_editorial_delta_20261016/peerj_replay_invocation_20261013.json",
+      "sha256": "7cc7c2ef2bc3e1853e35c4d55adbe7da6dde020a36c31c3d26d40523b1069d91"
+    },
+    "journal": {
+      "path": "work/risk_adaptivity_revision/peerj_revision/pre_editorial_delta_20261016/journal_supplement_verification.json",
+      "sha256": "73e4ff2dcde4290994f0a10078df604e329555cd00f45ebe9c141aab93068213"
+    }
+  },
+  "current": {
+    "full_zip": {
+      "path": "outputs/research_supplement.zip",
+      "sha256": "2d63e125ae566edb72d98ace34431f3a06e2bdbfd144cbb2e8640bf168357b1e"
+    },
+    "parts": [
+      {
+        "path": "outputs/Supplemental_Data_S1.zip",
+        "sha256": "0cd1cb6f7c721bfa843f12674508a78cecf2928c04118bdc15ab4ce431123233"
+      },
+      {
+        "path": "outputs/Supplemental_Data_S2.zip",
+        "sha256": "0329b0eeaa14ed771156337e453a07a4c780f7ec7b47749a21cb2bafa243e9e2"
+      }
+    ],
+    "assembly": {
+      "path": "work/risk_adaptivity_revision/peerj_revision/journal_delivery/assembly_report.json",
+      "sha256": "acedffc755fde2ce37f3f623b2f02c29c32183ee98e613155cdbec3c187a1a3f"
+    }
+  },
+  "review": {
+    "path": "work/risk_adaptivity_revision/peerj_revision/final_gate_mathematical_review.txt",
+    "sha256": "8f6f34a624b7cd15b6cbf0344363b8c86ff49a740e65e09380de4dbc2661b0f6"
+  },
+  "text_changes": {
+    "outputs/revised_manuscript.tex": {
+      "old_sha256": "6ff21873993503ebf5641f325f8313e1d5868ce1e42d53acc4f365422fb5bfbc",
+      "new_sha256": "47167e289fe4be679605071b8529ea9294758990640c7bdea3ba6479dfb90bf1",
+      "hunks": [
+        {
+          "old": "Completing the 418 previously unresolved games took 92.09 seconds on the\nrecorded host",
+          "new": "For the 418 of 1,098 games whose initial lower and upper precision bounds\ndiffered, exact completion took 92.09 seconds on the recorded host",
+          "count": 1
+        },
+        {
+          "old": "We use the first three consumer IDs in the pinned BLEM cumulative-counter\nsource \\citep{blem}. Training covers January--September",
+          "new": "We use a prespecified three-consumer case series: the lexicographically first\nthree IDs in the pinned BLEM cumulative-counter source \\citep{blem}. The\nsource-preparation protocol fixed this ID rule before model fitting and\nevaluation. Training covers January--September",
+          "count": 1
+        }
+      ]
+    },
+    "work/risk_adaptivity_revision/editorial/source_protocols_short.tex": {
+      "old_sha256": "16171904205ae0f3a61e42d331e7284655c5a52de4869d8da9d2506d0ced61fd",
+      "new_sha256": "85bea5a04a9f200ea638eba068c5eea9d2a4d12311b3c733ccf07c7156ac58c9",
+      "hunks": [
+        {
+          "old": "We use the first three consumer IDs in the pinned BLEM cumulative-counter\nsource \\citep{blem}. Training covers January--September",
+          "new": "We use a prespecified three-consumer case series: the lexicographically first\nthree IDs in the pinned BLEM cumulative-counter source \\citep{blem}. The\nsource-preparation protocol fixed this ID rule before model fitting and\nevaluation. Training covers January--September",
+          "count": 1
+        }
+      ]
+    },
+    "work/risk_adaptivity_revision/joint_certification/precision_completion_probe/results_exact.tex": {
+      "old_sha256": "780fca167fe66ab3529f6124ad157913fc57c72dcd51a0be7d85af39deed2a50",
+      "new_sha256": "7efd822e13552794ac844c6a8dd773cfd8f438ae6007409adba364ccfae0796d",
+      "hunks": [
+        {
+          "old": "Completing the 418 previously unresolved games took 92.09 seconds on the\nrecorded host",
+          "new": "For the 418 of 1,098 games whose initial lower and upper precision bounds\ndiffered, exact completion took 92.09 seconds on the recorded host",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "json_changes": {
+    "outputs/risk_editorial_verification.json": {
+      "old_sha256": "f0bd0d95c9afc9df981c104d6acbd41ce20f0002e1877f2ae079d10a7d18fe79",
+      "new_sha256": "ea6c851f24032938ae1e03c1a4b5c219a658bc5101849a0cf778ede3e2a47d66",
+      "allowed_paths": [
+        [
+          "completed_utc"
+        ],
+        [
+          "manuscript_sha256"
+        ],
+        [
+          "pdf_sha256"
+        ]
+      ]
+    },
+    "outputs/risk_release_manifest.json": {
+      "old_sha256": "b8ba0a8b894ecf3c18de8d8b3fe9bab0cf6d2eae1c15c18f479db0c1d5d86d92",
+      "new_sha256": "0fd1c2e865d5947086564dbcc5822902288ce33a102df3729d31ec705055e004",
+      "allowed_paths": [
+        [
+          "input_sha256",
+          "work/risk_adaptivity_revision/editorial/source_protocols_short.tex"
+        ],
+        [
+          "input_sha256",
+          "work/risk_adaptivity_revision/joint_certification/precision_completion_probe/results_exact.tex"
+        ],
+        [
+          "output_sha256"
+        ]
+      ]
+    }
+  }
+}

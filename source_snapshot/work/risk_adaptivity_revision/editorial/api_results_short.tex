@@ -1,0 +1,13 @@
+\subsection{What the retrieval interface changes}
+\label{sec:actual-api}
+The HeatpumpMonitor API permits full-range retrieval, so we tested it
+directly \citep{hpmapi,hpmcode}. Two repetitions of five policies on one
+preselected task from each external system produced 30 trials and 60 HTTP
+requests, including common endpoint reads. Bulk retrieval uses one request
+and achieves zero terminal width; adaptation uses two requests.
+Mean measured incremental I/O time, excluding client throttle waiting,
+is 0.331 seconds for bulk and 0.497 seconds for adaptation. Mean response bodies
+are 226.7 and 104.3 bytes, respectively. We recommend bulk when the full
+response is admissible. The selective planner instead computes the readings
+required under a declared access contract. Full measurements and cached
+responses appear in Online Resource~1, S15.

@@ -1,0 +1,4 @@
+{
+  "frozen_inputs_sha256": "4aff6552f5ba467a4c098e5193b5c1680c02a7ac5267fb3af4f13fe9e051052b",
+  "scope": "Frozen coefficients, retained totals, original training moments and their source provenance. Default recomputes policies; it does not reconstruct raw training data."
+}

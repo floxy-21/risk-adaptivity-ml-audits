@@ -1,0 +1,27 @@
+Dear Academic Editor,
+
+Please consider "Risk and Adaptivity in Certifying Machine-Learning Model Comparisons" as a Research Article in PeerJ Computer Science.
+
+We request a handling editor and reviewers with expertise in exact optimization, optimal recovery, information-based complexity, robust optimization, or the mathematical foundations of machine learning. The main contribution is an acquisition algorithm and its proof of assurance; the forecasting models supply the application.
+
+The paper studies when feedback helps certify machine-learning comparisons under a fixed measurement budget. Its new central boundary uses only two affine targets and two unit-cost coordinate queries. For every integer m >= 3, adaptation guarantees the required precision while the optimal randomized fixed batch has worst-case success exactly 1/m. Each target separately admits a fixed two-query guarantee. The separation also holds for all three paired squared-loss contrasts of three constructed nonnegative forecast vectors. The main text supplies the feasible set, policies and matching bounds against every admissible randomized batch.
+
+A scalar risk classification and a separate sparse-policy bound provide the foundation. The latter gives the one-half batch floor for a single target. The new construction keeps the budget and number of targets fixed while its measurement dictionary grows; its normalized margin shrinks, and three fixed queries suffice. We distinguish this exact assurance boundary from established vector recovery, minimax and sparse-policy results. The earlier 1/2-versus-2/3 joint mean-width separation and worked real-data certificate remain as complementary results.
+
+The application compares four frozen forecasting models using two cumulative-meter readings shared across all six model pairs. On 165 original and 57 external blocks, adaptation guarantees the required precision while the best randomized batch has exactly 50% worst-case success. Recorded success on these mathematically identified subsets is 100% for adaptation, compared with batch expectations of 65.45% and 64.91%. The complete panels retain the fixed-batch and greedy controls: adaptive precision gains over them are 7.81/11.11 and 2.20/2.15 percentage points, respectively.
+
+A declared 1% reading-error sensitivity gives 45 external blocks with verified adaptive guarantees that no randomized batch can match. Capacity constraints reduce this advantage, and unrestricted bulk retrieval remains preferable on the measured API. We report these controls, paired block outcomes and dependence-aware descriptive intervals. The shared-budget analysis reuses existing sources and is labeled retrospective.
+
+The contribution concerns algorithms for acquiring verification data and certifying ML comparisons. Supplemental Data S1 and S2 supply proofs, executable checks, frozen inputs, per-case witnesses and a table-to-command map. The new construction has solver-free rational certificates and a separate 7,131-LP check at m = 3, 5 and 10; the universal statement follows from the analytic proof. Together the supplemental files occupy 41.59 MB and use one documented reproduction command after extraction into the same directory. The package separates offline replay, source regeneration and model refitting. A completed source-to-table run also reproduced both empirical panels and all 1,098 outcome rows. The new theorem does not relabel those panels as a new experiment. The main text gives the planner and absolute-width example. A completed source-to-table run also reproduced both panels and all 1,098 outcome rows. The main text gives the planner and absolute-width example. The focused 28-page manuscript pairs the fixed-two-query joint-precision boundary with an assurance-feasibility consequence: on 489 original and 94 external cases, no randomized adaptive two-reading policy can guarantee precision under the declared uncapped exact-total noiseless prefix model. The 19/20 upper bound is not claimed optimal. Exact source-bound witnesses use no recorded answers; the default offline replay independently regenerates the external certificates.
+
+The editable manuscript and both supplemental files accompany the submission materials.
+
+This manuscript is unpublished and is not under consideration elsewhere. I received no external funding and declare no competing interests. The manuscript discloses generative-AI assistance under my supervision. I am the sole author and corresponding author.
+
+Sincerely,
+Jishan Kapoor
+Independent Researcher
+Toronto M4Y 1C9, Canada
+kapoorjishan19@gmail.com
+
+[Prepared locally; not sent or submitted.]

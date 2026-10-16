@@ -1,66 +1,120 @@
-CURRENT INTERNAL REVIEW -- 14 October 2026
-Source SHA256: ecaba7d47541ea64502d343a1fb1168fdc4f2b8864d5e7902f3644aceb628f07
-PDF SHA256: b722ed8fe6bc766e994407259f63369fa80248ff6d169695565472a3f65cae0c
-Pages: 28
-Recorded UTC: 2026-10-14T04:31:42.168499+00:00
+FINAL INTERNAL PEERJ COMPUTER SCIENCE REVIEW
+Date: 2026-10-16
+Status: PASS within the stated internal scientific and presentation review scope
+Manuscript SHA256: 47167e289fe4be679605071b8529ea9294758990640c7bdea3ba6479dfb90bf1
+PDF SHA256: 5064e18e7950721612790112605b5046baa821fa49480fddb8e7c2d549536355
+28 pages; 233-word structured abstract.
 
-FOCUSED REVISION AND CURRENT REVIEW
+VERDICT
+The principal comparator objection is resolved: the randomized-batch precision
+optimum is certified on all 1,098 blocks. No consequential error was found in
+the completed targeted checks and current scoped source reviews. The article
+presents algorithms and assurance results for journal consideration. This
+review does not itself execute the publisher-package replay or portal
+submission; their status is recorded separately below. Deployed financial savings, device-calibrated error bounds and an
+individual acceptance probability are not established.
 
-The main manuscript is reduced from 39 to 28 pages while retaining the full
-two-target theorem, its matching lower and upper bounds, the shared-query
-algorithm, a worked real-data certificate and the adverse application controls.
-The scalar penalty classification and older mean-width construction are indexed
-in Online Resource 1, S11 and S14. Historical experiments remain in S1-S15.
-This is a change in presentation, not deletion of unfavorable scientific results.
+BASIC REPORTING
+The title names cumulative-data forecast audits. Introduction, Methods, Results,
+Discussion and Conclusions follow the journal structure. A workflow diagram,
+precision equation and compact count partition explain the acquisition task.
+The scalar and two-target theorem proofs remain in the main paper. The full
+three-model corollary proof and worked certificate are in Online Resource1,
+S17; the model-tolerance retrieval gate and loss-scale context are in S16;
+secondary randomized replay, decisions and the complete figure are in S18.
+The main figure retains the unchanged conditional acquisition envelope.
+The closest interval-cover precedent, Kurtz Example20, is explicitly credited;
+the claim concerns its realization by equal-cost observation fibers and the
+exact shared-budget success/support statement, not a new interval-cover idea.
+Historical controls are indexed in the supplement. Repeated caveats have been
+consolidated while retaining the actual adverse findings.
+The root inspected contact sheets of all 28 pages and full-resolution
+pages [14, 15, 16, 17, 18, 22]. Tables, delimiters and affected equations are readable.
+The desktop compiler succeeded; the exported manuscript has no overfull,
+underfull, undefined-reference or missing-character warning.
 
-The new current-model Proposition 2 provides a checkable upper bound against
-every randomized adaptive two-reading policy where deterministic certainty
-is impossible. Each first query has four failing records with one common first
-answer. Uniform mass on all twenty records is independent of the policy seed.
-All 489 original and 94 external excluded blocks have exact certificates;
-11,660 failing-fiber endpoint pairs passed direct rational checks. Separate
-internal code repeated these checks without importing the producer. The 19/20
-bound is conservative, not the optimized randomized-adaptive success value.
-The main proof explicitly scopes this to five permitted internal prefixes and
-the exact, noiseless six-hour model. The quantifiers are for each policy,
-there exists a fixed adverse record, not one universal adverse record.
+EXPERIMENTAL DESIGN
+Policies share information, feasible records, measurements and hard budgets.
+The precision-game completion and tied-policy refinement use coefficients and
+initial totals. Optional answers enter only the subsequent replay. Exact
+primary precision is reverified after the numerical width refinement.
+All 418 previously open games now have matching rational bounds. A separately
+implemented verifier checks all 428,032 failure masks without relying on the
+optimizer's verdict. This is internal verification, not external human review
+or a proof-assistant proof of the universal theorem.
+The decision diagnostic preserves all seven training-scaled tolerance factors
+and frozen acquisition policies. It is retrospective on existing panels.
+Calendar-block paired uncertainty respects repeated systems and intraday blocks.
+Strict winners and tolerance certificates are separate tests.
 
-The practical decision is now complete within that model: use a fixed batch,
-use feedback, or extend an insufficient acquisition contract. This does not
-establish why a real service would enforce two-reading access. The measured
-public API favors bulk; external greedy certifies 208 model winners versus
-207 for adaptation. Capacity/error controls and 351/67 open batch-precision
-gaps remain explicit. Assurance is not equivalent to forecasting accuracy,
-model selection, measured cost savings or deployment validation.
+VALIDITY OF FINDINGS
+On all 225 reading-saving cases, adaptive success is one. The optimal randomized
+batch success is one half on 222 cases and one third on three. In 191 cases,
+each scalar contrast separately admits two fixed readings, isolating the
+shared-budget obstruction. The complete precision-optimum distribution is
+reported, including zero-guarantee cases.
+All 57 external cases retain assurance at the primary absolute floor, but 39
+admit simpler plans. The exported plans use 70 readings versus a fixed minimum
+of 88; full-panel totals are 358 versus 378. Of the 222 matched-half cases,
+179 preserve the exact separation throughout [0.49,0.51].
+Capacity transitions compare identical compatible records. At E/3, 75 of the
+225 saving cases are excluded and all 150 retained cases become fixed-certifiable.
+Source documentation does not supply installation limits or calibration records
+supporting a device-specific bound. Bulk remains the preferred admissible action
+on the measured public API. These findings are retained in the paper.
+At the existing 0.01 training-second-moment tolerance, adaptive/greedy/fixed
+certify 189/186/188 original and 277/277/263 external blocks. The external gain
+over fixed batching is 5.02 points (descriptive interval 2.51 to 8.60), with
+no gain over greedy. The original adaptive-minus-fixed interval includes zero.
+Exact precision planning is not claimed to optimize model decisions.
 
-The abstract remains 240 words and the paper follows Introduction, Methods,
-Results, Discussion and Conclusions. The early workflow, exact theorem table,
-algorithm box, coefficient matrix, switch interval and enclosure headers were
-inspected in the rendered PDF. No overflow, underflow or undefined-reference
-warning remains in the final TeX log. A successful desktop compilation is
-recorded separately from the scientific checks.
+PRACTICAL RETRIEVAL GATE
+The supplementary S16 gate certifies one fixed, lexicographically selected model within
+epsilon=0.01 times the training second moment for every compatible completion.
+This is standard safe stopping for model choice, separate from joint half-width
+precision and the paper's theorem. The coherent inputs pass 39,528 exact direct
+loss vertex checks; the optional independent raw-source route additionally
+checks 26,352 forecast coordinates, 6,588 formulas and 1,098 outer totals.
 
-All previous empirical values and the pinned scientific producer scripts are
-unchanged. Both-source regeneration previously reproduced all 1,098 ledger
-rows and 165/57 matched-half counts exactly, without producer reuse. The new
-assurance output is tied to that source chain. Its default solver-free command
-checks the bundled external panel; original coefficients require the documented
-pinned raw-source route. Current publisher ZIP execution is recorded separately
-in current_clean_package_replay.json; historical successful runs are not
-relabeled as checks of the new source. No new model fitting is claimed.
+With endpoints retained, the gate avoids 8/819 original and 198/279 external
+per-block bulk fetches. Cold endpoint acquisition instead raises requests to
+1,630 and 360 versus direct bulk at 819 and 279. Whole-period direct bulk needs
+only three requests per cohort. Later forecast rounding boxes certify 810 and
+270 blocks. With endpoints retained, the remaining nine original and three
+external blocks need three requests/51 values and two requests/22 values.
+These are declared-schedule replay counts, not downloads actually avoided in
+the separate twelve-request API validation, which included full-record reads.
+Saved responses verify all 279 external totals and all 198 preselected
+tolerance decisions. Twenty-six selected models are not exact winners; the
+epsilon wording is essential. Cache reuse, efficient range frontiers, cold
+setup and ordinary bulk are included. No financial or population-latency
+advantage is inferred from this small interface-validation experiment.
+The unchanged tolerance is contextualized against six systems' realized loss
+scales. Its blockwise best-model median is a hindsight reference, not the error
+of one deployable model. Default verification recomputes the279 external blocks
+and replays original system aggregates; the separately executed raw-source
+check recomputes all1,098. Neither route changes the threshold or policies.
 
-Current fit assessment: suitable for PeerJ Computer Science consideration as
-a theoretical/computational audit method with conditional application evidence.
-No blocking proof or numeric error was identified in this internal review.
-Reviewers can still judge significance, practical scope and presentation.
-These corrections do not establish a calibrated 90% individual acceptance
-probability or direct-acceptance probability. No external specialist was
-contacted. Journal submission has not occurred; the recorded supported browser
-startup failed before any page or form was reached.
+REPRODUCIBILITY
+Current clean publisher-package replay: Scientific verification: the preserved 101-step clean replay passed on source 6ff21873993503ebf5641f325f8313e1d5868ce1e42d53acc4f365422fb5bfbc. All scientific code, inputs and results in the final package are byte-identical. A subsequent, explicitly reviewed prose-only delta passed a fresh isolated manuscript rebuild and document checks. No second full scientific execution is claimed for the final prose revision..
+Bundled decision replay reconstructs 38,430 outcomes from derived endpoints.
+The separate full-source checker validates 65,880 endpoint intervals, 2,196
+branch choices, 6,048 vertex objectives and 56 bootstrap intervals. Original
+fine-answer vectors are excluded from release; pinned raw regeneration recreates
+them locally. Saved replay, raw reconstruction and fresh fitting stay distinct.
+The four prior reviewer analyses retain their separate exact/endpoint checks.
+Current gate mathematics and empirical claims have separate source-pinned
+reviews; the standalone gate package was checked with network connections
+disabled. The default gate replay checks saved inputs, ledgers and cached
+responses. Its optional raw-source check was executed separately. No fresh
+independent forecast fitting is claimed. Historical proof/novelty/practice
+reviews retain their original source scope and are not relabeled as current.
 
-Earlier source-bound reviews and failed/successful reproduction attempts remain
-in history. This memo records current scope without treating AI-assisted checks
-as independent external validation.
+Nothing was submitted. The user explicitly authorized submission after final
+verification; this review does not establish completion of that submission.
+No external researcher was contacted. This review does not assert direct
+acceptance or an acceptance probability above 90 percent.
 
 FINAL ARTIFACT VERIFICATION
-PASS: 77 steps in a fresh network-disabled stage from the two publisher ZIP files, 1096 manifested members, 1026.08 seconds. Main source reproduced byte-for-byte. Combined ZIP size: 41.59 MB. Full historical archive integrity also passed.
+Scientific verification: the preserved 101-step clean replay passed on source 6ff21873993503ebf5641f325f8313e1d5868ce1e42d53acc4f365422fb5bfbc. All scientific code, inputs and results in the final package are byte-identical. A subsequent, explicitly reviewed prose-only delta passed a fresh isolated manuscript rebuild and document checks. No second full scientific execution is claimed for the final prose revision.
+Current publisher package: 1280 manifested members; combined ZIP size 49.42 MB. Recorded scientific execution time: 1301.05 seconds. Full historical archive integrity also passed.

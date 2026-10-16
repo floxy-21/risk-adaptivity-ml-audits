@@ -2537,6 +2537,58 @@ is $1/2$ on 165 and 57 blocks, respectively; the remaining matches have
 value zero or one.  No continuum optimality is inferred for the unmatched
 blocks, nor are these exact-total guarantees transferred to the
 bounded-error sensitivity models.
+\subsection{Earlier restricted-cover comparator diagnostics}
+\paragraph{A stronger fallback check.}
+We retain the certified deterministic or equal two-batch cover and replace its mean-width fallback by the fixed worst-width batch on the same 492 original and 94 external fallback blocks. Using the strict threshold $J\leq1/2$, this coefficient-only change raises recorded success from 54.98\% and 72.55\% to 64.71\% and 74.19\%.
+
+Pure fixed batching still performs better (70.45\% and 79.21\%); the entire recorded-score deficit arises on the matched-half subsets, where fixed batching succeeds on 155/165 and 51/57 records, versus expected cover successes of 108/165 and 37/57. On each of those instances, however, every fixed batch has worst-case precision success zero, whereas the cover guarantees $1/2$. The matched-half guarantees and open continuum gaps also apply to this variant. This retrospective diagnostic reuses both panels; the supplement gives both threshold conventions, block-level paired outcomes, system summaries and descriptive seven-day block-bootstrap intervals.
+\paragraph{How much remains unresolved in the batch comparison.}
+The batch-precision cover has matching continuum bounds on 468 of 819 original
+blocks and 212 of 279 external blocks. On the remaining 351 and 67 blocks,
+the median upper-minus-lower probability gap is respectively $1/3$ and $1/2$.
+The interquartile ranges are $[1/4,1/2]$ and $[1/3,1/2]$; both panels range
+from $1/5$ to $1/2$. Averaged over all blocks, including closed gaps, the gaps
+are 0.1583 and 0.0983. We use the 165 original and 57 external matched-half certificates as the evidence
+of exact precision superiority; the full-panel cover replay is a comparison
+with a declared policy, not with a globally solved precision optimum.
+
+
+The full precision-game completion in the main paper supersedes these earlier open bounds.
+\subsection{Earlier saved cover mixtures}
+These are the original saved-cover replay results, retained as historical controls. The completed full-panel precision challenger replaces them in the main comparison.
+The cover + mean fallback policy uses a guaranteeing fixed batch when
+available, then a certified equal mixture of two batches, and otherwise a
+mean-width fallback.
+Its recorded success is 54.98\% over the original panel and 72.55\% over the
+external panel.
+Matching certificates prove a batch precision optimum of
+$1/2$ on 165 original and 57 external instances. On these instances, adaptive
+succeeds on every stored record, while the optimal batch mixtures succeed
+with expected frequencies 108/165 (65.45\%) and 37/57 (64.91\%). Coefficient
+certificates define these subsets before record replay. The complete fixed-batch and greedy
+comparisons in Table~\ref{tab:joint_shared_replay} remain the broader controls.
+
+\paragraph{A stronger guarantee can score worse on stored records.}
+Table~\ref{tab:guarantee-recorded-tradeoff} makes the distinction visible on
+the same certified subsets. The fixed worst-width batch succeeds more often
+on the stored answers than the optimal randomized cover, yet its worst-case
+precision success is zero. Indeed, a deterministic batch's worst-case
+indicator is either zero or one; a value of one would contradict the
+proved randomized optimum of one half. Feedback attains both certainty
+over compatible records and success on these recorded cases.
+
+\begin{table}[htbp]\centering\small
+\caption{Assurance and replay answer different questions on the matched-half
+subsets. Randomized entries are expected success counts for the saved
+optimal mixtures. All methods use the same two readings and information.}
+\label{tab:guarantee-recorded-tradeoff}
+\begin{tabular}{lrrr}\toprule
+Policy & Worst-case success & Original (165) & External (57)\\\midrule
+Adaptive & $1$ & 165 & 57\\
+Fixed worst-width batch & $0$ & 155 & 51\\
+Optimal randomized cover & $1/2$ & 108 & 37\\
+\bottomrule\end{tabular}\end{table}
+
 \paragraph{Selecting the acquisition protocol.}
 The interface, budget unit and operational preference must be specified before
 an acquisition guarantee is used. A reference implementation selects among
@@ -3434,7 +3486,7 @@ The vertex argument does not transfer to precision indicators, caps or
 measurement error. S8 provides the formulations and verification details.
 \section{S15. Complete operational and historical controls}
 \subsection{Source protocols and the separate-pair controls}
-\label{sec:counter-precision-results}
+\label{sec:counter-precision-results:s15}
 The original source contains three cumulative consumption counters
 \citep{blem}, with 91 eligible days per meter. The four frozen forecasters
 are daily persistence, ridge regression, boosted trees and an MLP. We audit
@@ -3461,7 +3513,7 @@ cases, respectively. S6 retains both the original-threshold and
 new-constrained-width calculations, all compatibility flags and witnesses.
 
 \subsection{External source and bounded-error controls}
-\label{sec:external-hpm}
+\label{sec:external-hpm:s15}
 The HeatpumpMonitor source protocol \citep{hpmabout,hpmapi} selected the
 first three ascending system IDs with public MID status, explicit Class-1
 electrical-meter metadata and a cumulative feed spanning January--July
@@ -3489,7 +3541,7 @@ points; greedy succeeds on all 29 selected cases. S6 retains the complete
 comparisons and exact checks of 16,740 terminal intervals.
 
 \paragraph{Error allowances and required budgets.}
-\label{sec:stored-error-sensitivity}
+\label{sec:stored-error-sensitivity:s15}
 With exact endpoints and fixed internal-readout errors bounded by
 $0.001E$ or $0.01E$, respectively 27 and 22 of those 29 cases retain the
 two-query adaptive guarantee. Both levels cover every system and model
@@ -3608,7 +3660,7 @@ Intel Core i7-8565U host with one numerical thread. The complete timing,
 memory, residual, tie-profile and skip ledgers are in S1/S7.
 No large-scale optimizer for arbitrary convex sets or precision risk is implied.
 \subsection{Historical controls: guarantees and observed accuracy}
-\label{sec:historical-application}
+\label{sec:historical-application:s15}
 The completed-archive control \citep{portugal,uci} incorporates every permitted forecast
 copy before evaluation. Under identical information and zero new readings,
 paired bounds certify 7,836/9,720 Portugal comparisons (80.62\%), versus
@@ -3664,6 +3716,462 @@ numerical difference. Supplemental files retain commands, hashes and
 execution reports; raw-dependent original records are regenerated locally.
 This verifies the frozen-predictor computations, without refitting models
 or claiming external human replication.
+\section{S16. Certificate-gated retrieval for a model tolerance}
+\subsection{Avoiding retrieval when the decision is already certified}
+\label{sec:retrieval-gate}
+The same affine loss bounds can provide a stopping rule for a downstream
+model-choice request. Here the request is to return a model whose block MSE is
+within $\epsilon=0.01M_2$ of the best candidate, where $M_2$ is the previously
+fixed training-period second moment. This differs from the joint half-width
+requirement. With retained block energy $E$, we stop before retrieval whenever
+\[
+ \min_m\max\left\{0,\max_{j\ne m}
+ \left[d_{mj}+E\max_h c_{mj,h}\right]\right\}\leq\epsilon.
+\]
+Every permitted completion then satisfies the requested tolerance for a
+qualifying model. Otherwise, one bulk fetch supplies the five internal counter
+values used by all four models. We use the first qualifying model in
+lexicographic order and cache every returned value.
+
+On the existing panels, this rule avoids 8 of 819 original and 198 of 279
+external block fetches when endpoints are already retained: request reductions
+of 0.98\% and 70.97\%, respectively. The per-system counts are $0,1,7$ of
+273 original blocks and $75,37,86$ of 93 external blocks. Exact arithmetic
+checks all 39,528 loss differences at the simplex vertices. A fixed-order
+timing pass takes 0.265\,s for the 1,098 gates after input preparation
+(median 0.265\,ms per block); loading and rational conversion take a further
+0.490\,s on the reported machine.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Range-access replay without later forecast copies:
+requests/returned counter values. One fetch is
+shared across all models. Cold access charges endpoint acquisition; period
+access coalesces ranges per system.}
+\label{tab:retrieval-gate-cost}
+\begin{tabular}{llrr}
+\toprule
+Access & Policy & Original & External\\
+\midrule
+Immediate, endpoints held & Always bulk & 819/4095 & 279/1395\\
+                         & Certificate gate & 811/4055 & 81/405\\
+Immediate, cold          & Direct bulk & 819/5187 & 279/1767\\
+                         & Endpoints, then gate & 1630/5147 & 360/777\\
+Whole period, cold       & Direct bulk & 3/6537 & 3/2217\\
+                         & Coarse grid, then gated ranges & 6/7623 & 6/2403\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For a cold audit priced per request, the router selects direct bulk. In a
+historical audit it first uses permitted forecast copies, with binary64
+rounding enclosures: these certify 810 original and 270 external blocks.
+With endpoints retained, after the initial gate only nine original and three external blocks need
+fine retrieval, covered by three requests/51 values and two requests/22 values.
+
+Table~\ref{tab:retrieval-gate-cost} replays the declared access schedules.
+We separately validated the interface with 12 predeclared public API requests,
+including full-record downloads. They confirm the range semantics, all 279
+external totals, and the tolerance of all 198 decisions selected before
+retrieval. The measured period-wide coarse-plus-gated requests receive 69,809
+response-body bytes in six requests, versus 64,357 in three bulk requests.
+The 70.97\% request reduction therefore belongs to immediate audits with
+retained endpoints. The comparison measures requests and returned data under
+one fixed decision tolerance; it supplies a concrete stopping rule rather
+than a price or latency estimate.
+
+\begin{table}[htbp]\centering\small
+\caption{Absolute tolerance and realized loss scales on the same blocks. All loss columns are in kWh$^2$. Med. MSE pools the four fixed models across blocks; best and spread are blockwise minimum and maximum-minus-minimum MSE, respectively, before taking medians. All four counts blocks whose realized spread is at most $\epsilon$; it is not a certificate count.}
+\label{tab:retrieval-tolerance-scale}
+\begin{tabular}{lrrrrr}\toprule
+System & $\epsilon$ & Med. MSE & Med. best & Med. spread & All four\\\midrule
+BLEM 1 & 0.003575 & 0.02371 & 0.01122 & 0.03286 & 12/273\\
+BLEM 2 & 0.004427 & 0.03981 & 0.01881 & 0.05139 & 15/273\\
+BLEM 3 & 0.003251 & 0.05632 & 0.02384 & 0.08984 & 0/273\\
+HPM 1 & 0.006101 & 0.02327 & $4.292\times10^{-6}$ & 0.1641 & 0/93\\
+HPM 2 & 0.002245 & 0.002964 & 0.000354 & 0.005857 & 25/93\\
+HPM 7 & 0.009255 & 0.0004555 & $7.2\times10^{-5}$ & 0.009809 & 44/93\\
+\bottomrule\end{tabular}\end{table}
+The tolerance has different implications across systems. HPM~7 has all four models within tolerance on 44 of 93 blocks, while HPM~1 has none and has a near-zero median best-model error alongside a much larger model spread. The blockwise best MSE is a hindsight reference, not the performance of one deployable model. These summaries interpret the unchanged tolerance rather than calibrating it to an operational loss.
+\section{S17. Worked certificate and supporting proof details}
+\subsection{Complete proof of the three-model corollary}
+\begin{proof}
+Add $T_3=T_1-T_2$ and put
+\[
+ d_j=a_j-b_j=2j-m-1,\qquad
+ P=\sum_{d_j>0}d_j=\lfloor m^2/4\rfloor.
+\]
+The core $M(2t-1)+m(u-v)$ ranges from $-H$ to $H$, independently of
+the $z$ box, whose contribution ranges from $-P$ to $P$. Thus $T_3$ has
+initial width $2(H+P)$. After querying $t$ alone its exact width is
+$m+2P$. Moreover,
+\[
+ (H+P)\left(1-\frac1{4H}\right)-(m+2P)
+ =M-P-\frac14\left(1+\frac PH\right)>0,
+\]
+because $M-P\geq m(m-1)/4\geq3/2$ and $P\leq H$.
+The third target therefore meets even the smallest displayed normalized
+threshold after the first query.
+
+For the first two targets, the displayed interval is equivalent to an
+absolute width threshold $q=2H\tau\in[H-1/4,H+1/4)$. The adaptive
+branches and uniform batch mixture retain their lower guarantees.
+On the adverse records, off-diagonal $\{t,z_j\}$ batches have maximum
+width at least $H+1/4$. Every other table row has a larger failing width:
+at least $H+1/2$ for $\{t,u\},\{t,v\}$;
+$H+M$ for $\{u,v\}$; $H+M-1/4$ for the mixed $u/v,z$ rows;
+and $H+M-3/2$ for two-$z$ batches. All exceed $H+1/4$ when $m\geq3$.
+Thus the same adverse distribution proves the upper bound $1/m$
+throughout the stated half-open interval, also when success includes $T_3$.
+The upper endpoint is excluded because an off-diagonal adjacent batch
+then succeeds at equality.
+
+The scalar batches from the theorem remain valid throughout the interval,
+and $T_3$ needs only $t$. The fixed three-query batch $\{t,z_1,z_m\}$
+gives both first widths at most $H-3/2$, while its third width cannot
+exceed the width after $t$ alone. Thus three fixed queries suffice;
+two fixed queries cannot suffice because their optimal randomized success
+is only $1/m<1$.
+
+For an explicit model comparison, write $N=m+3$ and choose the three
+nonnegative prediction vectors, in coordinate order $(t,u,v,z_1,\ldots,z_m)$,
+\[
+ p=(NM/2,0,0,0,\ldots,0),
+\]
+\[
+ q^{(1)}=(NM,Nm/2,0,Na_1/2,\ldots,Na_m/2),\qquad
+ q^{(2)}=(0,0,Nm/2,Nb_1/2,\ldots,Nb_m/2).
+\]
+Then $\operatorname{MSE}(p,x)-\operatorname{MSE}(q^{(r)},x)$ has
+the coefficient vector of $T_r$, for $r=1,2$. Additive constants differ
+but do not affect widths. The remaining model-pair contrast has the
+coefficient vector of $T_1-T_2$, up to orientation. Therefore the guarantee
+holds for all three comparisons, each normalized by its own initial width.
+\end{proof}
+\paragraph{Executable checks.}
+Online Resource~1 includes a standard-library rational verifier and a
+separate LP calculation for $m=3,5,10$. The rational checks enumerate
+1,171 adverse-record/query-set combinations and verify continuum branch
+coverage. The 7,131 endpoint and whole-branch LPs agree with the exact
+formulas to at most $7.11\times10^{-15}$; the absolute comparison tolerance
+is $10^{-7}$ and the primal/dual feasibility tolerances are $10^{-9}$.
+The main theorem and the corollary proof here establish the result for
+every $m\geq3$; these finite
+checks test its implementation, including the third contrast and the
+threshold interval. Online Resource~1 provides the commands, pinned environment and exact
+input/output hashes in \texttt{CURRENT\_RESULTS\_MAP.txt}. Its solver-free
+support check additionally evaluates 126,195 rational widths for seven
+family sizes from $m=3$ to $24$.
+\subsection{An inspectable certificate from the external panel}
+\label{sec:worked-joint-certificate}
+Consider HPM~1 on 5 July 2025, 12:00--18:00: the first matched-half case
+in the frozen external ledger.  Normalize each of its six forecast
+contrasts to coefficient range one and write $x=y/E$ for the hourly
+allocation divided by its known block total. Thus $x\geq0$, $\sum_hx_h=1$,
+and joint precision means $J\leq1/2$. The contrast order is
+daily--boosting, daily--MLP, daily--ridge, boosting--MLP,
+ridge--boosting, and ridge--MLP.  The normalized coefficient rows have
+the following rational lower enclosures; every entry other than zero
+or one lies within $10^{-4}$ above its displayed value, and zero and one
+are exact:
+\[
+ C\in L+[0,10^{-4})\quad\text{entrywise},\qquad
+ L=\begin{pmatrix}
+ 1&.2928&.0571&.1475&0&.0026\\
+ 1&.3251&.6303&.4169&.1256&0\\
+ 1&.1466&.0899&.0242&0&0\\
+ 0&.3884&1&.6778&.6220&.5040\\
+ 1&.4847&.0140&.3095&0&.0061\\
+ .2093&.3546&1&.7180&.2280&0
+ \end{pmatrix}.
+\]
+With $Q=12$ and $R=24$, their normalized width-coefficient
+vectors have the form
+\[
+ v_{Qr}=(0,0,a_r,a_r,a_r,a_r),\qquad
+ v_{Rr}=(b_r,b_r,d_r,d_r,e_r,e_r).
+\]
+The following rational upper enclosures are obtained from the exact saved
+coefficients; each actual range lies between the displayed value minus
+$10^{-4}$ and that value, with zero and one exact.
+\begin{center}
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{rcccc}
+\toprule
+Contrast $r$&$a_r\leq$&$b_r\leq$&$d_r\leq$&$e_r\leq$\\
+\midrule
+1&0.1476&0.7072&0.0905&0.0027\\
+2&0.6304&0.6749&0.2134&0.1257\\
+3&0.0900&0.8534&0.0657&0\\
+4&0.4960&0.3885&0.3222&0.1180\\
+5&0.3096&0.5153&0.2955&0.0062\\
+6&1&0.1453&0.2820&0.2281\\
+\bottomrule
+\end{tabular}
+\end{center}
+\paragraph{Batch lower guarantee.}
+For each contrast pair $(r,s)$ choose
+\[
+ \lambda_{rs}=\begin{cases}
+ 1,&r\in\{1,3,4,5\},\\
+ 1/2,&r=2,\\
+ (1/3,1/3,3/7,0,1/4,0)_s,&r=6.
+ \end{cases}
+\]
+The table directly verifies all 36 conditions
+\[
+ \max\{(1-\lambda_{rs})b_s,
+ \lambda_{rs}a_r+(1-\lambda_{rs})d_s,
+ \lambda_{rs}a_r+(1-\lambda_{rs})e_s\}\leq1/2.
+\]
+Thus $Q$ and $R$ cannot both fail: a failing contrast from each would make
+the indicated convex combination exceed $1/2$.  Their equal mixture
+therefore succeeds with probability at least $1/2$ for every feasible record.
+
+\paragraph{Matching upper bound.}
+Place half the adverse mass at $e_2$ and half at $(e_4+e_5)/2$.
+Batch~12 has joint widths zero and one there.  Every other two-query
+batch leaves coordinate~2 in a segment containing coordinate~1 or~3.
+The saved coefficients satisfy
+$|c^{(3)}_1-c^{(3)}_2|\geq0.8533$ and
+$|c^{(6)}_2-c^{(6)}_3|\geq0.6453$, so all other batches fail at $e_2$.
+Every batch therefore succeeds on at most half of this adverse mass;
+every randomized batch has worst-case success at most $1/2$.
+The full-continuum batch optimum is exactly $1/2$.
+
+\paragraph{Adaptive certificate and verification.}
+The checked adaptive policy queries boundary~2, then~4 below its switch
+$\theta\in[0.5226,0.5227]$ and~1 above it.  The table bounds the two
+enlarged branch domains by $0.47743079$ and $0.4774$, respectively.
+These conservative bounds exceed the exact envelope peak, about $0.47734$,
+plotted in Figure~\ref{fig:practical-guarantee-replay}(a).
+Hence its success is guaranteed, even allowing either action inside the
+displayed switch enclosure.
+The solver-free verifier checks the source hashes, 36 coefficient enclosures,
+24 range enclosures, 36 multipliers, 20 adverse widths and both branch domains.
+Online Resource~1 gives its command and complete coefficients. The default
+replay includes all 57 external matched-half certificates; reproducing the
+165 original certificates also requires the pinned BLEM raw-source route.
+\paragraph{Precision on the original loss scale.}
+Table~\ref{tab:absolute_joint_widths} translates the relative target into
+loss units for the HPM~1 task above, using its frozen forecasts and two queried
+registers. The six-target loss uses $c_h=2(b_h-a_h)/6$, so the interval widths
+are in $\mathrm{kWh}^2$; a 24-target normalization is not used. The targets
+are stored API-grid increments under the measurement assumptions in
+Table~\ref{tab:measurement-assumptions}. Exact segment ranges and separately
+implemented endpoint LPs reproduce the absolute widths.
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Model contrast & Initial $W_{r,0}$ & Target $W_{r,0}/2$ & Terminal $W_r$ & $W_r/W_{r,0}$\\
+\midrule
+Daily--Boosting & 0.303143 & 0.151571 & 0.001947 & 0.0064\\
+Daily--MLP & 0.194503 & 0.097252 & 0.005336 & 0.0274\\
+Daily--Ridge & 0.172075 & 0.086037 & 0.000673 & 0.0039\\
+Boosting--MLP & 0.213920 & 0.106960 & 0.004617 & 0.0216\\
+Ridge--Boosting & 0.131068 & 0.065534 & 0.001766 & 0.0135\\
+Ridge--MLP & 0.107125 & 0.053563 & 0.004663 & 0.0435\\
+\bottomrule
+\end{tabular}
+\caption{Original loss scale for the HPM~1 worked example on 5 July 2025, 12:00--18:00 UTC. The first three numeric columns have units $\mathrm{kWh}^2$: they are widths and width targets for identification intervals of six-target MSE differences on stored API-grid increments. The retained endpoint difference is $E=1.83984375$ kWh. The adaptive policy retrieves the 14:00 register and then the 13:00 register. Normalization uses the initial width of each contrast, not a common numerical loss scale.}
+\label{tab:absolute_joint_widths}
+\end{table}
+\section{S18. Secondary recorded-policy and model-decision results}
+\paragraph{Replay against the precision-optimal challenger.}
+The frozen precision-optimal batch policy succeeds on 54.15\% of original
+blocks and 71.83\% of external blocks in expectation, compared with
+78.27\% and 90.32\% for adaptation (Table~\ref{tab:complete-precision-replay}).
+The adaptive advantage is positive in each of the six systems.
+On the matched-half blocks, adaptation succeeds on every recorded block;
+the batch policy succeeds on 65.75\% and 65.08\% in expectation.
+This challenger optimizes worst-record precision success; the replay
+measures success on the recorded trace. The gains over deterministic
+worst-width batching are 7.81 and 11.11 percentage points, and those over
+greedy adaptation are 2.20 and 2.15 points. These comparisons answer
+different questions: the exact certificates establish the assurance
+separation, while the replay compares the specified policies on these six
+systems.
+
+\begin{table}[htbp]\centering\small
+\caption{Recorded half-width success against the precision-optimal randomized
+batch. Batch rates are exact expectations over its frozen mixture.
+Success uses the existing $10^{-8}$ replay allowance.
+The difference is adaptive minus batch, in percentage points.
+Intervals are descriptive 95\% percentile intervals from the unchanged
+2,000 synchronized seven-day calendar-block bootstrap draws.}
+\label{tab:complete-precision-replay}
+\begin{tabular}{lrrrr}\toprule
+Panel and subset & Blocks & Adaptive (\%) & Batch (\%) & Difference [95\% interval]\\\midrule
+Original, complete & 819 & 78.27 & 54.15 & 24.12 [22.03, 26.18]\\
+External, complete & 279 & 90.32 & 71.83 & 18.49 [16.53, 20.99]\\
+Original, matched half & 165 & 100.00 & 65.75 & 34.25 [31.68, 37.00]\\
+External, matched half & 57 & 100.00 & 65.08 & 34.92 [29.25, 40.18]\\\bottomrule
+\end{tabular}\end{table}
+
+For comparison, the deterministic worst-width batch succeeds on 155 of
+the 165 original matched-half blocks and 51 of the 57 external blocks.
+Removing the existing $10^{-8}$ replay allowance changes only the external
+complete-panel batch rate in this table, from 71.83\% to 71.76\%
+(difference 18.57 points; descriptive interval [16.60, 21.04]).
+
+\paragraph{Transfer from precision to a model decision.}
+We also replayed the frozen policies against a decision criterion: certify
+a model whose six-hour MSE exceeds that of any other candidate by at most
+$\epsilon$. For each model, we take the maximum of zero and the three directed
+upper loss-difference bounds; reversing a stored comparison uses minus its
+lower endpoint. We certify the model when this maximum is at most $\epsilon$.
+The primary retrospective tolerance is $\epsilon=0.01M_2$, using the same
+training second moment as the absolute-floor diagnostic. The supplement
+reports all seven factors from zero to $0.1$, without changing the acquisition
+policies.
+\begin{table}[ht]
+\centering
+\caption{Recorded model certificates under the same two-reading policies.
+The fixed comparator is the deterministic worst-width batch.
+Strict winners require all directed upper bounds to be negative; tolerance
+certificates use the inclusive bound $\leq0.01M_2$. Counts are blocks.}
+\label{tab:decision-tolerance}
+\begin{tabular}{llrrr}
+\toprule
+Source & Criterion & Adaptive & Greedy & Fixed batch\\
+\midrule
+Original (819) & Strict winner & 123 & 118 & 122\\
+ & Tolerance certificate & 189 & 186 & 188\\
+External (279) & Strict winner & 207 & 208 & 201\\
+ & Tolerance certificate & 277 & 277 & 263\\
+\bottomrule
+\end{tabular}
+\end{table}
+On the external panel, adaptation adds 14 tolerance certificates over the
+fixed batch and loses none: a 5.02-percentage-point gain (descriptive 95\%
+calendar-block bootstrap interval, 2.51--8.60). Twelve of these cases are from
+HPM~2 and two from HPM~1. The original-panel gain is 0.12 points
+($-1.34$--1.71). Adaptive and greedy certify the same 277 external blocks;
+the original difference is 0.37 points ($-0.37$--1.10).
+Thus some precision gains transfer to a model decision, with the clearest
+observed benefit over fixed batching in the external panel. The tolerance
+grid is a sensitivity analysis; it is not a calibrated deployment threshold.
+The intervals use 2,000 synchronized seven-day circular calendar-block
+resamples, with seeds 20261015 and 20261016 for the original and external
+panels, respectively.
+\paragraph{Sensitivity to the reporting target.}
+Figure~\ref{fig:practical-guarantee-replay}(b) gives an exploratory post-hoc
+replay of all 1,098 blocks at relative width targets
+$0.40,0.45,0.50,0.55,0.60$, keeping the query policies, fitted models and
+mixture parameters fixed.
+Across these targets, the adaptive policy's recorded advantage over fixed
+batching ranges from 2.08 to 7.81 percentage points on the original panel and
+from 7.89 to 11.11 points on the external panel. The advantages over greedy
+range from 0.37 to 2.69 and from 0.36 to 2.87 points. Some descriptive
+seven-day-block intervals for the greedy comparisons include zero.
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=0.0098\linewidth,y=0.0098\linewidth,
+font=\scriptsize,line cap=round,line join=round]
+\definecolor{auditblue}{HTML}{2166AC}
+\definecolor{auditorange}{HTML}{D95F02}
+\definecolor{auditgreen}{HTML}{238443}
+\node[anchor=west,font=\small\bfseries] at (0,47) {(a) Choosing the second reading};
+\node[anchor=west,font=\small\bfseries] at (53,47) {(b) Recorded precision success};
+\draw (7.000000,11) -- (7.000000,10.3);
+\node[anchor=north] at (7.000000,10.1) {0};
+\draw (26.500000,11) -- (26.500000,10.3);
+\node[anchor=north] at (26.500000,10.1) {0.5};
+\draw (46.000000,11) -- (46.000000,10.3);
+\node[anchor=north] at (46.000000,10.1) {1};
+\draw[black!12] (7,11.000000) -- (46,11.000000);
+\node[anchor=east] at (6.4,11.000000) {0};
+\draw[black!12] (7,26.000000) -- (46,26.000000);
+\node[anchor=east] at (6.4,26.000000) {0.5};
+\draw[black!12] (7,41.000000) -- (46,41.000000);
+\node[anchor=east] at (6.4,41.000000) {1};
+\draw (7,41) -- (7,11) -- (46,11);
+\draw[dashed,black!65] (7,26) -- (46,26);
+\node[anchor=south east,fill=white,inner sep=1pt] at (46,26) {target $1/2$};
+\draw[black!35,densely dashed,line width=.55pt] (7.000000,32.542401) -- (21.137360,26.313235) -- (33.816702,28.829331) -- (46.000000,36.599285);
+\draw[black!55,dotted,line width=.7pt] (7.000000,34.157622) -- (20.078835,27.853188) -- (34.270176,29.711230) -- (46.000000,36.599285);
+\draw[auditblue,line width=.8pt] (7.000000,41.000000) -- (46.000000,11.000000);
+\draw[auditorange,line width=.8pt] (7.000000,20.665739) -- (13.795865,21.011931) -- (20.236979,22.100812) -- (24.663467,23.672268) -- (46.000000,36.599285);
+\draw[black,line width=1.15pt] (7.000000,20.665739) -- (13.795865,21.011931) -- (20.236979,22.100812) -- (24.663467,23.672268) -- (27.383609,25.320301) -- (46.000000,11.000000);
+\draw[densely dotted] (27.383609,11) -- (27.383609,25.320301);
+\fill (27.383609,25.320301) circle[radius=.45];
+\node[anchor=north,fill=white,inner sep=1pt] at (31,23.9) {$\theta\simeq0.52266$};
+\node[anchor=south] at (27,2) {First answer $t=(C_2-C_0)/E$};
+\node[rotate=90] at (0.3,26) {Conditional worst joint width};
+\draw[auditblue,line width=.8pt] (7,43.4) -- (10,43.4);
+\node[anchor=west] at (10.5,43.4) {$j=1$};
+\draw[auditorange,line width=.8pt] (20,43.4) -- (23,43.4);
+\node[anchor=west] at (23.5,43.4) {$j=4$};
+\draw[black!35,densely dashed] (33,43.4) -- (36,43.4);
+\node[anchor=west] at (36.5,43.4) {$j=3,5$};
+\draw[black!12] (59,11.000000) -- (98,11.000000);
+\node[anchor=east] at (58.4,11.000000) {40};
+\draw[black!12] (59,21.000000) -- (98,21.000000);
+\node[anchor=east] at (58.4,21.000000) {60};
+\draw[black!12] (59,31.000000) -- (98,31.000000);
+\node[anchor=east] at (58.4,31.000000) {80};
+\draw[black!12] (59,41.000000) -- (98,41.000000);
+\node[anchor=east] at (58.4,41.000000) {100};
+\draw (59.000000,11) -- (59.000000,10.3);
+\node[anchor=north] at (59.000000,10.1) {0.40};
+\draw (68.750000,11) -- (68.750000,10.3);
+\node[anchor=north] at (68.750000,10.1) {0.45};
+\draw (78.500000,11) -- (78.500000,10.3);
+\node[anchor=north] at (78.500000,10.1) {0.50};
+\draw (88.250000,11) -- (88.250000,10.3);
+\node[anchor=north] at (88.250000,10.1) {0.55};
+\draw (98.000000,11) -- (98.000000,10.3);
+\node[anchor=north] at (98.000000,10.1) {0.60};
+\draw (59,41) -- (59,11) -- (98,11);
+\draw[auditorange,line width=.8pt] (59.000000,15.603175) -- (68.750000,21.647131) -- (78.500000,26.225885) -- (88.250000,31.537241) -- (98.000000,35.322344);
+\fill[auditorange] (59.000000,15.603175) circle[radius=.35];
+\fill[auditorange] (68.750000,21.647131) circle[radius=.35];
+\fill[auditorange] (78.500000,26.225885) circle[radius=.35];
+\fill[auditorange] (88.250000,31.537241) circle[radius=.35];
+\fill[auditorange] (98.000000,35.322344) circle[radius=.35];
+\draw[auditgreen,line width=.8pt] (59.000000,15.603175) -- (68.750000,23.173382) -- (78.500000,29.034188) -- (88.250000,34.345543) -- (98.000000,37.703297);
+\fill[auditgreen] (59.000000,15.603175) circle[radius=.35];
+\fill[auditgreen] (68.750000,23.173382) circle[radius=.35];
+\fill[auditgreen] (78.500000,29.034188) circle[radius=.35];
+\fill[auditgreen] (88.250000,34.345543) circle[radius=.35];
+\fill[auditgreen] (98.000000,37.703297) circle[radius=.35];
+\draw[auditblue,line width=.8pt] (59.000000,16.641026) -- (68.750000,24.516484) -- (78.500000,30.133089) -- (88.250000,34.894994) -- (98.000000,37.886447);
+\fill[auditblue] (59.000000,16.641026) circle[radius=.35];
+\fill[auditblue] (68.750000,24.516484) circle[radius=.35];
+\fill[auditblue] (78.500000,30.133089) circle[radius=.35];
+\fill[auditblue] (88.250000,34.894994) circle[radius=.35];
+\fill[auditblue] (98.000000,37.886447) circle[radius=.35];
+\draw[auditorange,line width=.8pt,dashed] (59.000000,24.333333) -- (68.750000,27.200717) -- (78.500000,30.605735) -- (88.250000,32.935484) -- (98.000000,33.831541);
+\draw[auditorange,fill=white] (58.680000,24.013333) rectangle (59.320000,24.653333);
+\draw[auditorange,fill=white] (68.430000,26.880717) rectangle (69.070000,27.520717);
+\draw[auditorange,fill=white] (78.180000,30.285735) rectangle (78.820000,30.925735);
+\draw[auditorange,fill=white] (87.930000,32.615484) rectangle (88.570000,33.255484);
+\draw[auditorange,fill=white] (97.680000,33.511541) rectangle (98.320000,34.151541);
+\draw[auditgreen,line width=.8pt,dashed] (59.000000,27.559140) -- (68.750000,29.888889) -- (78.500000,35.086022) -- (88.250000,37.594982) -- (98.000000,38.670251);
+\draw[auditgreen,fill=white] (58.680000,27.239140) rectangle (59.320000,27.879140);
+\draw[auditgreen,fill=white] (68.430000,29.568889) rectangle (69.070000,30.208889);
+\draw[auditgreen,fill=white] (78.180000,34.766022) rectangle (78.820000,35.406022);
+\draw[auditgreen,fill=white] (87.930000,37.274982) rectangle (88.570000,37.914982);
+\draw[auditgreen,fill=white] (97.680000,38.350251) rectangle (98.320000,38.990251);
+\draw[auditblue,line width=.8pt,dashed] (59.000000,28.275986) -- (68.750000,31.322581) -- (78.500000,36.161290) -- (88.250000,37.953405) -- (98.000000,38.849462);
+\draw[auditblue,fill=white] (58.680000,27.955986) rectangle (59.320000,28.595986);
+\draw[auditblue,fill=white] (68.430000,31.002581) rectangle (69.070000,31.642581);
+\draw[auditblue,fill=white] (78.180000,35.841290) rectangle (78.820000,36.481290);
+\draw[auditblue,fill=white] (87.930000,37.633405) rectangle (88.570000,38.273405);
+\draw[auditblue,fill=white] (97.680000,38.529462) rectangle (98.320000,39.169462);
+\node[anchor=south] at (79,2) {Relative width target $\tau$};
+\node[rotate=90] at (52,26) {Success (\%)};
+\draw[auditblue,line width=.8pt] (59,43.4) -- (61.5,43.4);
+\node[anchor=west] at (62,43.4) {Adaptive};
+\draw[auditorange,line width=.8pt] (73,43.4) -- (75.5,43.4);
+\node[anchor=west] at (76,43.4) {Fixed};
+\draw[auditgreen,line width=.8pt] (85,43.4) -- (87.5,43.4);
+\node[anchor=west] at (88,43.4) {Greedy};
+\end{tikzpicture}
+\caption{An acquisition rule and its recorded outcomes. (a) Exact conditional envelopes from the saved HPM~1 comparison on 5 July 2025, 12:00--18:00 UTC, after querying boundary~2. Gray curves show the other second-query options; the black lower envelope selects boundary~4 below the switch and boundary~1 above it. Its maximum is about $0.47734$, below the half-width target for every possible first answer. (b) The adaptive, fixed-batch and greedy policies on all 819 original and 279 external blocks at five reporting targets. Solid curves represent the original panel and dashed curves the external panel. These exploratory recorded success rates use the existing $10^{-8}$ comparison tolerance; they are not worst-case precision probabilities.}
+\label{fig:practical-guarantee-replay}
+\end{figure}
 
 \begin{thebibliography}{99}
 \bibitem[Amenta et~al.(2016)]{amenta2016}

@@ -1,0 +1,138 @@
+LATEST CLAIM-BOUNDARY REVIEW -- 14 October 2026 UTC
+Status: PASS within the internal review scope below.
+Current manuscript source SHA256:
+53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f
+Current PDF SHA256:
+cdb2d8b4082759c910b836d4da41305dee5b06cf2775dbef2c0ebcd395093302
+Current preflight: 36 pages, 246-word structured abstract, successful
+built-in compilation, zero overfull or undefined-reference warnings.
+Reviewer: /root/review_pdf_claims, internal AI-assisted technical and
+presentation review; not external specialist or formal proof validation.
+
+VERDICT
+No additional required manuscript correction was identified. The final
+editorial pass removes response-to-review language and repeated caveats
+without altering scientific results or concealing contrary findings. The
+source and rendered pages preserve the following material boundaries.
+The current full-package execution remains a separate delivery check.
+
+1. NOVELTY AND ESTABLISHED MACHINERY
+The related-work comparison credits local diameter of information, classical
+deterministic adaptivity, minimax/Jensen reasoning, weighted optimization,
+compact dynamic-program formulations and adjustable robust optimization.
+It distinguishes the expected local width at a fixed hidden record from
+expected global reconstruction radius and supplies objective-specific
+pinpoints, including Krieg--Ullrich Eq. 9.15. The sparse-policy result is
+explicitly adapted, and the scalar conditional-concavity argument is not
+transferred without proof to a maximum of several contrast widths.
+
+The additions claimed are the universal penalty classification and
+coordinate-query converse, explicit shared-prefix mean-risk separation,
+and computable joint assurance certificates. The self-contained shared
+construction proves both adaptive 1/2 and randomized-batch 2/3 optima.
+Real-instance precision-success values 1 and 1/2 are a different result.
+No broad priority claim or new invention of LP duality is asserted.
+A previously unknown overlapping specialist result could change a novelty
+assessment; this internal review is not an exhaustive priority proof.
+
+2. PRACTICAL BENEFIT UNDER A DECLARED INTERFACE
+The 165 original and 57 external matched-half blocks carry matching
+all-completion certificates. Their feedback advantage concerns assurance
+under the same two permitted readings. The general regime and greedy
+diagnostics make that benefit concrete before any hidden-answer replay.
+They do not prove financial savings or a deployed selective-retrieval service.
+
+The actual public-API experiment retains bulk retrieval's stronger result:
+one request and 0.331 seconds versus two adaptive requests and 0.497 seconds.
+The wrapper chooses bulk when admissible and separates request count,
+payload, scalar samples and feedback rounds. The pairwise noisy fallback
+also preserves 65 versus 87 reserved readings alongside 51 versus 29 rounds.
+These are declared resource tradeoffs, not measured business cost reductions.
+
+3. CAPACITY, ERROR AND MODEL-CHOICE CONTROLS
+The E/3 capacity case removes the adaptive-only guarantee; the combined
+E/2-capacity and 1% error case gives 169 versus 166 recorded successes with
+a primary descriptive interval [-0.49,3.16] percentage points. The paper
+keeps that interval even where another resampling configuration is positive.
+Caps and error allowances remain sensitivities with exact endpoints, not
+verified device specifications. The separate historical 0.9738064% saving
+and its original denominator remain unchanged.
+
+An interval's precision is distinguished from its exclusion of zero and
+from a best-model decision. The discussion preserves original/external
+winner counts 123/207 adaptive, 122/201 fixed and 118/208 greedy. Thus a
+small precision interval is not advertised as uniform model-choice gain.
+
+4. COMPARATOR ALIGNMENT AND OPEN OPTIMIZATION GAPS
+The pure fixed batch's recorded success remains above the certified-cover
+fallback policy. The exact attribution is explicit: fixed succeeds on
+155/165 and 51/57 matched-half records, versus cover expectations 108/165
+and 37/57. Deficits of 47 and 14 explain the full-panel score deficit under
+both recorded threshold conventions, although the randomized cover alone
+has a positive worst-case guarantee on those subsets.
+
+Full-panel randomized precision optimization is not called solved: 351
+original and 67 external blocks retain open bounds, with their gaps reported.
+Matching exact superiority is restricted to certified instances. The
+threshold sensitivity uses frozen policies and is exploratory. The panels
+reuse existing sources; frozen forecasts are not mislabeled as a prospectively
+locked new study. Repeated blocks and model pairs are not independent datasets.
+
+5. SELF-CONTAINED REPORTING AND EXACT VERSUS CONSERVATIVE BOUNDS
+The new early workflow (Figure 1) defines joint normalized width and the
+deterministic batch/adaptive values D and A under the same two-reading
+budget. It puts admissible bulk retrieval first, then separates D<=tau,
+A<=tau<D and tau<A. Since fixed batches are adaptive special cases,
+A<=D justifies the exhaustive partition. The last branch does not assert
+zero randomized success or failure on the stored record. Its scope is
+the exact-total, noiseless prefix-query model, with the threshold fixed
+before optional answers. No new cost, runtime or prediction claim is added.
+The final workflow renders cleanly after heading spacing and connector
+clearance repairs.
+
+The final worked example explains that 0.47743079 and 0.4774 are outward
+enclosures using rounded ranges and enlarged domains. Figure 2's roughly
+0.47734 peak is the exact-envelope result. This is not a numerical conflict.
+The figure's repaired annotation is clear. All 36 final page layouts were
+inspected in contact sheets, with the new workflow at full size on page 2
+and equation/figure checks on pages 5, 16, 17 and 19-21. The coefficient
+matrix, piecewise planner equation and theorem vectors remain complete.
+Prior unchanged-content checks confirmed the allegedly missing coordinate
+2 and API closing parenthesis are both present.
+
+Approximately 180 words of fragment prose were removed, mainly duplicated
+scope statements and draft-history references. Necessary adverse controls
+and analysis chronology remain. Reviewer-delivered S1/S2 files, not a
+private GitHub login, are now the reproducibility access route.
+
+6. REPRODUCTION AND DISCLOSURE
+Saved-forecast replay, raw-input reconstruction and fresh fitting remain
+separate execution levels. The BLEM route pins public QuantLet sources and
+fails on input hash mismatches. Raw BLEM traces are not redistributed without
+established permission. Default external-only coefficient regeneration is
+distinguished from the separately checked both-source route. Checker
+implementations are identified as same-study work, not external replication.
+
+The author has now explicitly confirmed checking AI-tool terms and their
+suitability for publication. The final declaration states that confirmation
+and author responsibility while preserving the actual assistance disclosure
+and uncertainty about earlier session identifiers. No fabricated GPT-5
+history was inserted. Remaining portal attestations are tracked separately.
+
+The source-6e32 full 74-step replay passed in 1068.16 seconds after the
+previous disk-space setup failure was resolved; both logs are retained.
+That completed scientific verification preceded the workflow and bounded
+presentation changes. It does not establish that the current source-53a3
+package has already passed. Complete its new package run, verify the hashes
+and supply both reviewer ZIPs.
+That is a delivery requirement, not another necessary scientific revision.
+
+CONCLUSION
+Keep the present scientific source frozen, complete the current artifact
+checks and deliver the executable materials. No new blocking manuscript
+error was found. This supports submission consideration after those delivery
+checks, not a calibrated greater-than-90% acceptance probability or a promise
+of acceptance without revisions. No external person was contacted.
+
+POST-REVIEW EXECUTION COMPLETION
+The subsequent final publisher-package replay passed all 74 steps in 1250.8333193 seconds. It reconstructed the reviewed source byte-for-byte (53a3f69ba439a4bf8524c96b00f25164a252a5c8a32736e7920c1c5ccc18c29f). This completes the pending execution recorded above; earlier source-specific runs remain separate. See outputs/current_clean_package_replay.json for scope and outputs/journal_supplement_verification.json for the tested archives.

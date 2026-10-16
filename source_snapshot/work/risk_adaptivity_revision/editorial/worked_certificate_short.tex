@@ -1,0 +1,27 @@
+\subsection{A worked external certificate}
+\label{sec:worked-joint-certificate}
+Consider HPM~1 on 5 July 2025, 12:00--18:00 UTC: the first matched-half
+case in the frozen external ledger. Its retained endpoints give
+$E=1.83984375$ kWh. Normalize the six model-pair coefficient ranges to one
+and write $x=y/E$, so $x\geq0$ and $\sum_hx_h=1$.
+
+The policy first queries boundary~2. It then queries boundary~4 when the
+answer $t=(C_2-C_0)/E$ is below $\theta\in[0.5226,0.5227]$, and boundary~1
+above it. The two branch bounds are $0.47743079$ and $0.4774$; either action
+is safe within the switch enclosure. Both bounds are below the required
+$J\leq1/2$. Figure~\ref{fig:practical-guarantee-replay} shows the exact
+envelope, whose peak is about $0.47734$.
+
+For fixed batches, mix $Q=\{1,2\}$ and $R=\{2,4\}$ equally. A rational
+cover certificate shows that these batches cannot both fail on any feasible
+record, giving success at least $1/2$. Conversely, put half the adverse mass
+at $e_2$ and half at $(e_4+e_5)/2$. Batch $Q$ fails on the second record;
+every other two-reading batch fails on the first. Each batch therefore
+succeeds on at most half the adverse mass. The batch optimum is exactly
+$1/2$, while adaptation succeeds on every completion.
+
+The initial six-hour MSE-difference widths range from $0.107125$ to
+$0.303143\,\mathrm{kWh}^2$; their half-width targets range from $0.053563$
+to $0.151571\,\mathrm{kWh}^2$. Online Resource~1, S17 supplies the full
+coefficient enclosures, 36 cover inequalities, adverse-record checks,
+absolute-width table and a solver-free verifier.

@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "zip_sha256": "308d46dffbf40eb9c2f04c2a7a0916ebbb262c1a264b1dc666243180770db503",
+  "zip_bytes": 375024492,
+  "manifested_members": 1215,
+  "old_members_preserved_in_place": 579,
+  "old_members_exactly_recoverable": 583,
+  "replaced_paths": [
+    "README.txt",
+    "outputs/requirements-study.txt",
+    "outputs/revised_manuscript.tex",
+    "requirements.txt"
+  ],
+  "old_editorial_notes_omitted": [
+    {
+      "path": "work/external_deadline/editorial/pretest_scientific_review.txt",
+      "bytes": 5181,
+      "sha256": "268734a09a62abd00506d83d0eff5bc12ca96d039083434ea45fdbfe87d3c350"
+    },
+    {
+      "path": "work/external_deadline/editorial/provisional_numerical_review.txt",
+      "bytes": 3313,
+      "sha256": "6745ae32d839bb06e866157f795964ee58da629b7181af108a1ce813855a9e78"
+    }
+  ],
+  "editorial_omission_manifest": "EXCLUDED_EDITORIAL_NOTES.json",
+  "new_manuscript_sha256": "7f131f3e0d8adc3db17ddec0d850333580b834169dd2ddc59ce07059c5a9b669",
+  "scope": "Complete member integrity and scientific historical preservation, excluding the explicitly listed internal editorial notes retained only in the prior private archive/local files; executable clean replay reported separately."
+}

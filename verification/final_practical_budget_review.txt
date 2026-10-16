@@ -1,0 +1,90 @@
+FINAL PRACTICAL READING-BUDGET REVIEW
+Date: 2026-10-14
+Status: PASS — no blocking practical-claim error identified in the reviewed version.
+
+Frozen manuscript: outputs/revised_manuscript.tex
+SHA-256: 7f131f3e0d8adc3db17ddec0d850333580b834169dd2ddc59ce07059c5a9b669
+Frozen PDF: outputs/revised_manuscript.pdf
+SHA-256: 5a16ec3f9487816b3c87c6b5000b8529023322ad5ac4d7ba6f101297cc90d53d
+PDF page count checked: 29.
+Title: Adaptive Reading Budgets for Joint Forecast Audits with Cumulative Data.
+Review type: internal AI-assisted read-only practical-claim review, not external
+specialist endorsement, a full independent theorem review, or acceptance prediction.
+No frozen source, PDF, scientific script or result was edited by this review.
+
+Material inspected
+Abstract, Introduction, source protocols, minimum-fixed-budget method,
+reading-budget results/table, capacity and bounded-error controls, public-API
+control, Discussion and Conclusions in the composed current source. The
+promoted all-panel report and independent checker ledger hash were checked.
+
+1. Qualifying subset and complete-panel denominators — PASS.
+168 original plus57 external blocks equal225 of1098. All225 have minimum
+fixed budget3 and certified minimum adaptive budget2. The reduction on these
+blocks is(3-2)/3=1/3, not a claim of33.33% across the whole dataset.
+The same abstract paragraph also gives complete-panel reductions. Original
+(2625-2457)/2625=6.40%; external(743-686)/743=7.671601615%, rounded7.67%.
+The main table exposes both numerator totals and819/279 block denominators.
+Counts are optional scalar readings; the common endpoints are explicitly
+excluded. The method does not optimize adaptive budgets above two and says so.
+
+2.225 versus222 — PASS.
+The manuscript distinguishes168 original resource-separation blocks from165
+original matched-half blocks. Together with57 external blocks, these give225
+resource separations and222 exactly closed one-half batch-success separations.
+It explicitly does not claim the three additional original blocks have batch
+success exactly one half. The fixed-budget guarantee does not require that
+stronger probability statement.
+
+3. Reading savings versus feedback and implementation resources — PASS.
+Results and Discussion both state that one fewer reading costs an additional
+information round; three fixed readings can be selected together. Neither
+the abstract nor conclusion converts reading cardinality into measured money,
+HTTP-request savings, latency, or early-stopping performance. The API section
+preserves one bulk request at0.331s versus two adaptive requests at0.497s and
+recommends bulk when the full response is admissible. Scope notes that the
+sources do not establish a deployed selective-access service. The practical
+claim is minimum sufficient information and a conditional protocol decision.
+
+4. Assurance versus realized success and model choice — PASS.
+The new budget figures concern all-compatible-record assurance under exact
+prefix measurements. Stored-answer success is reported separately, including
+7.81/11.11 percentage-point gains over fixed worst-width batching and2.20/2.15
+over greedy. The external best-model control207 adaptive versus208 greedy
+remains explicit; precision is not claimed to uniformly improve model choice.
+The351/67 open full-panel batch-precision gaps remain visible and do not
+invalidate the separate exact minimum-fixed-cardinality computation.
+
+5. Chronology and dependence — PASS.
+Abstract, Introduction, source protocol and Discussion retain retrospective
+wording; each panel has only three systems. The statement that the new budgets
+were computed before using optional answers describes the coefficient-only
+computation, not an untouched confirmatory panel. Inspection of the diagnostic
+supports this interpretation: optional fine-answer outcomes are not inputs.
+No new forecasting fit or external operational replication is asserted.
+
+6. Capacity and measurement errors — PASS.
+The new exact budget method is explicitly limited to uncapped nonnegative
+allocations and noiseless prefix readings. The caption describes the declared
+exact model. Capacity controls, illustrative error allowances and exact
+retained endpoints are visible. The strongerE/3 cap removes the adaptive-only
+advantage on compatible records, and the cap-plus-error modest result is
+preserved. The33.33%,6.40% and7.67% results are not represented as validated
+under those separate measurement models or as device-calibrated benefits.
+
+Evidence correspondence
+The promoted all-panel independent checker is PASS and its recorded ledger
+SHA-256 matches the current promoted ledger. Source-bound results contain the
+stated225 qualifying cases and the2625/2457 and743/686 totals. The checker
+separately verifies shortest-path minima, all batch widths and adaptive covers.
+This review does not reclassify within-study checks as external validation.
+
+Conclusion
+The revised practical claim is inspectable and narrower than a deployment
+cost claim: compute the minimum fixed number of readings, certify when two
+adaptive readings lower it, and provide a sufficient fixed fallback. The
+abstract and conclusion retain both the substantial qualifying-subset effect
+and its smaller full-panel counterpart. No additional blocking correction
+was identified in the assigned practical scope. The desirability of reducing
+readout cardinality on a specific deployment still depends on that deployment;
+the manuscript now states that boundary instead of claiming it was measured.

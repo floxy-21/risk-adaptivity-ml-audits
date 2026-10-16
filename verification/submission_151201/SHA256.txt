@@ -1,0 +1,2 @@
+afcef9f138fa23796c92f2a2df3a30b3f2da1c6185ba7689468ba2a0b6c7f779  submission_receipt.json
+ce3b244e99a3af91fd95bdad1fe6f0770c7f15d2f3751312a84b6b9c9e82a31d  publisher_pdf_validation.json

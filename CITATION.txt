@@ -1,3 +1,12 @@
+CURRENT SUBMISSION STATUS -- verified 2026-10-16T03:21:50Z
+Submitted to PeerJ Computer Science, manuscript 151201; portal status Checking.
+This status does not mean acceptance or publication.
+Scientific release: peerj-cs-2026-10-16-retrieval-gate
+Scientific release commit: 5fbeb4ca5b0619e6eff4598d3cca3f9cabe50f26
+Release assets, checksums and scientific source remain unchanged.
+Submission record: verification/submission_151201/submission_receipt.json
+
+HISTORICAL PRE-SUBMISSION CITATION -- retained verbatim below
 Kapoor, Jishan (2026).
 Adaptive Reading Budgets for Joint Forecast Audits with Cumulative Data.
 Unpublished research manuscript and accompanying software, 2026-10-16.

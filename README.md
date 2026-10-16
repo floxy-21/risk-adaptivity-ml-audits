@@ -1,5 +1,9 @@
 # Adaptive Reading Budgets for Joint Forecast Audits with Cumulative Data
 
+> **Submission status, 16 October 2026:** Submitted to **PeerJ Computer Science**, manuscript **151201**. The verified portal status is **Checking**; acceptance or publication has not been claimed. See the [sanitized receipt](verification/submission_151201/submission_receipt.json) and [reviewer-PDF validation](verification/submission_151201/publisher_pdf_validation.json).
+>
+> This documentation-only update preserves scientific release `peerj-cs-2026-10-16-retrieval-gate` at commit `5fbeb4ca5b0619e6eff4598d3cca3f9cabe50f26`, including all release assets, checksums and source-snapshot files. Earlier records stating “not submitted” document their original pre-submission state and are retained unchanged.
+
 Jishan Kapoor Â· Independent Researcher Â· Toronto, Canada
 
 Research manuscript prepared for PeerJ Computer Science. This private repository

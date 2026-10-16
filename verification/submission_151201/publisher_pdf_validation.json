@@ -1,0 +1,317 @@
+{
+  "status": "PASS",
+  "scope": "Read-only publisher-generated reviewer PDF validation; submitted source/PDF/archive bytes were not edited. This is a content/rendering check, not a new scientific or acceptance assessment.",
+  "checked_utc": "2026-10-16T03:20:25.729537+00:00",
+  "source_pdf": {
+    "path": "../../manuscript/revised_manuscript.pdf",
+    "sha256": "5064e18e7950721612790112605b5046baa821fa49480fddb8e7c2d549536355",
+    "pages": 28
+  },
+  "publisher_review_pdf": {
+    "sha256": "4f1a56904318fd7856cf8656b6829badc10825fd5cefcf6ce89e885fad315f84",
+    "pages": 30,
+    "filename": "peerj_reviewing_151201_v0.pdf",
+    "retention": "Retained locally with the submission record; not added as a scientific release asset."
+  },
+  "page_mapping": {
+    "prepended_publisher_pages": 2,
+    "manuscript_pages_retained": 28,
+    "mapping": "publisher page = manuscript page + 2",
+    "page_dimensions_points": [
+      612,
+      792
+    ]
+  },
+  "metadata": {
+    "title_match": "Same wording; publisher applies sentence case",
+    "author": "Jishan Kapoor",
+    "email": "kapoorjishan19@gmail.com",
+    "affiliation_representation": "Publisher cover: Unaffiliated, Toronto, Ontario, Canada; retained manuscript: Independent Researcher, Toronto M4Y 1C9, Canada.",
+    "abstract_expected_words": 233,
+    "abstract_extraction_differences": [
+      {
+        "operation": "replace",
+        "expected": "verification",
+        "reviewer_extraction": "veri\u00fbcation"
+      },
+      {
+        "operation": "replace",
+        "expected": "certificates,",
+        "reviewer_extraction": "certi\u00fbcates,"
+      },
+      {
+        "operation": "replace",
+        "expected": "fixed",
+        "reviewer_extraction": "\u00fbxed"
+      },
+      {
+        "operation": "replace",
+        "expected": "m>=3,",
+        "reviewer_extraction": "m g 3,"
+      },
+      {
+        "operation": "replace",
+        "expected": "certifiable",
+        "reviewer_extraction": "certi\u00fbable"
+      },
+      {
+        "operation": "replace",
+        "expected": "fixed",
+        "reviewer_extraction": "\u00fbxed"
+      },
+      {
+        "operation": "replace",
+        "expected": "fixed",
+        "reviewer_extraction": "\u00fbxed"
+      },
+      {
+        "operation": "replace",
+        "expected": "fixed",
+        "reviewer_extraction": "\u00fbxed"
+      },
+      {
+        "operation": "replace",
+        "expected": "fixed",
+        "reviewer_extraction": "\u00fbxed"
+      },
+      {
+        "operation": "replace",
+        "expected": "suffice.",
+        "reviewer_extraction": "su\u00fbce."
+      },
+      {
+        "operation": "replace",
+        "expected": "identifies",
+        "reviewer_extraction": "identi\u00fbes"
+      },
+      {
+        "operation": "replace",
+        "expected": "suffice.",
+        "reviewer_extraction": "su\u00fbce."
+      }
+    ],
+    "abstract_assessment": "Only font-mapping substitutions and spacing of m>=3 were found; no sentence or result omission identified."
+  },
+  "pixel_check": {
+    "renderer": "pypdfium2, scale=1, grayscale",
+    "body_region_pixels_xyxy": [
+      35,
+      45,
+      580,
+      755
+    ],
+    "purpose": "Compare retained manuscript content while excluding added publisher header/footer",
+    "per_page": [
+      {
+        "final_page": 1,
+        "reviewer_page": 3,
+        "mean_absolute_grayscale_difference": 0.004594908902959038,
+        "pixels_differing_by_more_than_64": 7,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 2,
+        "reviewer_page": 4,
+        "mean_absolute_grayscale_difference": 0.15167592712236724,
+        "pixels_differing_by_more_than_64": 13,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 3,
+        "reviewer_page": 5,
+        "mean_absolute_grayscale_difference": 0.00539087737433777,
+        "pixels_differing_by_more_than_64": 7,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 4,
+        "reviewer_page": 6,
+        "mean_absolute_grayscale_difference": 0.09734074169789378,
+        "pixels_differing_by_more_than_64": 74,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 5,
+        "reviewer_page": 7,
+        "mean_absolute_grayscale_difference": 0.12589481845199638,
+        "pixels_differing_by_more_than_64": 75,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 6,
+        "reviewer_page": 8,
+        "mean_absolute_grayscale_difference": 0.014570357927380798,
+        "pixels_differing_by_more_than_64": 6,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 7,
+        "reviewer_page": 9,
+        "mean_absolute_grayscale_difference": 0.05911099625274583,
+        "pixels_differing_by_more_than_64": 39,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 8,
+        "reviewer_page": 10,
+        "mean_absolute_grayscale_difference": 0.06054529008915881,
+        "pixels_differing_by_more_than_64": 40,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 9,
+        "reviewer_page": 11,
+        "mean_absolute_grayscale_difference": 0.0605116940173149,
+        "pixels_differing_by_more_than_64": 48,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 10,
+        "reviewer_page": 12,
+        "mean_absolute_grayscale_difference": 0.014565189300943275,
+        "pixels_differing_by_more_than_64": 14,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 11,
+        "reviewer_page": 13,
+        "mean_absolute_grayscale_difference": 0.06180385062669595,
+        "pixels_differing_by_more_than_64": 57,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 12,
+        "reviewer_page": 14,
+        "mean_absolute_grayscale_difference": 0.028479131670758495,
+        "pixels_differing_by_more_than_64": 25,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 13,
+        "reviewer_page": 15,
+        "mean_absolute_grayscale_difference": 0.01265279751905931,
+        "pixels_differing_by_more_than_64": 6,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 14,
+        "reviewer_page": 16,
+        "mean_absolute_grayscale_difference": 0.07741568678123789,
+        "pixels_differing_by_more_than_64": 64,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 15,
+        "reviewer_page": 17,
+        "mean_absolute_grayscale_difference": 0.010037472541672051,
+        "pixels_differing_by_more_than_64": 4,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 16,
+        "reviewer_page": 18,
+        "mean_absolute_grayscale_difference": 0.01897402765215144,
+        "pixels_differing_by_more_than_64": 13,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 17,
+        "reviewer_page": 19,
+        "mean_absolute_grayscale_difference": 0.020374725416720505,
+        "pixels_differing_by_more_than_64": 23,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 18,
+        "reviewer_page": 20,
+        "mean_absolute_grayscale_difference": 0.01698152216048585,
+        "pixels_differing_by_more_than_64": 9,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 19,
+        "reviewer_page": 21,
+        "mean_absolute_grayscale_difference": 0.016560279105827625,
+        "pixels_differing_by_more_than_64": 7,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 20,
+        "reviewer_page": 22,
+        "mean_absolute_grayscale_difference": 0.10808631606150665,
+        "pixels_differing_by_more_than_64": 86,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 21,
+        "reviewer_page": 23,
+        "mean_absolute_grayscale_difference": 0.047267088771159066,
+        "pixels_differing_by_more_than_64": 56,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 22,
+        "reviewer_page": 24,
+        "mean_absolute_grayscale_difference": 0.02437524227936426,
+        "pixels_differing_by_more_than_64": 29,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 23,
+        "reviewer_page": 25,
+        "mean_absolute_grayscale_difference": 0.02454839126502132,
+        "pixels_differing_by_more_than_64": 12,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 24,
+        "reviewer_page": 26,
+        "mean_absolute_grayscale_difference": 0.008375759142008011,
+        "pixels_differing_by_more_than_64": 8,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 25,
+        "reviewer_page": 27,
+        "mean_absolute_grayscale_difference": 0.01989921178446828,
+        "pixels_differing_by_more_than_64": 26,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 26,
+        "reviewer_page": 28,
+        "mean_absolute_grayscale_difference": 0.020824395916785116,
+        "pixels_differing_by_more_than_64": 19,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 27,
+        "reviewer_page": 29,
+        "mean_absolute_grayscale_difference": 0.0686496963431968,
+        "pixels_differing_by_more_than_64": 66,
+        "compared_pixels": 386950
+      },
+      {
+        "final_page": 28,
+        "reviewer_page": 30,
+        "mean_absolute_grayscale_difference": 0.01853211009174312,
+        "pixels_differing_by_more_than_64": 18,
+        "compared_pixels": 386950
+      }
+    ],
+    "maximum_mean_absolute_difference_0_to_255": 0.15167592712236724,
+    "maximum_pixels_differing_by_more_than_64": 86
+  },
+  "manual_visual_review": {
+    "reviewer_pdf_pages_seen_full_resolution": [
+      7,
+      9,
+      12
+    ],
+    "finding": "The visible minus signs, inequalities, Greek symbols, formulas, table and algorithm box are intact and readable. No clipping or overlap seen on these pages."
+  },
+  "conversion_caveat": "Ghostscript conversion changes extracted Unicode/ligature mappings (for example verification is extracted as veriocation, and some mathematical signs as letters/digits). Near-identical page-body pixels and manual inspection support a text-extraction mapping defect, not changed visible content. The review PDF should not be treated as a clean machine-readable transcription.",
+  "conclusion": "No missing manuscript page or changed visible substantive content was identified. Publisher-added declarations, title/abstract cover and review headers/footers are expected additions.",
+  "source_validation_report_sha256": "1cc7e78782777acce6f3e58285af346be6c8e9f71da1af0303d6350a3cbcac60",
+  "sanitization": "Absolute local file and rendering paths removed; the recorded checks, scientific values and PDF hashes are unchanged."
+}
